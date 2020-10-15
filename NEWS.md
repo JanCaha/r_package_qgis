@@ -1,0 +1,2 @@
+- add DESCRIPTION, LICENSE, LICENSE.md, .Rhistory to package-development branch
+- changed development to its own branch

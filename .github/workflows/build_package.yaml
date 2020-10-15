@@ -1,0 +1,89 @@
+on:
+  push:
+    paths:
+      - build-package/**
+      - .github/workflows/**
+      - NEWS.md
+
+name: Build package
+
+jobs:
+  build-package:
+
+    runs-on: ubuntu-20.04
+
+    env:
+      R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+      RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
+
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install QGIS
+        run: |
+          wget -qO - https://qgis.org/downloads/qgis-2020.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import || true
+          sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+          sudo add-apt-repository "deb https://qgis.org/ubuntu `lsb_release -c -s` main"
+          sudo apt-get update
+          sudo apt-get install -y qgis qgis-plugin-grass python3-qgis-common python-qgis saga
+          # enables providers when the QGIS GUI hasn't been run
+          mkdir -p ~/.local/share/QGIS/QGIS3/profiles/default/QGIS/
+          touch ~/.local/share/QGIS/QGIS3/profiles/default/QGIS/QGIS3.ini
+          echo -e "[PythonPlugins]\nprocessing=true" >> ~/.local/share/QGIS/QGIS3/profiles/default/QGIS/QGIS3.ini
+          # QT_QPA_PLATFORM='offscreen' qgis_process
+
+      - uses: r-lib/actions/setup-r@master
+
+      - uses: r-lib/actions/setup-pandoc@master
+
+      - name: Install remotes and package build dependencies
+        run: source("./build-package/install_save_deps.R")
+        shell: Rscript {0}
+
+      - name: Cache R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install system dependencies
+        run: |
+          while read -r cmd
+          do
+            eval sudo $cmd
+          done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
+
+      - name: Install R dependencies
+        run: |
+          remotes::install_deps(dependencies = TRUE)
+          # remotes::install_cran("rcmdcheck")
+        shell: Rscript {0}
+
+      - name: Add QGIS version to description
+        run: source("./build-package/update_Description.R")
+        shell: Rscript {0}
+
+      - name: Delete all files in R
+        run: rm -f ./R/*.R
+
+      - name: Build Package functions in folder R and document them
+        run: source("./build-package/build_QGIS_functions.R")
+        shell: Rscript {0}
+
+      - name: Check and install
+        run: |
+          devtools::check()
+          devtools::install()
+        shell: Rscript {0}
+
+      - uses: EndBug/add-and-commit@v5
+        with:
+          author_name: github-actions
+          author_email: github-actions@github.com
+          message: "current update"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
