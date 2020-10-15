@@ -1,5 +1,5 @@
 ---
-output: github_document
+output: md_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-**qgis** is automatically generated package which originates from [qgisprocess](https://github.com/paleolimbot/qgisprocess) and aims to provide calls and simple documentation for each [QGIS](https://qgis.org/en/site/) functions available in core and the most important algorithm provides ([GRASS GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)).
+**qgis** is automatically generated package which originates from [qgisprocess](https://github.com/paleolimbot/qgisprocess) and aims to provide calls and simple documentation for each [QGIS](https://qgis.org/en/site/) functions available in core and the most important algorithm providers ([GRASS GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)).
 
 The package is highly experimental and things are quite likely to change a lot in the future. The definition of individual functions can change if it changes in the QGIS.
 
@@ -36,11 +36,13 @@ remotes::install_github("JanCaha/r_package_qgis")
 
 The package is not meant to be load directly as this would significant number of functions (<900). Instead the functions should be called as: 
 
-```{r example}
+```{r, eval=FALSE}
 qgis::buffer()
 ```
 
 ## Example in the wild
+
+This example uses `qgisprocess` pipe ability to directly load output to **R**.
 
 ```{r}
 library(sf)
@@ -48,9 +50,9 @@ library(sf)
 fname <- system.file("shape/nc.shp", package="sf")
 nc <- st_read(fname)
 
-buffered_data <- qgis::qgis_buffer(INPUT = nc,
-                                   DISTANCE = 0.5, 
-                                   END_CAP_STYLE = "Flat") %>% 
+buffered <- qgis::qgis_buffer(INPUT = nc, 
+                              DISTANCE = 0.5, 
+                              END_CAP_STYLE = "Flat") %>% 
   st_as_sf()
 ```
 

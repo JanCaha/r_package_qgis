@@ -4,6 +4,7 @@ on:
       - build-package/**
       - .github/workflows/**
       - NEWS.md
+      - README.Rmd
 
 name: Build package
 
@@ -78,6 +79,10 @@ jobs:
         run: |
           devtools::check()
           devtools::install()
+        shell: Rscript {0}
+
+      - name: Render README
+        run: source("./build-package/render_README.R")
         shell: Rscript {0}
 
       - uses: EndBug/add-and-commit@v5
