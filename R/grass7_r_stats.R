@@ -1,0 +1,46 @@
+##' QGIS Algorithm provided by GRASS r.stats (grass7:r.stats)
+##'
+##' @title QGIS algorithm r.stats
+##'
+##' @param input `multilayer` - Name of input raster map. .
+##' @param separator `string` - Output field separator. String value.
+##' @param null_value `string` - String representing no data cell value. String value.
+##' @param nsteps `number` - Number of floating-point subranges to collect stats from. A numeric value.
+##' @param sort `enum`  of `("asc", "desc")` - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param .arg_1 `boolean` - One cell (range) per line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .A `boolean` - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .a `boolean` - Print area totals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Print cell counts. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .p `boolean` - Print APPROXIMATE percents (total percent may not be 100%). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .l `boolean` - Print category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .x `boolean` - Print x and y (column and row). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .N `boolean` - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .C `boolean` - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .i `boolean` - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param html `fileDestination` - Statistics. Path for new file.
+##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##'
+##' @details
+##' ## Outputs description
+##' * html - outputHtml - Statistics
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+
+grass7_r_stats <- function(input = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), nsteps = qgisprocess::qgis_default_value(), sort = qgisprocess::qgis_default_value(), .arg_1 = qgisprocess::qgis_default_value(), .A = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .x = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .N = qgisprocess::qgis_default_value(), .C = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.stats",`input` = input, `separator` = separator, `null_value` = null_value, `nsteps` = nsteps, `sort` = sort, `-1` = .arg_1, `-A` = .A, `-a` = .a, `-c` = .c, `-p` = .p, `-l` = .l, `-g` = .g, `-x` = .x, `-r` = .r, `-n` = .n, `-N` = .N, `-C` = .C, `-i` = .i, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  if (.complete_output) {
+    return(output)
+  }
+  else{
+    qgisprocess::qgis_output(output, "html")
+}
+}
