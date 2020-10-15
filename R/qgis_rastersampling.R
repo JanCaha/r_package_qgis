@@ -1,0 +1,29 @@
+##' QGIS Algorithm provided by QGIS Sample raster values (qgis:rastersampling)
+##'
+##' @title QGIS algorithm Sample raster values
+##'
+##' @param INPUT `source` - Input Point Layer. Path to a vector layer.
+##' @param RASTERCOPY `raster` - Raster Layer to sample. Path to a raster layer.
+##' @param COLUMN_PREFIX `string` - Output column prefix. String value.
+##' @param OUTPUT `sink` - Sampled Points. Path for new vector layer.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##'
+##' @details
+##' ## Outputs description
+##' * OUTPUT - outputVector - Sampled Points
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+
+qgis_rastersampling <- function(INPUT = qgisprocess::qgis_default_value(), RASTERCOPY = qgisprocess::qgis_default_value(), COLUMN_PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:rastersampling",`INPUT` = INPUT, `RASTERCOPY` = RASTERCOPY, `COLUMN_PREFIX` = COLUMN_PREFIX, `OUTPUT` = OUTPUT,...)
+  if (.complete_output) {
+    return(output)
+  }
+  else{
+    qgisprocess::qgis_output(output, "OUTPUT")
+}
+}

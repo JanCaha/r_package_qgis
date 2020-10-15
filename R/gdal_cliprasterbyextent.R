@@ -1,0 +1,32 @@
+##' QGIS Algorithm provided by GDAL Clip raster by extent (gdal:cliprasterbyextent)
+##'
+##' @title QGIS algorithm Clip raster by extent
+##'
+##' @param INPUT `raster` - Input layer. Path to a raster layer.
+##' @param PROJWIN `extent` - Clipping extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
+##' @param NODATA `number` - Assign a specified nodata value to output bands. A numeric value.
+##' @param OPTIONS `string` - Additional creation options. String value.
+##' @param DATA_TYPE `enum`  of `("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param EXTRA `string` - Additional command-line parameters. String value.
+##' @param OUTPUT `rasterDestination` - Clipped (extent). Path for new raster layer.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##'
+##' @details
+##' ## Outputs description
+##' * OUTPUT - outputRaster - Clipped 
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+
+gdal_cliprasterbyextent <- function(INPUT = qgisprocess::qgis_default_value(), PROJWIN = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:cliprasterbyextent",`INPUT` = INPUT, `PROJWIN` = PROJWIN, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  if (.complete_output) {
+    return(output)
+  }
+  else{
+    qgisprocess::qgis_output(output, "OUTPUT")
+}
+}
