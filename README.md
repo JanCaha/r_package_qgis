@@ -35,7 +35,7 @@ The package is not meant to be load directly as this would significant
 number of functions (&lt;900). Instead the functions should be called
 as:
 
-    qgis::buffer()
+    qgis::qgis_buffer()
 
 Example in the wild
 -------------------
@@ -65,9 +65,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpMFhzSs/filea37763b730f7/filea3774712b38c.gpkg' \
+    #>   '--INPUT=/tmp/RtmpkThWCD/filea4b74d3a0353/filea4b7630a0b98.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpMFhzSs/filea37763b730f7/filea37734b6b050.gpkg'
+    #>   '--OUTPUT=/tmp/RtmpkThWCD/filea4b74d3a0353/filea4b710fb528a.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -76,13 +76,19 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpMFhzSs/filea37763b730f7/filea3774712b38c.gpkg
+    #> INPUT:   /tmp/RtmpkThWCD/filea4b74d3a0353/filea4b7630a0b98.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpMFhzSs/filea37763b730f7/filea37734b6b050.gpkg
+    #> OUTPUT:  /tmp/RtmpkThWCD/filea4b74d3a0353/filea4b710fb528a.gpkg
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
     #> ----------------
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpMFhzSs/filea37763b730f7/filea37734b6b050.gpkg
+    #> OUTPUT:  /tmp/RtmpkThWCD/filea4b74d3a0353/filea4b710fb528a.gpkg
+
+    plot(buffered)
+    #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
+    #> all
+
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
