@@ -15,6 +15,9 @@ provide calls and simple documentation for each
 [QGIS](https://qgis.org/en/site/) functions available in core and the
 most important algorithm providers ([GRASS
 GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)).
+The algorithms are automatically extracted from fresh install of latest
+**QGIS** version on **Ubuntu** with packages for **GRASS** and **SAGA**
+installed.
 
 The package is highly experimental and things are quite likely to change
 a lot in the future. The definition of individual functions can change
@@ -28,6 +31,29 @@ You can install the released version of **qgis** from GitHub with:
     # install.package("remotes")
     remotes::install_github("JanCaha/r_package_qgis")
 
+Functions names
+---------------
+
+The names of the functions follow general pattern of
+`algorithm-provider_algorithm-id` with only the native **QGIS**
+algorithms using `qgis` algorithm provider instead of `native`.
+
+    #> Warning: Missing column names filled in: 'X1' [1]
+    #> 
+    #> [36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────[39m
+    #> cols(
+    #>   X1 = [32mcol_double()[39m,
+    #>   provider = [31mcol_character()[39m,
+    #>   provider_title = [31mcol_character()[39m,
+    #>   algorithm = [31mcol_character()[39m,
+    #>   algorithm_id = [31mcol_character()[39m,
+    #>   algorithm_title = [31mcol_character()[39m
+    #> )
+
+The available providers are:
+`glue::glue_collapse(unique(algorithms$provider), sep = ", ")`. The
+overall number of available algorithms is `nrow(algs)`.
+
 Example
 -------
 
@@ -36,6 +62,9 @@ number of functions (&lt;900). Instead the functions should be called
 as:
 
     qgis::qgis_buffer()
+
+This allows you to show the help page for the function (at least in
+**RStudio** using the key shortcut **F1**).
 
 Example in the wild
 -------------------
@@ -65,9 +94,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpkThWCD/filea4b74d3a0353/filea4b7630a0b98.gpkg' \
+    #>   '--INPUT=/tmp/RtmpECT2Of/filea2d51c5b4f4/filea2d5794f3e7b.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpkThWCD/filea4b74d3a0353/filea4b710fb528a.gpkg'
+    #>   '--OUTPUT=/tmp/RtmpECT2Of/filea2d51c5b4f4/filea2d51bacc127.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -76,19 +105,19 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpkThWCD/filea4b74d3a0353/filea4b7630a0b98.gpkg
+    #> INPUT:   /tmp/RtmpECT2Of/filea2d51c5b4f4/filea2d5794f3e7b.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpkThWCD/filea4b74d3a0353/filea4b710fb528a.gpkg
+    #> OUTPUT:  /tmp/RtmpECT2Of/filea2d51c5b4f4/filea2d51bacc127.gpkg
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
     #> ----------------
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpkThWCD/filea4b74d3a0353/filea4b710fb528a.gpkg
+    #> OUTPUT:  /tmp/RtmpECT2Of/filea2d51c5b4f4/filea2d51bacc127.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
     #> all
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
