@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-**qgis** is automatically generated package which originates from [qgisprocess](https://github.com/paleolimbot/qgisprocess) and aims to provide calls and simple documentation for each [QGIS](https://qgis.org/en/site/) functions available in core and the most important algorithm providers ([GRASS GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)).
+**qgis** is automatically generated package which originates from [qgisprocess](https://github.com/paleolimbot/qgisprocess) and aims to provide calls and simple documentation for each [QGIS](https://qgis.org/en/site/) functions available in core and the most important algorithm providers ([GRASS GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)). The algorithms are automatically extracted from fresh install of latest **QGIS** version on **Ubuntu** with packages for **GRASS** and **SAGA** installed.
 
 The package is highly experimental and things are quite likely to change a lot in the future. The definition of individual functions can change if it changes in the QGIS.
 
@@ -32,6 +32,16 @@ You can install the released version of **qgis** from GitHub with:
 remotes::install_github("JanCaha/r_package_qgis")
 ```
 
+## Functions names
+
+The names of the functions follow general pattern of `algorithm-provider_algorithm-id` with only the native **QGIS** algorithms using `qgis` algorithm provider instead of `native`. 
+
+```{r, echo=FALSE}
+algs <- readr::read_csv(here::here("data-raw", "algorithms.csv"))
+```
+
+The available providers are: `glue::glue_collapse(unique(algorithms$provider), sep = ", ")`. The overall number of available algorithms is `nrow(algs)`.
+
 ## Example
 
 The package is not meant to be load directly as this would significant number of functions (<900). Instead the functions should be called as: 
@@ -39,6 +49,8 @@ The package is not meant to be load directly as this would significant number of
 ```{r, eval=FALSE}
 qgis::qgis_buffer()
 ```
+
+This allows you to show the help page for the function (at least in **RStudio** using the key shortcut **F1**).
 
 ## Example in the wild
 
@@ -57,5 +69,3 @@ buffered <- qgis::qgis_buffer(INPUT = nc,
 
 plot(buffered)
 ```
-
-
