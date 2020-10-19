@@ -37,7 +37,7 @@ remotes::install_github("JanCaha/r_package_qgis")
 The package is not meant to be load directly as this would significant number of functions (<900). Instead the functions should be called as: 
 
 ```{r, eval=FALSE}
-qgis::buffer()
+qgis::qgis_buffer()
 ```
 
 ## Example in the wild
@@ -54,6 +54,8 @@ buffered <- qgis::qgis_buffer(INPUT = nc,
                               DISTANCE = 0.5, 
                               END_CAP_STYLE = "Flat") %>% 
   st_as_sf()
+
+plot(buffered)
 ```
 
 
