@@ -9,6 +9,7 @@ on:
 name: Build package
 
 jobs:
+
   build-package:
 
     runs-on: ubuntu-20.04
@@ -92,3 +93,15 @@ jobs:
           message: "current update"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build package website
+        run: |
+          pkgdown::build_site()
+        shell: Rscript {0}
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./docs
