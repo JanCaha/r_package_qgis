@@ -63,21 +63,8 @@ The names of the functions follow general pattern of
 `algorithm-provider_algorithm-id` with only the native **QGIS**
 algorithms using `qgis` algorithm provider instead of `native`.
 
-    #> Warning: Missing column names filled in: 'X1' [1]
-    #> 
-    #> [36m──[39m [1m[1mColumn specification[1m[22m [36m────────────────────────────────────────────────────────[39m
-    #> cols(
-    #>   X1 = [32mcol_double()[39m,
-    #>   provider = [31mcol_character()[39m,
-    #>   provider_title = [31mcol_character()[39m,
-    #>   algorithm = [31mcol_character()[39m,
-    #>   algorithm_id = [31mcol_character()[39m,
-    #>   algorithm_title = [31mcol_character()[39m
-    #> )
-
-The available providers are:
-`glue::glue_collapse(unique(algorithms$provider), sep = ", ")`. The
-overall number of available algorithms is `nrow(algs)`.
+The available providers are: 3d, gdal, grass7, native, qgis, saga. The
+overall number of available algorithms is 976.
 
 Example
 -------
@@ -119,9 +106,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpMhgByN/filea3cb2e525fd1/filea3cb2c495083.gpkg' \
+    #>   '--INPUT=/tmp/Rtmp1W26DL/filea66d6b5234ec/filea66d547ef43d.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpMhgByN/filea3cb2e525fd1/filea3cb9580ed3.gpkg'
+    #>   '--OUTPUT=/tmp/Rtmp1W26DL/filea66d6b5234ec/filea66d5d28c1e6.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -130,16 +117,16 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpMhgByN/filea3cb2e525fd1/filea3cb2c495083.gpkg
+    #> INPUT:   /tmp/Rtmp1W26DL/filea66d6b5234ec/filea66d547ef43d.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpMhgByN/filea3cb2e525fd1/filea3cb9580ed3.gpkg
+    #> OUTPUT:  /tmp/Rtmp1W26DL/filea66d6b5234ec/filea66d5d28c1e6.gpkg
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
     #> ----------------
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpMhgByN/filea3cb2e525fd1/filea3cb9580ed3.gpkg
+    #> OUTPUT:  /tmp/Rtmp1W26DL/filea66d6b5234ec/filea66d5d28c1e6.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
