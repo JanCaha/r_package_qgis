@@ -47,7 +47,7 @@ remotes::install_deps(dependencies = TRUE)
 source("./build-package/update_Description.R")
 
 # build the package code and documentation
-# this takes rather long time (roughly 20 minutes for basic QGIS installation)
+# this takes rather long time (roughly 22 minutes for basic QGIS installation)
 source("./build-package/build_QGIS_functions.R")
 
 # check and install the package
