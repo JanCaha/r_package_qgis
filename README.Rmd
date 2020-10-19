@@ -55,17 +55,15 @@ devtools::check()
 devtools::install()
 ```
 
-
-
 ## Functions names
 
 The names of the functions follow general pattern of `algorithm-provider_algorithm-id` with only the native **QGIS** algorithms using `qgis` algorithm provider instead of `native`. 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
 algs <- readr::read_csv(here::here("data-raw", "algorithms.csv"))
 ```
 
-The available providers are: `glue::glue_collapse(unique(algorithms$provider), sep = ", ")`. The overall number of available algorithms is `nrow(algs)`.
+The available providers are: `r glue::glue_collapse(unique(algs$provider), sep = ", ")`. The overall number of available algorithms is `r nrow(algs)`.
 
 ## Example
 
