@@ -86,7 +86,7 @@ jobs:
         run: source("./build-package/render_README.R")
         shell: Rscript {0}
 
-      - uses: EndBug/add-and-commit@v5
+      - uses: EndBug/add-and-commit@v5.1.0
         with:
           author_name: github-actions
           author_email: github-actions@github.com
