@@ -2,7 +2,17 @@ source(here::here("build-package", "functions_fix_parameter_names.R"))
 source(here::here("build-package", "functions_fix_algorithm_id.R"))
 source(here::here("build-package", "functions_build_code_and_doc.R"))
 
+file_text <- function(x){
+  purrr::map_chr(x, function(x){
+    readr::read_file(x)
+  })
+}
+
 library(qgisprocess)
+
+previous_files <- fileSnapshot(path = c("R", "man"),
+                               full.names = TRUE,
+                               digest = file_text)
 
 algs <- qgis_algorithms()
 
@@ -32,3 +42,11 @@ for (i in 1:nrow(algs)) {
 }
 
 devtools::document(roclets = c('rd', 'collate', 'namespace', 'vignette'))
+
+actual_files <- fileSnapshot(path = c("R", "man"),
+                             full.names = TRUE,
+                             digest = file_text)
+
+changed <- changedFiles(previous_files, actual_files, check.file.info = c("size", "digest"))
+
+readr::write_rds(changed$changed, here::here("data-raw", "changed_files.rds"))
