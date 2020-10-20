@@ -25,16 +25,16 @@ build_fn_code <- function(alg, arguments, main_output) {
   fn_arguments_qgis_run <- purrr::map(arguments$name, ~ glue::glue("`{.x}` = {convert_to_R_arg_names(.x)}"))
   fn_arguments_qgis_run <- glue::glue_collapse(fn_arguments_qgis_run, sep=", ")
 
-
   glue::glue("{fn_name} <- function({fn_arguments},..., .complete_output = TRUE) {{\n",
              "\n",
              "  output <- qgisprocess::qgis_run_algorithm(\"{alg$algorithm}\",{fn_arguments_qgis_run},...)\n",
+             "\n",
              "  if (.complete_output) {{\n",
              "    return(output)\n",
              "  }}\n",
              "  else{{\n",
              "    qgisprocess::qgis_output(output, \"{main_output}\")\n",
-             "}}\n",
+             "  }}\n",
              "}}")
 }
 
