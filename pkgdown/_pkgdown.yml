@@ -1,0 +1,26 @@
+url: https://jancaha.github.io/r_package_qgis
+
+home:
+  title: Run QGIS algorithms directly from R
+
+reference:
+  - title: QGIS
+    desc: Algorithms provided directly by QGIS.
+    contents:
+    - starts_with("qgis_")
+
+  - title: GDAL
+    desc: Algorithms provided by GDAL/OGR.
+    contents:
+    - starts_with("gdal_")
+
+  - title: GRASS
+    desc: Algorithms provided by GRASS version 7.x.x.
+    contents:
+    - starts_with("grass7_")
+
+  - title: SAGA
+    desc: Algorithms provided by SAGA GIS.
+    contents:
+    - starts_with("saga_")
+
