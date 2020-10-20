@@ -10,9 +10,7 @@ file_text <- function(x){
 
 library(qgisprocess)
 
-previous_files <- fileSnapshot(path = c("R", "man"),
-                               full.names = TRUE,
-                               digest = file_text)
+previous_files <- readr::read_rds(here::here("data-raw", "previous-files.rds"))
 
 algs <- qgis_algorithms()
 
@@ -50,3 +48,5 @@ actual_files <- fileSnapshot(path = c("R", "man"),
 changed <- changedFiles(previous_files, actual_files, check.file.info = c("size", "digest"))
 
 readr::write_rds(changed$changed, here::here("data-raw", "changed_files.rds"))
+
+readr::write_rds(actual_files, here::here("data-raw", "previous-files.rds"))
