@@ -1,5 +1,7 @@
 # install packages necessary to build the package code
-install.packages(c("remotes", "desc", "glue", "readr", "purrr", "stringr", "here", "knitr", "rmarkdown", "devtools", "pkgdown"))
+install.packages(c("remotes", "desc", "glue", "readr", "purrr", "stringr", "here",
+                   "fs", "knitr", "rmarkdown", "devtools", "pkgdown"))
+
 remotes::install_github("paleolimbot/qgisprocess")
 
 # save files withe dependencies
