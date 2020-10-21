@@ -4,7 +4,12 @@ source(here::here("build-package", "functions_build_code_and_doc.R"))
 
 file_text <- function(x){
   purrr::map_chr(x, function(x){
-    readr::read_file(x)
+    if (fs::is_file(x)) {
+      readr::read_file(x)
+    } else {
+      dir <- fs::dir_info("R")
+      glue::glue_collapse(dir$path, sep = ",")
+    }
   })
 }
 
