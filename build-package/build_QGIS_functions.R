@@ -41,7 +41,7 @@ for (i in 1:nrow(algs)) {
 
 devtools::document(roclets = c('rd', 'collate', 'namespace', 'vignette'))
 
-actual_files <- fileSnapshot(path = c("R", "man"),
+actual_files <- fileSnapshot(path = c(here::here("R"), here::here("man")),
                              full.names = TRUE,
                              digest = file_text)
 
