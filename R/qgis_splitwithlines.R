@@ -19,10 +19,11 @@
 qgis_splitwithlines <- function(INPUT = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:splitwithlines",`INPUT` = INPUT, `LINES` = LINES, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

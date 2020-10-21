@@ -26,10 +26,11 @@
 saga_pointsfilter <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), MINNUM = qgisprocess::qgis_default_value(), MAXNUM = qgisprocess::qgis_default_value(), QUADRANTS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:pointsfilter",`POINTS` = POINTS, `FIELD` = FIELD, `RADIUS` = RADIUS, `MINNUM` = MINNUM, `MAXNUM` = MAXNUM, `QUADRANTS` = QUADRANTS, `METHOD` = METHOD, `TOLERANCE` = TOLERANCE, `PERCENT` = PERCENT, `FILTER` = FILTER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FILTER")
-}
+  }
 }

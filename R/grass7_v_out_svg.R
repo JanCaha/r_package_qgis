@@ -24,10 +24,11 @@
 grass7_v_out_svg <- function(input = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), precision = qgisprocess::qgis_default_value(), attribute = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.out.svg",`input` = input, `type` = type, `precision` = precision, `attribute` = attribute, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

@@ -58,10 +58,11 @@
 saga_bioclimaticvariables <- function(TMEAN = qgisprocess::qgis_default_value(), TMIN = qgisprocess::qgis_default_value(), TMAX = qgisprocess::qgis_default_value(), P = qgisprocess::qgis_default_value(), BIO_01 = qgisprocess::qgis_default_value(), BIO_02 = qgisprocess::qgis_default_value(), BIO_03 = qgisprocess::qgis_default_value(), BIO_04 = qgisprocess::qgis_default_value(), BIO_05 = qgisprocess::qgis_default_value(), BIO_06 = qgisprocess::qgis_default_value(), BIO_07 = qgisprocess::qgis_default_value(), BIO_08 = qgisprocess::qgis_default_value(), BIO_09 = qgisprocess::qgis_default_value(), BIO_10 = qgisprocess::qgis_default_value(), BIO_11 = qgisprocess::qgis_default_value(), BIO_12 = qgisprocess::qgis_default_value(), BIO_13 = qgisprocess::qgis_default_value(), BIO_14 = qgisprocess::qgis_default_value(), BIO_15 = qgisprocess::qgis_default_value(), BIO_16 = qgisprocess::qgis_default_value(), BIO_17 = qgisprocess::qgis_default_value(), BIO_18 = qgisprocess::qgis_default_value(), BIO_19 = qgisprocess::qgis_default_value(), SEASONALITY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:bioclimaticvariables",`TMEAN` = TMEAN, `TMIN` = TMIN, `TMAX` = TMAX, `P` = P, `BIO_01` = BIO_01, `BIO_02` = BIO_02, `BIO_03` = BIO_03, `BIO_04` = BIO_04, `BIO_05` = BIO_05, `BIO_06` = BIO_06, `BIO_07` = BIO_07, `BIO_08` = BIO_08, `BIO_09` = BIO_09, `BIO_10` = BIO_10, `BIO_11` = BIO_11, `BIO_12` = BIO_12, `BIO_13` = BIO_13, `BIO_14` = BIO_14, `BIO_15` = BIO_15, `BIO_16` = BIO_16, `BIO_17` = BIO_17, `BIO_18` = BIO_18, `BIO_19` = BIO_19, `SEASONALITY` = SEASONALITY,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "BIO_01")
-}
+  }
 }

@@ -21,10 +21,11 @@
 saga_rastervaluestopoints <- function(GRIDS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rastervaluestopoints",`GRIDS` = GRIDS, `POLYGONS` = POLYGONS, `NODATA` = NODATA, `TYPE` = TYPE, `SHAPES` = SHAPES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "SHAPES")
-}
+  }
 }

@@ -36,10 +36,11 @@
 grass7_v_net_flow <- function(input = qgisprocess::qgis_default_value(), points = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), source_cats = qgisprocess::qgis_default_value(), source_where = qgisprocess::qgis_default_value(), sink_cats = qgisprocess::qgis_default_value(), sink_where = qgisprocess::qgis_default_value(), arc_column = qgisprocess::qgis_default_value(), arc_backward_column = qgisprocess::qgis_default_value(), node_column = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), cut = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.net.flow",`input` = input, `points` = points, `threshold` = threshold, `source_cats` = source_cats, `source_where` = source_where, `sink_cats` = sink_cats, `sink_where` = sink_where, `arc_column` = arc_column, `arc_backward_column` = arc_backward_column, `node_column` = node_column, `output` = output, `cut` = cut, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

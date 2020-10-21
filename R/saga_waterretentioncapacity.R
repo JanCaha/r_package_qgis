@@ -21,10 +21,11 @@
 saga_waterretentioncapacity <- function(SHAPES = qgisprocess::qgis_default_value(), DEM = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), RETENTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:waterretentioncapacity",`SHAPES` = SHAPES, `DEM` = DEM, `OUTPUT` = OUTPUT, `RETENTION` = RETENTION,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

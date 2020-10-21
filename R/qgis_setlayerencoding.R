@@ -18,10 +18,11 @@
 qgis_setlayerencoding <- function(INPUT = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:setlayerencoding",`INPUT` = INPUT, `ENCODING` = ENCODING,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

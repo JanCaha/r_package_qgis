@@ -30,10 +30,11 @@
 gdal_rasterize <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(), UNITS = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), HEIGHT = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), INIT = qgisprocess::qgis_default_value(), INVERT = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:rasterize",`INPUT` = INPUT, `FIELD` = FIELD, `BURN` = BURN, `UNITS` = UNITS, `WIDTH` = WIDTH, `HEIGHT` = HEIGHT, `EXTENT` = EXTENT, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `INIT` = INIT, `INVERT` = INVERT, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

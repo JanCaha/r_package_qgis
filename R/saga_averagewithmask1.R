@@ -22,10 +22,11 @@
 saga_averagewithmask1 <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), V = qgisprocess::qgis_default_value(), RX = qgisprocess::qgis_default_value(), RY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:averagewithmask1",`INPUT` = INPUT, `MASK` = MASK, `RESULT` = RESULT, `V` = V, `RX` = RX, `RY` = RY,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

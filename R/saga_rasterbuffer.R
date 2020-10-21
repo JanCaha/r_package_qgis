@@ -20,10 +20,11 @@
 saga_rasterbuffer <- function(FEATURES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rasterbuffer",`FEATURES` = FEATURES, `DISTANCE` = DISTANCE, `TYPE` = TYPE, `BUFFER` = BUFFER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "BUFFER")
-}
+  }
 }

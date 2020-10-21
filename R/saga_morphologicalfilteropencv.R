@@ -22,10 +22,11 @@
 saga_morphologicalfilteropencv <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SHAPE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:morphologicalfilteropencv",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SHAPE` = SHAPE, `RADIUS` = RADIUS, `ITERATIONS` = ITERATIONS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

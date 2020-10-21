@@ -20,10 +20,11 @@
 saga_geographiccoordinategrids <- function(GRID = qgisprocess::qgis_default_value(), LON = qgisprocess::qgis_default_value(), LAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:geographiccoordinategrids",`GRID` = GRID, `LON` = LON, `LAT` = LAT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LON")
-}
+  }
 }

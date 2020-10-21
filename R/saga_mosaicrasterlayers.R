@@ -27,10 +27,11 @@
 saga_mosaicrasterlayers <- function(GRIDS = qgisprocess::qgis_default_value(), NAME = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), OVERLAP = qgisprocess::qgis_default_value(), BLEND_DIST = qgisprocess::qgis_default_value(), MATCH = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), TARGET_OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:mosaicrasterlayers",`GRIDS` = GRIDS, `NAME` = NAME, `TYPE` = TYPE, `RESAMPLING` = RESAMPLING, `OVERLAP` = OVERLAP, `BLEND_DIST` = BLEND_DIST, `MATCH` = MATCH, `TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX` = TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_FITS` = TARGET_USER_FITS, `TARGET_OUT_GRID` = TARGET_OUT_GRID,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TARGET_OUT_GRID")
-}
+  }
 }

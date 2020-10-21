@@ -22,10 +22,11 @@
 saga_snappointstolines <- function(INPUT = qgisprocess::qgis_default_value(), SNAP = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MOVES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:snappointstolines",`INPUT` = INPUT, `SNAP` = SNAP, `OUTPUT` = OUTPUT, `MOVES` = MOVES, `DISTANCE` = DISTANCE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

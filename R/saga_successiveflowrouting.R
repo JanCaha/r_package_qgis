@@ -21,10 +21,11 @@
 saga_successiveflowrouting <- function(DEM = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), RUNOFF = qgisprocess::qgis_default_value(), MANNING = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:successiveflowrouting",`DEM` = DEM, `ITERATIONS` = ITERATIONS, `RUNOFF` = RUNOFF, `MANNING` = MANNING, `FLOW` = FLOW,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FLOW")
-}
+  }
 }

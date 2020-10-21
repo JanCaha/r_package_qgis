@@ -21,10 +21,11 @@
 gdal_rearrange_bands <- function(INPUT = qgisprocess::qgis_default_value(), BANDS = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:rearrange_bands",`INPUT` = INPUT, `BANDS` = BANDS, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

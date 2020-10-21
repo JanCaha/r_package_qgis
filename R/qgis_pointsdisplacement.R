@@ -21,10 +21,11 @@
 qgis_pointsdisplacement <- function(INPUT = qgisprocess::qgis_default_value(), PROXIMITY = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), HORIZONTAL = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:pointsdisplacement",`INPUT` = INPUT, `PROXIMITY` = PROXIMITY, `DISTANCE` = DISTANCE, `HORIZONTAL` = HORIZONTAL, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

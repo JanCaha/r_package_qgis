@@ -25,10 +25,11 @@
 grass7_r_stats_quantile_out <- function(base = qgisprocess::qgis_default_value(), cover = qgisprocess::qgis_default_value(), quantiles = qgisprocess::qgis_default_value(), percentiles = qgisprocess::qgis_default_value(), bins = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), file = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:r.stats.quantile.out",`base` = base, `cover` = cover, `quantiles` = quantiles, `percentiles` = percentiles, `bins` = bins, `-r` = .r, `file` = file, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "file")
-}
+  }
 }

@@ -23,10 +23,11 @@
 saga_pointdistances <- function(POINTS = qgisprocess::qgis_default_value(), ID_POINTS = qgisprocess::qgis_default_value(), NEAR = qgisprocess::qgis_default_value(), ID_NEAR = qgisprocess::qgis_default_value(), FORMAT = qgisprocess::qgis_default_value(), MAX_DIST = qgisprocess::qgis_default_value(), DISTANCES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:pointdistances",`POINTS` = POINTS, `ID_POINTS` = ID_POINTS, `NEAR` = NEAR, `ID_NEAR` = ID_NEAR, `FORMAT` = FORMAT, `MAX_DIST` = MAX_DIST, `DISTANCES` = DISTANCES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "DISTANCES")
-}
+  }
 }

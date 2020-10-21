@@ -28,10 +28,11 @@
 qgis_filterbygeometry <- function(INPUT = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), NO_GEOMETRY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:filterbygeometry",`INPUT` = INPUT, `POINTS` = POINTS, `LINES` = LINES, `POLYGONS` = POLYGONS, `NO_GEOMETRY` = NO_GEOMETRY,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "POINTS")
-}
+  }
 }

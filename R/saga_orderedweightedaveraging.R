@@ -19,10 +19,11 @@
 saga_orderedweightedaveraging <- function(GRIDS = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:orderedweightedaveraging",`GRIDS` = GRIDS, `WEIGHTS` = WEIGHTS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

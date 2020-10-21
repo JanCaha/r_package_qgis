@@ -38,10 +38,11 @@
 grass7_r_cost <- function(input = qgisprocess::qgis_default_value(), start_coordinates = qgisprocess::qgis_default_value(), stop_coordinates = qgisprocess::qgis_default_value(), .k = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), start_points = qgisprocess::qgis_default_value(), stop_points = qgisprocess::qgis_default_value(), start_raster = qgisprocess::qgis_default_value(), max_cost = qgisprocess::qgis_default_value(), null_cost = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), nearest = qgisprocess::qgis_default_value(), outdir = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:r.cost",`input` = input, `start_coordinates` = start_coordinates, `stop_coordinates` = stop_coordinates, `-k` = .k, `-n` = .n, `start_points` = start_points, `stop_points` = stop_points, `start_raster` = start_raster, `max_cost` = max_cost, `null_cost` = null_cost, `memory` = memory, `output` = output, `nearest` = nearest, `outdir` = outdir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

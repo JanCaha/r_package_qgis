@@ -23,10 +23,11 @@
 saga_lsfactor <- function(SLOPE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), EROSIVITY = qgisprocess::qgis_default_value(), STABILITY = qgisprocess::qgis_default_value(), LS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:lsfactor",`SLOPE` = SLOPE, `AREA` = AREA, `CONV` = CONV, `METHOD` = METHOD, `EROSIVITY` = EROSIVITY, `STABILITY` = STABILITY, `LS` = LS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LS")
-}
+  }
 }

@@ -23,10 +23,11 @@
 gdal_cliprasterbyextent <- function(INPUT = qgisprocess::qgis_default_value(), PROJWIN = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:cliprasterbyextent",`INPUT` = INPUT, `PROJWIN` = PROJWIN, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

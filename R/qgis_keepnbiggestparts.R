@@ -19,10 +19,11 @@
 qgis_keepnbiggestparts <- function(POLYGONS = qgisprocess::qgis_default_value(), PARTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:keepnbiggestparts",`POLYGONS` = POLYGONS, `PARTS` = PARTS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

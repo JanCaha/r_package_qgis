@@ -23,10 +23,11 @@
 gdal_gdalinfo <- function(INPUT = qgisprocess::qgis_default_value(), MIN_MAX = qgisprocess::qgis_default_value(), STATS = qgisprocess::qgis_default_value(), NOGCP = qgisprocess::qgis_default_value(), NO_METADATA = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:gdalinfo",`INPUT` = INPUT, `MIN_MAX` = MIN_MAX, `STATS` = STATS, `NOGCP` = NOGCP, `NO_METADATA` = NO_METADATA, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

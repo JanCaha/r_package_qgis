@@ -31,10 +31,11 @@
 grass7_v_db_select <- function(map = qgisprocess::qgis_default_value(), layer = qgisprocess::qgis_default_value(), columns = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), group = qgisprocess::qgis_default_value(), vertical_separator = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), .v = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), file = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.db.select",`map` = map, `layer` = layer, `columns` = columns, `-c` = .c, `separator` = separator, `where` = where, `group` = group, `vertical_separator` = vertical_separator, `null_value` = null_value, `-v` = .v, `-r` = .r, `file` = file, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "file")
-}
+  }
 }

@@ -22,10 +22,11 @@
 qgis_rastercalculator <- function(EXPRESSION = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), CELLSIZE = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:rastercalculator",`EXPRESSION` = EXPRESSION, `LAYERS` = LAYERS, `CELLSIZE` = CELLSIZE, `EXTENT` = EXTENT, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

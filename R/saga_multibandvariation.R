@@ -27,10 +27,11 @@
 saga_multibandvariation <- function(BANDS = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_WEIGHTING = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_IDW_POWER = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_IDW_OFFSET = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_BANDWIDTH = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), DIFF = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:multibandvariation",`BANDS` = BANDS, `RADIUS` = RADIUS, `DISTANCE_WEIGHTING_WEIGHTING` = DISTANCE_WEIGHTING_WEIGHTING, `DISTANCE_WEIGHTING_IDW_POWER` = DISTANCE_WEIGHTING_IDW_POWER, `DISTANCE_WEIGHTING_IDW_OFFSET` = DISTANCE_WEIGHTING_IDW_OFFSET, `DISTANCE_WEIGHTING_BANDWIDTH` = DISTANCE_WEIGHTING_BANDWIDTH, `MEAN` = MEAN, `STDDEV` = STDDEV, `DIFF` = DIFF,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MEAN")
-}
+  }
 }

@@ -21,10 +21,11 @@
 saga_flatdetection <- function(DEM = qgisprocess::qgis_default_value(), FLAT_OUTPUT = qgisprocess::qgis_default_value(), NOFLATS = qgisprocess::qgis_default_value(), FLATS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:flatdetection",`DEM` = DEM, `FLAT_OUTPUT` = FLAT_OUTPUT, `NOFLATS` = NOFLATS, `FLATS` = FLATS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "NOFLATS")
-}
+  }
 }

@@ -22,10 +22,11 @@
 saga_sharedpolygonedges <- function(POLYGONS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), EPSILON = qgisprocess::qgis_default_value(), VERTICES = qgisprocess::qgis_default_value(), DOUBLE = qgisprocess::qgis_default_value(), EDGES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:sharedpolygonedges",`POLYGONS` = POLYGONS, `ATTRIBUTE` = ATTRIBUTE, `EPSILON` = EPSILON, `VERTICES` = VERTICES, `DOUBLE` = DOUBLE, `EDGES` = EDGES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "EDGES")
-}
+  }
 }

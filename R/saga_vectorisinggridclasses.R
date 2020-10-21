@@ -21,10 +21,11 @@
 saga_vectorisinggridclasses <- function(GRID = qgisprocess::qgis_default_value(), CLASS_ALL = qgisprocess::qgis_default_value(), CLASS_ID = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:vectorisinggridclasses",`GRID` = GRID, `CLASS_ALL` = CLASS_ALL, `CLASS_ID` = CLASS_ID, `SPLIT` = SPLIT, `POLYGONS` = POLYGONS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "POLYGONS")
-}
+  }
 }

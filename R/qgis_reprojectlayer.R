@@ -20,10 +20,11 @@
 qgis_reprojectlayer <- function(INPUT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:reprojectlayer",`INPUT` = INPUT, `TARGET_CRS` = TARGET_CRS, `OPERATION` = OPERATION, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

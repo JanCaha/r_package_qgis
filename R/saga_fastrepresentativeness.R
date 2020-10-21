@@ -23,10 +23,11 @@
 saga_fastrepresentativeness <- function(INPUT = qgisprocess::qgis_default_value(), LOD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RESULT_LOD = qgisprocess::qgis_default_value(), SEEDS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fastrepresentativeness",`INPUT` = INPUT, `LOD` = LOD, `RESULT` = RESULT, `RESULT_LOD` = RESULT_LOD, `SEEDS` = SEEDS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

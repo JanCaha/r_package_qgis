@@ -25,10 +25,11 @@
 saga_destriping <- function(INPUT = qgisprocess::qgis_default_value(), RESULT3 = qgisprocess::qgis_default_value(), RESULT1 = qgisprocess::qgis_default_value(), RESULT2 = qgisprocess::qgis_default_value(), ANG = qgisprocess::qgis_default_value(), R = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:destriping",`INPUT` = INPUT, `RESULT3` = RESULT3, `RESULT1` = RESULT1, `RESULT2` = RESULT2, `ANG` = ANG, `R` = R, `D` = D,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT3")
-}
+  }
 }

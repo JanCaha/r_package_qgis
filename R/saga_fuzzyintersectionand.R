@@ -19,10 +19,11 @@
 saga_fuzzyintersectionand <- function(GRIDS = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), AND = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fuzzyintersectionand",`GRIDS` = GRIDS, `TYPE` = TYPE, `AND` = AND,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "AND")
-}
+  }
 }

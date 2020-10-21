@@ -22,10 +22,11 @@
 qgis_intersection <- function(INPUT = qgisprocess::qgis_default_value(), OVERLAY = qgisprocess::qgis_default_value(), INPUT_FIELDS = qgisprocess::qgis_default_value(), OVERLAY_FIELDS = qgisprocess::qgis_default_value(), OVERLAY_FIELDS_PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:intersection",`INPUT` = INPUT, `OVERLAY` = OVERLAY, `INPUT_FIELDS` = INPUT_FIELDS, `OVERLAY_FIELDS` = OVERLAY_FIELDS, `OVERLAY_FIELDS_PREFIX` = OVERLAY_FIELDS_PREFIX, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -19,10 +19,11 @@
 qgis_setmvalue <- function(INPUT = qgisprocess::qgis_default_value(), M_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:setmvalue",`INPUT` = INPUT, `M_VALUE` = M_VALUE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

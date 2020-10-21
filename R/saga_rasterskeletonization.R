@@ -24,10 +24,11 @@
 saga_rasterskeletonization <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), INIT_METHOD = qgisprocess::qgis_default_value(), INIT_THRESHOLD = qgisprocess::qgis_default_value(), CONVERGENCE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), VECTOR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rasterskeletonization",`INPUT` = INPUT, `METHOD` = METHOD, `INIT_METHOD` = INIT_METHOD, `INIT_THRESHOLD` = INIT_THRESHOLD, `CONVERGENCE` = CONVERGENCE, `RESULT` = RESULT, `VECTOR` = VECTOR,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

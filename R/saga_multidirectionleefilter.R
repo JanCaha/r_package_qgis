@@ -26,10 +26,11 @@
 saga_multidirectionleefilter <- function(INPUT = qgisprocess::qgis_default_value(), NOISE_ABS = qgisprocess::qgis_default_value(), NOISE_REL = qgisprocess::qgis_default_value(), WEIGHTED = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), DIR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:multidirectionleefilter",`INPUT` = INPUT, `NOISE_ABS` = NOISE_ABS, `NOISE_REL` = NOISE_REL, `WEIGHTED` = WEIGHTED, `METHOD` = METHOD, `RESULT` = RESULT, `STDDEV` = STDDEV, `DIR` = DIR,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

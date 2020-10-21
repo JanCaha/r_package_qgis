@@ -38,10 +38,11 @@
 saga_svmclassification <- function(GRIDS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), SCALING = qgisprocess::qgis_default_value(), MESSAGE = qgisprocess::qgis_default_value(), MODEL_SRC = qgisprocess::qgis_default_value(), MODEL_LOAD = qgisprocess::qgis_default_value(), ROI = qgisprocess::qgis_default_value(), ROI_ID = qgisprocess::qgis_default_value(), MODEL_SAVE = qgisprocess::qgis_default_value(), SVM_TYPE = qgisprocess::qgis_default_value(), KERNEL_TYPE = qgisprocess::qgis_default_value(), DEGREE = qgisprocess::qgis_default_value(), GAMMA = qgisprocess::qgis_default_value(), COEF0 = qgisprocess::qgis_default_value(), COST = qgisprocess::qgis_default_value(), NU = qgisprocess::qgis_default_value(), EPS_SVR = qgisprocess::qgis_default_value(), CACHE_SIZE = qgisprocess::qgis_default_value(), EPS = qgisprocess::qgis_default_value(), SHRINKING = qgisprocess::qgis_default_value(), PROBABILITY = qgisprocess::qgis_default_value(), CROSSVAL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:svmclassification",`GRIDS` = GRIDS, `CLASSES` = CLASSES, `SCALING` = SCALING, `MESSAGE` = MESSAGE, `MODEL_SRC` = MODEL_SRC, `MODEL_LOAD` = MODEL_LOAD, `ROI` = ROI, `ROI_ID` = ROI_ID, `MODEL_SAVE` = MODEL_SAVE, `SVM_TYPE` = SVM_TYPE, `KERNEL_TYPE` = KERNEL_TYPE, `DEGREE` = DEGREE, `GAMMA` = GAMMA, `COEF0` = COEF0, `COST` = COST, `NU` = NU, `EPS_SVR` = EPS_SVR, `CACHE_SIZE` = CACHE_SIZE, `EPS` = EPS, `SHRINKING` = SHRINKING, `PROBABILITY` = PROBABILITY, `CROSSVAL` = CROSSVAL,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CLASSES")
-}
+  }
 }

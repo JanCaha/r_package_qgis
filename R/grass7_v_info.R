@@ -25,10 +25,11 @@
 grass7_v_info <- function(map = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.info",`map` = map, `-c` = .c, `-g` = .g, `-e` = .e, `-t` = .t, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "html")
-}
+  }
 }

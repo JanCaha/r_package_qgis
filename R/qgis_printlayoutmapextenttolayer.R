@@ -24,10 +24,11 @@
 qgis_printlayoutmapextenttolayer <- function(LAYOUT = qgisprocess::qgis_default_value(), MAP = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:printlayoutmapextenttolayer",`LAYOUT` = LAYOUT, `MAP` = MAP, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

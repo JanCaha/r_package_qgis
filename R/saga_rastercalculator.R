@@ -23,10 +23,11 @@
 saga_rastercalculator <- function(GRIDS = qgisprocess::qgis_default_value(), XGRIDS = qgisprocess::qgis_default_value(), FORMULA = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), USE_NODATA = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rastercalculator",`GRIDS` = GRIDS, `XGRIDS` = XGRIDS, `FORMULA` = FORMULA, `RESAMPLING` = RESAMPLING, `USE_NODATA` = USE_NODATA, `TYPE` = TYPE, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

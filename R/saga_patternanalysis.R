@@ -30,10 +30,11 @@
 saga_patternanalysis <- function(INPUT = qgisprocess::qgis_default_value(), WINSIZE = qgisprocess::qgis_default_value(), MAXNUMCLASS = qgisprocess::qgis_default_value(), RELATIVE = qgisprocess::qgis_default_value(), DIVERSITY = qgisprocess::qgis_default_value(), DOMINANCE = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(), NDC = qgisprocess::qgis_default_value(), CVN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:patternanalysis",`INPUT` = INPUT, `WINSIZE` = WINSIZE, `MAXNUMCLASS` = MAXNUMCLASS, `RELATIVE` = RELATIVE, `DIVERSITY` = DIVERSITY, `DOMINANCE` = DOMINANCE, `FRAGMENTATION` = FRAGMENTATION, `NDC` = NDC, `CVN` = CVN,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RELATIVE")
-}
+  }
 }

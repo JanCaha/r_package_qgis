@@ -30,10 +30,11 @@
 saga_rasterstatisticsforpolygons <- function(GRIDS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NAMING = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), QUANTILE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rasterstatisticsforpolygons",`GRIDS` = GRIDS, `POLYGONS` = POLYGONS, `METHOD` = METHOD, `NAMING` = NAMING, `COUNT` = COUNT, `MIN` = MIN, `MAX` = MAX, `RANGE` = RANGE, `SUM` = SUM, `MEAN` = MEAN, `VAR` = VAR, `STDDEV` = STDDEV, `QUANTILE` = QUANTILE, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

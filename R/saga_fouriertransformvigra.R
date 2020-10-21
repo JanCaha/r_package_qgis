@@ -21,10 +21,11 @@
 saga_fouriertransformvigra <- function(INPUT = qgisprocess::qgis_default_value(), REAL = qgisprocess::qgis_default_value(), IMAG = qgisprocess::qgis_default_value(), CENTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fouriertransformvigra",`INPUT` = INPUT, `REAL` = REAL, `IMAG` = IMAG, `CENTER` = CENTER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "REAL")
-}
+  }
 }

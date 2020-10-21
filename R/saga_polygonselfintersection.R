@@ -19,10 +19,11 @@
 saga_polygonselfintersection <- function(POLYGONS = qgisprocess::qgis_default_value(), ID = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:polygonselfintersection",`POLYGONS` = POLYGONS, `ID` = ID, `INTERSECT` = INTERSECT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "INTERSECT")
-}
+  }
 }

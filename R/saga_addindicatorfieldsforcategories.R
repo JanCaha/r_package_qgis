@@ -20,10 +20,11 @@
 saga_addindicatorfieldsforcategories <- function(TABLE = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUT_TABLE = qgisprocess::qgis_default_value(), OUT_SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:addindicatorfieldsforcategories",`TABLE` = TABLE, `FIELD` = FIELD, `OUT_TABLE` = OUT_TABLE, `OUT_SHAPES` = OUT_SHAPES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUT_SHAPES")
-}
+  }
 }

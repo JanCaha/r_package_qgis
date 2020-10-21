@@ -19,10 +19,11 @@
 saga_morphometricprotectionindex <- function(DEM = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), PROTECTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:morphometricprotectionindex",`DEM` = DEM, `RADIUS` = RADIUS, `PROTECTION` = PROTECTION,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "PROTECTION")
-}
+  }
 }

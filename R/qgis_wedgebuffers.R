@@ -22,10 +22,11 @@
 qgis_wedgebuffers <- function(INPUT = qgisprocess::qgis_default_value(), AZIMUTH = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), OUTER_RADIUS = qgisprocess::qgis_default_value(), INNER_RADIUS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:wedgebuffers",`INPUT` = INPUT, `AZIMUTH` = AZIMUTH, `WIDTH` = WIDTH, `OUTER_RADIUS` = OUTER_RADIUS, `INNER_RADIUS` = INNER_RADIUS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

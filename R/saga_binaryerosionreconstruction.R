@@ -19,10 +19,11 @@
 saga_binaryerosionreconstruction <- function(INPUT_GRID = qgisprocess::qgis_default_value(), OUTPUT_GRID = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:binaryerosionreconstruction",`INPUT_GRID` = INPUT_GRID, `OUTPUT_GRID` = OUTPUT_GRID, `RADIUS` = RADIUS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT_GRID")
-}
+  }
 }

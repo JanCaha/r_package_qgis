@@ -29,10 +29,11 @@
 saga_relativeheightsandslopepositions <- function(DEM = qgisprocess::qgis_default_value(), W = qgisprocess::qgis_default_value(), T = qgisprocess::qgis_default_value(), E = qgisprocess::qgis_default_value(), HO = qgisprocess::qgis_default_value(), HU = qgisprocess::qgis_default_value(), NH = qgisprocess::qgis_default_value(), SH = qgisprocess::qgis_default_value(), MS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:relativeheightsandslopepositions",`DEM` = DEM, `W` = W, `T` = T, `E` = E, `HO` = HO, `HU` = HU, `NH` = NH, `SH` = SH, `MS` = MS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "HO")
-}
+  }
 }

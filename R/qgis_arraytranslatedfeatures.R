@@ -23,10 +23,11 @@
 qgis_arraytranslatedfeatures <- function(INPUT = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), DELTA_X = qgisprocess::qgis_default_value(), DELTA_Y = qgisprocess::qgis_default_value(), DELTA_Z = qgisprocess::qgis_default_value(), DELTA_M = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:arraytranslatedfeatures",`INPUT` = INPUT, `COUNT` = COUNT, `DELTA_X` = DELTA_X, `DELTA_Y` = DELTA_Y, `DELTA_Z` = DELTA_Z, `DELTA_M` = DELTA_M, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

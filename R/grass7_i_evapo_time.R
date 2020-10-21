@@ -27,10 +27,11 @@
 grass7_i_evapo_time <- function(eta = qgisprocess::qgis_default_value(), eta_doy = qgisprocess::qgis_default_value(), eto = qgisprocess::qgis_default_value(), eto_doy_min = qgisprocess::qgis_default_value(), start_period = qgisprocess::qgis_default_value(), end_period = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:i.evapo.time",`eta` = eta, `eta_doy` = eta_doy, `eto` = eto, `eto_doy_min` = eto_doy_min, `start_period` = start_period, `end_period` = end_period, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

@@ -22,10 +22,11 @@
 qgis_geometrybyexpression <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT_GEOMETRY = qgisprocess::qgis_default_value(), WITH_Z = qgisprocess::qgis_default_value(), WITH_M = qgisprocess::qgis_default_value(), EXPRESSION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:geometrybyexpression",`INPUT` = INPUT, `OUTPUT_GEOMETRY` = OUTPUT_GEOMETRY, `WITH_Z` = WITH_Z, `WITH_M` = WITH_M, `EXPRESSION` = EXPRESSION, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

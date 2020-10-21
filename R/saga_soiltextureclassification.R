@@ -22,10 +22,11 @@
 saga_soiltextureclassification <- function(SAND = qgisprocess::qgis_default_value(), SILT = qgisprocess::qgis_default_value(), CLAY = qgisprocess::qgis_default_value(), TEXTURE = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:soiltextureclassification",`SAND` = SAND, `SILT` = SILT, `CLAY` = CLAY, `TEXTURE` = TEXTURE, `SUM` = SUM,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TEXTURE")
-}
+  }
 }

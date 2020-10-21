@@ -22,10 +22,11 @@
 saga_splitrgbbands <- function(INPUT = qgisprocess::qgis_default_value(), R = qgisprocess::qgis_default_value(), G = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:splitrgbbands",`INPUT` = INPUT, `R` = R, `G` = G, `B` = B,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "R")
-}
+  }
 }

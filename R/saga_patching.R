@@ -20,10 +20,11 @@
 saga_patching <- function(ORIGINAL = qgisprocess::qgis_default_value(), ADDITIONAL = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), COMPLETED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:patching",`ORIGINAL` = ORIGINAL, `ADDITIONAL` = ADDITIONAL, `RESAMPLING` = RESAMPLING, `COMPLETED` = COMPLETED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "COMPLETED")
-}
+  }
 }

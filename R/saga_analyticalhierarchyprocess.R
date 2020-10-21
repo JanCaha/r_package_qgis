@@ -19,10 +19,11 @@
 saga_analyticalhierarchyprocess <- function(GRIDS = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:analyticalhierarchyprocess",`GRIDS` = GRIDS, `TABLE` = TABLE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

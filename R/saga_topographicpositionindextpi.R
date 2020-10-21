@@ -25,10 +25,11 @@
 saga_topographicpositionindextpi <- function(DEM = qgisprocess::qgis_default_value(), STANDARD = qgisprocess::qgis_default_value(), RADIUS_MIN = qgisprocess::qgis_default_value(), RADIUS_MAX = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), TPI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:topographicpositionindextpi",`DEM` = DEM, `STANDARD` = STANDARD, `RADIUS_MIN` = RADIUS_MIN, `RADIUS_MAX` = RADIUS_MAX, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `TPI` = TPI,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TPI")
-}
+  }
 }

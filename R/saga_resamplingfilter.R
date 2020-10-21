@@ -21,10 +21,11 @@
 saga_resamplingfilter <- function(GRID = qgisprocess::qgis_default_value(), LOPASS = qgisprocess::qgis_default_value(), HIPASS = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:resamplingfilter",`GRID` = GRID, `LOPASS` = LOPASS, `HIPASS` = HIPASS, `SCALE` = SCALE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LOPASS")
-}
+  }
 }

@@ -20,10 +20,11 @@
 saga_flowaccumulationqmofesp <- function(DEM = qgisprocess::qgis_default_value(), PREPROC = qgisprocess::qgis_default_value(), DZFILL = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:flowaccumulationqmofesp",`DEM` = DEM, `PREPROC` = PREPROC, `DZFILL` = DZFILL, `FLOW` = FLOW,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FLOW")
-}
+  }
 }

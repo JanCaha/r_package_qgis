@@ -23,10 +23,11 @@
 saga_randomterraingeneration <- function(RADIUS = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), TARGET_TYPE = qgisprocess::qgis_default_value(), USER_CELL_SIZE = qgisprocess::qgis_default_value(), USER_COLS = qgisprocess::qgis_default_value(), USER_ROWS = qgisprocess::qgis_default_value(), TARGET_GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:randomterraingeneration",`RADIUS` = RADIUS, `ITERATIONS` = ITERATIONS, `TARGET_TYPE` = TARGET_TYPE, `USER_CELL_SIZE` = USER_CELL_SIZE, `USER_COLS` = USER_COLS, `USER_ROWS` = USER_ROWS, `TARGET_GRID` = TARGET_GRID,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TARGET_GRID")
-}
+  }
 }

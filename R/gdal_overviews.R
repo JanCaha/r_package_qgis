@@ -22,10 +22,11 @@
 gdal_overviews <- function(INPUT = qgisprocess::qgis_default_value(), CLEAN = qgisprocess::qgis_default_value(), LEVELS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), FORMAT = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:overviews",`INPUT` = INPUT, `CLEAN` = CLEAN, `LEVELS` = LEVELS, `RESAMPLING` = RESAMPLING, `FORMAT` = FORMAT, `EXTRA` = EXTRA,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -38,10 +38,11 @@
 saga_rgbcomposite <- function(R_GRID = qgisprocess::qgis_default_value(), G_GRID = qgisprocess::qgis_default_value(), B_GRID = qgisprocess::qgis_default_value(), R_METHOD = qgisprocess::qgis_default_value(), G_METHOD = qgisprocess::qgis_default_value(), B_METHOD = qgisprocess::qgis_default_value(), R_RANGE_MIN = qgisprocess::qgis_default_value(), R_RANGE_MAX = qgisprocess::qgis_default_value(), R_PERCTL_MIN = qgisprocess::qgis_default_value(), R_PERCTL_MAX = qgisprocess::qgis_default_value(), R_STDDEV = qgisprocess::qgis_default_value(), G_RANGE_MIN = qgisprocess::qgis_default_value(), G_RANGE_MAX = qgisprocess::qgis_default_value(), G_PERCTL_MIN = qgisprocess::qgis_default_value(), G_PERCTL_MAX = qgisprocess::qgis_default_value(), G_STDDEV = qgisprocess::qgis_default_value(), B_RANGE_MIN = qgisprocess::qgis_default_value(), B_RANGE_MAX = qgisprocess::qgis_default_value(), B_PERCTL_MIN = qgisprocess::qgis_default_value(), B_PERCTL_MAX = qgisprocess::qgis_default_value(), B_STDDEV = qgisprocess::qgis_default_value(), RGB = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rgbcomposite",`R_GRID` = R_GRID, `G_GRID` = G_GRID, `B_GRID` = B_GRID, `R_METHOD` = R_METHOD, `G_METHOD` = G_METHOD, `B_METHOD` = B_METHOD, `R_RANGE_MIN` = R_RANGE_MIN, `R_RANGE_MAX` = R_RANGE_MAX, `R_PERCTL_MIN` = R_PERCTL_MIN, `R_PERCTL_MAX` = R_PERCTL_MAX, `R_STDDEV` = R_STDDEV, `G_RANGE_MIN` = G_RANGE_MIN, `G_RANGE_MAX` = G_RANGE_MAX, `G_PERCTL_MIN` = G_PERCTL_MIN, `G_PERCTL_MAX` = G_PERCTL_MAX, `G_STDDEV` = G_STDDEV, `B_RANGE_MIN` = B_RANGE_MIN, `B_RANGE_MAX` = B_RANGE_MAX, `B_PERCTL_MIN` = B_PERCTL_MIN, `B_PERCTL_MAX` = B_PERCTL_MAX, `B_STDDEV` = B_STDDEV, `RGB` = RGB,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RGB")
-}
+  }
 }

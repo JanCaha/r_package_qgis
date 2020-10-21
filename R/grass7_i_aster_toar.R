@@ -28,10 +28,11 @@
 grass7_i_aster_toar <- function(input = qgisprocess::qgis_default_value(), dayofyear = qgisprocess::qgis_default_value(), sun_elevation = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:i.aster.toar",`input` = input, `dayofyear` = dayofyear, `sun_elevation` = sun_elevation, `-r` = .r, `-a` = .a, `-b` = .b, `-c` = .c, `-d` = .d, `-e` = .e, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

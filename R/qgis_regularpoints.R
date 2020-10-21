@@ -23,10 +23,11 @@
 qgis_regularpoints <- function(EXTENT = qgisprocess::qgis_default_value(), SPACING = qgisprocess::qgis_default_value(), INSET = qgisprocess::qgis_default_value(), RANDOMIZE = qgisprocess::qgis_default_value(), IS_SPACING = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:regularpoints",`EXTENT` = EXTENT, `SPACING` = SPACING, `INSET` = INSET, `RANDOMIZE` = RANDOMIZE, `IS_SPACING` = IS_SPACING, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

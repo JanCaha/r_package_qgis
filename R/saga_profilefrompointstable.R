@@ -21,10 +21,11 @@
 saga_profilefrompointstable <- function(GRID = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), X = qgisprocess::qgis_default_value(), Y = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:profilefrompointstable",`GRID` = GRID, `TABLE` = TABLE, `X` = X, `Y` = Y, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

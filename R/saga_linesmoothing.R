@@ -23,10 +23,11 @@
 saga_linesmoothing <- function(LINES_IN = qgisprocess::qgis_default_value(), LINES_OUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), SENSITIVITY = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), PRESERVATION = qgisprocess::qgis_default_value(), SIGMA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:linesmoothing",`LINES_IN` = LINES_IN, `LINES_OUT` = LINES_OUT, `METHOD` = METHOD, `SENSITIVITY` = SENSITIVITY, `ITERATIONS` = ITERATIONS, `PRESERVATION` = PRESERVATION, `SIGMA` = SIGMA,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LINES_OUT")
-}
+  }
 }

@@ -22,10 +22,11 @@
 saga_function <- function(XMIN = qgisprocess::qgis_default_value(), XMAX = qgisprocess::qgis_default_value(), YMIN = qgisprocess::qgis_default_value(), YMAX = qgisprocess::qgis_default_value(), FORMUL = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:function",`XMIN` = XMIN, `XMAX` = XMAX, `YMIN` = YMIN, `YMAX` = YMAX, `FORMUL` = FORMUL, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

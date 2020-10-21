@@ -18,10 +18,11 @@
 qgis_renamelayer <- function(INPUT = qgisprocess::qgis_default_value(), NAME = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:renamelayer",`INPUT` = INPUT, `NAME` = NAME,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

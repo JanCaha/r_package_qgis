@@ -30,10 +30,11 @@
 qgis_rasterbooleanand <- function(INPUT = qgisprocess::qgis_default_value(), REF_LAYER = qgisprocess::qgis_default_value(), NODATA_AS_FALSE = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:rasterbooleanand",`INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

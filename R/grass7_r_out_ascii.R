@@ -26,10 +26,11 @@
 grass7_r_out_ascii <- function(input = qgisprocess::qgis_default_value(), precision = qgisprocess::qgis_default_value(), width = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:r.out.ascii",`input` = input, `precision` = precision, `width` = width, `null_value` = null_value, `-s` = .s, `-m` = .m, `-i` = .i, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

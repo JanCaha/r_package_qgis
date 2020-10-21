@@ -20,10 +20,11 @@
 saga_linepolygonintersection <- function(LINES = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:linepolygonintersection",`LINES` = LINES, `POLYGONS` = POLYGONS, `METHOD` = METHOD, `INTERSECT` = INTERSECT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "INTERSECT")
-}
+  }
 }

@@ -20,10 +20,11 @@
 saga_localminimaandmaxima <- function(GRID = qgisprocess::qgis_default_value(), MINIMA = qgisprocess::qgis_default_value(), MAXIMA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:localminimaandmaxima",`GRID` = GRID, `MINIMA` = MINIMA, `MAXIMA` = MAXIMA,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MINIMA")
-}
+  }
 }

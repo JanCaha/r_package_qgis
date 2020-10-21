@@ -21,10 +21,11 @@
 qgis_randompointsinsidepolygons <- function(INPUT = qgisprocess::qgis_default_value(), STRATEGY = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:randompointsinsidepolygons",`INPUT` = INPUT, `STRATEGY` = STRATEGY, `VALUE` = VALUE, `MIN_DISTANCE` = MIN_DISTANCE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

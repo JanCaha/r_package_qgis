@@ -31,10 +31,11 @@
 grass7_r_series_accumulate <- function(input = qgisprocess::qgis_default_value(), lower = qgisprocess::qgis_default_value(), upper = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), scale = qgisprocess::qgis_default_value(), shift = qgisprocess::qgis_default_value(), range = qgisprocess::qgis_default_value(), limits = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:r.series.accumulate",`input` = input, `lower` = lower, `upper` = upper, `method` = method, `scale` = scale, `shift` = shift, `range` = range, `limits` = limits, `-n` = .n, `-f` = .f, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

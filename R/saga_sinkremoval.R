@@ -22,10 +22,11 @@
 saga_sinkremoval <- function(DEM = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), THRSHEIGHT = qgisprocess::qgis_default_value(), DEM_PREPROC = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:sinkremoval",`DEM` = DEM, `SINKROUTE` = SINKROUTE, `METHOD` = METHOD, `THRESHOLD` = THRESHOLD, `THRSHEIGHT` = THRSHEIGHT, `DEM_PREPROC` = DEM_PREPROC,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "DEM_PREPROC")
-}
+  }
 }

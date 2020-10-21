@@ -30,10 +30,11 @@
 grass7_v_mkgrid <- function(grid = qgisprocess::qgis_default_value(), position = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), box = qgisprocess::qgis_default_value(), angle = qgisprocess::qgis_default_value(), breaks = qgisprocess::qgis_default_value(), .h = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), map = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.mkgrid",`grid` = grid, `position` = position, `coordinates` = coordinates, `box` = box, `angle` = angle, `breaks` = breaks, `-h` = .h, `-p` = .p, `map` = map, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "map")
-}
+  }
 }

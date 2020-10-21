@@ -32,10 +32,11 @@
 qgis_serviceareafromlayer <- function(INPUT = qgisprocess::qgis_default_value(), STRATEGY = qgisprocess::qgis_default_value(), DIRECTION_FIELD = qgisprocess::qgis_default_value(), VALUE_FORWARD = qgisprocess::qgis_default_value(), VALUE_BACKWARD = qgisprocess::qgis_default_value(), VALUE_BOTH = qgisprocess::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess::qgis_default_value(), SPEED_FIELD = qgisprocess::qgis_default_value(), DEFAULT_SPEED = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), START_POINTS = qgisprocess::qgis_default_value(), TRAVEL_COST2 = qgisprocess::qgis_default_value(), INCLUDE_BOUNDS = qgisprocess::qgis_default_value(), OUTPUT_LINES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:serviceareafromlayer",`INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `TRAVEL_COST2` = TRAVEL_COST2, `INCLUDE_BOUNDS` = INCLUDE_BOUNDS, `OUTPUT_LINES` = OUTPUT_LINES, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT_LINES")
-}
+  }
 }

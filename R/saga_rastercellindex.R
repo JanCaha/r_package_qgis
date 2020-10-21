@@ -19,10 +19,11 @@
 saga_rastercellindex <- function(GRID = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), INDEX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rastercellindex",`GRID` = GRID, `ORDER` = ORDER, `INDEX` = INDEX,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "INDEX")
-}
+  }
 }

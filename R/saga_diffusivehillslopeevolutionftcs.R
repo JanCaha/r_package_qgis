@@ -26,10 +26,11 @@
 saga_diffusivehillslopeevolutionftcs <- function(DEM = qgisprocess::qgis_default_value(), UPDATE = qgisprocess::qgis_default_value(), KAPPA = qgisprocess::qgis_default_value(), DURATION = qgisprocess::qgis_default_value(), TIMESTEP = qgisprocess::qgis_default_value(), DTIME = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(), MODEL = qgisprocess::qgis_default_value(), DIFF = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:diffusivehillslopeevolutionftcs",`DEM` = DEM, `UPDATE` = UPDATE, `KAPPA` = KAPPA, `DURATION` = DURATION, `TIMESTEP` = TIMESTEP, `DTIME` = DTIME, `NEIGHBOURS` = NEIGHBOURS, `MODEL` = MODEL, `DIFF` = DIFF,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MODEL")
-}
+  }
 }

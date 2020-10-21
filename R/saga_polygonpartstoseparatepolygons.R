@@ -19,10 +19,11 @@
 saga_polygonpartstoseparatepolygons <- function(POLYGONS = qgisprocess::qgis_default_value(), LAKES = qgisprocess::qgis_default_value(), PARTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:polygonpartstoseparatepolygons",`POLYGONS` = POLYGONS, `LAKES` = LAKES, `PARTS` = PARTS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "PARTS")
-}
+  }
 }

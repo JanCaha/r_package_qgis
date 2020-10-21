@@ -20,10 +20,11 @@
 gdal_buildvirtualvector <- function(INPUT = qgisprocess::qgis_default_value(), UNIONED = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:buildvirtualvector",`INPUT` = INPUT, `UNIONED` = UNIONED, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

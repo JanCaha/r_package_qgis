@@ -20,10 +20,11 @@
 qgis_filterlayersbytype <- function(INPUT = qgisprocess::qgis_default_value(), VECTOR = qgisprocess::qgis_default_value(), RASTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:filterlayersbytype",`INPUT` = INPUT, `VECTOR` = VECTOR, `RASTER` = RASTER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "VECTOR")
-}
+  }
 }

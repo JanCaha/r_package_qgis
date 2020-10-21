@@ -22,10 +22,11 @@
 saga_morphologicalfiltervigra <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RANK = qgisprocess::qgis_default_value(), RESCALE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:morphologicalfiltervigra",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `RADIUS` = RADIUS, `RANK` = RANK, `RESCALE` = RESCALE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

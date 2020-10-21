@@ -30,10 +30,11 @@
 saga_destripingwithmask <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), RESULT3 = qgisprocess::qgis_default_value(), RESULT1 = qgisprocess::qgis_default_value(), RESULT2 = qgisprocess::qgis_default_value(), ANG = qgisprocess::qgis_default_value(), R = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), MMIN = qgisprocess::qgis_default_value(), MMAX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:destripingwithmask",`INPUT` = INPUT, `MASK` = MASK, `RESULT3` = RESULT3, `RESULT1` = RESULT1, `RESULT2` = RESULT2, `ANG` = ANG, `R` = R, `D` = D, `MIN` = MIN, `MAX` = MAX, `MMIN` = MMIN, `MMAX` = MMAX,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT3")
-}
+  }
 }

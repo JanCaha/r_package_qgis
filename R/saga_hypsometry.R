@@ -24,10 +24,11 @@
 saga_hypsometry <- function(ELEVATION = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), SORTING = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), BZRANGE = qgisprocess::qgis_default_value(), ZRANGE_MIN = qgisprocess::qgis_default_value(), ZRANGE_MAX = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:hypsometry",`ELEVATION` = ELEVATION, `COUNT` = COUNT, `SORTING` = SORTING, `METHOD` = METHOD, `BZRANGE` = BZRANGE, `ZRANGE_MIN` = ZRANGE_MIN, `ZRANGE_MAX` = ZRANGE_MAX, `TABLE` = TABLE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TABLE")
-}
+  }
 }

@@ -20,10 +20,11 @@
 gdal_ogrinfo <- function(INPUT = qgisprocess::qgis_default_value(), SUMMARY_ONLY = qgisprocess::qgis_default_value(), NO_METADATA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:ogrinfo",`INPUT` = INPUT, `SUMMARY_ONLY` = SUMMARY_ONLY, `NO_METADATA` = NO_METADATA, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

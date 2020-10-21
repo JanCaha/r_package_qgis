@@ -38,10 +38,11 @@
 saga_universalkriging <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), TQUALITY = qgisprocess::qgis_default_value(), LOG = qgisprocess::qgis_default_value(), BLOCK = qgisprocess::qgis_default_value(), DBLOCK = qgisprocess::qgis_default_value(), VAR_MAXDIST = qgisprocess::qgis_default_value(), VAR_NCLASSES = qgisprocess::qgis_default_value(), VAR_NSKIP = qgisprocess::qgis_default_value(), VAR_MODEL = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), PREDICTION = qgisprocess::qgis_default_value(), VARIANCE = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:universalkriging",`POINTS` = POINTS, `FIELD` = FIELD, `TQUALITY` = TQUALITY, `LOG` = LOG, `BLOCK` = BLOCK, `DBLOCK` = DBLOCK, `VAR_MAXDIST` = VAR_MAXDIST, `VAR_NCLASSES` = VAR_NCLASSES, `VAR_NSKIP` = VAR_NSKIP, `VAR_MODEL` = VAR_MODEL, `TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX` = TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_FITS` = TARGET_USER_FITS, `PREDICTION` = PREDICTION, `VARIANCE` = VARIANCE, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "PREDICTION")
-}
+  }
 }

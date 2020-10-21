@@ -22,10 +22,11 @@
 saga_paramemeltonruggednessnumber <- function(DEM = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), ZMAX = qgisprocess::qgis_default_value(), MRN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:paramemeltonruggednessnumber",`DEM` = DEM, `AREA` = AREA, `ZMAX` = ZMAX, `MRN` = MRN,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "AREA")
-}
+  }
 }

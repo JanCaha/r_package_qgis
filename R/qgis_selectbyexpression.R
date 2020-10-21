@@ -19,10 +19,11 @@
 qgis_selectbyexpression <- function(INPUT = qgisprocess::qgis_default_value(), EXPRESSION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:selectbyexpression",`INPUT` = INPUT, `EXPRESSION` = EXPRESSION, `METHOD` = METHOD,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

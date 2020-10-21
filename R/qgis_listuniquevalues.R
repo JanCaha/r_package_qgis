@@ -23,10 +23,11 @@
 qgis_listuniquevalues <- function(INPUT = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:listuniquevalues",`INPUT` = INPUT, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -21,10 +21,11 @@
 saga_smoothingvigra <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), EDGE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:smoothingvigra",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SCALE` = SCALE, `EDGE` = EDGE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

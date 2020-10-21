@@ -20,10 +20,11 @@
 qgis_extractbinary <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), FILENAME = qgisprocess::qgis_default_value(), FOLDER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:extractbinary",`INPUT` = INPUT, `FIELD` = FIELD, `FILENAME` = FILENAME, `FOLDER` = FOLDER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FOLDER")
-}
+  }
 }

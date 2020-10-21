@@ -23,10 +23,11 @@
 saga_rivergridgeneration <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SX = qgisprocess::qgis_default_value(), SY = qgisprocess::qgis_default_value(), MX = qgisprocess::qgis_default_value(), MY = qgisprocess::qgis_default_value(), Owrite = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rivergridgeneration",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `SX` = SX, `SY` = SY, `MX` = MX, `MY` = MY, `Owrite` = Owrite,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -23,10 +23,11 @@
 saga_findfieldofextremevalue <- function(INPUT = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), EXTREME_ID = qgisprocess::qgis_default_value(), EXTREME_VALUE = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), IDENTIFY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:findfieldofextremevalue",`INPUT` = INPUT, `FIELDS` = FIELDS, `EXTREME_ID` = EXTREME_ID, `EXTREME_VALUE` = EXTREME_VALUE, `TYPE` = TYPE, `IDENTIFY` = IDENTIFY, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

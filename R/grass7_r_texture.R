@@ -25,10 +25,11 @@
 grass7_r_texture <- function(input = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), size = qgisprocess::qgis_default_value(), distance = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:r.texture",`input` = input, `method` = method, `size` = size, `distance` = distance, `-s` = .s, `-a` = .a, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

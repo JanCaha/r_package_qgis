@@ -26,10 +26,11 @@
 qgis_hublines <- function(HUBS = qgisprocess::qgis_default_value(), HUB_FIELD = qgisprocess::qgis_default_value(), HUB_FIELDS = qgisprocess::qgis_default_value(), SPOKES = qgisprocess::qgis_default_value(), SPOKE_FIELD = qgisprocess::qgis_default_value(), SPOKE_FIELDS = qgisprocess::qgis_default_value(), GEODESIC = qgisprocess::qgis_default_value(), GEODESIC_DISTANCE = qgisprocess::qgis_default_value(), ANTIMERIDIAN_SPLIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:hublines",`HUBS` = HUBS, `HUB_FIELD` = HUB_FIELD, `HUB_FIELDS` = HUB_FIELDS, `SPOKES` = SPOKES, `SPOKE_FIELD` = SPOKE_FIELD, `SPOKE_FIELDS` = SPOKE_FIELDS, `GEODESIC` = GEODESIC, `GEODESIC_DISTANCE` = GEODESIC_DISTANCE, `ANTIMERIDIAN_SPLIT` = ANTIMERIDIAN_SPLIT, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -21,10 +21,11 @@
 qgis_importphotos <- function(FOLDER = qgisprocess::qgis_default_value(), RECURSIVE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), INVALID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:importphotos",`FOLDER` = FOLDER, `RECURSIVE` = RECURSIVE, `OUTPUT` = OUTPUT, `INVALID` = INVALID,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

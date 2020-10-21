@@ -32,10 +32,11 @@
 saga_simulation <- function(DEM = qgisprocess::qgis_default_value(), FUEL = qgisprocess::qgis_default_value(), WINDSPD = qgisprocess::qgis_default_value(), WINDDIR = qgisprocess::qgis_default_value(), M1H = qgisprocess::qgis_default_value(), M10H = qgisprocess::qgis_default_value(), M100H = qgisprocess::qgis_default_value(), MHERB = qgisprocess::qgis_default_value(), MWOOD = qgisprocess::qgis_default_value(), IGNITION = qgisprocess::qgis_default_value(), UPDATEVIEW = qgisprocess::qgis_default_value(), TIME = qgisprocess::qgis_default_value(), FLAME = qgisprocess::qgis_default_value(), INTENSITY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:simulation",`DEM` = DEM, `FUEL` = FUEL, `WINDSPD` = WINDSPD, `WINDDIR` = WINDDIR, `M1H` = M1H, `M10H` = M10H, `M100H` = M100H, `MHERB` = MHERB, `MWOOD` = MWOOD, `IGNITION` = IGNITION, `UPDATEVIEW` = UPDATEVIEW, `TIME` = TIME, `FLAME` = FLAME, `INTENSITY` = INTENSITY,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TIME")
-}
+  }
 }

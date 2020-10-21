@@ -19,10 +19,11 @@
 saga_rastervaluestopointsrandomly <- function(GRID = qgisprocess::qgis_default_value(), FREQ = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rastervaluestopointsrandomly",`GRID` = GRID, `FREQ` = FREQ, `POINTS` = POINTS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "POINTS")
-}
+  }
 }

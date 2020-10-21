@@ -20,10 +20,11 @@
 qgis_extractbyextent <- function(INPUT = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), CLIP = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:extractbyextent",`INPUT` = INPUT, `EXTENT` = EXTENT, `CLIP` = CLIP, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -22,10 +22,11 @@
 saga_polygondissolvebyattribute <- function(POLYGONS = qgisprocess::qgis_default_value(), FIELD_1 = qgisprocess::qgis_default_value(), FIELD_2 = qgisprocess::qgis_default_value(), FIELD_3 = qgisprocess::qgis_default_value(), BND_KEEP = qgisprocess::qgis_default_value(), DISSOLVED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:polygondissolvebyattribute",`POLYGONS` = POLYGONS, `FIELD_1` = FIELD_1, `FIELD_2` = FIELD_2, `FIELD_3` = FIELD_3, `BND_KEEP` = BND_KEEP, `DISSOLVED` = DISSOLVED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "DISSOLVED")
-}
+  }
 }

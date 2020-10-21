@@ -22,10 +22,11 @@
 qgis_setzfromraster <- function(INPUT = qgisprocess::qgis_default_value(), RASTER = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:setzfromraster",`INPUT` = INPUT, `RASTER` = RASTER, `BAND` = BAND, `NODATA` = NODATA, `SCALE` = SCALE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

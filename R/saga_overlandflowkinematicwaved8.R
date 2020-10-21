@@ -28,10 +28,11 @@
 saga_overlandflowkinematicwaved8 <- function(DEM = qgisprocess::qgis_default_value(), GAUGES = qgisprocess::qgis_default_value(), TIME_SPAN = qgisprocess::qgis_default_value(), TIME_STEP = qgisprocess::qgis_default_value(), ROUGHNESS = qgisprocess::qgis_default_value(), NEWTON_MAXITER = qgisprocess::qgis_default_value(), NEWTON_EPSILON = qgisprocess::qgis_default_value(), PRECIP = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), GAUGES_FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:overlandflowkinematicwaved8",`DEM` = DEM, `GAUGES` = GAUGES, `TIME_SPAN` = TIME_SPAN, `TIME_STEP` = TIME_STEP, `ROUGHNESS` = ROUGHNESS, `NEWTON_MAXITER` = NEWTON_MAXITER, `NEWTON_EPSILON` = NEWTON_EPSILON, `PRECIP` = PRECIP, `THRESHOLD` = THRESHOLD, `FLOW` = FLOW, `GAUGES_FLOW` = GAUGES_FLOW,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FLOW")
-}
+  }
 }

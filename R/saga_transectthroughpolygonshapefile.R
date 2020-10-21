@@ -20,10 +20,11 @@
 saga_transectthroughpolygonshapefile <- function(TRANSECT = qgisprocess::qgis_default_value(), THEME = qgisprocess::qgis_default_value(), THEME_FIELD = qgisprocess::qgis_default_value(), TRANSECT_RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:transectthroughpolygonshapefile",`TRANSECT` = TRANSECT, `THEME` = THEME, `THEME_FIELD` = THEME_FIELD, `TRANSECT_RESULT` = TRANSECT_RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TRANSECT_RESULT")
-}
+  }
 }

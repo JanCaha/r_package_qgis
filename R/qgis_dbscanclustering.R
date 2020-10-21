@@ -23,10 +23,11 @@
 qgis_dbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), MIN_SIZE = qgisprocess::qgis_default_value(), EPS = qgisprocess::qgis_default_value(), DBSCAN = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:dbscanclustering",`INPUT` = INPUT, `MIN_SIZE` = MIN_SIZE, `EPS` = EPS, `DBSCAN*` = DBSCAN, `FIELD_NAME` = FIELD_NAME, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

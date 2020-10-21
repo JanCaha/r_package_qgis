@@ -20,10 +20,11 @@
 qgis_extractmvalues <- function(INPUT = qgisprocess::qgis_default_value(), SUMMARIES = qgisprocess::qgis_default_value(), COLUMN_PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:extractmvalues",`INPUT` = INPUT, `SUMMARIES` = SUMMARIES, `COLUMN_PREFIX` = COLUMN_PREFIX, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

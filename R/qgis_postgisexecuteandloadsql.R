@@ -20,10 +20,11 @@
 qgis_postgisexecuteandloadsql <- function(DATABASE = qgisprocess::qgis_default_value(), SQL = qgisprocess::qgis_default_value(), ID_FIELD = qgisprocess::qgis_default_value(), GEOMETRY_FIELD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:postgisexecuteandloadsql",`DATABASE` = DATABASE, `SQL` = SQL, `ID_FIELD` = ID_FIELD, `GEOMETRY_FIELD` = GEOMETRY_FIELD,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

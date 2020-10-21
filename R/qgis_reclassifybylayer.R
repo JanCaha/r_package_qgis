@@ -27,10 +27,11 @@
 qgis_reclassifybylayer <- function(INPUT_RASTER = qgisprocess::qgis_default_value(), RASTER_BAND = qgisprocess::qgis_default_value(), INPUT_TABLE = qgisprocess::qgis_default_value(), MIN_FIELD = qgisprocess::qgis_default_value(), MAX_FIELD = qgisprocess::qgis_default_value(), VALUE_FIELD = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), RANGE_BOUNDARIES = qgisprocess::qgis_default_value(), NODATA_FOR_MISSING = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:reclassifybylayer",`INPUT_RASTER` = INPUT_RASTER, `RASTER_BAND` = RASTER_BAND, `INPUT_TABLE` = INPUT_TABLE, `MIN_FIELD` = MIN_FIELD, `MAX_FIELD` = MAX_FIELD, `VALUE_FIELD` = VALUE_FIELD, `NO_DATA` = NO_DATA, `RANGE_BOUNDARIES` = RANGE_BOUNDARIES, `NODATA_FOR_MISSING` = NODATA_FOR_MISSING, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

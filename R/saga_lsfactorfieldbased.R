@@ -35,10 +35,11 @@
 saga_lsfactorfieldbased <- function(DEM = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), UPSLOPE_AREA = qgisprocess::qgis_default_value(), UPSLOPE_LENGTH = qgisprocess::qgis_default_value(), UPSLOPE_SLOPE = qgisprocess::qgis_default_value(), LS_FACTOR = qgisprocess::qgis_default_value(), BALANCE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), METHOD_SLOPE = qgisprocess::qgis_default_value(), METHOD_AREA = qgisprocess::qgis_default_value(), STOP_AT_EDGE = qgisprocess::qgis_default_value(), EROSIVITY = qgisprocess::qgis_default_value(), STABILITY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:lsfactorfieldbased",`DEM` = DEM, `FIELDS` = FIELDS, `STATISTICS` = STATISTICS, `UPSLOPE_AREA` = UPSLOPE_AREA, `UPSLOPE_LENGTH` = UPSLOPE_LENGTH, `UPSLOPE_SLOPE` = UPSLOPE_SLOPE, `LS_FACTOR` = LS_FACTOR, `BALANCE` = BALANCE, `METHOD` = METHOD, `METHOD_SLOPE` = METHOD_SLOPE, `METHOD_AREA` = METHOD_AREA, `STOP_AT_EDGE` = STOP_AT_EDGE, `EROSIVITY` = EROSIVITY, `STABILITY` = STABILITY,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "STATISTICS")
-}
+  }
 }

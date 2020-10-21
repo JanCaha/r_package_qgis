@@ -37,10 +37,11 @@
 saga_statisticsforrasters <- function(GRIDS = qgisprocess::qgis_default_value(), PCTL_VAL = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), PCTL = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), STDDEVLO = qgisprocess::qgis_default_value(), STDDEVHI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:statisticsforrasters",`GRIDS` = GRIDS, `PCTL_VAL` = PCTL_VAL, `MEAN` = MEAN, `MIN` = MIN, `MAX` = MAX, `VAR` = VAR, `SUM` = SUM, `RANGE` = RANGE, `PCTL` = PCTL, `STDDEV` = STDDEV, `STDDEVLO` = STDDEVLO, `STDDEVHI` = STDDEVHI,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MEAN")
-}
+  }
 }

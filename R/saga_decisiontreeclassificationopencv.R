@@ -27,10 +27,11 @@
 saga_decisiontreeclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), MAX_DEPTH = qgisprocess::qgis_default_value(), MIN_SAMPLES = qgisprocess::qgis_default_value(), MAX_CATEGRS = qgisprocess::qgis_default_value(), arg_1SE_RULE = qgisprocess::qgis_default_value(), TRUNC_PRUNED = qgisprocess::qgis_default_value(), REG_ACCURACY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:decisiontreeclassificationopencv",`FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `MAX_DEPTH` = MAX_DEPTH, `MIN_SAMPLES` = MIN_SAMPLES, `MAX_CATEGRS` = MAX_CATEGRS, `1SE_RULE` = arg_1SE_RULE, `TRUNC_PRUNED` = TRUNC_PRUNED, `REG_ACCURACY` = REG_ACCURACY,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CLASSES")
-}
+  }
 }

@@ -25,10 +25,11 @@
 saga_topographiccorrection <- function(DEM = qgisprocess::qgis_default_value(), ORIGINAL = qgisprocess::qgis_default_value(), AZI = qgisprocess::qgis_default_value(), HGT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), MINNAERT = qgisprocess::qgis_default_value(), MAXCELLS = qgisprocess::qgis_default_value(), MAXVALUE = qgisprocess::qgis_default_value(), CORRECTED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:topographiccorrection",`DEM` = DEM, `ORIGINAL` = ORIGINAL, `AZI` = AZI, `HGT` = HGT, `METHOD` = METHOD, `MINNAERT` = MINNAERT, `MAXCELLS` = MAXCELLS, `MAXVALUE` = MAXVALUE, `CORRECTED` = CORRECTED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CORRECTED")
-}
+  }
 }

@@ -22,10 +22,11 @@
 saga_flowpathlength <- function(ELEVATION = qgisprocess::qgis_default_value(), SEED = qgisprocess::qgis_default_value(), SEEDS_ONLY = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CONVERGENCE = qgisprocess::qgis_default_value(), LENGTH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:flowpathlength",`ELEVATION` = ELEVATION, `SEED` = SEED, `SEEDS_ONLY` = SEEDS_ONLY, `METHOD` = METHOD, `CONVERGENCE` = CONVERGENCE, `LENGTH` = LENGTH,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LENGTH")
-}
+  }
 }

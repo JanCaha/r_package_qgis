@@ -25,10 +25,11 @@
 gdal_merge <- function(INPUT = qgisprocess::qgis_default_value(), PCT = qgisprocess::qgis_default_value(), SEPARATE = qgisprocess::qgis_default_value(), NODATA_INPUT = qgisprocess::qgis_default_value(), NODATA_OUTPUT = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:merge",`INPUT` = INPUT, `PCT` = PCT, `SEPARATE` = SEPARATE, `NODATA_INPUT` = NODATA_INPUT, `NODATA_OUTPUT` = NODATA_OUTPUT, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

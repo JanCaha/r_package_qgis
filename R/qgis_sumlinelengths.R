@@ -21,10 +21,11 @@
 qgis_sumlinelengths <- function(POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), LEN_FIELD = qgisprocess::qgis_default_value(), COUNT_FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:sumlinelengths",`POLYGONS` = POLYGONS, `LINES` = LINES, `LEN_FIELD` = LEN_FIELD, `COUNT_FIELD` = COUNT_FIELD, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

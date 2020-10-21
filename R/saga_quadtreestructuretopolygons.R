@@ -23,10 +23,11 @@
 saga_quadtreestructuretopolygons <- function(SHAPES = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:quadtreestructuretopolygons",`SHAPES` = SHAPES, `ATTRIBUTE` = ATTRIBUTE, `POLYGONS` = POLYGONS, `LINES` = LINES, `POINTS` = POINTS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "POLYGONS")
-}
+  }
 }

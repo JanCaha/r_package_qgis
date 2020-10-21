@@ -39,10 +39,11 @@
 grass7_v_net_distance <- function(input = qgisprocess::qgis_default_value(), flayer = qgisprocess::qgis_default_value(), tlayer = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), arc_type = qgisprocess::qgis_default_value(), from_cats = qgisprocess::qgis_default_value(), from_where = qgisprocess::qgis_default_value(), to_type = qgisprocess::qgis_default_value(), to_cats = qgisprocess::qgis_default_value(), to_where = qgisprocess::qgis_default_value(), arc_column = qgisprocess::qgis_default_value(), arc_backward_column = qgisprocess::qgis_default_value(), node_column = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.net.distance",`input` = input, `flayer` = flayer, `tlayer` = tlayer, `threshold` = threshold, `arc_type` = arc_type, `from_cats` = from_cats, `from_where` = from_where, `to_type` = to_type, `to_cats` = to_cats, `to_where` = to_where, `arc_column` = arc_column, `arc_backward_column` = arc_backward_column, `node_column` = node_column, `-g` = .g, `-l` = .l, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

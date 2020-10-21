@@ -19,10 +19,11 @@
 saga_convertdatastoragetype <- function(INPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:convertdatastoragetype",`INPUT` = INPUT, `TYPE` = TYPE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

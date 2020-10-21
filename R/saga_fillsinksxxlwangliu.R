@@ -19,10 +19,11 @@
 saga_fillsinksxxlwangliu <- function(ELEV = qgisprocess::qgis_default_value(), MINSLOPE = qgisprocess::qgis_default_value(), FILLED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fillsinksxxlwangliu",`ELEV` = ELEV, `MINSLOPE` = MINSLOPE, `FILLED` = FILLED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FILLED")
-}
+  }
 }

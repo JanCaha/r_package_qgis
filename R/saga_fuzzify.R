@@ -24,10 +24,11 @@
 saga_fuzzify <- function(INPUT = qgisprocess::qgis_default_value(), A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), AUTOFIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fuzzify",`INPUT` = INPUT, `A` = A, `B` = B, `C` = C, `D` = D, `TYPE` = TYPE, `AUTOFIT` = AUTOFIT, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

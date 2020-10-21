@@ -28,10 +28,11 @@
 saga_multiresolutionindexofvalleybottomflatnessmrvbf <- function(DEM = qgisprocess::qgis_default_value(), T_SLOPE = qgisprocess::qgis_default_value(), T_PCTL_V = qgisprocess::qgis_default_value(), T_PCTL_R = qgisprocess::qgis_default_value(), P_SLOPE = qgisprocess::qgis_default_value(), P_PCTL = qgisprocess::qgis_default_value(), UPDATE = qgisprocess::qgis_default_value(), CLASSIFY = qgisprocess::qgis_default_value(), MAX_RES = qgisprocess::qgis_default_value(), MRVBF = qgisprocess::qgis_default_value(), MRRTF = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:multiresolutionindexofvalleybottomflatnessmrvbf",`DEM` = DEM, `T_SLOPE` = T_SLOPE, `T_PCTL_V` = T_PCTL_V, `T_PCTL_R` = T_PCTL_R, `P_SLOPE` = P_SLOPE, `P_PCTL` = P_PCTL, `UPDATE` = UPDATE, `CLASSIFY` = CLASSIFY, `MAX_RES` = MAX_RES, `MRVBF` = MRVBF, `MRRTF` = MRRTF,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MRVBF")
-}
+  }
 }

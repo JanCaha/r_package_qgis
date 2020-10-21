@@ -20,10 +20,11 @@
 saga_maximumflowpathlength <- function(ELEVATION = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:maximumflowpathlength",`ELEVATION` = ELEVATION, `WEIGHTS` = WEIGHTS, `DISTANCE` = DISTANCE, `DIRECTION` = DIRECTION,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "DISTANCE")
-}
+  }
 }

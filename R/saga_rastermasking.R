@@ -19,10 +19,11 @@
 saga_rastermasking <- function(GRID = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), MASKED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:rastermasking",`GRID` = GRID, `MASK` = MASK, `MASKED` = MASKED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MASKED")
-}
+  }
 }

@@ -19,10 +19,11 @@
 qgis_densifygeometriesgivenaninterval <- function(INPUT = qgisprocess::qgis_default_value(), INTERVAL = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:densifygeometriesgivenaninterval",`INPUT` = INPUT, `INTERVAL` = INTERVAL, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

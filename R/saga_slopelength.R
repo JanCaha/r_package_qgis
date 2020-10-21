@@ -18,10 +18,11 @@
 saga_slopelength <- function(DEM = qgisprocess::qgis_default_value(), LENGTH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:slopelength",`DEM` = DEM, `LENGTH` = LENGTH,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LENGTH")
-}
+  }
 }

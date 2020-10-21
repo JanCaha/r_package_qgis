@@ -19,10 +19,11 @@
 saga_mirrorgrid <- function(GRID = qgisprocess::qgis_default_value(), MIRROR = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:mirrorgrid",`GRID` = GRID, `MIRROR` = MIRROR, `METHOD` = METHOD,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MIRROR")
-}
+  }
 }

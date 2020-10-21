@@ -21,10 +21,11 @@
 qgis_removenullgeometries <- function(INPUT = qgisprocess::qgis_default_value(), REMOVE_EMPTY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), NULL_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:removenullgeometries",`INPUT` = INPUT, `REMOVE_EMPTY` = REMOVE_EMPTY, `OUTPUT` = OUTPUT, `NULL_OUTPUT` = NULL_OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

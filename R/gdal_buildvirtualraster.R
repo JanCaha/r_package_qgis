@@ -26,10 +26,11 @@
 gdal_buildvirtualraster <- function(INPUT = qgisprocess::qgis_default_value(), RESOLUTION = qgisprocess::qgis_default_value(), SEPARATE = qgisprocess::qgis_default_value(), PROJ_DIFFERENCE = qgisprocess::qgis_default_value(), ADD_ALPHA = qgisprocess::qgis_default_value(), ASSIGN_CRS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), SRC_NODATA = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:buildvirtualraster",`INPUT` = INPUT, `RESOLUTION` = RESOLUTION, `SEPARATE` = SEPARATE, `PROJ_DIFFERENCE` = PROJ_DIFFERENCE, `ADD_ALPHA` = ADD_ALPHA, `ASSIGN_CRS` = ASSIGN_CRS, `RESAMPLING` = RESAMPLING, `SRC_NODATA` = SRC_NODATA, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

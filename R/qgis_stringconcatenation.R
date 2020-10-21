@@ -18,10 +18,11 @@
 qgis_stringconcatenation <- function(INPUT_1 = qgisprocess::qgis_default_value(), INPUT_2 = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:stringconcatenation",`INPUT_1` = INPUT_1, `INPUT_2` = INPUT_2,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CONCATENATION")
-}
+  }
 }

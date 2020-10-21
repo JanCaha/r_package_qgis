@@ -25,10 +25,11 @@
 saga_gradientvectorfromcartesiantopolarcoordinates <- function(DX = qgisprocess::qgis_default_value(), DY = qgisprocess::qgis_default_value(), UNITS = qgisprocess::qgis_default_value(), SYSTEM = qgisprocess::qgis_default_value(), SYSTEM_ZERO = qgisprocess::qgis_default_value(), SYSTEM_ORIENT = qgisprocess::qgis_default_value(), DIR = qgisprocess::qgis_default_value(), LEN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:gradientvectorfromcartesiantopolarcoordinates",`DX` = DX, `DY` = DY, `UNITS` = UNITS, `SYSTEM` = SYSTEM, `SYSTEM_ZERO` = SYSTEM_ZERO, `SYSTEM_ORIENT` = SYSTEM_ORIENT, `DIR` = DIR, `LEN` = LEN,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "DIR")
-}
+  }
 }

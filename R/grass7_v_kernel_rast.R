@@ -32,10 +32,11 @@
 grass7_v_kernel_rast <- function(input = qgisprocess::qgis_default_value(), radius = qgisprocess::qgis_default_value(), dsize = qgisprocess::qgis_default_value(), segmax = qgisprocess::qgis_default_value(), distmax = qgisprocess::qgis_default_value(), multiplier = qgisprocess::qgis_default_value(), node = qgisprocess::qgis_default_value(), kernel = qgisprocess::qgis_default_value(), .o = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.kernel.rast",`input` = input, `radius` = radius, `dsize` = dsize, `segmax` = segmax, `distmax` = distmax, `multiplier` = multiplier, `node` = node, `kernel` = kernel, `-o` = .o, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

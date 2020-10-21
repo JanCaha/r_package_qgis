@@ -18,10 +18,11 @@
 saga_edgecontamination <- function(DEM = qgisprocess::qgis_default_value(), CONTAMINATION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:edgecontamination",`DEM` = DEM, `CONTAMINATION` = CONTAMINATION,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CONTAMINATION")
-}
+  }
 }

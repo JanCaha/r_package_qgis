@@ -32,10 +32,11 @@
 grass7_v_to_rast <- function(input = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), use = qgisprocess::qgis_default_value(), attribute_column = qgisprocess::qgis_default_value(), rgb_column = qgisprocess::qgis_default_value(), label_column = qgisprocess::qgis_default_value(), value = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.to.rast",`input` = input, `type` = type, `where` = where, `use` = use, `attribute_column` = attribute_column, `rgb_column` = rgb_column, `label_column` = label_column, `value` = value, `memory` = memory, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

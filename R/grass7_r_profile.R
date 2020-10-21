@@ -26,10 +26,11 @@
 grass7_r_profile <- function(input = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), resolution = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), file = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:r.profile",`input` = input, `coordinates` = coordinates, `resolution` = resolution, `null_value` = null_value, `file` = file, `-g` = .g, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

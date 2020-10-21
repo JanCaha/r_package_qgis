@@ -24,10 +24,11 @@
 saga_overlandflowdistancetochannelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), DISTVERT = qgisprocess::qgis_default_value(), DISTHORZ = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:overlandflowdistancetochannelnetwork",`ELEVATION` = ELEVATION, `CHANNELS` = CHANNELS, `METHOD` = METHOD, `DISTANCE` = DISTANCE, `DISTVERT` = DISTVERT, `DISTHORZ` = DISTHORZ,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "DISTANCE")
-}
+  }
 }

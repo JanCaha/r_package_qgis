@@ -19,10 +19,11 @@
 qgis_deleteholes <- function(INPUT = qgisprocess::qgis_default_value(), MIN_AREA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:deleteholes",`INPUT` = INPUT, `MIN_AREA` = MIN_AREA, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -30,10 +30,11 @@
 saga_terrainsurfaceclassificationiwahashiandpike <- function(DEM = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), CONVEXITY = qgisprocess::qgis_default_value(), CONV_RECALC = qgisprocess::qgis_default_value(), TEXTURE = qgisprocess::qgis_default_value(), TEXT_RECALC = qgisprocess::qgis_default_value(), LANDFORMS = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), CONV_SCALE = qgisprocess::qgis_default_value(), CONV_KERNEL = qgisprocess::qgis_default_value(), CONV_TYPE = qgisprocess::qgis_default_value(), CONV_EPSILON = qgisprocess::qgis_default_value(), TEXT_SCALE = qgisprocess::qgis_default_value(), TEXT_EPSILON = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:terrainsurfaceclassificationiwahashiandpike",`DEM` = DEM, `SLOPE` = SLOPE, `CONVEXITY` = CONVEXITY, `CONV_RECALC` = CONV_RECALC, `TEXTURE` = TEXTURE, `TEXT_RECALC` = TEXT_RECALC, `LANDFORMS` = LANDFORMS, `TYPE` = TYPE, `CONV_SCALE` = CONV_SCALE, `CONV_KERNEL` = CONV_KERNEL, `CONV_TYPE` = CONV_TYPE, `CONV_EPSILON` = CONV_EPSILON, `TEXT_SCALE` = TEXT_SCALE, `TEXT_EPSILON` = TEXT_EPSILON,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "LANDFORMS")
-}
+  }
 }

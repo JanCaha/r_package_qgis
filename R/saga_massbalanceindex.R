@@ -22,10 +22,11 @@
 saga_massbalanceindex <- function(DEM = qgisprocess::qgis_default_value(), HREL = qgisprocess::qgis_default_value(), TSLOPE = qgisprocess::qgis_default_value(), TCURVE = qgisprocess::qgis_default_value(), THREL = qgisprocess::qgis_default_value(), MBI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:massbalanceindex",`DEM` = DEM, `HREL` = HREL, `TSLOPE` = TSLOPE, `TCURVE` = TCURVE, `THREL` = THREL, `MBI` = MBI,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MBI")
-}
+  }
 }

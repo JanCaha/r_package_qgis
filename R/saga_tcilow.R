@@ -19,10 +19,11 @@
 saga_tcilow <- function(DISTANCE = qgisprocess::qgis_default_value(), TWI = qgisprocess::qgis_default_value(), TCILOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:tcilow",`DISTANCE` = DISTANCE, `TWI` = TWI, `TCILOW` = TCILOW,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TCILOW")
-}
+  }
 }

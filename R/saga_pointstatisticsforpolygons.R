@@ -28,10 +28,11 @@
 saga_pointstatisticsforpolygons <- function(POINTS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), AVG = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), DEV = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), NUM = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:pointstatisticsforpolygons",`POINTS` = POINTS, `POLYGONS` = POLYGONS, `FIELDS` = FIELDS, `FIELD_NAME` = FIELD_NAME, `SUM` = SUM, `AVG` = AVG, `VAR` = VAR, `DEV` = DEV, `MIN` = MIN, `MAX` = MAX, `NUM` = NUM, `STATISTICS` = STATISTICS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "STATISTICS")
-}
+  }
 }

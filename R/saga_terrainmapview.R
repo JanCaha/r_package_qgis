@@ -28,10 +28,11 @@
 saga_terrainmapview <- function(DEM = qgisprocess::qgis_default_value(), SHADE = qgisprocess::qgis_default_value(), OPENNESS = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), CONTOURS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), CONTOUR_LINES = qgisprocess::qgis_default_value(), EQUIDISTANCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:terrainmapview",`DEM` = DEM, `SHADE` = SHADE, `OPENNESS` = OPENNESS, `SLOPE` = SLOPE, `CONTOURS` = CONTOURS, `METHOD` = METHOD, `RADIUS` = RADIUS, `CONTOUR_LINES` = CONTOUR_LINES, `EQUIDISTANCE` = EQUIDISTANCE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "SHADE")
-}
+  }
 }

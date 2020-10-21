@@ -20,10 +20,11 @@
 saga_mergevectorlayers <- function(INPUT = qgisprocess::qgis_default_value(), SRCINFO = qgisprocess::qgis_default_value(), MATCH = qgisprocess::qgis_default_value(), MERGED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:mergevectorlayers",`INPUT` = INPUT, `SRCINFO` = SRCINFO, `MATCH` = MATCH, `MERGED` = MERGED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "MERGED")
-}
+  }
 }

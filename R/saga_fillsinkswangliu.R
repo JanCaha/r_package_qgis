@@ -23,10 +23,11 @@
 saga_fillsinkswangliu <- function(ELEV = qgisprocess::qgis_default_value(), MINSLOPE = qgisprocess::qgis_default_value(), FILLED = qgisprocess::qgis_default_value(), FDIR = qgisprocess::qgis_default_value(), WSHED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fillsinkswangliu",`ELEV` = ELEV, `MINSLOPE` = MINSLOPE, `FILLED` = FILLED, `FDIR` = FDIR, `WSHED` = WSHED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FILLED")
-}
+  }
 }

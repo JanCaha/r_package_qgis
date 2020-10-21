@@ -23,10 +23,11 @@
 qgis_createrandomnegativebinomialrasterlayer <- function(EXTENT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT_TYPE = qgisprocess::qgis_default_value(), K_PARAMETER = qgisprocess::qgis_default_value(), PROBABILITY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:createrandomnegativebinomialrasterlayer",`EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `K_PARAMETER` = K_PARAMETER, `PROBABILITY` = PROBABILITY, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -22,10 +22,11 @@
 saga_flowwidthandspecificcatchmentarea <- function(DEM = qgisprocess::qgis_default_value(), TCA = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), SCA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:flowwidthandspecificcatchmentarea",`DEM` = DEM, `TCA` = TCA, `METHOD` = METHOD, `WIDTH` = WIDTH, `SCA` = SCA,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "WIDTH")
-}
+  }
 }

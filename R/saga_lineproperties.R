@@ -21,10 +21,11 @@
 saga_lineproperties <- function(LINES = qgisprocess::qgis_default_value(), BPARTS = qgisprocess::qgis_default_value(), BPOINTS = qgisprocess::qgis_default_value(), BLENGTH = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:lineproperties",`LINES` = LINES, `BPARTS` = BPARTS, `BPOINTS` = BPOINTS, `BLENGTH` = BLENGTH, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -26,10 +26,11 @@
 grass7_v_class <- function(map = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), algorithm = qgisprocess::qgis_default_value(), nbclasses = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:v.class",`map` = map, `column` = column, `where` = where, `algorithm` = algorithm, `nbclasses` = nbclasses, `-g` = .g, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "html")
-}
+  }
 }

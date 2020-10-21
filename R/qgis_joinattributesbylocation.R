@@ -27,10 +27,11 @@
 qgis_joinattributesbylocation <- function(INPUT = qgisprocess::qgis_default_value(), JOIN = qgisprocess::qgis_default_value(), PREDICATE = qgisprocess::qgis_default_value(), JOIN_FIELDS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DISCARD_NONMATCHING = qgisprocess::qgis_default_value(), PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), NON_MATCHING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:joinattributesbylocation",`INPUT` = INPUT, `JOIN` = JOIN, `PREDICATE` = PREDICATE, `JOIN_FIELDS` = JOIN_FIELDS, `METHOD` = METHOD, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `PREFIX` = PREFIX, `OUTPUT` = OUTPUT, `NON_MATCHING` = NON_MATCHING,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

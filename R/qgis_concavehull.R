@@ -21,10 +21,11 @@
 qgis_concavehull <- function(INPUT = qgisprocess::qgis_default_value(), ALPHA = qgisprocess::qgis_default_value(), HOLES = qgisprocess::qgis_default_value(), NO_MULTIGEOMETRY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:concavehull",`INPUT` = INPUT, `ALPHA` = ALPHA, `HOLES` = HOLES, `NO_MULTIGEOMETRY` = NO_MULTIGEOMETRY, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

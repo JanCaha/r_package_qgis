@@ -19,10 +19,11 @@
 gdal_rgbtopct <- function(INPUT = qgisprocess::qgis_default_value(), NCOLORS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:rgbtopct",`INPUT` = INPUT, `NCOLORS` = NCOLORS, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

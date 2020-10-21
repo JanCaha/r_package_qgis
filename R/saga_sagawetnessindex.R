@@ -30,10 +30,11 @@
 saga_sagawetnessindex <- function(DEM = qgisprocess::qgis_default_value(), SUCTION = qgisprocess::qgis_default_value(), AREA_TYPE = qgisprocess::qgis_default_value(), SLOPE_TYPE = qgisprocess::qgis_default_value(), SLOPE_MIN = qgisprocess::qgis_default_value(), SLOPE_OFF = qgisprocess::qgis_default_value(), SLOPE_WEIGHT = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), AREA_MOD = qgisprocess::qgis_default_value(), TWI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:sagawetnessindex",`DEM` = DEM, `SUCTION` = SUCTION, `AREA_TYPE` = AREA_TYPE, `SLOPE_TYPE` = SLOPE_TYPE, `SLOPE_MIN` = SLOPE_MIN, `SLOPE_OFF` = SLOPE_OFF, `SLOPE_WEIGHT` = SLOPE_WEIGHT, `AREA` = AREA, `SLOPE` = SLOPE, `AREA_MOD` = AREA_MOD, `TWI` = TWI,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "AREA")
-}
+  }
 }

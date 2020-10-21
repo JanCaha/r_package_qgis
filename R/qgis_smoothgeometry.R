@@ -21,10 +21,11 @@
 qgis_smoothgeometry <- function(INPUT = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), OFFSET = qgisprocess::qgis_default_value(), MAX_ANGLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:smoothgeometry",`INPUT` = INPUT, `ITERATIONS` = ITERATIONS, `OFFSET` = OFFSET, `MAX_ANGLE` = MAX_ANGLE, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

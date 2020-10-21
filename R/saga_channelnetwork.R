@@ -30,10 +30,11 @@
 saga_channelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), INIT_GRID = qgisprocess::qgis_default_value(), INIT_METHOD = qgisprocess::qgis_default_value(), INIT_VALUE = qgisprocess::qgis_default_value(), DIV_GRID = qgisprocess::qgis_default_value(), DIV_CELLS = qgisprocess::qgis_default_value(), TRACE_WEIGHT = qgisprocess::qgis_default_value(), MINLEN = qgisprocess::qgis_default_value(), CHNLNTWRK = qgisprocess::qgis_default_value(), CHNLROUTE = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:channelnetwork",`ELEVATION` = ELEVATION, `SINKROUTE` = SINKROUTE, `INIT_GRID` = INIT_GRID, `INIT_METHOD` = INIT_METHOD, `INIT_VALUE` = INIT_VALUE, `DIV_GRID` = DIV_GRID, `DIV_CELLS` = DIV_CELLS, `TRACE_WEIGHT` = TRACE_WEIGHT, `MINLEN` = MINLEN, `CHNLNTWRK` = CHNLNTWRK, `CHNLROUTE` = CHNLROUTE, `SHAPES` = SHAPES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CHNLNTWRK")
-}
+  }
 }

@@ -19,10 +19,11 @@
 saga_polygonclipping <- function(CLIP = qgisprocess::qgis_default_value(), S_INPUT = qgisprocess::qgis_default_value(), S_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:polygonclipping",`CLIP` = CLIP, `S_INPUT` = S_INPUT, `S_OUTPUT` = S_OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "S_OUTPUT")
-}
+  }
 }

@@ -31,10 +31,11 @@
 saga_changedetection <- function(INITIAL = qgisprocess::qgis_default_value(), INI_LUT = qgisprocess::qgis_default_value(), INI_LUT_MIN = qgisprocess::qgis_default_value(), INI_LUT_MAX = qgisprocess::qgis_default_value(), INI_LUT_NAM = qgisprocess::qgis_default_value(), FINAL = qgisprocess::qgis_default_value(), FIN_LUT = qgisprocess::qgis_default_value(), FIN_LUT_MIN = qgisprocess::qgis_default_value(), FIN_LUT_MAX = qgisprocess::qgis_default_value(), FIN_LUT_NAM = qgisprocess::qgis_default_value(), NOCHANGE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), CHANGE = qgisprocess::qgis_default_value(), CHANGES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:changedetection",`INITIAL` = INITIAL, `INI_LUT` = INI_LUT, `INI_LUT_MIN` = INI_LUT_MIN, `INI_LUT_MAX` = INI_LUT_MAX, `INI_LUT_NAM` = INI_LUT_NAM, `FINAL` = FINAL, `FIN_LUT` = FIN_LUT, `FIN_LUT_MIN` = FIN_LUT_MIN, `FIN_LUT_MAX` = FIN_LUT_MAX, `FIN_LUT_NAM` = FIN_LUT_NAM, `NOCHANGE` = NOCHANGE, `OUTPUT` = OUTPUT, `CHANGE` = CHANGE, `CHANGES` = CHANGES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CHANGE")
-}
+  }
 }

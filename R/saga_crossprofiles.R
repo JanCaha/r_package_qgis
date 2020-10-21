@@ -22,10 +22,11 @@
 saga_crossprofiles <- function(DEM = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), DIST_LINE = qgisprocess::qgis_default_value(), DIST_PROFILE = qgisprocess::qgis_default_value(), NUM_PROFILE = qgisprocess::qgis_default_value(), PROFILES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:crossprofiles",`DEM` = DEM, `LINES` = LINES, `DIST_LINE` = DIST_LINE, `DIST_PROFILE` = DIST_PROFILE, `NUM_PROFILE` = NUM_PROFILE, `PROFILES` = PROFILES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "PROFILES")
-}
+  }
 }

@@ -22,10 +22,11 @@
 saga_accumulatedcostanisotropic <- function(COST = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), K = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ACCCOST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostanisotropic",`COST` = COST, `DIRECTION` = DIRECTION, `POINTS` = POINTS, `K` = K, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "ACCCOST")
-}
+  }
 }

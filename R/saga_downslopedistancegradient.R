@@ -22,10 +22,11 @@
 saga_downslopedistancegradient <- function(DEM = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), GRADIENT = qgisprocess::qgis_default_value(), DIFFERENCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:downslopedistancegradient",`DEM` = DEM, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT, `GRADIENT` = GRADIENT, `DIFFERENCE` = DIFFERENCE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "GRADIENT")
-}
+  }
 }

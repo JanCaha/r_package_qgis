@@ -19,10 +19,11 @@
 saga_globalmoransiforrasterlayer <- function(GRID = qgisprocess::qgis_default_value(), CONTIGUITY = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:globalmoransiforrasterlayer",`GRID` = GRID, `CONTIGUITY` = CONTIGUITY, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

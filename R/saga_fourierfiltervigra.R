@@ -23,10 +23,11 @@
 saga_fourierfiltervigra <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), POWER = qgisprocess::qgis_default_value(), RANGE_MIN = qgisprocess::qgis_default_value(), RANGE_MAX = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fourierfiltervigra",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `SCALE` = SCALE, `POWER` = POWER, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX, `FILTER` = FILTER,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

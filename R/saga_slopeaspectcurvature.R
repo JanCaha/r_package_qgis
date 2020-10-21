@@ -43,10 +43,11 @@
 saga_slopeaspectcurvature <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), UNIT_SLOPE = qgisprocess::qgis_default_value(), UNIT_ASPECT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), C_GENE = qgisprocess::qgis_default_value(), C_PLAN = qgisprocess::qgis_default_value(), C_PROF = qgisprocess::qgis_default_value(), C_TANG = qgisprocess::qgis_default_value(), C_LONG = qgisprocess::qgis_default_value(), C_CROS = qgisprocess::qgis_default_value(), C_MINI = qgisprocess::qgis_default_value(), C_MAXI = qgisprocess::qgis_default_value(), C_TOTA = qgisprocess::qgis_default_value(), C_ROTO = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:slopeaspectcurvature",`ELEVATION` = ELEVATION, `METHOD` = METHOD, `UNIT_SLOPE` = UNIT_SLOPE, `UNIT_ASPECT` = UNIT_ASPECT, `SLOPE` = SLOPE, `ASPECT` = ASPECT, `C_GENE` = C_GENE, `C_PLAN` = C_PLAN, `C_PROF` = C_PROF, `C_TANG` = C_TANG, `C_LONG` = C_LONG, `C_CROS` = C_CROS, `C_MINI` = C_MINI, `C_MAXI` = C_MAXI, `C_TOTA` = C_TOTA, `C_ROTO` = C_ROTO,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "SLOPE")
-}
+  }
 }

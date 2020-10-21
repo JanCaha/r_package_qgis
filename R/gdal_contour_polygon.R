@@ -27,10 +27,11 @@
 gdal_contour_polygon <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), INTERVAL = qgisprocess::qgis_default_value(), CREATE_3D = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OFFSET = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), FIELD_NAME_MIN = qgisprocess::qgis_default_value(), FIELD_NAME_MAX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("gdal:contour_polygon",`INPUT` = INPUT, `BAND` = BAND, `INTERVAL` = INTERVAL, `CREATE_3D` = CREATE_3D, `IGNORE_NODATA` = IGNORE_NODATA, `NODATA` = NODATA, `OFFSET` = OFFSET, `EXTRA` = EXTRA, `FIELD_NAME_MIN` = FIELD_NAME_MIN, `FIELD_NAME_MAX` = FIELD_NAME_MAX, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

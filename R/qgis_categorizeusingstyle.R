@@ -25,10 +25,11 @@
 qgis_categorizeusingstyle <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), STYLE = qgisprocess::qgis_default_value(), CASE_SENSITIVE = qgisprocess::qgis_default_value(), TOLERANT = qgisprocess::qgis_default_value(), NON_MATCHING_CATEGORIES = qgisprocess::qgis_default_value(), NON_MATCHING_SYMBOLS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:categorizeusingstyle",`INPUT` = INPUT, `FIELD` = FIELD, `STYLE` = STYLE, `CASE_SENSITIVE` = CASE_SENSITIVE, `TOLERANT` = TOLERANT, `NON_MATCHING_CATEGORIES` = NON_MATCHING_CATEGORIES, `NON_MATCHING_SYMBOLS` = NON_MATCHING_SYMBOLS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

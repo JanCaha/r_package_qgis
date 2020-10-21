@@ -21,10 +21,11 @@
 saga_radiusofvarianceraster <- function(INPUT = qgisprocess::qgis_default_value(), VARIANCE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:radiusofvarianceraster",`INPUT` = INPUT, `VARIANCE` = VARIANCE, `RADIUS` = RADIUS, `OUTPUT` = OUTPUT, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

@@ -20,10 +20,11 @@
 saga_transposerasterlayers <- function(GRIDS = qgisprocess::qgis_default_value(), MIRROR_X = qgisprocess::qgis_default_value(), MIRROR_Y = qgisprocess::qgis_default_value(), TRANSPOSED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:transposerasterlayers",`GRIDS` = GRIDS, `MIRROR_X` = MIRROR_X, `MIRROR_Y` = MIRROR_Y, `TRANSPOSED` = TRANSPOSED,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TRANSPOSED")
-}
+  }
 }

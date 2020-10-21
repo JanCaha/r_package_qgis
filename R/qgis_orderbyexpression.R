@@ -21,10 +21,11 @@
 qgis_orderbyexpression <- function(INPUT = qgisprocess::qgis_default_value(), EXPRESSION = qgisprocess::qgis_default_value(), ASCENDING = qgisprocess::qgis_default_value(), NULLS_FIRST = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:orderbyexpression",`INPUT` = INPUT, `EXPRESSION` = EXPRESSION, `ASCENDING` = ASCENDING, `NULLS_FIRST` = NULLS_FIRST, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

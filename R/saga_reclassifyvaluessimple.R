@@ -20,10 +20,11 @@
 saga_reclassifyvaluessimple <- function(GRID_IN = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), LOOKUP = qgisprocess::qgis_default_value(), GRID_OUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvaluessimple",`GRID_IN` = GRID_IN, `METHOD` = METHOD, `LOOKUP` = LOOKUP, `GRID_OUT` = GRID_OUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "GRID_OUT")
-}
+  }
 }

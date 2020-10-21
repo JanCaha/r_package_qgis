@@ -22,10 +22,11 @@
 saga_zonalrasterstatistics <- function(ZONES = qgisprocess::qgis_default_value(), CATLIST = qgisprocess::qgis_default_value(), STATLIST = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), SHORTNAMES = qgisprocess::qgis_default_value(), OUTTAB = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:zonalrasterstatistics",`ZONES` = ZONES, `CATLIST` = CATLIST, `STATLIST` = STATLIST, `ASPECT` = ASPECT, `SHORTNAMES` = SHORTNAMES, `OUTTAB` = OUTTAB,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTTAB")
-}
+  }
 }

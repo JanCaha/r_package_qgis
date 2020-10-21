@@ -21,10 +21,11 @@
 qgis_selectbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OPERATOR = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:selectbyattribute",`INPUT` = INPUT, `FIELD` = FIELD, `OPERATOR` = OPERATOR, `VALUE` = VALUE, `METHOD` = METHOD,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

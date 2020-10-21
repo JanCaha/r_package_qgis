@@ -21,10 +21,11 @@
 saga_averagewiththereshold2 <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RX = qgisprocess::qgis_default_value(), RY = qgisprocess::qgis_default_value(), THRESH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:averagewiththereshold2",`INPUT` = INPUT, `RESULT` = RESULT, `RX` = RX, `RY` = RY, `THRESH` = THRESH,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

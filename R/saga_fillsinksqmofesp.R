@@ -21,10 +21,11 @@
 saga_fillsinksqmofesp <- function(DEM = qgisprocess::qgis_default_value(), DZFILL = qgisprocess::qgis_default_value(), FILLED = qgisprocess::qgis_default_value(), SINKS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fillsinksqmofesp",`DEM` = DEM, `DZFILL` = DZFILL, `FILLED` = FILLED, `SINKS` = SINKS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "FILLED")
-}
+  }
 }

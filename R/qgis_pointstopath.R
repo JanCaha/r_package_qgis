@@ -23,10 +23,11 @@
 qgis_pointstopath <- function(INPUT = qgisprocess::qgis_default_value(), ORDER_FIELD = qgisprocess::qgis_default_value(), GROUP_FIELD = qgisprocess::qgis_default_value(), DATE_FORMAT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_TEXT_DIR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:pointstopath",`INPUT` = INPUT, `ORDER_FIELD` = ORDER_FIELD, `GROUP_FIELD` = GROUP_FIELD, `DATE_FORMAT` = DATE_FORMAT, `OUTPUT` = OUTPUT, `OUTPUT_TEXT_DIR` = OUTPUT_TEXT_DIR,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

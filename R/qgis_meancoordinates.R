@@ -20,10 +20,11 @@
 qgis_meancoordinates <- function(INPUT = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), UID = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:meancoordinates",`INPUT` = INPUT, `WEIGHT` = WEIGHT, `UID` = UID, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -19,10 +19,11 @@
 saga_curvatureclassification <- function(DEM = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:curvatureclassification",`DEM` = DEM, `THRESHOLD` = THRESHOLD, `CLASS` = CLASS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CLASS")
-}
+  }
 }

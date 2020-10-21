@@ -19,10 +19,11 @@
 saga_metricconversions <- function(GRID = qgisprocess::qgis_default_value(), CONVERSION = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:metricconversions",`GRID` = GRID, `CONVERSION` = CONVERSION, `CONV` = CONV,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CONV")
-}
+  }
 }

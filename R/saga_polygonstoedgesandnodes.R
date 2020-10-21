@@ -20,10 +20,11 @@
 saga_polygonstoedgesandnodes <- function(POLYGONS = qgisprocess::qgis_default_value(), EDGES = qgisprocess::qgis_default_value(), NODES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:polygonstoedgesandnodes",`POLYGONS` = POLYGONS, `EDGES` = EDGES, `NODES` = NODES,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "EDGES")
-}
+  }
 }

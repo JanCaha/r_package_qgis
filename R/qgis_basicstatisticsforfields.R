@@ -39,10 +39,11 @@
 qgis_basicstatisticsforfields <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:basicstatisticsforfields",`INPUT_LAYER` = INPUT_LAYER, `FIELD_NAME` = FIELD_NAME, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT_HTML_FILE")
-}
+  }
 }

@@ -18,10 +18,11 @@
 qgis_definecurrentprojection <- function(INPUT = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:definecurrentprojection",`INPUT` = INPUT, `CRS` = CRS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "INPUT")
-}
+  }
 }

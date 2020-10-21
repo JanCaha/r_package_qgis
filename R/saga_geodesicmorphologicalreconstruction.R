@@ -24,10 +24,11 @@
 saga_geodesicmorphologicalreconstruction <- function(INPUT_GRID = qgisprocess::qgis_default_value(), OBJECT_GRID = qgisprocess::qgis_default_value(), DIFFERENCE_GRID = qgisprocess::qgis_default_value(), SHIFT_VALUE = qgisprocess::qgis_default_value(), BORDER_YES_NO = qgisprocess::qgis_default_value(), BIN_YES_NO = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:geodesicmorphologicalreconstruction",`INPUT_GRID` = INPUT_GRID, `OBJECT_GRID` = OBJECT_GRID, `DIFFERENCE_GRID` = DIFFERENCE_GRID, `SHIFT_VALUE` = SHIFT_VALUE, `BORDER_YES_NO` = BORDER_YES_NO, `BIN_YES_NO` = BIN_YES_NO, `THRESHOLD` = THRESHOLD,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OBJECT_GRID")
-}
+  }
 }

@@ -25,10 +25,11 @@
 saga_knearestneighboursclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(), TRAINING = qgisprocess::qgis_default_value(), ALGORITHM = qgisprocess::qgis_default_value(), EMAX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:knearestneighboursclassificationopencv",`FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `NEIGHBOURS` = NEIGHBOURS, `TRAINING` = TRAINING, `ALGORITHM` = ALGORITHM, `EMAX` = EMAX,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "CLASSES")
-}
+  }
 }

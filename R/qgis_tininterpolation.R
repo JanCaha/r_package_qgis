@@ -23,10 +23,11 @@
 qgis_tininterpolation <- function(INTERPOLATION_DATA = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TRIANGULATION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("qgis:tininterpolation",`INTERPOLATION_DATA` = INTERPOLATION_DATA, `METHOD` = METHOD, `EXTENT` = EXTENT, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT, `TRIANGULATION` = TRIANGULATION,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -34,10 +34,11 @@
 grass7_i_segment <- function(input = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), similarity = qgisprocess::qgis_default_value(), minsize = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), iterations = qgisprocess::qgis_default_value(), seeds = qgisprocess::qgis_default_value(), bounds = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), goodness = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("grass7:i.segment",`input` = input, `threshold` = threshold, `method` = method, `similarity` = similarity, `minsize` = minsize, `memory` = memory, `iterations` = iterations, `seeds` = seeds, `bounds` = bounds, `-d` = .d, `-w` = .w, `output` = output, `goodness` = goodness, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "output")
-}
+  }
 }

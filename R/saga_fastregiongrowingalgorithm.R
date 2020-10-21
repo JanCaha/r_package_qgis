@@ -22,10 +22,11 @@
 saga_fastregiongrowingalgorithm <- function(INPUT = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), REP = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:fastregiongrowingalgorithm",`INPUT` = INPUT, `START` = START, `REP` = REP, `RESULT` = RESULT, `MEAN` = MEAN,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

@@ -30,10 +30,11 @@
 saga_skyviewfactor <- function(DEM = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DLEVEL = qgisprocess::qgis_default_value(), NDIRS = qgisprocess::qgis_default_value(), VISIBLE = qgisprocess::qgis_default_value(), SVF = qgisprocess::qgis_default_value(), SIMPLE = qgisprocess::qgis_default_value(), TERRAIN = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:skyviewfactor",`DEM` = DEM, `RADIUS` = RADIUS, `METHOD` = METHOD, `DLEVEL` = DLEVEL, `NDIRS` = NDIRS, `VISIBLE` = VISIBLE, `SVF` = SVF, `SIMPLE` = SIMPLE, `TERRAIN` = TERRAIN, `DISTANCE` = DISTANCE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "VISIBLE")
-}
+  }
 }

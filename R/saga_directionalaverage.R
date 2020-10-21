@@ -21,10 +21,11 @@
 saga_directionalaverage <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), ANG = qgisprocess::qgis_default_value(), R1 = qgisprocess::qgis_default_value(), R2 = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:directionalaverage",`INPUT` = INPUT, `RESULT` = RESULT, `ANG` = ANG, `R1` = R1, `R2` = R2,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }

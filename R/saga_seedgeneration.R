@@ -30,10 +30,11 @@
 saga_seedgeneration <- function(FEATURES = qgisprocess::qgis_default_value(), SEED_TYPE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), BAND_WIDTH = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), SEED_GRID = qgisprocess::qgis_default_value(), VARIANCE = qgisprocess::qgis_default_value(), SEED_POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:seedgeneration",`FEATURES` = FEATURES, `SEED_TYPE` = SEED_TYPE, `METHOD` = METHOD, `BAND_WIDTH` = BAND_WIDTH, `NORMALIZE` = NORMALIZE, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `SEED_GRID` = SEED_GRID, `VARIANCE` = VARIANCE, `SEED_POINTS` = SEED_POINTS,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "SEED_GRID")
-}
+  }
 }

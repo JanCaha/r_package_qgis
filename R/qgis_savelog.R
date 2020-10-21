@@ -18,10 +18,11 @@
 qgis_savelog <- function(OUTPUT = qgisprocess::qgis_default_value(), USE_HTML = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:savelog",`OUTPUT` = OUTPUT, `USE_HTML` = USE_HTML,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

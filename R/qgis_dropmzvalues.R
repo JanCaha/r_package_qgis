@@ -20,10 +20,11 @@
 qgis_dropmzvalues <- function(INPUT = qgisprocess::qgis_default_value(), DROP_M_VALUES = qgisprocess::qgis_default_value(), DROP_Z_VALUES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("native:dropmzvalues",`INPUT` = INPUT, `DROP_M_VALUES` = DROP_M_VALUES, `DROP_Z_VALUES` = DROP_Z_VALUES, `OUTPUT` = OUTPUT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTPUT")
-}
+  }
 }

@@ -31,10 +31,11 @@
 saga_vegetationindexdistancebased <- function(RED = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), PVI0 = qgisprocess::qgis_default_value(), PVI1 = qgisprocess::qgis_default_value(), PVI2 = qgisprocess::qgis_default_value(), PVI3 = qgisprocess::qgis_default_value(), TSAVI = qgisprocess::qgis_default_value(), ATSAVI = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:vegetationindexdistancebased",`RED` = RED, `NIR` = NIR, `PVI0` = PVI0, `PVI1` = PVI1, `PVI2` = PVI2, `PVI3` = PVI3, `TSAVI` = TSAVI, `ATSAVI` = ATSAVI, `INTERCEPT` = INTERCEPT, `SLOPE` = SLOPE,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "PVI0")
-}
+  }
 }

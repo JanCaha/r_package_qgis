@@ -22,10 +22,11 @@
 saga_lakeflood <- function(ELEV = qgisprocess::qgis_default_value(), SEEDS = qgisprocess::qgis_default_value(), LEVEL = qgisprocess::qgis_default_value(), OUTDEPTH = qgisprocess::qgis_default_value(), OUTLEVEL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:lakeflood",`ELEV` = ELEV, `SEEDS` = SEEDS, `LEVEL` = LEVEL, `OUTDEPTH` = OUTDEPTH, `OUTLEVEL` = OUTLEVEL,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "OUTDEPTH")
-}
+  }
 }

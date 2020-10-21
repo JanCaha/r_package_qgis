@@ -22,10 +22,11 @@
 saga_topographicwetnessindextwi <- function(SLOPE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), TRANS = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), TWI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:topographicwetnessindextwi",`SLOPE` = SLOPE, `AREA` = AREA, `TRANS` = TRANS, `CONV` = CONV, `METHOD` = METHOD, `TWI` = TWI,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "TWI")
-}
+  }
 }

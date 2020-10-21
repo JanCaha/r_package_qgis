@@ -25,10 +25,11 @@
 saga_reclassifyvaluessingle <- function(INPUT = qgisprocess::qgis_default_value(), OLD = qgisprocess::qgis_default_value(), NEW = qgisprocess::qgis_default_value(), SOPERATOR = qgisprocess::qgis_default_value(), NODATAOPT = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OTHEROPT = qgisprocess::qgis_default_value(), OTHERS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvaluessingle",`INPUT` = INPUT, `OLD` = OLD, `NEW` = NEW, `SOPERATOR` = SOPERATOR, `NODATAOPT` = NODATAOPT, `NODATA` = NODATA, `OTHEROPT` = OTHEROPT, `OTHERS` = OTHERS, `RESULT` = RESULT,...)
+
   if (.complete_output) {
     return(output)
   }
   else{
     qgisprocess::qgis_output(output, "RESULT")
-}
+  }
 }
