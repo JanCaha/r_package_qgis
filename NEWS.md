@@ -1,4 +1,6 @@
-# qgis 0.15.0
+# qgis 0.14.0
+
+* add search to website
 
 * change the build order so that version only changes if any R code actually changed
 
