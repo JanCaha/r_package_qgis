@@ -14,25 +14,25 @@ qgis_rastersampling(
 )
 }
 \arguments{
-\item{INPUT}{\code{source} - Input Point Layer. Path to a vector layer.}
+\item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{RASTERCOPY}{\code{raster} - Raster Layer to sample. Path to a raster layer.}
+\item{RASTERCOPY}{\code{raster} - Raster layer. Path to a raster layer.}
 
 \item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value.}
 
-\item{OUTPUT}{\code{sink} - Sampled Points. Path for new vector layer.}
+\item{OUTPUT}{\code{sink} - Sampled. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Sample raster values (qgis:rastersampling)
+QGIS Algorithm provided by QGIS (native c++) Sample raster values (native:rastersampling)
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Sampled Points
+\item OUTPUT - outputVector - Sampled
 }
 }
 }

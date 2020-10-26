@@ -6,6 +6,7 @@
 \usage{
 qgis_pointstopath(
   INPUT = qgisprocess::qgis_default_value(),
+  CLOSE_PATH = qgisprocess::qgis_default_value(),
   ORDER_FIELD = qgisprocess::qgis_default_value(),
   GROUP_FIELD = qgisprocess::qgis_default_value(),
   DATE_FORMAT = qgisprocess::qgis_default_value(),
@@ -17,6 +18,8 @@ qgis_pointstopath(
 }
 \arguments{
 \item{INPUT}{\code{source} - Input point layer. Path to a vector layer.}
+
+\item{CLOSE_PATH}{\code{boolean} - Close path. 1 for true/yes. 0 for false/no.}
 
 \item{ORDER_FIELD}{\code{field} - Order field. The name of an existing field. ; delimited list of existing field names.}
 

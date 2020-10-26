@@ -10,7 +10,6 @@ qgis_fieldcalculator(
   FIELD_TYPE = qgisprocess::qgis_default_value(),
   FIELD_LENGTH = qgisprocess::qgis_default_value(),
   FIELD_PRECISION = qgisprocess::qgis_default_value(),
-  NEW_FIELD = qgisprocess::qgis_default_value(),
   FORMULA = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
@@ -20,15 +19,13 @@ qgis_fieldcalculator(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{FIELD_NAME}{\code{string} - Result field name. String value.}
+\item{FIELD_NAME}{\code{string} - Field name. String value.}
 
-\item{FIELD_TYPE}{\code{enum}  of \verb{("Float", "Integer", "String", "Date")} - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{FIELD_TYPE}{\code{enum}  of \verb{("Float", "Integer", "String", "Date")} - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{FIELD_LENGTH}{\code{number} - Field length. A numeric value.}
+\item{FIELD_LENGTH}{\code{number} - Result field length. A numeric value.}
 
-\item{FIELD_PRECISION}{\code{number} - Field precision. A numeric value.}
-
-\item{NEW_FIELD}{\code{boolean} - Create new field. 1 for true/yes. 0 for false/no.}
+\item{FIELD_PRECISION}{\code{number} - Result field precision. A numeric value.}
 
 \item{FORMULA}{\code{expression} - Formula. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
@@ -39,7 +36,7 @@ qgis_fieldcalculator(
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Field calculator (qgis:fieldcalculator)
+QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator)
 }
 \details{
 \subsection{Outputs description}{

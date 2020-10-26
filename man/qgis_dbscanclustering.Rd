@@ -10,6 +10,7 @@ qgis_dbscanclustering(
   EPS = qgisprocess::qgis_default_value(),
   DBSCAN = qgisprocess::qgis_default_value(),
   FIELD_NAME = qgisprocess::qgis_default_value(),
+  SIZE_FIELD_NAME = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -25,6 +26,8 @@ qgis_dbscanclustering(
 \item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
 
 \item{FIELD_NAME}{\code{string} - Cluster field name. String value.}
+
+\item{SIZE_FIELD_NAME}{\code{string} - Cluster size field name. String value.}
 
 \item{OUTPUT}{\code{sink} - Clusters. Path for new vector layer.}
 

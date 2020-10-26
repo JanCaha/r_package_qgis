@@ -7,13 +7,13 @@
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.
 ##' @param NODATA `number` - Value for nodata or non-intersecting vertices. A numeric value.
 ##' @param SCALE `number` - Scale factor. A numeric value.
-##' @param OUTPUT `sink` - Updated. Path for new vector layer.
+##' @param OUTPUT `sink` - Draped. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Updated
+##' * OUTPUT - outputVector - Draped
 ##'
 ##' @export
 ##' @md

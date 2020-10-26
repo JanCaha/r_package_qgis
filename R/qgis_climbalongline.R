@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Climb Along Line (qgis:climbalongline)
+##' QGIS Algorithm provided by QGIS Climb along line (qgis:climbalongline)
 ##'
-##' @title QGIS algorithm Climb Along Line
+##' @title QGIS algorithm Climb along line
 ##'
 ##' @param INPUT `source` - Line layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Climb layer. Path for new vector layer.

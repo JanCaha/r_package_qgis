@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_climbalongline.R
 \name{qgis_climbalongline}
 \alias{qgis_climbalongline}
-\title{QGIS algorithm Climb Along Line}
+\title{QGIS algorithm Climb along line}
 \usage{
 qgis_climbalongline(
   INPUT = qgisprocess::qgis_default_value(),
@@ -21,7 +21,7 @@ qgis_climbalongline(
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Climb Along Line (qgis:climbalongline)
+QGIS Algorithm provided by QGIS Climb along line (qgis:climbalongline)
 }
 \details{
 \subsection{Outputs description}{
