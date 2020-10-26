@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QGIS algorithm Create categorized renderer from styles — qgis_categorizeusingstyle • qgis</title>
+<title>QGIS algorithm Lowest position in raster stack — qgis_lowestpositioninrasterstack • qgis</title>
 
 
 <!-- jquery -->
@@ -37,10 +37,16 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="QGIS algorithm Create categorized renderer from styles — qgis_categorizeusingstyle" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Create categorized renderer from styles (native:categorizeusingstyle)" />
+
+<meta property="og:title" content="QGIS algorithm Lowest position in raster stack — qgis_lowestpositioninrasterstack" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Lowest position in raster stack (native:lowestpositioninrasterstack)" />
 
 
 
@@ -72,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -95,6 +101,12 @@
         
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -106,23 +118,21 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>QGIS algorithm Create categorized renderer from styles</h1>
+    <h1>QGIS algorithm Lowest position in raster stack</h1>
     
-    <div class="hidden name"><code>qgis_categorizeusingstyle.Rd</code></div>
+    <div class="hidden name"><code>qgis_lowestpositioninrasterstack.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS (native c++) Create categorized renderer from styles (native:categorizeusingstyle)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Lowest position in raster stack (native:lowestpositioninrasterstack)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>qgis_categorizeusingstyle</span><span class='op'>(</span>
-  INPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  FIELD <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  STYLE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  CASE_SENSITIVE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  TOLERANT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  NON_MATCHING_CATEGORIES <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  NON_MATCHING_SYMBOLS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+    <pre class="usage"><span class='fu'>qgis_lowestpositioninrasterstack</span><span class='op'>(</span>
+  INPUT_RASTERS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  REFERENCE_LAYER <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  IGNORE_NODATA <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  OUTPUT_NODATA_VALUE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
@@ -131,32 +141,24 @@
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>INPUT</th>
-      <td><p><code>vector</code> - Input layer. Path to a vector layer.</p></td>
+      <th>INPUT_RASTERS</th>
+      <td><p><code>multilayer</code> - Input raster layers. .</p></td>
     </tr>
     <tr>
-      <th>FIELD</th>
-      <td><p><code>expression</code> - Categorize using expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.</p></td>
+      <th>REFERENCE_LAYER</th>
+      <td><p><code>raster</code> - Reference layer. Path to a raster layer.</p></td>
     </tr>
     <tr>
-      <th>STYLE</th>
-      <td><p><code>file</code> - Style database (leave blank to use saved symbols). Path to a file.</p></td>
+      <th>IGNORE_NODATA</th>
+      <td><p><code>boolean</code> - Ignore NoData values. 1 for true/yes. 0 for false/no.</p></td>
     </tr>
     <tr>
-      <th>CASE_SENSITIVE</th>
-      <td><p><code>boolean</code> - Use case-sensitive match to symbol names. 1 for true/yes. 0 for false/no.</p></td>
+      <th>OUTPUT_NODATA_VALUE</th>
+      <td><p><code>number</code> - Output NoData value. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>TOLERANT</th>
-      <td><p><code>boolean</code> - Ignore non-alphanumeric characters while matching. 1 for true/yes. 0 for false/no.</p></td>
-    </tr>
-    <tr>
-      <th>NON_MATCHING_CATEGORIES</th>
-      <td><p><code>sink</code> - Non-matching categories. Path for new vector layer.</p></td>
-    </tr>
-    <tr>
-      <th>NON_MATCHING_SYMBOLS</th>
-      <td><p><code>sink</code> - Non-matching symbol names. Path for new vector layer.</p></td>
+      <th>OUTPUT</th>
+      <td><p><code>rasterDestination</code> - Output layer. Path for new raster layer.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -174,9 +176,12 @@
 <h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Outputs description</h3>
 
 <ul>
-<li><p>OUTPUT - outputVector - Categorized layer</p></li>
-<li><p>NON_MATCHING_CATEGORIES - outputVector - Non</p></li>
-<li><p>NON_MATCHING_SYMBOLS - outputVector - Non</p></li>
+<li><p>OUTPUT - outputRaster - Output layer</p></li>
+<li><p>EXTENT - outputString - Extent</p></li>
+<li><p>CRS_AUTHID - outputString - CRS authority identifier</p></li>
+<li><p>WIDTH_IN_PIXELS - outputNumber - Width in pixels</p></li>
+<li><p>HEIGHT_IN_PIXELS - outputNumber - Height in pixels</p></li>
+<li><p>TOTAL_PIXEL_COUNT - outputNumber - Total pixel count</p></li>
 </ul>
 
 
@@ -203,6 +208,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QGIS algorithm Rectangles, ovals, diamonds (variable) — qgis_rectanglesovalsdiamondsvariable • qgis</title>
+<title>QGIS algorithm Random points in polygons — qgis_randompointsinpolygons • qgis</title>
 
 
 <!-- jquery -->
@@ -37,10 +37,16 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="QGIS algorithm Rectangles, ovals, diamonds (variable) — qgis_rectanglesovalsdiamondsvariable" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS Rectangles, ovals, diamonds (variable) (qgis:rectanglesovalsdiamondsvariable)" />
+
+<meta property="og:title" content="QGIS algorithm Random points in polygons — qgis_randompointsinpolygons" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Random points in polygons (native:randompointsinpolygons)" />
 
 
 
@@ -72,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -95,6 +101,12 @@
         
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -106,22 +118,23 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>QGIS algorithm Rectangles, ovals, diamonds (variable)</h1>
+    <h1>QGIS algorithm Random points in polygons</h1>
     
-    <div class="hidden name"><code>qgis_rectanglesovalsdiamondsvariable.Rd</code></div>
+    <div class="hidden name"><code>qgis_randompointsinpolygons.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS Rectangles, ovals, diamonds (variable) (qgis:rectanglesovalsdiamondsvariable)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Random points in polygons (native:randompointsinpolygons)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>qgis_rectanglesovalsdiamondsvariable</span><span class='op'>(</span>
+    <pre class="usage"><span class='fu'>qgis_randompointsinpolygons</span><span class='op'>(</span>
   INPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  SHAPE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  WIDTH <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  HEIGHT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  ROTATION <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  SEGMENTS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  POINTS_NUMBER <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  MIN_DISTANCE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  MIN_DISTANCE_GLOBAL <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  MAX_TRIES_PER_POINT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  SEED <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  INCLUDE_POLYGON_ATTRIBUTES <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
@@ -132,31 +145,35 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>INPUT</th>
-      <td><p><code>source</code> - Input layer. Path to a vector layer.</p></td>
+      <td><p><code>source</code> - Input polygon layer. Path to a vector layer.</p></td>
     </tr>
     <tr>
-      <th>SHAPE</th>
-      <td><p><code>enum</code>  of <code>("Rectangles", "Diamonds", "Ovals")</code> - Buffer shape. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
+      <th>POINTS_NUMBER</th>
+      <td><p><code>number</code> - Number of points for each feature. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>WIDTH</th>
-      <td><p><code>field</code> - Width field. The name of an existing field. ; delimited list of existing field names.</p></td>
+      <th>MIN_DISTANCE</th>
+      <td><p><code>distance</code> - Minimum distance between points. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>HEIGHT</th>
-      <td><p><code>field</code> - Height field. The name of an existing field. ; delimited list of existing field names.</p></td>
+      <th>MIN_DISTANCE_GLOBAL</th>
+      <td><p><code>distance</code> - Global minimum distance between points. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>ROTATION</th>
-      <td><p><code>field</code> - Rotation field. The name of an existing field. ; delimited list of existing field names.</p></td>
+      <th>MAX_TRIES_PER_POINT</th>
+      <td><p><code>number</code> - Maximum number of search attempts (for Min. dist. &gt; 0). A numeric value.</p></td>
     </tr>
     <tr>
-      <th>SEGMENTS</th>
-      <td><p><code>number</code> - Number of segments. A numeric value.</p></td>
+      <th>SEED</th>
+      <td><p><code>number</code> - Random seed. A numeric value.</p></td>
+    </tr>
+    <tr>
+      <th>INCLUDE_POLYGON_ATTRIBUTES</th>
+      <td><p><code>boolean</code> - Include polygon attributes. 1 for true/yes. 0 for false/no.</p></td>
     </tr>
     <tr>
       <th>OUTPUT</th>
-      <td><p><code>sink</code> - Output. Path for new vector layer.</p></td>
+      <td><p><code>sink</code> - Random points in polygons. Path for new vector layer.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -174,7 +191,11 @@
 <h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Outputs description</h3>
 
 <ul>
-<li><p>OUTPUT - outputVector - Output</p></li>
+<li><p>OUTPUT - outputVector - Random points in polygons</p></li>
+<li><p>OUTPUT_POINTS - outputNumber - Total number of points generated</p></li>
+<li><p>POINTS_MISSED - outputNumber - Number of missed points</p></li>
+<li><p>POLYGONS_WITH_MISSED_POINTS - outputNumber - Number of polygons with missed points</p></li>
+<li><p>FEATURES_WITH_EMPTY_OR_NO_GEOMETRY - outputNumber - Number of features with empty or no geometry</p></li>
 </ul>
 
 
@@ -201,6 +222,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

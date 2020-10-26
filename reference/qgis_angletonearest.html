@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QGIS algorithm Filter by geometry type — qgis_filterbygeometry • qgis</title>
+<title>QGIS algorithm Align points to features — qgis_angletonearest • qgis</title>
 
 
 <!-- jquery -->
@@ -37,10 +37,16 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="QGIS algorithm Filter by geometry type — qgis_filterbygeometry" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Filter by geometry type (native:filterbygeometry)" />
+
+<meta property="og:title" content="QGIS algorithm Align points to features — qgis_angletonearest" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Align points to features (native:angletonearest)" />
 
 
 
@@ -72,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -95,6 +101,12 @@
         
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -106,21 +118,22 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>QGIS algorithm Filter by geometry type</h1>
+    <h1>QGIS algorithm Align points to features</h1>
     
-    <div class="hidden name"><code>qgis_filterbygeometry.Rd</code></div>
+    <div class="hidden name"><code>qgis_angletonearest.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS (native c++) Filter by geometry type (native:filterbygeometry)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Align points to features (native:angletonearest)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>qgis_filterbygeometry</span><span class='op'>(</span>
+    <pre class="usage"><span class='fu'>qgis_angletonearest</span><span class='op'>(</span>
   INPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  POINTS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  LINES <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  POLYGONS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  NO_GEOMETRY <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  REFERENCE_LAYER <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  MAX_DISTANCE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  FIELD_NAME <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  APPLY_SYMBOLOGY <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
@@ -133,20 +146,24 @@
       <td><p><code>source</code> - Input layer. Path to a vector layer.</p></td>
     </tr>
     <tr>
-      <th>POINTS</th>
-      <td><p><code>sink</code> - Point features. Path for new vector layer.</p></td>
+      <th>REFERENCE_LAYER</th>
+      <td><p><code>source</code> - Reference layer. Path to a vector layer.</p></td>
     </tr>
     <tr>
-      <th>LINES</th>
-      <td><p><code>sink</code> - Line features. Path for new vector layer.</p></td>
+      <th>MAX_DISTANCE</th>
+      <td><p><code>distance</code> - Maximum distance to consider. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>POLYGONS</th>
-      <td><p><code>sink</code> - Polygon features. Path for new vector layer.</p></td>
+      <th>FIELD_NAME</th>
+      <td><p><code>string</code> - Angle field name. String value.</p></td>
     </tr>
     <tr>
-      <th>NO_GEOMETRY</th>
-      <td><p><code>sink</code> - Features with no geometry. Path for new vector layer.</p></td>
+      <th>APPLY_SYMBOLOGY</th>
+      <td><p><code>boolean</code> - Automatically apply symbology. 1 for true/yes. 0 for false/no.</p></td>
+    </tr>
+    <tr>
+      <th>OUTPUT</th>
+      <td><p><code>sink</code> - Aligned layer. Path for new vector layer.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -164,14 +181,7 @@
 <h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Outputs description</h3>
 
 <ul>
-<li><p>POINTS - outputVector - Point features</p></li>
-<li><p>LINES - outputVector - Line features</p></li>
-<li><p>POLYGONS - outputVector - Polygon features</p></li>
-<li><p>NO_GEOMETRY - outputVector - Features with no geometry</p></li>
-<li><p>POINT_COUNT - outputNumber - Total count of point features</p></li>
-<li><p>LINE_COUNT - outputNumber - Total count of line features</p></li>
-<li><p>POLYGON_COUNT - outputNumber - Total count of polygon features</p></li>
-<li><p>NO_GEOMETRY_COUNT - outputNumber - Total count of features without geometry</p></li>
+<li><p>OUTPUT - outputVector - Aligned layer</p></li>
 </ul>
 
 
@@ -198,6 +208,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

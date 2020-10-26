@@ -37,10 +37,16 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="QGIS algorithm Field calculator — qgis_fieldcalculator" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS Field calculator (qgis:fieldcalculator)" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator)" />
 
 
 
@@ -72,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -95,6 +101,12 @@
         
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -112,7 +124,7 @@
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS Field calculator (qgis:fieldcalculator)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator)</p>
     </div>
 
     <pre class="usage"><span class='fu'>qgis_fieldcalculator</span><span class='op'>(</span>
@@ -121,7 +133,6 @@
   FIELD_TYPE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   FIELD_LENGTH <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   FIELD_PRECISION <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  NEW_FIELD <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   FORMULA <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
@@ -137,23 +148,19 @@
     </tr>
     <tr>
       <th>FIELD_NAME</th>
-      <td><p><code>string</code> - Result field name. String value.</p></td>
+      <td><p><code>string</code> - Field name. String value.</p></td>
     </tr>
     <tr>
       <th>FIELD_TYPE</th>
-      <td><p><code>enum</code>  of <code>("Float", "Integer", "String", "Date")</code> - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
+      <td><p><code>enum</code>  of <code>("Float", "Integer", "String", "Date")</code> - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
     </tr>
     <tr>
       <th>FIELD_LENGTH</th>
-      <td><p><code>number</code> - Field length. A numeric value.</p></td>
+      <td><p><code>number</code> - Result field length. A numeric value.</p></td>
     </tr>
     <tr>
       <th>FIELD_PRECISION</th>
-      <td><p><code>number</code> - Field precision. A numeric value.</p></td>
-    </tr>
-    <tr>
-      <th>NEW_FIELD</th>
-      <td><p><code>boolean</code> - Create new field. 1 for true/yes. 0 for false/no.</p></td>
+      <td><p><code>number</code> - Result field precision. A numeric value.</p></td>
     </tr>
     <tr>
       <th>FORMULA</th>
@@ -206,6 +213,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

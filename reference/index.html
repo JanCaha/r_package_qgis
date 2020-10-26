@@ -37,6 +37,12 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="Function reference" />
@@ -71,7 +77,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -93,6 +99,12 @@
       <ul class="nav navbar-nav navbar-right">
         
       </ul>
+      
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
       
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -179,6 +191,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="qgis_angletonearest.html">qgis_angletonearest()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Align points to features</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="qgis_antimeridiansplit.html">qgis_antimeridiansplit()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Geodesic line split at antimeridian</p></td>
@@ -206,6 +224,12 @@
           <p><code><a href="qgis_assignprojection.html">qgis_assignprojection()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Assign projection</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="qgis_atlaslayouttopdf.html">qgis_atlaslayouttopdf()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Export atlas layout as PDF</p></td>
       </tr><tr>
         
         <td>
@@ -263,9 +287,9 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_categorizeusingstyle.html">qgis_categorizeusingstyle()</a></code> </p>
+          <p><code><a href="qgis_cellstatistics.html">qgis_cellstatistics()</a></code> </p>
         </td>
-        <td><p>QGIS algorithm Create categorized renderer from styles</p></td>
+        <td><p>QGIS algorithm Cell statistics</p></td>
       </tr><tr>
         
         <td>
@@ -283,7 +307,7 @@
         <td>
           <p><code><a href="qgis_climbalongline.html">qgis_climbalongline()</a></code> </p>
         </td>
-        <td><p>QGIS algorithm Climb Along Line</p></td>
+        <td><p>QGIS algorithm Climb along line</p></td>
       </tr><tr>
         
         <td>
@@ -509,9 +533,9 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_eliminateselectedpolygons.html">qgis_eliminateselectedpolygons()</a></code> </p>
+          <p><code><a href="qgis_equaltofrequency.html">qgis_equaltofrequency()</a></code> </p>
         </td>
-        <td><p>QGIS algorithm Eliminate selected polygons</p></td>
+        <td><p>QGIS algorithm Equal to frequency</p></td>
       </tr><tr>
         
         <td>
@@ -623,18 +647,6 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_filterbygeometry.html">qgis_filterbygeometry()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Filter by geometry type</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_filterlayersbytype.html">qgis_filterlayersbytype()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Filter layers by type</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="qgis_filterverticesbym.html">qgis_filterverticesbym()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Filter vertices by M value</p></td>
@@ -656,6 +668,12 @@
           <p><code><a href="qgis_fixgeometries.html">qgis_fixgeometries()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Fix geometries</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="qgis_flattenrelationships.html">qgis_flattenrelationships()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Flatten relationship</p></td>
       </tr><tr>
         
         <td>
@@ -719,9 +737,21 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="qgis_greaterthanfrequency.html">qgis_greaterthanfrequency()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Greater than frequency</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="qgis_heatmapkerneldensityestimation.html">qgis_heatmapkerneldensityestimation()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Heatmap (Kernel Density Estimation)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="qgis_highestpositioninrasterstack.html">qgis_highestpositioninrasterstack()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Highest position in raster stack</p></td>
       </tr><tr>
         
         <td>
@@ -815,6 +845,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="qgis_lessthanfrequency.html">qgis_lessthanfrequency()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Less than frequency</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="qgis_linedensity.html">qgis_linedensity()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Line density</p></td>
@@ -845,9 +881,9 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_loadlayer.html">qgis_loadlayer()</a></code> </p>
+          <p><code><a href="qgis_lowestpositioninrasterstack.html">qgis_lowestpositioninrasterstack()</a></code> </p>
         </td>
-        <td><p>QGIS algorithm Load layer into project</p></td>
+        <td><p>QGIS algorithm Lowest position in raster stack</p></td>
       </tr><tr>
         
         <td>
@@ -1007,15 +1043,21 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_postgisexecuteandloadsql.html">qgis_postgisexecuteandloadsql()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm PostgreSQL execute and load SQL</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="qgis_printlayoutmapextenttolayer.html">qgis_printlayoutmapextenttolayer()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Print layout map extent to layer</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="qgis_printlayouttoimage.html">qgis_printlayouttoimage()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Export print layout as image</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="qgis_printlayouttopdf.html">qgis_printlayouttopdf()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Export print layout as PDF</p></td>
       </tr><tr>
         
         <td>
@@ -1061,6 +1103,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="qgis_randompointsinpolygons.html">qgis_randompointsinpolygons()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Random points in polygons</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="qgis_randompointsinsidepolygons.html">qgis_randompointsinsidepolygons()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Random points inside polygons</p></td>
@@ -1070,18 +1118,6 @@
           <p><code><a href="qgis_randompointsonlines.html">qgis_randompointsonlines()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Random points on lines</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_randomselection.html">qgis_randomselection()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Random selection</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_randomselectionwithinsubsets.html">qgis_randomselectionwithinsubsets()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Random selection within subsets</p></td>
       </tr><tr>
         
         <td>
@@ -1163,12 +1199,6 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_rectanglesovalsdiamondsvariable.html">qgis_rectanglesovalsdiamondsvariable()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Rectangles, ovals, diamonds (variable)</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="qgis_refactorfields.html">qgis_refactorfields()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Refactor fields</p></td>
@@ -1205,12 +1235,6 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_renamelayer.html">qgis_renamelayer()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Rename layer</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="qgis_renametablefield.html">qgis_renametablefield()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Rename field</p></td>
@@ -1226,6 +1250,12 @@
           <p><code><a href="qgis_reprojectlayer.html">qgis_reprojectlayer()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Reproject layer</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="qgis_rescaleraster.html">qgis_rescaleraster()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm Rescale raster</p></td>
       </tr><tr>
         
         <td>
@@ -1253,9 +1283,9 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_savelog.html">qgis_savelog()</a></code> </p>
+          <p><code><a href="qgis_savefeatures.html">qgis_savefeatures()</a></code> </p>
         </td>
-        <td><p>QGIS algorithm Save log to file</p></td>
+        <td><p>QGIS algorithm Save vector features to file</p></td>
       </tr><tr>
         
         <td>
@@ -1280,18 +1310,6 @@
           <p><code><a href="qgis_segmentizebymaxdistance.html">qgis_segmentizebymaxdistance()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Segmentize by maximum distance</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_selectbyattribute.html">qgis_selectbyattribute()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Select by attribute</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_selectbyexpression.html">qgis_selectbyexpression()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Select by expression</p></td>
       </tr><tr>
         
         <td>
@@ -1328,18 +1346,6 @@
           <p><code><a href="qgis_setmvalue.html">qgis_setmvalue()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Set M value</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_setstyleforrasterlayer.html">qgis_setstyleforrasterlayer()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Set style for raster layer</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_setstyleforvectorlayer.html">qgis_setstyleforvectorlayer()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Set style for vector layer</p></td>
       </tr><tr>
         
         <td>
@@ -1445,12 +1451,6 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_stringconcatenation.html">qgis_stringconcatenation()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm String concatenation</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="qgis_stylefromproject.html">qgis_stylefromproject()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Create style database from project</p></td>
@@ -1511,6 +1511,12 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="qgis_tinmeshcreation.html">qgis_tinmeshcreation()</a></code> </p>
+        </td>
+        <td><p>QGIS algorithm TIN Mesh Creation</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="qgis_topologicalcoloring.html">qgis_topologicalcoloring()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Topological coloring</p></td>
@@ -1538,12 +1544,6 @@
           <p><code><a href="qgis_union.html">qgis_union()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Union</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="qgis_variabledistancebuffer.html">qgis_variabledistancebuffer()</a></code> </p>
-        </td>
-        <td><p>QGIS algorithm Variable distance buffer</p></td>
       </tr><tr>
         
         <td>
@@ -1589,7 +1589,7 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="qgis_zonalstatistics.html">qgis_zonalstatistics()</a></code> </p>
+          <p><code><a href="qgis_zonalstatisticsfb.html">qgis_zonalstatisticsfb()</a></code> </p>
         </td>
         <td><p>QGIS algorithm Zonal statistics</p></td>
       </tr>
@@ -5923,6 +5923,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QGIS algorithm Rename layer — qgis_renamelayer • qgis</title>
+<title>QGIS algorithm Save vector features to file — qgis_savefeatures • qgis</title>
 
 
 <!-- jquery -->
@@ -37,10 +37,16 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="QGIS algorithm Rename layer — qgis_renamelayer" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer)" />
+
+<meta property="og:title" content="QGIS algorithm Save vector features to file — qgis_savefeatures" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures)" />
 
 
 
@@ -72,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -95,6 +101,12 @@
         
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -106,18 +118,21 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>QGIS algorithm Rename layer</h1>
+    <h1>QGIS algorithm Save vector features to file</h1>
     
-    <div class="hidden name"><code>qgis_renamelayer.Rd</code></div>
+    <div class="hidden name"><code>qgis_savefeatures.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>qgis_renamelayer</span><span class='op'>(</span>
+    <pre class="usage"><span class='fu'>qgis_savefeatures</span><span class='op'>(</span>
   INPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  NAME <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  LAYER_NAME <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  DATASOURCE_OPTIONS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  LAYER_OPTIONS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
@@ -127,11 +142,23 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>INPUT</th>
-      <td><p><code>layer</code> - Layer. Path to a vector, raster or mesh layer.</p></td>
+      <td><p><code>source</code> - Vector features. Path to a vector layer.</p></td>
     </tr>
     <tr>
-      <th>NAME</th>
-      <td><p><code>string</code> - New name. String value.</p></td>
+      <th>OUTPUT</th>
+      <td><p><code>fileDestination</code> - Saved features. Path for new file.</p></td>
+    </tr>
+    <tr>
+      <th>LAYER_NAME</th>
+      <td><p><code>string</code> - Layer name. String value.</p></td>
+    </tr>
+    <tr>
+      <th>DATASOURCE_OPTIONS</th>
+      <td><p><code>string</code> - GDAL dataset options (separate individual options with semicolons). String value.</p></td>
+    </tr>
+    <tr>
+      <th>LAYER_OPTIONS</th>
+      <td><p><code>string</code> - GDAL layer options (separate individual options with semicolons). String value.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -149,7 +176,9 @@
 <h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Outputs description</h3>
 
 <ul>
-<li><p>OUTPUT - outputLayer - Layer</p></li>
+<li><p>OUTPUT - outputFile - Saved features</p></li>
+<li><p>FILE_PATH - outputString - File name and path</p></li>
+<li><p>LAYER_NAME - outputString - Layer name</p></li>
 </ul>
 
 
@@ -176,6 +205,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>

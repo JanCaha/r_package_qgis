@@ -37,10 +37,16 @@
 <script src="../pkgdown.js"></script>
 
 
+<!-- docsearch -->
+<script src="../docsearch.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link href="../docsearch.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+
 
 
 <meta property="og:title" content="QGIS algorithm Sample raster values — qgis_rastersampling" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS Sample raster values (qgis:rastersampling)" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Sample raster values (native:rastersampling)" />
 
 
 
@@ -72,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.14.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
       </span>
     </div>
 
@@ -95,6 +101,12 @@
         
       </ul>
       
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
+        <div class="form-group">
+          <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+        </div>
+      </form>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -112,7 +124,7 @@
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS Sample raster values (qgis:rastersampling)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Sample raster values (native:rastersampling)</p>
     </div>
 
     <pre class="usage"><span class='fu'>qgis_rastersampling</span><span class='op'>(</span>
@@ -129,11 +141,11 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>INPUT</th>
-      <td><p><code>source</code> - Input Point Layer. Path to a vector layer.</p></td>
+      <td><p><code>source</code> - Input layer. Path to a vector layer.</p></td>
     </tr>
     <tr>
       <th>RASTERCOPY</th>
-      <td><p><code>raster</code> - Raster Layer to sample. Path to a raster layer.</p></td>
+      <td><p><code>raster</code> - Raster layer. Path to a raster layer.</p></td>
     </tr>
     <tr>
       <th>COLUMN_PREFIX</th>
@@ -141,7 +153,7 @@
     </tr>
     <tr>
       <th>OUTPUT</th>
-      <td><p><code>sink</code> - Sampled Points. Path for new vector layer.</p></td>
+      <td><p><code>sink</code> - Sampled. Path for new vector layer.</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -159,7 +171,7 @@
 <h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Outputs description</h3>
 
 <ul>
-<li><p>OUTPUT - outputVector - Sampled Points</p></li>
+<li><p>OUTPUT - outputVector - Sampled</p></li>
 </ul>
 
 
@@ -186,6 +198,23 @@
    </div>
 
   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.js" integrity="sha256-GKvGqXDznoRYHCwKXGnuchvKSwmx9SRMrZOTh2g4Sb0=" crossorigin="anonymous"></script>
+<script>
+  docsearch({
+    
+    
+    apiKey: '1fd87d9f48cb3b1c1d7febc3fee975f1',
+    indexName: 'r_package_qgis',
+    inputSelector: 'input#search-input.form-control',
+    transformData: function(hits) {
+      return hits.map(function (hit) {
+        hit.url = updateHitURL(hit);
+        return hit;
+      });
+    }
+  });
+</script>
+
 
 
   </body>
