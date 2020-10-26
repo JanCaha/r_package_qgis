@@ -2,6 +2,11 @@ url: https://jancaha.github.io/r_package_qgis
 
 home:
   title: Run QGIS algorithms directly from R
+  links:
+  - text: QGIS
+    href: https://qgis.org/en/site/
+  - text: qgisprocess
+    href: https://github.com/paleolimbot/qgisprocess
 
 reference:
   - title: QGIS
@@ -24,3 +29,8 @@ reference:
     contents:
     - starts_with("saga_")
 
+template:
+  params:
+    docsearch:
+      api_key: 1fd87d9f48cb3b1c1d7febc3fee975f1
+      index_name: r_package_qgis
