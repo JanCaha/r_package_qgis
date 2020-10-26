@@ -8,6 +8,7 @@ qgis_kmeansclustering(
   INPUT = qgisprocess::qgis_default_value(),
   CLUSTERS = qgisprocess::qgis_default_value(),
   FIELD_NAME = qgisprocess::qgis_default_value(),
+  SIZE_FIELD_NAME = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -19,6 +20,8 @@ qgis_kmeansclustering(
 \item{CLUSTERS}{\code{number} - Number of clusters. A numeric value.}
 
 \item{FIELD_NAME}{\code{string} - Cluster field name. String value.}
+
+\item{SIZE_FIELD_NAME}{\code{string} - Cluster size field name. String value.}
 
 \item{OUTPUT}{\code{sink} - Clusters. Path for new vector layer.}
 

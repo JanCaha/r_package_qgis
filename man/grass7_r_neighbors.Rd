@@ -28,7 +28,7 @@ grass7_r_neighbors(
 
 \item{selection}{\code{raster} - Raster layer to select the cells which should be processed. Path to a raster layer.}
 
-\item{method}{\code{enum}  of \verb{("average", "median", "mode", "minimum", "maximum", "stddev", "sum", "variance", "diversity", "interspersion")} - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{method}{\code{enum}  of \verb{("average", "median", "mode", "minimum", "maximum", "range", "stddev", "sum", "count", "variance", "diversity", "interspersion", "quart1", "quart3", "perc90", "quantile")} - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{size}{\code{number} - Neighborhood size. A numeric value.}
 

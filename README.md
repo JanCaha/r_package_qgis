@@ -64,7 +64,7 @@ The names of the functions follow general pattern of
 algorithms using `qgis` algorithm provider instead of `native`.
 
 The available providers are: 3d, gdal, grass7, native, qgis, saga. The
-overall number of available algorithms is 976.
+overall number of available algorithms is 970.
 
 Example
 -------
@@ -106,9 +106,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpBUL48b/filea4a3a37ec61/filea4a329642de0.gpkg' \
+    #>   '--INPUT=/tmp/RtmphlTTnD/filea8d845acb4a9/filea8d8374a46a9.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpBUL48b/filea4a3a37ec61/filea4a35c4c57b5.gpkg'
+    #>   '--OUTPUT=/tmp/RtmphlTTnD/filea8d845acb4a9/filea8d879354867.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -117,16 +117,17 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpBUL48b/filea4a3a37ec61/filea4a329642de0.gpkg
+    #> INPUT:   /tmp/RtmphlTTnD/filea8d845acb4a9/filea8d8374a46a9.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpBUL48b/filea4a3a37ec61/filea4a35c4c57b5.gpkg
+    #> OUTPUT:  /tmp/RtmphlTTnD/filea8d845acb4a9/filea8d879354867.gpkg
+    #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
     #> ----------------
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpBUL48b/filea4a3a37ec61/filea4a35c4c57b5.gpkg
+    #> OUTPUT:  /tmp/RtmphlTTnD/filea8d845acb4a9/filea8d879354867.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot

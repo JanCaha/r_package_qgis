@@ -26,7 +26,7 @@ qgis_setmfromraster(
 
 \item{SCALE}{\code{number} - Scale factor. A numeric value.}
 
-\item{OUTPUT}{\code{sink} - Updated. Path for new vector layer.}
+\item{OUTPUT}{\code{sink} - Draped. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -38,7 +38,7 @@ QGIS Algorithm provided by QGIS (native c++) Set M value from raster (native:set
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Updated
+\item OUTPUT - outputVector - Draped
 }
 }
 }

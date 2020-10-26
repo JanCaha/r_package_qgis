@@ -10,6 +10,7 @@ grass7_v_select(
   binput = qgisprocess::qgis_default_value(),
   btype = qgisprocess::qgis_default_value(),
   operator = qgisprocess::qgis_default_value(),
+  relate = qgisprocess::qgis_default_value(),
   .t = qgisprocess::qgis_default_value(),
   .c = qgisprocess::qgis_default_value(),
   .r = qgisprocess::qgis_default_value(),
@@ -35,6 +36,8 @@ grass7_v_select(
 \item{btype}{\code{enum}  of \verb{("point", "line", "boundary", "centroid", "area")} - Input layer (B) Type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{operator}{\code{enum}  of \verb{("overlap", "equals", "disjoint", "intersect", "touches", "crosses", "within", "contains", "overlaps", "relate")} - Operator to use. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+
+\item{relate}{\code{string} - Intersection Matrix Pattern used for 'relate' operator. String value.}
 
 \item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
 
