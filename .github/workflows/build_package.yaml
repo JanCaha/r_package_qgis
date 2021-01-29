@@ -5,6 +5,8 @@ on:
       - .github/workflows/**
       - NEWS.md
       - README.Rmd
+    schedule:
+      - cron: "0 0 1 * *"
 
 name: Build package
 
