@@ -843,7 +843,7 @@
 "842","saga","SAGA","saga:randomfield","randomfield","Random field"
 "843","saga","SAGA","saga:randomforestclassificationopencv","randomforestclassificationopencv","Random forest classification (opencv)"
 "844","saga","SAGA","saga:randomforestpresencepredictionvigra","randomforestpresencepredictionvigra","Random forest presence prediction (vigra)"
-"845","saga","SAGA","saga:randomterraingeneration","randomterraingeneration","Random terrain generation"
+"845","saga","SAGA","saga:randomterrain","randomterrain","Random terrain"
 "846","saga","SAGA","saga:rankfilter","rankfilter","Rank filter"
 "847","saga","SAGA","saga:rasterbuffer","rasterbuffer","Raster buffer"
 "848","saga","SAGA","saga:rastercalculator","rastercalculator","Raster calculator"
