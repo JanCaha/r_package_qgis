@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>QGIS algorithm Random terrain generation — saga_randomterraingeneration • qgis</title>
+<title>QGIS algorithm Random terrain — saga_randomterrain • qgis</title>
 
 
 <!-- jquery -->
@@ -45,8 +45,8 @@
 
 
 
-<meta property="og:title" content="QGIS algorithm Random terrain generation — saga_randomterraingeneration" />
-<meta property="og:description" content="QGIS Algorithm provided by SAGA Random terrain generation (saga:randomterraingeneration)" />
+<meta property="og:title" content="QGIS algorithm Random terrain — saga_randomterrain" />
+<meta property="og:description" content="QGIS Algorithm provided by SAGA Random terrain (saga:randomterrain)" />
 
 
 
@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.15.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.16.0</span>
       </span>
     </div>
 
@@ -86,7 +86,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -98,7 +98,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/JanCaha/r_package_qgis/">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
       <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
@@ -118,23 +123,25 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>QGIS algorithm Random terrain generation</h1>
-    
-    <div class="hidden name"><code>saga_randomterraingeneration.Rd</code></div>
+    <h1>QGIS algorithm Random terrain</h1>
+    <small class="dont-index">Source: <a href='https://github.com/JanCaha/r_package_qgis/blob/master/R/saga_randomterrain.R'><code>R/saga_randomterrain.R</code></a></small>
+    <div class="hidden name"><code>saga_randomterrain.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by SAGA Random terrain generation (saga:randomterraingeneration)</p>
+    <p>QGIS Algorithm provided by SAGA Random terrain (saga:randomterrain)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>saga_randomterraingeneration</span><span class='op'>(</span>
+    <pre class="usage"><span class='fu'>saga_randomterrain</span><span class='op'>(</span>
   RADIUS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   ITERATIONS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  TARGET_TYPE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  USER_CELL_SIZE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  USER_COLS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  USER_ROWS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  TARGET_GRID <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  TARGET_DEFINITION <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  TARGET_USER_SIZE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+ 
+    TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  TARGET_USER_FITS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  TARGET_TEMPLATE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  TARGET_OUT_GRID <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
@@ -151,23 +158,27 @@
       <td><p><code>number</code> - Iterations. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>TARGET_TYPE</th>
-      <td><p><code>enum</code>  of <code>("[0] User defined")</code> - Target Dimensions. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
+      <th>TARGET_DEFINITION</th>
+      <td><p><code>enum</code>  of <code>("[0] User defined", "[1] Grid or Grid System")</code> - Target Dimensions. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
     </tr>
     <tr>
-      <th>USER_CELL_SIZE</th>
-      <td><p><code>number</code> - Grid Size. A numeric value.</p></td>
+      <th>TARGET_USER_SIZE</th>
+      <td><p><code>number</code> - Cellsize. A numeric value.</p></td>
     </tr>
     <tr>
-      <th>USER_COLS</th>
-      <td><p><code>number</code> - Cols. A numeric value.</p></td>
+      <th>TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX</th>
+      <td><p><code>extent</code> - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: name.</p></td>
     </tr>
     <tr>
-      <th>USER_ROWS</th>
-      <td><p><code>number</code> - Rows. A numeric value.</p></td>
+      <th>TARGET_USER_FITS</th>
+      <td><p><code>enum</code>  of <code>("[0] nodes", "[1] Cells")</code> - Fits. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
     </tr>
     <tr>
-      <th>TARGET_GRID</th>
+      <th>TARGET_TEMPLATE</th>
+      <td><p><code>raster</code> - Target System. Path to a raster layer.</p></td>
+    </tr>
+    <tr>
+      <th>TARGET_OUT_GRID</th>
       <td><p><code>rasterDestination</code> - Grid. Path for new raster layer.</p></td>
     </tr>
     <tr>
@@ -186,7 +197,7 @@
 <h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Outputs description</h3>
 
 <ul>
-<li><p>TARGET_GRID - outputRaster - Grid</p></li>
+<li><p>TARGET_OUT_GRID - outputRaster - Grid</p></li>
 </ul>
 
 
