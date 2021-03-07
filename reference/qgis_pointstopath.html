@@ -46,7 +46,7 @@
 
 
 <meta property="og:title" content="QGIS algorithm Points to path — qgis_pointstopath" />
-<meta property="og:description" content="QGIS Algorithm provided by QGIS Points to path (qgis:pointstopath)" />
+<meta property="og:description" content="QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath)" />
 
 
 
@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.16.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.17.0</span>
       </span>
     </div>
 
@@ -129,15 +129,15 @@
     </div>
 
     <div class="ref-description">
-    <p>QGIS Algorithm provided by QGIS Points to path (qgis:pointstopath)</p>
+    <p>QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath)</p>
     </div>
 
     <pre class="usage"><span class='fu'>qgis_pointstopath</span><span class='op'>(</span>
   INPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   CLOSE_PATH <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  ORDER_FIELD <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  GROUP_FIELD <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  DATE_FORMAT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  ORDER_EXPRESSION <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  NATURAL_SORT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  GROUP_EXPRESSION <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   OUTPUT_TEXT_DIR <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
@@ -149,23 +149,23 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>INPUT</th>
-      <td><p><code>source</code> - Input point layer. Path to a vector layer.</p></td>
+      <td><p><code>source</code> - Input layer. Path to a vector layer.</p></td>
     </tr>
     <tr>
       <th>CLOSE_PATH</th>
-      <td><p><code>boolean</code> - Close path. 1 for true/yes. 0 for false/no.</p></td>
+      <td><p><code>boolean</code> - Create closed paths. 1 for true/yes. 0 for false/no.</p></td>
     </tr>
     <tr>
-      <th>ORDER_FIELD</th>
-      <td><p><code>field</code> - Order field. The name of an existing field. ; delimited list of existing field names.</p></td>
+      <th>ORDER_EXPRESSION</th>
+      <td><p><code>expression</code> - Order expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.</p></td>
     </tr>
     <tr>
-      <th>GROUP_FIELD</th>
-      <td><p><code>field</code> - Group field. The name of an existing field. ; delimited list of existing field names.</p></td>
+      <th>NATURAL_SORT</th>
+      <td><p><code>boolean</code> - Sort text containing numbers naturally. 1 for true/yes. 0 for false/no.</p></td>
     </tr>
     <tr>
-      <th>DATE_FORMAT</th>
-      <td><p><code>string</code> - Date format (if order field is DateTime). String value.</p></td>
+      <th>GROUP_EXPRESSION</th>
+      <td><p><code>expression</code> - Path group expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.</p></td>
     </tr>
     <tr>
       <th>OUTPUT</th>
@@ -193,6 +193,7 @@
 <ul>
 <li><p>OUTPUT - outputVector - Paths</p></li>
 <li><p>OUTPUT_TEXT_DIR - outputFolder - Directory for text output</p></li>
+<li><p>NUM_PATHS - outputNumber - Number of paths</p></li>
 </ul>
 
 

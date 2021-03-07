@@ -1132,6 +1132,15 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_calculatevectoroverlaps.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_cellstackpercentile.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_cellstackpercentrankfromrasterlayer.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_cellstackpercentrankfromvalue.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_cellstatistics.html</loc>
   </url>
   <url>
@@ -1255,6 +1264,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_dropmzvalues.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_dxfexport.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_equaltofrequency.html</loc>
   </url>
   <url>
@@ -1268,6 +1280,24 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exportaddgeometrycolumns.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exportlayersinformation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exportmeshedges.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exportmeshfaces.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exportmeshongrid.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exportmeshvertices.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_exporttospreadsheet.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_extendlines.html</loc>
@@ -1444,6 +1474,18 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_mergevectorlayers.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_meshcontours.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_meshexportcrosssection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_meshexporttimeseries.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_meshrasterize.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_minimumboundinggeometry.html</loc>
   </url>
   <url>
@@ -1616,6 +1658,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rescaleraster.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_retainfields.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_reverselinedirection.html</loc>

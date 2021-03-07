@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.16.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.17.0</span>
       </span>
     </div>
 
@@ -135,6 +135,7 @@
     <pre class="usage"><span class='fu'>gdal_cliprasterbyextent</span><span class='op'>(</span>
   INPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   PROJWIN <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  OVERCRS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   NODATA <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   OPTIONS <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   DATA_TYPE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
@@ -154,6 +155,10 @@
     <tr>
       <th>PROJWIN</th>
       <td><p><code>extent</code> - Clipping extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..</p></td>
+    </tr>
+    <tr>
+      <th>OVERCRS</th>
+      <td><p><code>boolean</code> - Override the projection for the output file. 1 for true/yes. 0 for false/no.</p></td>
     </tr>
     <tr>
       <th>NODATA</th>

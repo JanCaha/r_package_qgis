@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.16.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.17.0</span>
       </span>
     </div>
 
@@ -137,9 +137,7 @@
   VALUES <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   LINES <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   NAME <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  SPLIT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   PROFILE <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  PROFILES <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
@@ -164,15 +162,7 @@
       <td><p><code>field</code> - Name. The name of an existing field. ; delimited list of existing field names.</p></td>
     </tr>
     <tr>
-      <th>SPLIT</th>
-      <td><p><code>boolean</code> - Each Line as new Profile. 1 for true/yes. 0 for false/no.</p></td>
-    </tr>
-    <tr>
       <th>PROFILE</th>
-      <td><p><code>vectorDestination</code> - Profiles. Path for new vector layer.</p></td>
-    </tr>
-    <tr>
-      <th>PROFILES</th>
       <td><p><code>vectorDestination</code> - Profiles. Path for new vector layer.</p></td>
     </tr>
     <tr>
@@ -192,7 +182,6 @@
 
 <ul>
 <li><p>PROFILE - outputVector - Profiles</p></li>
-<li><p>PROFILES - outputVector - Profiles</p></li>
 </ul>
 
 
