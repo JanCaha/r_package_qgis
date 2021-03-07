@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm v.net.visibility
 ##'
 ##' @param input `source` - Input vector line layer (arcs). Path to a vector layer.
-##' @param coordinates `point` - Coordinates. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
+##' @param coordinates `string` - Coordinates. String value.
 ##' @param visibility `source` - Input vector line layer containing visible points. Path to a vector layer.
 ##' @param output `vectorDestination` - Network Visibility. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

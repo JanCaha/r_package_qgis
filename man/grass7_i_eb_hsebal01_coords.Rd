@@ -37,7 +37,7 @@ grass7_i_eb_hsebal01_coords(
 
 \item{frictionvelocitystar}{\code{number} - Value of the height independent friction velocity (u*) (m/s). A numeric value.}
 
-\item{vapourpressureactual}{\code{number} - Value of the actual vapour pressure (e_act) (KPa). A numeric value.}
+\item{vapourpressureactual}{\code{raster} - Name of the actual vapour pressure (e_act) map (KPa). Path to a raster layer.}
 
 \item{row_wet_pixel}{\code{number} - Row value of the wet pixel. A numeric value.}
 

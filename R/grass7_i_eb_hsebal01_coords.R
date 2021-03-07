@@ -7,7 +7,7 @@
 ##' @param aerodynresistance `raster` - Name of aerodynamic resistance to heat momentum raster map (s/m). Path to a raster layer.
 ##' @param temperaturemeansealevel `raster` - Name of altitude corrected surface temperature raster map (K). Path to a raster layer.
 ##' @param frictionvelocitystar `number` - Value of the height independent friction velocity (u*) (m/s). A numeric value.
-##' @param vapourpressureactual `number` - Value of the actual vapour pressure (e_act) (KPa). A numeric value.
+##' @param vapourpressureactual `raster` - Name of the actual vapour pressure (e_act) map (KPa). Path to a raster layer.
 ##' @param row_wet_pixel `number` - Row value of the wet pixel. A numeric value.
 ##' @param column_wet_pixel `number` - Column value of the wet pixel. A numeric value.
 ##' @param row_dry_pixel `number` - Row value of the dry pixel. A numeric value.

@@ -7,6 +7,7 @@
 gdal_cliprasterbyextent(
   INPUT = qgisprocess::qgis_default_value(),
   PROJWIN = qgisprocess::qgis_default_value(),
+  OVERCRS = qgisprocess::qgis_default_value(),
   NODATA = qgisprocess::qgis_default_value(),
   OPTIONS = qgisprocess::qgis_default_value(),
   DATA_TYPE = qgisprocess::qgis_default_value(),
@@ -20,6 +21,8 @@ gdal_cliprasterbyextent(
 \item{INPUT}{\code{raster} - Input layer. Path to a raster layer.}
 
 \item{PROJWIN}{\code{extent} - Clipping extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
+
+\item{OVERCRS}{\code{boolean} - Override the projection for the output file. 1 for true/yes. 0 for false/no.}
 
 \item{NODATA}{\code{number} - Assign a specified nodata value to output bands. A numeric value.}
 

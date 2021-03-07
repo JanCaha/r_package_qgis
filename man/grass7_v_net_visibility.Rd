@@ -23,7 +23,7 @@ grass7_v_net_visibility(
 \arguments{
 \item{input}{\code{source} - Input vector line layer (arcs). Path to a vector layer.}
 
-\item{coordinates}{\code{point} - Coordinates. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
+\item{coordinates}{\code{string} - Coordinates. String value.}
 
 \item{visibility}{\code{source} - Input vector line layer containing visible points. Path to a vector layer.}
 

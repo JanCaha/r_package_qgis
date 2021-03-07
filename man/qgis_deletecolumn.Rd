@@ -24,7 +24,7 @@ qgis_deletecolumn(
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Drop field(s) (qgis:deletecolumn)
+QGIS Algorithm provided by QGIS (native c++) Drop field(s) (native:deletecolumn)
 }
 \details{
 \subsection{Outputs description}{

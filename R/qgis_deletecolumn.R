@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Drop field(s) (qgis:deletecolumn)
+##' QGIS Algorithm provided by QGIS (native c++) Drop field(s) (native:deletecolumn)
 ##'
 ##' @title QGIS algorithm Drop field(s)
 ##'
@@ -18,7 +18,7 @@
 
 qgis_deletecolumn <- function(INPUT = qgisprocess::qgis_default_value(), COLUMN = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  output <- qgisprocess::qgis_run_algorithm("qgis:deletecolumn",`INPUT` = INPUT, `COLUMN` = COLUMN, `OUTPUT` = OUTPUT,...)
+  output <- qgisprocess::qgis_run_algorithm("native:deletecolumn",`INPUT` = INPUT, `COLUMN` = COLUMN, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -7,9 +7,9 @@
 qgis_pointstopath(
   INPUT = qgisprocess::qgis_default_value(),
   CLOSE_PATH = qgisprocess::qgis_default_value(),
-  ORDER_FIELD = qgisprocess::qgis_default_value(),
-  GROUP_FIELD = qgisprocess::qgis_default_value(),
-  DATE_FORMAT = qgisprocess::qgis_default_value(),
+  ORDER_EXPRESSION = qgisprocess::qgis_default_value(),
+  NATURAL_SORT = qgisprocess::qgis_default_value(),
+  GROUP_EXPRESSION = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   OUTPUT_TEXT_DIR = qgisprocess::qgis_default_value(),
   ...,
@@ -17,15 +17,15 @@ qgis_pointstopath(
 )
 }
 \arguments{
-\item{INPUT}{\code{source} - Input point layer. Path to a vector layer.}
+\item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{CLOSE_PATH}{\code{boolean} - Close path. 1 for true/yes. 0 for false/no.}
+\item{CLOSE_PATH}{\code{boolean} - Create closed paths. 1 for true/yes. 0 for false/no.}
 
-\item{ORDER_FIELD}{\code{field} - Order field. The name of an existing field. ; delimited list of existing field names.}
+\item{ORDER_EXPRESSION}{\code{expression} - Order expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
-\item{GROUP_FIELD}{\code{field} - Group field. The name of an existing field. ; delimited list of existing field names.}
+\item{NATURAL_SORT}{\code{boolean} - Sort text containing numbers naturally. 1 for true/yes. 0 for false/no.}
 
-\item{DATE_FORMAT}{\code{string} - Date format (if order field is DateTime). String value.}
+\item{GROUP_EXPRESSION}{\code{expression} - Path group expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
 \item{OUTPUT}{\code{sink} - Paths. Path for new vector layer.}
 
@@ -36,13 +36,14 @@ qgis_pointstopath(
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Points to path (qgis:pointstopath)
+QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath)
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
 \item OUTPUT - outputVector - Paths
 \item OUTPUT_TEXT_DIR - outputFolder - Directory for text output
+\item NUM_PATHS - outputNumber - Number of paths
 }
 }
 }

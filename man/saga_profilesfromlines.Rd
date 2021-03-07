@@ -9,9 +9,7 @@ saga_profilesfromlines(
   VALUES = qgisprocess::qgis_default_value(),
   LINES = qgisprocess::qgis_default_value(),
   NAME = qgisprocess::qgis_default_value(),
-  SPLIT = qgisprocess::qgis_default_value(),
   PROFILE = qgisprocess::qgis_default_value(),
-  PROFILES = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
 )
@@ -25,11 +23,7 @@ saga_profilesfromlines(
 
 \item{NAME}{\code{field} - Name. The name of an existing field. ; delimited list of existing field names.}
 
-\item{SPLIT}{\code{boolean} - Each Line as new Profile. 1 for true/yes. 0 for false/no.}
-
 \item{PROFILE}{\code{vectorDestination} - Profiles. Path for new vector layer.}
-
-\item{PROFILES}{\code{vectorDestination} - Profiles. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -42,7 +36,6 @@ QGIS Algorithm provided by SAGA Profiles from lines (saga:profilesfromlines)
 \subsection{Outputs description}{
 \itemize{
 \item PROFILE - outputVector - Profiles
-\item PROFILES - outputVector - Profiles
 }
 }
 }
