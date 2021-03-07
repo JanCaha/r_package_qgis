@@ -67,6 +67,11 @@ jobs:
           # remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
+      - name:
+        run: |
+          qgisprocess::qgis_run()
+        shell: Rscript {0}
+
       - name: Delete all files in R
         run: rm -f ./R/*.R
 
