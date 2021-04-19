@@ -19,7 +19,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * html - outputHtml - Tileset
+##' * html - outputHtml - Ti
 ##'
 ##' @export
 ##' @md

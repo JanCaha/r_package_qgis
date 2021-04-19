@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Grid
+##' * OUTPUT - outputVector - Gri
 ##'
 ##' @export
 ##' @md

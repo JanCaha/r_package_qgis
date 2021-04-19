@@ -15,7 +15,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Clusters
-##' * NUM_CLUSTERS - outputNumber - Number of clusters
+##' * NUM_CLUSTERS - outputNumber - Number of clu
 ##'
 ##' @export
 ##' @md

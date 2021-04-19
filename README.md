@@ -91,10 +91,10 @@ This example uses `qgisprocess` pipe ability to directly load output to
     nc <- st_read(fname)
     #> Reading layer `nc' from data source `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'
     #> Simple feature collection with 100 features and 14 fields
-    #> geometry type:  MULTIPOLYGON
-    #> dimension:      XY
-    #> bbox:           xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965
-    #> geographic CRS: NAD27
+    #> Geometry type: MULTIPOLYGON
+    #> Dimension:     XY
+    #> Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965
+    #> Geodetic CRS:  NAD27
 
     buffered <- qgis::qgis_buffer(INPUT = nc, 
                                   DISTANCE = 0.5, 
@@ -106,9 +106,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpxPWCw3/filea95532bc88f8/filea9556c20ae39.gpkg' \
+    #>   '--INPUT=/tmp/RtmpkAgY10/file9a173b182cce/file9a1758b066ea.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpxPWCw3/filea95532bc88f8/filea955608e8c2e.gpkg'
+    #>   '--OUTPUT=/tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -117,9 +117,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpxPWCw3/filea95532bc88f8/filea9556c20ae39.gpkg
+    #> INPUT:   /tmp/RtmpkAgY10/file9a173b182cce/file9a1758b066ea.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpxPWCw3/filea95532bc88f8/filea955608e8c2e.gpkg
+    #> OUTPUT:  /tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -127,7 +127,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpxPWCw3/filea95532bc88f8/filea955608e8c2e.gpkg
+    #> OUTPUT:  /tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot

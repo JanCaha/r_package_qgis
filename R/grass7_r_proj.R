@@ -18,7 +18,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Reprojected raster
+##' * output - outputRaster - Reprojected raste
 ##'
 ##' @export
 ##' @md

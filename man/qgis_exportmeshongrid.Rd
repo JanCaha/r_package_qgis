@@ -44,7 +44,7 @@ QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportm
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Output vector layer
+\item OUTPUT - outputVector - Output vector laye
 }
 }
 }

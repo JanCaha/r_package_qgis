@@ -18,7 +18,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * OUTPUT_LINES - outputVector - Exported contour lines
-##' * OUTPUT_POLYGONS - outputVector - Exported contour polygons
+##' * OUTPUT_POLYGONS - outputVector - Exported contour polygon
 ##'
 ##' @export
 ##' @md

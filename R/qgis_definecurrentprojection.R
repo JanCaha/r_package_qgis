@@ -9,7 +9,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * INPUT - outputVector - Layer with projection
+##' * INPUT - outputVector - Layer with projectio
 ##'
 ##' @export
 ##' @md

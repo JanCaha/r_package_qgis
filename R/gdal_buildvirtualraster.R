@@ -17,7 +17,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Virtual
+##' * OUTPUT - outputRaster - Virtua
 ##'
 ##' @export
 ##' @md

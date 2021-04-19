@@ -15,7 +15,7 @@
 ##' * WIDTH - outputNumber - Map width
 ##' * HEIGHT - outputNumber - Map height
 ##' * SCALE - outputNumber - Map scale
-##' * ROTATION - outputNumber - Map rotation
+##' * ROTATION - outputNumber - Map rotatio
 ##'
 ##' @export
 ##' @md

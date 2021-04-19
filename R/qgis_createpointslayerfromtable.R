@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Points from table
+##' * OUTPUT - outputVector - Points from tabl
 ##'
 ##' @export
 ##' @md

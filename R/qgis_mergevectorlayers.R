@@ -10,7 +10,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Merged
+##' * OUTPUT - outputVector - Merge
 ##'
 ##' @export
 ##' @md

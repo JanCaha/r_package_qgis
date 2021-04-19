@@ -13,7 +13,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Random points
+##' * OUTPUT - outputVector - Random point
 ##'
 ##' @export
 ##' @md

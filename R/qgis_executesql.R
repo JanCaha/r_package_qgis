@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - SQL Output
+##' * OUTPUT - outputVector - SQL Outpu
 ##'
 ##' @export
 ##' @md

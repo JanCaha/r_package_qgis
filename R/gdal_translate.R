@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Converted
+##' * OUTPUT - outputRaster - Converte
 ##'
 ##' @export
 ##' @md

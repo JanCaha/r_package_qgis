@@ -29,7 +29,7 @@ QGIS Algorithm provided by QGIS (native c++) Convert spatial bookmarks to layer 
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Output
+\item OUTPUT - outputVector - Outpu
 }
 }
 }

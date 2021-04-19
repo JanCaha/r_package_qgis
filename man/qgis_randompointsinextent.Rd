@@ -38,7 +38,7 @@ QGIS Algorithm provided by QGIS (native c++) Random points in extent (native:ran
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Random points
+\item OUTPUT - outputVector - Random point
 }
 }
 }

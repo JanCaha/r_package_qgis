@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Filtered
+##' * OUTPUT - outputVector - Filtere
 ##'
 ##' @export
 ##' @md

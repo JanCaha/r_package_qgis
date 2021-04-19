@@ -10,7 +10,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Assigned CRS
+##' * OUTPUT - outputVector - Assigned CR
 ##'
 ##' @export
 ##' @md

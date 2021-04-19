@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Reprojected
+##' * OUTPUT - outputVector - Reprojecte
 ##'
 ##' @export
 ##' @md

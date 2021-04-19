@@ -17,7 +17,7 @@
 ##' * OUTPUT_TABLE - outputVector - Surface volume table
 ##' * VOLUME - outputNumber - Volume
 ##' * PIXEL_COUNT - outputNumber - Pixel count
-##' * AREA - outputNumber - Area
+##' * AREA - outputNumber - Are
 ##'
 ##' @export
 ##' @md

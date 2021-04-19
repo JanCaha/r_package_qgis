@@ -26,7 +26,7 @@ QGIS Algorithm provided by QGIS Define Shapefile projection (qgis:definecurrentp
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item INPUT - outputVector - Layer with projection
+\item INPUT - outputVector - Layer with projectio
 }
 }
 }
