@@ -67,7 +67,7 @@ jobs:
           # remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
-      - name:
+      - name: Print QGIS info
         run: |
           qgisprocess::qgis_run()
         shell: Rscript {0}
