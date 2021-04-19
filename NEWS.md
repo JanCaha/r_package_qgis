@@ -1,3 +1,7 @@
+# qgis 0.17.0
+
+* update qgis
+
 # qgis 0.14.0
 
 * add search to website
