@@ -47,7 +47,7 @@ build_fn_doc <- function(alg, arguments, outputs){
   description_arguments <- purrr::pmap(arguments,
                                        function(name, description, qgis_type, available_values, acceptable_values, ...) {
                                          original_param_name <- ifelse(name != convert_to_R_arg_names(name),
-                                                                       " Original algorithm parameter name: {name}.",
+                                                                       glue::glue(" Original algorithm parameter name: {name}."),
                                                                        "")
 
                                          if (identical(available_values, character(0))){
