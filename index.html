@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.19.0</span>
       </span>
     </div>
 
@@ -47,6 +47,18 @@
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+<li>
+      <a href="articles/local_instalation.html">Instalation based on local QGIS instance</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="news/index.html">Changelog</a>
@@ -90,27 +102,7 @@
 <p>You can install the released version of <strong>qgis</strong> from GitHub with:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># install.package("remotes")</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"JanCaha/r_package_qgis"</span>)</span></code></pre></div>
-</div>
-<div id="personal-instalation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#personal-instalation" class="anchor"></a>Personal instalation</h2>
-<p>If you want to install the package with your personal settings, including algorithms for your installed plugins etc. you can do so by downloading the repository and running following commands from the project.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># install packages necessary to build the package code</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">source</span>(<span class="st">"./build-package/install_save_deps.R"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># install dependencies for the package</span></span>
-<span id="cb2-5"><a href="#cb2-5"></a>remotes<span class="op">::</span><span class="kw">install_deps</span>(<span class="dt">dependencies =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb2-6"><a href="#cb2-6"></a></span>
-<span id="cb2-7"><a href="#cb2-7"></a><span class="co"># update package description</span></span>
-<span id="cb2-8"><a href="#cb2-8"></a><span class="kw">source</span>(<span class="st">"./build-package/update_Description.R"</span>)</span>
-<span id="cb2-9"><a href="#cb2-9"></a></span>
-<span id="cb2-10"><a href="#cb2-10"></a><span class="co"># build the package code and documentation</span></span>
-<span id="cb2-11"><a href="#cb2-11"></a><span class="co"># this takes rather long time (roughly 22 minutes for basic QGIS installation)</span></span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="kw">source</span>(<span class="st">"./build-package/build_QGIS_functions.R"</span>)</span>
-<span id="cb2-13"><a href="#cb2-13"></a></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="co"># check and install the package</span></span>
-<span id="cb2-15"><a href="#cb2-15"></a>devtools<span class="op">::</span><span class="kw">check</span>()</span>
-<span id="cb2-16"><a href="#cb2-16"></a>devtools<span class="op">::</span><span class="kw">install</span>()</span></code></pre></div>
+<p>The information about local installation are in a vignette <code><a href="articles/local_instalation.html">vignette("local_instalation")</a></code>.</p>
 </div>
 <div id="functions-names" class="section level2">
 <h2 class="hasAnchor">
@@ -122,62 +114,62 @@
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>The package is not meant to be load directly as this would significant number of functions (&lt;900). Instead the functions should be called as:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>qgis<span class="op">::</span><span class="kw">qgis_buffer</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>qgis<span class="op">::</span><span class="kw">qgis_buffer</span>()</span></code></pre></div>
 <p>This allows you to show the help page for the function (at least in <strong>RStudio</strong> using the key shortcut <strong>F1</strong>).</p>
 </div>
 <div id="example-in-the-wild" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example-in-the-wild" class="anchor"></a>Example in the wild</h2>
 <p>This example uses <code>qgisprocess</code> pipe ability to directly load output to <strong>R</strong>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">library</span>(sf)</span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">#&gt; Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a>fname &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">"shape/nc.shp"</span>, <span class="dt">package=</span><span class="st">"sf"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5"></a>nc &lt;-<span class="st"> </span><span class="kw">st_read</span>(fname)</span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">#&gt; Reading layer `nc' from data source `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'</span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">#&gt; Simple feature collection with 100 features and 14 fields</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">#&gt; Dimension:     XY</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">#&gt; Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">#&gt; Geodetic CRS:  NAD27</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a></span>
-<span id="cb4-13"><a href="#cb4-13"></a>buffered &lt;-<span class="st"> </span>qgis<span class="op">::</span><span class="kw">qgis_buffer</span>(<span class="dt">INPUT =</span> nc, </span>
-<span id="cb4-14"><a href="#cb4-14"></a>                              <span class="dt">DISTANCE =</span> <span class="fl">0.5</span>, </span>
-<span id="cb4-15"><a href="#cb4-15"></a>                              <span class="dt">END_CAP_STYLE =</span> <span class="st">"Flat"</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb4-16"><a href="#cb4-16"></a><span class="st">  </span><span class="kw">st_as_sf</span>()</span>
-<span id="cb4-17"><a href="#cb4-17"></a><span class="co">#&gt; Argument `SEGMENTS` is unspecified (using QGIS default value).</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a><span class="co">#&gt; Using `JOIN_STYLE = "Round"`</span></span>
-<span id="cb4-19"><a href="#cb4-19"></a><span class="co">#&gt; Argument `MITER_LIMIT` is unspecified (using QGIS default value).</span></span>
-<span id="cb4-20"><a href="#cb4-20"></a><span class="co">#&gt; Argument `DISSOLVE` is unspecified (using QGIS default value).</span></span>
-<span id="cb4-21"><a href="#cb4-21"></a><span class="co">#&gt; Using `OUTPUT = qgis_tmp_vector()`</span></span>
-<span id="cb4-22"><a href="#cb4-22"></a><span class="co">#&gt; Running qgis_process run 'native:buffer' \</span></span>
-<span id="cb4-23"><a href="#cb4-23"></a><span class="co">#&gt;   '--INPUT=/tmp/RtmpkAgY10/file9a173b182cce/file9a1758b066ea.gpkg' \</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a><span class="co">#&gt;   '--DISTANCE=0.5' '--</span><span class="re">END</span><span class="co">_CAP_STYLE=1' '--JOIN_STYLE=0' \</span></span>
-<span id="cb4-25"><a href="#cb4-25"></a><span class="co">#&gt;   '--OUTPUT=/tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg'</span></span>
-<span id="cb4-26"><a href="#cb4-26"></a><span class="co">#&gt; QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'</span></span>
-<span id="cb4-27"><a href="#cb4-27"></a><span class="co">#&gt; </span></span>
-<span id="cb4-28"><a href="#cb4-28"></a><span class="co">#&gt; ----------------</span></span>
-<span id="cb4-29"><a href="#cb4-29"></a><span class="co">#&gt; Inputs</span></span>
-<span id="cb4-30"><a href="#cb4-30"></a><span class="co">#&gt; ----------------</span></span>
-<span id="cb4-31"><a href="#cb4-31"></a><span class="co">#&gt; </span></span>
-<span id="cb4-32"><a href="#cb4-32"></a><span class="co">#&gt; DISTANCE:    0.5</span></span>
-<span id="cb4-33"><a href="#cb4-33"></a><span class="co">#&gt; </span><span class="re">END</span><span class="co">_CAP_STYLE:   1</span></span>
-<span id="cb4-34"><a href="#cb4-34"></a><span class="co">#&gt; INPUT:   /tmp/RtmpkAgY10/file9a173b182cce/file9a1758b066ea.gpkg</span></span>
-<span id="cb4-35"><a href="#cb4-35"></a><span class="co">#&gt; JOIN_STYLE:  0</span></span>
-<span id="cb4-36"><a href="#cb4-36"></a><span class="co">#&gt; OUTPUT:  /tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg</span></span>
-<span id="cb4-37"><a href="#cb4-37"></a><span class="co">#&gt; </span></span>
-<span id="cb4-38"><a href="#cb4-38"></a><span class="co">#&gt; </span></span>
-<span id="cb4-39"><a href="#cb4-39"></a><span class="co">#&gt; 0...10...20...30...40...50...60...70...80...90...</span></span>
-<span id="cb4-40"><a href="#cb4-40"></a><span class="co">#&gt; ----------------</span></span>
-<span id="cb4-41"><a href="#cb4-41"></a><span class="co">#&gt; Results</span></span>
-<span id="cb4-42"><a href="#cb4-42"></a><span class="co">#&gt; ----------------</span></span>
-<span id="cb4-43"><a href="#cb4-43"></a><span class="co">#&gt; </span></span>
-<span id="cb4-44"><a href="#cb4-44"></a><span class="co">#&gt; OUTPUT:  /tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg</span></span>
-<span id="cb4-45"><a href="#cb4-45"></a></span>
-<span id="cb4-46"><a href="#cb4-46"></a><span class="kw">plot</span>(buffered)</span>
-<span id="cb4-47"><a href="#cb4-47"></a><span class="co">#&gt; Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot</span></span>
-<span id="cb4-48"><a href="#cb4-48"></a><span class="co">#&gt; all</span></span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-5-1.png" width="100%"></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">library</span>(sf)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a>fname &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">"shape/nc.shp"</span>, <span class="dt">package=</span><span class="st">"sf"</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a>nc &lt;-<span class="st"> </span><span class="kw">st_read</span>(fname)</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co">#&gt; Reading layer `nc' from data source `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="co">#&gt; Simple feature collection with 100 features and 14 fields</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co">#&gt; Geometry type: MULTIPOLYGON</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="co">#&gt; Dimension:     XY</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="co">#&gt; Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="co">#&gt; Geodetic CRS:  NAD27</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13"></a>buffered &lt;-<span class="st"> </span>qgis<span class="op">::</span><span class="kw">qgis_buffer</span>(<span class="dt">INPUT =</span> nc, </span>
+<span id="cb3-14"><a href="#cb3-14"></a>                              <span class="dt">DISTANCE =</span> <span class="fl">0.5</span>, </span>
+<span id="cb3-15"><a href="#cb3-15"></a>                              <span class="dt">END_CAP_STYLE =</span> <span class="st">"Flat"</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="st">  </span><span class="kw">st_as_sf</span>()</span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="co">#&gt; Argument `SEGMENTS` is unspecified (using QGIS default value).</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="co">#&gt; Using `JOIN_STYLE = "Round"`</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="co">#&gt; Argument `MITER_LIMIT` is unspecified (using QGIS default value).</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="co">#&gt; Argument `DISSOLVE` is unspecified (using QGIS default value).</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="co">#&gt; Using `OUTPUT = qgis_tmp_vector()`</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a><span class="co">#&gt; Running qgis_process run 'native:buffer' \</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="co">#&gt;   '--INPUT=/tmp/RtmpDIxsFq/file99646132e5cf/file99644d5ecf28.gpkg' \</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a><span class="co">#&gt;   '--DISTANCE=0.5' '--</span><span class="re">END</span><span class="co">_CAP_STYLE=1' '--JOIN_STYLE=0' \</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="co">#&gt;   '--OUTPUT=/tmp/RtmpDIxsFq/file99646132e5cf/file9964550f7e96.gpkg'</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="co">#&gt; QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a><span class="co">#&gt; </span></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="co">#&gt; ----------------</span></span>
+<span id="cb3-29"><a href="#cb3-29"></a><span class="co">#&gt; Inputs</span></span>
+<span id="cb3-30"><a href="#cb3-30"></a><span class="co">#&gt; ----------------</span></span>
+<span id="cb3-31"><a href="#cb3-31"></a><span class="co">#&gt; </span></span>
+<span id="cb3-32"><a href="#cb3-32"></a><span class="co">#&gt; DISTANCE:    0.5</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a><span class="co">#&gt; </span><span class="re">END</span><span class="co">_CAP_STYLE:   1</span></span>
+<span id="cb3-34"><a href="#cb3-34"></a><span class="co">#&gt; INPUT:   /tmp/RtmpDIxsFq/file99646132e5cf/file99644d5ecf28.gpkg</span></span>
+<span id="cb3-35"><a href="#cb3-35"></a><span class="co">#&gt; JOIN_STYLE:  0</span></span>
+<span id="cb3-36"><a href="#cb3-36"></a><span class="co">#&gt; OUTPUT:  /tmp/RtmpDIxsFq/file99646132e5cf/file9964550f7e96.gpkg</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a><span class="co">#&gt; </span></span>
+<span id="cb3-38"><a href="#cb3-38"></a><span class="co">#&gt; </span></span>
+<span id="cb3-39"><a href="#cb3-39"></a><span class="co">#&gt; 0...10...20...30...40...50...60...70...80...90...</span></span>
+<span id="cb3-40"><a href="#cb3-40"></a><span class="co">#&gt; ----------------</span></span>
+<span id="cb3-41"><a href="#cb3-41"></a><span class="co">#&gt; Results</span></span>
+<span id="cb3-42"><a href="#cb3-42"></a><span class="co">#&gt; ----------------</span></span>
+<span id="cb3-43"><a href="#cb3-43"></a><span class="co">#&gt; </span></span>
+<span id="cb3-44"><a href="#cb3-44"></a><span class="co">#&gt; OUTPUT:  /tmp/RtmpDIxsFq/file99646132e5cf/file9964550f7e96.gpkg</span></span>
+<span id="cb3-45"><a href="#cb3-45"></a></span>
+<span id="cb3-46"><a href="#cb3-46"></a><span class="kw">plot</span>(buffered)</span>
+<span id="cb3-47"><a href="#cb3-47"></a><span class="co">#&gt; Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot</span></span>
+<span id="cb3-48"><a href="#cb3-48"></a><span class="co">#&gt; all</span></span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
 </div>
 </div>
   </div>

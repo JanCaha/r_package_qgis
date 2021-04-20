@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.18.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.19.0</span>
       </span>
     </div>
 
@@ -92,6 +92,18 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/local_instalation.html">Instalation based on local QGIS instance</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
@@ -208,7 +220,7 @@
     </tr>
     <tr>
       <th>trim</th>
-      <td><p><code>number</code> - Discard &lt;trim&gt; percent of the smallest and &lt;trim&gt; percent of the largest observations (0-50). A numeric value.</p></td>
+      <td><p><code>number</code> - Discard trim percent of the smallest and trim percent of the largest observations (0-50). A numeric value.</p></td>
     </tr>
     <tr>
       <th>resolution</th>
@@ -224,31 +236,31 @@
     </tr>
     <tr>
       <th>.e</th>
-      <td><p><code>boolean</code> - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.</p></td>
     </tr>
     <tr>
       <th>.n</th>
-      <td><p><code>boolean</code> - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.</p></td>
     </tr>
     <tr>
       <th>.o</th>
-      <td><p><code>boolean</code> - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.</p></td>
     </tr>
     <tr>
       <th>.i</th>
-      <td><p><code>boolean</code> - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.</p></td>
     </tr>
     <tr>
       <th>.j</th>
-      <td><p><code>boolean</code> - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -j.</p></td>
     </tr>
     <tr>
       <th>.d</th>
-      <td><p><code>boolean</code> - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.</p></td>
     </tr>
     <tr>
       <th>.v</th>
-      <td><p><code>boolean</code> - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: name.</p></td>
+      <td><p><code>boolean</code> - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.</p></td>
     </tr>
     <tr>
       <th>output</th>
