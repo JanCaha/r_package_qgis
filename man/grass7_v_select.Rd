@@ -39,11 +39,11 @@ grass7_v_select(
 
 \item{relate}{\code{string} - Intersection Matrix Pattern used for 'relate' operator. String value.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.c}{\code{boolean} - Do not skip features without category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Do not skip features without category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{output}{\code{vectorDestination} - Selected. Path for new vector layer.}
 

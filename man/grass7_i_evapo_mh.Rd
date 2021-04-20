@@ -33,11 +33,11 @@ grass7_i_evapo_mh(
 
 \item{precipitation}{\code{raster} - Name of precipitation raster map (mm/month). Path to a raster layer.}
 
-\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.h}{\code{boolean} - Use original Hargreaves (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.h}{\code{boolean} - Use original Hargreaves (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
 
-\item{.s}{\code{boolean} - Use Hargreaves-Samani (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Use Hargreaves-Samani (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{output}{\code{rasterDestination} - Evapotranspiration. Path for new raster layer.}
 

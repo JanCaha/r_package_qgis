@@ -24,13 +24,13 @@ grass7_m_cogo(
 
 \item{coordinates}{\code{point} - Starting coordinate pair. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{.l}{\code{boolean} - Lines are labelled. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Lines are labelled. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.q}{\code{boolean} - Suppress warnings. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.q}{\code{boolean} - Suppress warnings. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -q.}
 
-\item{.r}{\code{boolean} - Convert from coordinates to bearing and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Convert from coordinates to bearing and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.c}{\code{boolean} - Repeat the starting coordinate at the end to close a loop. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Repeat the starting coordinate at the end to close a loop. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 

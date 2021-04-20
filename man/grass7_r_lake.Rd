@@ -26,9 +26,9 @@ grass7_r_lake(
 
 \item{coordinates}{\code{point} - Seed point coordinates. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{seed}{\code{raster} - Raster layer with starting point(s) (at least 1 cell > 0). Path to a raster layer.}
+\item{seed}{\code{raster} - Raster layer with starting point(s) (at least 1 cell  0). Path to a raster layer.}
 
-\item{.n}{\code{boolean} - Use negative depth values for lake raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Use negative depth values for lake raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{lake}{\code{rasterDestination} - Lake. Path for new raster layer.}
 

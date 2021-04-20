@@ -6,7 +6,7 @@
 ##' @param input `raster` - Name of raster map to which apply the mask. Path to a raster layer.
 ##' @param cats `string` - Category values. Example: 1,3,7-9,13. String value.
 ##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value.
-##' @param .i `boolean` - Create inverse mask. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .i `boolean` - Create inverse mask. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
 ##' @param output `rasterDestination` - Masked. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

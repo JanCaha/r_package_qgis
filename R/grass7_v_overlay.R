@@ -8,7 +8,7 @@
 ##' @param btype `enum`  of `("area")` - Input layer (B) Type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param operator `enum`  of `("and", "or", "not", "xor")` - Operator to use. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param snap `number` - Snapping threshold for boundaries. A numeric value.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - Overlay. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

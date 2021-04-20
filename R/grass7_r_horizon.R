@@ -14,8 +14,8 @@
 ##' @param s_buff `number` - For horizon rasters, read from the DEM an extra buffer southward the present region. A numeric value.
 ##' @param maxdistance `number` - The maximum distance to consider when finding the horizon height. A numeric value.
 ##' @param distance `number` - Sampling distance step coefficient. A numeric value.
-##' @param .d `boolean` - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .d `boolean` - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .c `boolean` - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `folderDestination` - Folder to get horizon rasters. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

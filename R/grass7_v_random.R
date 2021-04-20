@@ -10,8 +10,8 @@
 ##' @param seed `number` - Seed for random number generation. A numeric value.
 ##' @param column `string` - Column for Z values. String value.
 ##' @param column_type `enum`  of `("integer", "double precision")` - Type of column for z values. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .z `boolean` - Create 3D output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - Generate n points for each individual area. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Create 3D output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .a `boolean` - Generate n points for each individual area. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
 ##' @param output `vectorDestination` - Random. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

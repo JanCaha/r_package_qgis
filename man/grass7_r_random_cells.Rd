@@ -18,11 +18,11 @@ grass7_r_random_cells(
 )
 }
 \arguments{
-\item{distance}{\code{number} - Maximum distance of spatial correlation (value(s) >= 0.0). A numeric value.}
+\item{distance}{\code{number} - Maximum distance of spatial correlation (value(s) = 0.0). A numeric value.}
 
 \item{ncells}{\code{number} - Maximum number of cells to be created. A numeric value.}
 
-\item{seed}{\code{number} - Random seed (SEED_MIN >= value >= SEED_MAX) (default (random)). A numeric value.}
+\item{seed}{\code{number} - Random seed (SEED_MIN = value = SEED_MAX) (default (random)). A numeric value.}
 
 \item{output}{\code{rasterDestination} - Random. Path for new raster layer.}
 

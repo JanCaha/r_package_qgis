@@ -52,9 +52,9 @@ grass7_r_resamp_rst(
 
 \item{scalex}{\code{number} - Anisotropy scaling factor. A numeric value.}
 
-\item{.t}{\code{boolean} - Use dnorm independent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Use dnorm independent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.d}{\code{boolean} - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
 \item{elevation}{\code{rasterDestination} - Resampled RST. Path for new raster layer.}
 

@@ -31,7 +31,7 @@ grass7_r_resamp_filter(
 
 \item{y_radius}{\code{string} - Filter radius (vertical) for each filter (comma separated list of float if multiple). String value.}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Resampled Filter. Path for new raster layer.}
 

@@ -10,7 +10,7 @@
 ##' @param tgl `number` - Low gradient threshold for edge classification. A numeric value.
 ##' @param theta_g `number` - Angle range for same direction detection. A numeric value.
 ##' @param lambda_r `number` - Regularization weight in residual evaluation. A numeric value.
-##' @param .e `boolean` - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .e `boolean` - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output `vectorDestination` - Edges. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

@@ -27,11 +27,11 @@ grass7_r_random_surface(
 
 \item{flat}{\code{number} - Distance filter remains flat before beginning exponent. A numeric value.}
 
-\item{seed}{\code{number} - Random seed (SEED_MIN >= value >= SEED_MAX). A numeric value.}
+\item{seed}{\code{number} - Random seed (SEED_MIN = value = SEED_MAX). A numeric value.}
 
 \item{high}{\code{number} - Maximum cell value of distribution. A numeric value.}
 
-\item{.u}{\code{boolean} - Uniformly distributed cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.u}{\code{boolean} - Uniformly distributed cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -u.}
 
 \item{output}{\code{rasterDestination} - Random_Surface. Path for new raster layer.}
 

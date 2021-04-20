@@ -6,7 +6,7 @@
 ##' @param color `raster` - Name of raster to drape over relief raster map. Path to a raster layer.
 ##' @param brighten `number` - Percent to brighten. A numeric value.
 ##' @param bgcolor `string` - Color to use instead of NULL values. Either a standard color name, R:G:B triplet, or "none". String value.
-##' @param .c `boolean` - Use colors from color tables for NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Use colors from color tables for NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `rasterDestination` - Shaded. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

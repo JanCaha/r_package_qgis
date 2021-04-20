@@ -3,13 +3,13 @@
 ##' @title QGIS algorithm i.albedo
 ##'
 ##' @param input `multilayer` - Name of input raster maps. .
-##' @param .m `boolean` - MODIS (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - NOAA AVHRR (2 input bands:1,2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .l `boolean` - Landsat 5+7 (6 input bands:1,2,3,4,5,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .arg_8 `boolean` - Landsat 8 (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - ASTER (6 input bands:1,3,5,6,8,9). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Aggressive mode (Landsat). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Soft mode (MODIS). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .m `boolean` - MODIS (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
+##' @param .n `boolean` - NOAA AVHRR (2 input bands:1,2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .l `boolean` - Landsat 5+7 (6 input bands:1,2,3,4,5,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
+##' @param .arg_8 `boolean` - Landsat 8 (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -8.
+##' @param .a `boolean` - ASTER (6 input bands:1,3,5,6,8,9). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .c `boolean` - Aggressive mode (Landsat). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .d `boolean` - Soft mode (MODIS). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
 ##' @param output `rasterDestination` - Albedo. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

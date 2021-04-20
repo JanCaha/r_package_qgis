@@ -7,7 +7,7 @@
 ##' @param RANGE_MAX `number` - Range Max. A numeric value.
 ##' @param MEAN `number` - Arithmetic Mean. A numeric value.
 ##' @param STDDEV `number` - Standard Deviation. A numeric value.
-##' @param USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: USER_XMIN USER_XMAX USER_YMIN USER_YMAX.
 ##' @param USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUT_GRID `rasterDestination` - Random Field. Path for new raster layer.

@@ -18,9 +18,9 @@ grass7_i_oif(
 \arguments{
 \item{input}{\code{multilayer} - Name of input raster map(s). .}
 
-\item{.g}{\code{boolean} - Print in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Print in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{output}{\code{fileDestination} - OIF File. Path for new file.}
 

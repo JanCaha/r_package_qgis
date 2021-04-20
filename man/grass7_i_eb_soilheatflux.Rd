@@ -31,7 +31,7 @@ grass7_i_eb_soilheatflux(
 
 \item{localutctime}{\code{raster} - Name of time of satellite overpass raster map (local time in UTC). Path to a raster layer.}
 
-\item{.r}{\code{boolean} - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{output}{\code{rasterDestination} - Soil Heat Flux. Path for new raster layer.}
 

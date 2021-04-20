@@ -84,9 +84,9 @@ grass7_r_sun_incidout(
 
 \item{time}{\code{number} - Local (solar) time (decimal hours). A numeric value.}
 
-\item{.p}{\code{boolean} - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.p}{\code{boolean} - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
 
-\item{.m}{\code{boolean} - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
 \item{incidout}{\code{rasterDestination} - incidence angle raster map. Path for new raster layer.}
 

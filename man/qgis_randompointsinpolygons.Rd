@@ -26,7 +26,7 @@ qgis_randompointsinpolygons(
 
 \item{MIN_DISTANCE_GLOBAL}{\code{distance} - Global minimum distance between points. A numeric value.}
 
-\item{MAX_TRIES_PER_POINT}{\code{number} - Maximum number of search attempts (for Min. dist. > 0). A numeric value.}
+\item{MAX_TRIES_PER_POINT}{\code{number} - Maximum number of search attempts (for Min. dist.  0). A numeric value.}
 
 \item{SEED}{\code{number} - Random seed. A numeric value.}
 

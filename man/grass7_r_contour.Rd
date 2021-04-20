@@ -33,7 +33,7 @@ grass7_r_contour(
 
 \item{maxlevel}{\code{number} - Maximum contour level. A numeric value.}
 
-\item{cut}{\code{number} - Minimum number of points for a contour line (0 -> no limit). A numeric value.}
+\item{cut}{\code{number} - Minimum number of points for a contour line (0 - no limit). A numeric value.}
 
 \item{output}{\code{vectorDestination} - Contours. Path for new vector layer.}
 

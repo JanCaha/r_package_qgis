@@ -25,7 +25,7 @@ grass7_r_mask_rast(
 
 \item{maskcats}{\code{string} - Raster values to use for mask. Format: 1 2 3 thru 7 *. String value.}
 
-\item{.i}{\code{boolean} - Create inverse mask. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Create inverse mask. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{rasterDestination} - Masked. Path for new raster layer.}
 

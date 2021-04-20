@@ -12,8 +12,8 @@
 ##' @param timezone `number` - East positive, offset from GMT. A numeric value.
 ##' @param east `string` - Easting coordinate (point of interest). String value.
 ##' @param north `string` - Northing coordinate (point of interest). String value.
-##' @param .z `boolean` - Do not ignore zero elevation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Calculate sun position only and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Do not ignore zero elevation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .s `boolean` - Calculate sun position only and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param output `rasterDestination` - Shadows. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

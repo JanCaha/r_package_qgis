@@ -6,7 +6,7 @@
 ##' @param npoints `number` - Number of interpolation points. A numeric value.
 ##' @param power `number` - Power parameter; greater values assign greater influence to closer points. A numeric value.
 ##' @param column `field` - Attribute table column with values to interpolate. The name of an existing field. ; delimited list of existing field names.
-##' @param .n `boolean` - Don't index points by raster cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Don't index points by raster cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param output `rasterDestination` - Interpolated IDW. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

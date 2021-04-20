@@ -51,17 +51,17 @@ grass7_v_decimate(
 
 \item{cell_limit}{\code{number} - Preserve only n points per grid cell. A numeric value.}
 
-\item{.g}{\code{boolean} - Apply grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Apply grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.f}{\code{boolean} - Use only first point in grid cell during grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Use only first point in grid cell during grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.c}{\code{boolean} - Only one point per cat in grid cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Only one point per cat in grid cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.z}{\code{boolean} - Use z in grid decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Use z in grid decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.x}{\code{boolean} - Store only the coordinates, throw away categories. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.x}{\code{boolean} - Store only the coordinates, throw away categories. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{output}{\code{vectorDestination} - Output vector map. Path for new vector layer.}
 

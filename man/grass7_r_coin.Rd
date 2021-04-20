@@ -23,7 +23,7 @@ grass7_r_coin(
 
 \item{units}{\code{enum}  of \verb{("c", "p", "x", "y", "a", "h", "k", "m")} - Unit of measure. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.w}{\code{boolean} - Wide report, 132 columns (default: 80). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Wide report, 132 columns (default: 80). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{html}{\code{fileDestination} - Coincidence report. Path for new file.}
 

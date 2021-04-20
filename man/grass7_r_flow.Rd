@@ -39,11 +39,11 @@ grass7_r_flow(
 
 \item{bound}{\code{number} - Maximum number of segments per flowline. A numeric value.}
 
-\item{.u}{\code{boolean} - Compute upslope flowlines instead of default downhill flowlines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.u}{\code{boolean} - Compute upslope flowlines instead of default downhill flowlines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -u.}
 
-\item{.arg_3}{\code{boolean} - 3-D lengths instead of 2-D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_3}{\code{boolean} - 3-D lengths instead of 2-D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -3.}
 
-\item{.m}{\code{boolean} - Use less memory, at a performance penalty. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Use less memory, at a performance penalty. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
 \item{flowline}{\code{vectorDestination} - Flow line. Path for new vector layer.}
 

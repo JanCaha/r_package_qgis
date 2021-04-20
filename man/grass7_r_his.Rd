@@ -30,7 +30,7 @@ grass7_r_his(
 
 \item{bgcolor}{\code{string} - Color to use instead of NULL values. Either a standard color name, R:G:B triplet, or "none". String value.}
 
-\item{.c}{\code{boolean} - Use colors from color tables for NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Use colors from color tables for NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{red}{\code{rasterDestination} - Red. Path for new raster layer.}
 

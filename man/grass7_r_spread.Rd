@@ -55,9 +55,9 @@ grass7_r_spread(
 
 \item{lag}{\code{number} - Simulating time duration LAG (fill the region) (min). A numeric value.}
 
-\item{.s}{\code{boolean} - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.i}{\code{boolean} - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{rasterDestination} - Spread Time. Path for new raster layer.}
 

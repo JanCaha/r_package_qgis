@@ -54,9 +54,9 @@ grass7_r_horizon_height(
 
 \item{distance}{\code{number} - Sampling distance step coefficient. A numeric value.}
 
-\item{.d}{\code{boolean} - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.c}{\code{boolean} - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{html}{\code{fileDestination} - Horizon. Path for new file.}
 

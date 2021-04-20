@@ -48,11 +48,11 @@ grass7_v_kernel_vector(
 
 \item{kernel}{\code{enum}  of \verb{("uniform", "triangular", "epanechnikov", "quartic", "triweight", "gaussian", "cosine")} - Kernel function. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
-\item{.n}{\code{boolean} - Normalize values by sum of density multiplied by length of each segment.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Normalize values by sum of density multiplied by length of each segment.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.m}{\code{boolean} - Multiply the result by number of input points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Multiply the result by number of input points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
 \item{output}{\code{vectorDestination} - Kernel. Path for new vector layer.}
 

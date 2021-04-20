@@ -4,7 +4,7 @@
 ##'
 ##' @param input `raster` - Elevation. Path to a raster layer.
 ##' @param format `enum`  of `("grass", "agnps", "answers")` - Output aspect direction format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .f `boolean` - Find unresolved areas only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .f `boolean` - Find unresolved areas only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `rasterDestination` - Depressionless DEM. Path for new raster layer.
 ##' @param direction `rasterDestination` - Flow direction. Path for new raster layer.
 ##' @param areas `rasterDestination` - Problem areas. Path for new raster layer.

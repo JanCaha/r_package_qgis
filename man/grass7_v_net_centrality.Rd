@@ -56,9 +56,9 @@ grass7_v_net_centrality(
 
 \item{node_column}{\code{field} - Node cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
-\item{.a}{\code{boolean} - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
 \item{output}{\code{vectorDestination} - Network Centrality. Path for new vector layer.}
 

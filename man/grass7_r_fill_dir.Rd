@@ -24,7 +24,7 @@ grass7_r_fill_dir(
 
 \item{format}{\code{enum}  of \verb{("grass", "agnps", "answers")} - Output aspect direction format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.f}{\code{boolean} - Find unresolved areas only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Find unresolved areas only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Depressionless DEM. Path for new raster layer.}
 

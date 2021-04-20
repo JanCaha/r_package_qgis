@@ -5,10 +5,10 @@
 ##' @param input `file` - Name of input file. Path to a file.
 ##' @param output `fileDestination` - Output text file. Path for new file.
 ##' @param coordinates `point` - Starting coordinate pair. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
-##' @param .l `boolean` - Lines are labelled. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .q `boolean` - Suppress warnings. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Convert from coordinates to bearing and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Repeat the starting coordinate at the end to close a loop. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .l `boolean` - Lines are labelled. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
+##' @param .q `boolean` - Suppress warnings. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -q.
+##' @param .r `boolean` - Convert from coordinates to bearing and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .c `boolean` - Repeat the starting coordinate at the end to close a loop. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

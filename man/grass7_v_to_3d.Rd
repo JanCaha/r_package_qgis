@@ -32,9 +32,9 @@ grass7_v_to_3d(
 
 \item{column}{\code{field} - Name of attribute column used for height. The name of an existing field. ; delimited list of existing field names.}
 
-\item{.r}{\code{boolean} - Reverse transformation; 3D vector features to 2D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Reverse transformation; 3D vector features to 2D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.t}{\code{boolean} - Do not copy attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not copy attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - 3D. Path for new vector layer.}
 

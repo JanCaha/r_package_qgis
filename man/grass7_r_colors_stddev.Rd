@@ -20,9 +20,9 @@ grass7_r_colors_stddev(
 \arguments{
 \item{map}{\code{raster} - Name of raster map. Path to a raster layer.}
 
-\item{.b}{\code{boolean} - Color using standard deviation bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Color using standard deviation bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.z}{\code{boolean} - Force center at zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Force center at zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Stddev Colors. Path for new raster layer.}
 

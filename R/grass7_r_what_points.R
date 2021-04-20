@@ -7,11 +7,11 @@
 ##' @param null_value `string` - String representing NULL value. String value.
 ##' @param separator `string` - Field separator. Special characters: pipe, comma, space, tab, newline. String value.
 ##' @param cache `number` - Size of point cache. A numeric value.
-##' @param .n `boolean` - Output header row. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Turn on cache reporting. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Output header row. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .f `boolean` - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .r `boolean` - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .i `boolean` - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param .c `boolean` - Turn on cache reporting. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `fileDestination` - Raster Values File. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

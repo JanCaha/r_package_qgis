@@ -8,7 +8,7 @@
 ##' @param lambda_c `number` - Regularization weight in reclassification evaluation. A numeric value.
 ##' @param tch `number` - High threshold for object to terrain reclassification. A numeric value.
 ##' @param tcl `number` - Low threshold for terrain to object reclassification. A numeric value.
-##' @param .e `boolean` - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .e `boolean` - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output `vectorDestination` - Classified. Path for new vector layer.
 ##' @param terrain `vectorDestination` - Only 'terrain' points. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

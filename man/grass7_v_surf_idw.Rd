@@ -30,7 +30,7 @@ grass7_v_surf_idw(
 
 \item{column}{\code{field} - Attribute table column with values to interpolate. The name of an existing field. ; delimited list of existing field names.}
 
-\item{.n}{\code{boolean} - Don't index points by raster cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Don't index points by raster cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Interpolated IDW. Path for new raster layer.}
 

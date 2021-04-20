@@ -54,11 +54,11 @@ grass7_v_buffer(
 
 \item{tolerance}{\code{number} - Maximum distance between theoretical arc and polygon segments as multiple of buffer. A numeric value.}
 
-\item{.s}{\code{boolean} - Make outside corners straight. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Make outside corners straight. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.c}{\code{boolean} - Do not make caps at the ends of polylines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Do not make caps at the ends of polylines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.t}{\code{boolean} - Transfer categories and attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Transfer categories and attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Buffer. Path for new vector layer.}
 

@@ -25,7 +25,7 @@ grass7_v_hull(
 
 \item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
 
-\item{.f}{\code{boolean} - Create a 'flat' 2D hull even if the input is 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Create a 'flat' 2D hull even if the input is 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{vectorDestination} - Convex hull. Path for new vector layer.}
 

@@ -31,13 +31,13 @@ grass7_v_voronoi_skeleton(
 
 \item{thin}{\code{number} - Maximum dangle length of skeletons (-1 will extract the center line). A numeric value.}
 
-\item{.a}{\code{boolean} - Create Voronoi diagram for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Create Voronoi diagram for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.s}{\code{boolean} - Extract skeletons for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Extract skeletons for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.l}{\code{boolean} - Output tessellation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Output tessellation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Voronoi. Path for new vector layer.}
 

@@ -37,11 +37,11 @@ grass7_v_rectify(
 
 \item{separator}{\code{string} - Field separator for RMS report. String value.}
 
-\item{.arg_3}{\code{boolean} - Perform 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_3}{\code{boolean} - Perform 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -3.}
 
-\item{.o}{\code{boolean} - Perform orthogonal 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Perform orthogonal 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{output}{\code{vectorDestination} - Rectified. Path for new vector layer.}
 

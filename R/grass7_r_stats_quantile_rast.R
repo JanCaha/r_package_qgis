@@ -7,7 +7,7 @@
 ##' @param quantiles `number` - Number of quantiles. A numeric value.
 ##' @param percentiles `string` - List of percentiles. String value.
 ##' @param bins `number` - Number of bins to use. A numeric value.
-##' @param .r `boolean` - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param output `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

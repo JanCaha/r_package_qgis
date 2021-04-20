@@ -7,9 +7,9 @@
 ##' @param points `file` - Name of input file with control points. Path to a file.
 ##' @param order `number` - Rectification polynomial order. A numeric value.
 ##' @param separator `string` - Field separator for RMS report. String value.
-##' @param .arg_3 `boolean` - Perform 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .o `boolean` - Perform orthogonal 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .arg_3 `boolean` - Perform 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -3.
+##' @param .o `boolean` - Perform orthogonal 3D transformation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
 ##' @param output `vectorDestination` - Rectified. Path for new vector layer.
 ##' @param rmsfile `fileDestination` - Root Mean Square errors file. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

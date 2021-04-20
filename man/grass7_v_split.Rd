@@ -32,9 +32,9 @@ grass7_v_split(
 
 \item{vertices}{\code{number} - Maximum number of vertices in segment. A numeric value.}
 
-\item{.n}{\code{boolean} - Add new vertices, but do not split. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Add new vertices, but do not split. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.f}{\code{boolean} - Force segments to be exactly of given length, except for last one. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Force segments to be exactly of given length, except for last one. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{vectorDestination} - Split by length. Path for new vector layer.}
 

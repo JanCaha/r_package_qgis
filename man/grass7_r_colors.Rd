@@ -34,17 +34,17 @@ grass7_r_colors(
 
 \item{raster}{\code{raster} - Raster map from which to copy color table. Path to a raster layer.}
 
-\item{.r}{\code{boolean} - Remove existing color table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Remove existing color table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.w}{\code{boolean} - Only write new color table if it does not already exist. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Only write new color table if it does not already exist. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
-\item{.n}{\code{boolean} - Invert colors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Invert colors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.g}{\code{boolean} - Logarithmic scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Logarithmic scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.a}{\code{boolean} - Logarithmic-absolute scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Logarithmic-absolute scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.e}{\code{boolean} - Histogram equalization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Histogram equalization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output_dir}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 

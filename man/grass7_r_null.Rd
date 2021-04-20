@@ -29,15 +29,15 @@ grass7_r_null(
 
 \item{null}{\code{number} - The value to replace the null value by. A numeric value.}
 
-\item{.f}{\code{boolean} - Only do the work if the map is floating-point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Only do the work if the map is floating-point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.i}{\code{boolean} - Only do the work if the map is integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Only do the work if the map is integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
-\item{.n}{\code{boolean} - Only do the work if the map doesn't have a NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Only do the work if the map doesn't have a NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.c}{\code{boolean} - Create NULL-value bitmap file validating all data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Create NULL-value bitmap file validating all data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.r}{\code{boolean} - Remove NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Remove NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{output}{\code{rasterDestination} - NullRaster. Path for new raster layer.}
 

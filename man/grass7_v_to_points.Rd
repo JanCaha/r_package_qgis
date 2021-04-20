@@ -32,9 +32,9 @@ grass7_v_to_points(
 
 \item{dmax}{\code{number} - Maximum distance between points in map units. A numeric value.}
 
-\item{.i}{\code{boolean} - Interpolate points between line vertices. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Interpolate points between line vertices. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Points along lines. Path for new vector layer.}
 

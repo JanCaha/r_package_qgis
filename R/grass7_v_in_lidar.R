@@ -11,9 +11,9 @@
 ##' @param preserve `number` - Import only every n-th point. A numeric value.
 ##' @param offset `number` - Skip first n points. A numeric value.
 ##' @param limit `number` - Import only n points. A numeric value.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .c `boolean` - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
 ##' @param output `vectorDestination` - Lidar. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

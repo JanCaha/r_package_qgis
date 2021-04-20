@@ -88,9 +88,9 @@ grass7_r_solute_transport(
 
 \item{stab}{\code{enum}  of \verb{("full", "exp")} - Set the flow stabilizing scheme (full or exponential upwinding).. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.c}{\code{boolean} - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.f}{\code{boolean} - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Solute Transport. Path for new raster layer.}
 

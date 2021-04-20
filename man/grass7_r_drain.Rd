@@ -38,13 +38,13 @@ grass7_r_drain(
 
 \item{start_points}{\code{source} - Vector layer containing starting point(s). Path to a vector layer.}
 
-\item{.c}{\code{boolean} - Copy input cell values on output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Copy input cell values on output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.a}{\code{boolean} - Accumulate input values along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Accumulate input values along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.n}{\code{boolean} - Count cell numbers along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Count cell numbers along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.d}{\code{boolean} - The input raster map is a cost surface (direction surface must also be specified). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - The input raster map is a cost surface (direction surface must also be specified). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
 \item{output}{\code{rasterDestination} - Least cost path. Path for new raster layer.}
 

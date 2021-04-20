@@ -6,8 +6,8 @@
 ##' @param type `enum`  of `("point", "line", "boundary", "centroid", "area", "face", "kernel")` - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param use `enum`  of `("node", "vertex")` - Use line nodes or vertices only. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param dmax `number` - Maximum distance between points in map units. A numeric value.
-##' @param .i `boolean` - Interpolate points between line vertices. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .i `boolean` - Interpolate points between line vertices. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - Points along lines. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

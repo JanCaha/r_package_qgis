@@ -5,8 +5,8 @@
 ##' @param classification `raster` - Raster layer containing classification result. Path to a raster layer.
 ##' @param reference `raster` - Raster layer containing reference classes. Path to a raster layer.
 ##' @param title `string` - Title for error matrix and kappa. String value.
-##' @param .h `boolean` - No header in the report. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .w `boolean` - Wide report (132 columns). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .h `boolean` - No header in the report. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.
+##' @param .w `boolean` - Wide report (132 columns). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
 ##' @param output `fileDestination` - Error matrix and kappa. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

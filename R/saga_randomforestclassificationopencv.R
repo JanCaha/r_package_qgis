@@ -10,7 +10,7 @@
 ##' @param MAX_DEPTH `number` - Maximum Tree Depth. A numeric value.
 ##' @param MIN_SAMPLES `number` - Minimum Sample Count. A numeric value.
 ##' @param MAX_CATEGRS `number` - Maximum Categories. A numeric value.
-##' @param arg_1SE_RULE `boolean` - Use 1SE Rule. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param arg_1SE_RULE `boolean` - Use 1SE Rule. 1 for true/yes. 0 for false/no. Original algorithm parameter name: 1SE_RULE.
 ##' @param TRUNC_PRUNED `boolean` - Truncate Pruned Trees. 1 for true/yes. 0 for false/no.
 ##' @param REG_ACCURACY `number` - Regression Accuracy. A numeric value.
 ##' @param ACTIVE_VARS `number` - Active Variable Count. A numeric value.

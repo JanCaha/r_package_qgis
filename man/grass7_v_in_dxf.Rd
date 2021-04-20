@@ -28,17 +28,17 @@ grass7_v_in_dxf(
 
 \item{layers}{\code{string} - List of layers to import. String value.}
 
-\item{.e}{\code{boolean} - Ignore the map extent of DXF file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Ignore the map extent of DXF file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
-\item{.t}{\code{boolean} - Do not create attribute tables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute tables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.f}{\code{boolean} - Import polyface meshes as 3D wire frame. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Import polyface meshes as 3D wire frame. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.l}{\code{boolean} - List available layers and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - List available layers and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.i}{\code{boolean} - Invert selection by layers (don't import layers in list). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Invert selection by layers (don't import layers in list). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
-\item{.arg_1}{\code{boolean} - Import all objects into one layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_1}{\code{boolean} - Import all objects into one layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.}
 
 \item{output}{\code{vectorDestination} - Converted. Path for new vector layer.}
 

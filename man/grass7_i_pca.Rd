@@ -24,9 +24,9 @@ grass7_i_pca(
 
 \item{percent}{\code{number} - Cumulative percent importance for filtering. A numeric value.}
 
-\item{.n}{\code{boolean} - Normalize (center and scale) input maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Normalize (center and scale) input maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.f}{\code{boolean} - Output will be filtered input bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Output will be filtered input bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 

@@ -25,9 +25,9 @@ grass7_v_normal(
 
 \item{column}{\code{field} - Attribute column. The name of an existing field. ; delimited list of existing field names.}
 
-\item{.r}{\code{boolean} - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.l}{\code{boolean} - lognormal. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - lognormal. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
 \item{html}{\code{fileDestination} - Normality. Path for new file.}
 

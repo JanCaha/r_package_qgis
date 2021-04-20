@@ -18,8 +18,8 @@
 ##' @param alpha `number` - Snakes alpha parameter. A numeric value.
 ##' @param beta `number` - Snakes beta parameter. A numeric value.
 ##' @param iterations `number` - Number of iterations. A numeric value.
-##' @param .t `boolean` - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .l `boolean` - Disable loop support. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .l `boolean` - Disable loop support. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
 ##' @param output `vectorDestination` - Generalized. Path for new vector layer.
 ##' @param error `vectorDestination` - Errors. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

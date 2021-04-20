@@ -5,7 +5,7 @@
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param distances `string` - Distance zone(s) (e.g. 100,200,300). String value.
 ##' @param units `enum`  of `("meters", "kilometers", "feet", "miles", "nautmiles")` - Units of distance. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .z `boolean` - Ignore zero (0) data cells instead of NULL cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Ignore zero (0) data cells instead of NULL cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
 ##' @param output `rasterDestination` - Buffer. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

@@ -17,13 +17,13 @@ grass7_r_out_ppm3(
 )
 }
 \arguments{
-\item{red}{\code{raster} - Name of raster map to be used for <red>. Path to a raster layer.}
+\item{red}{\code{raster} - Name of raster map to be used for red. Path to a raster layer.}
 
-\item{green}{\code{raster} - Name of raster map to be used for <green>. Path to a raster layer.}
+\item{green}{\code{raster} - Name of raster map to be used for green. Path to a raster layer.}
 
-\item{blue}{\code{raster} - Name of raster map to be used for <blue>. Path to a raster layer.}
+\item{blue}{\code{raster} - Name of raster map to be used for blue. Path to a raster layer.}
 
-\item{.c}{\code{boolean} - Add comments to describe the region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Add comments to describe the region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Name for new PPM file. Path for new file.}
 

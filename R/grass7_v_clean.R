@@ -6,8 +6,8 @@
 ##' @param type `enum`  of `("point", "line", "boundary", "centroid", "area", "face", "kernel")` - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param tool `enum`  of `("break", "snap", "rmdangle", "chdangle", "rmbridge", "chbridge", "rmdupl", "rmdac", "bpol", "prune", "rmarea", "rmline", "rmsa")` - Cleaning tool. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param threshold `string` - Threshold (comma separated for each tool). String value.
-##' @param .b `boolean` - Do not build topology for the output vector. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Combine tools with recommended follow-up tools. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .b `boolean` - Do not build topology for the output vector. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .c `boolean` - Combine tools with recommended follow-up tools. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `vectorDestination` - Cleaned. Path for new vector layer.
 ##' @param error `vectorDestination` - Errors. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

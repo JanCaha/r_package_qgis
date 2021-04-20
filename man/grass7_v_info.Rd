@@ -21,13 +21,13 @@ grass7_v_info(
 \arguments{
 \item{map}{\code{source} - Name of input vector map. Path to a vector layer.}
 
-\item{.c}{\code{boolean} - Print types/names of table columns for specified layer instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Print types/names of table columns for specified layer instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.g}{\code{boolean} - Print map region only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Print map region only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.e}{\code{boolean} - Print extended metadata info in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Print extended metadata info in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
-\item{.t}{\code{boolean} - Print topology information only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Print topology information only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{html}{\code{fileDestination} - Information report. Path for new file.}
 

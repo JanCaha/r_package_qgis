@@ -45,9 +45,9 @@ grass7_i_segment(
 
 \item{bounds}{\code{raster} - Name of input bounding/constraining raster map. Path to a raster layer.}
 
-\item{.d}{\code{boolean} - Use 8 neighbors (3x3 neighborhood) instead of the default 4 neighbors for each pixel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Use 8 neighbors (3x3 neighborhood) instead of the default 4 neighbors for each pixel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.w}{\code{boolean} - Weighted input, do not perform the default scaling of input raster maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Weighted input, do not perform the default scaling of input raster maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{output}{\code{rasterDestination} - Segmented Raster. Path for new raster layer.}
 

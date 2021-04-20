@@ -24,9 +24,9 @@ grass7_r_grow_distance(
 
 \item{metric}{\code{enum}  of \verb{("euclidean", "squared", "maximum", "manhattan", "geodesic")} - Metric. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.m}{\code{boolean} - Output distances in meters instead of map units. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Output distances in meters instead of map units. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
-\item{.}{\code{boolean} - Calculate distance to nearest NULL cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.}{\code{boolean} - Calculate distance to nearest NULL cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -.}
 
 \item{distance}{\code{rasterDestination} - Distance. Path for new raster layer.}
 

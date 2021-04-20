@@ -37,11 +37,11 @@ grass7_r_slope_aspect(
 
 \item{precision}{\code{enum}  of \verb{("FCELL", "CELL", "DCELL")} - Type of output aspect and slope layer. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.a}{\code{boolean} - Do not align the current region to the elevation layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Do not align the current region to the elevation layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.e}{\code{boolean} - Compute output at edges and near NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Compute output at edges and near NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
-\item{.n}{\code{boolean} - Create aspect as degrees clockwise from North (azimuth), with flat = -9999. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Create aspect as degrees clockwise from North (azimuth), with flat = -9999. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{zscale}{\code{number} - Multiplicative factor to convert elevation units to meters. A numeric value.}
 

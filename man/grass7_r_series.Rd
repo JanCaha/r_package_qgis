@@ -23,7 +23,7 @@ grass7_r_series(
 \arguments{
 \item{input}{\code{multilayer} - Input raster layer(s). .}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{method}{\code{enum}  of \verb{("average", "count", "median", "mode", "minimum", "min_raster", "maximum", "max_raster", "stddev", "range", "sum", "variance", "diversity", "slope", "offset", "detcoeff", "quart1", "quart3", "perc90", "skewness", "kurtosis", "quantile")} - Aggregate operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

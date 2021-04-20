@@ -41,19 +41,19 @@ grass7_r_report(
 
 \item{sort}{\code{enum}  of \verb{("asc", "desc")} - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.h}{\code{boolean} - Suppress page headers. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.h}{\code{boolean} - Suppress page headers. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
 
-\item{.f}{\code{boolean} - Use formfeeds between pages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Use formfeeds between pages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.e}{\code{boolean} - Scientific format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Scientific format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
-\item{.n}{\code{boolean} - Do not report no data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Do not report no data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.a}{\code{boolean} - Do not report cells where all maps have no data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Do not report cells where all maps have no data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Report for cats floating-point ranges (floating-point maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Report for cats floating-point ranges (floating-point maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.i}{\code{boolean} - Read floating-point map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Read floating-point map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{fileDestination} - Name for output file to hold the report. Path for new file.}
 

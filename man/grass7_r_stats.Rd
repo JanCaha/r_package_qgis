@@ -41,31 +41,31 @@ grass7_r_stats(
 
 \item{sort}{\code{enum}  of \verb{("asc", "desc")} - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.arg_1}{\code{boolean} - One cell (range) per line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_1}{\code{boolean} - One cell (range) per line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.}
 
-\item{.A}{\code{boolean} - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.A}{\code{boolean} - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -A.}
 
-\item{.a}{\code{boolean} - Print area totals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Print area totals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Print cell counts. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Print cell counts. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.p}{\code{boolean} - Print APPROXIMATE percents (total percent may not be 100\%). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.p}{\code{boolean} - Print APPROXIMATE percents (total percent may not be 100\%). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
 
-\item{.l}{\code{boolean} - Print category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Print category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.g}{\code{boolean} - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.x}{\code{boolean} - Print x and y (column and row). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.x}{\code{boolean} - Print x and y (column and row). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.}
 
-\item{.r}{\code{boolean} - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.N}{\code{boolean} - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.N}{\code{boolean} - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -N.}
 
-\item{.C}{\code{boolean} - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.C}{\code{boolean} - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -C.}
 
-\item{.i}{\code{boolean} - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{html}{\code{fileDestination} - Statistics. Path for new file.}
 

@@ -18,11 +18,11 @@
 ##' @param bgmap `source` - Name of background vector map. Path to a vector layer.
 ##' @param snap `enum`  of `("no", "node", "vertex")` - Snap added or modified features in the given threshold to the nearest existing feature. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param zbulk `string` - Starting value and step for z bulk-labeling. Pair: value,step (e.g. 1100,10). String value.
-##' @param .r `boolean` - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Close added boundaries (using threshold distance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Do not expect header of input data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .arg_1 `boolean` - Modify only first found feature in bounding box. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .c `boolean` - Close added boundaries (using threshold distance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .n `boolean` - Do not expect header of input data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .arg_1 `boolean` - Modify only first found feature in bounding box. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.
 ##' @param output `vectorDestination` - Edited. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

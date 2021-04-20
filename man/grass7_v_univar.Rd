@@ -33,13 +33,13 @@ grass7_v_univar(
 
 \item{percentile}{\code{number} - Percentile to calculate. A numeric value.}
 
-\item{.g}{\code{boolean} - Print the stats in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Print the stats in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.e}{\code{boolean} - Calculate extended statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Calculate extended statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
-\item{.w}{\code{boolean} - Weigh by line length or area size. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Weigh by line length or area size. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
-\item{.d}{\code{boolean} - Calculate geometric distances instead of attribute statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Calculate geometric distances instead of attribute statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
 \item{html}{\code{fileDestination} - Statistics. Path for new file.}
 

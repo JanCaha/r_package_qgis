@@ -27,11 +27,11 @@ grass7_r_fill_stats(
 \arguments{
 \item{input}{\code{raster} - Input raster layer with data gaps to fill. Path to a raster layer.}
 
-\item{.k}{\code{boolean} - Preserve original cell values (By default original values are smoothed). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.k}{\code{boolean} - Preserve original cell values (By default original values are smoothed). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.}
 
 \item{mode}{\code{enum}  of \verb{("wmean", "mean", "median", "mode")} - Statistic for interpolated cell values. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.m}{\code{boolean} - Interpret distance as map units, not number of cells (Do not select with geodetic coordinates). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Interpret distance as map units, not number of cells (Do not select with geodetic coordinates). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
 \item{distance}{\code{number} - Distance threshold (default: in cells) for interpolation. A numeric value.}
 

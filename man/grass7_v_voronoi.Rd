@@ -23,9 +23,9 @@ grass7_v_voronoi(
 \arguments{
 \item{input}{\code{source} - Input points layer. Path to a vector layer.}
 
-\item{.l}{\code{boolean} - Output tessellation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Output tessellation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Voronoi. Path for new vector layer.}
 

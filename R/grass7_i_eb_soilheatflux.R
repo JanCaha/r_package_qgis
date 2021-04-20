@@ -7,7 +7,7 @@
 ##' @param temperature `raster` - Name of Surface temperature raster map (K). Path to a raster layer.
 ##' @param netradiation `raster` - Name of Net Radiation raster map (W/m2). Path to a raster layer.
 ##' @param localutctime `raster` - Name of time of satellite overpass raster map (local time in UTC). Path to a raster layer.
-##' @param .r `boolean` - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param output `rasterDestination` - Soil Heat Flux. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

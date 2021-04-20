@@ -6,8 +6,8 @@
 ##' @param basemap `raster` - Base layer to take quant rules from. Path to a raster layer.
 ##' @param fprange `range` - Floating point range: dmin,dmax. Two comma separated numeric values, e.g. '1,10'.
 ##' @param range `range` - Integer range: min,max. Two comma separated numeric values, e.g. '1,10'.
-##' @param .t `boolean` - Truncate floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Round floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Truncate floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .r `boolean` - Round floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param output `folderDestination` - Quantized raster(s). Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

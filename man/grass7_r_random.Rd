@@ -32,11 +32,11 @@ grass7_r_random(
 
 \item{npoints}{\code{number} - The number of points to allocate. A numeric value.}
 
-\item{.z}{\code{boolean} - Generate points also for NULL category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Generate points also for NULL category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.d}{\code{boolean} - Generate vector points as 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Generate vector points as 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{raster}{\code{rasterDestination} - Random raster. Path for new raster layer.}
 

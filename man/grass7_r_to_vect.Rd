@@ -31,15 +31,15 @@ grass7_r_to_vect(
 
 \item{column}{\code{string} - Name of attribute column to store value. String value.}
 
-\item{.s}{\code{boolean} - Smooth corners of area features. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Smooth corners of area features. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.v}{\code{boolean} - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.v}{\code{boolean} - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
 
-\item{.z}{\code{boolean} - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.b}{\code{boolean} - Do not build vector topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build vector topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Vectorized. Path for new vector layer.}
 

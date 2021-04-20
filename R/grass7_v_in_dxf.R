@@ -4,12 +4,12 @@
 ##'
 ##' @param input `file` - Name of input DXF file. Path to a file.
 ##' @param layers `string` - List of layers to import. String value.
-##' @param .e `boolean` - Ignore the map extent of DXF file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not create attribute tables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Import polyface meshes as 3D wire frame. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .l `boolean` - List available layers and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Invert selection by layers (don't import layers in list). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .arg_1 `boolean` - Import all objects into one layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .e `boolean` - Ignore the map extent of DXF file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param .t `boolean` - Do not create attribute tables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .f `boolean` - Import polyface meshes as 3D wire frame. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .l `boolean` - List available layers and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
+##' @param .i `boolean` - Invert selection by layers (don't import layers in list). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param .arg_1 `boolean` - Import all objects into one layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.
 ##' @param output `vectorDestination` - Converted. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

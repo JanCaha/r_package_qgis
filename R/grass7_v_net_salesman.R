@@ -9,7 +9,7 @@
 ##' @param center_cats `string` - Category values. String value.
 ##' @param arc_column `field` - Arc forward/both direction(s) cost column (number). The name of an existing field. ; delimited list of existing field names.
 ##' @param arc_backward_column `field` - Arc backward direction cost column (number). The name of an existing field. ; delimited list of existing field names.
-##' @param .g `boolean` - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
 ##' @param output `vectorDestination` - Network_Salesman. Path for new vector layer.
 ##' @param sequence `fileDestination` - Output file holding node sequence. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

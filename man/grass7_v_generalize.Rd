@@ -69,9 +69,9 @@ grass7_v_generalize(
 
 \item{iterations}{\code{number} - Number of iterations. A numeric value.}
 
-\item{.t}{\code{boolean} - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.l}{\code{boolean} - Disable loop support. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Disable loop support. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
 \item{output}{\code{vectorDestination} - Generalized. Path for new vector layer.}
 

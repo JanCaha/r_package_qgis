@@ -23,7 +23,7 @@ grass7_r_transect(
 
 \item{null_value}{\code{string} - String representing NULL value. String value.}
 
-\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
 \item{html}{\code{fileDestination} - Transect file. Path for new file.}
 

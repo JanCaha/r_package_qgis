@@ -26,7 +26,7 @@ grass7_r_terraflow(
 \arguments{
 \item{elevation}{\code{raster} - Name of elevation raster map. Path to a raster layer.}
 
-\item{.s}{\code{boolean} - SFD (D8) flow (default is MFD). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - SFD (D8) flow (default is MFD). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{d8cut}{\code{number} - Routing using SFD (D8) direction. A numeric value.}
 

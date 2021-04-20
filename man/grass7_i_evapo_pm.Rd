@@ -35,9 +35,9 @@ grass7_i_evapo_pm(
 
 \item{cropheight}{\code{raster} - Name of input crop height raster map (m). Path to a raster layer.}
 
-\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.n}{\code{boolean} - Use Night-time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Use Night-time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Evapotranspiration. Path for new raster layer.}
 

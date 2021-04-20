@@ -51,9 +51,9 @@ grass7_i_landsat_toar(
 
 \item{scale}{\code{number} - Scale factor for output. A numeric value.}
 
-\item{.r}{\code{boolean} - Output at-sensor radiance instead of reflectance for all bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Output at-sensor radiance instead of reflectance for all bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.n}{\code{boolean} - Input raster maps use as extension the number of the band instead the code. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Input raster maps use as extension the number of the band instead the code. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 

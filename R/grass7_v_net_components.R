@@ -9,7 +9,7 @@
 ##' @param arc_column `field` - Arc forward/both direction(s) cost column (number). The name of an existing field. ; delimited list of existing field names.
 ##' @param arc_backward_column `field` - Arc backward direction cost column (number). The name of an existing field. ; delimited list of existing field names.
 ##' @param node_column `field` - Node cost column (number). The name of an existing field. ; delimited list of existing field names.
-##' @param .a `boolean` - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .a `boolean` - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
 ##' @param output `vectorDestination` - Network_Components_Line. Path for new vector layer.
 ##' @param output_point `vectorDestination` - Network_Components_Point. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

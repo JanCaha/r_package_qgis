@@ -23,9 +23,9 @@ grass7_v_delaunay(
 \arguments{
 \item{input}{\code{source} - Input vector layer. Path to a vector layer.}
 
-\item{.r}{\code{boolean} - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.l}{\code{boolean} - Output triangulation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Output triangulation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
 \item{output}{\code{vectorDestination} - Delaunay triangulation. Path for new vector layer.}
 

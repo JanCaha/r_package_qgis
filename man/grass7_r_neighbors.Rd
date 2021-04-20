@@ -36,9 +36,9 @@ grass7_r_neighbors(
 
 \item{quantile}{\code{string} - Quantile to calculate for method=quantile. String value.}
 
-\item{.c}{\code{boolean} - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.a}{\code{boolean} - Do not align output with the input. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Do not align output with the input. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
 \item{weight}{\code{file} - File containing weights. Path to a file.}
 

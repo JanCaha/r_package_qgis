@@ -25,11 +25,11 @@ grass7_r_distance(
 
 \item{sort}{\code{enum}  of \verb{("asc", "desc")} - Sort output by distance. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.l}{\code{boolean} - Include category labels in the output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Include category labels in the output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.o}{\code{boolean} - Report zero distance if rasters are overlapping. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Report zero distance if rasters are overlapping. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
-\item{.n}{\code{boolean} - Report null objects as *. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Report null objects as *. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{html}{\code{fileDestination} - Distance. Path for new file.}
 

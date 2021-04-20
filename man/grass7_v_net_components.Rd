@@ -41,7 +41,7 @@ grass7_v_net_components(
 
 \item{node_column}{\code{field} - Node cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
-\item{.a}{\code{boolean} - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
 \item{output}{\code{vectorDestination} - Network_Components_Line. Path for new vector layer.}
 

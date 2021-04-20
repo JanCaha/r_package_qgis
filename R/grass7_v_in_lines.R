@@ -4,7 +4,7 @@
 ##'
 ##' @param input `file` - ASCII file to be imported. Path to a file.
 ##' @param separator `string` - Field separator. String value.
-##' @param .z `boolean` - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
 ##' @param output `vectorDestination` - Lines. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

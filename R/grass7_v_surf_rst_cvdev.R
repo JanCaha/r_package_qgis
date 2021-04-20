@@ -10,14 +10,14 @@
 ##' @param smooth `number` - Smoothing parameter. A numeric value.
 ##' @param smooth_column `field` - Name of the attribute column with smoothing parameters. The name of an existing field. ; delimited list of existing field names.
 ##' @param segmax `number` - Maximum number of points in a segment. A numeric value.
-##' @param npmin `number` - Minimum number of points for approximation in a segment (>segmax). A numeric value.
+##' @param npmin `number` - Minimum number of points for approximation in a segment (segmax). A numeric value.
 ##' @param dmin `number` - Minimum distance between points (to remove almost identical points). A numeric value.
 ##' @param dmax `number` - Maximum distance between points on isoline (to insert additional points). A numeric value.
 ##' @param zscale `number` - Conversion factor for values used for approximation. A numeric value.
 ##' @param theta `number` - Anisotropy angle (in degrees counterclockwise from East). A numeric value.
 ##' @param scalex `number` - Anisotropy scaling factor. A numeric value.
-##' @param .t `boolean` - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Perform cross-validation procedure without raster approximation (leave this option as True). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .c `boolean` - Perform cross-validation procedure without raster approximation (leave this option as True). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param cvdev `vectorDestination` - Cross Validation Errors. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

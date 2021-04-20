@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm r.series
 ##'
 ##' @param input `multilayer` - Input raster layer(s). .
-##' @param .n `boolean` - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param method `enum`  of `("average", "count", "median", "mode", "minimum", "min_raster", "maximum", "max_raster", "stddev", "range", "sum", "variance", "diversity", "slope", "offset", "detcoeff", "quart1", "quart3", "perc90", "skewness", "kurtosis", "quantile")` - Aggregate operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param quantile `string` - Quantile to calculate for method=quantile. String value.
 ##' @param weights `string` - Weighting factor for each input map, default value is 1.0. String value.

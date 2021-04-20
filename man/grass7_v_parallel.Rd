@@ -38,9 +38,9 @@ grass7_v_parallel(
 
 \item{tolerance}{\code{number} - Tolerance of arc polylines in map units. A numeric value.}
 
-\item{.r}{\code{boolean} - Make outside corners round. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Make outside corners round. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.b}{\code{boolean} - Create buffer-like parallel lines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Create buffer-like parallel lines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{output}{\code{vectorDestination} - Parallel lines. Path for new vector layer.}
 

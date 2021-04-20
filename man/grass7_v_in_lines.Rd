@@ -23,7 +23,7 @@ grass7_v_in_lines(
 
 \item{separator}{\code{string} - Field separator. String value.}
 
-\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{vectorDestination} - Lines. Path for new vector layer.}
 

@@ -19,7 +19,7 @@ grass7_r_latlong(
 \arguments{
 \item{input}{\code{raster} - Name of input raster map. Path to a raster layer.}
 
-\item{.l}{\code{boolean} - Longitude output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Longitude output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
 \item{output}{\code{rasterDestination} - LatLong. Path for new raster layer.}
 

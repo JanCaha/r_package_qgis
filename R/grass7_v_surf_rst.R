@@ -10,14 +10,14 @@
 ##' @param smooth `number` - Smoothing parameter. A numeric value.
 ##' @param smooth_column `field` - Name of the attribute column with smoothing parameters. The name of an existing field. ; delimited list of existing field names.
 ##' @param segmax `number` - Maximum number of points in a segment. A numeric value.
-##' @param npmin `number` - Minimum number of points for approximation in a segment (>segmax). A numeric value.
+##' @param npmin `number` - Minimum number of points for approximation in a segment (segmax). A numeric value.
 ##' @param dmin `number` - Minimum distance between points (to remove almost identical points). A numeric value.
 ##' @param dmax `number` - Maximum distance between points on isoline (to insert additional points). A numeric value.
 ##' @param zscale `number` - Conversion factor for values used for approximation. A numeric value.
 ##' @param theta `number` - Anisotropy angle (in degrees counterclockwise from East). A numeric value.
 ##' @param scalex `number` - Anisotropy scaling factor. A numeric value.
-##' @param .t `boolean` - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .d `boolean` - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
 ##' @param elevation `rasterDestination` - Interpolated RST. Path for new raster layer.
 ##' @param slope `rasterDestination` - Slope. Path for new raster layer.
 ##' @param aspect `rasterDestination` - Aspect. Path for new raster layer.

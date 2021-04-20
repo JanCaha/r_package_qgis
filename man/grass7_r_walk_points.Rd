@@ -50,9 +50,9 @@ grass7_r_walk_points(
 
 \item{memory}{\code{number} - Maximum memory to be used in MB. A numeric value.}
 
-\item{.k}{\code{boolean} - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.k}{\code{boolean} - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.}
 
-\item{.n}{\code{boolean} - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Cumulative cost. Path for new raster layer.}
 

@@ -6,10 +6,10 @@
 ##' @param green `raster` - Name of green channel. Path to a raster layer.
 ##' @param blue `raster` - Name of blue channel. Path to a raster layer.
 ##' @param strength `number` - Cropping intensity (upper brightness level). A numeric value.
-##' @param .f `boolean` - Extend colors to full range of data on each channel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .p `boolean` - Preserve relative colors, adjust brightness only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Reset to standard color range. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .f `boolean` - Extend colors to full range of data on each channel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .p `boolean` - Preserve relative colors, adjust brightness only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.
+##' @param .r `boolean` - Reset to standard color range. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param redoutput `rasterDestination` - Enhanced Red. Path for new raster layer.
 ##' @param greenoutput `rasterDestination` - Enhanced Green. Path for new raster layer.
 ##' @param blueoutput `rasterDestination` - Enhanced Blue. Path for new raster layer.

@@ -40,7 +40,7 @@ grass7_v_net_steiner(
 
 \item{npoints}{\code{number} - Number of Steiner points. A numeric value.}
 
-\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
 \item{output}{\code{vectorDestination} - Network Steiner. Path for new vector layer.}
 

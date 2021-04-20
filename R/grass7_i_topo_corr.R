@@ -6,7 +6,7 @@
 ##' @param basemap `raster` - Name of illumination input base raster map. Path to a raster layer.
 ##' @param zenith `number` - Solar zenith in degrees. A numeric value.
 ##' @param method `enum`  of `("cosine", "minnaert", "c-factor", "percent")` - Topographic correction method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .s `boolean` - Scale output to input and copy color rules. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .s `boolean` - Scale output to input and copy color rules. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param output `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

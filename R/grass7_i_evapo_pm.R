@@ -8,8 +8,8 @@
 ##' @param windspeed `raster` - Name of input wind speed raster map (m/s). Path to a raster layer.
 ##' @param netradiation `raster` - Name of input net solar radiation raster map (MJ/m2/h). Path to a raster layer.
 ##' @param cropheight `raster` - Name of input crop height raster map (m). Path to a raster layer.
-##' @param .z `boolean` - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Use Night-time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .n `boolean` - Use Night-time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param output `rasterDestination` - Evapotranspiration. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

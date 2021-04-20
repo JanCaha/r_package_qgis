@@ -40,13 +40,13 @@ grass7_r_viewshed(
 
 \item{memory}{\code{number} - Amount of memory to use in MB. A numeric value.}
 
-\item{.c}{\code{boolean} - Consider earth curvature (current ellipsoid). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Consider earth curvature (current ellipsoid). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.r}{\code{boolean} - Consider the effect of atmospheric refraction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Consider the effect of atmospheric refraction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.b}{\code{boolean} - Output format is invisible = 0, visible = 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Output format is invisible = 0, visible = 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.e}{\code{boolean} - Output format is invisible = NULL, else current elev - viewpoint_elev. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Output format is invisible = NULL, else current elev - viewpoint_elev. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{rasterDestination} - Intervisibility. Path for new raster layer.}
 

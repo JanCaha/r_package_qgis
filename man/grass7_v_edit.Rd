@@ -71,15 +71,15 @@ grass7_v_edit(
 
 \item{zbulk}{\code{string} - Starting value and step for z bulk-labeling. Pair: value,step (e.g. 1100,10). String value.}
 
-\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.c}{\code{boolean} - Close added boundaries (using threshold distance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Close added boundaries (using threshold distance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.n}{\code{boolean} - Do not expect header of input data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Do not expect header of input data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.arg_1}{\code{boolean} - Modify only first found feature in bounding box. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_1}{\code{boolean} - Modify only first found feature in bounding box. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.}
 
 \item{output}{\code{vectorDestination} - Edited. Path for new vector layer.}
 

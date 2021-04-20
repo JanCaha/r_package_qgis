@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm r.surf.fractal
 ##'
-##' @param dimension `number` - Fractal dimension of surface (2 < D < 3). A numeric value.
+##' @param dimension `number` - Fractal dimension of surface (2  D  3). A numeric value.
 ##' @param number `number` - Number of intermediate images to produce. A numeric value.
 ##' @param output `rasterDestination` - Fractal Surface. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

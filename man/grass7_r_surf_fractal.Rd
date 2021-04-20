@@ -17,7 +17,7 @@ grass7_r_surf_fractal(
 )
 }
 \arguments{
-\item{dimension}{\code{number} - Fractal dimension of surface (2 < D < 3). A numeric value.}
+\item{dimension}{\code{number} - Fractal dimension of surface (2  D  3). A numeric value.}
 
 \item{number}{\code{number} - Number of intermediate images to produce. A numeric value.}
 

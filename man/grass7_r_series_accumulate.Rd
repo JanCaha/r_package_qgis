@@ -41,9 +41,9 @@ grass7_r_series_accumulate(
 
 \item{limits}{\code{range} - Lower and upper accumulation limits (lower,upper). Two comma separated numeric values, e.g. '1,10'.}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.f}{\code{boolean} - Create a FCELL map (floating point single precision) as output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Create a FCELL map (floating point single precision) as output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Accumulated. Path for new raster layer.}
 

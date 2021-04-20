@@ -7,9 +7,9 @@
 ##' @param barrier `raster` - Barrier. Path to a raster layer.
 ##' @param skip `number` - Number of cells between flowlines. A numeric value.
 ##' @param bound `number` - Maximum number of segments per flowline. A numeric value.
-##' @param .u `boolean` - Compute upslope flowlines instead of default downhill flowlines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .arg_3 `boolean` - 3-D lengths instead of 2-D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .m `boolean` - Use less memory, at a performance penalty. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .u `boolean` - Compute upslope flowlines instead of default downhill flowlines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -u.
+##' @param .arg_3 `boolean` - 3-D lengths instead of 2-D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -3.
+##' @param .m `boolean` - Use less memory, at a performance penalty. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
 ##' @param flowline `vectorDestination` - Flow line. Path for new vector layer.
 ##' @param flowlength `rasterDestination` - Flow path length. Path for new raster layer.
 ##' @param flowaccumulation `rasterDestination` - Flow accumulation. Path for new raster layer.

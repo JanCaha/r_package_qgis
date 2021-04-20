@@ -4,7 +4,7 @@
 ##'
 ##' @param input `source` - Input layer. Path to a vector layer.
 ##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value.
-##' @param .f `boolean` - Create a 'flat' 2D hull even if the input is 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .f `boolean` - Create a 'flat' 2D hull even if the input is 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `vectorDestination` - Convex hull. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

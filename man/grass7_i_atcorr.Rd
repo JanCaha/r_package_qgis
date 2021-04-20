@@ -39,13 +39,13 @@ grass7_i_atcorr(
 
 \item{output}{\code{rasterDestination} - Atmospheric correction. Path for new raster layer.}
 
-\item{.i}{\code{boolean} - Output raster map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Output raster map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
-\item{.r}{\code{boolean} - Input raster map converted to reflectance (default is radiance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Input raster map converted to reflectance (default is radiance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.a}{\code{boolean} - Input from ETM+ image taken after July 1, 2000. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Input from ETM+ image taken after July 1, 2000. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.b}{\code{boolean} - Input from ETM+ image taken before July 1, 2000. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Input from ETM+ image taken before July 1, 2000. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 

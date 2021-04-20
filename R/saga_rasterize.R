@@ -9,7 +9,7 @@
 ##' @param LINE_TYPE `enum`  of `("[0] thin", "[1] thick")` - Method for Lines. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param POLY_TYPE `enum`  of `("[0] node", "[1] cell")` - Method for Lines. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param GRID_TYPE `enum`  of `("[0] Integer (1 byte)", "[1] Integer (2 byte)", "[2] Integer (4 byte)", "[3] Floating Point (4 byte)", "[4] Floating Point (8 byte)")` - Preferred Target Grid Type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.
 ##' @param TARGET_USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param TARGET_USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Fit. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param GRID `rasterDestination` - Rasterized. Path for new raster layer.

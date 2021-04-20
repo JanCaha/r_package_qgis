@@ -10,7 +10,7 @@
 ##' @param multiplier `number` - Multiply the density result by this number. A numeric value.
 ##' @param node `enum`  of `("none", "split")` - Node method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param kernel `enum`  of `("uniform", "triangular", "epanechnikov", "quartic", "triweight", "gaussian", "cosine")` - Kernel function. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .o `boolean` - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .o `boolean` - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.
 ##' @param output `rasterDestination` - Kernel. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

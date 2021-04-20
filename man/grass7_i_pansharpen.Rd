@@ -34,9 +34,9 @@ grass7_i_pansharpen(
 
 \item{method}{\code{enum}  of \verb{("brovey", "ihs", "pca")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.l}{\code{boolean} - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{redoutput}{\code{rasterDestination} - Enhanced Red. Path for new raster layer.}
 

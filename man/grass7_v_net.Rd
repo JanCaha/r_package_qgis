@@ -38,9 +38,9 @@ grass7_v_net(
 
 \item{arc_type}{\code{enum}  of \verb{("line", "boundary")} - Arc type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.s}{\code{boolean} - Snap points to network. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Snap points to network. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.c}{\code{boolean} - Assign unique categories to new points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Assign unique categories to new points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{vectorDestination} - Network. Path for new vector layer.}
 

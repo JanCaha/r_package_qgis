@@ -79,7 +79,7 @@ grass7_r_gwflow(
 
 \item{relax}{\code{string} - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. String value.}
 
-\item{.f}{\code{boolean} - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Groundwater flow. Path for new raster layer.}
 

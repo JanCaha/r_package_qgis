@@ -24,9 +24,9 @@ grass7_r_kappa(
 
 \item{title}{\code{string} - Title for error matrix and kappa. String value.}
 
-\item{.h}{\code{boolean} - No header in the report. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.h}{\code{boolean} - No header in the report. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
 
-\item{.w}{\code{boolean} - Wide report (132 columns). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Wide report (132 columns). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{output}{\code{fileDestination} - Error matrix and kappa. Path for new file.}
 

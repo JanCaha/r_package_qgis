@@ -31,7 +31,7 @@ grass7_v_db_select(
 
 \item{columns}{\code{string} - Name of attribute column(s), comma separated. String value.}
 
-\item{.c}{\code{boolean} - Do not include column names in output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Do not include column names in output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{separator}{\code{string} - Output field separator. String value.}
 
@@ -43,9 +43,9 @@ grass7_v_db_select(
 
 \item{null_value}{\code{string} - Null value indicator. String value.}
 
-\item{.v}{\code{boolean} - Vertical output (instead of horizontal). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.v}{\code{boolean} - Vertical output (instead of horizontal). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
 
-\item{.r}{\code{boolean} - Print minimal region extent of selected vector features instead of attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Print minimal region extent of selected vector features instead of attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{file}{\code{fileDestination} - Attributes. Path for new file.}
 

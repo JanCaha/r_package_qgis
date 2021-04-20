@@ -30,7 +30,7 @@ grass7_r_mask_vect(
 
 \item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
 
-\item{.i}{\code{boolean} - Create inverse mask. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Create inverse mask. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{rasterDestination} - Masked. Path for new raster layer.}
 

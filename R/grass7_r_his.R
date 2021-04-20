@@ -6,7 +6,7 @@
 ##' @param intensity `raster` - Intensity. Path to a raster layer.
 ##' @param saturation `raster` - Saturation. Path to a raster layer.
 ##' @param bgcolor `string` - Color to use instead of NULL values. Either a standard color name, R:G:B triplet, or "none". String value.
-##' @param .c `boolean` - Use colors from color tables for NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Use colors from color tables for NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param red `rasterDestination` - Red. Path for new raster layer.
 ##' @param green `rasterDestination` - Green. Path for new raster layer.
 ##' @param blue `rasterDestination` - Blue. Path for new raster layer.

@@ -3,8 +3,8 @@
 ##' @title QGIS algorithm i.oif
 ##'
 ##' @param input `multilayer` - Name of input raster map(s). .
-##' @param .g `boolean` - Print in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Print in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param output `fileDestination` - OIF File. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

@@ -17,7 +17,7 @@ grass7_r_covar(
 \arguments{
 \item{map}{\code{multilayer} - Input layers. .}
 
-\item{.r}{\code{boolean} - Print correlation matrix. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Print correlation matrix. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{html}{\code{fileDestination} - Covariance report. Path for new file.}
 

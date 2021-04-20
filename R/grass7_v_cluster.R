@@ -6,9 +6,9 @@
 ##' @param distance `number` - Maximum distance to neighbors. A numeric value.
 ##' @param min `number` - Minimum number of points to create a cluster. A numeric value.
 ##' @param method `enum`  of `("dbscan", "dbscan2", "density", "optics", "optics2")` - Clustering method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .arg_2 `boolean` - Force 2D clustering. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .arg_2 `boolean` - Force 2D clustering. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -2.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - Clustered. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

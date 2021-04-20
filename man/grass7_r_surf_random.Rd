@@ -22,7 +22,7 @@ grass7_r_surf_random(
 
 \item{max}{\code{number} - Maximum random value. A numeric value.}
 
-\item{.i}{\code{boolean} - Create an integer raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Create an integer raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{rasterDestination} - Random. Path for new raster layer.}
 

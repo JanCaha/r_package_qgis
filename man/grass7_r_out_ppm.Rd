@@ -17,7 +17,7 @@ grass7_r_out_ppm(
 \arguments{
 \item{input}{\code{raster} - Input raster layer. Path to a raster layer.}
 
-\item{.g}{\code{boolean} - Output greyscale instead of color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Output greyscale instead of color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
 \item{output}{\code{fileDestination} - PPM. Path for new file.}
 

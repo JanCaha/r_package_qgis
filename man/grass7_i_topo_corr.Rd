@@ -26,7 +26,7 @@ grass7_i_topo_corr(
 
 \item{method}{\code{enum}  of \verb{("cosine", "minnaert", "c-factor", "percent")} - Topographic correction method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.s}{\code{boolean} - Scale output to input and copy color rules. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Scale output to input and copy color rules. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{output}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 

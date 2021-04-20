@@ -36,9 +36,9 @@ grass7_r_cost(
 
 \item{stop_coordinates}{\code{point} - Coordinates of stopping point(s) (E,N). Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{.k}{\code{boolean} - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.k}{\code{boolean} - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.}
 
-\item{.n}{\code{boolean} - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{start_points}{\code{source} - Start points. Path to a vector layer.}
 

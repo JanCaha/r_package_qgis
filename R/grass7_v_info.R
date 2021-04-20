@@ -3,10 +3,10 @@
 ##' @title QGIS algorithm v.info
 ##'
 ##' @param map `source` - Name of input vector map. Path to a vector layer.
-##' @param .c `boolean` - Print types/names of table columns for specified layer instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .g `boolean` - Print map region only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .e `boolean` - Print extended metadata info in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Print topology information only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Print types/names of table columns for specified layer instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .g `boolean` - Print map region only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .e `boolean` - Print extended metadata info in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param .t `boolean` - Print topology information only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param html `fileDestination` - Information report. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

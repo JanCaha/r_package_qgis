@@ -11,11 +11,11 @@
 ##' @param max_slope_length `number` - Maximum length of surface flow, for USLE. A numeric value.
 ##' @param convergence `number` - Convergence factor for MFD (1-10). A numeric value.
 ##' @param memory `number` - Maximum memory to be used with -m flag (in MB). A numeric value.
-##' @param .s `boolean` - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .m `boolean` - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .arg_4 `boolean` - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Beautify flat areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .s `boolean` - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param .m `boolean` - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
+##' @param .arg_4 `boolean` - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -4.
+##' @param .a `boolean` - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .b `boolean` - Beautify flat areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
 ##' @param accumulation `rasterDestination` - Number of cells that drain through each cell. Path for new raster layer.
 ##' @param drainage `rasterDestination` - Drainage direction. Path for new raster layer.
 ##' @param basin `rasterDestination` - Unique label for each watershed basin. Path for new raster layer.

@@ -22,7 +22,7 @@
 ##' @param error `number` - Error break criteria for iterative solvers (jacobi, sor, cg or bicgstab). A numeric value.
 ##' @param solver `enum`  of `("cg", "pcg", "cholesky")` - The type of solver which should solve the symmetric linear equation system. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param relax `string` - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. String value.
-##' @param .f `boolean` - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .f `boolean` - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `rasterDestination` - Groundwater flow. Path for new raster layer.
 ##' @param vx `rasterDestination` - Groundwater filter velocity vector part in x direction (m/s). Path for new raster layer.
 ##' @param vy `rasterDestination` - Groundwater filter velocity vector part in y direction (m/s). Path for new raster layer.

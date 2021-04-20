@@ -10,8 +10,8 @@
 ##' @param maxrows `number` - Maximum number of rows for a tile in the source projection. A numeric value.
 ##' @param overlap `number` - Number of cells tiles should overlap in each direction. A numeric value.
 ##' @param separator `string` - Output field separator. String value.
-##' @param .g `boolean` - Produces shell script output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .w `boolean` - Produces web map server query string output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Produces shell script output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .w `boolean` - Produces web map server query string output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
 ##' @param html `fileDestination` - Tileset. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

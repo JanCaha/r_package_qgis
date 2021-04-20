@@ -12,8 +12,8 @@
 ##' @param column_wet_pixel `number` - Column value of the wet pixel. A numeric value.
 ##' @param row_dry_pixel `number` - Row value of the dry pixel. A numeric value.
 ##' @param column_dry_pixel `number` - Column value of the dry pixel. A numeric value.
-##' @param .a `boolean` - Automatic wet/dry pixel (careful!). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Dry/Wet pixels coordinates are in image projection, not row/col. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .a `boolean` - Automatic wet/dry pixel (careful!). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .c `boolean` - Dry/Wet pixels coordinates are in image projection, not row/col. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `rasterDestination` - Sensible Heat Flux. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

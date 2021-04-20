@@ -7,19 +7,19 @@
 ##' @param null_value `string` - String representing no data cell value. String value.
 ##' @param nsteps `number` - Number of floating-point subranges to collect stats from. A numeric value.
 ##' @param sort `enum`  of `("asc", "desc")` - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .arg_1 `boolean` - One cell (range) per line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .A `boolean` - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - Print area totals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Print cell counts. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .p `boolean` - Print APPROXIMATE percents (total percent may not be 100%). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .l `boolean` - Print category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .g `boolean` - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .x `boolean` - Print x and y (column and row). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .N `boolean` - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .C `boolean` - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .arg_1 `boolean` - One cell (range) per line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.
+##' @param .A `boolean` - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -A.
+##' @param .a `boolean` - Print area totals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .c `boolean` - Print cell counts. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .p `boolean` - Print APPROXIMATE percents (total percent may not be 100%). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.
+##' @param .l `boolean` - Print category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
+##' @param .g `boolean` - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .x `boolean` - Print x and y (column and row). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.
+##' @param .r `boolean` - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .n `boolean` - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .N `boolean` - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -N.
+##' @param .C `boolean` - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -C.
+##' @param .i `boolean` - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
 ##' @param html `fileDestination` - Statistics. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

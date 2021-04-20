@@ -4,7 +4,7 @@
 ##'
 ##' @param input `raster` - Name of input raster layer. Path to a raster layer.
 ##' @param npoints `number` - Number of interpolation points. A numeric value.
-##' @param .e `boolean` - Output is the interpolation error. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .e `boolean` - Output is the interpolation error. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output `rasterDestination` - Interpolated IDW. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm r.out.ppm
 ##'
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
-##' @param .g `boolean` - Output greyscale instead of color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Output greyscale instead of color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
 ##' @param output `fileDestination` - PPM. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

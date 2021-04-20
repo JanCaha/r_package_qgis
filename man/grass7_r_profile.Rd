@@ -30,9 +30,9 @@ grass7_r_profile(
 
 \item{file}{\code{file} - Name of input file containing coordinate pairs. Path to a file.}
 
-\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.c}{\code{boolean} - Output RRR:GGG:BBB color values for each profile point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Output RRR:GGG:BBB color values for each profile point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Profile. Path for new file.}
 

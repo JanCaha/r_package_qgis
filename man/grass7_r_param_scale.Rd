@@ -37,7 +37,7 @@ grass7_r_param_scale(
 
 \item{zscale}{\code{number} - Vertical scaling factor. A numeric value.}
 
-\item{.c}{\code{boolean} - Constrain model through central window cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Constrain model through central window cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{rasterDestination} - Morphometric parameter. Path for new raster layer.}
 

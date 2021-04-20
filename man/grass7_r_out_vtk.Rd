@@ -43,17 +43,17 @@ grass7_r_out_vtk(
 
 \item{precision}{\code{number} - Number of significant digits. A numeric value.}
 
-\item{.p}{\code{boolean} - Create VTK point data instead of VTK cell data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.p}{\code{boolean} - Create VTK point data instead of VTK cell data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
 
-\item{.s}{\code{boolean} - Use structured grid for elevation (not recommended). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Use structured grid for elevation (not recommended). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.t}{\code{boolean} - Use polydata-trianglestrips for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Use polydata-trianglestrips for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.v}{\code{boolean} - Use polydata-vertices for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.v}{\code{boolean} - Use polydata-vertices for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
 
-\item{.o}{\code{boolean} - Scale factor affects the origin (if no elevation map is given). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Scale factor affects the origin (if no elevation map is given). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
-\item{.c}{\code{boolean} - Correct the coordinates to match the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Correct the coordinates to match the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - VTK File. Path for new file.}
 

@@ -26,9 +26,9 @@ grass7_r_resamp_stats(
 
 \item{quantile}{\code{number} - Quantile to calculate for method=quantile. A numeric value.}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.w}{\code{boolean} - Weight according to area (slower). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Weight according to area (slower). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{output}{\code{rasterDestination} - Resampled aggregated. Path for new raster layer.}
 
