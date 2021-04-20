@@ -85,6 +85,7 @@ jobs:
 
       - name: Check and install
         run: |
+          devtools::build_vignettes()
           devtools::check()
           devtools::install()
         shell: Rscript {0}
