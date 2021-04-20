@@ -2,7 +2,11 @@
 title: "Instalation based on local QGIS instance"
 author: "Jan Caha"
 date: "20 4 2021"
-output: html_document
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Instalation based on local QGIS instance}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 ## Personal instalation
