@@ -16,10 +16,13 @@ Imports: qgisprocess
 Suggests: 
     sf,
     raster,
-    testthat (>= 2.99.0)
+    testthat (>= 2.99.0),
+    rmarkdown,
+    knitr
 Config/testthat/edition: 3
 Remotes: 
     r-lib/testthat,
     paleolimbot/qgisprocess
 RoxygenNote: 7.1.1
 URL: https://jancaha.github.io/r_package_qgis/, https://github.com/JanCaha/r_package_qgis
+VignetteBuilder: knitr
