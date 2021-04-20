@@ -60,6 +60,8 @@ add_arg_to_reserverd_keywords <- function(arg_name){
 remove_brackets <- function(description){
   description <- stringr::str_replace_all(description, "\\[" , "\\(")
   description <- stringr::str_replace_all(description, "\\]" , "\\)")
+  description <- stringr::str_replace_all(description, "\\>" , "")
+  description <- stringr::str_replace_all(description, "\\<" , "")
 
   return(description)
 }
