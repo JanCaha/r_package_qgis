@@ -25,6 +25,8 @@ write.csv(algs, here::here("data-raw", "algorithms.csv"))
 
 dir.create("R", showWarnings = FALSE)
 
+pb <- progress::progress_bar$new(total = nrow(algs))
+
 for (i in 1:nrow(algs)) {
 
   alg <- algs[i,]
@@ -42,6 +44,8 @@ for (i in 1:nrow(algs)) {
                                              build_fn_code(alg, arguments, outputs$name[1])),
                                         sep = "\n\n"),
                     glue::glue("./R/{file_name}.R"))
+
+  pb$tick()
 }
 
 devtools::document(roclets = c('rd', 'collate', 'namespace', 'vignette'))
