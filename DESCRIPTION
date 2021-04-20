@@ -12,6 +12,7 @@ Description: An extension of package `qgisprocess` providing direct R functions 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+VignetteBuilder: knitr
 Imports: qgisprocess
 Suggests: 
     sf,
@@ -25,4 +26,3 @@ Remotes:
     paleolimbot/qgisprocess
 RoxygenNote: 7.1.1
 URL: https://jancaha.github.io/r_package_qgis/, https://github.com/JanCaha/r_package_qgis
-VignetteBuilder: knitr
