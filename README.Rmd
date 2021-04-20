@@ -71,3 +71,4 @@ buffered <- qgis::qgis_buffer(INPUT = nc,
 
 plot(buffered)
 ```
+
