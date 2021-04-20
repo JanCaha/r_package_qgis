@@ -16,7 +16,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputFile - DXF
+##' * OUTPUT - outputFile - DX
 ##'
 ##' @export
 ##' @md

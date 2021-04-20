@@ -23,7 +23,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputFolder - Output directory
+##' * OUTPUT - outputFolder - Output director
 ##'
 ##' @export
 ##' @md

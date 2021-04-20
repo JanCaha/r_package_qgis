@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Tile index
+##' * OUTPUT - outputVector - Tile inde
 ##'
 ##' @export
 ##' @md

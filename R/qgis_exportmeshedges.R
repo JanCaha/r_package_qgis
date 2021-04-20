@@ -13,7 +13,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Output vector layer
+##' * OUTPUT - outputVector - Output vector laye
 ##'
 ##' @export
 ##' @md

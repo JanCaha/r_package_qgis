@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export dataset values time series values on points from mesh (native:meshexporttimeseries)
+##' QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries)
 ##'
-##' @title QGIS algorithm Export dataset values time series values on points from mesh
+##' @title QGIS algorithm Export time series values from points of a mesh dataset
 ##'
 ##' @param INPUT `mesh` - Input Mesh Layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .

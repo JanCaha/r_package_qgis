@@ -20,7 +20,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Reprojected
+##' * OUTPUT - outputRaster - Re
 ##'
 ##' @export
 ##' @md

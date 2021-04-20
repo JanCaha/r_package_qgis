@@ -20,7 +20,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Output vector map
+##' * output - outputVector - Output vector ma
 ##'
 ##' @export
 ##' @md

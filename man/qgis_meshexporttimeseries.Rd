@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_meshexporttimeseries.R
 \name{qgis_meshexporttimeseries}
 \alias{qgis_meshexporttimeseries}
-\title{QGIS algorithm Export dataset values time series values on points from mesh}
+\title{QGIS algorithm Export time series values from points of a mesh dataset}
 \usage{
 qgis_meshexporttimeseries(
   INPUT = qgisprocess::qgis_default_value(),
@@ -42,7 +42,7 @@ qgis_meshexporttimeseries(
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export dataset values time series values on points from mesh (native:meshexporttimeseries)
+QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries)
 }
 \details{
 \subsection{Outputs description}{

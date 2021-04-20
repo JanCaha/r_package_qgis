@@ -9,7 +9,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Layer with projection
+##' * OUTPUT - outputRaster - Layer with projectio
 ##'
 ##' @export
 ##' @md

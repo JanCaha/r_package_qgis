@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Reproject layer (native:reprojectla
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Reprojected
+\item OUTPUT - outputVector - Reprojecte
 }
 }
 }

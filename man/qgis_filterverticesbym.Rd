@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Filter vertices by M value (native:
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Filtered
+\item OUTPUT - outputVector - Filtere
 }
 }
 }

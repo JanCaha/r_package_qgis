@@ -56,7 +56,7 @@ QGIS Algorithm provided by GRASS r.tileset (grass7:r.tileset)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item html - outputHtml - Tileset
+\item html - outputHtml - Ti
 }
 }
 }

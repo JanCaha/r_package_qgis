@@ -470,7 +470,7 @@
 "469","native","QGIS (native c++)","native:mergevectorlayers","mergevectorlayers","Merge vector layers"
 "470","native","QGIS (native c++)","native:meshcontours","meshcontours","Export contours"
 "471","native","QGIS (native c++)","native:meshexportcrosssection","meshexportcrosssection","Export cross section dataset values on lines from mesh"
-"472","native","QGIS (native c++)","native:meshexporttimeseries","meshexporttimeseries","Export dataset values time series values on points from mesh"
+"472","native","QGIS (native c++)","native:meshexporttimeseries","meshexporttimeseries","Export time series values from points of a mesh dataset"
 "473","native","QGIS (native c++)","native:meshrasterize","meshrasterize","Rasterize mesh dataset"
 "474","native","QGIS (native c++)","native:minimumenclosingcircle","minimumenclosingcircle","Minimum enclosing circles"
 "475","native","QGIS (native c++)","native:multiparttosingleparts","multiparttosingleparts","Multipart to singleparts"

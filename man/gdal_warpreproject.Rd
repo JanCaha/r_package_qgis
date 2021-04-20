@@ -59,7 +59,7 @@ QGIS Algorithm provided by GDAL Warp (reproject) (gdal:warpreproject)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Reprojected
+\item OUTPUT - outputRaster - Re
 }
 }
 }

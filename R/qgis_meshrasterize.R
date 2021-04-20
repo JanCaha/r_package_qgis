@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output raster layer
+##' * OUTPUT - outputRaster - Output raster laye
 ##'
 ##' @export
 ##' @md

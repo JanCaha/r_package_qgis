@@ -10,7 +10,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Output
+##' * OUTPUT - outputVector - Outpu
 ##'
 ##' @export
 ##' @md

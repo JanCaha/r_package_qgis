@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) TIN Mesh Creation (native:tinmeshcr
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_MESH - outputFile - Output File
+\item OUTPUT_MESH - outputFile - Output Fil
 }
 }
 }

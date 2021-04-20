@@ -13,7 +13,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output
+##' * OUTPUT - outputRaster - Outpu
 ##'
 ##' @export
 ##' @md

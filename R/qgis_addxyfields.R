@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Added fields
+##' * OUTPUT - outputVector - Added field
 ##'
 ##' @export
 ##' @md

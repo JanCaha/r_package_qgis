@@ -50,7 +50,7 @@ QGIS Algorithm provided by GDAL Build virtual raster (gdal:buildvirtualraster)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Virtual
+\item OUTPUT - outputRaster - Virtua
 }
 }
 }

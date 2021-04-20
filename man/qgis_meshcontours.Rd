@@ -51,7 +51,7 @@ QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontour
 \subsection{Outputs description}{
 \itemize{
 \item OUTPUT_LINES - outputVector - Exported contour lines
-\item OUTPUT_POLYGONS - outputVector - Exported contour polygons
+\item OUTPUT_POLYGONS - outputVector - Exported contour polygon
 }
 }
 }

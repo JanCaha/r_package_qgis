@@ -59,7 +59,7 @@ QGIS Algorithm provided by GRASS v.proj (grass7:v.proj)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Output vector map
+\item output - outputVector - Output vector ma
 }
 }
 }

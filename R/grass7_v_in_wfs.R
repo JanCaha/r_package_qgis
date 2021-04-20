@@ -18,7 +18,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Converted
+##' * output - outputVector - Converte
 ##'
 ##' @export
 ##' @md

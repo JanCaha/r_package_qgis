@@ -41,7 +41,7 @@ QGIS Algorithm provided by QGIS Regular points (qgis:regularpoints)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Regular points
+\item OUTPUT - outputVector - Regular point
 }
 }
 }

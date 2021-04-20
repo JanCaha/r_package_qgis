@@ -26,7 +26,7 @@ QGIS Algorithm provided by GDAL Assign projection (gdal:assignprojection)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Layer with projection
+\item OUTPUT - outputRaster - Layer with projectio
 }
 }
 }

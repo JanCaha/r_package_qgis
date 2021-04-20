@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Regular points
+##' * OUTPUT - outputVector - Regular point
 ##'
 ##' @export
 ##' @md
