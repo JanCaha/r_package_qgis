@@ -35,7 +35,7 @@ grass7_v_what_rast(
 
 \item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
 
-\item{.i}{\code{boolean} - Interpolate values from the nearest four cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Interpolate values from the nearest four cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{vectorDestination} - Sampled. Path for new vector layer.}
 

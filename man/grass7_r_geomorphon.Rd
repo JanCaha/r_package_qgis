@@ -34,9 +34,9 @@ grass7_r_geomorphon(
 
 \item{forms}{\code{rasterDestination} - Most common geomorphic forms. Path for new raster layer.}
 
-\item{.m}{\code{boolean} - Use meters to define search units (default is cells). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Use meters to define search units (default is cells). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
-\item{.e}{\code{boolean} - Use extended form correction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Use extended form correction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 

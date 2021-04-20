@@ -23,9 +23,9 @@ grass7_r_mfilter(
 
 \item{filter}{\code{file} - Filter file. Path to a file.}
 
-\item{arg_repeat}{\code{number} - Number of times to repeat the filter. A numeric value. Original algorithm parameter name: {name}.}
+\item{arg_repeat}{\code{number} - Number of times to repeat the filter. A numeric value. Original algorithm parameter name: repeat.}
 
-\item{.z}{\code{boolean} - Apply filter only to zero data values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Apply filter only to zero data values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Filtered. Path for new raster layer.}
 

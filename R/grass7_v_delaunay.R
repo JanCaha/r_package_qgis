@@ -3,8 +3,8 @@
 ##' @title QGIS algorithm v.delaunay
 ##'
 ##' @param input `source` - Input vector layer. Path to a vector layer.
-##' @param .r `boolean` - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .l `boolean` - Output triangulation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .l `boolean` - Output triangulation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
 ##' @param output `vectorDestination` - Delaunay triangulation. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

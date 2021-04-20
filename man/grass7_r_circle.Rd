@@ -28,7 +28,7 @@ grass7_r_circle(
 
 \item{multiplier}{\code{number} - Data value multiplier. A numeric value.}
 
-\item{.b}{\code{boolean} - Generate binary raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Generate binary raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{output}{\code{rasterDestination} - Circles. Path for new raster layer.}
 

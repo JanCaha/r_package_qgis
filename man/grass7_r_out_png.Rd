@@ -21,9 +21,9 @@ grass7_r_out_png(
 
 \item{compression}{\code{number} - Compression level of PNG file (0 = none, 1 = fastest, 9 = best). A numeric value.}
 
-\item{.t}{\code{boolean} - Make NULL cells transparent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Make NULL cells transparent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.w}{\code{boolean} - Output world file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Output world file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{output}{\code{fileDestination} - PNG File. Path for new file.}
 

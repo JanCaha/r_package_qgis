@@ -6,11 +6,11 @@
 ##' @param green `raster` - Green. Path to a raster layer.
 ##' @param blue `raster` - Blue. Path to a raster layer.
 ##' @param levels `number` - Number of levels to be used for each component. A numeric value.
-##' @param level_red `number` - Number of levels to be used for <red>. A numeric value.
-##' @param level_green `number` - Number of levels to be used for <green>. A numeric value.
-##' @param level_blue `number` - Number of levels to be used for <blue>. A numeric value.
-##' @param .d `boolean` - Dither. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Use closest color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param level_red `number` - Number of levels to be used for red. A numeric value.
+##' @param level_green `number` - Number of levels to be used for green. A numeric value.
+##' @param level_blue `number` - Number of levels to be used for blue. A numeric value.
+##' @param .d `boolean` - Dither. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .c `boolean` - Use closest color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `rasterDestination` - Composite. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

@@ -56,7 +56,7 @@ grass7_r_in_lidar(
 
 \item{pth}{\code{number} - pth percentile of the values (between 1 and 100). A numeric value.}
 
-\item{trim}{\code{number} - Discard <trim> percent of the smallest and <trim> percent of the largest observations (0-50). A numeric value.}
+\item{trim}{\code{number} - Discard trim percent of the smallest and trim percent of the largest observations (0-50). A numeric value.}
 
 \item{resolution}{\code{number} - Output raster resolution. A numeric value.}
 
@@ -64,19 +64,19 @@ grass7_r_in_lidar(
 
 \item{class_filter}{\code{string} - Only import points of selected class(es) (comma separated integers). String value.}
 
-\item{.e}{\code{boolean} - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
-\item{.n}{\code{boolean} - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.o}{\code{boolean} - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
-\item{.i}{\code{boolean} - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
-\item{.j}{\code{boolean} - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.j}{\code{boolean} - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -j.}
 
-\item{.d}{\code{boolean} - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.v}{\code{boolean} - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.v}{\code{boolean} - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
 
 \item{output}{\code{rasterDestination} - Lidar Raster. Path for new raster layer.}
 

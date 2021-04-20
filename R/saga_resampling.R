@@ -6,7 +6,7 @@
 ##' @param KEEP_TYPE `boolean` - Preserve Data Type. 1 for true/yes. 0 for false/no.
 ##' @param SCALE_UP `enum`  of `("[0] Nearest Neighbor", "[1] Bilinear Interpolation", "[2] Bicubic Spline Interpolation", "[3] B-Spline Interpolation", "[4] Mean Value", "[5] Mean Value (cell area weighted)", "[6] Minimum Value", "[7] Maximum Value", "[8] Majority")` - Upscaling Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param SCALE_DOWN `enum`  of `("[0] Nearest Neighbor", "[1] Bilinear Interpolation", "[2] Bicubic Spline Interpolation", "[3] B-Spline Interpolation")` - Downscaling Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.
 ##' @param TARGET_USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param TARGET_USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Fit. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param TARGET_TEMPLATE `raster` - Target system. Path to a raster layer.

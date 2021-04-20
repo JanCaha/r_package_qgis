@@ -2,9 +2,9 @@
 ##'
 ##' @title QGIS algorithm r.random.cells
 ##'
-##' @param distance `number` - Maximum distance of spatial correlation (value(s) >= 0.0). A numeric value.
+##' @param distance `number` - Maximum distance of spatial correlation (value(s) = 0.0). A numeric value.
 ##' @param ncells `number` - Maximum number of cells to be created. A numeric value.
-##' @param seed `number` - Random seed (SEED_MIN >= value >= SEED_MAX) (default (random)). A numeric value.
+##' @param seed `number` - Random seed (SEED_MIN = value = SEED_MAX) (default (random)). A numeric value.
 ##' @param output `rasterDestination` - Random. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

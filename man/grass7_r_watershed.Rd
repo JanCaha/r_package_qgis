@@ -55,15 +55,15 @@ grass7_r_watershed(
 
 \item{memory}{\code{number} - Maximum memory to be used with -m flag (in MB). A numeric value.}
 
-\item{.s}{\code{boolean} - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.m}{\code{boolean} - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
-\item{.arg_4}{\code{boolean} - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_4}{\code{boolean} - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -4.}
 
-\item{.a}{\code{boolean} - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.b}{\code{boolean} - Beautify flat areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Beautify flat areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{accumulation}{\code{rasterDestination} - Number of cells that drain through each cell. Path for new raster layer.}
 

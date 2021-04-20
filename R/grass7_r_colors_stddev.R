@@ -3,8 +3,8 @@
 ##' @title QGIS algorithm r.colors.stddev
 ##'
 ##' @param map `raster` - Name of raster map. Path to a raster layer.
-##' @param .b `boolean` - Color using standard deviation bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .z `boolean` - Force center at zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .b `boolean` - Color using standard deviation bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .z `boolean` - Force center at zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
 ##' @param output `rasterDestination` - Stddev Colors. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

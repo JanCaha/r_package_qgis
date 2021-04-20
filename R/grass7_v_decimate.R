@@ -11,12 +11,12 @@
 ##' @param limit `number` - Copy only n points. A numeric value.
 ##' @param zdiff `number` - Minimal difference of z values. A numeric value.
 ##' @param cell_limit `number` - Preserve only n points per grid cell. A numeric value.
-##' @param .g `boolean` - Apply grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Use only first point in grid cell during grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Only one point per cat in grid cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .z `boolean` - Use z in grid decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .x `boolean` - Store only the coordinates, throw away categories. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Apply grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .f `boolean` - Use only first point in grid cell during grid-based decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .c `boolean` - Only one point per cat in grid cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .z `boolean` - Use z in grid decimation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .x `boolean` - Store only the coordinates, throw away categories. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
 ##' @param output `vectorDestination` - Output vector map. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

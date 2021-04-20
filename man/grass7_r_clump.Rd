@@ -22,7 +22,7 @@ grass7_r_clump(
 
 \item{title}{\code{string} - Title for output raster map. String value.}
 
-\item{.d}{\code{boolean} - Clump also diagonal cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Clump also diagonal cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
 \item{output}{\code{rasterDestination} - Clumps. Path for new raster layer.}
 

@@ -12,12 +12,12 @@
 ##' @param y `number` - Number of column used as y coordinate. A numeric value.
 ##' @param z `number` - Number of column used as z coordinate. A numeric value.
 ##' @param cat `number` - Number of column used as category. A numeric value.
-##' @param .z `boolean` - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not create table in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .n `boolean` - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .t `boolean` - Do not create table in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .b `boolean` - Do not build topology in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .r `boolean` - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .i `boolean` - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
 ##' @param output `vectorDestination` - ASCII. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

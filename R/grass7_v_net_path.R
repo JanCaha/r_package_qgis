@@ -11,8 +11,8 @@
 ##' @param arc_backward_column `field` - Arc backward direction cost column (number). The name of an existing field. ; delimited list of existing field names.
 ##' @param node_column `field` - Node cost column (number). The name of an existing field. ; delimited list of existing field names.
 ##' @param dmax `number` - Maximum distance to the network. A numeric value.
-##' @param .g `boolean` - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Write output as original input segments, not each path as one line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .s `boolean` - Write output as original input segments, not each path as one line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param output `vectorDestination` - Network_Path. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

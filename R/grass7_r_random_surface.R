@@ -5,9 +5,9 @@
 ##' @param distance `number` - Maximum distance of spatial correlation. A numeric value.
 ##' @param exponent `number` - Distance decay exponent. A numeric value.
 ##' @param flat `number` - Distance filter remains flat before beginning exponent. A numeric value.
-##' @param seed `number` - Random seed (SEED_MIN >= value >= SEED_MAX). A numeric value.
+##' @param seed `number` - Random seed (SEED_MIN = value = SEED_MAX). A numeric value.
 ##' @param high `number` - Maximum cell value of distribution. A numeric value.
-##' @param .u `boolean` - Uniformly distributed cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .u `boolean` - Uniformly distributed cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -u.
 ##' @param output `rasterDestination` - Random_Surface. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

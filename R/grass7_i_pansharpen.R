@@ -7,8 +7,8 @@
 ##' @param blue `raster` - Name of blue channel. Path to a raster layer.
 ##' @param pan `raster` - Name of raster map to be used for high resolution panchromatic channel. Path to a raster layer.
 ##' @param method `enum`  of `("brovey", "ihs", "pca")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .l `boolean` - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .l `boolean` - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
+##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param redoutput `rasterDestination` - Enhanced Red. Path for new raster layer.
 ##' @param greenoutput `rasterDestination` - Enhanced Green. Path for new raster layer.
 ##' @param blueoutput `rasterDestination` - Enhanced Blue. Path for new raster layer.

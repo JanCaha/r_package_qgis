@@ -28,7 +28,7 @@ grass7_r_li_edgedensity(
 
 \item{patch_type}{\code{string} - The value of the patch type. String value.}
 
-\item{.b}{\code{boolean} - Exclude border edges. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Exclude border edges. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{output}{\code{rasterDestination} - Edge Density. Path for new raster layer.}
 

@@ -21,9 +21,9 @@ grass7_v_in_mapgen(
 \arguments{
 \item{input}{\code{file} - Name of input file in Mapgen/Matlab format. Path to a file.}
 
-\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.f}{\code{boolean} - Input map is in Matlab format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Input map is in Matlab format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{output}{\code{vectorDestination} - Mapgen. Path for new vector layer.}
 

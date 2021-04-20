@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm v.pack
 ##'
 ##' @param input `source` - Name of input vector map to pack. Path to a vector layer.
-##' @param .c `boolean` - Switch the compression off. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Switch the compression off. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `fileDestination` - Packed archive. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

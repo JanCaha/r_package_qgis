@@ -11,8 +11,8 @@
 ##' @param max_cost `number` - Maximum cumulative cost. A numeric value.
 ##' @param null_cost `number` - Cost assigned to null cells. By default, null cells are excluded. A numeric value.
 ##' @param memory `number` - Maximum memory to be used in MB. A numeric value.
-##' @param .k `boolean` - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .k `boolean` - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.
+##' @param .n `boolean` - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param output `rasterDestination` - Cumulative cost. Path for new raster layer.
 ##' @param outdir `rasterDestination` - Movement Directions. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

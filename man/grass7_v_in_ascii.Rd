@@ -52,17 +52,17 @@ grass7_v_in_ascii(
 
 \item{cat}{\code{number} - Number of column used as category. A numeric value.}
 
-\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.n}{\code{boolean} - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.t}{\code{boolean} - Do not create table in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create table in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.b}{\code{boolean} - Do not build topology in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.r}{\code{boolean} - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.i}{\code{boolean} - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{vectorDestination} - ASCII. Path for new vector layer.}
 

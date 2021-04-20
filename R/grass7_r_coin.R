@@ -5,7 +5,7 @@
 ##' @param first `raster` - Name of first raster map. Path to a raster layer.
 ##' @param second `raster` - Name of second raster map. Path to a raster layer.
 ##' @param units `enum`  of `("c", "p", "x", "y", "a", "h", "k", "m")` - Unit of measure. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .w `boolean` - Wide report, 132 columns (default: 80). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .w `boolean` - Wide report, 132 columns (default: 80). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
 ##' @param html `fileDestination` - Coincidence report. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

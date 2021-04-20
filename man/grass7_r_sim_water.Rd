@@ -80,7 +80,7 @@ grass7_r_sim_water(
 
 \item{hbeta}{\code{number} - Weighting factor for water flow velocity vector. A numeric value.}
 
-\item{.t}{\code{boolean} - Time-series output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Time-series output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{depth}{\code{rasterDestination} - Water depth (m). Path for new raster layer.}
 

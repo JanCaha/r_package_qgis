@@ -7,7 +7,7 @@
 ##' @param type `enum`  of `("point", "centroid")` - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param column `field` - Name of attribute column to be updated with the query result. The name of an existing field. ; delimited list of existing field names.
 ##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value.
-##' @param .i `boolean` - Interpolate values from the nearest four cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .i `boolean` - Interpolate values from the nearest four cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
 ##' @param output `vectorDestination` - Sampled. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

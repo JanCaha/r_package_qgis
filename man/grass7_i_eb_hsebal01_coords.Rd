@@ -47,9 +47,9 @@ grass7_i_eb_hsebal01_coords(
 
 \item{column_dry_pixel}{\code{number} - Column value of the dry pixel. A numeric value.}
 
-\item{.a}{\code{boolean} - Automatic wet/dry pixel (careful!). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Automatic wet/dry pixel (careful!). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Dry/Wet pixels coordinates are in image projection, not row/col. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Dry/Wet pixels coordinates are in image projection, not row/col. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{rasterDestination} - Sensible Heat Flux. Path for new raster layer.}
 

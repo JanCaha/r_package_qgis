@@ -4,8 +4,8 @@
 ##'
 ##' @param input `raster` - Input input raster layer. Path to a raster layer.
 ##' @param metric `enum`  of `("euclidean", "squared", "maximum", "manhattan", "geodesic")` - Metric. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .m `boolean` - Output distances in meters instead of map units. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param . `boolean` - Calculate distance to nearest NULL cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .m `boolean` - Output distances in meters instead of map units. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
+##' @param . `boolean` - Calculate distance to nearest NULL cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -.
 ##' @param distance `rasterDestination` - Distance. Path for new raster layer.
 ##' @param value `rasterDestination` - Value of nearest cell. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

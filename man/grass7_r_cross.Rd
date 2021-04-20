@@ -19,7 +19,7 @@ grass7_r_cross(
 \arguments{
 \item{input}{\code{multilayer} - Input raster layers. .}
 
-\item{.z}{\code{boolean} - Non-zero data only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Non-zero data only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Cross product. Path for new raster layer.}
 

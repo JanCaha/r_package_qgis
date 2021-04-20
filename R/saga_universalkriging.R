@@ -12,7 +12,7 @@
 ##' @param VAR_NCLASSES `number` - Lag Distance Classes. A numeric value.
 ##' @param VAR_NSKIP `number` - Skip. A numeric value.
 ##' @param VAR_MODEL `string` - Variogram Model. String value.
-##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.
 ##' @param TARGET_USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param TARGET_USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Fit. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param PREDICTION `rasterDestination` - Prediction. Path for new raster layer.

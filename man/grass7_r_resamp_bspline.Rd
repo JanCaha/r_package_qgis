@@ -43,9 +43,9 @@ grass7_r_resamp_bspline(
 
 \item{memory}{\code{number} - Maximum memory to be used (in MB). Cache size for raster rows. A numeric value.}
 
-\item{.n}{\code{boolean} - Only interpolate null cells in input raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Only interpolate null cells in input raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.c}{\code{boolean} - Find the best Tykhonov regularizing parameter using a "leave-one-out" cross validation method. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Find the best Tykhonov regularizing parameter using a "leave-one-out" cross validation method. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{rasterDestination} - Resampled BSpline. Path for new raster layer.}
 

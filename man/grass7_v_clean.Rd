@@ -33,9 +33,9 @@ grass7_v_clean(
 
 \item{threshold}{\code{string} - Threshold (comma separated for each tool). String value.}
 
-\item{.b}{\code{boolean} - Do not build topology for the output vector. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology for the output vector. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.c}{\code{boolean} - Combine tools with recommended follow-up tools. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Combine tools with recommended follow-up tools. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{vectorDestination} - Cleaned. Path for new vector layer.}
 

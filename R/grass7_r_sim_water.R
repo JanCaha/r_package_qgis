@@ -20,7 +20,7 @@
 ##' @param hmax `number` - Threshold water depth (m). A numeric value.
 ##' @param halpha `number` - Diffusion increase constant. A numeric value.
 ##' @param hbeta `number` - Weighting factor for water flow velocity vector. A numeric value.
-##' @param .t `boolean` - Time-series output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Time-series output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param depth `rasterDestination` - Water depth (m). Path for new raster layer.
 ##' @param discharge `rasterDestination` - Water discharge (m3/s). Path for new raster layer.
 ##' @param error `rasterDestination` - Simulation error (m). Path for new raster layer.

@@ -5,10 +5,10 @@
 ##' @param map `raster` - input raster layer. Path to a raster layer.
 ##' @param null_value `string` - String representing NULL value. String value.
 ##' @param nsteps `number` - Number of quantization steps. A numeric value.
-##' @param .r `boolean` - Only print the range of the data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Use the current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Read floating-point map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Only print the range of the data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .n `boolean` - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .d `boolean` - Use the current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .i `boolean` - Read floating-point map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
 ##' @param html `fileDestination` - Categories. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

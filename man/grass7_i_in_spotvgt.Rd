@@ -19,7 +19,7 @@ grass7_i_in_spotvgt(
 \arguments{
 \item{input}{\code{file} - Name of input SPOT VGT NDVI HDF file. Path to a file.}
 
-\item{.a}{\code{boolean} - Also import quality map (SM status map layer) and filter NDVI map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Also import quality map (SM status map layer) and filter NDVI map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
 \item{output}{\code{rasterDestination} - SPOT NDVI Raster. Path for new raster layer.}
 

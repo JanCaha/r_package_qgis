@@ -20,7 +20,7 @@ grass7_r_out_xyz(
 
 \item{separator}{\code{string} - Field separator. String value.}
 
-\item{.i}{\code{boolean} - Include no data values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Include no data values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{fileDestination} - XYZ File. Path for new file.}
 

@@ -18,7 +18,7 @@ grass7_v_pack(
 \arguments{
 \item{input}{\code{source} - Name of input vector map to pack. Path to a vector layer.}
 
-\item{.c}{\code{boolean} - Switch the compression off. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Switch the compression off. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Packed archive. Path for new file.}
 

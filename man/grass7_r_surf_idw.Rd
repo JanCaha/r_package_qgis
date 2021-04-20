@@ -22,7 +22,7 @@ grass7_r_surf_idw(
 
 \item{npoints}{\code{number} - Number of interpolation points. A numeric value.}
 
-\item{.e}{\code{boolean} - Output is the interpolation error. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Output is the interpolation error. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{rasterDestination} - Interpolated IDW. Path for new raster layer.}
 

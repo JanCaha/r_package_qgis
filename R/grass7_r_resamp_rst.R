@@ -12,8 +12,8 @@
 ##' @param tension `number` - Spline tension value. A numeric value.
 ##' @param theta `number` - Anisotropy angle (in degrees counterclockwise from East). A numeric value.
 ##' @param scalex `number` - Anisotropy scaling factor. A numeric value.
-##' @param .t `boolean` - Use dnorm independent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Use dnorm independent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .d `boolean` - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
 ##' @param elevation `rasterDestination` - Resampled RST. Path for new raster layer.
 ##' @param slope `rasterDestination` - Slope raster. Path for new raster layer.
 ##' @param aspect `rasterDestination` - Aspect raster. Path for new raster layer.

@@ -8,8 +8,8 @@
 ##' @param box `string` - Width and height of boxes in grid. String value.
 ##' @param angle `number` - Angle of rotation (in degrees counter-clockwise). A numeric value.
 ##' @param breaks `number` - Number of vertex points per grid cell. A numeric value.
-##' @param .h `boolean` - Create hexagons (default: rectangles). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .p `boolean` - Create grid of points instead of areas and centroids. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .h `boolean` - Create hexagons (default: rectangles). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.
+##' @param .p `boolean` - Create grid of points instead of areas and centroids. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.
 ##' @param map `vectorDestination` - Grid. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

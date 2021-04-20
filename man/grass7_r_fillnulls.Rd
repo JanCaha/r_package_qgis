@@ -33,7 +33,7 @@ grass7_r_fillnulls(
 
 \item{edge}{\code{number} - Width of hole edge used for interpolation (in cells). A numeric value.}
 
-\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (>segmax). A numeric value.}
+\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (segmax). A numeric value.}
 
 \item{segmax}{\code{number} - Maximum number of points in a segment. A numeric value.}
 

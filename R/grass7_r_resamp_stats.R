@@ -5,8 +5,8 @@
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param method `enum`  of `("average", "median", "mode", "minimum", "maximum", "quart1", "quart3", "perc90", "sum", "variance", "stddev", "quantile")` - Aggregation method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param quantile `number` - Quantile to calculate for method=quantile. A numeric value.
-##' @param .n `boolean` - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .w `boolean` - Weight according to area (slower). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .w `boolean` - Weight according to area (slower). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
 ##' @param output `rasterDestination` - Resampled aggregated. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

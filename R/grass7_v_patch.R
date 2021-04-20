@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm v.patch
 ##'
 ##' @param input `multilayer` - Input layers. .
-##' @param .e `boolean` - Copy also attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .e `boolean` - Copy also attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output `vectorDestination` - Combined. Path for new vector layer.
 ##' @param bbox `vectorDestination` - Bounding boxes. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

@@ -38,7 +38,7 @@ grass7_v_outlier(
 
 \item{filter}{\code{enum}  of \verb{("both", "positive", "negative")} - Filtering option. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.e}{\code{boolean} - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{vectorDestination} - Layer without outliers. Path for new vector layer.}
 

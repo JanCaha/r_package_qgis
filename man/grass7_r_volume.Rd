@@ -24,7 +24,7 @@ grass7_r_volume(
 
 \item{clump}{\code{raster} - Clumps layer (preferably the output of r.clump). Path to a raster layer.}
 
-\item{.f}{\code{boolean} - Generate unformatted report. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Generate unformatted report. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
 \item{centroids}{\code{vectorDestination} - Centroids. Path for new vector layer.}
 

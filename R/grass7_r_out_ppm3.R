@@ -2,10 +2,10 @@
 ##'
 ##' @title QGIS algorithm r.out.ppm3
 ##'
-##' @param red `raster` - Name of raster map to be used for <red>. Path to a raster layer.
-##' @param green `raster` - Name of raster map to be used for <green>. Path to a raster layer.
-##' @param blue `raster` - Name of raster map to be used for <blue>. Path to a raster layer.
-##' @param .c `boolean` - Add comments to describe the region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param red `raster` - Name of raster map to be used for red. Path to a raster layer.
+##' @param green `raster` - Name of raster map to be used for green. Path to a raster layer.
+##' @param blue `raster` - Name of raster map to be used for blue. Path to a raster layer.
+##' @param .c `boolean` - Add comments to describe the region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `fileDestination` - Name for new PPM file. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

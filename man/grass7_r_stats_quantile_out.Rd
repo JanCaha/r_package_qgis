@@ -29,7 +29,7 @@ grass7_r_stats_quantile_out(
 
 \item{bins}{\code{number} - Number of bins to use. A numeric value.}
 
-\item{.r}{\code{boolean} - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{file}{\code{fileDestination} - Statistics File. Path for new file.}
 

@@ -7,7 +7,7 @@
 ##' @param tension `number` - Spline tension parameter. A numeric value.
 ##' @param smooth `number` - Spline smoothing parameter. A numeric value.
 ##' @param edge `number` - Width of hole edge used for interpolation (in cells). A numeric value.
-##' @param npmin `number` - Minimum number of points for approximation in a segment (>segmax). A numeric value.
+##' @param npmin `number` - Minimum number of points for approximation in a segment (segmax). A numeric value.
 ##' @param segmax `number` - Maximum number of points in a segment. A numeric value.
 ##' @param lambda `number` - Tykhonov regularization parameter (affects smoothing). A numeric value.
 ##' @param output `rasterDestination` - Filled. Path for new raster layer.

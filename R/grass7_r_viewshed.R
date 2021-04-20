@@ -9,10 +9,10 @@
 ##' @param max_distance `number` - Maximum visibility radius. By default infinity (-1). A numeric value.
 ##' @param refraction_coeff `number` - Refraction coefficient. A numeric value.
 ##' @param memory `number` - Amount of memory to use in MB. A numeric value.
-##' @param .c `boolean` - Consider earth curvature (current ellipsoid). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Consider the effect of atmospheric refraction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Output format is invisible = 0, visible = 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .e `boolean` - Output format is invisible = NULL, else current elev - viewpoint_elev. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Consider earth curvature (current ellipsoid). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .r `boolean` - Consider the effect of atmospheric refraction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .b `boolean` - Output format is invisible = 0, visible = 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .e `boolean` - Output format is invisible = NULL, else current elev - viewpoint_elev. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output `rasterDestination` - Intervisibility. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

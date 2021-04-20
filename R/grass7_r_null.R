@@ -5,11 +5,11 @@
 ##' @param map `raster` - Name of raster map for which to edit null values. Path to a raster layer.
 ##' @param setnull `string` - List of cell values to be set to NULL. String value.
 ##' @param null `number` - The value to replace the null value by. A numeric value.
-##' @param .f `boolean` - Only do the work if the map is floating-point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Only do the work if the map is integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Only do the work if the map doesn't have a NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Create NULL-value bitmap file validating all data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Remove NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .f `boolean` - Only do the work if the map is floating-point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .i `boolean` - Only do the work if the map is integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param .n `boolean` - Only do the work if the map doesn't have a NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .c `boolean` - Create NULL-value bitmap file validating all data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .r `boolean` - Remove NULL-value bitmap file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param output `rasterDestination` - NullRaster. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

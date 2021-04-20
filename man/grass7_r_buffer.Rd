@@ -25,7 +25,7 @@ grass7_r_buffer(
 
 \item{units}{\code{enum}  of \verb{("meters", "kilometers", "feet", "miles", "nautmiles")} - Units of distance. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.z}{\code{boolean} - Ignore zero (0) data cells instead of NULL cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Ignore zero (0) data cells instead of NULL cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Buffer. Path for new raster layer.}
 

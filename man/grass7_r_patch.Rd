@@ -19,7 +19,7 @@ grass7_r_patch(
 \arguments{
 \item{input}{\code{multilayer} - Raster layers to be patched together. .}
 
-\item{.z}{\code{boolean} - Use zero (0) for transparency instead of NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Use zero (0) for transparency instead of NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Patched. Path for new raster layer.}
 

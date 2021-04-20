@@ -33,11 +33,11 @@ grass7_v_cluster(
 
 \item{method}{\code{enum}  of \verb{("dbscan", "dbscan2", "density", "optics", "optics2")} - Clustering method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.arg_2}{\code{boolean} - Force 2D clustering. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_2}{\code{boolean} - Force 2D clustering. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -2.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Clustered. Path for new vector layer.}
 

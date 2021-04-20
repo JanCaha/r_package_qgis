@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm r.terraflow
 ##'
 ##' @param elevation `raster` - Name of elevation raster map. Path to a raster layer.
-##' @param .s `boolean` - SFD (D8) flow (default is MFD). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .s `boolean` - SFD (D8) flow (default is MFD). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param d8cut `number` - Routing using SFD (D8) direction. A numeric value.
 ##' @param memory `number` - Maximum memory to be used (in MB). A numeric value.
 ##' @param filled `rasterDestination` - Filled (flooded) elevation. Path for new raster layer.

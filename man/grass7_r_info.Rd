@@ -20,13 +20,13 @@ grass7_r_info(
 \arguments{
 \item{map}{\code{raster} - Raster layer. Path to a raster layer.}
 
-\item{.r}{\code{boolean} - Print range only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Print range only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.g}{\code{boolean} - Print raster array information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Print raster array information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.h}{\code{boolean} - Print raster history instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.h}{\code{boolean} - Print raster history instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
 
-\item{.e}{\code{boolean} - Print extended metadata information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Print extended metadata information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{html}{\code{fileDestination} - Basic information. Path for new file.}
 

@@ -51,7 +51,7 @@ grass7_v_surf_rst_cvdev(
 
 \item{segmax}{\code{number} - Maximum number of points in a segment. A numeric value.}
 
-\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (>segmax). A numeric value.}
+\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (segmax). A numeric value.}
 
 \item{dmin}{\code{number} - Minimum distance between points (to remove almost identical points). A numeric value.}
 
@@ -63,9 +63,9 @@ grass7_v_surf_rst_cvdev(
 
 \item{scalex}{\code{number} - Anisotropy scaling factor. A numeric value.}
 
-\item{.t}{\code{boolean} - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.c}{\code{boolean} - Perform cross-validation procedure without raster approximation (leave this option as True). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Perform cross-validation procedure without raster approximation (leave this option as True). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{cvdev}{\code{vectorDestination} - Cross Validation Errors. Path for new vector layer.}
 

@@ -31,7 +31,7 @@ grass7_i_evapo_pt(
 
 \item{priestley_taylor_coeff}{\code{number} - Priestley-Taylor coefficient. A numeric value.}
 
-\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Evapotranspiration. Path for new raster layer.}
 

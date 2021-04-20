@@ -23,7 +23,7 @@ grass7_v_patch(
 \arguments{
 \item{input}{\code{multilayer} - Input layers. .}
 
-\item{.e}{\code{boolean} - Copy also attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Copy also attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{vectorDestination} - Combined. Path for new vector layer.}
 

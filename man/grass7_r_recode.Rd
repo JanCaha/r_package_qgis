@@ -23,9 +23,9 @@ grass7_r_recode(
 
 \item{rules}{\code{file} - File containing recode rules. Path to a file.}
 
-\item{.d}{\code{boolean} - Force output to 'double' raster map type (DCELL). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Force output to 'double' raster map type (DCELL). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.a}{\code{boolean} - Align the current region to the input raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Align the current region to the input raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
 \item{output}{\code{rasterDestination} - Recoded. Path for new raster layer.}
 

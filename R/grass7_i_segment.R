@@ -11,8 +11,8 @@
 ##' @param iterations `number` - Maximum number of iterations. A numeric value.
 ##' @param seeds `raster` - Name for input raster map with starting seeds. Path to a raster layer.
 ##' @param bounds `raster` - Name of input bounding/constraining raster map. Path to a raster layer.
-##' @param .d `boolean` - Use 8 neighbors (3x3 neighborhood) instead of the default 4 neighbors for each pixel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .w `boolean` - Weighted input, do not perform the default scaling of input raster maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .d `boolean` - Use 8 neighbors (3x3 neighborhood) instead of the default 4 neighbors for each pixel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .w `boolean` - Weighted input, do not perform the default scaling of input raster maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
 ##' @param output `rasterDestination` - Segmented Raster. Path for new raster layer.
 ##' @param goodness `rasterDestination` - Goodness Raster. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

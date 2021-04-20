@@ -6,7 +6,7 @@
 ##' @param POINTS_NUMBER `number` - Number of points for each feature. A numeric value.
 ##' @param MIN_DISTANCE `distance` - Minimum distance between points. A numeric value.
 ##' @param MIN_DISTANCE_GLOBAL `distance` - Global minimum distance between points. A numeric value.
-##' @param MAX_TRIES_PER_POINT `number` - Maximum number of search attempts (for Min. dist. > 0). A numeric value.
+##' @param MAX_TRIES_PER_POINT `number` - Maximum number of search attempts (for Min. dist.  0). A numeric value.
 ##' @param SEED `number` - Random seed. A numeric value.
 ##' @param INCLUDE_LINE_ATTRIBUTES `boolean` - Include line attributes. 1 for true/yes. 0 for false/no.
 ##' @param OUTPUT `sink` - Random points on lines. Path for new vector layer.

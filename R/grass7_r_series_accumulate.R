@@ -10,8 +10,8 @@
 ##' @param shift `number` - Shift factor for input. A numeric value.
 ##' @param range `range` - Ignore values outside this range (min,max). Two comma separated numeric values, e.g. '1,10'.
 ##' @param limits `range` - Lower and upper accumulation limits (lower,upper). Two comma separated numeric values, e.g. '1,10'.
-##' @param .n `boolean` - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Create a FCELL map (floating point single precision) as output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .f `boolean` - Create a FCELL map (floating point single precision) as output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `rasterDestination` - Accumulated. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

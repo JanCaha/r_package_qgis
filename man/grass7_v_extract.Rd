@@ -39,11 +39,11 @@ grass7_v_extract(
 
 \item{new}{\code{number} - Desired new category value (enter -1 to keep original categories). A numeric value.}
 
-\item{.d}{\code{boolean} - Dissolve common boundaries. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Dissolve common boundaries. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.t}{\code{boolean} - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{output}{\code{vectorDestination} - Selected. Path for new vector layer.}
 

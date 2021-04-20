@@ -6,8 +6,8 @@
 ##' @param value `number` - Value option that sets the area size limit (hectares). A numeric value.
 ##' @param mode `enum`  of `("lesser", "greater")` - Lesser or greater than specified value. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param method `enum`  of `("reclass", "rmarea")` - Method used for reclassification. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .c `boolean` - Input map is clumped. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Clumps including diagonal neighbors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Input map is clumped. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .d `boolean` - Clumps including diagonal neighbors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
 ##' @param output `rasterDestination` - Reclassified. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

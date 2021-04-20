@@ -12,17 +12,17 @@
 ##' @param intensity_scale `number` - Scale to apply to intensity values. A numeric value.
 ##' @param percent `number` - Percent of map to keep in memory. A numeric value.
 ##' @param pth `number` - pth percentile of the values (between 1 and 100). A numeric value.
-##' @param trim `number` - Discard <trim> percent of the smallest and <trim> percent of the largest observations (0-50). A numeric value.
+##' @param trim `number` - Discard trim percent of the smallest and trim percent of the largest observations (0-50). A numeric value.
 ##' @param resolution `number` - Output raster resolution. A numeric value.
 ##' @param return_filter `string` - Only import points of selected return type Options: first, last, mid. String value.
 ##' @param class_filter `string` - Only import points of selected class(es) (comma separated integers). String value.
-##' @param .e `boolean` - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .o `boolean` - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .j `boolean` - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .v `boolean` - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .e `boolean` - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param .n `boolean` - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .o `boolean` - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.
+##' @param .i `boolean` - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param .j `boolean` - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -j.
+##' @param .d `boolean` - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .v `boolean` - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.
 ##' @param output `rasterDestination` - Lidar Raster. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

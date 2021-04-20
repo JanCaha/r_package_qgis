@@ -5,8 +5,8 @@
 ##' @param input `raster` - Unit cost layer. Path to a raster layer.
 ##' @param start_coordinates `point` - Coordinates of starting point(s) (E,N). Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param stop_coordinates `point` - Coordinates of stopping point(s) (E,N). Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
-##' @param .k `boolean` - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .k `boolean` - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.
+##' @param .n `boolean` - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param start_points `source` - Start points. Path to a vector layer.
 ##' @param stop_points `source` - Stop points. Path to a vector layer.
 ##' @param start_raster `raster` - Name of starting raster points map. Path to a raster layer.

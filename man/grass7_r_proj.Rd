@@ -31,7 +31,7 @@ grass7_r_proj(
 
 \item{resolution}{\code{number} - Resolution of output raster map. A numeric value.}
 
-\item{.n}{\code{boolean} - Do not perform region cropping optimization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Do not perform region cropping optimization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Reprojected raster. Path for new raster layer.}
 

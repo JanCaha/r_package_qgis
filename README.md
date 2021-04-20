@@ -31,30 +31,8 @@ You can install the released version of **qgis** from GitHub with:
     # install.package("remotes")
     remotes::install_github("JanCaha/r_package_qgis")
 
-Personal instalation
---------------------
-
-If you want to install the package with your personal settings,
-including algorithms for your installed plugins etc. you can do so by
-downloading the repository and running following commands from the
-project.
-
-    # install packages necessary to build the package code
-    source("./build-package/install_save_deps.R")
-
-    # install dependencies for the package
-    remotes::install_deps(dependencies = TRUE)
-
-    # update package description
-    source("./build-package/update_Description.R")
-
-    # build the package code and documentation
-    # this takes rather long time (roughly 22 minutes for basic QGIS installation)
-    source("./build-package/build_QGIS_functions.R")
-
-    # check and install the package
-    devtools::check()
-    devtools::install()
+The information about local installation are in a vignette
+`vignette("local_instalation")`.
 
 Functions names
 ---------------
@@ -106,9 +84,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpkAgY10/file9a173b182cce/file9a1758b066ea.gpkg' \
+    #>   '--INPUT=/tmp/RtmpDIxsFq/file99646132e5cf/file99644d5ecf28.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg'
+    #>   '--OUTPUT=/tmp/RtmpDIxsFq/file99646132e5cf/file9964550f7e96.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -117,9 +95,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpkAgY10/file9a173b182cce/file9a1758b066ea.gpkg
+    #> INPUT:   /tmp/RtmpDIxsFq/file99646132e5cf/file99644d5ecf28.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg
+    #> OUTPUT:  /tmp/RtmpDIxsFq/file99646132e5cf/file9964550f7e96.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -127,10 +105,10 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpkAgY10/file9a173b182cce/file9a174a3eee44.gpkg
+    #> OUTPUT:  /tmp/RtmpDIxsFq/file99646132e5cf/file9964550f7e96.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
     #> all
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />

@@ -4,13 +4,13 @@
 ##'
 ##' @param input `multilayer` - Names of ASTER DN layers (15 layers). .
 ##' @param dayofyear `number` - Day of Year of satellite overpass (0-366). A numeric value.
-##' @param sun_elevation `number` - Sun elevation angle (degrees, < 90.0). A numeric value.
-##' @param .r `boolean` - Output is radiance (W/m2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - VNIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - SWIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - VNIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - SWIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .e `boolean` - SWIR is Low Gain 2. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param sun_elevation `number` - Sun elevation angle (degrees,  90.0). A numeric value.
+##' @param .r `boolean` - Output is radiance (W/m2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .a `boolean` - VNIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .b `boolean` - SWIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .c `boolean` - VNIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .d `boolean` - SWIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .e `boolean` - SWIR is Low Gain 2. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

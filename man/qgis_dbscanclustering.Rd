@@ -23,7 +23,7 @@ qgis_dbscanclustering(
 
 \item{EPS}{\code{distance} - Maximum distance between clustered points. A numeric value.}
 
-\item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: DBSCAN*.}
 
 \item{FIELD_NAME}{\code{string} - Cluster field name. String value.}
 

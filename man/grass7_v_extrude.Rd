@@ -50,7 +50,7 @@ grass7_v_extrude(
 
 \item{null_value}{\code{number} - Height for sampled raster NULL values. A numeric value.}
 
-\item{.t}{\code{boolean} - Trace elevation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Trace elevation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - 3D Vector. Path for new vector layer.}
 

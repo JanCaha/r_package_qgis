@@ -37,7 +37,7 @@ grass7_v_overlay(
 
 \item{snap}{\code{number} - Snapping threshold for boundaries. A numeric value.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Overlay. Path for new vector layer.}
 

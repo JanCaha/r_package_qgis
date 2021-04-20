@@ -8,8 +8,8 @@
 ##' @param size `number` - Neighborhood size. A numeric value.
 ##' @param gauss `number` - Sigma (in cells) for Gaussian filter. A numeric value.
 ##' @param quantile `string` - Quantile to calculate for method=quantile. String value.
-##' @param .c `boolean` - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - Do not align output with the input. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .a `boolean` - Do not align output with the input. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
 ##' @param weight `file` - File containing weights. Path to a file.
 ##' @param output `rasterDestination` - Neighbors. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

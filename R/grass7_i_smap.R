@@ -5,7 +5,7 @@
 ##' @param input `multilayer` - Input rasters. .
 ##' @param signaturefile `file` - Name of input file containing signatures. Path to a file.
 ##' @param blocksize `number` - Size of submatrix to process at one time. A numeric value.
-##' @param .m `boolean` - Use maximum likelihood estimation (instead of smap). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .m `boolean` - Use maximum likelihood estimation (instead of smap). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
 ##' @param output `rasterDestination` - Classification. Path for new raster layer.
 ##' @param goodness `rasterDestination` - Goodness_of_fit. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

@@ -25,7 +25,7 @@ grass7_r_statistics(
 
 \item{method}{\code{enum}  of \verb{("diversity", "average", "mode", "median", "avedev", "stddev", "variance", "skewness", "kurtosis", "min", "max", "sum")} - method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.c}{\code{boolean} - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{routput}{\code{rasterDestination} - Statistics. Path for new raster layer.}
 

@@ -32,15 +32,15 @@ grass7_i_landsat_acca(
 
 \item{histogram}{\code{number} - Number of classes in the cloud temperature histogram. A numeric value.}
 
-\item{.arg_5}{\code{boolean} - Data is Landsat-5 TM. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_5}{\code{boolean} - Data is Landsat-5 TM. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -5.}
 
-\item{.f}{\code{boolean} - Apply post-processing filter to remove small holes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Apply post-processing filter to remove small holes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.x}{\code{boolean} - Always use cloud signature (step 14). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.x}{\code{boolean} - Always use cloud signature (step 14). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.}
 
-\item{.arg_2}{\code{boolean} - Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_2}{\code{boolean} - Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -2.}
 
-\item{.s}{\code{boolean} - Include a category for cloud shadows. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Include a category for cloud shadows. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{output}{\code{rasterDestination} - ACCA Raster. Path for new raster layer.}
 

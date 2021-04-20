@@ -7,12 +7,12 @@
 ##' @param rules_txt `string` - Color rules. String value.
 ##' @param rules `file` - Color rules file. Path to a file.
 ##' @param raster `raster` - Raster map from which to copy color table. Path to a raster layer.
-##' @param .r `boolean` - Remove existing color table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .w `boolean` - Only write new color table if it does not already exist. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Invert colors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .g `boolean` - Logarithmic scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - Logarithmic-absolute scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .e `boolean` - Histogram equalization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Remove existing color table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .w `boolean` - Only write new color table if it does not already exist. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
+##' @param .n `boolean` - Invert colors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .g `boolean` - Logarithmic scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param .a `boolean` - Logarithmic-absolute scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .e `boolean` - Histogram equalization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param output_dir `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

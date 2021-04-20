@@ -5,7 +5,7 @@
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param MIN_SIZE `number` - Minimum cluster size. A numeric value.
 ##' @param EPS `distance` - Maximum distance between clustered points. A numeric value.
-##' @param DBSCAN `boolean` - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param DBSCAN `boolean` - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: DBSCAN*.
 ##' @param FIELD_NAME `string` - Cluster field name. String value.
 ##' @param SIZE_FIELD_NAME `string` - Cluster size field name. String value.
 ##' @param OUTPUT `sink` - Clusters. Path for new vector layer.

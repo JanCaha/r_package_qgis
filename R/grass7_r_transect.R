@@ -5,7 +5,7 @@
 ##' @param map `raster` - Raster map to be queried. Path to a raster layer.
 ##' @param line `string` - Transect definition: east,north,azimuth,distance(,east,north,azimuth,distance,...). String value.
 ##' @param null_value `string` - String representing NULL value. String value.
-##' @param .g `boolean` - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .g `boolean` - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
 ##' @param html `fileDestination` - Transect file. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

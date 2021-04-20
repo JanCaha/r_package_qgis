@@ -23,13 +23,13 @@ grass7_r_texture(
 
 \item{method}{\code{enum}  of \verb{("asm", "contrast", "corr", "var", "idm", "sa", "se", "sv", "entr", "dv", "de", "moc1", "moc2")} - Textural measurement method(s). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{size}{\code{number} - The size of moving window (odd and >= 3). A numeric value.}
+\item{size}{\code{number} - The size of moving window (odd and = 3). A numeric value.}
 
-\item{distance}{\code{number} - The distance between two samples (>= 1). A numeric value.}
+\item{distance}{\code{number} - The distance between two samples (= 1). A numeric value.}
 
-\item{.s}{\code{boolean} - Separate output for each angle (0, 45, 90, 135). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Separate output for each angle (0, 45, 90, 135). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.a}{\code{boolean} - Calculate all textural measurements. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Calculate all textural measurements. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
 \item{output}{\code{folderDestination} - Texture files directory. Path for an existing or new folder.}
 

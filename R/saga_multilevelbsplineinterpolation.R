@@ -7,7 +7,7 @@
 ##' @param METHOD `enum`  of `("[0] without B-spline refinement", "[1] with B-spline refinement")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param EPSILON `number` - Threshold Error. A numeric value.
 ##' @param LEVEL_MAX `number` - Maximum Level. A numeric value.
-##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.
 ##' @param TARGET_USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param TARGET_USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Fit. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param TARGET_OUT_GRID `rasterDestination` - Grid. Path for new raster layer.

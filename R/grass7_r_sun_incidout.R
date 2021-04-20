@@ -23,8 +23,8 @@
 ##' @param npartitions `number` - Read the input files in this number of chunks. A numeric value.
 ##' @param civil_time `number` - Civil time zone value, if none, the time will be local solar time. A numeric value.
 ##' @param time `number` - Local (solar) time (decimal hours). A numeric value.
-##' @param .p `boolean` - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .m `boolean` - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .p `boolean` - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.
+##' @param .m `boolean` - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
 ##' @param incidout `rasterDestination` - incidence angle raster map. Path for new raster layer.
 ##' @param beam_rad `rasterDestination` - Beam irradiance (W.m-2). Path for new raster layer.
 ##' @param diff_rad `rasterDestination` - Diffuse irradiance (W.m-2). Path for new raster layer.

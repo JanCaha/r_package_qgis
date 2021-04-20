@@ -6,10 +6,10 @@
 ##' @param direction `raster` - Name of input movement direction map associated with the cost surface. Path to a raster layer.
 ##' @param start_coordinates `point` - Map coordinates of starting point(s) (E,N). Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param start_points `source` - Vector layer containing starting point(s). Path to a vector layer.
-##' @param .c `boolean` - Copy input cell values on output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .a `boolean` - Accumulate input values along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Count cell numbers along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - The input raster map is a cost surface (direction surface must also be specified). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Copy input cell values on output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .a `boolean` - Accumulate input values along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .n `boolean` - Count cell numbers along the path. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .d `boolean` - The input raster map is a cost surface (direction surface must also be specified). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
 ##' @param output `rasterDestination` - Least cost path. Path for new raster layer.
 ##' @param drain `vectorDestination` - Drain. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

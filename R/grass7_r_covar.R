@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm r.covar
 ##'
 ##' @param map `multilayer` - Input layers. .
-##' @param .r `boolean` - Print correlation matrix. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Print correlation matrix. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param html `fileDestination` - Covariance report. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

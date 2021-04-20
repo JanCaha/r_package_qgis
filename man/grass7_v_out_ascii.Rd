@@ -37,9 +37,9 @@ grass7_v_out_ascii(
 
 \item{precision}{\code{number} - Number of significant digits (floating point only). A numeric value.}
 
-\item{.o}{\code{boolean} - Create old (version 4) ASCII file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Create old (version 4) ASCII file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
-\item{.c}{\code{boolean} - Include column names in output (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Include column names in output (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Name for output ASCII file or ASCII vector name if '-o' is defined. Path for new file.}
 

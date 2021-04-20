@@ -36,9 +36,9 @@ grass7_v_mkgrid(
 
 \item{breaks}{\code{number} - Number of vertex points per grid cell. A numeric value.}
 
-\item{.h}{\code{boolean} - Create hexagons (default: rectangles). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.h}{\code{boolean} - Create hexagons (default: rectangles). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
 
-\item{.p}{\code{boolean} - Create grid of points instead of areas and centroids. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.p}{\code{boolean} - Create grid of points instead of areas and centroids. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
 
 \item{map}{\code{vectorDestination} - Grid. Path for new vector layer.}
 

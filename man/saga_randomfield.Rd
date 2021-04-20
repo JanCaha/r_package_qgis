@@ -29,7 +29,7 @@ saga_randomfield(
 
 \item{STDDEV}{\code{number} - Standard Deviation. A numeric value.}
 
-\item{USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX}{\code{extent} - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.}
+\item{USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX}{\code{extent} - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: USER_XMIN USER_XMAX USER_YMIN USER_YMAX.}
 
 \item{USER_SIZE}{\code{number} - Cellsize. A numeric value.}
 

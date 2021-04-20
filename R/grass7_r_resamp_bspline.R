@@ -9,8 +9,8 @@
 ##' @param ns_step `number` - Length (float) of each spline step in the north-south direction. A numeric value.
 ##' @param lambda `number` - Tykhonov regularization parameter (affects smoothing). A numeric value.
 ##' @param memory `number` - Maximum memory to be used (in MB). Cache size for raster rows. A numeric value.
-##' @param .n `boolean` - Only interpolate null cells in input raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Find the best Tykhonov regularizing parameter using a "leave-one-out" cross validation method. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Only interpolate null cells in input raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .c `boolean` - Find the best Tykhonov regularizing parameter using a "leave-one-out" cross validation method. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `rasterDestination` - Resampled BSpline. Path for new raster layer.
 ##' @param grid `vectorDestination` - Interpolation Grid. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

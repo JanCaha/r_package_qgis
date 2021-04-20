@@ -17,7 +17,7 @@ grass7_r_colors_out(
 \arguments{
 \item{map}{\code{raster} - Name of raster map. Path to a raster layer.}
 
-\item{.p}{\code{boolean} - Output values as percentages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.p}{\code{boolean} - Output values as percentages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
 
 \item{rules}{\code{fileDestination} - Color Table. Path for new file.}
 

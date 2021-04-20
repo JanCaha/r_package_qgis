@@ -6,8 +6,8 @@
 ##' @param type `enum`  of `("point", "kernel", "centroid", "line", "boundary", "area", "face")` - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param precision `number` - Number of significant digits (floating point only). A numeric value.
 ##' @param zscale `number` - Scale factor for elevation. A numeric value.
-##' @param .c `boolean` - Correct the coordinates to fit the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Export numeric attribute table fields as VTK scalar variables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Correct the coordinates to fit the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .n `boolean` - Export numeric attribute table fields as VTK scalar variables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param output `fileDestination` - VTK File. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

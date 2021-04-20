@@ -5,9 +5,9 @@
 ##' @param input `raster` - input raster layer. Path to a raster layer.
 ##' @param radius `number` - Radius of buffer in raster cells. A numeric value.
 ##' @param metric `enum`  of `("euclidean", "maximum", "manhattan")` - Metric. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param old `number` - Value to write for input cells which are non-NULL (-1 => NULL). A numeric value.
+##' @param old `number` - Value to write for input cells which are non-NULL (-1 = NULL). A numeric value.
 ##' @param new `number` - Value to write for "grown" cells. A numeric value.
-##' @param .m `boolean` - Radius is in map units rather than cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .m `boolean` - Radius is in map units rather than cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
 ##' @param output `rasterDestination` - Expanded. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

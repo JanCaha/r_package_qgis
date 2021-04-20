@@ -8,8 +8,8 @@
 ##' @param flat `number` - Flatness threshold (degrees). A numeric value.
 ##' @param dist `number` - Flatness distance, zero for none. A numeric value.
 ##' @param forms `rasterDestination` - Most common geomorphic forms. Path for new raster layer.
-##' @param .m `boolean` - Use meters to define search units (default is cells). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .e `boolean` - Use extended form correction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .m `boolean` - Use meters to define search units (default is cells). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
+##' @param .e `boolean` - Use extended form correction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
 ##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.

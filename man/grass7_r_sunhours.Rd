@@ -37,9 +37,9 @@ grass7_r_sunhours(
 
 \item{second}{\code{number} - Seconds. A numeric value.}
 
-\item{.t}{\code{boolean} - Time is local sidereal time, not Greenwich standard time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Time is local sidereal time, not Greenwich standard time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.s}{\code{boolean} - Do not use SOLPOS algorithm of NREL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Do not use SOLPOS algorithm of NREL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{elevation}{\code{rasterDestination} - Solar Elevation Angle. Path for new raster layer.}
 

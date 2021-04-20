@@ -25,8 +25,8 @@
 ##' @param at `number` - The transversal dispersivity length. (m). A numeric value.
 ##' @param loops `number` - Use this number of time loops if the CFL flag is off. The timestep will become dt/loops.. A numeric value.
 ##' @param stab `enum`  of `("full", "exp")` - Set the flow stabilizing scheme (full or exponential upwinding).. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .c `boolean` - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .f `boolean` - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `rasterDestination` - Solute Transport. Path for new raster layer.
 ##' @param vx `rasterDestination` - Calculate and store the groundwater filter velocity vector part in x direction (m/s). Path for new raster layer.
 ##' @param vy `rasterDestination` - Calculate and store the groundwater filter velocity vector part in y direction (m/s). Path for new raster layer.

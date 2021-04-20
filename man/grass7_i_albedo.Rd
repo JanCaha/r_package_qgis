@@ -25,19 +25,19 @@ grass7_i_albedo(
 \arguments{
 \item{input}{\code{multilayer} - Name of input raster maps. .}
 
-\item{.m}{\code{boolean} - MODIS (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - MODIS (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
-\item{.n}{\code{boolean} - NOAA AVHRR (2 input bands:1,2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - NOAA AVHRR (2 input bands:1,2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.l}{\code{boolean} - Landsat 5+7 (6 input bands:1,2,3,4,5,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.l}{\code{boolean} - Landsat 5+7 (6 input bands:1,2,3,4,5,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
 
-\item{.arg_8}{\code{boolean} - Landsat 8 (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.arg_8}{\code{boolean} - Landsat 8 (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -8.}
 
-\item{.a}{\code{boolean} - ASTER (6 input bands:1,3,5,6,8,9). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - ASTER (6 input bands:1,3,5,6,8,9). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Aggressive mode (Landsat). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Aggressive mode (Landsat). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.d}{\code{boolean} - Soft mode (MODIS). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Soft mode (MODIS). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
 \item{output}{\code{rasterDestination} - Albedo. Path for new raster layer.}
 

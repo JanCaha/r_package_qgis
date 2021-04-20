@@ -6,8 +6,8 @@
 ##' @param length `number` - Maximum segment length. A numeric value.
 ##' @param units `enum`  of `("map", "meters", "kilometers", "feet", "surveyfeet", "miles", "nautmiles")` - Length units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param vertices `number` - Maximum number of vertices in segment. A numeric value.
-##' @param .n `boolean` - Add new vertices, but do not split. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Force segments to be exactly of given length, except for last one. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Add new vertices, but do not split. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .f `boolean` - Force segments to be exactly of given length, except for last one. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `vectorDestination` - Split by length. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

@@ -35,7 +35,7 @@ grass7_r_carve(
 
 \item{depth}{\code{number} - Additional stream depth (in meters). A numeric value.}
 
-\item{.n}{\code{boolean} - No flat areas allowed in flow direction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - No flat areas allowed in flow direction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Modified elevation. Path for new raster layer.}
 

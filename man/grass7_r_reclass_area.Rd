@@ -29,9 +29,9 @@ grass7_r_reclass_area(
 
 \item{method}{\code{enum}  of \verb{("reclass", "rmarea")} - Method used for reclassification. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.c}{\code{boolean} - Input map is clumped. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Input map is clumped. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.d}{\code{boolean} - Clumps including diagonal neighbors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Clumps including diagonal neighbors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
 \item{output}{\code{rasterDestination} - Reclassified. Path for new raster layer.}
 

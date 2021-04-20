@@ -5,10 +5,10 @@
 ##' @param input `source` - Input polygons layer. Path to a vector layer.
 ##' @param smoothness `number` - Factor for output smoothness. A numeric value.
 ##' @param thin `number` - Maximum dangle length of skeletons (-1 will extract the center line). A numeric value.
-##' @param .a `boolean` - Create Voronoi diagram for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Extract skeletons for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .l `boolean` - Output tessellation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .a `boolean` - Create Voronoi diagram for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .s `boolean` - Extract skeletons for input areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param .l `boolean` - Output tessellation as a graph (lines), not areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - Voronoi. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

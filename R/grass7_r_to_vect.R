@@ -5,11 +5,11 @@
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param type `enum`  of `("line", "point", "area")` - Feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param column `string` - Name of attribute column to store value. String value.
-##' @param .s `boolean` - Smooth corners of area features. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .v `boolean` - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .z `boolean` - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build vector topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .s `boolean` - Smooth corners of area features. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param .v `boolean` - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.
+##' @param .z `boolean` - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .b `boolean` - Do not build vector topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - Vectorized. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

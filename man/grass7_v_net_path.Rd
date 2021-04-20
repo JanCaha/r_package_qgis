@@ -47,9 +47,9 @@ grass7_v_net_path(
 
 \item{dmax}{\code{number} - Maximum distance to the network. A numeric value.}
 
-\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.s}{\code{boolean} - Write output as original input segments, not each path as one line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Write output as original input segments, not each path as one line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{output}{\code{vectorDestination} - Network_Path. Path for new vector layer.}
 

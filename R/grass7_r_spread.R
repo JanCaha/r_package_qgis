@@ -14,8 +14,8 @@
 ##' @param comp_dens `number` - Sampling density for additional computing (range: 0.0 - 1.0 (0.5)). A numeric value.
 ##' @param init_time `number` - Initial time for current simulation (0) (min). A numeric value.
 ##' @param lag `number` - Simulating time duration LAG (fill the region) (min). A numeric value.
-##' @param .s `boolean` - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .i `boolean` - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .s `boolean` - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param .i `boolean` - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
 ##' @param output `rasterDestination` - Spread Time. Path for new raster layer.
 ##' @param x_output `rasterDestination` - X Back Coordinates. Path for new raster layer.
 ##' @param y_output `rasterDestination` - Y Back Coordinates. Path for new raster layer.

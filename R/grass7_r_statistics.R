@@ -5,7 +5,7 @@
 ##' @param base `raster` - Base raster layer. Path to a raster layer.
 ##' @param cover `raster` - Cover raster layer. Path to a raster layer.
 ##' @param method `enum`  of `("diversity", "average", "mode", "median", "avedev", "stddev", "variance", "skewness", "kurtosis", "min", "max", "sum")` - method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .c `boolean` - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param routput `rasterDestination` - Statistics. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

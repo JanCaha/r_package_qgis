@@ -26,7 +26,7 @@ grass7_r_univar(
 
 \item{separator}{\code{string} - Field separator. Special characters: pipe, comma, space, tab, newline. String value.}
 
-\item{.e}{\code{boolean} - Calculate extended statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Calculate extended statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{fileDestination} - Univariate results. Path for new file.}
 

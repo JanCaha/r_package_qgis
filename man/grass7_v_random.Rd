@@ -44,9 +44,9 @@ grass7_v_random(
 
 \item{column_type}{\code{enum}  of \verb{("integer", "double precision")} - Type of column for z values. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.z}{\code{boolean} - Create 3D output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Create 3D output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.a}{\code{boolean} - Generate n points for each individual area. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - Generate n points for each individual area. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
 \item{output}{\code{vectorDestination} - Random. Path for new vector layer.}
 

@@ -36,7 +36,7 @@ saga_rasterize(
 
 \item{GRID_TYPE}{\code{enum}  of \verb{("[0] Integer (1 byte)", "[1] Integer (2 byte)", "[2] Integer (4 byte)", "[3] Floating Point (4 byte)", "[4] Floating Point (8 byte)")} - Preferred Target Grid Type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX}{\code{extent} - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.}
+\item{TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX}{\code{extent} - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.}
 
 \item{TARGET_USER_SIZE}{\code{number} - Cellsize. A numeric value.}
 

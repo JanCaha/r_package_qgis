@@ -33,13 +33,13 @@ grass7_i_colors_enhance(
 
 \item{strength}{\code{number} - Cropping intensity (upper brightness level). A numeric value.}
 
-\item{.f}{\code{boolean} - Extend colors to full range of data on each channel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Extend colors to full range of data on each channel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.p}{\code{boolean} - Preserve relative colors, adjust brightness only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.p}{\code{boolean} - Preserve relative colors, adjust brightness only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
 
-\item{.r}{\code{boolean} - Reset to standard color range. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Reset to standard color range. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{redoutput}{\code{rasterDestination} - Enhanced Red. Path for new raster layer.}
 

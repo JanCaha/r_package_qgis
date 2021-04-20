@@ -37,7 +37,7 @@ saga_decisiontreeclassificationopencv(
 
 \item{MAX_CATEGRS}{\code{number} - Maximum Categories. A numeric value.}
 
-\item{arg_1SE_RULE}{\code{boolean} - Use 1SE Rule. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{arg_1SE_RULE}{\code{boolean} - Use 1SE Rule. 1 for true/yes. 0 for false/no. Original algorithm parameter name: 1SE_RULE.}
 
 \item{TRUNC_PRUNED}{\code{boolean} - Truncate Pruned Trees. 1 for true/yes. 0 for false/no.}
 

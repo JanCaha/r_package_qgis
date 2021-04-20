@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm Create lines graticule
 ##'
 ##' @param EXTENT `source` - Extent. Path to a vector layer.
-##' @param EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: EXTENT_X_MIN EXTENT_X_MAX EXTENT_Y_MIN EXTENT_Y_MAX.
 ##' @param DIVISION_X `number` - Division Width. A numeric value.
 ##' @param DIVISION_Y `number` - Division Height. A numeric value.
 ##' @param ALIGNMENT `enum`  of `("[0] Bottom left", "[1] Top left", "[2] Bottom right", "[3] Top right", "[4] Centered")` - Alignment. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

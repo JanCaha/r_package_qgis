@@ -6,11 +6,11 @@
 ##' @param b56composite `number` - B56composite (step 6). A numeric value.
 ##' @param b45ratio `number` - B45ratio: Desert detection (step 10). A numeric value.
 ##' @param histogram `number` - Number of classes in the cloud temperature histogram. A numeric value.
-##' @param .arg_5 `boolean` - Data is Landsat-5 TM. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Apply post-processing filter to remove small holes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .x `boolean` - Always use cloud signature (step 14). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .arg_2 `boolean` - Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Include a category for cloud shadows. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .arg_5 `boolean` - Data is Landsat-5 TM. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -5.
+##' @param .f `boolean` - Apply post-processing filter to remove small holes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .x `boolean` - Always use cloud signature (step 14). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.
+##' @param .arg_2 `boolean` - Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -2.
+##' @param .s `boolean` - Include a category for cloud shadows. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param output `rasterDestination` - ACCA Raster. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

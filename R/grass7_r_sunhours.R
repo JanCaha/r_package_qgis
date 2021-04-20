@@ -8,8 +8,8 @@
 ##' @param hour `number` - Hour. A numeric value.
 ##' @param minute `number` - Minutes. A numeric value.
 ##' @param second `number` - Seconds. A numeric value.
-##' @param .t `boolean` - Time is local sidereal time, not Greenwich standard time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Do not use SOLPOS algorithm of NREL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Time is local sidereal time, not Greenwich standard time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .s `boolean` - Do not use SOLPOS algorithm of NREL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
 ##' @param elevation `rasterDestination` - Solar Elevation Angle. Path for new raster layer.
 ##' @param azimuth `rasterDestination` - Solar Azimuth Angle. Path for new raster layer.
 ##' @param sunhour `rasterDestination` - Sunshine Hours. Path for new raster layer.

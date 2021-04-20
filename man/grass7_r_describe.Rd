@@ -26,13 +26,13 @@ grass7_r_describe(
 
 \item{nsteps}{\code{number} - Number of quantization steps. A numeric value.}
 
-\item{.r}{\code{boolean} - Only print the range of the data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Only print the range of the data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.d}{\code{boolean} - Use the current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Use the current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.i}{\code{boolean} - Read floating-point map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Read floating-point map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{html}{\code{fileDestination} - Categories. Path for new file.}
 

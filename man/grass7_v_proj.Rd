@@ -29,9 +29,9 @@ grass7_v_proj(
 
 \item{smax}{\code{number} - Maximum segment length in meters in output vector map. A numeric value.}
 
-\item{.z}{\code{boolean} - Assume z coordinate is ellipsoidal height and transform if possible. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Assume z coordinate is ellipsoidal height and transform if possible. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.w}{\code{boolean} - Disable wrapping to -180,180 for latlon output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Disable wrapping to -180,180 for latlon output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{output}{\code{vectorDestination} - Output vector map. Path for new vector layer.}
 

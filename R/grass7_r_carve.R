@@ -6,7 +6,7 @@
 ##' @param vector `source` - Vector layer containing stream(s). Path to a vector layer.
 ##' @param width `number` - Stream width (in meters). Default is raster cell width. A numeric value.
 ##' @param depth `number` - Additional stream depth (in meters). A numeric value.
-##' @param .n `boolean` - No flat areas allowed in flow direction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - No flat areas allowed in flow direction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param output `rasterDestination` - Modified elevation. Path for new raster layer.
 ##' @param points `vectorDestination` - Adjusted stream points. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

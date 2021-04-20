@@ -32,15 +32,15 @@ grass7_r_composite(
 
 \item{levels}{\code{number} - Number of levels to be used for each component. A numeric value.}
 
-\item{level_red}{\code{number} - Number of levels to be used for <red>. A numeric value.}
+\item{level_red}{\code{number} - Number of levels to be used for red. A numeric value.}
 
-\item{level_green}{\code{number} - Number of levels to be used for <green>. A numeric value.}
+\item{level_green}{\code{number} - Number of levels to be used for green. A numeric value.}
 
-\item{level_blue}{\code{number} - Number of levels to be used for <blue>. A numeric value.}
+\item{level_blue}{\code{number} - Number of levels to be used for blue. A numeric value.}
 
-\item{.d}{\code{boolean} - Dither. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - Dither. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.c}{\code{boolean} - Use closest color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Use closest color. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{rasterDestination} - Composite. Path for new raster layer.}
 

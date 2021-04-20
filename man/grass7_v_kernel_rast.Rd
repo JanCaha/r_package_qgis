@@ -42,7 +42,7 @@ grass7_v_kernel_rast(
 
 \item{kernel}{\code{enum}  of \verb{("uniform", "triangular", "epanechnikov", "quartic", "triweight", "gaussian", "cosine")} - Kernel function. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
 
 \item{output}{\code{rasterDestination} - Kernel. Path for new raster layer.}
 

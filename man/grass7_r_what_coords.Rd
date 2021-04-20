@@ -33,15 +33,15 @@ grass7_r_what_coords(
 
 \item{cache}{\code{number} - Size of point cache. A numeric value.}
 
-\item{.n}{\code{boolean} - Output header row. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Output header row. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
-\item{.f}{\code{boolean} - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.f}{\code{boolean} - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
 
-\item{.r}{\code{boolean} - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.i}{\code{boolean} - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
-\item{.c}{\code{boolean} - Turn on cache reporting. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Turn on cache reporting. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Raster Value File. Path for new file.}
 

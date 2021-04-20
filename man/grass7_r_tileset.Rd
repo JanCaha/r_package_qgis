@@ -38,9 +38,9 @@ grass7_r_tileset(
 
 \item{separator}{\code{string} - Output field separator. String value.}
 
-\item{.g}{\code{boolean} - Produces shell script output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Produces shell script output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
-\item{.w}{\code{boolean} - Produces web map server query string output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.w}{\code{boolean} - Produces web map server query string output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
 
 \item{html}{\code{fileDestination} - Tileset. Path for new file.}
 

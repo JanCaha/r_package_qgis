@@ -34,7 +34,7 @@ grass7_v_net_spanningtree(
 
 \item{node_column}{\code{field} - Node cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
-\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
 \item{output}{\code{vectorDestination} - SpanningTree. Path for new vector layer.}
 

@@ -5,8 +5,8 @@
 ##' @param input `source` - Input vector to reproject. Path to a vector layer.
 ##' @param crs `crs` - New coordinate reference system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param smax `number` - Maximum segment length in meters in output vector map. A numeric value.
-##' @param .z `boolean` - Assume z coordinate is ellipsoidal height and transform if possible. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .w `boolean` - Disable wrapping to -180,180 for latlon output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Assume z coordinate is ellipsoidal height and transform if possible. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .w `boolean` - Disable wrapping to -180,180 for latlon output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
 ##' @param output `vectorDestination` - Output vector map. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

@@ -5,8 +5,8 @@
 ##' @param input `multilayer` - Name of two or more input raster maps. .
 ##' @param rescale `range` - Rescaling range for output maps. For no rescaling use 0,0. Two comma separated numeric values, e.g. '1,10'.
 ##' @param percent `number` - Cumulative percent importance for filtering. A numeric value.
-##' @param .n `boolean` - Normalize (center and scale) input maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .f `boolean` - Output will be filtered input bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .n `boolean` - Normalize (center and scale) input maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param .f `boolean` - Output will be filtered input bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
 ##' @param output `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

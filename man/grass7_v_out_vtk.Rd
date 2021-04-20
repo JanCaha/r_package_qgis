@@ -28,9 +28,9 @@ grass7_v_out_vtk(
 
 \item{zscale}{\code{number} - Scale factor for elevation. A numeric value.}
 
-\item{.c}{\code{boolean} - Correct the coordinates to fit the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Correct the coordinates to fit the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.n}{\code{boolean} - Export numeric attribute table fields as VTK scalar variables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.n}{\code{boolean} - Export numeric attribute table fields as VTK scalar variables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
 
 \item{output}{\code{fileDestination} - VTK File. Path for new file.}
 

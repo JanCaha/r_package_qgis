@@ -5,14 +5,14 @@
 ##' @param map `source` - Input vector map. Path to a vector layer.
 ##' @param layer `number` - Layer Number. A numeric value.
 ##' @param columns `string` - Name of attribute column(s), comma separated. String value.
-##' @param .c `boolean` - Do not include column names in output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .c `boolean` - Do not include column names in output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param separator `string` - Output field separator. String value.
 ##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value.
 ##' @param group `string` - GROUP BY conditions of SQL statement without 'group by' keyword. String value.
 ##' @param vertical_separator `string` - Output vertical record separator. String value.
 ##' @param null_value `string` - Null value indicator. String value.
-##' @param .v `boolean` - Vertical output (instead of horizontal). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Print minimal region extent of selected vector features instead of attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .v `boolean` - Vertical output (instead of horizontal). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.
+##' @param .r `boolean` - Print minimal region extent of selected vector features instead of attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param file `fileDestination` - Attributes. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

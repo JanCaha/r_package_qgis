@@ -26,9 +26,9 @@ grass7_r_stats_zonal(
 
 \item{method}{\code{enum}  of \verb{("count", "sum", "min", "max", "range", "average", "avedev", "variance", "stddev", "skewness", "kurtosis", "variance2", "stddev2", "skewness2", "kurtosis2")} - Method of object-based statistic. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.c}{\code{boolean} - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.r}{\code{boolean} - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{output}{\code{rasterDestination} - Resultant raster. Path for new raster layer.}
 

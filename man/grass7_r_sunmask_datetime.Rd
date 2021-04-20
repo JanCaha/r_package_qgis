@@ -47,9 +47,9 @@ grass7_r_sunmask_datetime(
 
 \item{north}{\code{string} - Northing coordinate (point of interest). String value.}
 
-\item{.z}{\code{boolean} - Do not ignore zero elevation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.z}{\code{boolean} - Do not ignore zero elevation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
 
-\item{.s}{\code{boolean} - Calculate sun position only and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Calculate sun position only and exit. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
 \item{output}{\code{rasterDestination} - Shadows. Path for new raster layer.}
 

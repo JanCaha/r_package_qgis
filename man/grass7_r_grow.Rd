@@ -27,11 +27,11 @@ grass7_r_grow(
 
 \item{metric}{\code{enum}  of \verb{("euclidean", "maximum", "manhattan")} - Metric. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{old}{\code{number} - Value to write for input cells which are non-NULL (-1 => NULL). A numeric value.}
+\item{old}{\code{number} - Value to write for input cells which are non-NULL (-1 = NULL). A numeric value.}
 
 \item{new}{\code{number} - Value to write for "grown" cells. A numeric value.}
 
-\item{.m}{\code{boolean} - Radius is in map units rather than cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Radius is in map units rather than cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
 \item{output}{\code{rasterDestination} - Expanded. Path for new raster layer.}
 

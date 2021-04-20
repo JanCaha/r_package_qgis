@@ -30,7 +30,7 @@ grass7_v_class(
 
 \item{nbclasses}{\code{number} - Number of classes to define. A numeric value.}
 
-\item{.g}{\code{boolean} - Print only class breaks (without min and max). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.g}{\code{boolean} - Print only class breaks (without min and max). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
 
 \item{html}{\code{fileDestination} - Classification. Path for new file.}
 

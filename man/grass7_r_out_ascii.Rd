@@ -28,11 +28,11 @@ grass7_r_out_ascii(
 
 \item{null_value}{\code{string} - String to represent null cell (GRASS grid only). String value.}
 
-\item{.s}{\code{boolean} - Write SURFER (Golden Software) ASCII grid. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.s}{\code{boolean} - Write SURFER (Golden Software) ASCII grid. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
 
-\item{.m}{\code{boolean} - Write MODFLOW (USGS) ASCII array. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Write MODFLOW (USGS) ASCII array. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
-\item{.i}{\code{boolean} - Force output of integer values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.i}{\code{boolean} - Force output of integer values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
 
 \item{output}{\code{fileDestination} - GRASS Ascii. Path for new file.}
 

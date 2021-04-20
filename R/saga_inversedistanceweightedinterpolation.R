@@ -14,7 +14,7 @@
 ##' @param SEARCH_POINTS_MIN `number` - Minimum. A numeric value.
 ##' @param SEARCH_POINTS_MAX `number` - Maximum. A numeric value.
 ##' @param SEARCH_DIRECTION `enum`  of `("[0] all directions", "[1] quadrants")` - Search Mode. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: {name}.
+##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.
 ##' @param TARGET_USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param TARGET_DEFINITION `enum`  of `("[0] user defined", "[1] grid or grid system")` - Target Grid System. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param TARGET_USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Fit. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

@@ -9,8 +9,8 @@
 ##' @param format `enum`  of `("point", "standard", "wkt")` - Output format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param separator `enum`  of `("pipe", "comma", "space", "tab", "newline")` - Field separator. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param precision `number` - Number of significant digits (floating point only). A numeric value.
-##' @param .o `boolean` - Create old (version 4) ASCII file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Include column names in output (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .o `boolean` - Create old (version 4) ASCII file. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.
+##' @param .c `boolean` - Include column names in output (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `fileDestination` - Name for output ASCII file or ASCII vector name if '-o' is defined. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

@@ -29,9 +29,9 @@ grass7_r_quant(
 
 \item{range}{\code{range} - Integer range: min,max. Two comma separated numeric values, e.g. '1,10'.}
 
-\item{.t}{\code{boolean} - Truncate floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Truncate floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.r}{\code{boolean} - Round floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Round floating point data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
 \item{output}{\code{folderDestination} - Quantized raster(s). Path for an existing or new folder.}
 

@@ -10,12 +10,12 @@
 ##' @param vectormaps `multilayer` - Three (x,y,z) raster maps to create vector values. .
 ##' @param zscale `number` - Scale factor for elevation. A numeric value.
 ##' @param precision `number` - Number of significant digits. A numeric value.
-##' @param .p `boolean` - Create VTK point data instead of VTK cell data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .s `boolean` - Use structured grid for elevation (not recommended). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Use polydata-trianglestrips for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .v `boolean` - Use polydata-vertices for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .o `boolean` - Scale factor affects the origin (if no elevation map is given). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Correct the coordinates to match the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .p `boolean` - Create VTK point data instead of VTK cell data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.
+##' @param .s `boolean` - Use structured grid for elevation (not recommended). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param .t `boolean` - Use polydata-trianglestrips for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .v `boolean` - Use polydata-vertices for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.
+##' @param .o `boolean` - Scale factor affects the origin (if no elevation map is given). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.
+##' @param .c `boolean` - Correct the coordinates to match the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
 ##' @param output `fileDestination` - VTK File. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

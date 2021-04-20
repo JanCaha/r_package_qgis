@@ -6,8 +6,8 @@
 ##' @param type `enum`  of `("point", "line", "boundary", "centroid")` - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param height `number` - Fixed height for 3D vector features. A numeric value.
 ##' @param column `field` - Name of attribute column used for height. The name of an existing field. ; delimited list of existing field names.
-##' @param .r `boolean` - Reverse transformation; 3D vector features to 2D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .t `boolean` - Do not copy attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Reverse transformation; 3D vector features to 2D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .t `boolean` - Do not copy attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - 3D. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

@@ -5,9 +5,9 @@
 ##' @param elevation `raster` - Elevation. Path to a raster layer.
 ##' @param format `enum`  of `("degrees", "percent")` - Format for reporting the slope. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param precision `enum`  of `("FCELL", "CELL", "DCELL")` - Type of output aspect and slope layer. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .a `boolean` - Do not align the current region to the elevation layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .e `boolean` - Compute output at edges and near NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .n `boolean` - Create aspect as degrees clockwise from North (azimuth), with flat = -9999. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .a `boolean` - Do not align the current region to the elevation layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param .e `boolean` - Compute output at edges and near NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param .n `boolean` - Create aspect as degrees clockwise from North (azimuth), with flat = -9999. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
 ##' @param zscale `number` - Multiplicative factor to convert elevation units to meters. A numeric value.
 ##' @param min_slope `number` - Minimum slope val. (in percent) for which aspect is computed. A numeric value.
 ##' @param slope `rasterDestination` - Slope. Path for new raster layer.

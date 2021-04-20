@@ -26,19 +26,19 @@ grass7_i_aster_toar(
 
 \item{dayofyear}{\code{number} - Day of Year of satellite overpass (0-366). A numeric value.}
 
-\item{sun_elevation}{\code{number} - Sun elevation angle (degrees, < 90.0). A numeric value.}
+\item{sun_elevation}{\code{number} - Sun elevation angle (degrees,  90.0). A numeric value.}
 
-\item{.r}{\code{boolean} - Output is radiance (W/m2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.r}{\code{boolean} - Output is radiance (W/m2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
 
-\item{.a}{\code{boolean} - VNIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.a}{\code{boolean} - VNIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
 
-\item{.b}{\code{boolean} - SWIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - SWIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
-\item{.c}{\code{boolean} - VNIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - VNIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.d}{\code{boolean} - SWIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.d}{\code{boolean} - SWIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
 
-\item{.e}{\code{boolean} - SWIR is Low Gain 2. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - SWIR is Low Gain 2. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 

@@ -8,8 +8,8 @@
 ##' @param angle `number` - Angle of major axis in degrees. A numeric value.
 ##' @param side `enum`  of `("left", "right", "both")` - Side. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param tolerance `number` - Tolerance of arc polylines in map units. A numeric value.
-##' @param .r `boolean` - Make outside corners round. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Create buffer-like parallel lines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .r `boolean` - Make outside corners round. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .b `boolean` - Create buffer-like parallel lines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
 ##' @param output `vectorDestination` - Parallel lines. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

@@ -46,11 +46,11 @@ grass7_v_in_lidar(
 
 \item{limit}{\code{number} - Import only n points. A numeric value.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
 
-\item{.c}{\code{boolean} - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.c}{\code{boolean} - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
 
 \item{output}{\code{vectorDestination} - Lidar. Path for new vector layer.}
 

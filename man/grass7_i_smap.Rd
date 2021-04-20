@@ -26,7 +26,7 @@ grass7_i_smap(
 
 \item{blocksize}{\code{number} - Size of submatrix to process at one time. A numeric value.}
 
-\item{.m}{\code{boolean} - Use maximum likelihood estimation (instead of smap). 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.m}{\code{boolean} - Use maximum likelihood estimation (instead of smap). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
 \item{output}{\code{rasterDestination} - Classification. Path for new raster layer.}
 

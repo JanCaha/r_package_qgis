@@ -5,9 +5,9 @@
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param cover `raster` - Input cover raster layer. Path to a raster layer.
 ##' @param npoints `number` - The number of points to allocate. A numeric value.
-##' @param .z `boolean` - Generate points also for NULL category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .d `boolean` - Generate vector points as 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .z `boolean` - Generate points also for NULL category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .d `boolean` - Generate vector points as 3D points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
 ##' @param raster `rasterDestination` - Random raster. Path for new raster layer.
 ##' @param vector `vectorDestination` - Random vector. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

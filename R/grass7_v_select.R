@@ -8,9 +8,9 @@
 ##' @param btype `enum`  of `("point", "line", "boundary", "centroid", "area")` - Input layer (B) Type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param operator `enum`  of `("overlap", "equals", "disjoint", "intersect", "touches", "crosses", "within", "contains", "overlaps", "relate")` - Operator to use. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param relate `string` - Intersection Matrix Pattern used for 'relate' operator. String value.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .c `boolean` - Do not skip features without category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
-##' @param .r `boolean` - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param .c `boolean` - Do not skip features without category. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param .r `boolean` - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
 ##' @param output `vectorDestination` - Selected. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.

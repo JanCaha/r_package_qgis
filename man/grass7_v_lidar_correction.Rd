@@ -38,7 +38,7 @@ grass7_v_lidar_correction(
 
 \item{tcl}{\code{number} - Low threshold for terrain to object reclassification. A numeric value.}
 
-\item{.e}{\code{boolean} - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: {name}.}
+\item{.e}{\code{boolean} - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
 
 \item{output}{\code{vectorDestination} - Classified. Path for new vector layer.}
 
