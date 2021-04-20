@@ -32,28 +32,7 @@ You can install the released version of **qgis** from GitHub with:
 remotes::install_github("JanCaha/r_package_qgis")
 ```
 
-## Personal instalation
-
-If you want to install the package with your personal settings, including algorithms for your installed plugins etc. you can do so by downloading the repository and running following commands from the project.
-
-```{r, eval=FALSE}
-# install packages necessary to build the package code
-source("./build-package/install_save_deps.R")
-
-# install dependencies for the package
-remotes::install_deps(dependencies = TRUE)
-
-# update package description
-source("./build-package/update_Description.R")
-
-# build the package code and documentation
-# this takes rather long time (roughly 22 minutes for basic QGIS installation)
-source("./build-package/build_QGIS_functions.R")
-
-# check and install the package
-devtools::check()
-devtools::install()
-```
+The information about local installation are in a vignette `vignette("local_instalation")`.
 
 ## Functions names
 
