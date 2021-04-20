@@ -1,0 +1,35 @@
+---
+title: "Instalation based on local QGIS instance"
+author: "Jan Caha"
+date: "20 4 2021"
+output: html_document
+---
+
+## Personal instalation
+
+If you want to install the package with your personal settings, including algorithms for your installed plugins, providers etc. you can do so by downloading the repository and running following commands from the project.
+
+```{r, eval=FALSE}
+# install packages necessary to build the package code
+source("./build-package/install_save_deps.R")
+
+# install dependencies for the package
+remotes::install_deps(dependencies = TRUE)
+
+# update package description
+source("./build-package/update_Description.R")
+
+# build the package code and documentation
+# this takes rather long time (roughly 22 minutes for basic QGIS installation)
+source("./build-package/build_QGIS_functions.R")
+
+# check and install the package
+devtools::check()
+devtools::install()
+```
+
+The first script takes care of installing necessary packages to install **qgis** R package.
+
+The seconds scripts updates package **Description** with information about local **QGIS** installation.
+
+The third script actually builds the source code of the package based on information extracted from **QGIS** and then installs the package. Beware that this step may take quite some time (around 30 minutes for base **QGIS** instalation) but there is a progress bar to track the progress.
