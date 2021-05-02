@@ -1,3 +1,7 @@
+# qgis 1.0.0
+
+* add checks to verify that QGIS is available and the selected algorithm exists (because local QGIS installation can vary from the QGIS installation used to build the package)
+
 # qgis 0.17.0
 
 * update qgis
