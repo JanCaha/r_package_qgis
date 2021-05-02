@@ -19,6 +19,8 @@
 
 qgis_randompointsinlayerbounds <- function(INPUT = qgisprocess::qgis_default_value(), POINTS_NUMBER = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:randompointsinlayerbounds")
   output <- qgisprocess::qgis_run_algorithm("qgis:randompointsinlayerbounds",`INPUT` = INPUT, `POINTS_NUMBER` = POINTS_NUMBER, `MIN_DISTANCE` = MIN_DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

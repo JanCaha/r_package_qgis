@@ -20,6 +20,8 @@
 
 qgis_topologicalcoloring <- function(INPUT = qgisprocess::qgis_default_value(), MIN_COLORS = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), BALANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:topologicalcoloring")
   output <- qgisprocess::qgis_run_algorithm("qgis:topologicalcoloring",`INPUT` = INPUT, `MIN_COLORS` = MIN_COLORS, `MIN_DISTANCE` = MIN_DISTANCE, `BALANCE` = BALANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

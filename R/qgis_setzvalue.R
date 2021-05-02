@@ -18,6 +18,8 @@
 
 qgis_setzvalue <- function(INPUT = qgisprocess::qgis_default_value(), Z_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:setzvalue")
   output <- qgisprocess::qgis_run_algorithm("native:setzvalue",`INPUT` = INPUT, `Z_VALUE` = Z_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

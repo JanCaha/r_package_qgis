@@ -10,7 +10,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Merge
+##' * OUTPUT - outputVector - Merged
 ##'
 ##' @export
 ##' @md
@@ -18,6 +18,8 @@
 
 qgis_mergevectorlayers <- function(LAYERS = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:mergevectorlayers")
   output <- qgisprocess::qgis_run_algorithm("native:mergevectorlayers",`LAYERS` = LAYERS, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -13,7 +13,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Random point
+##' * OUTPUT - outputVector - Random points
 ##'
 ##' @export
 ##' @md
@@ -21,6 +21,8 @@
 
 qgis_randompointsinextent <- function(EXTENT = qgisprocess::qgis_default_value(), POINTS_NUMBER = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), MAX_ATTEMPTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:randompointsinextent")
   output <- qgisprocess::qgis_run_algorithm("native:randompointsinextent",`EXTENT` = EXTENT, `POINTS_NUMBER` = POINTS_NUMBER, `MIN_DISTANCE` = MIN_DISTANCE, `TARGET_CRS` = TARGET_CRS, `MAX_ATTEMPTS` = MAX_ATTEMPTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

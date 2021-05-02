@@ -20,6 +20,8 @@
 
 qgis_kmeansclustering <- function(INPUT = qgisprocess::qgis_default_value(), CLUSTERS = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), SIZE_FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:kmeansclustering")
   output <- qgisprocess::qgis_run_algorithm("native:kmeansclustering",`INPUT` = INPUT, `CLUSTERS` = CLUSTERS, `FIELD_NAME` = FIELD_NAME, `SIZE_FIELD_NAME` = SIZE_FIELD_NAME, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

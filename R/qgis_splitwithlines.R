@@ -18,6 +18,8 @@
 
 qgis_splitwithlines <- function(INPUT = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:splitwithlines")
   output <- qgisprocess::qgis_run_algorithm("native:splitwithlines",`INPUT` = INPUT, `LINES` = LINES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

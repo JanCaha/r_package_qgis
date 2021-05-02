@@ -19,6 +19,8 @@
 
 saga_closegaps <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:closegaps")
   output <- qgisprocess::qgis_run_algorithm("saga:closegaps",`INPUT` = INPUT, `MASK` = MASK, `THRESHOLD` = THRESHOLD, `RESULT` = RESULT,...)
 
   if (.complete_output) {

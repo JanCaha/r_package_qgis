@@ -19,6 +19,8 @@
 
 qgis_knearestconcavehull <- function(INPUT = qgisprocess::qgis_default_value(), KNEIGHBORS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:knearestconcavehull")
   output <- qgisprocess::qgis_run_algorithm("qgis:knearestconcavehull",`INPUT` = INPUT, `KNEIGHBORS` = KNEIGHBORS, `FIELD` = FIELD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -53,7 +53,7 @@ QGIS Algorithm provided by GRASS r.proj (grass7:r.proj)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Reprojected raste
+\item output - outputRaster - Reprojected raster
 }
 }
 }

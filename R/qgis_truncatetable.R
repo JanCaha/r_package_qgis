@@ -16,6 +16,8 @@
 
 qgis_truncatetable <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:truncatetable")
   output <- qgisprocess::qgis_run_algorithm("native:truncatetable",`INPUT` = INPUT,...)
 
   if (.complete_output) {

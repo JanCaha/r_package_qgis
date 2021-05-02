@@ -19,6 +19,8 @@
 
 saga_convertpointstolines <- function(POINTS = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), SEPARATE = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:convertpointstolines")
   output <- qgisprocess::qgis_run_algorithm("saga:convertpointstolines",`POINTS` = POINTS, `ORDER` = ORDER, `SEPARATE` = SEPARATE, `LINES` = LINES,...)
 
   if (.complete_output) {

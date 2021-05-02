@@ -21,6 +21,8 @@
 
 saga_crossclassificationandtabulation <- function(INPUT = qgisprocess::qgis_default_value(), INPUT2 = qgisprocess::qgis_default_value(), MAXNUMCLASS = qgisprocess::qgis_default_value(), RESULTGRID = qgisprocess::qgis_default_value(), RESULTTABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:crossclassificationandtabulation")
   output <- qgisprocess::qgis_run_algorithm("saga:crossclassificationandtabulation",`INPUT` = INPUT, `INPUT2` = INPUT2, `MAXNUMCLASS` = MAXNUMCLASS, `RESULTGRID` = RESULTGRID, `RESULTTABLE` = RESULTTABLE,...)
 
   if (.complete_output) {

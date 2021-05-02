@@ -22,6 +22,8 @@
 
 qgis_singlesidedbuffer <- function(INPUT = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), SIDE = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), JOIN_STYLE = qgisprocess::qgis_default_value(), MITER_LIMIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:singlesidedbuffer")
   output <- qgisprocess::qgis_run_algorithm("native:singlesidedbuffer",`INPUT` = INPUT, `DISTANCE` = DISTANCE, `SIDE` = SIDE, `SEGMENTS` = SEGMENTS, `JOIN_STYLE` = JOIN_STYLE, `MITER_LIMIT` = MITER_LIMIT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

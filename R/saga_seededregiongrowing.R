@@ -29,6 +29,8 @@
 
 saga_seededregiongrowing <- function(SEEDS = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), SIMILARITY = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), NEIGHBOUR = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), SIG_1 = qgisprocess::qgis_default_value(), SIG_2 = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), REFRESH = qgisprocess::qgis_default_value(), LEAFSIZE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:seededregiongrowing")
   output <- qgisprocess::qgis_run_algorithm("saga:seededregiongrowing",`SEEDS` = SEEDS, `FEATURES` = FEATURES, `SEGMENTS` = SEGMENTS, `SIMILARITY` = SIMILARITY, `TABLE` = TABLE, `NORMALIZE` = NORMALIZE, `NEIGHBOUR` = NEIGHBOUR, `METHOD` = METHOD, `SIG_1` = SIG_1, `SIG_2` = SIG_2, `THRESHOLD` = THRESHOLD, `REFRESH` = REFRESH, `LEAFSIZE` = LEAFSIZE,...)
 
   if (.complete_output) {

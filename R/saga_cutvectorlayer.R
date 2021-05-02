@@ -19,6 +19,8 @@
 
 saga_cutvectorlayer <- function(SHAPES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), POLYGONS_POLYGONS = qgisprocess::qgis_default_value(), CUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:cutvectorlayer")
   output <- qgisprocess::qgis_run_algorithm("saga:cutvectorlayer",`SHAPES` = SHAPES, `METHOD` = METHOD, `POLYGONS_POLYGONS` = POLYGONS_POLYGONS, `CUT` = CUT,...)
 
   if (.complete_output) {

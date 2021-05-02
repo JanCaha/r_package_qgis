@@ -27,6 +27,8 @@
 
 qgis_cellstackpercentrankfromvalue <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:cellstackpercentrankfromvalue")
   output <- qgisprocess::qgis_run_algorithm("native:cellstackpercentrankfromvalue",`INPUT` = INPUT, `METHOD` = METHOD, `VALUE` = VALUE, `IGNORE_NODATA` = IGNORE_NODATA, `REFERENCE_LAYER` = REFERENCE_LAYER, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

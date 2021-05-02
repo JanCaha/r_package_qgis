@@ -18,6 +18,8 @@
 
 saga_fieldstatistics <- function(TABLE = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:fieldstatistics")
   output <- qgisprocess::qgis_run_algorithm("saga:fieldstatistics",`TABLE` = TABLE, `FIELDS` = FIELDS, `STATISTICS` = STATISTICS,...)
 
   if (.complete_output) {

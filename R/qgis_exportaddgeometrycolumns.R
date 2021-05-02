@@ -18,6 +18,8 @@
 
 qgis_exportaddgeometrycolumns <- function(INPUT = qgisprocess::qgis_default_value(), CALC_METHOD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:exportaddgeometrycolumns")
   output <- qgisprocess::qgis_run_algorithm("qgis:exportaddgeometrycolumns",`INPUT` = INPUT, `CALC_METHOD` = CALC_METHOD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

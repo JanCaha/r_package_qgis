@@ -19,6 +19,8 @@
 
 saga_convertlinestopoints <- function(LINES = qgisprocess::qgis_default_value(), ADD = qgisprocess::qgis_default_value(), DIST = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:convertlinestopoints")
   output <- qgisprocess::qgis_run_algorithm("saga:convertlinestopoints",`LINES` = LINES, `ADD` = ADD, `DIST` = DIST, `POINTS` = POINTS,...)
 
   if (.complete_output) {

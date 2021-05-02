@@ -32,6 +32,8 @@
 
 grass7_r_report <- function(map = qgisprocess::qgis_default_value(), units = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), page_length = qgisprocess::qgis_default_value(), page_width = qgisprocess::qgis_default_value(), nsteps = qgisprocess::qgis_default_value(), sort = qgisprocess::qgis_default_value(), .h = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.report")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.report",`map` = map, `units` = units, `null_value` = null_value, `page_length` = page_length, `page_width` = page_width, `nsteps` = nsteps, `sort` = sort, `-h` = .h, `-f` = .f, `-e` = .e, `-n` = .n, `-a` = .a, `-c` = .c, `-i` = .i, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {

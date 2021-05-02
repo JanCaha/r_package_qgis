@@ -18,6 +18,8 @@
 
 saga_diurnalanisotropicheating <- function(DEM = qgisprocess::qgis_default_value(), ALPHA_MAX = qgisprocess::qgis_default_value(), DAH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:diurnalanisotropicheating")
   output <- qgisprocess::qgis_run_algorithm("saga:diurnalanisotropicheating",`DEM` = DEM, `ALPHA_MAX` = ALPHA_MAX, `DAH` = DAH,...)
 
   if (.complete_output) {

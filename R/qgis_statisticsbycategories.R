@@ -19,6 +19,8 @@
 
 qgis_statisticsbycategories <- function(INPUT = qgisprocess::qgis_default_value(), VALUES_FIELD_NAME = qgisprocess::qgis_default_value(), CATEGORIES_FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:statisticsbycategories")
   output <- qgisprocess::qgis_run_algorithm("qgis:statisticsbycategories",`INPUT` = INPUT, `VALUES_FIELD_NAME` = VALUES_FIELD_NAME, `CATEGORIES_FIELD_NAME` = CATEGORIES_FIELD_NAME, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

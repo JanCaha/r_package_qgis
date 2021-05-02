@@ -29,7 +29,7 @@ QGIS Algorithm provided by QGIS (native c++) Merge vector layers (native:mergeve
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Merge
+\item OUTPUT - outputVector - Merged
 }
 }
 }

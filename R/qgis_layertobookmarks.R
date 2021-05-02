@@ -19,6 +19,8 @@
 
 qgis_layertobookmarks <- function(INPUT = qgisprocess::qgis_default_value(), DESTINATION = qgisprocess::qgis_default_value(), NAME_EXPRESSION = qgisprocess::qgis_default_value(), GROUP_EXPRESSION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:layertobookmarks")
   output <- qgisprocess::qgis_run_algorithm("native:layertobookmarks",`INPUT` = INPUT, `DESTINATION` = DESTINATION, `NAME_EXPRESSION` = NAME_EXPRESSION, `GROUP_EXPRESSION` = GROUP_EXPRESSION,...)
 
   if (.complete_output) {

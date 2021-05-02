@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Converte
+##' * OUTPUT - outputRaster - Converted
 ##'
 ##' @export
 ##' @md
@@ -23,6 +23,8 @@
 
 gdal_translate <- function(INPUT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), COPY_SUBDATASETS = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("gdal:translate")
   output <- qgisprocess::qgis_run_algorithm("gdal:translate",`INPUT` = INPUT, `TARGET_CRS` = TARGET_CRS, `NODATA` = NODATA, `COPY_SUBDATASETS` = COPY_SUBDATASETS, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

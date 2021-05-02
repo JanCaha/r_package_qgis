@@ -22,6 +22,8 @@
 
 qgis_relief <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), AUTO_COLORS = qgisprocess::qgis_default_value(), COLORS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), FREQUENCY_DISTRIBUTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:relief")
   output <- qgisprocess::qgis_run_algorithm("qgis:relief",`INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `AUTO_COLORS` = AUTO_COLORS, `COLORS` = COLORS, `OUTPUT` = OUTPUT, `FREQUENCY_DISTRIBUTION` = FREQUENCY_DISTRIBUTION,...)
 
   if (.complete_output) {

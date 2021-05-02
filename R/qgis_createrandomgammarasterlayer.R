@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output raste
+##' * OUTPUT - outputRaster - Output raster
 ##'
 ##' @export
 ##' @md
@@ -22,6 +22,8 @@
 
 qgis_createrandomgammarasterlayer <- function(EXTENT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT_TYPE = qgisprocess::qgis_default_value(), ALPHA = qgisprocess::qgis_default_value(), BETA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:createrandomgammarasterlayer")
   output <- qgisprocess::qgis_run_algorithm("native:createrandomgammarasterlayer",`EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `ALPHA` = ALPHA, `BETA` = BETA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

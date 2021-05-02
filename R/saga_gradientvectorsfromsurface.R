@@ -22,6 +22,8 @@
 
 saga_gradientvectorsfromsurface <- function(SURFACE = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), SIZE_MIN = qgisprocess::qgis_default_value(), SIZE_MAX = qgisprocess::qgis_default_value(), AGGR = qgisprocess::qgis_default_value(), STYLE = qgisprocess::qgis_default_value(), VECTORS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:gradientvectorsfromsurface")
   output <- qgisprocess::qgis_run_algorithm("saga:gradientvectorsfromsurface",`SURFACE` = SURFACE, `STEP` = STEP, `SIZE_MIN` = SIZE_MIN, `SIZE_MAX` = SIZE_MAX, `AGGR` = AGGR, `STYLE` = STYLE, `VECTORS` = VECTORS,...)
 
   if (.complete_output) {

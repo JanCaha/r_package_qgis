@@ -18,6 +18,8 @@
 
 saga_polygoncentroids <- function(POLYGONS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CENTROIDS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:polygoncentroids")
   output <- qgisprocess::qgis_run_algorithm("saga:polygoncentroids",`POLYGONS` = POLYGONS, `METHOD` = METHOD, `CENTROIDS` = CENTROIDS,...)
 
   if (.complete_output) {

@@ -26,6 +26,8 @@
 
 qgis_cellstatistics <- function(INPUT = qgisprocess::qgis_default_value(), STATISTIC = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:cellstatistics")
   output <- qgisprocess::qgis_run_algorithm("native:cellstatistics",`INPUT` = INPUT, `STATISTIC` = STATISTIC, `IGNORE_NODATA` = IGNORE_NODATA, `REFERENCE_LAYER` = REFERENCE_LAYER, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

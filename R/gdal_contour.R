@@ -25,6 +25,8 @@
 
 gdal_contour <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), INTERVAL = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), CREATE_3D = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OFFSET = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("gdal:contour")
   output <- qgisprocess::qgis_run_algorithm("gdal:contour",`INPUT` = INPUT, `BAND` = BAND, `INTERVAL` = INTERVAL, `FIELD_NAME` = FIELD_NAME, `CREATE_3D` = CREATE_3D, `IGNORE_NODATA` = IGNORE_NODATA, `NODATA` = NODATA, `OFFSET` = OFFSET, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -23,6 +23,8 @@
 
 saga_landsurfacetemperature <- function(DEM = qgisprocess::qgis_default_value(), SWR = qgisprocess::qgis_default_value(), LAI = qgisprocess::qgis_default_value(), Z_REFERENCE = qgisprocess::qgis_default_value(), T_REFERENCE = qgisprocess::qgis_default_value(), T_GRADIENT = qgisprocess::qgis_default_value(), C_FACTOR = qgisprocess::qgis_default_value(), LST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:landsurfacetemperature")
   output <- qgisprocess::qgis_run_algorithm("saga:landsurfacetemperature",`DEM` = DEM, `SWR` = SWR, `LAI` = LAI, `Z_REFERENCE` = Z_REFERENCE, `T_REFERENCE` = T_REFERENCE, `T_GRADIENT` = T_GRADIENT, `C_FACTOR` = C_FACTOR, `LST` = LST,...)
 
   if (.complete_output) {

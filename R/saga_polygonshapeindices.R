@@ -17,6 +17,8 @@
 
 saga_polygonshapeindices <- function(SHAPES = qgisprocess::qgis_default_value(), INDEX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:polygonshapeindices")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonshapeindices",`SHAPES` = SHAPES, `INDEX` = INDEX,...)
 
   if (.complete_output) {

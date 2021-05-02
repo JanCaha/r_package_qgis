@@ -21,6 +21,8 @@
 
 qgis_writevectortiles_xyz <- function(OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(), XYZ_TEMPLATE = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), MIN_ZOOM = qgisprocess::qgis_default_value(), MAX_ZOOM = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:writevectortiles_xyz")
   output <- qgisprocess::qgis_run_algorithm("native:writevectortiles_xyz",`OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY, `XYZ_TEMPLATE` = XYZ_TEMPLATE, `LAYERS` = LAYERS, `MIN_ZOOM` = MIN_ZOOM, `MAX_ZOOM` = MAX_ZOOM, `EXTENT` = EXTENT,...)
 
   if (.complete_output) {

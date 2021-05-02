@@ -19,6 +19,8 @@
 
 qgis_vectorlayerscatterplot <- function(INPUT = qgisprocess::qgis_default_value(), XFIELD = qgisprocess::qgis_default_value(), YFIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:vectorlayerscatterplot")
   output <- qgisprocess::qgis_run_algorithm("qgis:vectorlayerscatterplot",`INPUT` = INPUT, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

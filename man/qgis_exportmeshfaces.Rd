@@ -38,7 +38,7 @@ QGIS Algorithm provided by QGIS (native c++) Export mesh faces (native:exportmes
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Output vector laye
+\item OUTPUT - outputVector - Output vector layer
 }
 }
 }

@@ -20,6 +20,8 @@
 
 qgis_snapgeometries <- function(INPUT = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), BEHAVIOR = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:snapgeometries")
   output <- qgisprocess::qgis_run_algorithm("native:snapgeometries",`INPUT` = INPUT, `REFERENCE_LAYER` = REFERENCE_LAYER, `TOLERANCE` = TOLERANCE, `BEHAVIOR` = BEHAVIOR, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

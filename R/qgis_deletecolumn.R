@@ -18,6 +18,8 @@
 
 qgis_deletecolumn <- function(INPUT = qgisprocess::qgis_default_value(), COLUMN = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:deletecolumn")
   output <- qgisprocess::qgis_run_algorithm("native:deletecolumn",`INPUT` = INPUT, `COLUMN` = COLUMN, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

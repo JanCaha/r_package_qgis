@@ -10,7 +10,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Outpu
+##' * OUTPUT - outputVector - Output
 ##'
 ##' @export
 ##' @md
@@ -18,6 +18,8 @@
 
 qgis_bookmarkstolayer <- function(SOURCE = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:bookmarkstolayer")
   output <- qgisprocess::qgis_run_algorithm("native:bookmarkstolayer",`SOURCE` = SOURCE, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

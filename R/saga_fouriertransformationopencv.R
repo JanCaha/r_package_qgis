@@ -19,6 +19,8 @@
 
 saga_fouriertransformationopencv <- function(INPUT = qgisprocess::qgis_default_value(), REAL = qgisprocess::qgis_default_value(), IMAG = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:fouriertransformationopencv")
   output <- qgisprocess::qgis_run_algorithm("saga:fouriertransformationopencv",`INPUT` = INPUT, `REAL` = REAL, `IMAG` = IMAG,...)
 
   if (.complete_output) {

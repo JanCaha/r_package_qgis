@@ -20,6 +20,8 @@
 
 qgis_scatter3dplot <- function(INPUT = qgisprocess::qgis_default_value(), XFIELD = qgisprocess::qgis_default_value(), YFIELD = qgisprocess::qgis_default_value(), ZFIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:scatter3dplot")
   output <- qgisprocess::qgis_run_algorithm("qgis:scatter3dplot",`INPUT` = INPUT, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `ZFIELD` = ZFIELD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

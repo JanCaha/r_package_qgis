@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Filter vertices by Z value (native:
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Filtere
+\item OUTPUT - outputVector - Filtered
 }
 }
 }

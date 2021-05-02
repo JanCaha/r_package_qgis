@@ -27,6 +27,8 @@
 
 saga_aggregatepointobservations <- function(REFERENCE = qgisprocess::qgis_default_value(), REFERENCE_ID = qgisprocess::qgis_default_value(), OBSERVATIONS = qgisprocess::qgis_default_value(), X = qgisprocess::qgis_default_value(), Y = qgisprocess::qgis_default_value(), TRACK = qgisprocess::qgis_default_value(), DATE = qgisprocess::qgis_default_value(), TIME = qgisprocess::qgis_default_value(), PARAMETER = qgisprocess::qgis_default_value(), EPS_TIME = qgisprocess::qgis_default_value(), EPS_SPACE = qgisprocess::qgis_default_value(), AGGREGATED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:aggregatepointobservations")
   output <- qgisprocess::qgis_run_algorithm("saga:aggregatepointobservations",`REFERENCE` = REFERENCE, `REFERENCE_ID` = REFERENCE_ID, `OBSERVATIONS` = OBSERVATIONS, `X` = X, `Y` = Y, `TRACK` = TRACK, `DATE` = DATE, `TIME` = TIME, `PARAMETER` = PARAMETER, `EPS_TIME` = EPS_TIME, `EPS_SPACE` = EPS_SPACE, `AGGREGATED` = AGGREGATED,...)
 
   if (.complete_output) {

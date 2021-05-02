@@ -20,6 +20,8 @@
 
 qgis_distancetonearesthublinetohub <- function(INPUT = qgisprocess::qgis_default_value(), HUBS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), UNIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:distancetonearesthublinetohub")
   output <- qgisprocess::qgis_run_algorithm("qgis:distancetonearesthublinetohub",`INPUT` = INPUT, `HUBS` = HUBS, `FIELD` = FIELD, `UNIT` = UNIT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -17,6 +17,8 @@
 
 saga_minimumdistanceanalysis <- function(POINTS = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:minimumdistanceanalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:minimumdistanceanalysis",`POINTS` = POINTS, `TABLE` = TABLE,...)
 
   if (.complete_output) {

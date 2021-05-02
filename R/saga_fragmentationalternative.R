@@ -33,6 +33,8 @@
 
 saga_fragmentationalternative <- function(CLASSES = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(), NEIGHBORHOOD_MIN = qgisprocess::qgis_default_value(), NEIGHBORHOOD_MAX = qgisprocess::qgis_default_value(), AGGREGATION = qgisprocess::qgis_default_value(), BORDER = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), DENSITY_MIN = qgisprocess::qgis_default_value(), DENSITY_INT = qgisprocess::qgis_default_value(), LEVEL_GROW = qgisprocess::qgis_default_value(), DENSITY_MEAN = qgisprocess::qgis_default_value(), DENSITY = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(), FRAGSTATS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:fragmentationalternative")
   output <- qgisprocess::qgis_run_algorithm("saga:fragmentationalternative",`CLASSES` = CLASSES, `CLASS` = CLASS, `NEIGHBORHOOD_MIN` = NEIGHBORHOOD_MIN, `NEIGHBORHOOD_MAX` = NEIGHBORHOOD_MAX, `AGGREGATION` = AGGREGATION, `BORDER` = BORDER, `WEIGHT` = WEIGHT, `DENSITY_MIN` = DENSITY_MIN, `DENSITY_INT` = DENSITY_INT, `LEVEL_GROW` = LEVEL_GROW, `DENSITY_MEAN` = DENSITY_MEAN, `DENSITY` = DENSITY, `CONNECTIVITY` = CONNECTIVITY, `FRAGMENTATION` = FRAGMENTATION, `FRAGSTATS` = FRAGSTATS,...)
 
   if (.complete_output) {

@@ -13,7 +13,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output raste
+##' * OUTPUT - outputRaster - Output raster
 ##'
 ##' @export
 ##' @md
@@ -21,6 +21,8 @@
 
 qgis_createrandomgeometricrasterlayer <- function(EXTENT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT_TYPE = qgisprocess::qgis_default_value(), PROBABILITY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:createrandomgeometricrasterlayer")
   output <- qgisprocess::qgis_run_algorithm("native:createrandomgeometricrasterlayer",`EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `PROBABILITY` = PROBABILITY, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

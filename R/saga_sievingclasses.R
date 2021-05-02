@@ -21,6 +21,8 @@
 
 saga_sievingclasses <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ALL = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:sievingclasses")
   output <- qgisprocess::qgis_run_algorithm("saga:sievingclasses",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `MODE` = MODE, `THRESHOLD` = THRESHOLD, `ALL` = ALL, `CLASS` = CLASS,...)
 
   if (.complete_output) {

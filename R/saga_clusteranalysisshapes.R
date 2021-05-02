@@ -24,6 +24,8 @@
 
 saga_clusteranalysisshapes <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), CLUSTER = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NCLUSTER = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:clusteranalysisshapes")
   output <- qgisprocess::qgis_run_algorithm("saga:clusteranalysisshapes",`INPUT` = INPUT, `RESULT` = RESULT, `FIELDS` = FIELDS, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS, `METHOD` = METHOD, `NCLUSTER` = NCLUSTER, `NORMALISE` = NORMALISE,...)
 
   if (.complete_output) {

@@ -21,6 +21,8 @@
 
 saga_createpolygonsgraticule <- function(EXTENT = qgisprocess::qgis_default_value(), EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX = qgisprocess::qgis_default_value(), DIVISION_X = qgisprocess::qgis_default_value(), DIVISION_Y = qgisprocess::qgis_default_value(), ALIGNMENT = qgisprocess::qgis_default_value(), GRATICULE_RECT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:createpolygonsgraticule")
   output <- qgisprocess::qgis_run_algorithm("saga:createpolygonsgraticule",`EXTENT` = EXTENT, `EXTENT_X_MIN EXTENT_X_MAX EXTENT_Y_MIN EXTENT_Y_MAX` = EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX, `DIVISION_X` = DIVISION_X, `DIVISION_Y` = DIVISION_Y, `ALIGNMENT` = ALIGNMENT, `GRATICULE_RECT` = GRATICULE_RECT,...)
 
   if (.complete_output) {

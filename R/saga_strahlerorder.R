@@ -17,6 +17,8 @@
 
 saga_strahlerorder <- function(DEM = qgisprocess::qgis_default_value(), STRAHLER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:strahlerorder")
   output <- qgisprocess::qgis_run_algorithm("saga:strahlerorder",`DEM` = DEM, `STRAHLER` = STRAHLER,...)
 
   if (.complete_output) {

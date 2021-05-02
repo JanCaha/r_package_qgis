@@ -18,6 +18,8 @@
 
 saga_rasterdifference <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:rasterdifference")
   output <- qgisprocess::qgis_run_algorithm("saga:rasterdifference",`A` = A, `B` = B, `C` = C,...)
 
   if (.complete_output) {

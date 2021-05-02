@@ -36,7 +36,7 @@ QGIS Algorithm provided by QGIS (native c++) Print layout map extent to layer (n
 \item WIDTH - outputNumber - Map width
 \item HEIGHT - outputNumber - Map height
 \item SCALE - outputNumber - Map scale
-\item ROTATION - outputNumber - Map rotatio
+\item ROTATION - outputNumber - Map rotation
 }
 }
 }

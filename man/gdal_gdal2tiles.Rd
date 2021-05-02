@@ -68,7 +68,7 @@ QGIS Algorithm provided by GDAL gdal2tiles (gdal:gdal2tiles)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputFolder - Output director
+\item OUTPUT - outputFolder - Output directory
 }
 }
 }

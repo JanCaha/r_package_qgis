@@ -19,6 +19,8 @@
 
 qgis_extendlines <- function(INPUT = qgisprocess::qgis_default_value(), START_DISTANCE = qgisprocess::qgis_default_value(), END_DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:extendlines")
   output <- qgisprocess::qgis_run_algorithm("native:extendlines",`INPUT` = INPUT, `START_DISTANCE` = START_DISTANCE, `END_DISTANCE` = END_DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

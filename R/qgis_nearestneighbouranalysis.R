@@ -22,6 +22,8 @@
 
 qgis_nearestneighbouranalysis <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:nearestneighbouranalysis")
   output <- qgisprocess::qgis_run_algorithm("native:nearestneighbouranalysis",`INPUT` = INPUT, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
 
   if (.complete_output) {

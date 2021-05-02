@@ -25,6 +25,8 @@
 
 saga_diffusivehillslopeevolutionadi <- function(DEM = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), UPDATE = qgisprocess::qgis_default_value(), KAPPA = qgisprocess::qgis_default_value(), DURATION = qgisprocess::qgis_default_value(), TIMESTEP = qgisprocess::qgis_default_value(), DTIME = qgisprocess::qgis_default_value(), MODEL = qgisprocess::qgis_default_value(), DIFF = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:diffusivehillslopeevolutionadi")
   output <- qgisprocess::qgis_run_algorithm("saga:diffusivehillslopeevolutionadi",`DEM` = DEM, `CHANNELS` = CHANNELS, `UPDATE` = UPDATE, `KAPPA` = KAPPA, `DURATION` = DURATION, `TIMESTEP` = TIMESTEP, `DTIME` = DTIME, `MODEL` = MODEL, `DIFF` = DIFF,...)
 
   if (.complete_output) {

@@ -53,7 +53,7 @@ QGIS Algorithm provided by GRASS v.in.wfs (grass7:v.in.wfs)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Converte
+\item output - outputVector - Converted
 }
 }
 }

@@ -19,6 +19,8 @@
 
 saga_addpolygonattributestopoints <- function(INPUT = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:addpolygonattributestopoints")
   output <- qgisprocess::qgis_run_algorithm("saga:addpolygonattributestopoints",`INPUT` = INPUT, `POLYGONS` = POLYGONS, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

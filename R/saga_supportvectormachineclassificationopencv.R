@@ -28,6 +28,8 @@
 
 saga_supportvectormachineclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), SVM_TYPE = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), NU = qgisprocess::qgis_default_value(), P = qgisprocess::qgis_default_value(), KERNEL = qgisprocess::qgis_default_value(), COEF0 = qgisprocess::qgis_default_value(), DEGREE = qgisprocess::qgis_default_value(), GAMMA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:supportvectormachineclassificationopencv")
   output <- qgisprocess::qgis_run_algorithm("saga:supportvectormachineclassificationopencv",`FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `SVM_TYPE` = SVM_TYPE, `C` = C, `NU` = NU, `P` = P, `KERNEL` = KERNEL, `COEF0` = COEF0, `DEGREE` = DEGREE, `GAMMA` = GAMMA,...)
 
   if (.complete_output) {

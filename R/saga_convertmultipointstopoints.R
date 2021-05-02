@@ -17,6 +17,8 @@
 
 saga_convertmultipointstopoints <- function(MULTIPOINTS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:convertmultipointstopoints")
   output <- qgisprocess::qgis_run_algorithm("saga:convertmultipointstopoints",`MULTIPOINTS` = MULTIPOINTS, `POINTS` = POINTS,...)
 
   if (.complete_output) {

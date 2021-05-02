@@ -19,6 +19,8 @@
 
 saga_convergenceindex <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:convergenceindex")
   output <- qgisprocess::qgis_run_algorithm("saga:convergenceindex",`ELEVATION` = ELEVATION, `METHOD` = METHOD, `NEIGHBOURS` = NEIGHBOURS, `RESULT` = RESULT,...)
 
   if (.complete_output) {

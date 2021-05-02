@@ -28,6 +28,8 @@
 
 qgis_joinattributestable <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), INPUT_2 = qgisprocess::qgis_default_value(), FIELD_2 = qgisprocess::qgis_default_value(), FIELDS_TO_COPY = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DISCARD_NONMATCHING = qgisprocess::qgis_default_value(), PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), NON_MATCHING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:joinattributestable")
   output <- qgisprocess::qgis_run_algorithm("native:joinattributestable",`INPUT` = INPUT, `FIELD` = FIELD, `INPUT_2` = INPUT_2, `FIELD_2` = FIELD_2, `FIELDS_TO_COPY` = FIELDS_TO_COPY, `METHOD` = METHOD, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `PREFIX` = PREFIX, `OUTPUT` = OUTPUT, `NON_MATCHING` = NON_MATCHING,...)
 
   if (.complete_output) {

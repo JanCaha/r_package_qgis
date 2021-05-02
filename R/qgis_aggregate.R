@@ -19,6 +19,8 @@
 
 qgis_aggregate <- function(INPUT = qgisprocess::qgis_default_value(), GROUP_BY = qgisprocess::qgis_default_value(), AGGREGATES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:aggregate")
   output <- qgisprocess::qgis_run_algorithm("native:aggregate",`INPUT` = INPUT, `GROUP_BY` = GROUP_BY, `AGGREGATES` = AGGREGATES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -20,6 +20,8 @@
 
 saga_convexhull <- function(SHAPES = qgisprocess::qgis_default_value(), POLYPOINTS = qgisprocess::qgis_default_value(), HULLS = qgisprocess::qgis_default_value(), BOXES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:convexhull")
   output <- qgisprocess::qgis_run_algorithm("saga:convexhull",`SHAPES` = SHAPES, `POLYPOINTS` = POLYPOINTS, `HULLS` = HULLS, `BOXES` = BOXES,...)
 
   if (.complete_output) {

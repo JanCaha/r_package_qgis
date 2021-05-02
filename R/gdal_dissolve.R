@@ -26,6 +26,8 @@
 
 gdal_dissolve <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), GEOMETRY = qgisprocess::qgis_default_value(), EXPLODE_COLLECTIONS = qgisprocess::qgis_default_value(), KEEP_ATTRIBUTES = qgisprocess::qgis_default_value(), COUNT_FEATURES = qgisprocess::qgis_default_value(), COMPUTE_AREA = qgisprocess::qgis_default_value(), COMPUTE_STATISTICS = qgisprocess::qgis_default_value(), STATISTICS_ATTRIBUTE = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("gdal:dissolve")
   output <- qgisprocess::qgis_run_algorithm("gdal:dissolve",`INPUT` = INPUT, `FIELD` = FIELD, `GEOMETRY` = GEOMETRY, `EXPLODE_COLLECTIONS` = EXPLODE_COLLECTIONS, `KEEP_ATTRIBUTES` = KEEP_ATTRIBUTES, `COUNT_FEATURES` = COUNT_FEATURES, `COMPUTE_AREA` = COMPUTE_AREA, `COMPUTE_STATISTICS` = COMPUTE_STATISTICS, `STATISTICS_ATTRIBUTE` = STATISTICS_ATTRIBUTE, `OPTIONS` = OPTIONS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

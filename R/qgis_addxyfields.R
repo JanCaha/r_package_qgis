@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Added field
+##' * OUTPUT - outputVector - Added fields
 ##'
 ##' @export
 ##' @md
@@ -19,6 +19,8 @@
 
 qgis_addxyfields <- function(INPUT = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:addxyfields")
   output <- qgisprocess::qgis_run_algorithm("native:addxyfields",`INPUT` = INPUT, `CRS` = CRS, `PREFIX` = PREFIX, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

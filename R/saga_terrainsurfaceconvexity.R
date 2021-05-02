@@ -26,6 +26,8 @@
 
 saga_terrainsurfaceconvexity <- function(DEM = qgisprocess::qgis_default_value(), CONVEXITY = qgisprocess::qgis_default_value(), KERNEL = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), EPSILON = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:terrainsurfaceconvexity")
   output <- qgisprocess::qgis_run_algorithm("saga:terrainsurfaceconvexity",`DEM` = DEM, `CONVEXITY` = CONVEXITY, `KERNEL` = KERNEL, `TYPE` = TYPE, `EPSILON` = EPSILON, `SCALE` = SCALE, `METHOD` = METHOD, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH,...)
 
   if (.complete_output) {

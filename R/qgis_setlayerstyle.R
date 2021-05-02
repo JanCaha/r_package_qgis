@@ -17,6 +17,8 @@
 
 qgis_setlayerstyle <- function(INPUT = qgisprocess::qgis_default_value(), STYLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:setlayerstyle")
   output <- qgisprocess::qgis_run_algorithm("native:setlayerstyle",`INPUT` = INPUT, `STYLE` = STYLE,...)
 
   if (.complete_output) {

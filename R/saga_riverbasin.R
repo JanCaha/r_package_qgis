@@ -39,6 +39,8 @@
 
 saga_riverbasin <- function(INPUT = qgisprocess::qgis_default_value(), INPUT2 = qgisprocess::qgis_default_value(), INPUT3 = qgisprocess::qgis_default_value(), WCons = qgisprocess::qgis_default_value(), WCons2 = qgisprocess::qgis_default_value(), OUTPUT2 = qgisprocess::qgis_default_value(), OUTPUT3 = qgisprocess::qgis_default_value(), OUTPUT4 = qgisprocess::qgis_default_value(), OUTPUT5 = qgisprocess::qgis_default_value(), OUTPUT6 = qgisprocess::qgis_default_value(), OUTPUT7 = qgisprocess::qgis_default_value(), OUTPUT8 = qgisprocess::qgis_default_value(), OUTPUT9 = qgisprocess::qgis_default_value(), pCr = qgisprocess::qgis_default_value(), nCr = qgisprocess::qgis_default_value(), EnfVmax = qgisprocess::qgis_default_value(), VTresh = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:riverbasin")
   output <- qgisprocess::qgis_run_algorithm("saga:riverbasin",`INPUT` = INPUT, `INPUT2` = INPUT2, `INPUT3` = INPUT3, `WCons` = WCons, `WCons2` = WCons2, `OUTPUT2` = OUTPUT2, `OUTPUT3` = OUTPUT3, `OUTPUT4` = OUTPUT4, `OUTPUT5` = OUTPUT5, `OUTPUT6` = OUTPUT6, `OUTPUT7` = OUTPUT7, `OUTPUT8` = OUTPUT8, `OUTPUT9` = OUTPUT9, `pCr` = pCr, `nCr` = nCr, `EnfVmax` = EnfVmax, `VTresh` = VTresh,...)
 
   if (.complete_output) {

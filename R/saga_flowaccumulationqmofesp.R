@@ -19,6 +19,8 @@
 
 saga_flowaccumulationqmofesp <- function(DEM = qgisprocess::qgis_default_value(), PREPROC = qgisprocess::qgis_default_value(), DZFILL = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:flowaccumulationqmofesp")
   output <- qgisprocess::qgis_run_algorithm("saga:flowaccumulationqmofesp",`DEM` = DEM, `PREPROC` = PREPROC, `DZFILL` = DZFILL, `FLOW` = FLOW,...)
 
   if (.complete_output) {

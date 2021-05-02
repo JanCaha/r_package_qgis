@@ -17,6 +17,8 @@
 
 qgis_promotetomulti <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:promotetomulti")
   output <- qgisprocess::qgis_run_algorithm("native:promotetomulti",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

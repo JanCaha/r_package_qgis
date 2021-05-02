@@ -24,6 +24,8 @@
 
 saga_transformvectorlayer <- function(IN = qgisprocess::qgis_default_value(), DX = qgisprocess::qgis_default_value(), DY = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), SCALEX = qgisprocess::qgis_default_value(), SCALEY = qgisprocess::qgis_default_value(), ANCHORX = qgisprocess::qgis_default_value(), ANCHORY = qgisprocess::qgis_default_value(), OUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:transformvectorlayer")
   output <- qgisprocess::qgis_run_algorithm("saga:transformvectorlayer",`IN` = IN, `DX` = DX, `DY` = DY, `ANGLE` = ANGLE, `SCALEX` = SCALEX, `SCALEY` = SCALEY, `ANCHORX` = ANCHORX, `ANCHORY` = ANCHORY, `OUT` = OUT,...)
 
   if (.complete_output) {

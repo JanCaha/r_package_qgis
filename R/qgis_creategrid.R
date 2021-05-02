@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Gri
+##' * OUTPUT - outputVector - Grid
 ##'
 ##' @export
 ##' @md
@@ -23,6 +23,8 @@
 
 qgis_creategrid <- function(TYPE = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), HSPACING = qgisprocess::qgis_default_value(), VSPACING = qgisprocess::qgis_default_value(), HOVERLAY = qgisprocess::qgis_default_value(), VOVERLAY = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:creategrid")
   output <- qgisprocess::qgis_run_algorithm("native:creategrid",`TYPE` = TYPE, `EXTENT` = EXTENT, `HSPACING` = HSPACING, `VSPACING` = VSPACING, `HOVERLAY` = HOVERLAY, `VOVERLAY` = VOVERLAY, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

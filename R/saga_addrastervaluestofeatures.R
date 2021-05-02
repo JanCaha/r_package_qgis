@@ -19,6 +19,8 @@
 
 saga_addrastervaluestofeatures <- function(SHAPES = qgisprocess::qgis_default_value(), GRIDS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:addrastervaluestofeatures")
   output <- qgisprocess::qgis_run_algorithm("saga:addrastervaluestofeatures",`SHAPES` = SHAPES, `GRIDS` = GRIDS, `RESAMPLING` = RESAMPLING, `RESULT` = RESULT,...)
 
   if (.complete_output) {

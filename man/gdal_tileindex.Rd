@@ -44,7 +44,7 @@ QGIS Algorithm provided by GDAL Tile index (gdal:tileindex)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Tile inde
+\item OUTPUT - outputVector - Tile index
 }
 }
 }

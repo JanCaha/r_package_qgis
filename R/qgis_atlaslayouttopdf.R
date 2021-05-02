@@ -29,6 +29,8 @@
 
 qgis_atlaslayouttopdf <- function(LAYOUT = qgisprocess::qgis_default_value(), COVERAGE_LAYER = qgisprocess::qgis_default_value(), FILTER_EXPRESSION = qgisprocess::qgis_default_value(), SORTBY_EXPRESSION = qgisprocess::qgis_default_value(), SORTBY_REVERSE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), FORCE_VECTOR = qgisprocess::qgis_default_value(), GEOREFERENCE = qgisprocess::qgis_default_value(), INCLUDE_METADATA = qgisprocess::qgis_default_value(), DISABLE_TILED = qgisprocess::qgis_default_value(), SIMPLIFY = qgisprocess::qgis_default_value(), TEXT_FORMAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:atlaslayouttopdf")
   output <- qgisprocess::qgis_run_algorithm("native:atlaslayouttopdf",`LAYOUT` = LAYOUT, `COVERAGE_LAYER` = COVERAGE_LAYER, `FILTER_EXPRESSION` = FILTER_EXPRESSION, `SORTBY_EXPRESSION` = SORTBY_EXPRESSION, `SORTBY_REVERSE` = SORTBY_REVERSE, `OUTPUT` = OUTPUT, `LAYERS` = LAYERS, `DPI` = DPI, `FORCE_VECTOR` = FORCE_VECTOR, `GEOREFERENCE` = GEOREFERENCE, `INCLUDE_METADATA` = INCLUDE_METADATA, `DISABLE_TILED` = DISABLE_TILED, `SIMPLIFY` = SIMPLIFY, `TEXT_FORMAT` = TEXT_FORMAT,...)
 
   if (.complete_output) {

@@ -18,6 +18,8 @@
 
 saga_analyticalhierarchyprocess <- function(GRIDS = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:analyticalhierarchyprocess")
   output <- qgisprocess::qgis_run_algorithm("saga:analyticalhierarchyprocess",`GRIDS` = GRIDS, `TABLE` = TABLE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

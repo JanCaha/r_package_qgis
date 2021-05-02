@@ -17,6 +17,8 @@
 
 qgis_boundary <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:boundary")
   output <- qgisprocess::qgis_run_algorithm("native:boundary",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
