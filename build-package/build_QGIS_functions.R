@@ -15,6 +15,8 @@ file_text <- function(x){
 
 library(qgisprocess)
 
+source(here::here("build-package", "build_utils.R"))
+
 previous_files <- readr::read_rds(here::here("data-raw", "previous-files.rds"))
 
 algs <- qgis_algorithms()
