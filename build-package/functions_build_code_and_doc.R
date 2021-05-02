@@ -27,6 +27,8 @@ build_fn_code <- function(alg, arguments, main_output) {
 
   glue::glue("{fn_name} <- function({fn_arguments},..., .complete_output = TRUE) {{\n",
              "\n",
+             "  check_QGIS_versions()",
+             "\n",
              "  qgisprocess::assert_qgis()",
              "\n",
              "  qgisprocess::assert_qgis_algorithm(\"{alg$algorithm}\")",
