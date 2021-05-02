@@ -19,7 +19,8 @@ Suggests:
     raster,
     testthat (>= 2.99.0),
     rmarkdown,
-    knitr
+    knitr,
+    curl
 Config/testthat/edition: 3
 Remotes: 
     r-lib/testthat,
