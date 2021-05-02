@@ -27,6 +27,10 @@ build_fn_code <- function(alg, arguments, main_output) {
 
   glue::glue("{fn_name} <- function({fn_arguments},..., .complete_output = TRUE) {{\n",
              "\n",
+             "  qgisprocess::assert_qgis()",
+             "\n",
+             "  qgisprocess::assert_qgis_algorithm(\"{alg$algorithm}\")",
+             "\n",
              "  output <- qgisprocess::qgis_run_algorithm(\"{alg$algorithm}\",{fn_arguments_qgis_run},...)\n",
              "\n",
              "  if (.complete_output) {{\n",
