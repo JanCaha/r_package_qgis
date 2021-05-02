@@ -7,3 +7,4 @@ LICENSE.md
 ^build-package/*
 ^doc$
 ^Meta$
+^pkgdown/*
