@@ -19,6 +19,8 @@
 
 saga_intersect <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:intersect")
   output <- qgisprocess::qgis_run_algorithm("saga:intersect",`A` = A, `B` = B, `SPLIT` = SPLIT, `RESULT` = RESULT,...)
 
   if (.complete_output) {

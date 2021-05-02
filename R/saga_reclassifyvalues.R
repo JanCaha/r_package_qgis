@@ -31,6 +31,8 @@
 
 saga_reclassifyvalues <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), OLD = qgisprocess::qgis_default_value(), NEW = qgisprocess::qgis_default_value(), SOPERATOR = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RNEW = qgisprocess::qgis_default_value(), ROPERATOR = qgisprocess::qgis_default_value(), RETAB = qgisprocess::qgis_default_value(), TOPERATOR = qgisprocess::qgis_default_value(), NODATAOPT = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OTHEROPT = qgisprocess::qgis_default_value(), OTHERS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:reclassifyvalues")
   output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvalues",`INPUT` = INPUT, `METHOD` = METHOD, `OLD` = OLD, `NEW` = NEW, `SOPERATOR` = SOPERATOR, `MIN` = MIN, `MAX` = MAX, `RNEW` = RNEW, `ROPERATOR` = ROPERATOR, `RETAB` = RETAB, `TOPERATOR` = TOPERATOR, `NODATAOPT` = NODATAOPT, `NODATA` = NODATA, `OTHEROPT` = OTHEROPT, `OTHERS` = OTHERS, `RESULT` = RESULT,...)
 
   if (.complete_output) {

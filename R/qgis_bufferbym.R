@@ -18,6 +18,8 @@
 
 qgis_bufferbym <- function(INPUT = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:bufferbym")
   output <- qgisprocess::qgis_run_algorithm("native:bufferbym",`INPUT` = INPUT, `SEGMENTS` = SEGMENTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

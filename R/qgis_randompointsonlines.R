@@ -27,6 +27,8 @@
 
 qgis_randompointsonlines <- function(INPUT = qgisprocess::qgis_default_value(), POINTS_NUMBER = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), MIN_DISTANCE_GLOBAL = qgisprocess::qgis_default_value(), MAX_TRIES_PER_POINT = qgisprocess::qgis_default_value(), SEED = qgisprocess::qgis_default_value(), INCLUDE_LINE_ATTRIBUTES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:randompointsonlines")
   output <- qgisprocess::qgis_run_algorithm("native:randompointsonlines",`INPUT` = INPUT, `POINTS_NUMBER` = POINTS_NUMBER, `MIN_DISTANCE` = MIN_DISTANCE, `MIN_DISTANCE_GLOBAL` = MIN_DISTANCE_GLOBAL, `MAX_TRIES_PER_POINT` = MAX_TRIES_PER_POINT, `SEED` = SEED, `INCLUDE_LINE_ATTRIBUTES` = INCLUDE_LINE_ATTRIBUTES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

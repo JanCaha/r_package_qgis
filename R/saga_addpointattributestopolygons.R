@@ -20,6 +20,8 @@
 
 saga_addpointattributestopolygons <- function(INPUT = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), ADD_LOCATION_INFO = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:addpointattributestopolygons")
   output <- qgisprocess::qgis_run_algorithm("saga:addpointattributestopolygons",`INPUT` = INPUT, `POINTS` = POINTS, `FIELDS` = FIELDS, `ADD_LOCATION_INFO` = ADD_LOCATION_INFO, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

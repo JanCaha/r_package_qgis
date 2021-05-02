@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:add
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Added field
+\item OUTPUT - outputVector - Added fields
 }
 }
 }

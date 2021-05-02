@@ -18,6 +18,8 @@
 
 qgis_generatepointspixelcentroidsalongline <- function(INPUT_RASTER = qgisprocess::qgis_default_value(), INPUT_VECTOR = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:generatepointspixelcentroidsalongline")
   output <- qgisprocess::qgis_run_algorithm("qgis:generatepointspixelcentroidsalongline",`INPUT_RASTER` = INPUT_RASTER, `INPUT_VECTOR` = INPUT_VECTOR, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

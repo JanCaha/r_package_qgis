@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Output vector laye
+##' * OUTPUT - outputVector - Output vector layer
 ##'
 ##' @export
 ##' @md
@@ -23,6 +23,8 @@
 
 qgis_exportmeshongrid <- function(INPUT = qgisprocess::qgis_default_value(), DATASET_GROUPS = qgisprocess::qgis_default_value(), DATASET_TIME = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), GRID_SPACING = qgisprocess::qgis_default_value(), CRS_OUTPUT = qgisprocess::qgis_default_value(), VECTOR_OPTION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:exportmeshongrid")
   output <- qgisprocess::qgis_run_algorithm("native:exportmeshongrid",`INPUT` = INPUT, `DATASET_GROUPS` = DATASET_GROUPS, `DATASET_TIME` = DATASET_TIME, `EXTENT` = EXTENT, `GRID_SPACING` = GRID_SPACING, `CRS_OUTPUT` = CRS_OUTPUT, `VECTOR_OPTION` = VECTOR_OPTION, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

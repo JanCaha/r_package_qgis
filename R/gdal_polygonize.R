@@ -21,6 +21,8 @@
 
 gdal_polygonize <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), EIGHT_CONNECTEDNESS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("gdal:polygonize")
   output <- qgisprocess::qgis_run_algorithm("gdal:polygonize",`INPUT` = INPUT, `BAND` = BAND, `FIELD` = FIELD, `EIGHT_CONNECTEDNESS` = EIGHT_CONNECTEDNESS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

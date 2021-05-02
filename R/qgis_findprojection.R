@@ -18,6 +18,8 @@
 
 qgis_findprojection <- function(INPUT = qgisprocess::qgis_default_value(), TARGET_AREA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:findprojection")
   output <- qgisprocess::qgis_run_algorithm("qgis:findprojection",`INPUT` = INPUT, `TARGET_AREA` = TARGET_AREA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

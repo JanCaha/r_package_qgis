@@ -28,6 +28,8 @@
 
 saga_diffusepollutionrisk <- function(DEM = qgisprocess::qgis_default_value(), CHANNEL = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), WEIGHT_DEFAULT = qgisprocess::qgis_default_value(), RAIN = qgisprocess::qgis_default_value(), RAIN_DEFAULT = qgisprocess::qgis_default_value(), DELIVERY = qgisprocess::qgis_default_value(), RISK_POINT = qgisprocess::qgis_default_value(), RISK_DIFFUSE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CHANNEL_START = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:diffusepollutionrisk")
   output <- qgisprocess::qgis_run_algorithm("saga:diffusepollutionrisk",`DEM` = DEM, `CHANNEL` = CHANNEL, `WEIGHT` = WEIGHT, `WEIGHT_DEFAULT` = WEIGHT_DEFAULT, `RAIN` = RAIN, `RAIN_DEFAULT` = RAIN_DEFAULT, `DELIVERY` = DELIVERY, `RISK_POINT` = RISK_POINT, `RISK_DIFFUSE` = RISK_DIFFUSE, `METHOD` = METHOD, `CHANNEL_START` = CHANNEL_START,...)
 
   if (.complete_output) {

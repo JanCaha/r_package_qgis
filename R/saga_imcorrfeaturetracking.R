@@ -25,6 +25,8 @@
 
 saga_imcorrfeaturetracking <- function(GRID_1 = qgisprocess::qgis_default_value(), GRID_2 = qgisprocess::qgis_default_value(), DTM_1 = qgisprocess::qgis_default_value(), DTM_2 = qgisprocess::qgis_default_value(), CORRPOINTS = qgisprocess::qgis_default_value(), CORRLINES = qgisprocess::qgis_default_value(), SEARCH_CHIPSIZE = qgisprocess::qgis_default_value(), REF_CHIPSIZE = qgisprocess::qgis_default_value(), GRID_SPACING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:imcorrfeaturetracking")
   output <- qgisprocess::qgis_run_algorithm("saga:imcorrfeaturetracking",`GRID_1` = GRID_1, `GRID_2` = GRID_2, `DTM_1` = DTM_1, `DTM_2` = DTM_2, `CORRPOINTS` = CORRPOINTS, `CORRLINES` = CORRLINES, `SEARCH_CHIPSIZE` = SEARCH_CHIPSIZE, `REF_CHIPSIZE` = REF_CHIPSIZE, `GRID_SPACING` = GRID_SPACING,...)
 
   if (.complete_output) {

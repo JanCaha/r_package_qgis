@@ -22,6 +22,8 @@
 
 qgis_removeduplicatesbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), DUPLICATES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:removeduplicatesbyattribute")
   output <- qgisprocess::qgis_run_algorithm("native:removeduplicatesbyattribute",`INPUT` = INPUT, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT, `DUPLICATES` = DUPLICATES,...)
 
   if (.complete_output) {

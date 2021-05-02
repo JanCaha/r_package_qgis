@@ -28,6 +28,8 @@
 
 grass7_i_albedo <- function(input = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .arg_8 = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:i.albedo")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.albedo",`input` = input, `-m` = .m, `-n` = .n, `-l` = .l, `-8` = .arg_8, `-a` = .a, `-c` = .c, `-d` = .d, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {

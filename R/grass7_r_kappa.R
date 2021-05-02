@@ -23,6 +23,8 @@
 
 grass7_r_kappa <- function(classification = qgisprocess::qgis_default_value(), reference = qgisprocess::qgis_default_value(), title = qgisprocess::qgis_default_value(), .h = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.kappa")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.kappa",`classification` = classification, `reference` = reference, `title` = title, `-h` = .h, `-w` = .w, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {

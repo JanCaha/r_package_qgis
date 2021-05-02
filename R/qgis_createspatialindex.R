@@ -16,6 +16,8 @@
 
 qgis_createspatialindex <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:createspatialindex")
   output <- qgisprocess::qgis_run_algorithm("native:createspatialindex",`INPUT` = INPUT,...)
 
   if (.complete_output) {

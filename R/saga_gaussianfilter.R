@@ -20,6 +20,8 @@
 
 saga_gaussianfilter <- function(INPUT = qgisprocess::qgis_default_value(), SIGMA = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:gaussianfilter")
   output <- qgisprocess::qgis_run_algorithm("saga:gaussianfilter",`INPUT` = INPUT, `SIGMA` = SIGMA, `MODE` = MODE, `RADIUS` = RADIUS, `RESULT` = RESULT,...)
 
   if (.complete_output) {

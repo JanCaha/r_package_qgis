@@ -18,6 +18,8 @@
 
 qgis_polygonfromlayerextent <- function(INPUT = qgisprocess::qgis_default_value(), ROUND_TO = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:polygonfromlayerextent")
   output <- qgisprocess::qgis_run_algorithm("native:polygonfromlayerextent",`INPUT` = INPUT, `ROUND_TO` = ROUND_TO, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

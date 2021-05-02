@@ -28,6 +28,8 @@
 
 grass7_r_param_scale <- function(input = qgisprocess::qgis_default_value(), slope_tolerance = qgisprocess::qgis_default_value(), curvature_tolerance = qgisprocess::qgis_default_value(), size = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), exponent = qgisprocess::qgis_default_value(), zscale = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.param.scale")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.param.scale",`input` = input, `slope_tolerance` = slope_tolerance, `curvature_tolerance` = curvature_tolerance, `size` = size, `method` = method, `exponent` = exponent, `zscale` = zscale, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {

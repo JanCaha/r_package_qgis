@@ -21,6 +21,8 @@
 
 qgis_roundrastervalues <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), ROUNDING_DIRECTION = qgisprocess::qgis_default_value(), DECIMAL_PLACES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), BASE_N = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:roundrastervalues")
   output <- qgisprocess::qgis_run_algorithm("native:roundrastervalues",`INPUT` = INPUT, `BAND` = BAND, `ROUNDING_DIRECTION` = ROUNDING_DIRECTION, `DECIMAL_PLACES` = DECIMAL_PLACES, `OUTPUT` = OUTPUT, `BASE_N` = BASE_N,...)
 
   if (.complete_output) {

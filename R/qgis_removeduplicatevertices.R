@@ -19,6 +19,8 @@
 
 qgis_removeduplicatevertices <- function(INPUT = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), USE_Z_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:removeduplicatevertices")
   output <- qgisprocess::qgis_run_algorithm("native:removeduplicatevertices",`INPUT` = INPUT, `TOLERANCE` = TOLERANCE, `USE_Z_VALUE` = USE_Z_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

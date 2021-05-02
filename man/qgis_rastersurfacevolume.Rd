@@ -42,7 +42,7 @@ QGIS Algorithm provided by QGIS (native c++) Raster surface volume (native:raste
 \item OUTPUT_TABLE - outputVector - Surface volume table
 \item VOLUME - outputNumber - Volume
 \item PIXEL_COUNT - outputNumber - Pixel count
-\item AREA - outputNumber - Are
+\item AREA - outputNumber - Area
 }
 }
 }

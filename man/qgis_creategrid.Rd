@@ -44,7 +44,7 @@ QGIS Algorithm provided by QGIS (native c++) Create grid (native:creategrid)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Gri
+\item OUTPUT - outputVector - Grid
 }
 }
 }

@@ -20,6 +20,8 @@
 
 saga_changedateformat <- function(TABLE = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), FMT_IN = qgisprocess::qgis_default_value(), FMT_OUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:changedateformat")
   output <- qgisprocess::qgis_run_algorithm("saga:changedateformat",`TABLE` = TABLE, `FIELD` = FIELD, `FMT_IN` = FMT_IN, `FMT_OUT` = FMT_OUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

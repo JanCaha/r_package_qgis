@@ -41,7 +41,7 @@ QGIS Algorithm provided by QGIS (native c++) Create points layer from table (nat
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Points from tabl
+\item OUTPUT - outputVector - Points from table
 }
 }
 }

@@ -42,7 +42,7 @@ QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclu
 \subsection{Outputs description}{
 \itemize{
 \item OUTPUT - outputVector - Clusters
-\item NUM_CLUSTERS - outputNumber - Number of clu
+\item NUM_CLUSTERS - outputNumber - Number of clusters
 }
 }
 }

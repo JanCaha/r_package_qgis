@@ -15,7 +15,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Clusters
-##' * NUM_CLUSTERS - outputNumber - Number of clu
+##' * NUM_CLUSTERS - outputNumber - Number of clusters
 ##'
 ##' @export
 ##' @md
@@ -23,6 +23,8 @@
 
 qgis_dbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), MIN_SIZE = qgisprocess::qgis_default_value(), EPS = qgisprocess::qgis_default_value(), DBSCAN = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), SIZE_FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:dbscanclustering")
   output <- qgisprocess::qgis_run_algorithm("native:dbscanclustering",`INPUT` = INPUT, `MIN_SIZE` = MIN_SIZE, `EPS` = EPS, `DBSCAN*` = DBSCAN, `FIELD_NAME` = FIELD_NAME, `SIZE_FIELD_NAME` = SIZE_FIELD_NAME, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

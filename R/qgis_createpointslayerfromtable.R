@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Points from tabl
+##' * OUTPUT - outputVector - Points from table
 ##'
 ##' @export
 ##' @md
@@ -22,6 +22,8 @@
 
 qgis_createpointslayerfromtable <- function(INPUT = qgisprocess::qgis_default_value(), XFIELD = qgisprocess::qgis_default_value(), YFIELD = qgisprocess::qgis_default_value(), ZFIELD = qgisprocess::qgis_default_value(), MFIELD = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:createpointslayerfromtable")
   output <- qgisprocess::qgis_run_algorithm("native:createpointslayerfromtable",`INPUT` = INPUT, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `ZFIELD` = ZFIELD, `MFIELD` = MFIELD, `TARGET_CRS` = TARGET_CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

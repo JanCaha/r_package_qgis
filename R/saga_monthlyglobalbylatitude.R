@@ -20,6 +20,8 @@
 
 saga_monthlyglobalbylatitude <- function(ALBEDO = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), YEAR = qgisprocess::qgis_default_value(), DLAT = qgisprocess::qgis_default_value(), SOLARRAD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:monthlyglobalbylatitude")
   output <- qgisprocess::qgis_run_algorithm("saga:monthlyglobalbylatitude",`ALBEDO` = ALBEDO, `FIELD` = FIELD, `YEAR` = YEAR, `DLAT` = DLAT, `SOLARRAD` = SOLARRAD,...)
 
   if (.complete_output) {

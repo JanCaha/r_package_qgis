@@ -44,7 +44,7 @@ QGIS Algorithm provided by GDAL Translate (convert format) (gdal:translate)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Converte
+\item OUTPUT - outputRaster - Converted
 }
 }
 }

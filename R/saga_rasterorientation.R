@@ -18,6 +18,8 @@
 
 saga_rasterorientation <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:rasterorientation")
   output <- qgisprocess::qgis_run_algorithm("saga:rasterorientation",`INPUT` = INPUT, `METHOD` = METHOD, `RESULT` = RESULT,...)
 
   if (.complete_output) {

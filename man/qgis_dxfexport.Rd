@@ -47,7 +47,7 @@ QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexp
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputFile - DX
+\item OUTPUT - outputFile - DXF
 }
 }
 }

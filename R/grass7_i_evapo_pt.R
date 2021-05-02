@@ -26,6 +26,8 @@
 
 grass7_i_evapo_pt <- function(net_radiation = qgisprocess::qgis_default_value(), soil_heatflux = qgisprocess::qgis_default_value(), air_temperature = qgisprocess::qgis_default_value(), atmospheric_pressure = qgisprocess::qgis_default_value(), priestley_taylor_coeff = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:i.evapo.pt")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.evapo.pt",`net_radiation` = net_radiation, `soil_heatflux` = soil_heatflux, `air_temperature` = air_temperature, `atmospheric_pressure` = atmospheric_pressure, `priestley_taylor_coeff` = priestley_taylor_coeff, `-z` = .z, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {

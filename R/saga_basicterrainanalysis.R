@@ -48,6 +48,8 @@
 
 saga_basicterrainanalysis <- function(ELEVATION = qgisprocess::qgis_default_value(), SHADE = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), HCURV = qgisprocess::qgis_default_value(), VCURV = qgisprocess::qgis_default_value(), CONVERGENCE = qgisprocess::qgis_default_value(), SINKS = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), WETNESS = qgisprocess::qgis_default_value(), LSFACTOR = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), BASINS = qgisprocess::qgis_default_value(), CHNL_BASE = qgisprocess::qgis_default_value(), CHNL_DIST = qgisprocess::qgis_default_value(), VALL_DEPTH = qgisprocess::qgis_default_value(), RSP = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:basicterrainanalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:basicterrainanalysis",`ELEVATION` = ELEVATION, `SHADE` = SHADE, `SLOPE` = SLOPE, `ASPECT` = ASPECT, `HCURV` = HCURV, `VCURV` = VCURV, `CONVERGENCE` = CONVERGENCE, `SINKS` = SINKS, `FLOW` = FLOW, `WETNESS` = WETNESS, `LSFACTOR` = LSFACTOR, `CHANNELS` = CHANNELS, `BASINS` = BASINS, `CHNL_BASE` = CHNL_BASE, `CHNL_DIST` = CHNL_DIST, `VALL_DEPTH` = VALL_DEPTH, `RSP` = RSP, `THRESHOLD` = THRESHOLD,...)
 
   if (.complete_output) {

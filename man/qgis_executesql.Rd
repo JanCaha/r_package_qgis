@@ -41,7 +41,7 @@ QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - SQL Outpu
+\item OUTPUT - outputVector - SQL Output
 }
 }
 }

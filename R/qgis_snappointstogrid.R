@@ -21,6 +21,8 @@
 
 qgis_snappointstogrid <- function(INPUT = qgisprocess::qgis_default_value(), HSPACING = qgisprocess::qgis_default_value(), VSPACING = qgisprocess::qgis_default_value(), ZSPACING = qgisprocess::qgis_default_value(), MSPACING = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:snappointstogrid")
   output <- qgisprocess::qgis_run_algorithm("native:snappointstogrid",`INPUT` = INPUT, `HSPACING` = HSPACING, `VSPACING` = VSPACING, `ZSPACING` = ZSPACING, `MSPACING` = MSPACING, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

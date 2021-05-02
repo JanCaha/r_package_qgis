@@ -35,6 +35,8 @@
 
 saga_supervisedclassificationforgrids <- function(GRIDS = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), TRAINING = qgisprocess::qgis_default_value(), TRAINING_CLASS = qgisprocess::qgis_default_value(), FILE_LOAD = qgisprocess::qgis_default_value(), FILE_SAVE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), THRESHOLD_DIST = qgisprocess::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess::qgis_default_value(), THRESHOLD_PROB = qgisprocess::qgis_default_value(), RELATIVE_PROB = qgisprocess::qgis_default_value(), WTA_0 = qgisprocess::qgis_default_value(), WTA_1 = qgisprocess::qgis_default_value(), WTA_2 = qgisprocess::qgis_default_value(), WTA_3 = qgisprocess::qgis_default_value(), WTA_4 = qgisprocess::qgis_default_value(), WTA_5 = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:supervisedclassificationforgrids")
   output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassificationforgrids",`GRIDS` = GRIDS, `NORMALISE` = NORMALISE, `CLASSES` = CLASSES, `QUALITY` = QUALITY, `TRAINING` = TRAINING, `TRAINING_CLASS` = TRAINING_CLASS, `FILE_LOAD` = FILE_LOAD, `FILE_SAVE` = FILE_SAVE, `METHOD` = METHOD, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5,...)
 
   if (.complete_output) {

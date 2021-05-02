@@ -17,6 +17,8 @@
 
 saga_invertgrid <- function(GRID = qgisprocess::qgis_default_value(), INVERSE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:invertgrid")
   output <- qgisprocess::qgis_run_algorithm("saga:invertgrid",`GRID` = GRID, `INVERSE` = INVERSE,...)
 
   if (.complete_output) {

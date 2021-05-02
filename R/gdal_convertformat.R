@@ -18,6 +18,8 @@
 
 gdal_convertformat <- function(INPUT = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("gdal:convertformat")
   output <- qgisprocess::qgis_run_algorithm("gdal:convertformat",`INPUT` = INPUT, `OPTIONS` = OPTIONS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -32,6 +32,8 @@
 
 grass7_r_out_vtk <- function(input = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), null = qgisprocess::qgis_default_value(), z = qgisprocess::qgis_default_value(), rgbmaps = qgisprocess::qgis_default_value(), vectormaps = qgisprocess::qgis_default_value(), zscale = qgisprocess::qgis_default_value(), precision = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .v = qgisprocess::qgis_default_value(), .o = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.out.vtk")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.out.vtk",`input` = input, `elevation` = elevation, `null` = null, `z` = z, `rgbmaps` = rgbmaps, `vectormaps` = vectormaps, `zscale` = zscale, `precision` = precision, `-p` = .p, `-s` = .s, `-t` = .t, `-v` = .v, `-o` = .o, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {

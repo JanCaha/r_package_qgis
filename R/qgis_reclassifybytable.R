@@ -23,6 +23,8 @@
 
 qgis_reclassifybytable <- function(INPUT_RASTER = qgisprocess::qgis_default_value(), RASTER_BAND = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), RANGE_BOUNDARIES = qgisprocess::qgis_default_value(), NODATA_FOR_MISSING = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:reclassifybytable")
   output <- qgisprocess::qgis_run_algorithm("native:reclassifybytable",`INPUT_RASTER` = INPUT_RASTER, `RASTER_BAND` = RASTER_BAND, `TABLE` = TABLE, `NO_DATA` = NO_DATA, `RANGE_BOUNDARIES` = RANGE_BOUNDARIES, `NODATA_FOR_MISSING` = NODATA_FOR_MISSING, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

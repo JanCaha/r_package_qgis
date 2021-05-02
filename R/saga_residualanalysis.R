@@ -38,6 +38,8 @@
 
 saga_residualanalysis <- function(GRID = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), BCENTER = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), DIFF = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), DEVMEAN = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:residualanalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:residualanalysis",`GRID` = GRID, `MODE` = MODE, `RADIUS` = RADIUS, `BCENTER` = BCENTER, `DISTANCE_WEIGHTING_DW_WEIGHTING` = DISTANCE_WEIGHTING_DW_WEIGHTING, `DISTANCE_WEIGHTING_DW_IDW_POWER` = DISTANCE_WEIGHTING_DW_IDW_POWER, `DISTANCE_WEIGHTING_DW_IDW_OFFSET` = DISTANCE_WEIGHTING_DW_IDW_OFFSET, `DISTANCE_WEIGHTING_DW_BANDWIDTH` = DISTANCE_WEIGHTING_DW_BANDWIDTH, `MEAN` = MEAN, `DIFF` = DIFF, `STDDEV` = STDDEV, `RANGE` = RANGE, `MIN` = MIN, `MAX` = MAX, `DEVMEAN` = DEVMEAN, `PERCENT` = PERCENT,...)
 
   if (.complete_output) {

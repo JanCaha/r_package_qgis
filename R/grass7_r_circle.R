@@ -25,6 +25,8 @@
 
 grass7_r_circle <- function(coordinates = qgisprocess::qgis_default_value(), min = qgisprocess::qgis_default_value(), max = qgisprocess::qgis_default_value(), multiplier = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.circle")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.circle",`coordinates` = coordinates, `min` = min, `max` = max, `multiplier` = multiplier, `-b` = .b, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {

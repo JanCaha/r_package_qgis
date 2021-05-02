@@ -19,6 +19,8 @@
 
 qgis_multiringconstantbuffer <- function(INPUT = qgisprocess::qgis_default_value(), RINGS = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:multiringconstantbuffer")
   output <- qgisprocess::qgis_run_algorithm("native:multiringconstantbuffer",`INPUT` = INPUT, `RINGS` = RINGS, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

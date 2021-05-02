@@ -28,6 +28,8 @@
 
 grass7_i_evapo_mh <- function(netradiation_diurnal = qgisprocess::qgis_default_value(), average_temperature = qgisprocess::qgis_default_value(), minimum_temperature = qgisprocess::qgis_default_value(), maximum_temperature = qgisprocess::qgis_default_value(), precipitation = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .h = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:i.evapo.mh")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.evapo.mh",`netradiation_diurnal` = netradiation_diurnal, `average_temperature` = average_temperature, `minimum_temperature` = minimum_temperature, `maximum_temperature` = maximum_temperature, `precipitation` = precipitation, `-z` = .z, `-h` = .h, `-s` = .s, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {

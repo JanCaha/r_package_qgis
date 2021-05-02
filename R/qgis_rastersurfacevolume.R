@@ -17,7 +17,7 @@
 ##' * OUTPUT_TABLE - outputVector - Surface volume table
 ##' * VOLUME - outputNumber - Volume
 ##' * PIXEL_COUNT - outputNumber - Pixel count
-##' * AREA - outputNumber - Are
+##' * AREA - outputNumber - Area
 ##'
 ##' @export
 ##' @md
@@ -25,6 +25,8 @@
 
 qgis_rastersurfacevolume <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), LEVEL = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(), OUTPUT_TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:rastersurfacevolume")
   output <- qgisprocess::qgis_run_algorithm("native:rastersurfacevolume",`INPUT` = INPUT, `BAND` = BAND, `LEVEL` = LEVEL, `METHOD` = METHOD, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE, `OUTPUT_TABLE` = OUTPUT_TABLE,...)
 
   if (.complete_output) {

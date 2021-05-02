@@ -19,6 +19,8 @@
 
 saga_pointsthinning <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), RESOLUTION = qgisprocess::qgis_default_value(), THINNED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:pointsthinning")
   output <- qgisprocess::qgis_run_algorithm("saga:pointsthinning",`POINTS` = POINTS, `FIELD` = FIELD, `RESOLUTION` = RESOLUTION, `THINNED` = THINNED,...)
 
   if (.complete_output) {

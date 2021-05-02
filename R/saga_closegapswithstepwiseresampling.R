@@ -23,6 +23,8 @@
 
 saga_closegapswithstepwiseresampling <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), GROW = qgisprocess::qgis_default_value(), PYRAMIDS = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), START_SIZE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:closegapswithstepwiseresampling")
   output <- qgisprocess::qgis_run_algorithm("saga:closegapswithstepwiseresampling",`INPUT` = INPUT, `MASK` = MASK, `RESULT` = RESULT, `RESAMPLING` = RESAMPLING, `GROW` = GROW, `PYRAMIDS` = PYRAMIDS, `START` = START, `START_SIZE` = START_SIZE,...)
 
   if (.complete_output) {

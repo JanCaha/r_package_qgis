@@ -21,6 +21,8 @@
 
 qgis_exporttospreadsheet <- function(LAYERS = qgisprocess::qgis_default_value(), USE_ALIAS = qgisprocess::qgis_default_value(), FORMATTED_VALUES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:exporttospreadsheet")
   output <- qgisprocess::qgis_run_algorithm("native:exporttospreadsheet",`LAYERS` = LAYERS, `USE_ALIAS` = USE_ALIAS, `FORMATTED_VALUES` = FORMATTED_VALUES, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE,...)
 
   if (.complete_output) {

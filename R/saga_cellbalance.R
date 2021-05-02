@@ -20,6 +20,8 @@
 
 saga_cellbalance <- function(DEM = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), WEIGHTS_DEFAULT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), BALANCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:cellbalance")
   output <- qgisprocess::qgis_run_algorithm("saga:cellbalance",`DEM` = DEM, `WEIGHTS` = WEIGHTS, `WEIGHTS_DEFAULT` = WEIGHTS_DEFAULT, `METHOD` = METHOD, `BALANCE` = BALANCE,...)
 
   if (.complete_output) {

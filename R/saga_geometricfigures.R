@@ -20,6 +20,8 @@
 
 saga_geometricfigures <- function(CELL_COUNT = qgisprocess::qgis_default_value(), CELL_SIZE = qgisprocess::qgis_default_value(), FIGURE = qgisprocess::qgis_default_value(), PLANE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:geometricfigures")
   output <- qgisprocess::qgis_run_algorithm("saga:geometricfigures",`CELL_COUNT` = CELL_COUNT, `CELL_SIZE` = CELL_SIZE, `FIGURE` = FIGURE, `PLANE` = PLANE, `RESULT` = RESULT,...)
 
   if (.complete_output) {

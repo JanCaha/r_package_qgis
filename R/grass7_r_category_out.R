@@ -22,6 +22,8 @@
 
 grass7_r_category_out <- function(map = qgisprocess::qgis_default_value(), cats = qgisprocess::qgis_default_value(), values = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.category.out")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.category.out",`map` = map, `cats` = cats, `values` = values, `separator` = separator, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {

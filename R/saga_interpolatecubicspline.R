@@ -25,6 +25,8 @@
 
 saga_interpolatecubicspline <- function(SHAPES = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), NPMIN = qgisprocess::qgis_default_value(), NPMAX = qgisprocess::qgis_default_value(), NPPC = qgisprocess::qgis_default_value(), K = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), TARGET_OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:interpolatecubicspline")
   output <- qgisprocess::qgis_run_algorithm("saga:interpolatecubicspline",`SHAPES` = SHAPES, `FIELD` = FIELD, `NPMIN` = NPMIN, `NPMAX` = NPMAX, `NPPC` = NPPC, `K` = K, `TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX` = TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_FITS` = TARGET_USER_FITS, `TARGET_OUT_GRID` = TARGET_OUT_GRID,...)
 
   if (.complete_output) {

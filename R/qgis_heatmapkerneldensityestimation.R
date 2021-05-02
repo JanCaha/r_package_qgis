@@ -24,6 +24,8 @@
 
 qgis_heatmapkerneldensityestimation <- function(INPUT = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RADIUS_FIELD = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), WEIGHT_FIELD = qgisprocess::qgis_default_value(), KERNEL = qgisprocess::qgis_default_value(), DECAY = qgisprocess::qgis_default_value(), OUTPUT_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:heatmapkerneldensityestimation")
   output <- qgisprocess::qgis_run_algorithm("qgis:heatmapkerneldensityestimation",`INPUT` = INPUT, `RADIUS` = RADIUS, `RADIUS_FIELD` = RADIUS_FIELD, `PIXEL_SIZE` = PIXEL_SIZE, `WEIGHT_FIELD` = WEIGHT_FIELD, `KERNEL` = KERNEL, `DECAY` = DECAY, `OUTPUT_VALUE` = OUTPUT_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

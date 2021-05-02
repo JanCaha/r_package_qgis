@@ -20,6 +20,8 @@
 
 qgis_distancetonearesthubpoints <- function(INPUT = qgisprocess::qgis_default_value(), HUBS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), UNIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:distancetonearesthubpoints")
   output <- qgisprocess::qgis_run_algorithm("qgis:distancetonearesthubpoints",`INPUT` = INPUT, `HUBS` = HUBS, `FIELD` = FIELD, `UNIT` = UNIT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

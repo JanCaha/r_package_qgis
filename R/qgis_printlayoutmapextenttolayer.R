@@ -15,7 +15,7 @@
 ##' * WIDTH - outputNumber - Map width
 ##' * HEIGHT - outputNumber - Map height
 ##' * SCALE - outputNumber - Map scale
-##' * ROTATION - outputNumber - Map rotatio
+##' * ROTATION - outputNumber - Map rotation
 ##'
 ##' @export
 ##' @md
@@ -23,6 +23,8 @@
 
 qgis_printlayoutmapextenttolayer <- function(LAYOUT = qgisprocess::qgis_default_value(), MAP = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:printlayoutmapextenttolayer")
   output <- qgisprocess::qgis_run_algorithm("native:printlayoutmapextenttolayer",`LAYOUT` = LAYOUT, `MAP` = MAP, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

@@ -16,7 +16,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputFile - DX
+##' * OUTPUT - outputFile - DXF
 ##'
 ##' @export
 ##' @md
@@ -24,6 +24,8 @@
 
 qgis_dxfexport <- function(LAYERS = qgisprocess::qgis_default_value(), SYMBOLOGY_MODE = qgisprocess::qgis_default_value(), SYMBOLOGY_SCALE = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), USE_LAYER_TITLE = qgisprocess::qgis_default_value(), FORCE_2D = qgisprocess::qgis_default_value(), MTEXT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:dxfexport")
   output <- qgisprocess::qgis_run_algorithm("native:dxfexport",`LAYERS` = LAYERS, `SYMBOLOGY_MODE` = SYMBOLOGY_MODE, `SYMBOLOGY_SCALE` = SYMBOLOGY_SCALE, `ENCODING` = ENCODING, `CRS` = CRS, `USE_LAYER_TITLE` = USE_LAYER_TITLE, `FORCE_2D` = FORCE_2D, `MTEXT` = MTEXT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

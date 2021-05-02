@@ -22,6 +22,8 @@
 
 saga_spatialpointpatternanalysis <- function(POINTS = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), CENTRE = qgisprocess::qgis_default_value(), STDDIST = qgisprocess::qgis_default_value(), BBOX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:spatialpointpatternanalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:spatialpointpatternanalysis",`POINTS` = POINTS, `STEP` = STEP, `CENTRE` = CENTRE, `STDDIST` = STDDIST, `BBOX` = BBOX,...)
 
   if (.complete_output) {

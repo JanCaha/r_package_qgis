@@ -20,6 +20,8 @@
 
 qgis_taperedbuffer <- function(INPUT = qgisprocess::qgis_default_value(), START_WIDTH = qgisprocess::qgis_default_value(), END_WIDTH = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:taperedbuffer")
   output <- qgisprocess::qgis_run_algorithm("native:taperedbuffer",`INPUT` = INPUT, `START_WIDTH` = START_WIDTH, `END_WIDTH` = END_WIDTH, `SEGMENTS` = SEGMENTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

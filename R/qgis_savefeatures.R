@@ -22,6 +22,8 @@
 
 qgis_savefeatures <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), LAYER_NAME = qgisprocess::qgis_default_value(), DATASOURCE_OPTIONS = qgisprocess::qgis_default_value(), LAYER_OPTIONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:savefeatures")
   output <- qgisprocess::qgis_run_algorithm("native:savefeatures",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `LAYER_NAME` = LAYER_NAME, `DATASOURCE_OPTIONS` = DATASOURCE_OPTIONS, `LAYER_OPTIONS` = LAYER_OPTIONS,...)
 
   if (.complete_output) {

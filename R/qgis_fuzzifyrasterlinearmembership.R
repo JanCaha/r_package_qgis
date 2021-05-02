@@ -25,6 +25,8 @@
 
 qgis_fuzzifyrasterlinearmembership <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FUZZYLOWBOUND = qgisprocess::qgis_default_value(), FUZZYHIGHBOUND = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:fuzzifyrasterlinearmembership")
   output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterlinearmembership",`INPUT` = INPUT, `BAND` = BAND, `FUZZYLOWBOUND` = FUZZYLOWBOUND, `FUZZYHIGHBOUND` = FUZZYHIGHBOUND, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

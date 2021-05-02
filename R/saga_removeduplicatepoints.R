@@ -20,6 +20,8 @@
 
 saga_removeduplicatepoints <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NUMERIC = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:removeduplicatepoints")
   output <- qgisprocess::qgis_run_algorithm("saga:removeduplicatepoints",`POINTS` = POINTS, `FIELD` = FIELD, `METHOD` = METHOD, `NUMERIC` = NUMERIC, `RESULT` = RESULT,...)
 
   if (.complete_output) {

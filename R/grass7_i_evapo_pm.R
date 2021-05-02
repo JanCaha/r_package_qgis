@@ -28,6 +28,8 @@
 
 grass7_i_evapo_pm <- function(elevation = qgisprocess::qgis_default_value(), temperature = qgisprocess::qgis_default_value(), relativehumidity = qgisprocess::qgis_default_value(), windspeed = qgisprocess::qgis_default_value(), netradiation = qgisprocess::qgis_default_value(), cropheight = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:i.evapo.pm")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.evapo.pm",`elevation` = elevation, `temperature` = temperature, `relativehumidity` = relativehumidity, `windspeed` = windspeed, `netradiation` = netradiation, `cropheight` = cropheight, `-z` = .z, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {

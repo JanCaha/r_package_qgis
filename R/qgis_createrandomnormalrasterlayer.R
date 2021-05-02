@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output raste
+##' * OUTPUT - outputRaster - Output raster
 ##'
 ##' @export
 ##' @md
@@ -22,6 +22,8 @@
 
 qgis_createrandomnormalrasterlayer <- function(EXTENT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT_TYPE = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:createrandomnormalrasterlayer")
   output <- qgisprocess::qgis_run_algorithm("native:createrandomnormalrasterlayer",`EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `MEAN` = MEAN, `STDDEV` = STDDEV, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

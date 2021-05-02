@@ -27,6 +27,8 @@
 
 qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess::qgis_default_value(), REVISED = qgisprocess::qgis_default_value(), COMPARE_ATTRIBUTES = qgisprocess::qgis_default_value(), MATCH_TYPE = qgisprocess::qgis_default_value(), UNCHANGED = qgisprocess::qgis_default_value(), ADDED = qgisprocess::qgis_default_value(), DELETED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:detectvectorchanges")
   output <- qgisprocess::qgis_run_algorithm("native:detectvectorchanges",`ORIGINAL` = ORIGINAL, `REVISED` = REVISED, `COMPARE_ATTRIBUTES` = COMPARE_ATTRIBUTES, `MATCH_TYPE` = MATCH_TYPE, `UNCHANGED` = UNCHANGED, `ADDED` = ADDED, `DELETED` = DELETED,...)
 
   if (.complete_output) {

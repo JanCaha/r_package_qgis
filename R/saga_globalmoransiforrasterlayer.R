@@ -18,6 +18,8 @@
 
 saga_globalmoransiforrasterlayer <- function(GRID = qgisprocess::qgis_default_value(), CONTIGUITY = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:globalmoransiforrasterlayer")
   output <- qgisprocess::qgis_run_algorithm("saga:globalmoransiforrasterlayer",`GRID` = GRID, `CONTIGUITY` = CONTIGUITY, `RESULT` = RESULT,...)
 
   if (.complete_output) {

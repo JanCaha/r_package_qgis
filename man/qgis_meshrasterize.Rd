@@ -41,7 +41,7 @@ QGIS Algorithm provided by QGIS (native c++) Rasterize mesh dataset (native:mesh
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Output raster laye
+\item OUTPUT - outputRaster - Output raster layer
 }
 }
 }

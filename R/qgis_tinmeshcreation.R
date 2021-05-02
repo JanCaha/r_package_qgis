@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_MESH - outputFile - Output Fil
+##' * OUTPUT_MESH - outputFile - Output File
 ##'
 ##' @export
 ##' @md
@@ -19,6 +19,8 @@
 
 qgis_tinmeshcreation <- function(SOURCE_DATA = qgisprocess::qgis_default_value(), MESH_FORMAT = qgisprocess::qgis_default_value(), CRS_OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_MESH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:tinmeshcreation")
   output <- qgisprocess::qgis_run_algorithm("native:tinmeshcreation",`SOURCE_DATA` = SOURCE_DATA, `MESH_FORMAT` = MESH_FORMAT, `CRS_OUTPUT` = CRS_OUTPUT, `OUTPUT_MESH` = OUTPUT_MESH,...)
 
   if (.complete_output) {

@@ -21,6 +21,8 @@
 
 grass7_r_out_vrml <- function(elevation = qgisprocess::qgis_default_value(), color = qgisprocess::qgis_default_value(), exaggeration = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.out.vrml")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.out.vrml",`elevation` = elevation, `color` = color, `exaggeration` = exaggeration, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {

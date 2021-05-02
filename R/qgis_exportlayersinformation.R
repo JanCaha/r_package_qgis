@@ -17,6 +17,8 @@
 
 qgis_exportlayersinformation <- function(LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:exportlayersinformation")
   output <- qgisprocess::qgis_run_algorithm("native:exportlayersinformation",`LAYERS` = LAYERS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

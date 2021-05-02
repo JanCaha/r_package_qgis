@@ -38,7 +38,7 @@ QGIS Algorithm provided by QGIS (native c++) Create constant raster layer (nativ
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Constan
+\item OUTPUT - outputRaster - Constant
 }
 }
 }

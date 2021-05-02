@@ -33,6 +33,8 @@
 
 grass7_v_random <- function(npoints = qgisprocess::qgis_default_value(), restrict = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), zmin = qgisprocess::qgis_default_value(), zmax = qgisprocess::qgis_default_value(), seed = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), column_type = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:v.random")
   output <- qgisprocess::qgis_run_algorithm("grass7:v.random",`npoints` = npoints, `restrict` = restrict, `where` = where, `zmin` = zmin, `zmax` = zmax, `seed` = seed, `column` = column, `column_type` = column_type, `-z` = .z, `-a` = .a, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
 
   if (.complete_output) {

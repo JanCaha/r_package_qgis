@@ -40,6 +40,8 @@
 
 saga_catchmentarearecursive <- function(ELEVATION = qgisprocess::qgis_default_value(), FLOW_UNIT = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), ACCU_MATERIAL = qgisprocess::qgis_default_value(), VAL_INPUT = qgisprocess::qgis_default_value(), ACCU_TARGET = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), TARGETS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CONVERGENCE = qgisprocess::qgis_default_value(), NO_NEGATIVES = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), VAL_MEAN = qgisprocess::qgis_default_value(), ACCU_TOTAL = qgisprocess::qgis_default_value(), ACCU_LEFT = qgisprocess::qgis_default_value(), ACCU_RIGHT = qgisprocess::qgis_default_value(), FLOW_LENGTH = qgisprocess::qgis_default_value(), WEIGHT_LOSS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:catchmentarearecursive")
   output <- qgisprocess::qgis_run_algorithm("saga:catchmentarearecursive",`ELEVATION` = ELEVATION, `FLOW_UNIT` = FLOW_UNIT, `SINKROUTE` = SINKROUTE, `WEIGHTS` = WEIGHTS, `ACCU_MATERIAL` = ACCU_MATERIAL, `VAL_INPUT` = VAL_INPUT, `ACCU_TARGET` = ACCU_TARGET, `STEP` = STEP, `TARGETS` = TARGETS, `METHOD` = METHOD, `CONVERGENCE` = CONVERGENCE, `NO_NEGATIVES` = NO_NEGATIVES, `FLOW` = FLOW, `VAL_MEAN` = VAL_MEAN, `ACCU_TOTAL` = ACCU_TOTAL, `ACCU_LEFT` = ACCU_LEFT, `ACCU_RIGHT` = ACCU_RIGHT, `FLOW_LENGTH` = FLOW_LENGTH, `WEIGHT_LOSS` = WEIGHT_LOSS,...)
 
   if (.complete_output) {

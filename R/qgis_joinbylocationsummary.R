@@ -22,6 +22,8 @@
 
 qgis_joinbylocationsummary <- function(INPUT = qgisprocess::qgis_default_value(), JOIN = qgisprocess::qgis_default_value(), PREDICATE = qgisprocess::qgis_default_value(), JOIN_FIELDS = qgisprocess::qgis_default_value(), SUMMARIES = qgisprocess::qgis_default_value(), DISCARD_NONMATCHING = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:joinbylocationsummary")
   output <- qgisprocess::qgis_run_algorithm("qgis:joinbylocationsummary",`INPUT` = INPUT, `JOIN` = JOIN, `PREDICATE` = PREDICATE, `JOIN_FIELDS` = JOIN_FIELDS, `SUMMARIES` = SUMMARIES, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

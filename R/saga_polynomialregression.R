@@ -27,6 +27,8 @@
 
 saga_polynomialregression <- function(POINTS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), POLYNOM = qgisprocess::qgis_default_value(), XORDER = qgisprocess::qgis_default_value(), YORDER = qgisprocess::qgis_default_value(), TORDER = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), TARGET_OUT_GRID = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:polynomialregression")
   output <- qgisprocess::qgis_run_algorithm("saga:polynomialregression",`POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `POLYNOM` = POLYNOM, `XORDER` = XORDER, `YORDER` = YORDER, `TORDER` = TORDER, `TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX` = TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_FITS` = TARGET_USER_FITS, `TARGET_OUT_GRID` = TARGET_OUT_GRID, `RESIDUALS` = RESIDUALS,...)
 
   if (.complete_output) {

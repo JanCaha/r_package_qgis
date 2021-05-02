@@ -41,7 +41,7 @@ QGIS Algorithm provided by QGIS (native c++) Create random raster layer (normal 
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Output raste
+\item OUTPUT - outputRaster - Output raster
 }
 }
 }

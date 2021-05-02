@@ -26,6 +26,8 @@
 
 saga_accumulationfunctions <- function(SURFACE = qgisprocess::qgis_default_value(), INPUT = qgisprocess::qgis_default_value(), STATE_IN = qgisprocess::qgis_default_value(), CONTROL = qgisprocess::qgis_default_value(), CTRL_LINEAR = qgisprocess::qgis_default_value(), FLUX = qgisprocess::qgis_default_value(), STATE_OUT = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), LINEAR = qgisprocess::qgis_default_value(), THRES_LINEAR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:accumulationfunctions")
   output <- qgisprocess::qgis_run_algorithm("saga:accumulationfunctions",`SURFACE` = SURFACE, `INPUT` = INPUT, `STATE_IN` = STATE_IN, `CONTROL` = CONTROL, `CTRL_LINEAR` = CTRL_LINEAR, `FLUX` = FLUX, `STATE_OUT` = STATE_OUT, `OPERATION` = OPERATION, `LINEAR` = LINEAR, `THRES_LINEAR` = THRES_LINEAR,...)
 
   if (.complete_output) {

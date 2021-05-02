@@ -21,6 +21,8 @@
 
 saga_paramemeltonruggednessnumber <- function(DEM = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), ZMAX = qgisprocess::qgis_default_value(), MRN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:paramemeltonruggednessnumber")
   output <- qgisprocess::qgis_run_algorithm("saga:paramemeltonruggednessnumber",`DEM` = DEM, `AREA` = AREA, `ZMAX` = ZMAX, `MRN` = MRN,...)
 
   if (.complete_output) {

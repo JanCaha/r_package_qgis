@@ -9,7 +9,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Layer with projectio
+##' * OUTPUT - outputRaster - Layer with projection
 ##'
 ##' @export
 ##' @md
@@ -17,6 +17,8 @@
 
 gdal_assignprojection <- function(INPUT = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("gdal:assignprojection")
   output <- qgisprocess::qgis_run_algorithm("gdal:assignprojection",`INPUT` = INPUT, `CRS` = CRS,...)
 
   if (.complete_output) {

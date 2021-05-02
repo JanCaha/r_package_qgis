@@ -20,6 +20,8 @@
 
 grass7_r_topmodel_topidxstats <- function(topidx = qgisprocess::qgis_default_value(), ntopidxclasses = qgisprocess::qgis_default_value(), outtopidxstats = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("grass7:r.topmodel.topidxstats")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.topmodel.topidxstats",`topidx` = topidx, `ntopidxclasses` = ntopidxclasses, `outtopidxstats` = outtopidxstats, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {

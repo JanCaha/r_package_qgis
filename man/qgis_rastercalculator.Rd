@@ -38,7 +38,7 @@ QGIS Algorithm provided by QGIS Raster calculator (qgis:rastercalculator)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Outpu
+\item OUTPUT - outputRaster - Output
 }
 }
 }

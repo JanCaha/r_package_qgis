@@ -19,6 +19,8 @@
 
 saga_principlecomponentsanalysis <- function(TABLE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NFIRST = qgisprocess::qgis_default_value(), PCA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:principlecomponentsanalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:principlecomponentsanalysis",`TABLE` = TABLE, `METHOD` = METHOD, `NFIRST` = NFIRST, `PCA` = PCA,...)
 
   if (.complete_output) {

@@ -32,6 +32,8 @@
 
 saga_multipleregressionanalysisrasterraster <- function(DEPENDENT = qgisprocess::qgis_default_value(), GRIDS = qgisprocess::qgis_default_value(), INTERPOL = qgisprocess::qgis_default_value(), COORD_X = qgisprocess::qgis_default_value(), COORD_Y = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), P_IN = qgisprocess::qgis_default_value(), P_OUT = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(), INFO_COEFF = qgisprocess::qgis_default_value(), INFO_MODEL = qgisprocess::qgis_default_value(), INFO_STEPS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:multipleregressionanalysisrasterraster")
   output <- qgisprocess::qgis_run_algorithm("saga:multipleregressionanalysisrasterraster",`DEPENDENT` = DEPENDENT, `GRIDS` = GRIDS, `INTERPOL` = INTERPOL, `COORD_X` = COORD_X, `COORD_Y` = COORD_Y, `METHOD` = METHOD, `P_IN` = P_IN, `P_OUT` = P_OUT, `REGRESSION` = REGRESSION, `RESIDUALS` = RESIDUALS, `INFO_COEFF` = INFO_COEFF, `INFO_MODEL` = INFO_MODEL, `INFO_STEPS` = INFO_STEPS,...)
 
   if (.complete_output) {

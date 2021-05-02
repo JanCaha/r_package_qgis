@@ -26,6 +26,8 @@
 
 qgis_affinetransform <- function(INPUT = qgisprocess::qgis_default_value(), DELTA_X = qgisprocess::qgis_default_value(), DELTA_Y = qgisprocess::qgis_default_value(), DELTA_Z = qgisprocess::qgis_default_value(), DELTA_M = qgisprocess::qgis_default_value(), SCALE_X = qgisprocess::qgis_default_value(), SCALE_Y = qgisprocess::qgis_default_value(), SCALE_Z = qgisprocess::qgis_default_value(), SCALE_M = qgisprocess::qgis_default_value(), ROTATION_Z = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:affinetransform")
   output <- qgisprocess::qgis_run_algorithm("native:affinetransform",`INPUT` = INPUT, `DELTA_X` = DELTA_X, `DELTA_Y` = DELTA_Y, `DELTA_Z` = DELTA_Z, `DELTA_M` = DELTA_M, `SCALE_X` = SCALE_X, `SCALE_Y` = SCALE_Y, `SCALE_Z` = SCALE_Z, `SCALE_M` = SCALE_M, `ROTATION_Z` = ROTATION_Z, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

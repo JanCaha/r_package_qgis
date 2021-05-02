@@ -29,7 +29,7 @@ QGIS Algorithm provided by QGIS (native c++) Assign projection (native:assignpro
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Assigned CR
+\item OUTPUT - outputVector - Assigned CRS
 }
 }
 }

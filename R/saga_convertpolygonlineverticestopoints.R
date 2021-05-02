@@ -17,6 +17,8 @@
 
 saga_convertpolygonlineverticestopoints <- function(SHAPES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:convertpolygonlineverticestopoints")
   output <- qgisprocess::qgis_run_algorithm("saga:convertpolygonlineverticestopoints",`SHAPES` = SHAPES, `POINTS` = POINTS,...)
 
   if (.complete_output) {

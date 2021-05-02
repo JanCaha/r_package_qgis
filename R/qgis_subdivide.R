@@ -18,6 +18,8 @@
 
 qgis_subdivide <- function(INPUT = qgisprocess::qgis_default_value(), MAX_NODES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("native:subdivide")
   output <- qgisprocess::qgis_run_algorithm("native:subdivide",`INPUT` = INPUT, `MAX_NODES` = MAX_NODES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

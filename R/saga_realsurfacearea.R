@@ -17,6 +17,8 @@
 
 saga_realsurfacearea <- function(DEM = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:realsurfacearea")
   output <- qgisprocess::qgis_run_algorithm("saga:realsurfacearea",`DEM` = DEM, `AREA` = AREA,...)
 
   if (.complete_output) {

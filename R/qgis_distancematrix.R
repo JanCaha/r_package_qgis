@@ -22,6 +22,8 @@
 
 qgis_distancematrix <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_FIELD = qgisprocess::qgis_default_value(), TARGET = qgisprocess::qgis_default_value(), TARGET_FIELD = qgisprocess::qgis_default_value(), MATRIX_TYPE = qgisprocess::qgis_default_value(), NEAREST_POINTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("qgis:distancematrix")
   output <- qgisprocess::qgis_run_algorithm("qgis:distancematrix",`INPUT` = INPUT, `INPUT_FIELD` = INPUT_FIELD, `TARGET` = TARGET, `TARGET_FIELD` = TARGET_FIELD, `MATRIX_TYPE` = MATRIX_TYPE, `NEAREST_POINTS` = NEAREST_POINTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {

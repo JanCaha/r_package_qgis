@@ -24,6 +24,8 @@
 
 saga_variogramsurface <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), DISTCOUNT = qgisprocess::qgis_default_value(), NSKIP = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), VARIANCE = qgisprocess::qgis_default_value(), COVARIANCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  qgisprocess::assert_qgis()
+  qgisprocess::assert_qgis_algorithm("saga:variogramsurface")
   output <- qgisprocess::qgis_run_algorithm("saga:variogramsurface",`POINTS` = POINTS, `FIELD` = FIELD, `DISTCOUNT` = DISTCOUNT, `NSKIP` = NSKIP, `COUNT` = COUNT, `VARIANCE` = VARIANCE, `COVARIANCE` = COVARIANCE,...)
 
   if (.complete_output) {
