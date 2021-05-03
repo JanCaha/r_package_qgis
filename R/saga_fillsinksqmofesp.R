@@ -14,16 +14,16 @@
 ##' * FILLED - outputRaster - DEM Without Sinks
 ##' * SINKS - outputRaster - Sinks
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fillsinksqmofesp <- function(DEM = qgisprocess::qgis_default_value(), DZFILL = qgisprocess::qgis_default_value(), FILLED = qgisprocess::qgis_default_value(), SINKS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fillsinksqmofesp")
-  output <- qgisprocess::qgis_run_algorithm("saga:fillsinksqmofesp",`DEM` = DEM, `DZFILL` = DZFILL, `FILLED` = FILLED, `SINKS` = SINKS,...)
+  check_algorithm_necessities("saga:fillsinksqmofesp")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fillsinksqmofesp", `DEM` = DEM, `DZFILL` = DZFILL, `FILLED` = FILLED, `SINKS` = SINKS,...)
 
   if (.complete_output) {
     return(output)

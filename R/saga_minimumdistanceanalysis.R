@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * TABLE - outputVector - Minimum Distance Analysis
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_minimumdistanceanalysis <- function(POINTS = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:minimumdistanceanalysis")
-  output <- qgisprocess::qgis_run_algorithm("saga:minimumdistanceanalysis",`POINTS` = POINTS, `TABLE` = TABLE,...)
+  check_algorithm_necessities("saga:minimumdistanceanalysis")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:minimumdistanceanalysis", `POINTS` = POINTS, `TABLE` = TABLE,...)
 
   if (.complete_output) {
     return(output)

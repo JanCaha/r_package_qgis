@@ -17,16 +17,16 @@
 ##' * real - outputRaster - Real part arrays
 ##' * imaginary - outputRaster - Imaginary part arrays
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_i_fft <- function(input = qgisprocess::qgis_default_value(), real = qgisprocess::qgis_default_value(), imaginary = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:i.fft")
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.fft",`input` = input, `real` = real, `imaginary` = imaginary, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:i.fft")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:i.fft", `input` = input, `real` = real, `imaginary` = imaginary, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

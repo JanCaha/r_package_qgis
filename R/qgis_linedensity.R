@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Line density raster
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_linedensity <- function(INPUT = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:linedensity")
-  output <- qgisprocess::qgis_run_algorithm("native:linedensity",`INPUT` = INPUT, `WEIGHT` = WEIGHT, `RADIUS` = RADIUS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:linedensity")
+
+  output <- qgisprocess::qgis_run_algorithm("native:linedensity", `INPUT` = INPUT, `WEIGHT` = WEIGHT, `RADIUS` = RADIUS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

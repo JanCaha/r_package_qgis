@@ -15,16 +15,16 @@
 ##' * OUTPUT - outputFile - Destination spreadsheet
 ##' * OUTPUT_LAYERS - outputMultilayer - Layers within spreadsheet
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_exporttospreadsheet <- function(LAYERS = qgisprocess::qgis_default_value(), USE_ALIAS = qgisprocess::qgis_default_value(), FORMATTED_VALUES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:exporttospreadsheet")
-  output <- qgisprocess::qgis_run_algorithm("native:exporttospreadsheet",`LAYERS` = LAYERS, `USE_ALIAS` = USE_ALIAS, `FORMATTED_VALUES` = FORMATTED_VALUES, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE,...)
+  check_algorithm_necessities("native:exporttospreadsheet")
+
+  output <- qgisprocess::qgis_run_algorithm("native:exporttospreadsheet", `LAYERS` = LAYERS, `USE_ALIAS` = USE_ALIAS, `FORMATTED_VALUES` = FORMATTED_VALUES, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE,...)
 
   if (.complete_output) {
     return(output)

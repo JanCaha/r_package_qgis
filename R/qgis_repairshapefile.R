@@ -10,16 +10,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Repaired layer
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_repairshapefile <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:repairshapefile")
-  output <- qgisprocess::qgis_run_algorithm("native:repairshapefile",`INPUT` = INPUT,...)
+  check_algorithm_necessities("native:repairshapefile")
+
+  output <- qgisprocess::qgis_run_algorithm("native:repairshapefile", `INPUT` = INPUT,...)
 
   if (.complete_output) {
     return(output)

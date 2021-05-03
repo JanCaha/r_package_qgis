@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * POINTS - outputVector - Point Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_createpointgrid <- function(POINTS = qgisprocess::qgis_default_value(), X_EXTENT_MIN = qgisprocess::qgis_default_value(), X_EXTENT_MAX = qgisprocess::qgis_default_value(), Y_EXTENT_MIN = qgisprocess::qgis_default_value(), Y_EXTENT_MAX = qgisprocess::qgis_default_value(), DIST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:createpointgrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:createpointgrid",`POINTS` = POINTS, `X_EXTENT_MIN` = X_EXTENT_MIN, `X_EXTENT_MAX` = X_EXTENT_MAX, `Y_EXTENT_MIN` = Y_EXTENT_MIN, `Y_EXTENT_MAX` = Y_EXTENT_MAX, `DIST` = DIST,...)
+  check_algorithm_necessities("saga:createpointgrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:createpointgrid", `POINTS` = POINTS, `X_EXTENT_MIN` = X_EXTENT_MIN, `X_EXTENT_MAX` = X_EXTENT_MAX, `Y_EXTENT_MIN` = Y_EXTENT_MIN, `Y_EXTENT_MAX` = Y_EXTENT_MAX, `DIST` = DIST,...)
 
   if (.complete_output) {
     return(output)

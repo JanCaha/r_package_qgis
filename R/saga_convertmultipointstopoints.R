@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * POINTS - outputVector - Points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_convertmultipointstopoints <- function(MULTIPOINTS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:convertmultipointstopoints")
-  output <- qgisprocess::qgis_run_algorithm("saga:convertmultipointstopoints",`MULTIPOINTS` = MULTIPOINTS, `POINTS` = POINTS,...)
+  check_algorithm_necessities("saga:convertmultipointstopoints")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:convertmultipointstopoints", `MULTIPOINTS` = MULTIPOINTS, `POINTS` = POINTS,...)
 
   if (.complete_output) {
     return(output)

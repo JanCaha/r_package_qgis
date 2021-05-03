@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputFile - File destination
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_filedownloader <- function(URL = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:filedownloader")
-  output <- qgisprocess::qgis_run_algorithm("native:filedownloader",`URL` = URL, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:filedownloader")
+
+  output <- qgisprocess::qgis_run_algorithm("native:filedownloader", `URL` = URL, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

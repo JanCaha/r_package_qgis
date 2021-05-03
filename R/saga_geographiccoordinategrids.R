@@ -13,16 +13,16 @@
 ##' * LON - outputRaster - Longitude
 ##' * LAT - outputRaster - Latitude
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_geographiccoordinategrids <- function(GRID = qgisprocess::qgis_default_value(), LON = qgisprocess::qgis_default_value(), LAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:geographiccoordinategrids")
-  output <- qgisprocess::qgis_run_algorithm("saga:geographiccoordinategrids",`GRID` = GRID, `LON` = LON, `LAT` = LAT,...)
+  check_algorithm_necessities("saga:geographiccoordinategrids")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:geographiccoordinategrids", `GRID` = GRID, `LON` = LON, `LAT` = LAT,...)
 
   if (.complete_output) {
     return(output)

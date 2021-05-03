@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Polygon
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rectanglesovalsdiamonds <- function(INPUT = qgisprocess::qgis_default_value(), SHAPE = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), HEIGHT = qgisprocess::qgis_default_value(), ROTATION = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:rectanglesovalsdiamonds")
-  output <- qgisprocess::qgis_run_algorithm("native:rectanglesovalsdiamonds",`INPUT` = INPUT, `SHAPE` = SHAPE, `WIDTH` = WIDTH, `HEIGHT` = HEIGHT, `ROTATION` = ROTATION, `SEGMENTS` = SEGMENTS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:rectanglesovalsdiamonds")
+
+  output <- qgisprocess::qgis_run_algorithm("native:rectanglesovalsdiamonds", `INPUT` = INPUT, `SHAPE` = SHAPE, `WIDTH` = WIDTH, `HEIGHT` = HEIGHT, `ROTATION` = ROTATION, `SEGMENTS` = SEGMENTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

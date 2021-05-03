@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * AND - outputRaster - Intersection
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fuzzyintersectionand <- function(GRIDS = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), AND = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fuzzyintersectionand")
-  output <- qgisprocess::qgis_run_algorithm("saga:fuzzyintersectionand",`GRIDS` = GRIDS, `TYPE` = TYPE, `AND` = AND,...)
+  check_algorithm_necessities("saga:fuzzyintersectionand")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fuzzyintersectionand", `GRIDS` = GRIDS, `TYPE` = TYPE, `AND` = AND,...)
 
   if (.complete_output) {
     return(output)

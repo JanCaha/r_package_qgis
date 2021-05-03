@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * INVERSE - outputRaster - Inverse Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_invertgrid <- function(GRID = qgisprocess::qgis_default_value(), INVERSE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:invertgrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:invertgrid",`GRID` = GRID, `INVERSE` = INVERSE,...)
+  check_algorithm_necessities("saga:invertgrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:invertgrid", `GRID` = GRID, `INVERSE` = INVERSE,...)
 
   if (.complete_output) {
     return(output)

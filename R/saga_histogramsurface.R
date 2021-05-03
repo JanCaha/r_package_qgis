@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * HIST - outputRaster - Histogram
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_histogramsurface <- function(GRID = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), HIST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:histogramsurface")
-  output <- qgisprocess::qgis_run_algorithm("saga:histogramsurface",`GRID` = GRID, `METHOD` = METHOD, `HIST` = HIST,...)
+  check_algorithm_necessities("saga:histogramsurface")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:histogramsurface", `GRID` = GRID, `METHOD` = METHOD, `HIST` = HIST,...)
 
   if (.complete_output) {
     return(output)

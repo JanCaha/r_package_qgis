@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * TRANSECT_RESULT - outputVector - Result table
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_transectthroughpolygonshapefile <- function(TRANSECT = qgisprocess::qgis_default_value(), THEME = qgisprocess::qgis_default_value(), THEME_FIELD = qgisprocess::qgis_default_value(), TRANSECT_RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:transectthroughpolygonshapefile")
-  output <- qgisprocess::qgis_run_algorithm("saga:transectthroughpolygonshapefile",`TRANSECT` = TRANSECT, `THEME` = THEME, `THEME_FIELD` = THEME_FIELD, `TRANSECT_RESULT` = TRANSECT_RESULT,...)
+  check_algorithm_necessities("saga:transectthroughpolygonshapefile")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:transectthroughpolygonshapefile", `TRANSECT` = TRANSECT, `THEME` = THEME, `THEME_FIELD` = THEME_FIELD, `TRANSECT_RESULT` = TRANSECT_RESULT,...)
 
   if (.complete_output) {
     return(output)

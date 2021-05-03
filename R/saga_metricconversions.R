@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * CONV - outputRaster - Converted Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_metricconversions <- function(GRID = qgisprocess::qgis_default_value(), CONVERSION = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:metricconversions")
-  output <- qgisprocess::qgis_run_algorithm("saga:metricconversions",`GRID` = GRID, `CONVERSION` = CONVERSION, `CONV` = CONV,...)
+  check_algorithm_necessities("saga:metricconversions")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:metricconversions", `GRID` = GRID, `CONVERSION` = CONVERSION, `CONV` = CONV,...)
 
   if (.complete_output) {
     return(output)

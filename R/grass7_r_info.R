@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * html - outputHtml - Basic information
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_info <- function(map = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .h = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.info")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.info",`map` = map, `-r` = .r, `-g` = .g, `-h` = .h, `-e` = .e, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.info")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.info", `map` = map, `-r` = .r, `-g` = .g, `-h` = .h, `-e` = .e, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

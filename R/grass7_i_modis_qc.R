@@ -18,16 +18,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - QC Classification
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_i_modis_qc <- function(input = qgisprocess::qgis_default_value(), productname = qgisprocess::qgis_default_value(), qcname = qgisprocess::qgis_default_value(), band = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:i.modis.qc")
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.modis.qc",`input` = input, `productname` = productname, `qcname` = qcname, `band` = band, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:i.modis.qc")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:i.modis.qc", `input` = input, `productname` = productname, `qcname` = qcname, `band` = band, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

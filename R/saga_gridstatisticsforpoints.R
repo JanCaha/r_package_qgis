@@ -24,16 +24,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputVector - Statistics
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_gridstatisticsforpoints <- function(GRIDS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), KERNEL_TYPE = qgisprocess::qgis_default_value(), KERNEL_SIZE = qgisprocess::qgis_default_value(), NAMING = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), QUANTILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:gridstatisticsforpoints")
-  output <- qgisprocess::qgis_run_algorithm("saga:gridstatisticsforpoints",`GRIDS` = GRIDS, `POINTS` = POINTS, `KERNEL_TYPE` = KERNEL_TYPE, `KERNEL_SIZE` = KERNEL_SIZE, `NAMING` = NAMING, `RESULT` = RESULT, `COUNT` = COUNT, `MIN` = MIN, `MAX` = MAX, `RANGE` = RANGE, `SUM` = SUM, `MEAN` = MEAN, `VAR` = VAR, `STDDEV` = STDDEV, `QUANTILE` = QUANTILE,...)
+  check_algorithm_necessities("saga:gridstatisticsforpoints")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:gridstatisticsforpoints", `GRIDS` = GRIDS, `POINTS` = POINTS, `KERNEL_TYPE` = KERNEL_TYPE, `KERNEL_SIZE` = KERNEL_SIZE, `NAMING` = NAMING, `RESULT` = RESULT, `COUNT` = COUNT, `MIN` = MIN, `MAX` = MAX, `RANGE` = RANGE, `SUM` = SUM, `MEAN` = MEAN, `VAR` = VAR, `STDDEV` = STDDEV, `QUANTILE` = QUANTILE,...)
 
   if (.complete_output) {
     return(output)

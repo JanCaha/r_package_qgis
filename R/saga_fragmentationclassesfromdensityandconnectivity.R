@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * FRAGMENTATION - outputRaster - Fragmentation
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fragmentationclassesfromdensityandconnectivity <- function(DENSITY = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(), BORDER = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), DENSITY_MIN = qgisprocess::qgis_default_value(), DENSITY_INT = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fragmentationclassesfromdensityandconnectivity")
-  output <- qgisprocess::qgis_run_algorithm("saga:fragmentationclassesfromdensityandconnectivity",`DENSITY` = DENSITY, `CONNECTIVITY` = CONNECTIVITY, `BORDER` = BORDER, `WEIGHT` = WEIGHT, `DENSITY_MIN` = DENSITY_MIN, `DENSITY_INT` = DENSITY_INT, `FRAGMENTATION` = FRAGMENTATION,...)
+  check_algorithm_necessities("saga:fragmentationclassesfromdensityandconnectivity")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fragmentationclassesfromdensityandconnectivity", `DENSITY` = DENSITY, `CONNECTIVITY` = CONNECTIVITY, `BORDER` = BORDER, `WEIGHT` = WEIGHT, `DENSITY_MIN` = DENSITY_MIN, `DENSITY_INT` = DENSITY_INT, `FRAGMENTATION` = FRAGMENTATION,...)
 
   if (.complete_output) {
     return(output)

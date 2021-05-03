@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Extracted 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_extractbylocation <- function(INPUT = qgisprocess::qgis_default_value(), PREDICATE = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:extractbylocation")
-  output <- qgisprocess::qgis_run_algorithm("native:extractbylocation",`INPUT` = INPUT, `PREDICATE` = PREDICATE, `INTERSECT` = INTERSECT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:extractbylocation")
+
+  output <- qgisprocess::qgis_run_algorithm("native:extractbylocation", `INPUT` = INPUT, `PREDICATE` = PREDICATE, `INTERSECT` = INTERSECT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

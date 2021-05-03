@@ -21,16 +21,16 @@
 ##' * CLASSES - outputVector - Class Values
 ##' * SUMMARY - outputVector - Summary
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_confusionmatrixpolygonsgrid <- function(GRID = qgisprocess::qgis_default_value(), GRID_LUT = qgisprocess::qgis_default_value(), GRID_LUT_MIN = qgisprocess::qgis_default_value(), GRID_LUT_MAX = qgisprocess::qgis_default_value(), GRID_LUT_NAM = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), CONFUSION = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), SUMMARY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:confusionmatrixpolygonsgrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:confusionmatrixpolygonsgrid",`GRID` = GRID, `GRID_LUT` = GRID_LUT, `GRID_LUT_MIN` = GRID_LUT_MIN, `GRID_LUT_MAX` = GRID_LUT_MAX, `GRID_LUT_NAM` = GRID_LUT_NAM, `POLYGONS` = POLYGONS, `FIELD` = FIELD, `CONFUSION` = CONFUSION, `CLASSES` = CLASSES, `SUMMARY` = SUMMARY,...)
+  check_algorithm_necessities("saga:confusionmatrixpolygonsgrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:confusionmatrixpolygonsgrid", `GRID` = GRID, `GRID_LUT` = GRID_LUT, `GRID_LUT_MIN` = GRID_LUT_MIN, `GRID_LUT_MAX` = GRID_LUT_MAX, `GRID_LUT_NAM` = GRID_LUT_NAM, `POLYGONS` = POLYGONS, `FIELD` = FIELD, `CONFUSION` = CONFUSION, `CLASSES` = CLASSES, `SUMMARY` = SUMMARY,...)
 
   if (.complete_output) {
     return(output)

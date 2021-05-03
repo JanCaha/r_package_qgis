@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * FLOW - outputRaster - Flow
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_successiveflowrouting <- function(DEM = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), RUNOFF = qgisprocess::qgis_default_value(), MANNING = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:successiveflowrouting")
-  output <- qgisprocess::qgis_run_algorithm("saga:successiveflowrouting",`DEM` = DEM, `ITERATIONS` = ITERATIONS, `RUNOFF` = RUNOFF, `MANNING` = MANNING, `FLOW` = FLOW,...)
+  check_algorithm_necessities("saga:successiveflowrouting")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:successiveflowrouting", `DEM` = DEM, `ITERATIONS` = ITERATIONS, `RUNOFF` = RUNOFF, `MANNING` = MANNING, `FLOW` = FLOW,...)
 
   if (.complete_output) {
     return(output)

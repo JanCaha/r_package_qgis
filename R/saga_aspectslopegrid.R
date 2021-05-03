@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * ASPECT_SLOPE - outputRaster - Aspect
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_aspectslopegrid <- function(ASPECT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT_SLOPE = qgisprocess::qgis_default_value(), LUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:aspectslopegrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:aspectslopegrid",`ASPECT` = ASPECT, `SLOPE` = SLOPE, `ASPECT_SLOPE` = ASPECT_SLOPE, `LUT` = LUT,...)
+  check_algorithm_necessities("saga:aspectslopegrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:aspectslopegrid", `ASPECT` = ASPECT, `SLOPE` = SLOPE, `ASPECT_SLOPE` = ASPECT_SLOPE, `LUT` = LUT,...)
 
   if (.complete_output) {
     return(output)

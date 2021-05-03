@@ -20,16 +20,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - Expanded
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_grow <- function(input = qgisprocess::qgis_default_value(), radius = qgisprocess::qgis_default_value(), metric = qgisprocess::qgis_default_value(), old = qgisprocess::qgis_default_value(), new = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.grow")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.grow",`input` = input, `radius` = radius, `metric` = metric, `old` = old, `new` = new, `-m` = .m, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.grow")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.grow", `input` = input, `radius` = radius, `metric` = metric, `old` = old, `new` = new, `-m` = .m, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

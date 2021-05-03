@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * PET - outputRaster - Potential Evapotranspiration
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_petafterhargreavesgrid <- function(T = qgisprocess::qgis_default_value(), T_MIN = qgisprocess::qgis_default_value(), T_MAX = qgisprocess::qgis_default_value(), PET = qgisprocess::qgis_default_value(), LAT = qgisprocess::qgis_default_value(), TIME = qgisprocess::qgis_default_value(), MONTH = qgisprocess::qgis_default_value(), DAY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:petafterhargreavesgrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:petafterhargreavesgrid",`T` = T, `T_MIN` = T_MIN, `T_MAX` = T_MAX, `PET` = PET, `LAT` = LAT, `TIME` = TIME, `MONTH` = MONTH, `DAY` = DAY,...)
+  check_algorithm_necessities("saga:petafterhargreavesgrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:petafterhargreavesgrid", `T` = T, `T_MIN` = T_MIN, `T_MAX` = T_MAX, `PET` = PET, `LAT` = LAT, `TIME` = TIME, `MONTH` = MONTH, `DAY` = DAY,...)
 
   if (.complete_output) {
     return(output)

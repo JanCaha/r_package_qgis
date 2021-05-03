@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Product
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rasterproduct <- function(GRIDS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rasterproduct")
-  output <- qgisprocess::qgis_run_algorithm("saga:rasterproduct",`GRIDS` = GRIDS, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:rasterproduct")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rasterproduct", `GRIDS` = GRIDS, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

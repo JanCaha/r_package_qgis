@@ -18,16 +18,16 @@
 ##' * MAJ_COUNT - outputRaster - Dominance of Majority
 ##' * MAJ_VALUE - outputRaster - Value of Majority
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_categoricalcoincidence <- function(GRIDS = qgisprocess::qgis_default_value(), CATEGORIES = qgisprocess::qgis_default_value(), COINCIDENCE = qgisprocess::qgis_default_value(), MAJ_COUNT = qgisprocess::qgis_default_value(), MAJ_VALUE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:categoricalcoincidence")
-  output <- qgisprocess::qgis_run_algorithm("saga:categoricalcoincidence",`GRIDS` = GRIDS, `CATEGORIES` = CATEGORIES, `COINCIDENCE` = COINCIDENCE, `MAJ_COUNT` = MAJ_COUNT, `MAJ_VALUE` = MAJ_VALUE, `RADIUS` = RADIUS,...)
+  check_algorithm_necessities("saga:categoricalcoincidence")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:categoricalcoincidence", `GRIDS` = GRIDS, `CATEGORIES` = CATEGORIES, `COINCIDENCE` = COINCIDENCE, `MAJ_COUNT` = MAJ_COUNT, `MAJ_VALUE` = MAJ_VALUE, `RADIUS` = RADIUS,...)
 
   if (.complete_output) {
     return(output)

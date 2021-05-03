@@ -28,16 +28,16 @@
 ##' ## Outputs description
 ##' * output - outputVector - Network Timetable
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_v_net_timetable <- function(input = qgisprocess::qgis_default_value(), points = qgisprocess::qgis_default_value(), walk_layer = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), arc_column = qgisprocess::qgis_default_value(), arc_backward_column = qgisprocess::qgis_default_value(), node_column = qgisprocess::qgis_default_value(), route_id = qgisprocess::qgis_default_value(), stop_time = qgisprocess::qgis_default_value(), to_stop = qgisprocess::qgis_default_value(), walk_length = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:v.net.timetable")
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.net.timetable",`input` = input, `points` = points, `walk_layer` = walk_layer, `threshold` = threshold, `arc_column` = arc_column, `arc_backward_column` = arc_backward_column, `node_column` = node_column, `route_id` = route_id, `stop_time` = stop_time, `to_stop` = to_stop, `walk_length` = walk_length, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+  check_algorithm_necessities("grass7:v.net.timetable")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:v.net.timetable", `input` = input, `points` = points, `walk_layer` = walk_layer, `threshold` = threshold, `arc_column` = arc_column, `arc_backward_column` = arc_backward_column, `node_column` = node_column, `route_id` = route_id, `stop_time` = stop_time, `to_stop` = to_stop, `walk_length` = walk_length, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
 
   if (.complete_output) {
     return(output)

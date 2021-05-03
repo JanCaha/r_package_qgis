@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * INTERSECT - outputVector - Intersection
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_splitlineswithlines <- function(LINES = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:splitlineswithlines")
-  output <- qgisprocess::qgis_run_algorithm("saga:splitlineswithlines",`LINES` = LINES, `SPLIT` = SPLIT, `INTERSECT` = INTERSECT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:splitlineswithlines")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:splitlineswithlines", `LINES` = LINES, `SPLIT` = SPLIT, `INTERSECT` = INTERSECT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

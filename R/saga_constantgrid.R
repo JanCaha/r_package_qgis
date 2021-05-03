@@ -21,16 +21,16 @@
 ##' ## Outputs description
 ##' * OUT_GRID - outputRaster - Target Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_constantgrid <- function(NAME = qgisprocess::qgis_default_value(), CONST = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), DEFINITION = qgisprocess::qgis_default_value(), USER_SIZE = qgisprocess::qgis_default_value(), USER_XMIN = qgisprocess::qgis_default_value(), USER_XMAX = qgisprocess::qgis_default_value(), USER_YMIN = qgisprocess::qgis_default_value(), USER_YMAX = qgisprocess::qgis_default_value(), USER_FITS = qgisprocess::qgis_default_value(), TEMPLATE = qgisprocess::qgis_default_value(), OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:constantgrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:constantgrid",`NAME` = NAME, `CONST` = CONST, `TYPE` = TYPE, `DEFINITION` = DEFINITION, `USER_SIZE` = USER_SIZE, `USER_XMIN` = USER_XMIN, `USER_XMAX` = USER_XMAX, `USER_YMIN` = USER_YMIN, `USER_YMAX` = USER_YMAX, `USER_FITS` = USER_FITS, `TEMPLATE` = TEMPLATE, `OUT_GRID` = OUT_GRID,...)
+  check_algorithm_necessities("saga:constantgrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:constantgrid", `NAME` = NAME, `CONST` = CONST, `TYPE` = TYPE, `DEFINITION` = DEFINITION, `USER_SIZE` = USER_SIZE, `USER_XMIN` = USER_XMIN, `USER_XMAX` = USER_XMAX, `USER_YMIN` = USER_YMIN, `USER_YMAX` = USER_YMAX, `USER_FITS` = USER_FITS, `TEMPLATE` = TEMPLATE, `OUT_GRID` = OUT_GRID,...)
 
   if (.complete_output) {
     return(output)

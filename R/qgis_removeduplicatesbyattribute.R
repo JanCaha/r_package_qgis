@@ -16,16 +16,16 @@
 ##' * RETAINED_COUNT - outputNumber - Count of retained records
 ##' * DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_removeduplicatesbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), DUPLICATES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:removeduplicatesbyattribute")
-  output <- qgisprocess::qgis_run_algorithm("native:removeduplicatesbyattribute",`INPUT` = INPUT, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT, `DUPLICATES` = DUPLICATES,...)
+  check_algorithm_necessities("native:removeduplicatesbyattribute")
+
+  output <- qgisprocess::qgis_run_algorithm("native:removeduplicatesbyattribute", `INPUT` = INPUT, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT, `DUPLICATES` = DUPLICATES,...)
 
   if (.complete_output) {
     return(output)

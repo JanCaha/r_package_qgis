@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Extended
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_extendlines <- function(INPUT = qgisprocess::qgis_default_value(), START_DISTANCE = qgisprocess::qgis_default_value(), END_DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:extendlines")
-  output <- qgisprocess::qgis_run_algorithm("native:extendlines",`INPUT` = INPUT, `START_DISTANCE` = START_DISTANCE, `END_DISTANCE` = END_DISTANCE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:extendlines")
+
+  output <- qgisprocess::qgis_run_algorithm("native:extendlines", `INPUT` = INPUT, `START_DISTANCE` = START_DISTANCE, `END_DISTANCE` = END_DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

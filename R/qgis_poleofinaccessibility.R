@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Point
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_poleofinaccessibility <- function(INPUT = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:poleofinaccessibility")
-  output <- qgisprocess::qgis_run_algorithm("native:poleofinaccessibility",`INPUT` = INPUT, `TOLERANCE` = TOLERANCE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:poleofinaccessibility")
+
+  output <- qgisprocess::qgis_run_algorithm("native:poleofinaccessibility", `INPUT` = INPUT, `TOLERANCE` = TOLERANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

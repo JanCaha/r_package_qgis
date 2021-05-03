@@ -31,16 +31,16 @@
 ##' ## Outputs description
 ##' * output - outputVector - ASCII
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_v_in_ascii <- function(input = qgisprocess::qgis_default_value(), format = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), text = qgisprocess::qgis_default_value(), skip = qgisprocess::qgis_default_value(), columns = qgisprocess::qgis_default_value(), x = qgisprocess::qgis_default_value(), y = qgisprocess::qgis_default_value(), z = qgisprocess::qgis_default_value(), cat = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:v.in.ascii")
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.in.ascii",`input` = input, `format` = format, `separator` = separator, `text` = text, `skip` = skip, `columns` = columns, `x` = x, `y` = y, `z` = z, `cat` = cat, `-z` = .z, `-n` = .n, `-t` = .t, `-b` = .b, `-r` = .r, `-i` = .i, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+  check_algorithm_necessities("grass7:v.in.ascii")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:v.in.ascii", `input` = input, `format` = format, `separator` = separator, `text` = text, `skip` = skip, `columns` = columns, `x` = x, `y` = y, `z` = z, `cat` = cat, `-z` = .z, `-n` = .n, `-t` = .t, `-b` = .b, `-r` = .r, `-i` = .i, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
 
   if (.complete_output) {
     return(output)

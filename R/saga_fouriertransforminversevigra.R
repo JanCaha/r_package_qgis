@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fouriertransforminversevigra <- function(REAL = qgisprocess::qgis_default_value(), IMAG = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), CENTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fouriertransforminversevigra")
-  output <- qgisprocess::qgis_run_algorithm("saga:fouriertransforminversevigra",`REAL` = REAL, `IMAG` = IMAG, `OUTPUT` = OUTPUT, `CENTER` = CENTER,...)
+  check_algorithm_necessities("saga:fouriertransforminversevigra")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fouriertransforminversevigra", `REAL` = REAL, `IMAG` = IMAG, `OUTPUT` = OUTPUT, `CENTER` = CENTER,...)
 
   if (.complete_output) {
     return(output)

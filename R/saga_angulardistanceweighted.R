@@ -30,16 +30,16 @@
 ##' ## Outputs description
 ##' * TARGET_OUT_GRID - outputRaster - Target Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_angulardistanceweighted <- function(SHAPES = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), TARGET_DEFINITION = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_XMIN = qgisprocess::qgis_default_value(), TARGET_USER_XMAX = qgisprocess::qgis_default_value(), TARGET_USER_YMIN = qgisprocess::qgis_default_value(), TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), TARGET_TEMPLATE = qgisprocess::qgis_default_value(), TARGET_OUT_GRID = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:angulardistanceweighted")
-  output <- qgisprocess::qgis_run_algorithm("saga:angulardistanceweighted",`SHAPES` = SHAPES, `FIELD` = FIELD, `TARGET_DEFINITION` = TARGET_DEFINITION, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_XMIN` = TARGET_USER_XMIN, `TARGET_USER_XMAX` = TARGET_USER_XMAX, `TARGET_USER_YMIN` = TARGET_USER_YMIN, `TARGET_USER_YMAX` = TARGET_USER_YMAX, `TARGET_USER_FITS` = TARGET_USER_FITS, `TARGET_TEMPLATE` = TARGET_TEMPLATE, `TARGET_OUT_GRID` = TARGET_OUT_GRID, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH,...)
+  check_algorithm_necessities("saga:angulardistanceweighted")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:angulardistanceweighted", `SHAPES` = SHAPES, `FIELD` = FIELD, `TARGET_DEFINITION` = TARGET_DEFINITION, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_XMIN` = TARGET_USER_XMIN, `TARGET_USER_XMAX` = TARGET_USER_XMAX, `TARGET_USER_YMIN` = TARGET_USER_YMIN, `TARGET_USER_YMAX` = TARGET_USER_YMAX, `TARGET_USER_FITS` = TARGET_USER_FITS, `TARGET_TEMPLATE` = TARGET_TEMPLATE, `TARGET_OUT_GRID` = TARGET_OUT_GRID, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH,...)
 
   if (.complete_output) {
     return(output)

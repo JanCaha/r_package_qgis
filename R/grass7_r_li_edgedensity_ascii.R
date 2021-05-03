@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * output_txt - outputFile - Edge Density
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_li_edgedensity_ascii <- function(input = qgisprocess::qgis_default_value(), config_txt = qgisprocess::qgis_default_value(), config = qgisprocess::qgis_default_value(), patch_type = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), output_txt = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.li.edgedensity.ascii")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.li.edgedensity.ascii",`input` = input, `config_txt` = config_txt, `config` = config, `patch_type` = patch_type, `-b` = .b, `output_txt` = output_txt, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.li.edgedensity.ascii")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.li.edgedensity.ascii", `input` = input, `config_txt` = config_txt, `config` = config, `patch_type` = patch_type, `-b` = .b, `output_txt` = output_txt, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

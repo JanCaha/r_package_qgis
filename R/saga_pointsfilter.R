@@ -19,16 +19,16 @@
 ##' ## Outputs description
 ##' * FILTER - outputVector - Filtered Points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_pointsfilter <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), MINNUM = qgisprocess::qgis_default_value(), MAXNUM = qgisprocess::qgis_default_value(), QUADRANTS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:pointsfilter")
-  output <- qgisprocess::qgis_run_algorithm("saga:pointsfilter",`POINTS` = POINTS, `FIELD` = FIELD, `RADIUS` = RADIUS, `MINNUM` = MINNUM, `MAXNUM` = MAXNUM, `QUADRANTS` = QUADRANTS, `METHOD` = METHOD, `TOLERANCE` = TOLERANCE, `PERCENT` = PERCENT, `FILTER` = FILTER,...)
+  check_algorithm_necessities("saga:pointsfilter")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:pointsfilter", `POINTS` = POINTS, `FIELD` = FIELD, `RADIUS` = RADIUS, `MINNUM` = MINNUM, `MAXNUM` = MAXNUM, `QUADRANTS` = QUADRANTS, `METHOD` = METHOD, `TOLERANCE` = TOLERANCE, `PERCENT` = PERCENT, `FILTER` = FILTER,...)
 
   if (.complete_output) {
     return(output)

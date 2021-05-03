@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Fuzzified Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fuzzify <- function(INPUT = qgisprocess::qgis_default_value(), A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), AUTOFIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fuzzify")
-  output <- qgisprocess::qgis_run_algorithm("saga:fuzzify",`INPUT` = INPUT, `A` = A, `B` = B, `C` = C, `D` = D, `TYPE` = TYPE, `AUTOFIT` = AUTOFIT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:fuzzify")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fuzzify", `INPUT` = INPUT, `A` = A, `B` = B, `C` = C, `D` = D, `TYPE` = TYPE, `AUTOFIT` = AUTOFIT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -14,16 +14,16 @@
 ##' * OUTPUT - outputVector - Photos
 ##' * INVALID - outputVector - Invalid photos table
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_importphotos <- function(FOLDER = qgisprocess::qgis_default_value(), RECURSIVE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), INVALID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:importphotos")
-  output <- qgisprocess::qgis_run_algorithm("native:importphotos",`FOLDER` = FOLDER, `RECURSIVE` = RECURSIVE, `OUTPUT` = OUTPUT, `INVALID` = INVALID,...)
+  check_algorithm_necessities("native:importphotos")
+
+  output <- qgisprocess::qgis_run_algorithm("native:importphotos", `FOLDER` = FOLDER, `RECURSIVE` = RECURSIVE, `OUTPUT` = OUTPUT, `INVALID` = INVALID,...)
 
   if (.complete_output) {
     return(output)

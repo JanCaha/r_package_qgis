@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Clipped 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_cliprasterbyextent <- function(INPUT = qgisprocess::qgis_default_value(), PROJWIN = qgisprocess::qgis_default_value(), OVERCRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:cliprasterbyextent")
-  output <- qgisprocess::qgis_run_algorithm("gdal:cliprasterbyextent",`INPUT` = INPUT, `PROJWIN` = PROJWIN, `OVERCRS` = OVERCRS, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:cliprasterbyextent")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:cliprasterbyextent", `INPUT` = INPUT, `PROJWIN` = PROJWIN, `OVERCRS` = OVERCRS, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

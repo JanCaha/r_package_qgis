@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Converted Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_changedatastorage <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), OFFSET = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:changedatastorage")
-  output <- qgisprocess::qgis_run_algorithm("saga:changedatastorage",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `OFFSET` = OFFSET, `SCALE` = SCALE,...)
+  check_algorithm_necessities("saga:changedatastorage")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:changedatastorage", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `OFFSET` = OFFSET, `SCALE` = SCALE,...)
 
   if (.complete_output) {
     return(output)

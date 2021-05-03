@@ -17,16 +17,16 @@
 ##' * POS - outputRaster - Positive Openness
 ##' * NEG - outputRaster - Negative Openness
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_topographicopenness <- function(DEM = qgisprocess::qgis_default_value(), POS = qgisprocess::qgis_default_value(), NEG = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DLEVEL = qgisprocess::qgis_default_value(), NDIRS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:topographicopenness")
-  output <- qgisprocess::qgis_run_algorithm("saga:topographicopenness",`DEM` = DEM, `POS` = POS, `NEG` = NEG, `RADIUS` = RADIUS, `METHOD` = METHOD, `DLEVEL` = DLEVEL, `NDIRS` = NDIRS,...)
+  check_algorithm_necessities("saga:topographicopenness")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:topographicopenness", `DEM` = DEM, `POS` = POS, `NEG` = NEG, `RADIUS` = RADIUS, `METHOD` = METHOD, `DLEVEL` = DLEVEL, `NDIRS` = NDIRS,...)
 
   if (.complete_output) {
     return(output)

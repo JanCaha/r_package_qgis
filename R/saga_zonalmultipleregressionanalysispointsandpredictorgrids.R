@@ -22,16 +22,16 @@
 ##' * RESIDUALS - outputVector - Residuals
 ##' * REGRESSION - outputRaster - Regression
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_zonalmultipleregressionanalysispointsandpredictorgrids <- function(PREDICTORS = qgisprocess::qgis_default_value(), ZONES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), COORD_X = qgisprocess::qgis_default_value(), COORD_Y = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), P_VALUE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:zonalmultipleregressionanalysispointsandpredictorgrids")
-  output <- qgisprocess::qgis_run_algorithm("saga:zonalmultipleregressionanalysispointsandpredictorgrids",`PREDICTORS` = PREDICTORS, `ZONES` = ZONES, `POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `RESIDUALS` = RESIDUALS, `REGRESSION` = REGRESSION, `RESAMPLING` = RESAMPLING, `COORD_X` = COORD_X, `COORD_Y` = COORD_Y, `INTERCEPT` = INTERCEPT, `METHOD` = METHOD, `P_VALUE` = P_VALUE,...)
+  check_algorithm_necessities("saga:zonalmultipleregressionanalysispointsandpredictorgrids")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:zonalmultipleregressionanalysispointsandpredictorgrids", `PREDICTORS` = PREDICTORS, `ZONES` = ZONES, `POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `RESIDUALS` = RESIDUALS, `REGRESSION` = REGRESSION, `RESAMPLING` = RESAMPLING, `COORD_X` = COORD_X, `COORD_Y` = COORD_Y, `INTERCEPT` = INTERCEPT, `METHOD` = METHOD, `P_VALUE` = P_VALUE,...)
 
   if (.complete_output) {
     return(output)

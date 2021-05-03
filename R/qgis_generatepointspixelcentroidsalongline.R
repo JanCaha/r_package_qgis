@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Points along lines
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_generatepointspixelcentroidsalongline <- function(INPUT_RASTER = qgisprocess::qgis_default_value(), INPUT_VECTOR = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:generatepointspixelcentroidsalongline")
-  output <- qgisprocess::qgis_run_algorithm("qgis:generatepointspixelcentroidsalongline",`INPUT_RASTER` = INPUT_RASTER, `INPUT_VECTOR` = INPUT_VECTOR, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:generatepointspixelcentroidsalongline")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:generatepointspixelcentroidsalongline", `INPUT_RASTER` = INPUT_RASTER, `INPUT_VECTOR` = INPUT_VECTOR, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

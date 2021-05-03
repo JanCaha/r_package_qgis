@@ -27,16 +27,16 @@
 ##' * FRAGMENTATION - outputRaster - Fragmentation
 ##' * FRAGSTATS - outputVector - Summary
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fragmentationstandard <- function(CLASSES = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(), NEIGHBORHOOD_MIN = qgisprocess::qgis_default_value(), NEIGHBORHOOD_MAX = qgisprocess::qgis_default_value(), AGGREGATION = qgisprocess::qgis_default_value(), BORDER = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), DENSITY_MIN = qgisprocess::qgis_default_value(), DENSITY_INT = qgisprocess::qgis_default_value(), CIRCULAR = qgisprocess::qgis_default_value(), DIAGONAL = qgisprocess::qgis_default_value(), DENSITY = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(), FRAGSTATS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fragmentationstandard")
-  output <- qgisprocess::qgis_run_algorithm("saga:fragmentationstandard",`CLASSES` = CLASSES, `CLASS` = CLASS, `NEIGHBORHOOD_MIN` = NEIGHBORHOOD_MIN, `NEIGHBORHOOD_MAX` = NEIGHBORHOOD_MAX, `AGGREGATION` = AGGREGATION, `BORDER` = BORDER, `WEIGHT` = WEIGHT, `DENSITY_MIN` = DENSITY_MIN, `DENSITY_INT` = DENSITY_INT, `CIRCULAR` = CIRCULAR, `DIAGONAL` = DIAGONAL, `DENSITY` = DENSITY, `CONNECTIVITY` = CONNECTIVITY, `FRAGMENTATION` = FRAGMENTATION, `FRAGSTATS` = FRAGSTATS,...)
+  check_algorithm_necessities("saga:fragmentationstandard")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fragmentationstandard", `CLASSES` = CLASSES, `CLASS` = CLASS, `NEIGHBORHOOD_MIN` = NEIGHBORHOOD_MIN, `NEIGHBORHOOD_MAX` = NEIGHBORHOOD_MAX, `AGGREGATION` = AGGREGATION, `BORDER` = BORDER, `WEIGHT` = WEIGHT, `DENSITY_MIN` = DENSITY_MIN, `DENSITY_INT` = DENSITY_INT, `CIRCULAR` = CIRCULAR, `DIAGONAL` = DIAGONAL, `DENSITY` = DENSITY, `CONNECTIVITY` = CONNECTIVITY, `FRAGMENTATION` = FRAGMENTATION, `FRAGSTATS` = FRAGSTATS,...)
 
   if (.complete_output) {
     return(output)

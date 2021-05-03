@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * INDEX - outputRaster - Sorted Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rastercellindex <- function(GRID = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), INDEX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rastercellindex")
-  output <- qgisprocess::qgis_run_algorithm("saga:rastercellindex",`GRID` = GRID, `ORDER` = ORDER, `INDEX` = INDEX,...)
+  check_algorithm_necessities("saga:rastercellindex")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rastercellindex", `GRID` = GRID, `ORDER` = ORDER, `INDEX` = INDEX,...)
 
   if (.complete_output) {
     return(output)

@@ -23,16 +23,16 @@
 ##' * SIMILARITY - outputRaster - Similarity
 ##' * TABLE - outputVector - Seeds
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_simpleregiongrowing <- function(SEEDS = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NEIGHBOUR = qgisprocess::qgis_default_value(), SIG_1 = qgisprocess::qgis_default_value(), SIG_2 = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), REFRESH = qgisprocess::qgis_default_value(), LEAFSIZE = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), SIMILARITY = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:simpleregiongrowing")
-  output <- qgisprocess::qgis_run_algorithm("saga:simpleregiongrowing",`SEEDS` = SEEDS, `FEATURES` = FEATURES, `METHOD` = METHOD, `NEIGHBOUR` = NEIGHBOUR, `SIG_1` = SIG_1, `SIG_2` = SIG_2, `THRESHOLD` = THRESHOLD, `REFRESH` = REFRESH, `LEAFSIZE` = LEAFSIZE, `SEGMENTS` = SEGMENTS, `SIMILARITY` = SIMILARITY, `TABLE` = TABLE,...)
+  check_algorithm_necessities("saga:simpleregiongrowing")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:simpleregiongrowing", `SEEDS` = SEEDS, `FEATURES` = FEATURES, `METHOD` = METHOD, `NEIGHBOUR` = NEIGHBOUR, `SIG_1` = SIG_1, `SIG_2` = SIG_2, `THRESHOLD` = THRESHOLD, `REFRESH` = REFRESH, `LEAFSIZE` = LEAFSIZE, `SEGMENTS` = SEGMENTS, `SIMILARITY` = SIMILARITY, `TABLE` = TABLE,...)
 
   if (.complete_output) {
     return(output)

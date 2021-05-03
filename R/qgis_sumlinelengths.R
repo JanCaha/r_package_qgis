@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Line length
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_sumlinelengths <- function(POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), LEN_FIELD = qgisprocess::qgis_default_value(), COUNT_FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:sumlinelengths")
-  output <- qgisprocess::qgis_run_algorithm("native:sumlinelengths",`POLYGONS` = POLYGONS, `LINES` = LINES, `LEN_FIELD` = LEN_FIELD, `COUNT_FIELD` = COUNT_FIELD, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:sumlinelengths")
+
+  output <- qgisprocess::qgis_run_algorithm("native:sumlinelengths", `POLYGONS` = POLYGONS, `LINES` = LINES, `LEN_FIELD` = LEN_FIELD, `COUNT_FIELD` = COUNT_FIELD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

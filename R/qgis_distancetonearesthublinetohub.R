@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Hub distance
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_distancetonearesthublinetohub <- function(INPUT = qgisprocess::qgis_default_value(), HUBS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), UNIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:distancetonearesthublinetohub")
-  output <- qgisprocess::qgis_run_algorithm("qgis:distancetonearesthublinetohub",`INPUT` = INPUT, `HUBS` = HUBS, `FIELD` = FIELD, `UNIT` = UNIT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:distancetonearesthublinetohub")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:distancetonearesthublinetohub", `INPUT` = INPUT, `HUBS` = HUBS, `FIELD` = FIELD, `UNIT` = UNIT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

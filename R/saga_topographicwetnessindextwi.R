@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * TWI - outputRaster - Topographic Wetness Index
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_topographicwetnessindextwi <- function(SLOPE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), TRANS = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), TWI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:topographicwetnessindextwi")
-  output <- qgisprocess::qgis_run_algorithm("saga:topographicwetnessindextwi",`SLOPE` = SLOPE, `AREA` = AREA, `TRANS` = TRANS, `CONV` = CONV, `METHOD` = METHOD, `TWI` = TWI,...)
+  check_algorithm_necessities("saga:topographicwetnessindextwi")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:topographicwetnessindextwi", `SLOPE` = SLOPE, `AREA` = AREA, `TRANS` = TRANS, `CONV` = CONV, `METHOD` = METHOD, `TWI` = TWI,...)
 
   if (.complete_output) {
     return(output)

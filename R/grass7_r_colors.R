@@ -23,16 +23,16 @@
 ##' ## Outputs description
 ##' * output_dir - outputFolder - Output Directory
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_colors <- function(map = qgisprocess::qgis_default_value(), color = qgisprocess::qgis_default_value(), rules_txt = qgisprocess::qgis_default_value(), rules = qgisprocess::qgis_default_value(), raster = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), output_dir = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.colors")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.colors",`map` = map, `color` = color, `rules_txt` = rules_txt, `rules` = rules, `raster` = raster, `-r` = .r, `-w` = .w, `-n` = .n, `-g` = .g, `-a` = .a, `-e` = .e, `output_dir` = output_dir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.colors")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.colors", `map` = map, `color` = color, `rules_txt` = rules_txt, `rules` = rules, `raster` = raster, `-r` = .r, `-w` = .w, `-n` = .n, `-g` = .g, `-a` = .a, `-e` = .e, `output_dir` = output_dir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

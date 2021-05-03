@@ -21,16 +21,16 @@
 ##' * output_green - outputRaster - Blended Green
 ##' * output_blue - outputRaster - Blended Blue
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_blend_rgb <- function(first = qgisprocess::qgis_default_value(), second = qgisprocess::qgis_default_value(), percent = qgisprocess::qgis_default_value(), output_red = qgisprocess::qgis_default_value(), output_green = qgisprocess::qgis_default_value(), output_blue = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.blend.rgb")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.blend.rgb",`first` = first, `second` = second, `percent` = percent, `output_red` = output_red, `output_green` = output_green, `output_blue` = output_blue, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.blend.rgb")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.blend.rgb", `first` = first, `second` = second, `percent` = percent, `output_red` = output_red, `output_green` = output_green, `output_blue` = output_blue, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Minimum enclosing circles
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_minimumenclosingcircle <- function(INPUT = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:minimumenclosingcircle")
-  output <- qgisprocess::qgis_run_algorithm("native:minimumenclosingcircle",`INPUT` = INPUT, `SEGMENTS` = SEGMENTS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:minimumenclosingcircle")
+
+  output <- qgisprocess::qgis_run_algorithm("native:minimumenclosingcircle", `INPUT` = INPUT, `SEGMENTS` = SEGMENTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

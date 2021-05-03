@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputHtml - Histogram
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_scatter3dplot <- function(INPUT = qgisprocess::qgis_default_value(), XFIELD = qgisprocess::qgis_default_value(), YFIELD = qgisprocess::qgis_default_value(), ZFIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:scatter3dplot")
-  output <- qgisprocess::qgis_run_algorithm("qgis:scatter3dplot",`INPUT` = INPUT, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `ZFIELD` = ZFIELD, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:scatter3dplot")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:scatter3dplot", `INPUT` = INPUT, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `ZFIELD` = ZFIELD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

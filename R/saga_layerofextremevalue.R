@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Result
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_layerofextremevalue <- function(GRIDS = qgisprocess::qgis_default_value(), CRITERIA = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:layerofextremevalue")
-  output <- qgisprocess::qgis_run_algorithm("saga:layerofextremevalue",`GRIDS` = GRIDS, `CRITERIA` = CRITERIA, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:layerofextremevalue")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:layerofextremevalue", `GRIDS` = GRIDS, `CRITERIA` = CRITERIA, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

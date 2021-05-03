@@ -30,16 +30,16 @@
 ##' * flowlength - outputRaster - Flow path length
 ##' * flowaccumulation - outputRaster - Flow accumulation
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_flow <- function(elevation = qgisprocess::qgis_default_value(), aspect = qgisprocess::qgis_default_value(), barrier = qgisprocess::qgis_default_value(), skip = qgisprocess::qgis_default_value(), bound = qgisprocess::qgis_default_value(), .u = qgisprocess::qgis_default_value(), .arg_3 = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), flowline = qgisprocess::qgis_default_value(), flowlength = qgisprocess::qgis_default_value(), flowaccumulation = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.flow")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.flow",`elevation` = elevation, `aspect` = aspect, `barrier` = barrier, `skip` = skip, `bound` = bound, `-u` = .u, `-3` = .arg_3, `-m` = .m, `flowline` = flowline, `flowlength` = flowlength, `flowaccumulation` = flowaccumulation, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+  check_algorithm_necessities("grass7:r.flow")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.flow", `elevation` = elevation, `aspect` = aspect, `barrier` = barrier, `skip` = skip, `bound` = bound, `-u` = .u, `-3` = .arg_3, `-m` = .m, `flowline` = flowline, `flowlength` = flowlength, `flowaccumulation` = flowaccumulation, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
 
   if (.complete_output) {
     return(output)

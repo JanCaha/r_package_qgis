@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Clipped 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_clipvectorbypolygon <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:clipvectorbypolygon")
-  output <- qgisprocess::qgis_run_algorithm("gdal:clipvectorbypolygon",`INPUT` = INPUT, `MASK` = MASK, `OPTIONS` = OPTIONS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:clipvectorbypolygon")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:clipvectorbypolygon", `INPUT` = INPUT, `MASK` = MASK, `OPTIONS` = OPTIONS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

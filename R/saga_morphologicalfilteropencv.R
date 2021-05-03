@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_morphologicalfilteropencv <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SHAPE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:morphologicalfilteropencv")
-  output <- qgisprocess::qgis_run_algorithm("saga:morphologicalfilteropencv",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SHAPE` = SHAPE, `RADIUS` = RADIUS, `ITERATIONS` = ITERATIONS,...)
+  check_algorithm_necessities("saga:morphologicalfilteropencv")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:morphologicalfilteropencv", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SHAPE` = SHAPE, `RADIUS` = RADIUS, `ITERATIONS` = ITERATIONS,...)
 
   if (.complete_output) {
     return(output)

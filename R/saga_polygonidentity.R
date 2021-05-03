@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputVector - Identity
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_polygonidentity <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:polygonidentity")
-  output <- qgisprocess::qgis_run_algorithm("saga:polygonidentity",`A` = A, `B` = B, `SPLIT` = SPLIT, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:polygonidentity")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:polygonidentity", `A` = A, `B` = B, `SPLIT` = SPLIT, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

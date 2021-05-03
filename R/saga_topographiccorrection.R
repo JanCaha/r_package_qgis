@@ -18,16 +18,16 @@
 ##' ## Outputs description
 ##' * CORRECTED - outputRaster - Corrected Image
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_topographiccorrection <- function(DEM = qgisprocess::qgis_default_value(), ORIGINAL = qgisprocess::qgis_default_value(), AZI = qgisprocess::qgis_default_value(), HGT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), MINNAERT = qgisprocess::qgis_default_value(), MAXCELLS = qgisprocess::qgis_default_value(), MAXVALUE = qgisprocess::qgis_default_value(), CORRECTED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:topographiccorrection")
-  output <- qgisprocess::qgis_run_algorithm("saga:topographiccorrection",`DEM` = DEM, `ORIGINAL` = ORIGINAL, `AZI` = AZI, `HGT` = HGT, `METHOD` = METHOD, `MINNAERT` = MINNAERT, `MAXCELLS` = MAXCELLS, `MAXVALUE` = MAXVALUE, `CORRECTED` = CORRECTED,...)
+  check_algorithm_necessities("saga:topographiccorrection")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:topographiccorrection", `DEM` = DEM, `ORIGINAL` = ORIGINAL, `AZI` = AZI, `HGT` = HGT, `METHOD` = METHOD, `MINNAERT` = MINNAERT, `MAXCELLS` = MAXCELLS, `MAXVALUE` = MAXVALUE, `CORRECTED` = CORRECTED,...)
 
   if (.complete_output) {
     return(output)

@@ -12,16 +12,16 @@
 ##' * CPG_ENCODING - outputString - CPG Encoding
 ##' * LDID_ENCODING - outputString - LDID Encoding
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_shpencodinginfo <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:shpencodinginfo")
-  output <- qgisprocess::qgis_run_algorithm("native:shpencodinginfo",`INPUT` = INPUT,...)
+  check_algorithm_necessities("native:shpencodinginfo")
+
+  output <- qgisprocess::qgis_run_algorithm("native:shpencodinginfo", `INPUT` = INPUT,...)
 
   if (.complete_output) {
     return(output)

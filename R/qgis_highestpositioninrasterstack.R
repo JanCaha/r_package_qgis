@@ -19,16 +19,16 @@
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_highestpositioninrasterstack <- function(INPUT_RASTERS = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:highestpositioninrasterstack")
-  output <- qgisprocess::qgis_run_algorithm("native:highestpositioninrasterstack",`INPUT_RASTERS` = INPUT_RASTERS, `REFERENCE_LAYER` = REFERENCE_LAYER, `IGNORE_NODATA` = IGNORE_NODATA, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:highestpositioninrasterstack")
+
+  output <- qgisprocess::qgis_run_algorithm("native:highestpositioninrasterstack", `INPUT_RASTERS` = INPUT_RASTERS, `REFERENCE_LAYER` = REFERENCE_LAYER, `IGNORE_NODATA` = IGNORE_NODATA, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

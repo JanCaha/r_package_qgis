@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * CONTOUR - outputVector - Contour Lines
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_contourlines <- function(GRID = qgisprocess::qgis_default_value(), VERTEX = qgisprocess::qgis_default_value(), ZMIN = qgisprocess::qgis_default_value(), ZMAX = qgisprocess::qgis_default_value(), ZSTEP = qgisprocess::qgis_default_value(), CONTOUR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:contourlines")
-  output <- qgisprocess::qgis_run_algorithm("saga:contourlines",`GRID` = GRID, `VERTEX` = VERTEX, `ZMIN` = ZMIN, `ZMAX` = ZMAX, `ZSTEP` = ZSTEP, `CONTOUR` = CONTOUR,...)
+  check_algorithm_necessities("saga:contourlines")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:contourlines", `GRID` = GRID, `VERTEX` = VERTEX, `ZMIN` = ZMIN, `ZMAX` = ZMAX, `ZSTEP` = ZSTEP, `CONTOUR` = CONTOUR,...)
 
   if (.complete_output) {
     return(output)

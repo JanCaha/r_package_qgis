@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_orderedweightedaveraging <- function(GRIDS = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:orderedweightedaveraging")
-  output <- qgisprocess::qgis_run_algorithm("saga:orderedweightedaveraging",`GRIDS` = GRIDS, `WEIGHTS` = WEIGHTS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:orderedweightedaveraging")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:orderedweightedaveraging", `GRIDS` = GRIDS, `WEIGHTS` = WEIGHTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

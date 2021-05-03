@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_changetimeformat <- function(TABLE = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), FMT_IN = qgisprocess::qgis_default_value(), FMT_OUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:changetimeformat")
-  output <- qgisprocess::qgis_run_algorithm("saga:changetimeformat",`TABLE` = TABLE, `FIELD` = FIELD, `FMT_IN` = FMT_IN, `FMT_OUT` = FMT_OUT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:changetimeformat")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:changetimeformat", `TABLE` = TABLE, `FIELD` = FIELD, `FMT_IN` = FMT_IN, `FMT_OUT` = FMT_OUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

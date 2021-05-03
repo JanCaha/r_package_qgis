@@ -18,16 +18,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - One
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_onesidebuffer <- function(INPUT = qgisprocess::qgis_default_value(), GEOMETRY = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), BUFFER_SIDE = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), DISSOLVE = qgisprocess::qgis_default_value(), EXPLODE_COLLECTIONS = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:onesidebuffer")
-  output <- qgisprocess::qgis_run_algorithm("gdal:onesidebuffer",`INPUT` = INPUT, `GEOMETRY` = GEOMETRY, `DISTANCE` = DISTANCE, `BUFFER_SIDE` = BUFFER_SIDE, `FIELD` = FIELD, `DISSOLVE` = DISSOLVE, `EXPLODE_COLLECTIONS` = EXPLODE_COLLECTIONS, `OPTIONS` = OPTIONS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:onesidebuffer")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:onesidebuffer", `INPUT` = INPUT, `GEOMETRY` = GEOMETRY, `DISTANCE` = DISTANCE, `BUFFER_SIDE` = BUFFER_SIDE, `FIELD` = FIELD, `DISSOLVE` = DISSOLVE, `EXPLODE_COLLECTIONS` = EXPLODE_COLLECTIONS, `OPTIONS` = OPTIONS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

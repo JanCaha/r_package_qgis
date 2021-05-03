@@ -19,16 +19,16 @@
 ##' ## Outputs description
 ##' * output - outputFile - VTK File
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_v_out_vtk <- function(input = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), precision = qgisprocess::qgis_default_value(), zscale = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:v.out.vtk")
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.out.vtk",`input` = input, `type` = type, `precision` = precision, `zscale` = zscale, `-c` = .c, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+  check_algorithm_necessities("grass7:v.out.vtk")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:v.out.vtk", `input` = input, `type` = type, `precision` = precision, `zscale` = zscale, `-c` = .c, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

@@ -20,16 +20,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - Plane
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_plane <- function(dip = qgisprocess::qgis_default_value(), azimuth = qgisprocess::qgis_default_value(), easting = qgisprocess::qgis_default_value(), northing = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.plane")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.plane",`dip` = dip, `azimuth` = azimuth, `easting` = easting, `northing` = northing, `elevation` = elevation, `type` = type, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.plane")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.plane", `dip` = dip, `azimuth` = azimuth, `easting` = easting, `northing` = northing, `elevation` = elevation, `type` = type, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

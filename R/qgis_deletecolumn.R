@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Remaining fields
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_deletecolumn <- function(INPUT = qgisprocess::qgis_default_value(), COLUMN = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:deletecolumn")
-  output <- qgisprocess::qgis_run_algorithm("native:deletecolumn",`INPUT` = INPUT, `COLUMN` = COLUMN, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:deletecolumn")
+
+  output <- qgisprocess::qgis_run_algorithm("native:deletecolumn", `INPUT` = INPUT, `COLUMN` = COLUMN, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

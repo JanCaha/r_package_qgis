@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Concave hull
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_concavehull <- function(INPUT = qgisprocess::qgis_default_value(), ALPHA = qgisprocess::qgis_default_value(), HOLES = qgisprocess::qgis_default_value(), NO_MULTIGEOMETRY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:concavehull")
-  output <- qgisprocess::qgis_run_algorithm("qgis:concavehull",`INPUT` = INPUT, `ALPHA` = ALPHA, `HOLES` = HOLES, `NO_MULTIGEOMETRY` = NO_MULTIGEOMETRY, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:concavehull")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:concavehull", `INPUT` = INPUT, `ALPHA` = ALPHA, `HOLES` = HOLES, `NO_MULTIGEOMETRY` = NO_MULTIGEOMETRY, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

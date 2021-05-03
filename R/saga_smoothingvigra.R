@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_smoothingvigra <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), EDGE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:smoothingvigra")
-  output <- qgisprocess::qgis_run_algorithm("saga:smoothingvigra",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SCALE` = SCALE, `EDGE` = EDGE,...)
+  check_algorithm_necessities("saga:smoothingvigra")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:smoothingvigra", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SCALE` = SCALE, `EDGE` = EDGE,...)
 
   if (.complete_output) {
     return(output)

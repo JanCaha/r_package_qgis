@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Constant
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_createconstantrasterlayer <- function(EXTENT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), NUMBER = qgisprocess::qgis_default_value(), OUTPUT_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:createconstantrasterlayer")
-  output <- qgisprocess::qgis_run_algorithm("native:createconstantrasterlayer",`EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `NUMBER` = NUMBER, `OUTPUT_TYPE` = OUTPUT_TYPE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:createconstantrasterlayer")
+
+  output <- qgisprocess::qgis_run_algorithm("native:createconstantrasterlayer", `EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `NUMBER` = NUMBER, `OUTPUT_TYPE` = OUTPUT_TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

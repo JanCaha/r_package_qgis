@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * html - outputHtml - Coincidence report
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_coin <- function(first = qgisprocess::qgis_default_value(), second = qgisprocess::qgis_default_value(), units = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.coin")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.coin",`first` = first, `second` = second, `units` = units, `-w` = .w, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.coin")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.coin", `first` = first, `second` = second, `units` = units, `-w` = .w, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

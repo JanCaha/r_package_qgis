@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_warpingshapes <- function(REF_SOURCE = qgisprocess::qgis_default_value(), REF_TARGET = qgisprocess::qgis_default_value(), XFIELD = qgisprocess::qgis_default_value(), YFIELD = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:warpingshapes")
-  output <- qgisprocess::qgis_run_algorithm("saga:warpingshapes",`REF_SOURCE` = REF_SOURCE, `REF_TARGET` = REF_TARGET, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `METHOD` = METHOD, `ORDER` = ORDER, `INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:warpingshapes")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:warpingshapes", `REF_SOURCE` = REF_SOURCE, `REF_TARGET` = REF_TARGET, `XFIELD` = XFIELD, `YFIELD` = YFIELD, `METHOD` = METHOD, `ORDER` = ORDER, `INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

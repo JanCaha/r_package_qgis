@@ -41,16 +41,16 @@
 ##' * PERCENT - outputRaster - Percentile
 ##' * POINTS_OUT - outputVector - Directional Statistics for Points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_directionalstatisticsforrasterlayer <- function(GRID = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), MAXDISTANCE = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), DIFMEAN = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), STDDEVLO = qgisprocess::qgis_default_value(), STDDEVHI = qgisprocess::qgis_default_value(), DEVMEAN = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), POINTS_OUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:directionalstatisticsforrasterlayer")
-  output <- qgisprocess::qgis_run_algorithm("saga:directionalstatisticsforrasterlayer",`GRID` = GRID, `POINTS` = POINTS, `DIRECTION` = DIRECTION, `TOLERANCE` = TOLERANCE, `MAXDISTANCE` = MAXDISTANCE, `DISTANCE_WEIGHTING_DW_WEIGHTING` = DISTANCE_WEIGHTING_DW_WEIGHTING, `DISTANCE_WEIGHTING_DW_IDW_POWER` = DISTANCE_WEIGHTING_DW_IDW_POWER, `DISTANCE_WEIGHTING_DW_IDW_OFFSET` = DISTANCE_WEIGHTING_DW_IDW_OFFSET, `DISTANCE_WEIGHTING_DW_BANDWIDTH` = DISTANCE_WEIGHTING_DW_BANDWIDTH, `MEAN` = MEAN, `DIFMEAN` = DIFMEAN, `MIN` = MIN, `MAX` = MAX, `RANGE` = RANGE, `VAR` = VAR, `STDDEV` = STDDEV, `STDDEVLO` = STDDEVLO, `STDDEVHI` = STDDEVHI, `DEVMEAN` = DEVMEAN, `PERCENT` = PERCENT, `POINTS_OUT` = POINTS_OUT,...)
+  check_algorithm_necessities("saga:directionalstatisticsforrasterlayer")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:directionalstatisticsforrasterlayer", `GRID` = GRID, `POINTS` = POINTS, `DIRECTION` = DIRECTION, `TOLERANCE` = TOLERANCE, `MAXDISTANCE` = MAXDISTANCE, `DISTANCE_WEIGHTING_DW_WEIGHTING` = DISTANCE_WEIGHTING_DW_WEIGHTING, `DISTANCE_WEIGHTING_DW_IDW_POWER` = DISTANCE_WEIGHTING_DW_IDW_POWER, `DISTANCE_WEIGHTING_DW_IDW_OFFSET` = DISTANCE_WEIGHTING_DW_IDW_OFFSET, `DISTANCE_WEIGHTING_DW_BANDWIDTH` = DISTANCE_WEIGHTING_DW_BANDWIDTH, `MEAN` = MEAN, `DIFMEAN` = DIFMEAN, `MIN` = MIN, `MAX` = MAX, `RANGE` = RANGE, `VAR` = VAR, `STDDEV` = STDDEV, `STDDEVLO` = STDDEVLO, `STDDEVHI` = STDDEVHI, `DEVMEAN` = DEVMEAN, `PERCENT` = PERCENT, `POINTS_OUT` = POINTS_OUT,...)
 
   if (.complete_output) {
     return(output)

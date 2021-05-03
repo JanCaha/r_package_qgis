@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Slope
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_slope <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:slope")
-  output <- qgisprocess::qgis_run_algorithm("native:slope",`INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:slope")
+
+  output <- qgisprocess::qgis_run_algorithm("native:slope", `INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

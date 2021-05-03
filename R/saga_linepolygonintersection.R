@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * INTERSECT - outputVector - Intersection
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_linepolygonintersection <- function(LINES = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:linepolygonintersection")
-  output <- qgisprocess::qgis_run_algorithm("saga:linepolygonintersection",`LINES` = LINES, `POLYGONS` = POLYGONS, `METHOD` = METHOD, `INTERSECT` = INTERSECT,...)
+  check_algorithm_necessities("saga:linepolygonintersection")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:linepolygonintersection", `LINES` = LINES, `POLYGONS` = POLYGONS, `METHOD` = METHOD, `INTERSECT` = INTERSECT,...)
 
   if (.complete_output) {
     return(output)

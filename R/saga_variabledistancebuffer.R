@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * BUFFER - outputVector - Buffer
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_variabledistancebuffer <- function(SHAPES = qgisprocess::qgis_default_value(), DIST_FIELD = qgisprocess::qgis_default_value(), DIST_SCALE = qgisprocess::qgis_default_value(), NZONES = qgisprocess::qgis_default_value(), DARC = qgisprocess::qgis_default_value(), DISSOLVE = qgisprocess::qgis_default_value(), POLY_INNER = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:variabledistancebuffer")
-  output <- qgisprocess::qgis_run_algorithm("saga:variabledistancebuffer",`SHAPES` = SHAPES, `DIST_FIELD` = DIST_FIELD, `DIST_SCALE` = DIST_SCALE, `NZONES` = NZONES, `DARC` = DARC, `DISSOLVE` = DISSOLVE, `POLY_INNER` = POLY_INNER, `BUFFER` = BUFFER,...)
+  check_algorithm_necessities("saga:variabledistancebuffer")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:variabledistancebuffer", `SHAPES` = SHAPES, `DIST_FIELD` = DIST_FIELD, `DIST_SCALE` = DIST_SCALE, `NZONES` = NZONES, `DARC` = DARC, `DISSOLVE` = DISSOLVE, `POLY_INNER` = POLY_INNER, `BUFFER` = BUFFER,...)
 
   if (.complete_output) {
     return(output)

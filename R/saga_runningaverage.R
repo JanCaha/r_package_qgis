@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_runningaverage <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:runningaverage")
-  output <- qgisprocess::qgis_run_algorithm("saga:runningaverage",`INPUT` = INPUT, `FIELD` = FIELD, `COUNT` = COUNT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:runningaverage")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:runningaverage", `INPUT` = INPUT, `FIELD` = FIELD, `COUNT` = COUNT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

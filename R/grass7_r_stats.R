@@ -30,16 +30,16 @@
 ##' ## Outputs description
 ##' * html - outputHtml - Statistics
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_stats <- function(input = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), nsteps = qgisprocess::qgis_default_value(), sort = qgisprocess::qgis_default_value(), .arg_1 = qgisprocess::qgis_default_value(), .A = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .x = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .N = qgisprocess::qgis_default_value(), .C = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.stats")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.stats",`input` = input, `separator` = separator, `null_value` = null_value, `nsteps` = nsteps, `sort` = sort, `-1` = .arg_1, `-A` = .A, `-a` = .a, `-c` = .c, `-p` = .p, `-l` = .l, `-g` = .g, `-x` = .x, `-r` = .r, `-n` = .n, `-N` = .N, `-C` = .C, `-i` = .i, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.stats")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.stats", `input` = input, `separator` = separator, `null_value` = null_value, `nsteps` = nsteps, `sort` = sort, `-1` = .arg_1, `-A` = .A, `-a` = .a, `-c` = .c, `-p` = .p, `-l` = .l, `-g` = .g, `-x` = .x, `-r` = .r, `-n` = .n, `-N` = .N, `-C` = .C, `-i` = .i, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

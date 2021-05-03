@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Regular points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_regularpoints <- function(EXTENT = qgisprocess::qgis_default_value(), SPACING = qgisprocess::qgis_default_value(), INSET = qgisprocess::qgis_default_value(), RANDOMIZE = qgisprocess::qgis_default_value(), IS_SPACING = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:regularpoints")
-  output <- qgisprocess::qgis_run_algorithm("qgis:regularpoints",`EXTENT` = EXTENT, `SPACING` = SPACING, `INSET` = INSET, `RANDOMIZE` = RANDOMIZE, `IS_SPACING` = IS_SPACING, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:regularpoints")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:regularpoints", `EXTENT` = EXTENT, `SPACING` = SPACING, `INSET` = INSET, `RANDOMIZE` = RANDOMIZE, `IS_SPACING` = IS_SPACING, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

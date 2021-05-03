@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * SPI - outputRaster - Stream Power Index
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_streampowerindex <- function(SLOPE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(), SPI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:streampowerindex")
-  output <- qgisprocess::qgis_run_algorithm("saga:streampowerindex",`SLOPE` = SLOPE, `AREA` = AREA, `CONV` = CONV, `SPI` = SPI,...)
+  check_algorithm_necessities("saga:streampowerindex")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:streampowerindex", `SLOPE` = SLOPE, `AREA` = AREA, `CONV` = CONV, `SPI` = SPI,...)
 
   if (.complete_output) {
     return(output)

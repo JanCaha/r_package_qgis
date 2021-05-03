@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Multi
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_multiringconstantbuffer <- function(INPUT = qgisprocess::qgis_default_value(), RINGS = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:multiringconstantbuffer")
-  output <- qgisprocess::qgis_run_algorithm("native:multiringconstantbuffer",`INPUT` = INPUT, `RINGS` = RINGS, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:multiringconstantbuffer")
+
+  output <- qgisprocess::qgis_run_algorithm("native:multiringconstantbuffer", `INPUT` = INPUT, `RINGS` = RINGS, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

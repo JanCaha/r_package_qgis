@@ -21,16 +21,16 @@
 ##' * JOINED_COUNT - outputNumber - Number of joined features from input table
 ##' * UNJOINABLE_COUNT - outputNumber - Number of unjoinable features from input table
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_joinbynearest <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_2 = qgisprocess::qgis_default_value(), FIELDS_TO_COPY = qgisprocess::qgis_default_value(), DISCARD_NONMATCHING = qgisprocess::qgis_default_value(), PREFIX = qgisprocess::qgis_default_value(), NEIGHBORS = qgisprocess::qgis_default_value(), MAX_DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), NON_MATCHING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:joinbynearest")
-  output <- qgisprocess::qgis_run_algorithm("native:joinbynearest",`INPUT` = INPUT, `INPUT_2` = INPUT_2, `FIELDS_TO_COPY` = FIELDS_TO_COPY, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `PREFIX` = PREFIX, `NEIGHBORS` = NEIGHBORS, `MAX_DISTANCE` = MAX_DISTANCE, `OUTPUT` = OUTPUT, `NON_MATCHING` = NON_MATCHING,...)
+  check_algorithm_necessities("native:joinbynearest")
+
+  output <- qgisprocess::qgis_run_algorithm("native:joinbynearest", `INPUT` = INPUT, `INPUT_2` = INPUT_2, `FIELDS_TO_COPY` = FIELDS_TO_COPY, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `PREFIX` = PREFIX, `NEIGHBORS` = NEIGHBORS, `MAX_DISTANCE` = MAX_DISTANCE, `OUTPUT` = OUTPUT, `NON_MATCHING` = NON_MATCHING,...)
 
   if (.complete_output) {
     return(output)

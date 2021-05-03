@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Rescaled
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rescaleraster <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), MINIMUM = qgisprocess::qgis_default_value(), MAXIMUM = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:rescaleraster")
-  output <- qgisprocess::qgis_run_algorithm("native:rescaleraster",`INPUT` = INPUT, `BAND` = BAND, `MINIMUM` = MINIMUM, `MAXIMUM` = MAXIMUM, `NODATA` = NODATA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:rescaleraster")
+
+  output <- qgisprocess::qgis_run_algorithm("native:rescaleraster", `INPUT` = INPUT, `BAND` = BAND, `MINIMUM` = MINIMUM, `MAXIMUM` = MAXIMUM, `NODATA` = NODATA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

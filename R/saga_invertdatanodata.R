@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Result
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_invertdatanodata <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:invertdatanodata")
-  output <- qgisprocess::qgis_run_algorithm("saga:invertdatanodata",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:invertdatanodata")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:invertdatanodata", `INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

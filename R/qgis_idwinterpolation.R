@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Interpolated
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_idwinterpolation <- function(INTERPOLATION_DATA = qgisprocess::qgis_default_value(), DISTANCE_COEFFICIENT = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:idwinterpolation")
-  output <- qgisprocess::qgis_run_algorithm("qgis:idwinterpolation",`INTERPOLATION_DATA` = INTERPOLATION_DATA, `DISTANCE_COEFFICIENT` = DISTANCE_COEFFICIENT, `EXTENT` = EXTENT, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:idwinterpolation")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:idwinterpolation", `INTERPOLATION_DATA` = INTERPOLATION_DATA, `DISTANCE_COEFFICIENT` = DISTANCE_COEFFICIENT, `EXTENT` = EXTENT, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

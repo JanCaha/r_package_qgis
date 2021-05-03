@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Extracted 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_randomextract <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NUMBER = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:randomextract")
-  output <- qgisprocess::qgis_run_algorithm("native:randomextract",`INPUT` = INPUT, `METHOD` = METHOD, `NUMBER` = NUMBER, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:randomextract")
+
+  output <- qgisprocess::qgis_run_algorithm("native:randomextract", `INPUT` = INPUT, `METHOD` = METHOD, `NUMBER` = NUMBER, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

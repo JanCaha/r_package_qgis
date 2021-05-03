@@ -22,16 +22,16 @@
 ##' ## Outputs description
 ##' * AFH - outputRaster - Effective Air Flow Heights
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_effectiveairflowheights <- function(DEM = qgisprocess::qgis_default_value(), DIR = qgisprocess::qgis_default_value(), LEN = qgisprocess::qgis_default_value(), DIR_CONST = qgisprocess::qgis_default_value(), OLDVER = qgisprocess::qgis_default_value(), MAXDIST = qgisprocess::qgis_default_value(), ACCEL = qgisprocess::qgis_default_value(), PYRAMIDS = qgisprocess::qgis_default_value(), LEEFACT = qgisprocess::qgis_default_value(), LUVFACT = qgisprocess::qgis_default_value(), DIR_UNITS = qgisprocess::qgis_default_value(), LEN_SCALE = qgisprocess::qgis_default_value(), AFH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:effectiveairflowheights")
-  output <- qgisprocess::qgis_run_algorithm("saga:effectiveairflowheights",`DEM` = DEM, `DIR` = DIR, `LEN` = LEN, `DIR_CONST` = DIR_CONST, `OLDVER` = OLDVER, `MAXDIST` = MAXDIST, `ACCEL` = ACCEL, `PYRAMIDS` = PYRAMIDS, `LEEFACT` = LEEFACT, `LUVFACT` = LUVFACT, `DIR_UNITS` = DIR_UNITS, `LEN_SCALE` = LEN_SCALE, `AFH` = AFH,...)
+  check_algorithm_necessities("saga:effectiveairflowheights")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:effectiveairflowheights", `DEM` = DEM, `DIR` = DIR, `LEN` = LEN, `DIR_CONST` = DIR_CONST, `OLDVER` = OLDVER, `MAXDIST` = MAXDIST, `ACCEL` = ACCEL, `PYRAMIDS` = PYRAMIDS, `LEEFACT` = LEEFACT, `LUVFACT` = LUVFACT, `DIR_UNITS` = DIR_UNITS, `LEN_SCALE` = LEN_SCALE, `AFH` = AFH,...)
 
   if (.complete_output) {
     return(output)

@@ -19,16 +19,16 @@
 ##' * SYMBOLIC_IMAGE - outputRaster - Symbolic Image
 ##' * OUTLINES - outputVector - Outlines
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_connectivityanalysis <- function(INPUT_GRID = qgisprocess::qgis_default_value(), FILTERED_MASK = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(), SIZE = qgisprocess::qgis_default_value(), SYMBOLIC_IMAGE = qgisprocess::qgis_default_value(), OUTLINES = qgisprocess::qgis_default_value(), BORDER_PIXEL_CENTERS = qgisprocess::qgis_default_value(), REMOVE_MARGINAL_REGIONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:connectivityanalysis")
-  output <- qgisprocess::qgis_run_algorithm("saga:connectivityanalysis",`INPUT_GRID` = INPUT_GRID, `FILTERED_MASK` = FILTERED_MASK, `FILTER` = FILTER, `SIZE` = SIZE, `SYMBOLIC_IMAGE` = SYMBOLIC_IMAGE, `OUTLINES` = OUTLINES, `BORDER_PIXEL_CENTERS` = BORDER_PIXEL_CENTERS, `REMOVE_MARGINAL_REGIONS` = REMOVE_MARGINAL_REGIONS,...)
+  check_algorithm_necessities("saga:connectivityanalysis")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:connectivityanalysis", `INPUT_GRID` = INPUT_GRID, `FILTERED_MASK` = FILTERED_MASK, `FILTER` = FILTER, `SIZE` = SIZE, `SYMBOLIC_IMAGE` = SYMBOLIC_IMAGE, `OUTLINES` = OUTLINES, `BORDER_PIXEL_CENTERS` = BORDER_PIXEL_CENTERS, `REMOVE_MARGINAL_REGIONS` = REMOVE_MARGINAL_REGIONS,...)
 
   if (.complete_output) {
     return(output)

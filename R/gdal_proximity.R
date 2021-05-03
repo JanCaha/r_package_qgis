@@ -20,16 +20,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Proximity map
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_proximity <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), VALUES = qgisprocess::qgis_default_value(), UNITS = qgisprocess::qgis_default_value(), MAX_DISTANCE = qgisprocess::qgis_default_value(), REPLACE = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:proximity")
-  output <- qgisprocess::qgis_run_algorithm("gdal:proximity",`INPUT` = INPUT, `BAND` = BAND, `VALUES` = VALUES, `UNITS` = UNITS, `MAX_DISTANCE` = MAX_DISTANCE, `REPLACE` = REPLACE, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:proximity")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:proximity", `INPUT` = INPUT, `BAND` = BAND, `VALUES` = VALUES, `UNITS` = UNITS, `MAX_DISTANCE` = MAX_DISTANCE, `REPLACE` = REPLACE, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

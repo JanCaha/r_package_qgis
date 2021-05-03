@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * POINTS - outputVector - Points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rastervaluestopointsrandomly <- function(GRID = qgisprocess::qgis_default_value(), FREQ = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rastervaluestopointsrandomly")
-  output <- qgisprocess::qgis_run_algorithm("saga:rastervaluestopointsrandomly",`GRID` = GRID, `FREQ` = FREQ, `POINTS` = POINTS,...)
+  check_algorithm_necessities("saga:rastervaluestopointsrandomly")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rastervaluestopointsrandomly", `GRID` = GRID, `FREQ` = FREQ, `POINTS` = POINTS,...)
 
   if (.complete_output) {
     return(output)

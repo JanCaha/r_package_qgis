@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Sieved Classes
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_sievingclasses <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ALL = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:sievingclasses")
-  output <- qgisprocess::qgis_run_algorithm("saga:sievingclasses",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `MODE` = MODE, `THRESHOLD` = THRESHOLD, `ALL` = ALL, `CLASS` = CLASS,...)
+  check_algorithm_necessities("saga:sievingclasses")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:sievingclasses", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `MODE` = MODE, `THRESHOLD` = THRESHOLD, `ALL` = ALL, `CLASS` = CLASS,...)
 
   if (.complete_output) {
     return(output)

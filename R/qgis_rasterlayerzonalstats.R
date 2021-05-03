@@ -21,16 +21,16 @@
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##' * NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rasterlayerzonalstats <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), ZONES = qgisprocess::qgis_default_value(), ZONES_BAND = qgisprocess::qgis_default_value(), REF_LAYER = qgisprocess::qgis_default_value(), OUTPUT_TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:rasterlayerzonalstats")
-  output <- qgisprocess::qgis_run_algorithm("native:rasterlayerzonalstats",`INPUT` = INPUT, `BAND` = BAND, `ZONES` = ZONES, `ZONES_BAND` = ZONES_BAND, `REF_LAYER` = REF_LAYER, `OUTPUT_TABLE` = OUTPUT_TABLE,...)
+  check_algorithm_necessities("native:rasterlayerzonalstats")
+
+  output <- qgisprocess::qgis_run_algorithm("native:rasterlayerzonalstats", `INPUT` = INPUT, `BAND` = BAND, `ZONES` = ZONES, `ZONES_BAND` = ZONES_BAND, `REF_LAYER` = REF_LAYER, `OUTPUT_TABLE` = OUTPUT_TABLE,...)
 
   if (.complete_output) {
     return(output)

@@ -19,16 +19,16 @@
 ##' * CLUSTER - outputRaster - Clusters
 ##' * STATISTICS - outputVector - Statistics
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_kmeansclusteringforgrids <- function(GRIDS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NCLUSTER = qgisprocess::qgis_default_value(), MAXITER = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), OLDVERSION = qgisprocess::qgis_default_value(), UPDATEVIEW = qgisprocess::qgis_default_value(), CLUSTER = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:kmeansclusteringforgrids")
-  output <- qgisprocess::qgis_run_algorithm("saga:kmeansclusteringforgrids",`GRIDS` = GRIDS, `METHOD` = METHOD, `NCLUSTER` = NCLUSTER, `MAXITER` = MAXITER, `NORMALISE` = NORMALISE, `OLDVERSION` = OLDVERSION, `UPDATEVIEW` = UPDATEVIEW, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS,...)
+  check_algorithm_necessities("saga:kmeansclusteringforgrids")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:kmeansclusteringforgrids", `GRIDS` = GRIDS, `METHOD` = METHOD, `NCLUSTER` = NCLUSTER, `MAXITER` = MAXITER, `NORMALISE` = NORMALISE, `OLDVERSION` = OLDVERSION, `UPDATEVIEW` = UPDATEVIEW, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS,...)
 
   if (.complete_output) {
     return(output)

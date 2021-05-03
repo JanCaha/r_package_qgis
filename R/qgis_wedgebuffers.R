@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Buffers
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_wedgebuffers <- function(INPUT = qgisprocess::qgis_default_value(), AZIMUTH = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), OUTER_RADIUS = qgisprocess::qgis_default_value(), INNER_RADIUS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:wedgebuffers")
-  output <- qgisprocess::qgis_run_algorithm("native:wedgebuffers",`INPUT` = INPUT, `AZIMUTH` = AZIMUTH, `WIDTH` = WIDTH, `OUTER_RADIUS` = OUTER_RADIUS, `INNER_RADIUS` = INNER_RADIUS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:wedgebuffers")
+
+  output <- qgisprocess::qgis_run_algorithm("native:wedgebuffers", `INPUT` = INPUT, `AZIMUTH` = AZIMUTH, `WIDTH` = WIDTH, `OUTER_RADIUS` = OUTER_RADIUS, `INNER_RADIUS` = INNER_RADIUS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

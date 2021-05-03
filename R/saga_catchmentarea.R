@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * FLOW - outputRaster - Catchment Area
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_catchmentarea <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:catchmentarea")
-  output <- qgisprocess::qgis_run_algorithm("saga:catchmentarea",`ELEVATION` = ELEVATION, `METHOD` = METHOD, `FLOW` = FLOW,...)
+  check_algorithm_necessities("saga:catchmentarea")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:catchmentarea", `ELEVATION` = ELEVATION, `METHOD` = METHOD, `FLOW` = FLOW,...)
 
   if (.complete_output) {
     return(output)

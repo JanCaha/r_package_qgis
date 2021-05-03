@@ -25,16 +25,16 @@
 ##' * output - outputRaster - Output Map
 ##' * uncertainty - outputRaster - Uncertainty Map
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_fill_stats <- function(input = qgisprocess::qgis_default_value(), .k = qgisprocess::qgis_default_value(), mode = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), distance = qgisprocess::qgis_default_value(), minimum = qgisprocess::qgis_default_value(), maximum = qgisprocess::qgis_default_value(), power = qgisprocess::qgis_default_value(), cells = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), uncertainty = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.fill.stats")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.fill.stats",`input` = input, `-k` = .k, `mode` = mode, `-m` = .m, `distance` = distance, `minimum` = minimum, `maximum` = maximum, `power` = power, `cells` = cells, `output` = output, `uncertainty` = uncertainty, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.fill.stats")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.fill.stats", `input` = input, `-k` = .k, `mode` = mode, `-m` = .m, `distance` = distance, `minimum` = minimum, `maximum` = maximum, `power` = power, `cells` = cells, `output` = output, `uncertainty` = uncertainty, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

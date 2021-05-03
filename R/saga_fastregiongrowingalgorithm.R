@@ -15,16 +15,16 @@
 ##' * RESULT - outputRaster - Segmente
 ##' * MEAN - outputRaster - Mean
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fastregiongrowingalgorithm <- function(INPUT = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), REP = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fastregiongrowingalgorithm")
-  output <- qgisprocess::qgis_run_algorithm("saga:fastregiongrowingalgorithm",`INPUT` = INPUT, `START` = START, `REP` = REP, `RESULT` = RESULT, `MEAN` = MEAN,...)
+  check_algorithm_necessities("saga:fastregiongrowingalgorithm")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fastregiongrowingalgorithm", `INPUT` = INPUT, `START` = START, `REP` = REP, `RESULT` = RESULT, `MEAN` = MEAN,...)
 
   if (.complete_output) {
     return(output)

@@ -27,16 +27,16 @@
 ##' * TTVI - outputRaster - Thiam
 ##' * SAVI - outputRaster - Soil Adjusted Vegetation Index
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_vegetationindexslopebased <- function(NIR = qgisprocess::qgis_default_value(), RED = qgisprocess::qgis_default_value(), SOIL = qgisprocess::qgis_default_value(), DVI = qgisprocess::qgis_default_value(), NDVI = qgisprocess::qgis_default_value(), RVI = qgisprocess::qgis_default_value(), NRVI = qgisprocess::qgis_default_value(), TVI = qgisprocess::qgis_default_value(), CTVI = qgisprocess::qgis_default_value(), TTVI = qgisprocess::qgis_default_value(), SAVI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:vegetationindexslopebased")
-  output <- qgisprocess::qgis_run_algorithm("saga:vegetationindexslopebased",`NIR` = NIR, `RED` = RED, `SOIL` = SOIL, `DVI` = DVI, `NDVI` = NDVI, `RVI` = RVI, `NRVI` = NRVI, `TVI` = TVI, `CTVI` = CTVI, `TTVI` = TTVI, `SAVI` = SAVI,...)
+  check_algorithm_necessities("saga:vegetationindexslopebased")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:vegetationindexslopebased", `NIR` = NIR, `RED` = RED, `SOIL` = SOIL, `DVI` = DVI, `NDVI` = NDVI, `RVI` = RVI, `NRVI` = NRVI, `TVI` = TVI, `CTVI` = CTVI, `TTVI` = TTVI, `SAVI` = SAVI,...)
 
   if (.complete_output) {
     return(output)

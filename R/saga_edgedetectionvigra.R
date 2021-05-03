@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Edges
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_edgedetectionvigra <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:edgedetectionvigra")
-  output <- qgisprocess::qgis_run_algorithm("saga:edgedetectionvigra",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SCALE` = SCALE, `THRESHOLD` = THRESHOLD,...)
+  check_algorithm_necessities("saga:edgedetectionvigra")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:edgedetectionvigra", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `TYPE` = TYPE, `SCALE` = SCALE, `THRESHOLD` = THRESHOLD,...)
 
   if (.complete_output) {
     return(output)

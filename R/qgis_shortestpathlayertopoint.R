@@ -22,16 +22,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Shortest path
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_shortestpathlayertopoint <- function(INPUT = qgisprocess::qgis_default_value(), STRATEGY = qgisprocess::qgis_default_value(), DIRECTION_FIELD = qgisprocess::qgis_default_value(), VALUE_FORWARD = qgisprocess::qgis_default_value(), VALUE_BACKWARD = qgisprocess::qgis_default_value(), VALUE_BOTH = qgisprocess::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess::qgis_default_value(), SPEED_FIELD = qgisprocess::qgis_default_value(), DEFAULT_SPEED = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), START_POINTS = qgisprocess::qgis_default_value(), END_POINT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:shortestpathlayertopoint")
-  output <- qgisprocess::qgis_run_algorithm("native:shortestpathlayertopoint",`INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `END_POINT` = END_POINT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:shortestpathlayertopoint")
+
+  output <- qgisprocess::qgis_run_algorithm("native:shortestpathlayertopoint", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `END_POINT` = END_POINT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT_MESH - outputFile - Output File
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_tinmeshcreation <- function(SOURCE_DATA = qgisprocess::qgis_default_value(), MESH_FORMAT = qgisprocess::qgis_default_value(), CRS_OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_MESH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:tinmeshcreation")
-  output <- qgisprocess::qgis_run_algorithm("native:tinmeshcreation",`SOURCE_DATA` = SOURCE_DATA, `MESH_FORMAT` = MESH_FORMAT, `CRS_OUTPUT` = CRS_OUTPUT, `OUTPUT_MESH` = OUTPUT_MESH,...)
+  check_algorithm_necessities("native:tinmeshcreation")
+
+  output <- qgisprocess::qgis_run_algorithm("native:tinmeshcreation", `SOURCE_DATA` = SOURCE_DATA, `MESH_FORMAT` = MESH_FORMAT, `CRS_OUTPUT` = CRS_OUTPUT, `OUTPUT_MESH` = OUTPUT_MESH,...)
 
   if (.complete_output) {
     return(output)

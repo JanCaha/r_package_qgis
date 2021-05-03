@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Rasterized
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_rasterize_over_fixed_value <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_RASTER = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(), ADD = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:rasterize_over_fixed_value")
-  output <- qgisprocess::qgis_run_algorithm("gdal:rasterize_over_fixed_value",`INPUT` = INPUT, `INPUT_RASTER` = INPUT_RASTER, `BURN` = BURN, `ADD` = ADD, `EXTRA` = EXTRA,...)
+  check_algorithm_necessities("gdal:rasterize_over_fixed_value")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:rasterize_over_fixed_value", `INPUT` = INPUT, `INPUT_RASTER` = INPUT_RASTER, `BURN` = BURN, `ADD` = ADD, `EXTRA` = EXTRA,...)
 
   if (.complete_output) {
     return(output)

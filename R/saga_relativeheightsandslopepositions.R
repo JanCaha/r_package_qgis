@@ -22,16 +22,16 @@
 ##' * SH - outputRaster - Standardized Height
 ##' * MS - outputRaster - Mid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_relativeheightsandslopepositions <- function(DEM = qgisprocess::qgis_default_value(), W = qgisprocess::qgis_default_value(), T = qgisprocess::qgis_default_value(), E = qgisprocess::qgis_default_value(), HO = qgisprocess::qgis_default_value(), HU = qgisprocess::qgis_default_value(), NH = qgisprocess::qgis_default_value(), SH = qgisprocess::qgis_default_value(), MS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:relativeheightsandslopepositions")
-  output <- qgisprocess::qgis_run_algorithm("saga:relativeheightsandslopepositions",`DEM` = DEM, `W` = W, `T` = T, `E` = E, `HO` = HO, `HU` = HU, `NH` = NH, `SH` = SH, `MS` = MS,...)
+  check_algorithm_necessities("saga:relativeheightsandslopepositions")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:relativeheightsandslopepositions", `DEM` = DEM, `W` = W, `T` = T, `E` = E, `HO` = HO, `HU` = HU, `NH` = NH, `SH` = SH, `MS` = MS,...)
 
   if (.complete_output) {
     return(output)

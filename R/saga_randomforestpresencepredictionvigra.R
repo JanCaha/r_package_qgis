@@ -28,16 +28,16 @@
 ##' * PREDICTION - outputRaster - Presence Prediction
 ##' * PROBABILITY - outputRaster - Presence Probability
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_randomforestpresencepredictionvigra <- function(FEATURES = qgisprocess::qgis_default_value(), PREDICTION = qgisprocess::qgis_default_value(), PROBABILITY = qgisprocess::qgis_default_value(), PRESENCE = qgisprocess::qgis_default_value(), BACKGROUND = qgisprocess::qgis_default_value(), DO_MRMR = qgisprocess::qgis_default_value(), mRMR_NFEATURES = qgisprocess::qgis_default_value(), mRMR_DISCRETIZE = qgisprocess::qgis_default_value(), mRMR_THRESHOLD = qgisprocess::qgis_default_value(), mRMR_METHOD = qgisprocess::qgis_default_value(), RF_IMPORT = qgisprocess::qgis_default_value(), RF_EXPORT = qgisprocess::qgis_default_value(), RF_TREE_COUNT = qgisprocess::qgis_default_value(), RF_TREE_SAMPLES = qgisprocess::qgis_default_value(), RF_REPLACE = qgisprocess::qgis_default_value(), RF_SPLIT_MIN_SIZE = qgisprocess::qgis_default_value(), RF_NODE_FEATURES = qgisprocess::qgis_default_value(), RF_STRATIFICATION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:randomforestpresencepredictionvigra")
-  output <- qgisprocess::qgis_run_algorithm("saga:randomforestpresencepredictionvigra",`FEATURES` = FEATURES, `PREDICTION` = PREDICTION, `PROBABILITY` = PROBABILITY, `PRESENCE` = PRESENCE, `BACKGROUND` = BACKGROUND, `DO_MRMR` = DO_MRMR, `mRMR_NFEATURES` = mRMR_NFEATURES, `mRMR_DISCRETIZE` = mRMR_DISCRETIZE, `mRMR_THRESHOLD` = mRMR_THRESHOLD, `mRMR_METHOD` = mRMR_METHOD, `RF_IMPORT` = RF_IMPORT, `RF_EXPORT` = RF_EXPORT, `RF_TREE_COUNT` = RF_TREE_COUNT, `RF_TREE_SAMPLES` = RF_TREE_SAMPLES, `RF_REPLACE` = RF_REPLACE, `RF_SPLIT_MIN_SIZE` = RF_SPLIT_MIN_SIZE, `RF_NODE_FEATURES` = RF_NODE_FEATURES, `RF_STRATIFICATION` = RF_STRATIFICATION,...)
+  check_algorithm_necessities("saga:randomforestpresencepredictionvigra")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:randomforestpresencepredictionvigra", `FEATURES` = FEATURES, `PREDICTION` = PREDICTION, `PROBABILITY` = PROBABILITY, `PRESENCE` = PRESENCE, `BACKGROUND` = BACKGROUND, `DO_MRMR` = DO_MRMR, `mRMR_NFEATURES` = mRMR_NFEATURES, `mRMR_DISCRETIZE` = mRMR_DISCRETIZE, `mRMR_THRESHOLD` = mRMR_THRESHOLD, `mRMR_METHOD` = mRMR_METHOD, `RF_IMPORT` = RF_IMPORT, `RF_EXPORT` = RF_EXPORT, `RF_TREE_COUNT` = RF_TREE_COUNT, `RF_TREE_SAMPLES` = RF_TREE_SAMPLES, `RF_REPLACE` = RF_REPLACE, `RF_SPLIT_MIN_SIZE` = RF_SPLIT_MIN_SIZE, `RF_NODE_FEATURES` = RF_NODE_FEATURES, `RF_STRATIFICATION` = RF_STRATIFICATION,...)
 
   if (.complete_output) {
     return(output)

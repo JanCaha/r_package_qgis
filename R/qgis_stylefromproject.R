@@ -16,16 +16,16 @@
 ##' * TEXTFORMATS - outputNumber - Text format count
 ##' * LABELSETTINGS - outputNumber - Label settings count
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_stylefromproject <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OBJECTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:stylefromproject")
-  output <- qgisprocess::qgis_run_algorithm("native:stylefromproject",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `OBJECTS` = OBJECTS,...)
+  check_algorithm_necessities("native:stylefromproject")
+
+  output <- qgisprocess::qgis_run_algorithm("native:stylefromproject", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `OBJECTS` = OBJECTS,...)
 
   if (.complete_output) {
     return(output)

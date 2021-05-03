@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputFile - Image file
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_printlayouttoimage <- function(LAYOUT = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), GEOREFERENCE = qgisprocess::qgis_default_value(), INCLUDE_METADATA = qgisprocess::qgis_default_value(), ANTIALIAS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:printlayouttoimage")
-  output <- qgisprocess::qgis_run_algorithm("native:printlayouttoimage",`LAYOUT` = LAYOUT, `LAYERS` = LAYERS, `DPI` = DPI, `GEOREFERENCE` = GEOREFERENCE, `INCLUDE_METADATA` = INCLUDE_METADATA, `ANTIALIAS` = ANTIALIAS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:printlayouttoimage")
+
+  output <- qgisprocess::qgis_run_algorithm("native:printlayouttoimage", `LAYOUT` = LAYOUT, `LAYERS` = LAYERS, `DPI` = DPI, `GEOREFERENCE` = GEOREFERENCE, `INCLUDE_METADATA` = INCLUDE_METADATA, `ANTIALIAS` = ANTIALIAS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

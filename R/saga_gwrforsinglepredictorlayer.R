@@ -31,16 +31,16 @@
 ##' * INTERCEPT - outputRaster - Intercept
 ##' * SLOPE - outputRaster - Slope
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_gwrforsinglepredictorlayer <- function(POINTS = qgisprocess::qgis_default_value(), PREDICTOR = qgisprocess::qgis_default_value(), DEPENDENT = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:gwrforsinglepredictorlayer")
-  output <- qgisprocess::qgis_run_algorithm("saga:gwrforsinglepredictorlayer",`POINTS` = POINTS, `PREDICTOR` = PREDICTOR, `DEPENDENT` = DEPENDENT, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `RESIDUALS` = RESIDUALS, `REGRESSION` = REGRESSION, `QUALITY` = QUALITY, `INTERCEPT` = INTERCEPT, `SLOPE` = SLOPE,...)
+  check_algorithm_necessities("saga:gwrforsinglepredictorlayer")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:gwrforsinglepredictorlayer", `POINTS` = POINTS, `PREDICTOR` = PREDICTOR, `DEPENDENT` = DEPENDENT, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `RESIDUALS` = RESIDUALS, `REGRESSION` = REGRESSION, `QUALITY` = QUALITY, `INTERCEPT` = INTERCEPT, `SLOPE` = SLOPE,...)
 
   if (.complete_output) {
     return(output)

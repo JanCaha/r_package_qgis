@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputVector - Variogram Cloud
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_variogramcloud <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), DISTMAX = qgisprocess::qgis_default_value(), NSKIP = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:variogramcloud")
-  output <- qgisprocess::qgis_run_algorithm("saga:variogramcloud",`POINTS` = POINTS, `FIELD` = FIELD, `DISTMAX` = DISTMAX, `NSKIP` = NSKIP, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:variogramcloud")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:variogramcloud", `POINTS` = POINTS, `FIELD` = FIELD, `DISTMAX` = DISTMAX, `NSKIP` = NSKIP, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

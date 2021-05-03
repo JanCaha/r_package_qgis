@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * LENGTH - outputRaster - Slope Length
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_slopelength <- function(DEM = qgisprocess::qgis_default_value(), LENGTH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:slopelength")
-  output <- qgisprocess::qgis_run_algorithm("saga:slopelength",`DEM` = DEM, `LENGTH` = LENGTH,...)
+  check_algorithm_necessities("saga:slopelength")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:slopelength", `DEM` = DEM, `LENGTH` = LENGTH,...)
 
   if (.complete_output) {
     return(output)

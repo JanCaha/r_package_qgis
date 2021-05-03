@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Indexed layer
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_createattributeindex <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:createattributeindex")
-  output <- qgisprocess::qgis_run_algorithm("native:createattributeindex",`INPUT` = INPUT, `FIELD` = FIELD,...)
+  check_algorithm_necessities("native:createattributeindex")
+
+  output <- qgisprocess::qgis_run_algorithm("native:createattributeindex", `INPUT` = INPUT, `FIELD` = FIELD,...)
 
   if (.complete_output) {
     return(output)

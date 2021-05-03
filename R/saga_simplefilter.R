@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Filtered Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_simplefilter <- function(INPUT = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:simplefilter")
-  output <- qgisprocess::qgis_run_algorithm("saga:simplefilter",`INPUT` = INPUT, `MODE` = MODE, `METHOD` = METHOD, `RADIUS` = RADIUS, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:simplefilter")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:simplefilter", `INPUT` = INPUT, `MODE` = MODE, `METHOD` = METHOD, `RADIUS` = RADIUS, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

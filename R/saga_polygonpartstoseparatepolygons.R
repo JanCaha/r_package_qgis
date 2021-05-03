@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * PARTS - outputVector - Polygon Parts
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_polygonpartstoseparatepolygons <- function(POLYGONS = qgisprocess::qgis_default_value(), LAKES = qgisprocess::qgis_default_value(), PARTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:polygonpartstoseparatepolygons")
-  output <- qgisprocess::qgis_run_algorithm("saga:polygonpartstoseparatepolygons",`POLYGONS` = POLYGONS, `LAKES` = LAKES, `PARTS` = PARTS,...)
+  check_algorithm_necessities("saga:polygonpartstoseparatepolygons")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:polygonpartstoseparatepolygons", `POLYGONS` = POLYGONS, `LAKES` = LAKES, `PARTS` = PARTS,...)
 
   if (.complete_output) {
     return(output)

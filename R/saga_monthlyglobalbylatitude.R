@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * SOLARRAD - outputVector - Solar Radiation
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_monthlyglobalbylatitude <- function(ALBEDO = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), YEAR = qgisprocess::qgis_default_value(), DLAT = qgisprocess::qgis_default_value(), SOLARRAD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:monthlyglobalbylatitude")
-  output <- qgisprocess::qgis_run_algorithm("saga:monthlyglobalbylatitude",`ALBEDO` = ALBEDO, `FIELD` = FIELD, `YEAR` = YEAR, `DLAT` = DLAT, `SOLARRAD` = SOLARRAD,...)
+  check_algorithm_necessities("saga:monthlyglobalbylatitude")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:monthlyglobalbylatitude", `ALBEDO` = ALBEDO, `FIELD` = FIELD, `YEAR` = YEAR, `DLAT` = DLAT, `SOLARRAD` = SOLARRAD,...)
 
   if (.complete_output) {
     return(output)

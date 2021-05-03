@@ -32,16 +32,16 @@
 ##' * x_output - outputRaster - X Back Coordinates
 ##' * y_output - outputRaster - Y Back Coordinates
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_spread <- function(base_ros = qgisprocess::qgis_default_value(), max_ros = qgisprocess::qgis_default_value(), direction_ros = qgisprocess::qgis_default_value(), start = qgisprocess::qgis_default_value(), spotting_distance = qgisprocess::qgis_default_value(), wind_speed = qgisprocess::qgis_default_value(), fuel_moisture = qgisprocess::qgis_default_value(), backdrop = qgisprocess::qgis_default_value(), least_size = qgisprocess::qgis_default_value(), comp_dens = qgisprocess::qgis_default_value(), init_time = qgisprocess::qgis_default_value(), lag = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), x_output = qgisprocess::qgis_default_value(), y_output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.spread")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.spread",`base_ros` = base_ros, `max_ros` = max_ros, `direction_ros` = direction_ros, `start` = start, `spotting_distance` = spotting_distance, `wind_speed` = wind_speed, `fuel_moisture` = fuel_moisture, `backdrop` = backdrop, `least_size` = least_size, `comp_dens` = comp_dens, `init_time` = init_time, `lag` = lag, `-s` = .s, `-i` = .i, `output` = output, `x_output` = x_output, `y_output` = y_output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.spread")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.spread", `base_ros` = base_ros, `max_ros` = max_ros, `direction_ros` = direction_ros, `start` = start, `spotting_distance` = spotting_distance, `wind_speed` = wind_speed, `fuel_moisture` = fuel_moisture, `backdrop` = backdrop, `least_size` = least_size, `comp_dens` = comp_dens, `init_time` = init_time, `lag` = lag, `-s` = .s, `-i` = .i, `output` = output, `x_output` = x_output, `y_output` = y_output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

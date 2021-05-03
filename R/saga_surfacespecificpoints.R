@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Result
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_surfacespecificpoints <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:surfacespecificpoints")
-  output <- qgisprocess::qgis_run_algorithm("saga:surfacespecificpoints",`ELEVATION` = ELEVATION, `METHOD` = METHOD, `THRESHOLD` = THRESHOLD, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:surfacespecificpoints")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:surfacespecificpoints", `ELEVATION` = ELEVATION, `METHOD` = METHOD, `THRESHOLD` = THRESHOLD, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

@@ -16,16 +16,16 @@
 ##' * POINT_COUNT - outputNumber - Number of points
 ##' * Z_SCORE - outputNumber - Z
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_nearestneighbouranalysis <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:nearestneighbouranalysis")
-  output <- qgisprocess::qgis_run_algorithm("native:nearestneighbouranalysis",`INPUT` = INPUT, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
+  check_algorithm_necessities("native:nearestneighbouranalysis")
+
+  output <- qgisprocess::qgis_run_algorithm("native:nearestneighbouranalysis", `INPUT` = INPUT, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
 
   if (.complete_output) {
     return(output)

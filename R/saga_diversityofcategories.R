@@ -26,16 +26,16 @@
 ##' * SIZE_SKEW - outputRaster - Skewness
 ##' * CONNECTIVITY - outputRaster - Connectivity
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_diversityofcategories <- function(CATEGORIES = qgisprocess::qgis_default_value(), SEARCH_MODE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), NB_CASE = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), DIVERSITY = qgisprocess::qgis_default_value(), SIZE_MEAN = qgisprocess::qgis_default_value(), SIZE_SKEW = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:diversityofcategories")
-  output <- qgisprocess::qgis_run_algorithm("saga:diversityofcategories",`CATEGORIES` = CATEGORIES, `SEARCH_MODE` = SEARCH_MODE, `SEARCH_RADIUS` = SEARCH_RADIUS, `NB_CASE` = NB_CASE, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `COUNT` = COUNT, `DIVERSITY` = DIVERSITY, `SIZE_MEAN` = SIZE_MEAN, `SIZE_SKEW` = SIZE_SKEW, `CONNECTIVITY` = CONNECTIVITY,...)
+  check_algorithm_necessities("saga:diversityofcategories")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:diversityofcategories", `CATEGORIES` = CATEGORIES, `SEARCH_MODE` = SEARCH_MODE, `SEARCH_RADIUS` = SEARCH_RADIUS, `NB_CASE` = NB_CASE, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `COUNT` = COUNT, `DIVERSITY` = DIVERSITY, `SIZE_MEAN` = SIZE_MEAN, `SIZE_SKEW` = SIZE_SKEW, `CONNECTIVITY` = CONNECTIVITY,...)
 
   if (.complete_output) {
     return(output)

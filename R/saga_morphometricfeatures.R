@@ -35,16 +35,16 @@
 ##' * MAXIC - outputRaster - Maximum Curvature
 ##' * MINIC - outputRaster - Minimum Curvature
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_morphometricfeatures <- function(DEM = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), ELEVATION = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), PROFC = qgisprocess::qgis_default_value(), PLANC = qgisprocess::qgis_default_value(), LONGC = qgisprocess::qgis_default_value(), CROSC = qgisprocess::qgis_default_value(), MAXIC = qgisprocess::qgis_default_value(), MINIC = qgisprocess::qgis_default_value(), SIZE = qgisprocess::qgis_default_value(), TOL_SLOPE = qgisprocess::qgis_default_value(), TOL_CURVE = qgisprocess::qgis_default_value(), EXPONENT = qgisprocess::qgis_default_value(), ZSCALE = qgisprocess::qgis_default_value(), CONSTRAIN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:morphometricfeatures")
-  output <- qgisprocess::qgis_run_algorithm("saga:morphometricfeatures",`DEM` = DEM, `FEATURES` = FEATURES, `ELEVATION` = ELEVATION, `SLOPE` = SLOPE, `ASPECT` = ASPECT, `PROFC` = PROFC, `PLANC` = PLANC, `LONGC` = LONGC, `CROSC` = CROSC, `MAXIC` = MAXIC, `MINIC` = MINIC, `SIZE` = SIZE, `TOL_SLOPE` = TOL_SLOPE, `TOL_CURVE` = TOL_CURVE, `EXPONENT` = EXPONENT, `ZSCALE` = ZSCALE, `CONSTRAIN` = CONSTRAIN,...)
+  check_algorithm_necessities("saga:morphometricfeatures")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:morphometricfeatures", `DEM` = DEM, `FEATURES` = FEATURES, `ELEVATION` = ELEVATION, `SLOPE` = SLOPE, `ASPECT` = ASPECT, `PROFC` = PROFC, `PLANC` = PLANC, `LONGC` = LONGC, `CROSC` = CROSC, `MAXIC` = MAXIC, `MINIC` = MINIC, `SIZE` = SIZE, `TOL_SLOPE` = TOL_SLOPE, `TOL_CURVE` = TOL_CURVE, `EXPONENT` = EXPONENT, `ZSCALE` = ZSCALE, `CONSTRAIN` = CONSTRAIN,...)
 
   if (.complete_output) {
     return(output)

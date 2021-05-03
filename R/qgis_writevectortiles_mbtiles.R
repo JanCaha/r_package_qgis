@@ -20,16 +20,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputFile - Destination MBTiles
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_writevectortiles_mbtiles <- function(OUTPUT = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), MIN_ZOOM = qgisprocess::qgis_default_value(), MAX_ZOOM = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), META_NAME = qgisprocess::qgis_default_value(), META_DESCRIPTION = qgisprocess::qgis_default_value(), META_ATTRIBUTION = qgisprocess::qgis_default_value(), META_VERSION = qgisprocess::qgis_default_value(), META_TYPE = qgisprocess::qgis_default_value(), META_CENTER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:writevectortiles_mbtiles")
-  output <- qgisprocess::qgis_run_algorithm("native:writevectortiles_mbtiles",`OUTPUT` = OUTPUT, `LAYERS` = LAYERS, `MIN_ZOOM` = MIN_ZOOM, `MAX_ZOOM` = MAX_ZOOM, `EXTENT` = EXTENT, `META_NAME` = META_NAME, `META_DESCRIPTION` = META_DESCRIPTION, `META_ATTRIBUTION` = META_ATTRIBUTION, `META_VERSION` = META_VERSION, `META_TYPE` = META_TYPE, `META_CENTER` = META_CENTER,...)
+  check_algorithm_necessities("native:writevectortiles_mbtiles")
+
+  output <- qgisprocess::qgis_run_algorithm("native:writevectortiles_mbtiles", `OUTPUT` = OUTPUT, `LAYERS` = LAYERS, `MIN_ZOOM` = MIN_ZOOM, `MAX_ZOOM` = MAX_ZOOM, `EXTENT` = EXTENT, `META_NAME` = META_NAME, `META_DESCRIPTION` = META_DESCRIPTION, `META_ATTRIBUTION` = META_ATTRIBUTION, `META_VERSION` = META_VERSION, `META_TYPE` = META_TYPE, `META_CENTER` = META_CENTER,...)
 
   if (.complete_output) {
     return(output)

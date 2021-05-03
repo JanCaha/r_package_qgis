@@ -16,16 +16,16 @@
 ##' * STDDIST - outputVector - Standard Distance
 ##' * BBOX - outputVector - Bounding Box
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_spatialpointpatternanalysis <- function(POINTS = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), CENTRE = qgisprocess::qgis_default_value(), STDDIST = qgisprocess::qgis_default_value(), BBOX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:spatialpointpatternanalysis")
-  output <- qgisprocess::qgis_run_algorithm("saga:spatialpointpatternanalysis",`POINTS` = POINTS, `STEP` = STEP, `CENTRE` = CENTRE, `STDDIST` = STDDIST, `BBOX` = BBOX,...)
+  check_algorithm_necessities("saga:spatialpointpatternanalysis")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:spatialpointpatternanalysis", `POINTS` = POINTS, `STEP` = STEP, `CENTRE` = CENTRE, `STDDIST` = STDDIST, `BBOX` = BBOX,...)
 
   if (.complete_output) {
     return(output)

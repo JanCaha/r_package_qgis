@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * LS - outputRaster - LS Factor
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_lsfactor <- function(SLOPE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), CONV = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), EROSIVITY = qgisprocess::qgis_default_value(), STABILITY = qgisprocess::qgis_default_value(), LS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:lsfactor")
-  output <- qgisprocess::qgis_run_algorithm("saga:lsfactor",`SLOPE` = SLOPE, `AREA` = AREA, `CONV` = CONV, `METHOD` = METHOD, `EROSIVITY` = EROSIVITY, `STABILITY` = STABILITY, `LS` = LS,...)
+  check_algorithm_necessities("saga:lsfactor")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:lsfactor", `SLOPE` = SLOPE, `AREA` = AREA, `CONV` = CONV, `METHOD` = METHOD, `EROSIVITY` = EROSIVITY, `STABILITY` = STABILITY, `LS` = LS,...)
 
   if (.complete_output) {
     return(output)

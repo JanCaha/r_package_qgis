@@ -16,16 +16,16 @@
 ##' * TOTAL_VALUES - outputNumber - Total unique values
 ##' * UNIQUE_VALUES - outputString - Unique values
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_listuniquevalues <- function(INPUT = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:listuniquevalues")
-  output <- qgisprocess::qgis_run_algorithm("qgis:listuniquevalues",`INPUT` = INPUT, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
+  check_algorithm_necessities("qgis:listuniquevalues")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:listuniquevalues", `INPUT` = INPUT, `FIELDS` = FIELDS, `OUTPUT` = OUTPUT, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
 
   if (.complete_output) {
     return(output)

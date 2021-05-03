@@ -18,16 +18,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Aspect
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_aspect <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), TRIG_ANGLE = qgisprocess::qgis_default_value(), ZERO_FLAT = qgisprocess::qgis_default_value(), COMPUTE_EDGES = qgisprocess::qgis_default_value(), ZEVENBERGEN = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:aspect")
-  output <- qgisprocess::qgis_run_algorithm("gdal:aspect",`INPUT` = INPUT, `BAND` = BAND, `TRIG_ANGLE` = TRIG_ANGLE, `ZERO_FLAT` = ZERO_FLAT, `COMPUTE_EDGES` = COMPUTE_EDGES, `ZEVENBERGEN` = ZEVENBERGEN, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:aspect")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:aspect", `INPUT` = INPUT, `BAND` = BAND, `TRIG_ANGLE` = TRIG_ANGLE, `ZERO_FLAT` = ZERO_FLAT, `COMPUTE_EDGES` = COMPUTE_EDGES, `ZEVENBERGEN` = ZEVENBERGEN, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

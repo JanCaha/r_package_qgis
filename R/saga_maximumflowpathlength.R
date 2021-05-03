@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * DISTANCE - outputRaster - Flow Path Length
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_maximumflowpathlength <- function(ELEVATION = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:maximumflowpathlength")
-  output <- qgisprocess::qgis_run_algorithm("saga:maximumflowpathlength",`ELEVATION` = ELEVATION, `WEIGHTS` = WEIGHTS, `DISTANCE` = DISTANCE, `DIRECTION` = DIRECTION,...)
+  check_algorithm_necessities("saga:maximumflowpathlength")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:maximumflowpathlength", `ELEVATION` = ELEVATION, `WEIGHTS` = WEIGHTS, `DISTANCE` = DISTANCE, `DIRECTION` = DIRECTION,...)
 
   if (.complete_output) {
     return(output)

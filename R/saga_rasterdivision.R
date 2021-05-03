@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * C - outputRaster - Quotient
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rasterdivision <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rasterdivision")
-  output <- qgisprocess::qgis_run_algorithm("saga:rasterdivision",`A` = A, `B` = B, `C` = C,...)
+  check_algorithm_necessities("saga:rasterdivision")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rasterdivision", `A` = A, `B` = B, `C` = C,...)
 
   if (.complete_output) {
     return(output)

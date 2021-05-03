@@ -16,16 +16,16 @@
 ##' * LINES - outputVector - Lines
 ##' * POINTS - outputVector - Duplicated Points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_quadtreestructuretopolygons <- function(SHAPES = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:quadtreestructuretopolygons")
-  output <- qgisprocess::qgis_run_algorithm("saga:quadtreestructuretopolygons",`SHAPES` = SHAPES, `ATTRIBUTE` = ATTRIBUTE, `POLYGONS` = POLYGONS, `LINES` = LINES, `POINTS` = POINTS,...)
+  check_algorithm_necessities("saga:quadtreestructuretopolygons")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:quadtreestructuretopolygons", `SHAPES` = SHAPES, `ATTRIBUTE` = ATTRIBUTE, `POLYGONS` = POLYGONS, `LINES` = LINES, `POINTS` = POINTS,...)
 
   if (.complete_output) {
     return(output)

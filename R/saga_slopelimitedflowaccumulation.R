@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * FLOW - outputRaster - Flow Accumulation
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_slopelimitedflowaccumulation <- function(DEM = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), SLOPE_MIN = qgisprocess::qgis_default_value(), SLOPE_MAX = qgisprocess::qgis_default_value(), B_FLOW = qgisprocess::qgis_default_value(), T_FLOW_MIN = qgisprocess::qgis_default_value(), T_FLOW_MAX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:slopelimitedflowaccumulation")
-  output <- qgisprocess::qgis_run_algorithm("saga:slopelimitedflowaccumulation",`DEM` = DEM, `WEIGHT` = WEIGHT, `FLOW` = FLOW, `SLOPE_MIN` = SLOPE_MIN, `SLOPE_MAX` = SLOPE_MAX, `B_FLOW` = B_FLOW, `T_FLOW_MIN` = T_FLOW_MIN, `T_FLOW_MAX` = T_FLOW_MAX,...)
+  check_algorithm_necessities("saga:slopelimitedflowaccumulation")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:slopelimitedflowaccumulation", `DEM` = DEM, `WEIGHT` = WEIGHT, `FLOW` = FLOW, `SLOPE_MIN` = SLOPE_MIN, `SLOPE_MAX` = SLOPE_MAX, `B_FLOW` = B_FLOW, `T_FLOW_MIN` = T_FLOW_MIN, `T_FLOW_MAX` = T_FLOW_MAX,...)
 
   if (.complete_output) {
     return(output)

@@ -14,16 +14,16 @@
 ##' * NOFLATS - outputRaster - No Flats
 ##' * FLATS - outputRaster - Flat Areas
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_flatdetection <- function(DEM = qgisprocess::qgis_default_value(), FLAT_OUTPUT = qgisprocess::qgis_default_value(), NOFLATS = qgisprocess::qgis_default_value(), FLATS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:flatdetection")
-  output <- qgisprocess::qgis_run_algorithm("saga:flatdetection",`DEM` = DEM, `FLAT_OUTPUT` = FLAT_OUTPUT, `NOFLATS` = NOFLATS, `FLATS` = FLATS,...)
+  check_algorithm_necessities("saga:flatdetection")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:flatdetection", `DEM` = DEM, `FLAT_OUTPUT` = FLAT_OUTPUT, `NOFLATS` = NOFLATS, `FLATS` = FLATS,...)
 
   if (.complete_output) {
     return(output)

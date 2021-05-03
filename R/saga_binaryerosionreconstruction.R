@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT_GRID - outputRaster - Output Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_binaryerosionreconstruction <- function(INPUT_GRID = qgisprocess::qgis_default_value(), OUTPUT_GRID = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:binaryerosionreconstruction")
-  output <- qgisprocess::qgis_run_algorithm("saga:binaryerosionreconstruction",`INPUT_GRID` = INPUT_GRID, `OUTPUT_GRID` = OUTPUT_GRID, `RADIUS` = RADIUS,...)
+  check_algorithm_necessities("saga:binaryerosionreconstruction")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:binaryerosionreconstruction", `INPUT_GRID` = INPUT_GRID, `OUTPUT_GRID` = OUTPUT_GRID, `RADIUS` = RADIUS,...)
 
   if (.complete_output) {
     return(output)

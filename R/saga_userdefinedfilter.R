@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Filtered Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_userdefinedfilter <- function(INPUT = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(), FILTER_3X3 = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:userdefinedfilter")
-  output <- qgisprocess::qgis_run_algorithm("saga:userdefinedfilter",`INPUT` = INPUT, `FILTER` = FILTER, `FILTER_3X3` = FILTER_3X3, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:userdefinedfilter")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:userdefinedfilter", `INPUT` = INPUT, `FILTER` = FILTER, `FILTER_3X3` = FILTER_3X3, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

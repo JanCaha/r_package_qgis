@@ -19,16 +19,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Interpolated 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_gridnearestneighbor <- function(INPUT = qgisprocess::qgis_default_value(), Z_FIELD = qgisprocess::qgis_default_value(), RADIUS_1 = qgisprocess::qgis_default_value(), RADIUS_2 = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:gridnearestneighbor")
-  output <- qgisprocess::qgis_run_algorithm("gdal:gridnearestneighbor",`INPUT` = INPUT, `Z_FIELD` = Z_FIELD, `RADIUS_1` = RADIUS_1, `RADIUS_2` = RADIUS_2, `ANGLE` = ANGLE, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:gridnearestneighbor")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:gridnearestneighbor", `INPUT` = INPUT, `Z_FIELD` = Z_FIELD, `RADIUS_1` = RADIUS_1, `RADIUS_2` = RADIUS_2, `ANGLE` = ANGLE, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

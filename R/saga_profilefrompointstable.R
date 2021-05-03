@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputVector - Result
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_profilefrompointstable <- function(GRID = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), X = qgisprocess::qgis_default_value(), Y = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:profilefrompointstable")
-  output <- qgisprocess::qgis_run_algorithm("saga:profilefrompointstable",`GRID` = GRID, `TABLE` = TABLE, `X` = X, `Y` = Y, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:profilefrompointstable")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:profilefrompointstable", `GRID` = GRID, `TABLE` = TABLE, `X` = X, `Y` = Y, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

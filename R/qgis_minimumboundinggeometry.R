@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Bounding geometry
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_minimumboundinggeometry <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:minimumboundinggeometry")
-  output <- qgisprocess::qgis_run_algorithm("qgis:minimumboundinggeometry",`INPUT` = INPUT, `FIELD` = FIELD, `TYPE` = TYPE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:minimumboundinggeometry")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:minimumboundinggeometry", `INPUT` = INPUT, `FIELD` = FIELD, `TYPE` = TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

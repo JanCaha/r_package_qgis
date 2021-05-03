@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - AWT Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_averagewiththereshold1 <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RX = qgisprocess::qgis_default_value(), RY = qgisprocess::qgis_default_value(), THRESH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:averagewiththereshold1")
-  output <- qgisprocess::qgis_run_algorithm("saga:averagewiththereshold1",`INPUT` = INPUT, `RESULT` = RESULT, `RX` = RX, `RY` = RY, `THRESH` = THRESH,...)
+  check_algorithm_necessities("saga:averagewiththereshold1")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:averagewiththereshold1", `INPUT` = INPUT, `RESULT` = RESULT, `RX` = RX, `RY` = RY, `THRESH` = THRESH,...)
 
   if (.complete_output) {
     return(output)

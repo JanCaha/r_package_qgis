@@ -27,16 +27,16 @@
 ##' ## Outputs description
 ##' * output - outputVector - Lidar
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_v_in_lidar <- function(input = qgisprocess::qgis_default_value(), spatial = qgisprocess::qgis_default_value(), zrange = qgisprocess::qgis_default_value(), return_filter = qgisprocess::qgis_default_value(), class_filter = qgisprocess::qgis_default_value(), skip = qgisprocess::qgis_default_value(), preserve = qgisprocess::qgis_default_value(), offset = qgisprocess::qgis_default_value(), limit = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:v.in.lidar")
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.in.lidar",`input` = input, `spatial` = spatial, `zrange` = zrange, `return_filter` = return_filter, `class_filter` = class_filter, `skip` = skip, `preserve` = preserve, `offset` = offset, `limit` = limit, `-t` = .t, `-c` = .c, `-b` = .b, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+  check_algorithm_necessities("grass7:v.in.lidar")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:v.in.lidar", `input` = input, `spatial` = spatial, `zrange` = zrange, `return_filter` = return_filter, `class_filter` = class_filter, `skip` = skip, `preserve` = preserve, `offset` = offset, `limit` = limit, `-t` = .t, `-c` = .c, `-b` = .b, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
 
   if (.complete_output) {
     return(output)

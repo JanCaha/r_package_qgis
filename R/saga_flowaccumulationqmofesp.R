@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * FLOW - outputRaster - Contributing Area
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_flowaccumulationqmofesp <- function(DEM = qgisprocess::qgis_default_value(), PREPROC = qgisprocess::qgis_default_value(), DZFILL = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:flowaccumulationqmofesp")
-  output <- qgisprocess::qgis_run_algorithm("saga:flowaccumulationqmofesp",`DEM` = DEM, `PREPROC` = PREPROC, `DZFILL` = DZFILL, `FLOW` = FLOW,...)
+  check_algorithm_necessities("saga:flowaccumulationqmofesp")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:flowaccumulationqmofesp", `DEM` = DEM, `PREPROC` = PREPROC, `DZFILL` = DZFILL, `FLOW` = FLOW,...)
 
   if (.complete_output) {
     return(output)

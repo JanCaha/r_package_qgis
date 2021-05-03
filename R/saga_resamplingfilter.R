@@ -14,16 +14,16 @@
 ##' * LOPASS - outputRaster - Low Pass Filter
 ##' * HIPASS - outputRaster - High Pass Filter
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_resamplingfilter <- function(GRID = qgisprocess::qgis_default_value(), LOPASS = qgisprocess::qgis_default_value(), HIPASS = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:resamplingfilter")
-  output <- qgisprocess::qgis_run_algorithm("saga:resamplingfilter",`GRID` = GRID, `LOPASS` = LOPASS, `HIPASS` = HIPASS, `SCALE` = SCALE,...)
+  check_algorithm_necessities("saga:resamplingfilter")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:resamplingfilter", `GRID` = GRID, `LOPASS` = LOPASS, `HIPASS` = HIPASS, `SCALE` = SCALE,...)
 
   if (.complete_output) {
     return(output)

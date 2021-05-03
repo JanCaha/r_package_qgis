@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * CENTROIDS - outputVector - Centroids
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_polygoncentroids <- function(POLYGONS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CENTROIDS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:polygoncentroids")
-  output <- qgisprocess::qgis_run_algorithm("saga:polygoncentroids",`POLYGONS` = POLYGONS, `METHOD` = METHOD, `CENTROIDS` = CENTROIDS,...)
+  check_algorithm_necessities("saga:polygoncentroids")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:polygoncentroids", `POLYGONS` = POLYGONS, `METHOD` = METHOD, `CENTROIDS` = CENTROIDS,...)
 
   if (.complete_output) {
     return(output)

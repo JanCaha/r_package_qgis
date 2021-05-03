@@ -21,16 +21,16 @@
 ##' * FLOW - outputRaster - Runoff
 ##' * GAUGES_FLOW - outputVector - Flow at Gauges
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_overlandflowkinematicwaved8 <- function(DEM = qgisprocess::qgis_default_value(), GAUGES = qgisprocess::qgis_default_value(), TIME_SPAN = qgisprocess::qgis_default_value(), TIME_STEP = qgisprocess::qgis_default_value(), ROUGHNESS = qgisprocess::qgis_default_value(), NEWTON_MAXITER = qgisprocess::qgis_default_value(), NEWTON_EPSILON = qgisprocess::qgis_default_value(), PRECIP = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), GAUGES_FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:overlandflowkinematicwaved8")
-  output <- qgisprocess::qgis_run_algorithm("saga:overlandflowkinematicwaved8",`DEM` = DEM, `GAUGES` = GAUGES, `TIME_SPAN` = TIME_SPAN, `TIME_STEP` = TIME_STEP, `ROUGHNESS` = ROUGHNESS, `NEWTON_MAXITER` = NEWTON_MAXITER, `NEWTON_EPSILON` = NEWTON_EPSILON, `PRECIP` = PRECIP, `THRESHOLD` = THRESHOLD, `FLOW` = FLOW, `GAUGES_FLOW` = GAUGES_FLOW,...)
+  check_algorithm_necessities("saga:overlandflowkinematicwaved8")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:overlandflowkinematicwaved8", `DEM` = DEM, `GAUGES` = GAUGES, `TIME_SPAN` = TIME_SPAN, `TIME_STEP` = TIME_STEP, `ROUGHNESS` = ROUGHNESS, `NEWTON_MAXITER` = NEWTON_MAXITER, `NEWTON_EPSILON` = NEWTON_EPSILON, `PRECIP` = PRECIP, `THRESHOLD` = THRESHOLD, `FLOW` = FLOW, `GAUGES_FLOW` = GAUGES_FLOW,...)
 
   if (.complete_output) {
     return(output)

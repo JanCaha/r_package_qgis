@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputLayer - Styled
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_setlayerstyle <- function(INPUT = qgisprocess::qgis_default_value(), STYLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:setlayerstyle")
-  output <- qgisprocess::qgis_run_algorithm("native:setlayerstyle",`INPUT` = INPUT, `STYLE` = STYLE,...)
+  check_algorithm_necessities("native:setlayerstyle")
+
+  output <- qgisprocess::qgis_run_algorithm("native:setlayerstyle", `INPUT` = INPUT, `STYLE` = STYLE,...)
 
   if (.complete_output) {
     return(output)

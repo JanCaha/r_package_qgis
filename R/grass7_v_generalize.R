@@ -37,16 +37,16 @@
 ##' * output - outputVector - Generalized
 ##' * error - outputVector - Errors
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_v_generalize <- function(input = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), cats = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), look_ahead = qgisprocess::qgis_default_value(), reduction = qgisprocess::qgis_default_value(), slide = qgisprocess::qgis_default_value(), angle_thresh = qgisprocess::qgis_default_value(), degree_thresh = qgisprocess::qgis_default_value(), closeness_thresh = qgisprocess::qgis_default_value(), betweeness_thresh = qgisprocess::qgis_default_value(), alpha = qgisprocess::qgis_default_value(), beta = qgisprocess::qgis_default_value(), iterations = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), error = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:v.generalize")
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.generalize",`input` = input, `type` = type, `cats` = cats, `where` = where, `method` = method, `threshold` = threshold, `look_ahead` = look_ahead, `reduction` = reduction, `slide` = slide, `angle_thresh` = angle_thresh, `degree_thresh` = degree_thresh, `closeness_thresh` = closeness_thresh, `betweeness_thresh` = betweeness_thresh, `alpha` = alpha, `beta` = beta, `iterations` = iterations, `-t` = .t, `-l` = .l, `output` = output, `error` = error, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+  check_algorithm_necessities("grass7:v.generalize")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:v.generalize", `input` = input, `type` = type, `cats` = cats, `where` = where, `method` = method, `threshold` = threshold, `look_ahead` = look_ahead, `reduction` = reduction, `slide` = slide, `angle_thresh` = angle_thresh, `degree_thresh` = degree_thresh, `closeness_thresh` = closeness_thresh, `betweeness_thresh` = betweeness_thresh, `alpha` = alpha, `beta` = beta, `iterations` = iterations, `-t` = .t, `-l` = .l, `output` = output, `error` = error, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
 
   if (.complete_output) {
     return(output)

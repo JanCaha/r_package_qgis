@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * STRAHLER - outputRaster - Strahler Order
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_strahlerorder <- function(DEM = qgisprocess::qgis_default_value(), STRAHLER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:strahlerorder")
-  output <- qgisprocess::qgis_run_algorithm("saga:strahlerorder",`DEM` = DEM, `STRAHLER` = STRAHLER,...)
+  check_algorithm_necessities("saga:strahlerorder")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:strahlerorder", `DEM` = DEM, `STRAHLER` = STRAHLER,...)
 
   if (.complete_output) {
     return(output)

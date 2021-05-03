@@ -26,16 +26,16 @@
 ##' * greenoutput - outputRaster - Enhanced Green
 ##' * blueoutput - outputRaster - Enhanced Blue
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_i_colors_enhance <- function(red = qgisprocess::qgis_default_value(), green = qgisprocess::qgis_default_value(), blue = qgisprocess::qgis_default_value(), strength = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), redoutput = qgisprocess::qgis_default_value(), greenoutput = qgisprocess::qgis_default_value(), blueoutput = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:i.colors.enhance")
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.colors.enhance",`red` = red, `green` = green, `blue` = blue, `strength` = strength, `-f` = .f, `-p` = .p, `-r` = .r, `-s` = .s, `redoutput` = redoutput, `greenoutput` = greenoutput, `blueoutput` = blueoutput, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:i.colors.enhance")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:i.colors.enhance", `red` = red, `green` = green, `blue` = blue, `strength` = strength, `-f` = .f, `-p` = .p, `-r` = .r, `-s` = .s, `redoutput` = redoutput, `greenoutput` = greenoutput, `blueoutput` = blueoutput, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

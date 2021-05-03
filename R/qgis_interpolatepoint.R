@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Interpolated points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_interpolatepoint <- function(INPUT = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:interpolatepoint")
-  output <- qgisprocess::qgis_run_algorithm("native:interpolatepoint",`INPUT` = INPUT, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:interpolatepoint")
+
+  output <- qgisprocess::qgis_run_algorithm("native:interpolatepoint", `INPUT` = INPUT, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

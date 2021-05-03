@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * ACCCOST - outputRaster - Accumulated Cost
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_accumulatedcostanisotropic <- function(COST = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), K = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ACCCOST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:accumulatedcostanisotropic")
-  output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostanisotropic",`COST` = COST, `DIRECTION` = DIRECTION, `POINTS` = POINTS, `K` = K, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST,...)
+  check_algorithm_necessities("saga:accumulatedcostanisotropic")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostanisotropic", `COST` = COST, `DIRECTION` = DIRECTION, `POINTS` = POINTS, `K` = K, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST,...)
 
   if (.complete_output) {
     return(output)

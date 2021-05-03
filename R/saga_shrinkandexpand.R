@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Result Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_shrinkandexpand <- function(INPUT = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), CIRCLE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), EXPAND = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:shrinkandexpand")
-  output <- qgisprocess::qgis_run_algorithm("saga:shrinkandexpand",`INPUT` = INPUT, `OPERATION` = OPERATION, `CIRCLE` = CIRCLE, `RADIUS` = RADIUS, `EXPAND` = EXPAND, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:shrinkandexpand")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:shrinkandexpand", `INPUT` = INPUT, `OPERATION` = OPERATION, `CIRCLE` = CIRCLE, `RADIUS` = RADIUS, `EXPAND` = EXPAND, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

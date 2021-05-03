@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputHtml - Plot
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_meanandstandarddeviationplot <- function(INPUT = qgisprocess::qgis_default_value(), NAME_FIELD = qgisprocess::qgis_default_value(), VALUE_FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:meanandstandarddeviationplot")
-  output <- qgisprocess::qgis_run_algorithm("qgis:meanandstandarddeviationplot",`INPUT` = INPUT, `NAME_FIELD` = NAME_FIELD, `VALUE_FIELD` = VALUE_FIELD, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:meanandstandarddeviationplot")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:meanandstandarddeviationplot", `INPUT` = INPUT, `NAME_FIELD` = NAME_FIELD, `VALUE_FIELD` = VALUE_FIELD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

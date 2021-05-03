@@ -19,16 +19,16 @@
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##' * OUTPUT - outputRaster - Fuzzified raster
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_fuzzifyrasterlargemembership <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FUZZYMIDPOINT = qgisprocess::qgis_default_value(), FUZZYSPREAD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:fuzzifyrasterlargemembership")
-  output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterlargemembership",`INPUT` = INPUT, `BAND` = BAND, `FUZZYMIDPOINT` = FUZZYMIDPOINT, `FUZZYSPREAD` = FUZZYSPREAD, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:fuzzifyrasterlargemembership")
+
+  output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterlargemembership", `INPUT` = INPUT, `BAND` = BAND, `FUZZYMIDPOINT` = FUZZYMIDPOINT, `FUZZYSPREAD` = FUZZYSPREAD, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Segmentized
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_segmentizebymaxangle <- function(INPUT = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:segmentizebymaxangle")
-  output <- qgisprocess::qgis_run_algorithm("native:segmentizebymaxangle",`INPUT` = INPUT, `ANGLE` = ANGLE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:segmentizebymaxangle")
+
+  output <- qgisprocess::qgis_run_algorithm("native:segmentizebymaxangle", `INPUT` = INPUT, `ANGLE` = ANGLE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

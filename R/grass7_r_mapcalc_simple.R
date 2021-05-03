@@ -21,16 +21,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - Calculated
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_mapcalc_simple <- function(a = qgisprocess::qgis_default_value(), b = qgisprocess::qgis_default_value(), c = qgisprocess::qgis_default_value(), d = qgisprocess::qgis_default_value(), e = qgisprocess::qgis_default_value(), f = qgisprocess::qgis_default_value(), expression = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.mapcalc.simple")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.mapcalc.simple",`a` = a, `b` = b, `c` = c, `d` = d, `e` = e, `f` = f, `expression` = expression, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.mapcalc.simple")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.mapcalc.simple", `a` = a, `b` = b, `c` = c, `d` = d, `e` = e, `f` = f, `expression` = expression, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

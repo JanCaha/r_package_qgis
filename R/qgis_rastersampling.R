@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Sampled
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rastersampling <- function(INPUT = qgisprocess::qgis_default_value(), RASTERCOPY = qgisprocess::qgis_default_value(), COLUMN_PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:rastersampling")
-  output <- qgisprocess::qgis_run_algorithm("native:rastersampling",`INPUT` = INPUT, `RASTERCOPY` = RASTERCOPY, `COLUMN_PREFIX` = COLUMN_PREFIX, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:rastersampling")
+
+  output <- qgisprocess::qgis_run_algorithm("native:rastersampling", `INPUT` = INPUT, `RASTERCOPY` = RASTERCOPY, `COLUMN_PREFIX` = COLUMN_PREFIX, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

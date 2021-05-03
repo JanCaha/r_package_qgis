@@ -16,16 +16,16 @@
 ##' * GROUND - outputRaster - Bare Earth
 ##' * NONGROUND - outputRaster - Removed Objects
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_dtmfilterslopebased <- function(INPUT = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), TERRAINSLOPE = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), GROUND = qgisprocess::qgis_default_value(), NONGROUND = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:dtmfilterslopebased")
-  output <- qgisprocess::qgis_run_algorithm("saga:dtmfilterslopebased",`INPUT` = INPUT, `RADIUS` = RADIUS, `TERRAINSLOPE` = TERRAINSLOPE, `STDDEV` = STDDEV, `GROUND` = GROUND, `NONGROUND` = NONGROUND,...)
+  check_algorithm_necessities("saga:dtmfilterslopebased")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:dtmfilterslopebased", `INPUT` = INPUT, `RADIUS` = RADIUS, `TERRAINSLOPE` = TERRAINSLOPE, `STDDEV` = STDDEV, `GROUND` = GROUND, `NONGROUND` = NONGROUND,...)
 
   if (.complete_output) {
     return(output)

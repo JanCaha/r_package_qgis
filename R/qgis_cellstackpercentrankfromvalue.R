@@ -21,16 +21,16 @@
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_cellstackpercentrankfromvalue <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:cellstackpercentrankfromvalue")
-  output <- qgisprocess::qgis_run_algorithm("native:cellstackpercentrankfromvalue",`INPUT` = INPUT, `METHOD` = METHOD, `VALUE` = VALUE, `IGNORE_NODATA` = IGNORE_NODATA, `REFERENCE_LAYER` = REFERENCE_LAYER, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:cellstackpercentrankfromvalue")
+
+  output <- qgisprocess::qgis_run_algorithm("native:cellstackpercentrankfromvalue", `INPUT` = INPUT, `METHOD` = METHOD, `VALUE` = VALUE, `IGNORE_NODATA` = IGNORE_NODATA, `REFERENCE_LAYER` = REFERENCE_LAYER, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

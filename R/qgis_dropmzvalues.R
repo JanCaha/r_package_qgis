@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Z
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_dropmzvalues <- function(INPUT = qgisprocess::qgis_default_value(), DROP_M_VALUES = qgisprocess::qgis_default_value(), DROP_Z_VALUES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:dropmzvalues")
-  output <- qgisprocess::qgis_run_algorithm("native:dropmzvalues",`INPUT` = INPUT, `DROP_M_VALUES` = DROP_M_VALUES, `DROP_Z_VALUES` = DROP_Z_VALUES, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:dropmzvalues")
+
+  output <- qgisprocess::qgis_run_algorithm("native:dropmzvalues", `INPUT` = INPUT, `DROP_M_VALUES` = DROP_M_VALUES, `DROP_Z_VALUES` = DROP_Z_VALUES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

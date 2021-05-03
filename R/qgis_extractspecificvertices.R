@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Vertices
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_extractspecificvertices <- function(INPUT = qgisprocess::qgis_default_value(), VERTICES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:extractspecificvertices")
-  output <- qgisprocess::qgis_run_algorithm("native:extractspecificvertices",`INPUT` = INPUT, `VERTICES` = VERTICES, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:extractspecificvertices")
+
+  output <- qgisprocess::qgis_run_algorithm("native:extractspecificvertices", `INPUT` = INPUT, `VERTICES` = VERTICES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Z Added
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_setzvalue <- function(INPUT = qgisprocess::qgis_default_value(), Z_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:setzvalue")
-  output <- qgisprocess::qgis_run_algorithm("native:setzvalue",`INPUT` = INPUT, `Z_VALUE` = Z_VALUE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:setzvalue")
+
+  output <- qgisprocess::qgis_run_algorithm("native:setzvalue", `INPUT` = INPUT, `Z_VALUE` = Z_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

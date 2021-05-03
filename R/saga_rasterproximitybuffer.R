@@ -17,16 +17,16 @@
 ##' * ALLOC - outputRaster - Allocation Grid
 ##' * BUFFER - outputRaster - Buffer Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rasterproximitybuffer <- function(SOURCE = qgisprocess::qgis_default_value(), DIST = qgisprocess::qgis_default_value(), IVAL = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), ALLOC = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rasterproximitybuffer")
-  output <- qgisprocess::qgis_run_algorithm("saga:rasterproximitybuffer",`SOURCE` = SOURCE, `DIST` = DIST, `IVAL` = IVAL, `DISTANCE` = DISTANCE, `ALLOC` = ALLOC, `BUFFER` = BUFFER,...)
+  check_algorithm_necessities("saga:rasterproximitybuffer")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rasterproximitybuffer", `SOURCE` = SOURCE, `DIST` = DIST, `IVAL` = IVAL, `DISTANCE` = DISTANCE, `ALLOC` = ALLOC, `BUFFER` = BUFFER,...)
 
   if (.complete_output) {
     return(output)

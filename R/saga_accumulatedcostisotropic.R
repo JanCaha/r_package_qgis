@@ -15,16 +15,16 @@
 ##' * ACCCOST - outputRaster - Accumulated Cost
 ##' * CLOSESTPT - outputRaster - Closest Point
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_accumulatedcostisotropic <- function(COST = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ACCCOST = qgisprocess::qgis_default_value(), CLOSESTPT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:accumulatedcostisotropic")
-  output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostisotropic",`COST` = COST, `POINTS` = POINTS, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST, `CLOSESTPT` = CLOSESTPT,...)
+  check_algorithm_necessities("saga:accumulatedcostisotropic")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostisotropic", `COST` = COST, `POINTS` = POINTS, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST, `CLOSESTPT` = CLOSESTPT,...)
 
   if (.complete_output) {
     return(output)

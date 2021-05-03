@@ -16,16 +16,16 @@
 ##' * RESULT_LOD - outputRaster - Output Lod
 ##' * SEEDS - outputRaster - Output Seeds
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fastrepresentativeness <- function(INPUT = qgisprocess::qgis_default_value(), LOD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RESULT_LOD = qgisprocess::qgis_default_value(), SEEDS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fastrepresentativeness")
-  output <- qgisprocess::qgis_run_algorithm("saga:fastrepresentativeness",`INPUT` = INPUT, `LOD` = LOD, `RESULT` = RESULT, `RESULT_LOD` = RESULT_LOD, `SEEDS` = SEEDS,...)
+  check_algorithm_necessities("saga:fastrepresentativeness")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fastrepresentativeness", `INPUT` = INPUT, `LOD` = LOD, `RESULT` = RESULT, `RESULT_LOD` = RESULT_LOD, `SEEDS` = SEEDS,...)
 
   if (.complete_output) {
     return(output)

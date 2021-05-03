@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Aggregated
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_aggregate <- function(INPUT = qgisprocess::qgis_default_value(), GROUP_BY = qgisprocess::qgis_default_value(), AGGREGATES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:aggregate")
-  output <- qgisprocess::qgis_run_algorithm("native:aggregate",`INPUT` = INPUT, `GROUP_BY` = GROUP_BY, `AGGREGATES` = AGGREGATES, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:aggregate")
+
+  output <- qgisprocess::qgis_run_algorithm("native:aggregate", `INPUT` = INPUT, `GROUP_BY` = GROUP_BY, `AGGREGATES` = AGGREGATES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

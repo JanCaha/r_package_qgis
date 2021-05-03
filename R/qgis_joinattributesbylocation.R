@@ -20,16 +20,16 @@
 ##' * NON_MATCHING - outputVector - Unjoinable features from first layer
 ##' * JOINED_COUNT - outputNumber - Number of joined features from input table
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_joinattributesbylocation <- function(INPUT = qgisprocess::qgis_default_value(), JOIN = qgisprocess::qgis_default_value(), PREDICATE = qgisprocess::qgis_default_value(), JOIN_FIELDS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DISCARD_NONMATCHING = qgisprocess::qgis_default_value(), PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), NON_MATCHING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:joinattributesbylocation")
-  output <- qgisprocess::qgis_run_algorithm("native:joinattributesbylocation",`INPUT` = INPUT, `JOIN` = JOIN, `PREDICATE` = PREDICATE, `JOIN_FIELDS` = JOIN_FIELDS, `METHOD` = METHOD, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `PREFIX` = PREFIX, `OUTPUT` = OUTPUT, `NON_MATCHING` = NON_MATCHING,...)
+  check_algorithm_necessities("native:joinattributesbylocation")
+
+  output <- qgisprocess::qgis_run_algorithm("native:joinattributesbylocation", `INPUT` = INPUT, `JOIN` = JOIN, `PREDICATE` = PREDICATE, `JOIN_FIELDS` = JOIN_FIELDS, `METHOD` = METHOD, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `PREFIX` = PREFIX, `OUTPUT` = OUTPUT, `NON_MATCHING` = NON_MATCHING,...)
 
   if (.complete_output) {
     return(output)

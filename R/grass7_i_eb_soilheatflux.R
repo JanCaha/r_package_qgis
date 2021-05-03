@@ -20,16 +20,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - Soil Heat Flux
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_i_eb_soilheatflux <- function(albedo = qgisprocess::qgis_default_value(), ndvi = qgisprocess::qgis_default_value(), temperature = qgisprocess::qgis_default_value(), netradiation = qgisprocess::qgis_default_value(), localutctime = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:i.eb.soilheatflux")
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.soilheatflux",`albedo` = albedo, `ndvi` = ndvi, `temperature` = temperature, `netradiation` = netradiation, `localutctime` = localutctime, `-r` = .r, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:i.eb.soilheatflux")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.soilheatflux", `albedo` = albedo, `ndvi` = ndvi, `temperature` = temperature, `netradiation` = netradiation, `localutctime` = localutctime, `-r` = .r, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

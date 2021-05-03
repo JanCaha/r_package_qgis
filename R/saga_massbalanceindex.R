@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * MBI - outputRaster - Mass Balance Index
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_massbalanceindex <- function(DEM = qgisprocess::qgis_default_value(), HREL = qgisprocess::qgis_default_value(), TSLOPE = qgisprocess::qgis_default_value(), TCURVE = qgisprocess::qgis_default_value(), THREL = qgisprocess::qgis_default_value(), MBI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:massbalanceindex")
-  output <- qgisprocess::qgis_run_algorithm("saga:massbalanceindex",`DEM` = DEM, `HREL` = HREL, `TSLOPE` = TSLOPE, `TCURVE` = TCURVE, `THREL` = THREL, `MBI` = MBI,...)
+  check_algorithm_necessities("saga:massbalanceindex")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:massbalanceindex", `DEM` = DEM, `HREL` = HREL, `TSLOPE` = TSLOPE, `TCURVE` = TCURVE, `THREL` = THREL, `MBI` = MBI,...)
 
   if (.complete_output) {
     return(output)

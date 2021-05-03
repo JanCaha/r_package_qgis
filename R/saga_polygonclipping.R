@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * S_OUTPUT - outputVector - Output features
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_polygonclipping <- function(CLIP = qgisprocess::qgis_default_value(), S_INPUT = qgisprocess::qgis_default_value(), S_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:polygonclipping")
-  output <- qgisprocess::qgis_run_algorithm("saga:polygonclipping",`CLIP` = CLIP, `S_INPUT` = S_INPUT, `S_OUTPUT` = S_OUTPUT,...)
+  check_algorithm_necessities("saga:polygonclipping")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:polygonclipping", `CLIP` = CLIP, `S_INPUT` = S_INPUT, `S_OUTPUT` = S_OUTPUT,...)
 
   if (.complete_output) {
     return(output)

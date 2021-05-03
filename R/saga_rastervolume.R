@@ -2,10 +2,9 @@ character(0)
 
 saga_rastervolume <- function(GRID = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), LEVEL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rastervolume")
-  output <- qgisprocess::qgis_run_algorithm("saga:rastervolume",`GRID` = GRID, `METHOD` = METHOD, `LEVEL` = LEVEL,...)
+  check_algorithm_necessities("saga:rastervolume")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rastervolume", `GRID` = GRID, `METHOD` = METHOD, `LEVEL` = LEVEL,...)
 
   if (.complete_output) {
     return(output)

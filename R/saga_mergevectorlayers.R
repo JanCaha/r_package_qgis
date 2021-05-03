@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * MERGED - outputVector - Merged Layer
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_mergevectorlayers <- function(INPUT = qgisprocess::qgis_default_value(), SRCINFO = qgisprocess::qgis_default_value(), MATCH = qgisprocess::qgis_default_value(), MERGED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:mergevectorlayers")
-  output <- qgisprocess::qgis_run_algorithm("saga:mergevectorlayers",`INPUT` = INPUT, `SRCINFO` = SRCINFO, `MATCH` = MATCH, `MERGED` = MERGED,...)
+  check_algorithm_necessities("saga:mergevectorlayers")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:mergevectorlayers", `INPUT` = INPUT, `SRCINFO` = SRCINFO, `MATCH` = MATCH, `MERGED` = MERGED,...)
 
   if (.complete_output) {
     return(output)

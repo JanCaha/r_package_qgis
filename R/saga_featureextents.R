@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * EXTENTS - outputVector - Extents
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_featureextents <- function(SHAPES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), EXTENTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:featureextents")
-  output <- qgisprocess::qgis_run_algorithm("saga:featureextents",`SHAPES` = SHAPES, `OUTPUT` = OUTPUT, `EXTENTS` = EXTENTS,...)
+  check_algorithm_necessities("saga:featureextents")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:featureextents", `SHAPES` = SHAPES, `OUTPUT` = OUTPUT, `EXTENTS` = EXTENTS,...)
 
   if (.complete_output) {
     return(output)

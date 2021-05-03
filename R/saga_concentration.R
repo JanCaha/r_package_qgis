@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * CONC - outputRaster - Concentration
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_concentration <- function(MASK = qgisprocess::qgis_default_value(), GRAD = qgisprocess::qgis_default_value(), CONC = qgisprocess::qgis_default_value(), CONC_IN = qgisprocess::qgis_default_value(), CONC_OUT = qgisprocess::qgis_default_value(), CONC_E = qgisprocess::qgis_default_value(), GRAD_MIN = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:concentration")
-  output <- qgisprocess::qgis_run_algorithm("saga:concentration",`MASK` = MASK, `GRAD` = GRAD, `CONC` = CONC, `CONC_IN` = CONC_IN, `CONC_OUT` = CONC_OUT, `CONC_E` = CONC_E, `GRAD_MIN` = GRAD_MIN, `NEIGHBOURS` = NEIGHBOURS,...)
+  check_algorithm_necessities("saga:concentration")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:concentration", `MASK` = MASK, `GRAD` = GRAD, `CONC` = CONC, `CONC_IN` = CONC_IN, `CONC_OUT` = CONC_OUT, `CONC_E` = CONC_E, `GRAD_MIN` = GRAD_MIN, `NEIGHBOURS` = NEIGHBOURS,...)
 
   if (.complete_output) {
     return(output)

@@ -22,16 +22,16 @@
 ##' ## Outputs description
 ##' * output - outputFile - Raster Value File
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_what_coords <- function(map = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), cache = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.what.coords")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.what.coords",`map` = map, `coordinates` = coordinates, `null_value` = null_value, `separator` = separator, `cache` = cache, `-n` = .n, `-f` = .f, `-r` = .r, `-i` = .i, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.what.coords")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.what.coords", `map` = map, `coordinates` = coordinates, `null_value` = null_value, `separator` = separator, `cache` = cache, `-n` = .n, `-f` = .f, `-r` = .r, `-i` = .i, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

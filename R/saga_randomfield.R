@@ -18,16 +18,16 @@
 ##' ## Outputs description
 ##' * OUT_GRID - outputRaster - Random Field
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_randomfield <- function(METHOD = qgisprocess::qgis_default_value(), RANGE_MIN = qgisprocess::qgis_default_value(), RANGE_MAX = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX = qgisprocess::qgis_default_value(), USER_SIZE = qgisprocess::qgis_default_value(), USER_FITS = qgisprocess::qgis_default_value(), OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:randomfield")
-  output <- qgisprocess::qgis_run_algorithm("saga:randomfield",`METHOD` = METHOD, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX, `MEAN` = MEAN, `STDDEV` = STDDEV, `USER_XMIN USER_XMAX USER_YMIN USER_YMAX` = USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX, `USER_SIZE` = USER_SIZE, `USER_FITS` = USER_FITS, `OUT_GRID` = OUT_GRID,...)
+  check_algorithm_necessities("saga:randomfield")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:randomfield", `METHOD` = METHOD, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX, `MEAN` = MEAN, `STDDEV` = STDDEV, `USER_XMIN USER_XMAX USER_YMIN USER_YMAX` = USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX, `USER_SIZE` = USER_SIZE, `USER_FITS` = USER_FITS, `OUT_GRID` = OUT_GRID,...)
 
   if (.complete_output) {
     return(output)

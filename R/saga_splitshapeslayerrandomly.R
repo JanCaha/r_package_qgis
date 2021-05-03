@@ -15,16 +15,16 @@
 ##' * A - outputVector - Group A
 ##' * B - outputVector - Group B
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_splitshapeslayerrandomly <- function(SHAPES = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), EXACT = qgisprocess::qgis_default_value(), A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:splitshapeslayerrandomly")
-  output <- qgisprocess::qgis_run_algorithm("saga:splitshapeslayerrandomly",`SHAPES` = SHAPES, `PERCENT` = PERCENT, `EXACT` = EXACT, `A` = A, `B` = B,...)
+  check_algorithm_necessities("saga:splitshapeslayerrandomly")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:splitshapeslayerrandomly", `SHAPES` = SHAPES, `PERCENT` = PERCENT, `EXACT` = EXACT, `A` = A, `B` = B,...)
 
   if (.complete_output) {
     return(output)

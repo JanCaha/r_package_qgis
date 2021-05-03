@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Hillshade
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_hillshade <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), AZIMUTH = qgisprocess::qgis_default_value(), V_ANGLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:hillshade")
-  output <- qgisprocess::qgis_run_algorithm("native:hillshade",`INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `AZIMUTH` = AZIMUTH, `V_ANGLE` = V_ANGLE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:hillshade")
+
+  output <- qgisprocess::qgis_run_algorithm("native:hillshade", `INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `AZIMUTH` = AZIMUTH, `V_ANGLE` = V_ANGLE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

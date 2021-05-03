@@ -13,16 +13,16 @@
 ##' * EDGES - outputVector - Edges
 ##' * NODES - outputVector - Nodes
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_polygonstoedgesandnodes <- function(POLYGONS = qgisprocess::qgis_default_value(), EDGES = qgisprocess::qgis_default_value(), NODES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:polygonstoedgesandnodes")
-  output <- qgisprocess::qgis_run_algorithm("saga:polygonstoedgesandnodes",`POLYGONS` = POLYGONS, `EDGES` = EDGES, `NODES` = NODES,...)
+  check_algorithm_necessities("saga:polygonstoedgesandnodes")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:polygonstoedgesandnodes", `POLYGONS` = POLYGONS, `EDGES` = EDGES, `NODES` = NODES,...)
 
   if (.complete_output) {
     return(output)

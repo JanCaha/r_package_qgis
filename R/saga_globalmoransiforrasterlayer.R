@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputVector - Result
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_globalmoransiforrasterlayer <- function(GRID = qgisprocess::qgis_default_value(), CONTIGUITY = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:globalmoransiforrasterlayer")
-  output <- qgisprocess::qgis_run_algorithm("saga:globalmoransiforrasterlayer",`GRID` = GRID, `CONTIGUITY` = CONTIGUITY, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:globalmoransiforrasterlayer")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:globalmoransiforrasterlayer", `GRID` = GRID, `CONTIGUITY` = CONTIGUITY, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

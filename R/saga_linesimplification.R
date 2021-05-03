@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Simplified Lines
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_linesimplification <- function(LINES = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:linesimplification")
-  output <- qgisprocess::qgis_run_algorithm("saga:linesimplification",`LINES` = LINES, `TOLERANCE` = TOLERANCE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:linesimplification")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:linesimplification", `LINES` = LINES, `TOLERANCE` = TOLERANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

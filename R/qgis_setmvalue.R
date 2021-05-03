@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - M Added
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_setmvalue <- function(INPUT = qgisprocess::qgis_default_value(), M_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:setmvalue")
-  output <- qgisprocess::qgis_run_algorithm("native:setmvalue",`INPUT` = INPUT, `M_VALUE` = M_VALUE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:setmvalue")
+
+  output <- qgisprocess::qgis_run_algorithm("native:setmvalue", `INPUT` = INPUT, `M_VALUE` = M_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

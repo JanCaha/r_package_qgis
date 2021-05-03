@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Random points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_randompointsinsidepolygons <- function(INPUT = qgisprocess::qgis_default_value(), STRATEGY = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:randompointsinsidepolygons")
-  output <- qgisprocess::qgis_run_algorithm("qgis:randompointsinsidepolygons",`INPUT` = INPUT, `STRATEGY` = STRATEGY, `VALUE` = VALUE, `MIN_DISTANCE` = MIN_DISTANCE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:randompointsinsidepolygons")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:randompointsinsidepolygons", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `VALUE` = VALUE, `MIN_DISTANCE` = MIN_DISTANCE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

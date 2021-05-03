@@ -20,16 +20,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputFile - PDF file
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_printlayouttopdf <- function(LAYOUT = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), FORCE_VECTOR = qgisprocess::qgis_default_value(), GEOREFERENCE = qgisprocess::qgis_default_value(), INCLUDE_METADATA = qgisprocess::qgis_default_value(), DISABLE_TILED = qgisprocess::qgis_default_value(), SIMPLIFY = qgisprocess::qgis_default_value(), TEXT_FORMAT = qgisprocess::qgis_default_value(), SEPARATE_LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:printlayouttopdf")
-  output <- qgisprocess::qgis_run_algorithm("native:printlayouttopdf",`LAYOUT` = LAYOUT, `LAYERS` = LAYERS, `DPI` = DPI, `FORCE_VECTOR` = FORCE_VECTOR, `GEOREFERENCE` = GEOREFERENCE, `INCLUDE_METADATA` = INCLUDE_METADATA, `DISABLE_TILED` = DISABLE_TILED, `SIMPLIFY` = SIMPLIFY, `TEXT_FORMAT` = TEXT_FORMAT, `SEPARATE_LAYERS` = SEPARATE_LAYERS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:printlayouttopdf")
+
+  output <- qgisprocess::qgis_run_algorithm("native:printlayouttopdf", `LAYOUT` = LAYOUT, `LAYERS` = LAYERS, `DPI` = DPI, `FORCE_VECTOR` = FORCE_VECTOR, `GEOREFERENCE` = GEOREFERENCE, `INCLUDE_METADATA` = INCLUDE_METADATA, `DISABLE_TILED` = DISABLE_TILED, `SIMPLIFY` = SIMPLIFY, `TEXT_FORMAT` = TEXT_FORMAT, `SEPARATE_LAYERS` = SEPARATE_LAYERS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Changed Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rasterorientation <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rasterorientation")
-  output <- qgisprocess::qgis_run_algorithm("saga:rasterorientation",`INPUT` = INPUT, `METHOD` = METHOD, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:rasterorientation")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rasterorientation", `INPUT` = INPUT, `METHOD` = METHOD, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

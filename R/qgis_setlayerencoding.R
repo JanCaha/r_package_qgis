@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Output layer
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_setlayerencoding <- function(INPUT = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:setlayerencoding")
-  output <- qgisprocess::qgis_run_algorithm("native:setlayerencoding",`INPUT` = INPUT, `ENCODING` = ENCODING,...)
+  check_algorithm_necessities("native:setlayerencoding")
+
+  output <- qgisprocess::qgis_run_algorithm("native:setlayerencoding", `INPUT` = INPUT, `ENCODING` = ENCODING,...)
 
   if (.complete_output) {
     return(output)

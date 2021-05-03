@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Transect
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_transect <- function(INPUT = qgisprocess::qgis_default_value(), LENGTH = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), SIDE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:transect")
-  output <- qgisprocess::qgis_run_algorithm("native:transect",`INPUT` = INPUT, `LENGTH` = LENGTH, `ANGLE` = ANGLE, `SIDE` = SIDE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:transect")
+
+  output <- qgisprocess::qgis_run_algorithm("native:transect", `INPUT` = INPUT, `LENGTH` = LENGTH, `ANGLE` = ANGLE, `SIDE` = SIDE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

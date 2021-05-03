@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_analyticalhierarchyprocess <- function(GRIDS = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:analyticalhierarchyprocess")
-  output <- qgisprocess::qgis_run_algorithm("saga:analyticalhierarchyprocess",`GRIDS` = GRIDS, `TABLE` = TABLE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("saga:analyticalhierarchyprocess")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:analyticalhierarchyprocess", `GRIDS` = GRIDS, `TABLE` = TABLE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

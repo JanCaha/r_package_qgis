@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * POINTS - outputVector - Points
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_convertpolygonlineverticestopoints <- function(SHAPES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:convertpolygonlineverticestopoints")
-  output <- qgisprocess::qgis_run_algorithm("saga:convertpolygonlineverticestopoints",`SHAPES` = SHAPES, `POINTS` = POINTS,...)
+  check_algorithm_necessities("saga:convertpolygonlineverticestopoints")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:convertpolygonlineverticestopoints", `SHAPES` = SHAPES, `POINTS` = POINTS,...)
 
   if (.complete_output) {
     return(output)

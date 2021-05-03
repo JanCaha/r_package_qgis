@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * TCILOW - outputRaster - TCI Low
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_tcilow <- function(DISTANCE = qgisprocess::qgis_default_value(), TWI = qgisprocess::qgis_default_value(), TCILOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:tcilow")
-  output <- qgisprocess::qgis_run_algorithm("saga:tcilow",`DISTANCE` = DISTANCE, `TWI` = TWI, `TCILOW` = TCILOW,...)
+  check_algorithm_necessities("saga:tcilow")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:tcilow", `DISTANCE` = DISTANCE, `TWI` = TWI, `TCILOW` = TCILOW,...)
 
   if (.complete_output) {
     return(output)

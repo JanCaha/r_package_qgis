@@ -14,16 +14,16 @@
 ##' * OUTPUT - outputFile - Destination GeoPackage
 ##' * OUTPUT_LAYERS - outputMultilayer - Layers within new package
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_package <- function(LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(), SAVE_STYLES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:package")
-  output <- qgisprocess::qgis_run_algorithm("native:package",`LAYERS` = LAYERS, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE, `SAVE_STYLES` = SAVE_STYLES,...)
+  check_algorithm_necessities("native:package")
+
+  output <- qgisprocess::qgis_run_algorithm("native:package", `LAYERS` = LAYERS, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE, `SAVE_STYLES` = SAVE_STYLES,...)
 
   if (.complete_output) {
     return(output)

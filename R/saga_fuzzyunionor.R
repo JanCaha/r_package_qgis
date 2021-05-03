@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OR - outputRaster - Union
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fuzzyunionor <- function(GRIDS = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), OR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fuzzyunionor")
-  output <- qgisprocess::qgis_run_algorithm("saga:fuzzyunionor",`GRIDS` = GRIDS, `TYPE` = TYPE, `OR` = OR,...)
+  check_algorithm_necessities("saga:fuzzyunionor")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fuzzyunionor", `GRIDS` = GRIDS, `TYPE` = TYPE, `OR` = OR,...)
 
   if (.complete_output) {
     return(output)

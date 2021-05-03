@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - PCT to RGB
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_pcttorgb <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), RGBA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:pcttorgb")
-  output <- qgisprocess::qgis_run_algorithm("gdal:pcttorgb",`INPUT` = INPUT, `BAND` = BAND, `RGBA` = RGBA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:pcttorgb")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:pcttorgb", `INPUT` = INPUT, `BAND` = BAND, `RGBA` = RGBA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

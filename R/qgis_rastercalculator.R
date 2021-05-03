@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rastercalculator <- function(EXPRESSION = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), CELLSIZE = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:rastercalculator")
-  output <- qgisprocess::qgis_run_algorithm("qgis:rastercalculator",`EXPRESSION` = EXPRESSION, `LAYERS` = LAYERS, `CELLSIZE` = CELLSIZE, `EXTENT` = EXTENT, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:rastercalculator")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:rastercalculator", `EXPRESSION` = EXPRESSION, `LAYERS` = LAYERS, `CELLSIZE` = CELLSIZE, `EXTENT` = EXTENT, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Filtered Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_morphologicalfilter <- function(INPUT = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:morphologicalfilter")
-  output <- qgisprocess::qgis_run_algorithm("saga:morphologicalfilter",`INPUT` = INPUT, `MODE` = MODE, `RADIUS` = RADIUS, `METHOD` = METHOD, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:morphologicalfilter")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:morphologicalfilter", `INPUT` = INPUT, `MODE` = MODE, `RADIUS` = RADIUS, `METHOD` = METHOD, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

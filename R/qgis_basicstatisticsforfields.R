@@ -32,16 +32,16 @@
 ##' * THIRDQUARTILE - outputNumber - Third quartile
 ##' * IQR - outputNumber - Interquartile Range 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_basicstatisticsforfields <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:basicstatisticsforfields")
-  output <- qgisprocess::qgis_run_algorithm("qgis:basicstatisticsforfields",`INPUT_LAYER` = INPUT_LAYER, `FIELD_NAME` = FIELD_NAME, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
+  check_algorithm_necessities("qgis:basicstatisticsforfields")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:basicstatisticsforfields", `INPUT_LAYER` = INPUT_LAYER, `FIELD_NAME` = FIELD_NAME, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
 
   if (.complete_output) {
     return(output)

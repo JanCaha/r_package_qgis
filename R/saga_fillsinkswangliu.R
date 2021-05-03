@@ -16,16 +16,16 @@
 ##' * FDIR - outputRaster - Flow Directions
 ##' * WSHED - outputRaster - Watershed Basins
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fillsinkswangliu <- function(ELEV = qgisprocess::qgis_default_value(), MINSLOPE = qgisprocess::qgis_default_value(), FILLED = qgisprocess::qgis_default_value(), FDIR = qgisprocess::qgis_default_value(), WSHED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fillsinkswangliu")
-  output <- qgisprocess::qgis_run_algorithm("saga:fillsinkswangliu",`ELEV` = ELEV, `MINSLOPE` = MINSLOPE, `FILLED` = FILLED, `FDIR` = FDIR, `WSHED` = WSHED,...)
+  check_algorithm_necessities("saga:fillsinkswangliu")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fillsinkswangliu", `ELEV` = ELEV, `MINSLOPE` = MINSLOPE, `FILLED` = FILLED, `FDIR` = FDIR, `WSHED` = WSHED,...)
 
   if (.complete_output) {
     return(output)

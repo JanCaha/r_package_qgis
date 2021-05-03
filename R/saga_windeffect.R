@@ -24,16 +24,16 @@
 ##' * LUV - outputRaster - Windward Effect
 ##' * LEE - outputRaster - Leeward Effect
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_windeffect <- function(DEM = qgisprocess::qgis_default_value(), DIR = qgisprocess::qgis_default_value(), LEN = qgisprocess::qgis_default_value(), DIR_CONST = qgisprocess::qgis_default_value(), OLDVER = qgisprocess::qgis_default_value(), MAXDIST = qgisprocess::qgis_default_value(), ACCEL = qgisprocess::qgis_default_value(), PYRAMIDS = qgisprocess::qgis_default_value(), DIR_UNITS = qgisprocess::qgis_default_value(), LEN_SCALE = qgisprocess::qgis_default_value(), EFFECT = qgisprocess::qgis_default_value(), LUV = qgisprocess::qgis_default_value(), LEE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:windeffect")
-  output <- qgisprocess::qgis_run_algorithm("saga:windeffect",`DEM` = DEM, `DIR` = DIR, `LEN` = LEN, `DIR_CONST` = DIR_CONST, `OLDVER` = OLDVER, `MAXDIST` = MAXDIST, `ACCEL` = ACCEL, `PYRAMIDS` = PYRAMIDS, `DIR_UNITS` = DIR_UNITS, `LEN_SCALE` = LEN_SCALE, `EFFECT` = EFFECT, `LUV` = LUV, `LEE` = LEE,...)
+  check_algorithm_necessities("saga:windeffect")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:windeffect", `DEM` = DEM, `DIR` = DIR, `LEN` = LEN, `DIR_CONST` = DIR_CONST, `OLDVER` = OLDVER, `MAXDIST` = MAXDIST, `ACCEL` = ACCEL, `PYRAMIDS` = PYRAMIDS, `DIR_UNITS` = DIR_UNITS, `LEN_SCALE` = LEN_SCALE, `EFFECT` = EFFECT, `LUV` = LUV, `LEE` = LEE,...)
 
   if (.complete_output) {
     return(output)

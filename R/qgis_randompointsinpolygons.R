@@ -21,16 +21,16 @@
 ##' * POLYGONS_WITH_MISSED_POINTS - outputNumber - Number of polygons with missed points
 ##' * FEATURES_WITH_EMPTY_OR_NO_GEOMETRY - outputNumber - Number of features with empty or no geometry
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_randompointsinpolygons <- function(INPUT = qgisprocess::qgis_default_value(), POINTS_NUMBER = qgisprocess::qgis_default_value(), MIN_DISTANCE = qgisprocess::qgis_default_value(), MIN_DISTANCE_GLOBAL = qgisprocess::qgis_default_value(), MAX_TRIES_PER_POINT = qgisprocess::qgis_default_value(), SEED = qgisprocess::qgis_default_value(), INCLUDE_POLYGON_ATTRIBUTES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:randompointsinpolygons")
-  output <- qgisprocess::qgis_run_algorithm("native:randompointsinpolygons",`INPUT` = INPUT, `POINTS_NUMBER` = POINTS_NUMBER, `MIN_DISTANCE` = MIN_DISTANCE, `MIN_DISTANCE_GLOBAL` = MIN_DISTANCE_GLOBAL, `MAX_TRIES_PER_POINT` = MAX_TRIES_PER_POINT, `SEED` = SEED, `INCLUDE_POLYGON_ATTRIBUTES` = INCLUDE_POLYGON_ATTRIBUTES, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:randompointsinpolygons")
+
+  output <- qgisprocess::qgis_run_algorithm("native:randompointsinpolygons", `INPUT` = INPUT, `POINTS_NUMBER` = POINTS_NUMBER, `MIN_DISTANCE` = MIN_DISTANCE, `MIN_DISTANCE_GLOBAL` = MIN_DISTANCE_GLOBAL, `MAX_TRIES_PER_POINT` = MAX_TRIES_PER_POINT, `SEED` = SEED, `INCLUDE_POLYGON_ATTRIBUTES` = INCLUDE_POLYGON_ATTRIBUTES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

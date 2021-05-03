@@ -23,16 +23,16 @@
 ##' * TRUE_PIXEL_COUNT - outputNumber - True pixel count
 ##' * FALSE_PIXEL_COUNT - outputNumber - False pixel count
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rasterlogicalor <- function(INPUT = qgisprocess::qgis_default_value(), REF_LAYER = qgisprocess::qgis_default_value(), NODATA_AS_FALSE = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:rasterlogicalor")
-  output <- qgisprocess::qgis_run_algorithm("native:rasterlogicalor",`INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:rasterlogicalor")
+
+  output <- qgisprocess::qgis_run_algorithm("native:rasterlogicalor", `INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

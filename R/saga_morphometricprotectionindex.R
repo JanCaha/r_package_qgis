@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * PROTECTION - outputRaster - Protection Index
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_morphometricprotectionindex <- function(DEM = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), PROTECTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:morphometricprotectionindex")
-  output <- qgisprocess::qgis_run_algorithm("saga:morphometricprotectionindex",`DEM` = DEM, `RADIUS` = RADIUS, `PROTECTION` = PROTECTION,...)
+  check_algorithm_necessities("saga:morphometricprotectionindex")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:morphometricprotectionindex", `DEM` = DEM, `RADIUS` = RADIUS, `PROTECTION` = PROTECTION,...)
 
   if (.complete_output) {
     return(output)

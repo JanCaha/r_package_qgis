@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * SHAPES - outputVector - Shapes
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_rastervaluestopoints <- function(GRIDS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:rastervaluestopoints")
-  output <- qgisprocess::qgis_run_algorithm("saga:rastervaluestopoints",`GRIDS` = GRIDS, `POLYGONS` = POLYGONS, `NODATA` = NODATA, `TYPE` = TYPE, `SHAPES` = SHAPES,...)
+  check_algorithm_necessities("saga:rastervaluestopoints")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:rastervaluestopoints", `GRIDS` = GRIDS, `POLYGONS` = POLYGONS, `NODATA` = NODATA, `TYPE` = TYPE, `SHAPES` = SHAPES,...)
 
   if (.complete_output) {
     return(output)

@@ -19,16 +19,16 @@
 ##' ## Outputs description
 ##' * CLOSED - outputRaster - Closed Gaps Grid
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_closegapswithspline <- function(GRID = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), MAXGAPCELLS = qgisprocess::qgis_default_value(), MAXPOINTS = qgisprocess::qgis_default_value(), LOCALPOINTS = qgisprocess::qgis_default_value(), EXTENDED = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RELAXATION = qgisprocess::qgis_default_value(), CLOSED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:closegapswithspline")
-  output <- qgisprocess::qgis_run_algorithm("saga:closegapswithspline",`GRID` = GRID, `MASK` = MASK, `MAXGAPCELLS` = MAXGAPCELLS, `MAXPOINTS` = MAXPOINTS, `LOCALPOINTS` = LOCALPOINTS, `EXTENDED` = EXTENDED, `NEIGHBOURS` = NEIGHBOURS, `RADIUS` = RADIUS, `RELAXATION` = RELAXATION, `CLOSED` = CLOSED,...)
+  check_algorithm_necessities("saga:closegapswithspline")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:closegapswithspline", `GRID` = GRID, `MASK` = MASK, `MAXGAPCELLS` = MAXGAPCELLS, `MAXPOINTS` = MAXPOINTS, `LOCALPOINTS` = LOCALPOINTS, `EXTENDED` = EXTENDED, `NEIGHBOURS` = NEIGHBOURS, `RADIUS` = RADIUS, `RELAXATION` = RELAXATION, `CLOSED` = CLOSED,...)
 
   if (.complete_output) {
     return(output)

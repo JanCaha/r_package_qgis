@@ -25,16 +25,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - Intervisibility
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_viewshed <- function(input = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), observer_elevation = qgisprocess::qgis_default_value(), target_elevation = qgisprocess::qgis_default_value(), max_distance = qgisprocess::qgis_default_value(), refraction_coeff = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.viewshed")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.viewshed",`input` = input, `coordinates` = coordinates, `observer_elevation` = observer_elevation, `target_elevation` = target_elevation, `max_distance` = max_distance, `refraction_coeff` = refraction_coeff, `memory` = memory, `-c` = .c, `-r` = .r, `-b` = .b, `-e` = .e, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.viewshed")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.viewshed", `input` = input, `coordinates` = coordinates, `observer_elevation` = observer_elevation, `target_elevation` = target_elevation, `max_distance` = max_distance, `refraction_coeff` = refraction_coeff, `memory` = memory, `-c` = .c, `-r` = .r, `-b` = .b, `-e` = .e, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

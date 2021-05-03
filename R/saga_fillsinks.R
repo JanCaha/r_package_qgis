@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * RESULT - outputRaster - Filled DEM
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_fillsinks <- function(DEM = qgisprocess::qgis_default_value(), MINSLOPE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:fillsinks")
-  output <- qgisprocess::qgis_run_algorithm("saga:fillsinks",`DEM` = DEM, `MINSLOPE` = MINSLOPE, `RESULT` = RESULT,...)
+  check_algorithm_necessities("saga:fillsinks")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:fillsinks", `DEM` = DEM, `MINSLOPE` = MINSLOPE, `RESULT` = RESULT,...)
 
   if (.complete_output) {
     return(output)

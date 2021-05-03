@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * BURN - outputRaster - Processed DEM
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_burnstreamnetworkintodem <- function(DEM = qgisprocess::qgis_default_value(), STREAM = qgisprocess::qgis_default_value(), FLOWDIR = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), EPSILON = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:burnstreamnetworkintodem")
-  output <- qgisprocess::qgis_run_algorithm("saga:burnstreamnetworkintodem",`DEM` = DEM, `STREAM` = STREAM, `FLOWDIR` = FLOWDIR, `METHOD` = METHOD, `EPSILON` = EPSILON, `BURN` = BURN,...)
+  check_algorithm_necessities("saga:burnstreamnetworkintodem")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:burnstreamnetworkintodem", `DEM` = DEM, `STREAM` = STREAM, `FLOWDIR` = FLOWDIR, `METHOD` = METHOD, `EPSILON` = EPSILON, `BURN` = BURN,...)
 
   if (.complete_output) {
     return(output)

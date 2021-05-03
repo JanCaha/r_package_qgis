@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT_DIRECTORY - outputFolder - Hypsometric curves
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_hypsometriccurves <- function(INPUT_DEM = qgisprocess::qgis_default_value(), BOUNDARY_LAYER = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), USE_PERCENTAGE = qgisprocess::qgis_default_value(), OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:hypsometriccurves")
-  output <- qgisprocess::qgis_run_algorithm("qgis:hypsometriccurves",`INPUT_DEM` = INPUT_DEM, `BOUNDARY_LAYER` = BOUNDARY_LAYER, `STEP` = STEP, `USE_PERCENTAGE` = USE_PERCENTAGE, `OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY,...)
+  check_algorithm_necessities("qgis:hypsometriccurves")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:hypsometriccurves", `INPUT_DEM` = INPUT_DEM, `BOUNDARY_LAYER` = BOUNDARY_LAYER, `STEP` = STEP, `USE_PERCENTAGE` = USE_PERCENTAGE, `OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY,...)
 
   if (.complete_output) {
     return(output)

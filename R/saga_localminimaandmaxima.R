@@ -13,16 +13,16 @@
 ##' * MINIMA - outputVector - Minima
 ##' * MAXIMA - outputVector - Maxima
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_localminimaandmaxima <- function(GRID = qgisprocess::qgis_default_value(), MINIMA = qgisprocess::qgis_default_value(), MAXIMA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:localminimaandmaxima")
-  output <- qgisprocess::qgis_run_algorithm("saga:localminimaandmaxima",`GRID` = GRID, `MINIMA` = MINIMA, `MAXIMA` = MAXIMA,...)
+  check_algorithm_necessities("saga:localminimaandmaxima")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:localminimaandmaxima", `GRID` = GRID, `MINIMA` = MINIMA, `MAXIMA` = MAXIMA,...)
 
   if (.complete_output) {
     return(output)

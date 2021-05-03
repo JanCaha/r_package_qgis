@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Layer with projection
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_assignprojection <- function(INPUT = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:assignprojection")
-  output <- qgisprocess::qgis_run_algorithm("gdal:assignprojection",`INPUT` = INPUT, `CRS` = CRS,...)
+  check_algorithm_necessities("gdal:assignprojection")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:assignprojection", `INPUT` = INPUT, `CRS` = CRS,...)
 
   if (.complete_output) {
     return(output)

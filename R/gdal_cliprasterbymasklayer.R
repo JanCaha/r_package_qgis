@@ -25,16 +25,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Clipped 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_cliprasterbymasklayer <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), ALPHA_BAND = qgisprocess::qgis_default_value(), CROP_TO_CUTLINE = qgisprocess::qgis_default_value(), KEEP_RESOLUTION = qgisprocess::qgis_default_value(), SET_RESOLUTION = qgisprocess::qgis_default_value(), X_RESOLUTION = qgisprocess::qgis_default_value(), Y_RESOLUTION = qgisprocess::qgis_default_value(), MULTITHREADING = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:cliprasterbymasklayer")
-  output <- qgisprocess::qgis_run_algorithm("gdal:cliprasterbymasklayer",`INPUT` = INPUT, `MASK` = MASK, `SOURCE_CRS` = SOURCE_CRS, `TARGET_CRS` = TARGET_CRS, `NODATA` = NODATA, `ALPHA_BAND` = ALPHA_BAND, `CROP_TO_CUTLINE` = CROP_TO_CUTLINE, `KEEP_RESOLUTION` = KEEP_RESOLUTION, `SET_RESOLUTION` = SET_RESOLUTION, `X_RESOLUTION` = X_RESOLUTION, `Y_RESOLUTION` = Y_RESOLUTION, `MULTITHREADING` = MULTITHREADING, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:cliprasterbymasklayer")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:cliprasterbymasklayer", `INPUT` = INPUT, `MASK` = MASK, `SOURCE_CRS` = SOURCE_CRS, `TARGET_CRS` = TARGET_CRS, `NODATA` = NODATA, `ALPHA_BAND` = ALPHA_BAND, `CROP_TO_CUTLINE` = CROP_TO_CUTLINE, `KEEP_RESOLUTION` = KEEP_RESOLUTION, `SET_RESOLUTION` = SET_RESOLUTION, `X_RESOLUTION` = X_RESOLUTION, `Y_RESOLUTION` = Y_RESOLUTION, `MULTITHREADING` = MULTITHREADING, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

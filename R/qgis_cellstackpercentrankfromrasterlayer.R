@@ -22,16 +22,16 @@
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_cellstackpercentrankfromrasterlayer <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_VALUE_RASTER = qgisprocess::qgis_default_value(), VALUE_RASTER_BAND = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:cellstackpercentrankfromrasterlayer")
-  output <- qgisprocess::qgis_run_algorithm("native:cellstackpercentrankfromrasterlayer",`INPUT` = INPUT, `INPUT_VALUE_RASTER` = INPUT_VALUE_RASTER, `VALUE_RASTER_BAND` = VALUE_RASTER_BAND, `METHOD` = METHOD, `IGNORE_NODATA` = IGNORE_NODATA, `REFERENCE_LAYER` = REFERENCE_LAYER, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:cellstackpercentrankfromrasterlayer")
+
+  output <- qgisprocess::qgis_run_algorithm("native:cellstackpercentrankfromrasterlayer", `INPUT` = INPUT, `INPUT_VALUE_RASTER` = INPUT_VALUE_RASTER, `VALUE_RASTER_BAND` = VALUE_RASTER_BAND, `METHOD` = METHOD, `IGNORE_NODATA` = IGNORE_NODATA, `REFERENCE_LAYER` = REFERENCE_LAYER, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

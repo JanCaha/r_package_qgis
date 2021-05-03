@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUT_SHAPES - outputVector - Output shapes with field
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_addindicatorfieldsforcategories <- function(TABLE = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUT_TABLE = qgisprocess::qgis_default_value(), OUT_SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:addindicatorfieldsforcategories")
-  output <- qgisprocess::qgis_run_algorithm("saga:addindicatorfieldsforcategories",`TABLE` = TABLE, `FIELD` = FIELD, `OUT_TABLE` = OUT_TABLE, `OUT_SHAPES` = OUT_SHAPES,...)
+  check_algorithm_necessities("saga:addindicatorfieldsforcategories")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:addindicatorfieldsforcategories", `TABLE` = TABLE, `FIELD` = FIELD, `OUT_TABLE` = OUT_TABLE, `OUT_SHAPES` = OUT_SHAPES,...)
 
   if (.complete_output) {
     return(output)

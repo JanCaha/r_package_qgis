@@ -16,16 +16,16 @@
 ##' ## Outputs description
 ##' * output - outputFile - TOPMODEL output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_topmodel <- function(parameters = qgisprocess::qgis_default_value(), topidxstats = qgisprocess::qgis_default_value(), input = qgisprocess::qgis_default_value(), timestep = qgisprocess::qgis_default_value(), topidxclass = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.topmodel")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.topmodel",`parameters` = parameters, `topidxstats` = topidxstats, `input` = input, `timestep` = timestep, `topidxclass` = topidxclass, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER,...)
+  check_algorithm_necessities("grass7:r.topmodel")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.topmodel", `parameters` = parameters, `topidxstats` = topidxstats, `input` = input, `timestep` = timestep, `topidxclass` = topidxclass, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER,...)
 
   if (.complete_output) {
     return(output)

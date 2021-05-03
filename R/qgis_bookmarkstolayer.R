@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Output
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_bookmarkstolayer <- function(SOURCE = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:bookmarkstolayer")
-  output <- qgisprocess::qgis_run_algorithm("native:bookmarkstolayer",`SOURCE` = SOURCE, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:bookmarkstolayer")
+
+  output <- qgisprocess::qgis_run_algorithm("native:bookmarkstolayer", `SOURCE` = SOURCE, `CRS` = CRS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

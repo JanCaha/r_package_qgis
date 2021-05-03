@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Calculated
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_advancedpythonfieldcalculator <- function(INPUT = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), FIELD_TYPE = qgisprocess::qgis_default_value(), FIELD_LENGTH = qgisprocess::qgis_default_value(), FIELD_PRECISION = qgisprocess::qgis_default_value(), GLOBAL = qgisprocess::qgis_default_value(), FORMULA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:advancedpythonfieldcalculator")
-  output <- qgisprocess::qgis_run_algorithm("qgis:advancedpythonfieldcalculator",`INPUT` = INPUT, `FIELD_NAME` = FIELD_NAME, `FIELD_TYPE` = FIELD_TYPE, `FIELD_LENGTH` = FIELD_LENGTH, `FIELD_PRECISION` = FIELD_PRECISION, `GLOBAL` = GLOBAL, `FORMULA` = FORMULA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:advancedpythonfieldcalculator")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:advancedpythonfieldcalculator", `INPUT` = INPUT, `FIELD_NAME` = FIELD_NAME, `FIELD_TYPE` = FIELD_TYPE, `FIELD_LENGTH` = FIELD_LENGTH, `FIELD_PRECISION` = FIELD_PRECISION, `GLOBAL` = GLOBAL, `FORMULA` = FORMULA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

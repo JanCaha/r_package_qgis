@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Point
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_pointonsurface <- function(INPUT = qgisprocess::qgis_default_value(), ALL_PARTS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:pointonsurface")
-  output <- qgisprocess::qgis_run_algorithm("native:pointonsurface",`INPUT` = INPUT, `ALL_PARTS` = ALL_PARTS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:pointonsurface")
+
+  output <- qgisprocess::qgis_run_algorithm("native:pointonsurface", `INPUT` = INPUT, `ALL_PARTS` = ALL_PARTS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

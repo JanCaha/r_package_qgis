@@ -11,16 +11,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Merged
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_mergelines <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:mergelines")
-  output <- qgisprocess::qgis_run_algorithm("native:mergelines",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:mergelines")
+
+  output <- qgisprocess::qgis_run_algorithm("native:mergelines", `INPUT` = INPUT, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

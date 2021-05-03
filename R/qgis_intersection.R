@@ -15,16 +15,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Intersection
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_intersection <- function(INPUT = qgisprocess::qgis_default_value(), OVERLAY = qgisprocess::qgis_default_value(), INPUT_FIELDS = qgisprocess::qgis_default_value(), OVERLAY_FIELDS = qgisprocess::qgis_default_value(), OVERLAY_FIELDS_PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:intersection")
-  output <- qgisprocess::qgis_run_algorithm("native:intersection",`INPUT` = INPUT, `OVERLAY` = OVERLAY, `INPUT_FIELDS` = INPUT_FIELDS, `OVERLAY_FIELDS` = OVERLAY_FIELDS, `OVERLAY_FIELDS_PREFIX` = OVERLAY_FIELDS_PREFIX, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:intersection")
+
+  output <- qgisprocess::qgis_run_algorithm("native:intersection", `INPUT` = INPUT, `OVERLAY` = OVERLAY, `INPUT_FIELDS` = INPUT_FIELDS, `OVERLAY_FIELDS` = OVERLAY_FIELDS, `OVERLAY_FIELDS_PREFIX` = OVERLAY_FIELDS_PREFIX, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

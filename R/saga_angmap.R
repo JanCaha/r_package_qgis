@@ -19,16 +19,16 @@
 ##' * F - outputRaster - CL dipdir
 ##' * G - outputRaster - CL dip
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_angmap <- function(DEM = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), fB = qgisprocess::qgis_default_value(), fC = qgisprocess::qgis_default_value(), E = qgisprocess::qgis_default_value(), F = qgisprocess::qgis_default_value(), G = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:angmap")
-  output <- qgisprocess::qgis_run_algorithm("saga:angmap",`DEM` = DEM, `C` = C, `D` = D, `fB` = fB, `fC` = fC, `E` = E, `F` = F, `G` = G,...)
+  check_algorithm_necessities("saga:angmap")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:angmap", `DEM` = DEM, `C` = C, `D` = D, `fB` = fB, `fC` = fC, `E` = E, `F` = F, `G` = G,...)
 
   if (.complete_output) {
     return(output)

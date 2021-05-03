@@ -22,16 +22,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Hillshade
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 gdal_hillshade <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), AZIMUTH = qgisprocess::qgis_default_value(), ALTITUDE = qgisprocess::qgis_default_value(), COMPUTE_EDGES = qgisprocess::qgis_default_value(), ZEVENBERGEN = qgisprocess::qgis_default_value(), COMBINED = qgisprocess::qgis_default_value(), MULTIDIRECTIONAL = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("gdal:hillshade")
-  output <- qgisprocess::qgis_run_algorithm("gdal:hillshade",`INPUT` = INPUT, `BAND` = BAND, `Z_FACTOR` = Z_FACTOR, `SCALE` = SCALE, `AZIMUTH` = AZIMUTH, `ALTITUDE` = ALTITUDE, `COMPUTE_EDGES` = COMPUTE_EDGES, `ZEVENBERGEN` = ZEVENBERGEN, `COMBINED` = COMBINED, `MULTIDIRECTIONAL` = MULTIDIRECTIONAL, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("gdal:hillshade")
+
+  output <- qgisprocess::qgis_run_algorithm("gdal:hillshade", `INPUT` = INPUT, `BAND` = BAND, `Z_FACTOR` = Z_FACTOR, `SCALE` = SCALE, `AZIMUTH` = AZIMUTH, `ALTITUDE` = ALTITUDE, `COMPUTE_EDGES` = COMPUTE_EDGES, `ZEVENBERGEN` = ZEVENBERGEN, `COMBINED` = COMBINED, `MULTIDIRECTIONAL` = MULTIDIRECTIONAL, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

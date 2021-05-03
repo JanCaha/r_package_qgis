@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Pixel centroids
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_generatepointspixelcentroidsinsidepolygons <- function(INPUT_RASTER = qgisprocess::qgis_default_value(), INPUT_VECTOR = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:generatepointspixelcentroidsinsidepolygons")
-  output <- qgisprocess::qgis_run_algorithm("native:generatepointspixelcentroidsinsidepolygons",`INPUT_RASTER` = INPUT_RASTER, `INPUT_VECTOR` = INPUT_VECTOR, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:generatepointspixelcentroidsinsidepolygons")
+
+  output <- qgisprocess::qgis_run_algorithm("native:generatepointspixelcentroidsinsidepolygons", `INPUT_RASTER` = INPUT_RASTER, `INPUT_VECTOR` = INPUT_VECTOR, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

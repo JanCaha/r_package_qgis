@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Refactored
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_refactorfields <- function(INPUT = qgisprocess::qgis_default_value(), FIELDS_MAPPING = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:refactorfields")
-  output <- qgisprocess::qgis_run_algorithm("native:refactorfields",`INPUT` = INPUT, `FIELDS_MAPPING` = FIELDS_MAPPING, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:refactorfields")
+
+  output <- qgisprocess::qgis_run_algorithm("native:refactorfields", `INPUT` = INPUT, `FIELDS_MAPPING` = FIELDS_MAPPING, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

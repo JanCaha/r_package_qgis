@@ -14,16 +14,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Extracted 
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_randomextractwithinsubsets <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NUMBER = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:randomextractwithinsubsets")
-  output <- qgisprocess::qgis_run_algorithm("qgis:randomextractwithinsubsets",`INPUT` = INPUT, `FIELD` = FIELD, `METHOD` = METHOD, `NUMBER` = NUMBER, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("qgis:randomextractwithinsubsets")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:randomextractwithinsubsets", `INPUT` = INPUT, `FIELD` = FIELD, `METHOD` = METHOD, `NUMBER` = NUMBER, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

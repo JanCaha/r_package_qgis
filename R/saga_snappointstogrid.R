@@ -17,16 +17,16 @@
 ##' * OUTPUT - outputVector - Result
 ##' * MOVES - outputVector - Moves
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_snappointstogrid <- function(INPUT = qgisprocess::qgis_default_value(), GRID = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MOVES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), SHAPE = qgisprocess::qgis_default_value(), EXTREME = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:snappointstogrid")
-  output <- qgisprocess::qgis_run_algorithm("saga:snappointstogrid",`INPUT` = INPUT, `GRID` = GRID, `OUTPUT` = OUTPUT, `MOVES` = MOVES, `DISTANCE` = DISTANCE, `SHAPE` = SHAPE, `EXTREME` = EXTREME,...)
+  check_algorithm_necessities("saga:snappointstogrid")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:snappointstogrid", `INPUT` = INPUT, `GRID` = GRID, `OUTPUT` = OUTPUT, `MOVES` = MOVES, `DISTANCE` = DISTANCE, `SHAPE` = SHAPE, `EXTREME` = EXTREME,...)
 
   if (.complete_output) {
     return(output)

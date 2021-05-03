@@ -16,16 +16,16 @@
 ##' * OUTPUT - outputRaster - Relief
 ##' * FREQUENCY_DISTRIBUTION - outputFile - Frequency distribution
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_relief <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), AUTO_COLORS = qgisprocess::qgis_default_value(), COLORS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), FREQUENCY_DISTRIBUTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:relief")
-  output <- qgisprocess::qgis_run_algorithm("qgis:relief",`INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `AUTO_COLORS` = AUTO_COLORS, `COLORS` = COLORS, `OUTPUT` = OUTPUT, `FREQUENCY_DISTRIBUTION` = FREQUENCY_DISTRIBUTION,...)
+  check_algorithm_necessities("qgis:relief")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:relief", `INPUT` = INPUT, `Z_FACTOR` = Z_FACTOR, `AUTO_COLORS` = AUTO_COLORS, `COLORS` = COLORS, `OUTPUT` = OUTPUT, `FREQUENCY_DISTRIBUTION` = FREQUENCY_DISTRIBUTION,...)
 
   if (.complete_output) {
     return(output)

@@ -15,16 +15,16 @@
 ##' * GRADIENT - outputRaster - Gradient
 ##' * DIFFERENCE - outputRaster - Gradient Difference
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_downslopedistancegradient <- function(DEM = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), GRADIENT = qgisprocess::qgis_default_value(), DIFFERENCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:downslopedistancegradient")
-  output <- qgisprocess::qgis_run_algorithm("saga:downslopedistancegradient",`DEM` = DEM, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT, `GRADIENT` = GRADIENT, `DIFFERENCE` = DIFFERENCE,...)
+  check_algorithm_necessities("saga:downslopedistancegradient")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:downslopedistancegradient", `DEM` = DEM, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT, `GRADIENT` = GRADIENT, `DIFFERENCE` = DIFFERENCE,...)
 
   if (.complete_output) {
     return(output)

@@ -16,16 +16,16 @@
 ##' * OUTPUT - outputRaster - Interpolated
 ##' * TRIANGULATION - outputVector - Triangulation
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_tininterpolation <- function(INTERPOLATION_DATA = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), TRIANGULATION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("qgis:tininterpolation")
-  output <- qgisprocess::qgis_run_algorithm("qgis:tininterpolation",`INTERPOLATION_DATA` = INTERPOLATION_DATA, `METHOD` = METHOD, `EXTENT` = EXTENT, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT, `TRIANGULATION` = TRIANGULATION,...)
+  check_algorithm_necessities("qgis:tininterpolation")
+
+  output <- qgisprocess::qgis_run_algorithm("qgis:tininterpolation", `INTERPOLATION_DATA` = INTERPOLATION_DATA, `METHOD` = METHOD, `EXTENT` = EXTENT, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT` = OUTPUT, `TRIANGULATION` = TRIANGULATION,...)
 
   if (.complete_output) {
     return(output)

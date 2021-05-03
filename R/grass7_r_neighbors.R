@@ -23,16 +23,16 @@
 ##' ## Outputs description
 ##' * output - outputRaster - Neighbors
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_neighbors <- function(input = qgisprocess::qgis_default_value(), selection = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), size = qgisprocess::qgis_default_value(), gauss = qgisprocess::qgis_default_value(), quantile = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), weight = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.neighbors")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.neighbors",`input` = input, `selection` = selection, `method` = method, `size` = size, `gauss` = gauss, `quantile` = quantile, `-c` = .c, `-a` = .a, `weight` = weight, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.neighbors")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.neighbors", `input` = input, `selection` = selection, `method` = method, `size` = size, `gauss` = gauss, `quantile` = quantile, `-c` = .c, `-a` = .a, `weight` = weight, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

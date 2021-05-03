@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * CUT - outputVector - Result
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_cutvectorlayer <- function(SHAPES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), POLYGONS_POLYGONS = qgisprocess::qgis_default_value(), CUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:cutvectorlayer")
-  output <- qgisprocess::qgis_run_algorithm("saga:cutvectorlayer",`SHAPES` = SHAPES, `METHOD` = METHOD, `POLYGONS_POLYGONS` = POLYGONS_POLYGONS, `CUT` = CUT,...)
+  check_algorithm_necessities("saga:cutvectorlayer")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:cutvectorlayer", `SHAPES` = SHAPES, `METHOD` = METHOD, `POLYGONS_POLYGONS` = POLYGONS_POLYGONS, `CUT` = CUT,...)
 
   if (.complete_output) {
     return(output)

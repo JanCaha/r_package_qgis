@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Exploded
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_explodehstorefield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), EXPECTED_FIELDS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:explodehstorefield")
-  output <- qgisprocess::qgis_run_algorithm("native:explodehstorefield",`INPUT` = INPUT, `FIELD` = FIELD, `EXPECTED_FIELDS` = EXPECTED_FIELDS, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:explodehstorefield")
+
+  output <- qgisprocess::qgis_run_algorithm("native:explodehstorefield", `INPUT` = INPUT, `FIELD` = FIELD, `EXPECTED_FIELDS` = EXPECTED_FIELDS, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

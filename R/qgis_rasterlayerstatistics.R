@@ -19,16 +19,16 @@
 ##' * STD_DEV - outputNumber - Standard deviation
 ##' * SUM_OF_SQUARES - outputNumber - Sum of the squares
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_rasterlayerstatistics <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:rasterlayerstatistics")
-  output <- qgisprocess::qgis_run_algorithm("native:rasterlayerstatistics",`INPUT` = INPUT, `BAND` = BAND, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
+  check_algorithm_necessities("native:rasterlayerstatistics")
+
+  output <- qgisprocess::qgis_run_algorithm("native:rasterlayerstatistics", `INPUT` = INPUT, `BAND` = BAND, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE,...)
 
   if (.complete_output) {
     return(output)

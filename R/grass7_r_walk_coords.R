@@ -28,16 +28,16 @@
 ##' * output - outputRaster - Cumulative cost
 ##' * outdir - outputRaster - Movement Directions
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 grass7_r_walk_coords <- function(elevation = qgisprocess::qgis_default_value(), friction = qgisprocess::qgis_default_value(), start_coordinates = qgisprocess::qgis_default_value(), stop_coordinates = qgisprocess::qgis_default_value(), walk_coeff = qgisprocess::qgis_default_value(), lambda = qgisprocess::qgis_default_value(), slope_factor = qgisprocess::qgis_default_value(), max_cost = qgisprocess::qgis_default_value(), null_cost = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .k = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), outdir = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("grass7:r.walk.coords")
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.walk.coords",`elevation` = elevation, `friction` = friction, `start_coordinates` = start_coordinates, `stop_coordinates` = stop_coordinates, `walk_coeff` = walk_coeff, `lambda` = lambda, `slope_factor` = slope_factor, `max_cost` = max_cost, `null_cost` = null_cost, `memory` = memory, `-k` = .k, `-n` = .n, `output` = output, `outdir` = outdir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  check_algorithm_necessities("grass7:r.walk.coords")
+
+  output <- qgisprocess::qgis_run_algorithm("grass7:r.walk.coords", `elevation` = elevation, `friction` = friction, `start_coordinates` = start_coordinates, `stop_coordinates` = stop_coordinates, `walk_coeff` = walk_coeff, `lambda` = lambda, `slope_factor` = slope_factor, `max_cost` = max_cost, `null_cost` = null_cost, `memory` = memory, `-k` = .k, `-n` = .n, `output` = output, `outdir` = outdir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
 
   if (.complete_output) {
     return(output)

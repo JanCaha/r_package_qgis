@@ -12,16 +12,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Split
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_splitwithlines <- function(INPUT = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:splitwithlines")
-  output <- qgisprocess::qgis_run_algorithm("native:splitwithlines",`INPUT` = INPUT, `LINES` = LINES, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:splitwithlines")
+
+  output <- qgisprocess::qgis_run_algorithm("native:splitwithlines", `INPUT` = INPUT, `LINES` = LINES, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

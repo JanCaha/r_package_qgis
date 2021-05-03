@@ -13,16 +13,16 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputRaster - Output raster
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_fillnodata <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FILL_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:fillnodata")
-  output <- qgisprocess::qgis_run_algorithm("native:fillnodata",`INPUT` = INPUT, `BAND` = BAND, `FILL_VALUE` = FILL_VALUE, `OUTPUT` = OUTPUT,...)
+  check_algorithm_necessities("native:fillnodata")
+
+  output <- qgisprocess::qgis_run_algorithm("native:fillnodata", `INPUT` = INPUT, `BAND` = BAND, `FILL_VALUE` = FILL_VALUE, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

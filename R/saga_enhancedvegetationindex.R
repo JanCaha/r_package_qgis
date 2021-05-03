@@ -17,16 +17,16 @@
 ##' ## Outputs description
 ##' * EVI - outputRaster - Enhanced Vegetation Index
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_enhancedvegetationindex <- function(BLUE = qgisprocess::qgis_default_value(), RED = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), EVI = qgisprocess::qgis_default_value(), GAIN = qgisprocess::qgis_default_value(), L = qgisprocess::qgis_default_value(), CBLUE = qgisprocess::qgis_default_value(), CRED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:enhancedvegetationindex")
-  output <- qgisprocess::qgis_run_algorithm("saga:enhancedvegetationindex",`BLUE` = BLUE, `RED` = RED, `NIR` = NIR, `EVI` = EVI, `GAIN` = GAIN, `L` = L, `CBLUE` = CBLUE, `CRED` = CRED,...)
+  check_algorithm_necessities("saga:enhancedvegetationindex")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:enhancedvegetationindex", `BLUE` = BLUE, `RED` = RED, `NIR` = NIR, `EVI` = EVI, `GAIN` = GAIN, `L` = L, `CBLUE` = CBLUE, `CRED` = CRED,...)
 
   if (.complete_output) {
     return(output)

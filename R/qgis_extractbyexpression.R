@@ -14,16 +14,16 @@
 ##' * OUTPUT - outputVector - Matching features
 ##' * FAIL_OUTPUT - outputVector - Non
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 qgis_extractbyexpression <- function(INPUT = qgisprocess::qgis_default_value(), EXPRESSION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), FAIL_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("native:extractbyexpression")
-  output <- qgisprocess::qgis_run_algorithm("native:extractbyexpression",`INPUT` = INPUT, `EXPRESSION` = EXPRESSION, `OUTPUT` = OUTPUT, `FAIL_OUTPUT` = FAIL_OUTPUT,...)
+  check_algorithm_necessities("native:extractbyexpression")
+
+  output <- qgisprocess::qgis_run_algorithm("native:extractbyexpression", `INPUT` = INPUT, `EXPRESSION` = EXPRESSION, `OUTPUT` = OUTPUT, `FAIL_OUTPUT` = FAIL_OUTPUT,...)
 
   if (.complete_output) {
     return(output)

@@ -16,16 +16,16 @@
 ##' * VALLEY_DEPTH - outputRaster - Valley Depth
 ##' * RIDGE_LEVEL - outputRaster - Ridge Level
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_valleydepth <- function(ELEVATION = qgisprocess::qgis_default_value(), VALLEY_DEPTH = qgisprocess::qgis_default_value(), RIDGE_LEVEL = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), NOUNDERGROUND = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:valleydepth")
-  output <- qgisprocess::qgis_run_algorithm("saga:valleydepth",`ELEVATION` = ELEVATION, `VALLEY_DEPTH` = VALLEY_DEPTH, `RIDGE_LEVEL` = RIDGE_LEVEL, `THRESHOLD` = THRESHOLD, `NOUNDERGROUND` = NOUNDERGROUND, `ORDER` = ORDER,...)
+  check_algorithm_necessities("saga:valleydepth")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:valleydepth", `ELEVATION` = ELEVATION, `VALLEY_DEPTH` = VALLEY_DEPTH, `RIDGE_LEVEL` = RIDGE_LEVEL, `THRESHOLD` = THRESHOLD, `NOUNDERGROUND` = NOUNDERGROUND, `ORDER` = ORDER,...)
 
   if (.complete_output) {
     return(output)

@@ -15,16 +15,16 @@
 ##' * ZMAX - outputRaster - Maximum Height
 ##' * MRN - outputRaster - Melton Ruggedness Number
 ##'
+##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
 saga_paramemeltonruggednessnumber <- function(DEM = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(), ZMAX = qgisprocess::qgis_default_value(), MRN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
-  check_QGIS_versions()
-  qgisprocess::assert_qgis()
-  qgisprocess::assert_qgis_algorithm("saga:paramemeltonruggednessnumber")
-  output <- qgisprocess::qgis_run_algorithm("saga:paramemeltonruggednessnumber",`DEM` = DEM, `AREA` = AREA, `ZMAX` = ZMAX, `MRN` = MRN,...)
+  check_algorithm_necessities("saga:paramemeltonruggednessnumber")
+
+  output <- qgisprocess::qgis_run_algorithm("saga:paramemeltonruggednessnumber", `DEM` = DEM, `AREA` = AREA, `ZMAX` = ZMAX, `MRN` = MRN,...)
 
   if (.complete_output) {
     return(output)
