@@ -83,7 +83,6 @@ jobs:
         run: |
           rm -f ./R/*.R
           rm -f ./man/*.Rd
-          rm NAMESPACE
 
       - name: Build Package functions in folder R and document them
         run: source("./build-package/build_QGIS_functions.R")
@@ -104,11 +103,11 @@ jobs:
         run: source("./build-package/render_README.R")
         shell: Rscript {0}
 
-      - uses: EndBug/add-and-commit@v5.1.0
+      - uses: EndBug/add-and-commit@v7.2.0
         with:
-          author_name: github-actions
-          author_email: github-actions@github.com
+          default_author: github_actions
           message: "current update"
+          pull_strategy: 'NO-PULL'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
