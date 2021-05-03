@@ -15,6 +15,10 @@ file_text <- function(x){
 
 library(qgisprocess)
 
+if (!qgisprocess::assert_qgis()){
+  stop("Cannot build package `qgis` because QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
+}
+
 dir.create("R", showWarnings = FALSE)
 
 source(here::here("build-package", "build_utils.R"))
