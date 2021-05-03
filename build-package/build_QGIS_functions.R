@@ -15,6 +15,8 @@ file_text <- function(x){
 
 library(qgisprocess)
 
+dir.create("R", showWarnings = FALSE)
+
 source(here::here("build-package", "build_utils.R"))
 
 previous_files <- readr::read_rds(here::here("data-raw", "previous-files.rds"))
@@ -24,8 +26,6 @@ algs <- qgis_algorithms()
 dir.create("data-raw", showWarnings = FALSE)
 
 write.csv(algs, here::here("data-raw", "algorithms.csv"))
-
-dir.create("R", showWarnings = FALSE)
 
 pb <- progress::progress_bar$new(total = nrow(algs))
 
