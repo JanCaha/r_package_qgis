@@ -75,7 +75,10 @@ jobs:
         shell: Rscript {0}
 
       - name: Delete all files in R
-        run: rm -f ./R/*.R
+        run: |
+          rm -f ./R/*.R
+          rm -f ./man/*.Rd
+          rm NAMESPACE
 
       - name: Build Package functions in folder R and document them
         run: source("./build-package/build_QGIS_functions.R")
