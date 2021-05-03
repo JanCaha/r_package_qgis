@@ -23,6 +23,7 @@
 
 grass7_r_univar <- function(map = qgisprocess::qgis_default_value(), zones = qgisprocess::qgis_default_value(), percentile = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.univar")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.univar",`map` = map, `zones` = zones, `percentile` = percentile, `separator` = separator, `-e` = .e, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)

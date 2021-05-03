@@ -17,6 +17,7 @@
 
 qgis_filedownloader <- function(URL = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:filedownloader")
   output <- qgisprocess::qgis_run_algorithm("native:filedownloader",`URL` = URL, `OUTPUT` = OUTPUT,...)

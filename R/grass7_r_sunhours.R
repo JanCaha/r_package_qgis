@@ -32,6 +32,7 @@
 
 grass7_r_sunhours <- function(year = qgisprocess::qgis_default_value(), month = qgisprocess::qgis_default_value(), day = qgisprocess::qgis_default_value(), hour = qgisprocess::qgis_default_value(), minute = qgisprocess::qgis_default_value(), second = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), azimuth = qgisprocess::qgis_default_value(), sunhour = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.sunhours")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.sunhours",`year` = year, `month` = month, `day` = day, `hour` = hour, `minute` = minute, `second` = second, `-t` = .t, `-s` = .s, `elevation` = elevation, `azimuth` = azimuth, `sunhour` = sunhour, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

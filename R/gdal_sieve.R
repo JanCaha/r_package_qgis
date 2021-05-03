@@ -22,6 +22,7 @@
 
 gdal_sieve <- function(INPUT = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), EIGHT_CONNECTEDNESS = qgisprocess::qgis_default_value(), NO_MASK = qgisprocess::qgis_default_value(), MASK_LAYER = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:sieve")
   output <- qgisprocess::qgis_run_algorithm("gdal:sieve",`INPUT` = INPUT, `THRESHOLD` = THRESHOLD, `EIGHT_CONNECTEDNESS` = EIGHT_CONNECTEDNESS, `NO_MASK` = NO_MASK, `MASK_LAYER` = MASK_LAYER, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)

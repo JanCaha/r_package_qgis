@@ -23,6 +23,7 @@
 
 gdal_tileindex <- function(LAYERS = qgisprocess::qgis_default_value(), PATH_FIELD_NAME = qgisprocess::qgis_default_value(), ABSOLUTE_PATH = qgisprocess::qgis_default_value(), PROJ_DIFFERENCE = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), CRS_FIELD_NAME = qgisprocess::qgis_default_value(), CRS_FORMAT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:tileindex")
   output <- qgisprocess::qgis_run_algorithm("gdal:tileindex",`LAYERS` = LAYERS, `PATH_FIELD_NAME` = PATH_FIELD_NAME, `ABSOLUTE_PATH` = ABSOLUTE_PATH, `PROJ_DIFFERENCE` = PROJ_DIFFERENCE, `TARGET_CRS` = TARGET_CRS, `CRS_FIELD_NAME` = CRS_FIELD_NAME, `CRS_FORMAT` = CRS_FORMAT, `OUTPUT` = OUTPUT,...)

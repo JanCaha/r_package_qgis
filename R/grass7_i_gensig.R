@@ -20,6 +20,7 @@
 
 grass7_i_gensig <- function(trainingmap = qgisprocess::qgis_default_value(), input = qgisprocess::qgis_default_value(), signaturefile = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:i.gensig")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.gensig",`trainingmap` = trainingmap, `input` = input, `signaturefile` = signaturefile, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)

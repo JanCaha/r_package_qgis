@@ -19,6 +19,7 @@
 
 saga_reclassifyvaluessimple <- function(GRID_IN = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), LOOKUP = qgisprocess::qgis_default_value(), GRID_OUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:reclassifyvaluessimple")
   output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvaluessimple",`GRID_IN` = GRID_IN, `METHOD` = METHOD, `LOOKUP` = LOOKUP, `GRID_OUT` = GRID_OUT,...)

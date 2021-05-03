@@ -23,6 +23,7 @@
 
 saga_regressionanalysispointsandpredictorgrid <- function(PREDICTOR = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUAL = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:regressionanalysispointsandpredictorgrid")
   output <- qgisprocess::qgis_run_algorithm("saga:regressionanalysispointsandpredictorgrid",`PREDICTOR` = PREDICTOR, `POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `REGRESSION` = REGRESSION, `RESIDUAL` = RESIDUAL, `RESAMPLING` = RESAMPLING, `METHOD` = METHOD,...)

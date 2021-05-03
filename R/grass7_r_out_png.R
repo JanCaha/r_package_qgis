@@ -22,6 +22,7 @@
 
 grass7_r_out_png <- function(input = qgisprocess::qgis_default_value(), compression = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.out.png")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.out.png",`input` = input, `compression` = compression, `-t` = .t, `-w` = .w, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)

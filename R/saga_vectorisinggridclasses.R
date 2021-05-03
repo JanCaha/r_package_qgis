@@ -20,6 +20,7 @@
 
 saga_vectorisinggridclasses <- function(GRID = qgisprocess::qgis_default_value(), CLASS_ALL = qgisprocess::qgis_default_value(), CLASS_ID = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:vectorisinggridclasses")
   output <- qgisprocess::qgis_run_algorithm("saga:vectorisinggridclasses",`GRID` = GRID, `CLASS_ALL` = CLASS_ALL, `CLASS_ID` = CLASS_ID, `SPLIT` = SPLIT, `POLYGONS` = POLYGONS,...)

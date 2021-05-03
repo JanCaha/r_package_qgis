@@ -22,6 +22,7 @@
 
 qgis_meshrasterize <- function(INPUT = qgisprocess::qgis_default_value(), DATASET_GROUPS = qgisprocess::qgis_default_value(), DATASET_TIME = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), PIXEL_SIZE = qgisprocess::qgis_default_value(), CRS_OUTPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:meshrasterize")
   output <- qgisprocess::qgis_run_algorithm("native:meshrasterize",`INPUT` = INPUT, `DATASET_GROUPS` = DATASET_GROUPS, `DATASET_TIME` = DATASET_TIME, `EXTENT` = EXTENT, `PIXEL_SIZE` = PIXEL_SIZE, `CRS_OUTPUT` = CRS_OUTPUT, `OUTPUT` = OUTPUT,...)

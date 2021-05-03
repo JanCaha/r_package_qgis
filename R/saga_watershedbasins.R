@@ -20,6 +20,7 @@
 
 saga_watershedbasins <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), MINSIZE = qgisprocess::qgis_default_value(), BASINS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:watershedbasins")
   output <- qgisprocess::qgis_run_algorithm("saga:watershedbasins",`ELEVATION` = ELEVATION, `CHANNELS` = CHANNELS, `SINKROUTE` = SINKROUTE, `MINSIZE` = MINSIZE, `BASINS` = BASINS,...)

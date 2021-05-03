@@ -19,6 +19,7 @@
 
 saga_singlevaluedecompositionopencv <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), RANGE_MIN = qgisprocess::qgis_default_value(), RANGE_MAX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:singlevaluedecompositionopencv")
   output <- qgisprocess::qgis_run_algorithm("saga:singlevaluedecompositionopencv",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX,...)

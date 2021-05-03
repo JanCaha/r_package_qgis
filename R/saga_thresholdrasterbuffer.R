@@ -21,6 +21,7 @@
 
 saga_thresholdrasterbuffer <- function(FEATURES = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), THRESHOLDGRID = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), THRESHOLDTYPE = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:thresholdrasterbuffer")
   output <- qgisprocess::qgis_run_algorithm("saga:thresholdrasterbuffer",`FEATURES` = FEATURES, `VALUE` = VALUE, `THRESHOLDGRID` = THRESHOLDGRID, `THRESHOLD` = THRESHOLD, `THRESHOLDTYPE` = THRESHOLDTYPE, `BUFFER` = BUFFER,...)

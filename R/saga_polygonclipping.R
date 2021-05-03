@@ -18,6 +18,7 @@
 
 saga_polygonclipping <- function(CLIP = qgisprocess::qgis_default_value(), S_INPUT = qgisprocess::qgis_default_value(), S_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonclipping")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonclipping",`CLIP` = CLIP, `S_INPUT` = S_INPUT, `S_OUTPUT` = S_OUTPUT,...)

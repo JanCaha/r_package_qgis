@@ -19,6 +19,7 @@
 
 saga_rasterbuffer <- function(FEATURES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:rasterbuffer")
   output <- qgisprocess::qgis_run_algorithm("saga:rasterbuffer",`FEATURES` = FEATURES, `DISTANCE` = DISTANCE, `TYPE` = TYPE, `BUFFER` = BUFFER,...)

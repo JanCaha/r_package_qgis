@@ -25,6 +25,7 @@
 
 grass7_r_describe <- function(map = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), nsteps = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.describe")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.describe",`map` = map, `null_value` = null_value, `nsteps` = nsteps, `-r` = .r, `-n` = .n, `-d` = .d, `-i` = .i, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)

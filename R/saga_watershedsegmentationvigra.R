@@ -20,6 +20,7 @@
 
 saga_watershedsegmentationvigra <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), RGB = qgisprocess::qgis_default_value(), EDGES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:watershedsegmentationvigra")
   output <- qgisprocess::qgis_run_algorithm("saga:watershedsegmentationvigra",`INPUT` = INPUT, `OUTPUT` = OUTPUT, `SCALE` = SCALE, `RGB` = RGB, `EDGES` = EDGES,...)

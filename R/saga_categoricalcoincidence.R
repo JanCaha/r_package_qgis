@@ -24,6 +24,7 @@
 
 saga_categoricalcoincidence <- function(GRIDS = qgisprocess::qgis_default_value(), CATEGORIES = qgisprocess::qgis_default_value(), COINCIDENCE = qgisprocess::qgis_default_value(), MAJ_COUNT = qgisprocess::qgis_default_value(), MAJ_VALUE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:categoricalcoincidence")
   output <- qgisprocess::qgis_run_algorithm("saga:categoricalcoincidence",`GRIDS` = GRIDS, `CATEGORIES` = CATEGORIES, `COINCIDENCE` = COINCIDENCE, `MAJ_COUNT` = MAJ_COUNT, `MAJ_VALUE` = MAJ_VALUE, `RADIUS` = RADIUS,...)

@@ -24,6 +24,7 @@
 
 grass7_r_distance <- function(map = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), sort = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .o = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.distance")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.distance",`map` = map, `separator` = separator, `sort` = sort, `-l` = .l, `-o` = .o, `-n` = .n, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)

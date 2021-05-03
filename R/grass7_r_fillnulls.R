@@ -28,6 +28,7 @@
 
 grass7_r_fillnulls <- function(input = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), tension = qgisprocess::qgis_default_value(), smooth = qgisprocess::qgis_default_value(), edge = qgisprocess::qgis_default_value(), npmin = qgisprocess::qgis_default_value(), segmax = qgisprocess::qgis_default_value(), lambda = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.fillnulls")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.fillnulls",`input` = input, `method` = method, `tension` = tension, `smooth` = smooth, `edge` = edge, `npmin` = npmin, `segmax` = segmax, `lambda` = lambda, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

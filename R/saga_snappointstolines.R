@@ -21,6 +21,7 @@
 
 saga_snappointstolines <- function(INPUT = qgisprocess::qgis_default_value(), SNAP = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MOVES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:snappointstolines")
   output <- qgisprocess::qgis_run_algorithm("saga:snappointstolines",`INPUT` = INPUT, `SNAP` = SNAP, `OUTPUT` = OUTPUT, `MOVES` = MOVES, `DISTANCE` = DISTANCE,...)

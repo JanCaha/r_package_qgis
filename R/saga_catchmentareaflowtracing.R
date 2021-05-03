@@ -35,6 +35,7 @@
 
 saga_catchmentareaflowtracing <- function(ELEVATION = qgisprocess::qgis_default_value(), FLOW_UNIT = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), ACCU_MATERIAL = qgisprocess::qgis_default_value(), VAL_INPUT = qgisprocess::qgis_default_value(), ACCU_TARGET = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), MINDQV = qgisprocess::qgis_default_value(), CORRECT = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), VAL_MEAN = qgisprocess::qgis_default_value(), ACCU_TOTAL = qgisprocess::qgis_default_value(), ACCU_LEFT = qgisprocess::qgis_default_value(), ACCU_RIGHT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:catchmentareaflowtracing")
   output <- qgisprocess::qgis_run_algorithm("saga:catchmentareaflowtracing",`ELEVATION` = ELEVATION, `FLOW_UNIT` = FLOW_UNIT, `SINKROUTE` = SINKROUTE, `WEIGHTS` = WEIGHTS, `ACCU_MATERIAL` = ACCU_MATERIAL, `VAL_INPUT` = VAL_INPUT, `ACCU_TARGET` = ACCU_TARGET, `STEP` = STEP, `METHOD` = METHOD, `MINDQV` = MINDQV, `CORRECT` = CORRECT, `FLOW` = FLOW, `VAL_MEAN` = VAL_MEAN, `ACCU_TOTAL` = ACCU_TOTAL, `ACCU_LEFT` = ACCU_LEFT, `ACCU_RIGHT` = ACCU_RIGHT,...)

@@ -20,6 +20,7 @@
 
 qgis_pointsalonglines <- function(INPUT = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), START_OFFSET = qgisprocess::qgis_default_value(), END_OFFSET = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:pointsalonglines")
   output <- qgisprocess::qgis_run_algorithm("native:pointsalonglines",`INPUT` = INPUT, `DISTANCE` = DISTANCE, `START_OFFSET` = START_OFFSET, `END_OFFSET` = END_OFFSET, `OUTPUT` = OUTPUT,...)

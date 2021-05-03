@@ -20,6 +20,7 @@
 
 saga_averagewiththereshold3 <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RX = qgisprocess::qgis_default_value(), RY = qgisprocess::qgis_default_value(), THRESH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:averagewiththereshold3")
   output <- qgisprocess::qgis_run_algorithm("saga:averagewiththereshold3",`INPUT` = INPUT, `RESULT` = RESULT, `RX` = RX, `RY` = RY, `THRESH` = THRESH,...)

@@ -20,6 +20,7 @@
 
 saga_splitlinesatpoints <- function(LINES = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), EPSILON = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:splitlinesatpoints")
   output <- qgisprocess::qgis_run_algorithm("saga:splitlinesatpoints",`LINES` = LINES, `SPLIT` = SPLIT, `INTERSECT` = INTERSECT, `OUTPUT` = OUTPUT, `EPSILON` = EPSILON,...)

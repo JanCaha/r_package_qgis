@@ -24,6 +24,7 @@
 
 qgis_pointstopath <- function(INPUT = qgisprocess::qgis_default_value(), CLOSE_PATH = qgisprocess::qgis_default_value(), ORDER_EXPRESSION = qgisprocess::qgis_default_value(), NATURAL_SORT = qgisprocess::qgis_default_value(), GROUP_EXPRESSION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_TEXT_DIR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:pointstopath")
   output <- qgisprocess::qgis_run_algorithm("native:pointstopath",`INPUT` = INPUT, `CLOSE_PATH` = CLOSE_PATH, `ORDER_EXPRESSION` = ORDER_EXPRESSION, `NATURAL_SORT` = NATURAL_SORT, `GROUP_EXPRESSION` = GROUP_EXPRESSION, `OUTPUT` = OUTPUT, `OUTPUT_TEXT_DIR` = OUTPUT_TEXT_DIR,...)

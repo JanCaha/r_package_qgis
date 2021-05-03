@@ -17,6 +17,7 @@
 
 qgis_3d_tessellate <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("3d:tessellate")
   output <- qgisprocess::qgis_run_algorithm("3d:tessellate",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)

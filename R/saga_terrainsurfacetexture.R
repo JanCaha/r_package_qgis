@@ -24,6 +24,7 @@
 
 saga_terrainsurfacetexture <- function(DEM = qgisprocess::qgis_default_value(), TEXTURE = qgisprocess::qgis_default_value(), EPSILON = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:terrainsurfacetexture")
   output <- qgisprocess::qgis_run_algorithm("saga:terrainsurfacetexture",`DEM` = DEM, `TEXTURE` = TEXTURE, `EPSILON` = EPSILON, `SCALE` = SCALE, `METHOD` = METHOD, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH,...)

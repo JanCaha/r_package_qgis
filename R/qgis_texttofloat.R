@@ -18,6 +18,7 @@
 
 qgis_texttofloat <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("qgis:texttofloat")
   output <- qgisprocess::qgis_run_algorithm("qgis:texttofloat",`INPUT` = INPUT, `FIELD` = FIELD, `OUTPUT` = OUTPUT,...)

@@ -21,6 +21,7 @@
 
 saga_sinkremoval <- function(DEM = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), THRSHEIGHT = qgisprocess::qgis_default_value(), DEM_PREPROC = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:sinkremoval")
   output <- qgisprocess::qgis_run_algorithm("saga:sinkremoval",`DEM` = DEM, `SINKROUTE` = SINKROUTE, `METHOD` = METHOD, `THRESHOLD` = THRESHOLD, `THRSHEIGHT` = THRSHEIGHT, `DEM_PREPROC` = DEM_PREPROC,...)

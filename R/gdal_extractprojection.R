@@ -18,6 +18,7 @@
 
 gdal_extractprojection <- function(INPUT = qgisprocess::qgis_default_value(), PRJ_FILE_CREATE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:extractprojection")
   output <- qgisprocess::qgis_run_algorithm("gdal:extractprojection",`INPUT` = INPUT, `PRJ_FILE_CREATE` = PRJ_FILE_CREATE,...)

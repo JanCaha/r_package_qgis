@@ -17,6 +17,7 @@
 
 saga_flattenpolygonlayer <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:flattenpolygonlayer")
   output <- qgisprocess::qgis_run_algorithm("saga:flattenpolygonlayer",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)

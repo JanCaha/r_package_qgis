@@ -18,6 +18,7 @@
 
 saga_aggregationindex <- function(INPUT = qgisprocess::qgis_default_value(), MAXNUMCLASS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:aggregationindex")
   output <- qgisprocess::qgis_run_algorithm("saga:aggregationindex",`INPUT` = INPUT, `MAXNUMCLASS` = MAXNUMCLASS, `RESULT` = RESULT,...)

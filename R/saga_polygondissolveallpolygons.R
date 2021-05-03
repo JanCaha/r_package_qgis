@@ -18,6 +18,7 @@
 
 saga_polygondissolveallpolygons <- function(POLYGONS = qgisprocess::qgis_default_value(), BND_KEEP = qgisprocess::qgis_default_value(), DISSOLVED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygondissolveallpolygons")
   output <- qgisprocess::qgis_run_algorithm("saga:polygondissolveallpolygons",`POLYGONS` = POLYGONS, `BND_KEEP` = BND_KEEP, `DISSOLVED` = DISSOLVED,...)

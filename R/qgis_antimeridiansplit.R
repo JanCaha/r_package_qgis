@@ -17,6 +17,7 @@
 
 qgis_antimeridiansplit <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:antimeridiansplit")
   output <- qgisprocess::qgis_run_algorithm("native:antimeridiansplit",`INPUT` = INPUT, `OUTPUT` = OUTPUT,...)

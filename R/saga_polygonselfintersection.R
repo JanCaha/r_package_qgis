@@ -18,6 +18,7 @@
 
 saga_polygonselfintersection <- function(POLYGONS = qgisprocess::qgis_default_value(), ID = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonselfintersection")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonselfintersection",`POLYGONS` = POLYGONS, `ID` = ID, `INTERSECT` = INTERSECT,...)

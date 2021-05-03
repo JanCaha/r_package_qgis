@@ -29,6 +29,7 @@
 
 qgis_tilesxyzdirectory <- function(EXTENT = qgisprocess::qgis_default_value(), ZOOM_MIN = qgisprocess::qgis_default_value(), ZOOM_MAX = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), BACKGROUND_COLOR = qgisprocess::qgis_default_value(), TILE_FORMAT = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), METATILESIZE = qgisprocess::qgis_default_value(), TILE_WIDTH = qgisprocess::qgis_default_value(), TILE_HEIGHT = qgisprocess::qgis_default_value(), TMS_CONVENTION = qgisprocess::qgis_default_value(), OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(), OUTPUT_HTML = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("qgis:tilesxyzdirectory")
   output <- qgisprocess::qgis_run_algorithm("qgis:tilesxyzdirectory",`EXTENT` = EXTENT, `ZOOM_MIN` = ZOOM_MIN, `ZOOM_MAX` = ZOOM_MAX, `DPI` = DPI, `BACKGROUND_COLOR` = BACKGROUND_COLOR, `TILE_FORMAT` = TILE_FORMAT, `QUALITY` = QUALITY, `METATILESIZE` = METATILESIZE, `TILE_WIDTH` = TILE_WIDTH, `TILE_HEIGHT` = TILE_HEIGHT, `TMS_CONVENTION` = TMS_CONVENTION, `OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY, `OUTPUT_HTML` = OUTPUT_HTML,...)

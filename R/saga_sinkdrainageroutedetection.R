@@ -19,6 +19,7 @@
 
 saga_sinkdrainageroutedetection <- function(ELEVATION = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), THRSHEIGHT = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:sinkdrainageroutedetection")
   output <- qgisprocess::qgis_run_algorithm("saga:sinkdrainageroutedetection",`ELEVATION` = ELEVATION, `THRESHOLD` = THRESHOLD, `THRSHEIGHT` = THRSHEIGHT, `SINKROUTE` = SINKROUTE,...)

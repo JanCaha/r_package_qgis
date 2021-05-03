@@ -26,6 +26,7 @@
 
 qgis_meshcontours <- function(INPUT = qgisprocess::qgis_default_value(), DATASET_GROUPS = qgisprocess::qgis_default_value(), DATASET_TIME = qgisprocess::qgis_default_value(), INCREMENT = qgisprocess::qgis_default_value(), MINIMUM = qgisprocess::qgis_default_value(), MAXIMUM = qgisprocess::qgis_default_value(), CONTOUR_LEVEL_LIST = qgisprocess::qgis_default_value(), CRS_OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_LINES = qgisprocess::qgis_default_value(), OUTPUT_POLYGONS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:meshcontours")
   output <- qgisprocess::qgis_run_algorithm("native:meshcontours",`INPUT` = INPUT, `DATASET_GROUPS` = DATASET_GROUPS, `DATASET_TIME` = DATASET_TIME, `INCREMENT` = INCREMENT, `MINIMUM` = MINIMUM, `MAXIMUM` = MAXIMUM, `CONTOUR_LEVEL_LIST` = CONTOUR_LEVEL_LIST, `CRS_OUTPUT` = CRS_OUTPUT, `OUTPUT_LINES` = OUTPUT_LINES, `OUTPUT_POLYGONS` = OUTPUT_POLYGONS,...)

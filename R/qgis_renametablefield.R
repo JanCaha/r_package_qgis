@@ -19,6 +19,7 @@
 
 qgis_renametablefield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), NEW_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:renametablefield")
   output <- qgisprocess::qgis_run_algorithm("native:renametablefield",`INPUT` = INPUT, `FIELD` = FIELD, `NEW_NAME` = NEW_NAME, `OUTPUT` = OUTPUT,...)

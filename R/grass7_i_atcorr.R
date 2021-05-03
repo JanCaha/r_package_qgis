@@ -30,6 +30,7 @@
 
 grass7_i_atcorr <- function(input = qgisprocess::qgis_default_value(), range = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), visibility = qgisprocess::qgis_default_value(), parameters = qgisprocess::qgis_default_value(), rescale = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:i.atcorr")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.atcorr",`input` = input, `range` = range, `elevation` = elevation, `visibility` = visibility, `parameters` = parameters, `rescale` = rescale, `output` = output, `-i` = .i, `-r` = .r, `-a` = .a, `-b` = .b, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

@@ -19,6 +19,7 @@
 
 qgis_filterverticesbym <- function(INPUT = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:filterverticesbym")
   output <- qgisprocess::qgis_run_algorithm("native:filterverticesbym",`INPUT` = INPUT, `MIN` = MIN, `MAX` = MAX, `OUTPUT` = OUTPUT,...)

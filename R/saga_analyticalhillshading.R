@@ -21,6 +21,7 @@
 
 saga_analyticalhillshading <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), AZIMUTH = qgisprocess::qgis_default_value(), DECLINATION = qgisprocess::qgis_default_value(), EXAGGERATION = qgisprocess::qgis_default_value(), SHADE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:analyticalhillshading")
   output <- qgisprocess::qgis_run_algorithm("saga:analyticalhillshading",`ELEVATION` = ELEVATION, `METHOD` = METHOD, `AZIMUTH` = AZIMUTH, `DECLINATION` = DECLINATION, `EXAGGERATION` = EXAGGERATION, `SHADE` = SHADE,...)

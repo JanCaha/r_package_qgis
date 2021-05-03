@@ -18,6 +18,7 @@
 
 saga_thiessenpolygons <- function(POINTS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), FRAME = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:thiessenpolygons")
   output <- qgisprocess::qgis_run_algorithm("saga:thiessenpolygons",`POINTS` = POINTS, `POLYGONS` = POLYGONS, `FRAME` = FRAME,...)

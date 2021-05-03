@@ -18,6 +18,7 @@
 
 qgis_clip <- function(INPUT = qgisprocess::qgis_default_value(), OVERLAY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:clip")
   output <- qgisprocess::qgis_run_algorithm("native:clip",`INPUT` = INPUT, `OVERLAY` = OVERLAY, `OUTPUT` = OUTPUT,...)

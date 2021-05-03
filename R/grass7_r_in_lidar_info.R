@@ -18,6 +18,7 @@
 
 grass7_r_in_lidar_info <- function(input = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.in.lidar.info")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.in.lidar.info",`input` = input, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER,...)

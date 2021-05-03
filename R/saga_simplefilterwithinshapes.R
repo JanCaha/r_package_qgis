@@ -21,6 +21,7 @@
 
 saga_simplefilterwithinshapes <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:simplefilterwithinshapes")
   output <- qgisprocess::qgis_run_algorithm("saga:simplefilterwithinshapes",`INPUT` = INPUT, `RESULT` = RESULT, `SHAPES` = SHAPES, `MODE` = MODE, `METHOD` = METHOD, `RADIUS` = RADIUS,...)

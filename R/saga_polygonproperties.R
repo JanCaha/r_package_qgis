@@ -21,6 +21,7 @@
 
 saga_polygonproperties <- function(POLYGONS = qgisprocess::qgis_default_value(), BPARTS = qgisprocess::qgis_default_value(), BPOINTS = qgisprocess::qgis_default_value(), BLENGTH = qgisprocess::qgis_default_value(), BAREA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonproperties")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonproperties",`POLYGONS` = POLYGONS, `BPARTS` = BPARTS, `BPOINTS` = BPOINTS, `BLENGTH` = BLENGTH, `BAREA` = BAREA, `OUTPUT` = OUTPUT,...)

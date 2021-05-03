@@ -21,6 +21,7 @@
 
 saga_landusescenariogenerator <- function(FIELDS = qgisprocess::qgis_default_value(), FIELD_ID = qgisprocess::qgis_default_value(), SCENARIO = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), KNOWN_CROPS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:landusescenariogenerator")
   output <- qgisprocess::qgis_run_algorithm("saga:landusescenariogenerator",`FIELDS` = FIELDS, `FIELD_ID` = FIELD_ID, `SCENARIO` = SCENARIO, `OUTPUT` = OUTPUT, `STATISTICS` = STATISTICS, `KNOWN_CROPS` = KNOWN_CROPS,...)

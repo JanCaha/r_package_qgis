@@ -18,6 +18,7 @@
 
 saga_rastercellindex <- function(GRID = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), INDEX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:rastercellindex")
   output <- qgisprocess::qgis_run_algorithm("saga:rastercellindex",`GRID` = GRID, `ORDER` = ORDER, `INDEX` = INDEX,...)

@@ -23,6 +23,7 @@
 
 qgis_meshexportcrosssection <- function(INPUT = qgisprocess::qgis_default_value(), DATASET_GROUPS = qgisprocess::qgis_default_value(), DATASET_TIME = qgisprocess::qgis_default_value(), INPUT_LINES = qgisprocess::qgis_default_value(), RESOLUTION = qgisprocess::qgis_default_value(), COORDINATES_DIGITS = qgisprocess::qgis_default_value(), DATASET_DIGITS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:meshexportcrosssection")
   output <- qgisprocess::qgis_run_algorithm("native:meshexportcrosssection",`INPUT` = INPUT, `DATASET_GROUPS` = DATASET_GROUPS, `DATASET_TIME` = DATASET_TIME, `INPUT_LINES` = INPUT_LINES, `RESOLUTION` = RESOLUTION, `COORDINATES_DIGITS` = COORDINATES_DIGITS, `DATASET_DIGITS` = DATASET_DIGITS, `OUTPUT` = OUTPUT,...)

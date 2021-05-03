@@ -21,6 +21,7 @@
 
 qgis_angletonearest <- function(INPUT = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), MAX_DISTANCE = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), APPLY_SYMBOLOGY = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:angletonearest")
   output <- qgisprocess::qgis_run_algorithm("native:angletonearest",`INPUT` = INPUT, `REFERENCE_LAYER` = REFERENCE_LAYER, `MAX_DISTANCE` = MAX_DISTANCE, `FIELD_NAME` = FIELD_NAME, `APPLY_SYMBOLOGY` = APPLY_SYMBOLOGY, `OUTPUT` = OUTPUT,...)

@@ -19,6 +19,7 @@
 
 saga_aspectslopegrid <- function(ASPECT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT_SLOPE = qgisprocess::qgis_default_value(), LUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:aspectslopegrid")
   output <- qgisprocess::qgis_run_algorithm("saga:aspectslopegrid",`ASPECT` = ASPECT, `SLOPE` = SLOPE, `ASPECT_SLOPE` = ASPECT_SLOPE, `LUT` = LUT,...)

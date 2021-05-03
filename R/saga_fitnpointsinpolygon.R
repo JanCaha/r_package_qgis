@@ -18,6 +18,7 @@
 
 saga_fitnpointsinpolygon <- function(SHAPES = qgisprocess::qgis_default_value(), NUMPOINTS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:fitnpointsinpolygon")
   output <- qgisprocess::qgis_run_algorithm("saga:fitnpointsinpolygon",`SHAPES` = SHAPES, `NUMPOINTS` = NUMPOINTS, `POINTS` = POINTS,...)

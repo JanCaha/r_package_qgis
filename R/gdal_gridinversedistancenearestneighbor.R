@@ -27,6 +27,7 @@
 
 gdal_gridinversedistancenearestneighbor <- function(INPUT = qgisprocess::qgis_default_value(), Z_FIELD = qgisprocess::qgis_default_value(), POWER = qgisprocess::qgis_default_value(), SMOOTHING = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), MAX_POINTS = qgisprocess::qgis_default_value(), MIN_POINTS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:gridinversedistancenearestneighbor")
   output <- qgisprocess::qgis_run_algorithm("gdal:gridinversedistancenearestneighbor",`INPUT` = INPUT, `Z_FIELD` = Z_FIELD, `POWER` = POWER, `SMOOTHING` = SMOOTHING, `RADIUS` = RADIUS, `MAX_POINTS` = MAX_POINTS, `MIN_POINTS` = MIN_POINTS, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,...)

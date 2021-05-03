@@ -19,6 +19,7 @@
 
 gdal_ogrinfo <- function(INPUT = qgisprocess::qgis_default_value(), SUMMARY_ONLY = qgisprocess::qgis_default_value(), NO_METADATA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:ogrinfo")
   output <- qgisprocess::qgis_run_algorithm("gdal:ogrinfo",`INPUT` = INPUT, `SUMMARY_ONLY` = SUMMARY_ONLY, `NO_METADATA` = NO_METADATA, `OUTPUT` = OUTPUT,...)

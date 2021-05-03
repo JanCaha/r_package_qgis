@@ -26,6 +26,7 @@
 
 grass7_i_biomass <- function(fpar = qgisprocess::qgis_default_value(), lightuse_efficiency = qgisprocess::qgis_default_value(), latitude = qgisprocess::qgis_default_value(), dayofyear = qgisprocess::qgis_default_value(), transmissivity_singleway = qgisprocess::qgis_default_value(), water_availability = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:i.biomass")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.biomass",`fpar` = fpar, `lightuse_efficiency` = lightuse_efficiency, `latitude` = latitude, `dayofyear` = dayofyear, `transmissivity_singleway` = transmissivity_singleway, `water_availability` = water_availability, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

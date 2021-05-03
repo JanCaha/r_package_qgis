@@ -32,6 +32,7 @@
 
 grass7_r_sunmask_datetime <- function(elevation = qgisprocess::qgis_default_value(), year = qgisprocess::qgis_default_value(), month = qgisprocess::qgis_default_value(), day = qgisprocess::qgis_default_value(), hour = qgisprocess::qgis_default_value(), minute = qgisprocess::qgis_default_value(), second = qgisprocess::qgis_default_value(), timezone = qgisprocess::qgis_default_value(), east = qgisprocess::qgis_default_value(), north = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.sunmask.datetime")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.sunmask.datetime",`elevation` = elevation, `year` = year, `month` = month, `day` = day, `hour` = hour, `minute` = minute, `second` = second, `timezone` = timezone, `east` = east, `north` = north, `-z` = .z, `-s` = .s, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

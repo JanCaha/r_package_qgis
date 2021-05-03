@@ -26,6 +26,7 @@
 
 saga_upslopeanddownslopecurvature <- function(DEM = qgisprocess::qgis_default_value(), C_LOCAL = qgisprocess::qgis_default_value(), C_UP = qgisprocess::qgis_default_value(), C_UP_LOCAL = qgisprocess::qgis_default_value(), C_DOWN = qgisprocess::qgis_default_value(), C_DOWN_LOCAL = qgisprocess::qgis_default_value(), WEIGHTING = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:upslopeanddownslopecurvature")
   output <- qgisprocess::qgis_run_algorithm("saga:upslopeanddownslopecurvature",`DEM` = DEM, `C_LOCAL` = C_LOCAL, `C_UP` = C_UP, `C_UP_LOCAL` = C_UP_LOCAL, `C_DOWN` = C_DOWN, `C_DOWN_LOCAL` = C_DOWN_LOCAL, `WEIGHTING` = WEIGHTING,...)

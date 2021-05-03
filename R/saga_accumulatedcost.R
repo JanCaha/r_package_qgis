@@ -26,6 +26,7 @@
 
 saga_accumulatedcost <- function(DEST_TYPE = qgisprocess::qgis_default_value(), DEST_POINTS = qgisprocess::qgis_default_value(), DEST_GRID = qgisprocess::qgis_default_value(), COST = qgisprocess::qgis_default_value(), DIR_MAXCOST = qgisprocess::qgis_default_value(), DIR_UNIT = qgisprocess::qgis_default_value(), DIR_K = qgisprocess::qgis_default_value(), ACCUMULATED = qgisprocess::qgis_default_value(), ALLOCATION = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:accumulatedcost")
   output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcost",`DEST_TYPE` = DEST_TYPE, `DEST_POINTS` = DEST_POINTS, `DEST_GRID` = DEST_GRID, `COST` = COST, `DIR_MAXCOST` = DIR_MAXCOST, `DIR_UNIT` = DIR_UNIT, `DIR_K` = DIR_K, `ACCUMULATED` = ACCUMULATED, `ALLOCATION` = ALLOCATION, `THRESHOLD` = THRESHOLD,...)

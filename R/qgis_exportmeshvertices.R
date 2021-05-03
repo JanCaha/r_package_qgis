@@ -21,6 +21,7 @@
 
 qgis_exportmeshvertices <- function(INPUT = qgisprocess::qgis_default_value(), DATASET_GROUPS = qgisprocess::qgis_default_value(), DATASET_TIME = qgisprocess::qgis_default_value(), CRS_OUTPUT = qgisprocess::qgis_default_value(), VECTOR_OPTION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:exportmeshvertices")
   output <- qgisprocess::qgis_run_algorithm("native:exportmeshvertices",`INPUT` = INPUT, `DATASET_GROUPS` = DATASET_GROUPS, `DATASET_TIME` = DATASET_TIME, `CRS_OUTPUT` = CRS_OUTPUT, `VECTOR_OPTION` = VECTOR_OPTION, `OUTPUT` = OUTPUT,...)

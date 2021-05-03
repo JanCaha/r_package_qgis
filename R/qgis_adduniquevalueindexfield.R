@@ -21,6 +21,7 @@
 
 qgis_adduniquevalueindexfield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SUMMARY_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:adduniquevalueindexfield")
   output <- qgisprocess::qgis_run_algorithm("native:adduniquevalueindexfield",`INPUT` = INPUT, `FIELD` = FIELD, `FIELD_NAME` = FIELD_NAME, `OUTPUT` = OUTPUT, `SUMMARY_OUTPUT` = SUMMARY_OUTPUT,...)

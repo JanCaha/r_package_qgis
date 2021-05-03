@@ -23,6 +23,7 @@
 
 saga_isodataclusteringforgrids <- function(FEATURES = qgisprocess::qgis_default_value(), CLUSTER = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), CLUSTER_INI = qgisprocess::qgis_default_value(), CLUSTER_MAX = qgisprocess::qgis_default_value(), SAMPLES_MIN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:isodataclusteringforgrids")
   output <- qgisprocess::qgis_run_algorithm("saga:isodataclusteringforgrids",`FEATURES` = FEATURES, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS, `NORMALIZE` = NORMALIZE, `ITERATIONS` = ITERATIONS, `CLUSTER_INI` = CLUSTER_INI, `CLUSTER_MAX` = CLUSTER_MAX, `SAMPLES_MIN` = SAMPLES_MIN,...)

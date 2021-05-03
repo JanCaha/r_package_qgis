@@ -20,6 +20,7 @@
 
 saga_profilesfromlines <- function(DEM = qgisprocess::qgis_default_value(), VALUES = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), NAME = qgisprocess::qgis_default_value(), PROFILE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:profilesfromlines")
   output <- qgisprocess::qgis_run_algorithm("saga:profilesfromlines",`DEM` = DEM, `VALUES` = VALUES, `LINES` = LINES, `NAME` = NAME, `PROFILE` = PROFILE,...)

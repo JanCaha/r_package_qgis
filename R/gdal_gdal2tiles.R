@@ -31,6 +31,7 @@
 
 gdal_gdal2tiles <- function(INPUT = qgisprocess::qgis_default_value(), PROFILE = qgisprocess::qgis_default_value(), ZOOM = qgisprocess::qgis_default_value(), VIEWER = qgisprocess::qgis_default_value(), TITLE = qgisprocess::qgis_default_value(), COPYRIGHT = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), URL = qgisprocess::qgis_default_value(), GOOGLE_KEY = qgisprocess::qgis_default_value(), BING_KEY = qgisprocess::qgis_default_value(), RESUME = qgisprocess::qgis_default_value(), KML = qgisprocess::qgis_default_value(), NO_KML = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:gdal2tiles")
   output <- qgisprocess::qgis_run_algorithm("gdal:gdal2tiles",`INPUT` = INPUT, `PROFILE` = PROFILE, `ZOOM` = ZOOM, `VIEWER` = VIEWER, `TITLE` = TITLE, `COPYRIGHT` = COPYRIGHT, `RESAMPLING` = RESAMPLING, `SOURCE_CRS` = SOURCE_CRS, `NODATA` = NODATA, `URL` = URL, `GOOGLE_KEY` = GOOGLE_KEY, `BING_KEY` = BING_KEY, `RESUME` = RESUME, `KML` = KML, `NO_KML` = NO_KML, `OUTPUT` = OUTPUT,...)

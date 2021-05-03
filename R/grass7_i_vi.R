@@ -31,6 +31,7 @@
 
 grass7_i_vi <- function(red = qgisprocess::qgis_default_value(), viname = qgisprocess::qgis_default_value(), nir = qgisprocess::qgis_default_value(), green = qgisprocess::qgis_default_value(), blue = qgisprocess::qgis_default_value(), band5 = qgisprocess::qgis_default_value(), band7 = qgisprocess::qgis_default_value(), soil_line_slope = qgisprocess::qgis_default_value(), soil_line_intercept = qgisprocess::qgis_default_value(), soil_noise_reduction = qgisprocess::qgis_default_value(), storage_bit = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:i.vi")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.vi",`red` = red, `viname` = viname, `nir` = nir, `green` = green, `blue` = blue, `band5` = band5, `band7` = band7, `soil_line_slope` = soil_line_slope, `soil_line_intercept` = soil_line_intercept, `soil_noise_reduction` = soil_noise_reduction, `storage_bit` = storage_bit, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

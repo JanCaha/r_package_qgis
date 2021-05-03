@@ -33,6 +33,7 @@
 
 gdal_rastercalculator <- function(INPUT_A = qgisprocess::qgis_default_value(), BAND_A = qgisprocess::qgis_default_value(), INPUT_B = qgisprocess::qgis_default_value(), BAND_B = qgisprocess::qgis_default_value(), INPUT_C = qgisprocess::qgis_default_value(), BAND_C = qgisprocess::qgis_default_value(), INPUT_D = qgisprocess::qgis_default_value(), BAND_D = qgisprocess::qgis_default_value(), INPUT_E = qgisprocess::qgis_default_value(), BAND_E = qgisprocess::qgis_default_value(), INPUT_F = qgisprocess::qgis_default_value(), BAND_F = qgisprocess::qgis_default_value(), FORMULA = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), RTYPE = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:rastercalculator")
   output <- qgisprocess::qgis_run_algorithm("gdal:rastercalculator",`INPUT_A` = INPUT_A, `BAND_A` = BAND_A, `INPUT_B` = INPUT_B, `BAND_B` = BAND_B, `INPUT_C` = INPUT_C, `BAND_C` = BAND_C, `INPUT_D` = INPUT_D, `BAND_D` = BAND_D, `INPUT_E` = INPUT_E, `BAND_E` = BAND_E, `INPUT_F` = INPUT_F, `BAND_F` = BAND_F, `FORMULA` = FORMULA, `NO_DATA` = NO_DATA, `RTYPE` = RTYPE, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)

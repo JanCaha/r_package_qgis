@@ -25,6 +25,7 @@
 
 saga_angmap <- function(DEM = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), fB = qgisprocess::qgis_default_value(), fC = qgisprocess::qgis_default_value(), E = qgisprocess::qgis_default_value(), F = qgisprocess::qgis_default_value(), G = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:angmap")
   output <- qgisprocess::qgis_run_algorithm("saga:angmap",`DEM` = DEM, `C` = C, `D` = D, `fB` = fB, `fC` = fC, `E` = E, `F` = F, `G` = G,...)

@@ -19,6 +19,7 @@
 
 qgis_simplifygeometries <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:simplifygeometries")
   output <- qgisprocess::qgis_run_algorithm("native:simplifygeometries",`INPUT` = INPUT, `METHOD` = METHOD, `TOLERANCE` = TOLERANCE, `OUTPUT` = OUTPUT,...)

@@ -18,6 +18,7 @@
 
 qgis_densifygeometries <- function(INPUT = qgisprocess::qgis_default_value(), VERTICES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:densifygeometries")
   output <- qgisprocess::qgis_run_algorithm("native:densifygeometries",`INPUT` = INPUT, `VERTICES` = VERTICES, `OUTPUT` = OUTPUT,...)

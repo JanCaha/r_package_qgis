@@ -22,6 +22,7 @@
 
 saga_windexpositionindex <- function(DEM = qgisprocess::qgis_default_value(), EXPOSITION = qgisprocess::qgis_default_value(), MAXDIST = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), OLDVER = qgisprocess::qgis_default_value(), ACCEL = qgisprocess::qgis_default_value(), PYRAMIDS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:windexpositionindex")
   output <- qgisprocess::qgis_run_algorithm("saga:windexpositionindex",`DEM` = DEM, `EXPOSITION` = EXPOSITION, `MAXDIST` = MAXDIST, `STEP` = STEP, `OLDVER` = OLDVER, `ACCEL` = ACCEL, `PYRAMIDS` = PYRAMIDS,...)

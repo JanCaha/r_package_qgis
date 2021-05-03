@@ -18,6 +18,7 @@
 
 saga_polygonlineintersection <- function(POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonlineintersection")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonlineintersection",`POLYGONS` = POLYGONS, `LINES` = LINES, `INTERSECT` = INTERSECT,...)

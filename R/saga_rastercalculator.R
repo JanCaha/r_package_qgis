@@ -22,6 +22,7 @@
 
 saga_rastercalculator <- function(GRIDS = qgisprocess::qgis_default_value(), XGRIDS = qgisprocess::qgis_default_value(), FORMULA = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), USE_NODATA = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:rastercalculator")
   output <- qgisprocess::qgis_run_algorithm("saga:rastercalculator",`GRIDS` = GRIDS, `XGRIDS` = XGRIDS, `FORMULA` = FORMULA, `RESAMPLING` = RESAMPLING, `USE_NODATA` = USE_NODATA, `TYPE` = TYPE, `RESULT` = RESULT,...)

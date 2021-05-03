@@ -21,6 +21,7 @@
 
 saga_downslopedistancegradient <- function(DEM = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), GRADIENT = qgisprocess::qgis_default_value(), DIFFERENCE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:downslopedistancegradient")
   output <- qgisprocess::qgis_run_algorithm("saga:downslopedistancegradient",`DEM` = DEM, `DISTANCE` = DISTANCE, `OUTPUT` = OUTPUT, `GRADIENT` = GRADIENT, `DIFFERENCE` = DIFFERENCE,...)

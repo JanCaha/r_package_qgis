@@ -18,6 +18,7 @@
 
 saga_polygonpartstoseparatepolygons <- function(POLYGONS = qgisprocess::qgis_default_value(), LAKES = qgisprocess::qgis_default_value(), PARTS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonpartstoseparatepolygons")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonpartstoseparatepolygons",`POLYGONS` = POLYGONS, `LAKES` = LAKES, `PARTS` = PARTS,...)

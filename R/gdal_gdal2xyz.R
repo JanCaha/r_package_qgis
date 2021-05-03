@@ -19,6 +19,7 @@
 
 gdal_gdal2xyz <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), CSV = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:gdal2xyz")
   output <- qgisprocess::qgis_run_algorithm("gdal:gdal2xyz",`INPUT` = INPUT, `BAND` = BAND, `CSV` = CSV, `OUTPUT` = OUTPUT,...)

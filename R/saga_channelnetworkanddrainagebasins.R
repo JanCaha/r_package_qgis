@@ -30,6 +30,7 @@
 
 saga_channelnetworkanddrainagebasins <- function(DEM = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), CONNECTION = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), BASIN = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), BASINS = qgisprocess::qgis_default_value(), NODES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:channelnetworkanddrainagebasins")
   output <- qgisprocess::qgis_run_algorithm("saga:channelnetworkanddrainagebasins",`DEM` = DEM, `THRESHOLD` = THRESHOLD, `DIRECTION` = DIRECTION, `CONNECTION` = CONNECTION, `ORDER` = ORDER, `BASIN` = BASIN, `SEGMENTS` = SEGMENTS, `BASINS` = BASINS, `NODES` = NODES,...)

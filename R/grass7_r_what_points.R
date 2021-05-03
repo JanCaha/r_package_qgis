@@ -30,6 +30,7 @@
 
 grass7_r_what_points <- function(map = qgisprocess::qgis_default_value(), points = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), cache = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.what.points")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.what.points",`map` = map, `points` = points, `null_value` = null_value, `separator` = separator, `cache` = cache, `-n` = .n, `-f` = .f, `-r` = .r, `-i` = .i, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)

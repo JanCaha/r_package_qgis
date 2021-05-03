@@ -18,6 +18,7 @@
 
 saga_histogramsurface <- function(GRID = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), HIST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:histogramsurface")
   output <- qgisprocess::qgis_run_algorithm("saga:histogramsurface",`GRID` = GRID, `METHOD` = METHOD, `HIST` = HIST,...)

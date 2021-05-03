@@ -21,6 +21,7 @@
 
 gdal_pansharp <- function(SPECTRAL = qgisprocess::qgis_default_value(), PANCHROMATIC = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:pansharp")
   output <- qgisprocess::qgis_run_algorithm("gdal:pansharp",`SPECTRAL` = SPECTRAL, `PANCHROMATIC` = PANCHROMATIC, `RESAMPLING` = RESAMPLING, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)

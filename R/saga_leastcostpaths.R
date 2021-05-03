@@ -21,6 +21,7 @@
 
 saga_leastcostpaths <- function(SOURCE = qgisprocess::qgis_default_value(), DEM = qgisprocess::qgis_default_value(), VALUES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), LINE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:leastcostpaths")
   output <- qgisprocess::qgis_run_algorithm("saga:leastcostpaths",`SOURCE` = SOURCE, `DEM` = DEM, `VALUES` = VALUES, `POINTS` = POINTS, `LINE` = LINE,...)

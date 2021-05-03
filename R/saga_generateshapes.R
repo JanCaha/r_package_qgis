@@ -21,6 +21,7 @@
 
 saga_generateshapes <- function(INPUT = qgisprocess::qgis_default_value(), FIELD_ID = qgisprocess::qgis_default_value(), FIELD_X = qgisprocess::qgis_default_value(), FIELD_Y = qgisprocess::qgis_default_value(), SHAPE_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:generateshapes")
   output <- qgisprocess::qgis_run_algorithm("saga:generateshapes",`INPUT` = INPUT, `FIELD_ID` = FIELD_ID, `FIELD_X` = FIELD_X, `FIELD_Y` = FIELD_Y, `SHAPE_TYPE` = SHAPE_TYPE, `OUTPUT` = OUTPUT,...)

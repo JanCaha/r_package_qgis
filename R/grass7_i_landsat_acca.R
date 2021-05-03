@@ -29,6 +29,7 @@
 
 grass7_i_landsat_acca <- function(rasters = qgisprocess::qgis_default_value(), b56composite = qgisprocess::qgis_default_value(), b45ratio = qgisprocess::qgis_default_value(), histogram = qgisprocess::qgis_default_value(), .arg_5 = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .x = qgisprocess::qgis_default_value(), .arg_2 = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:i.landsat.acca")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.landsat.acca",`rasters` = rasters, `b56composite` = b56composite, `b45ratio` = b45ratio, `histogram` = histogram, `-5` = .arg_5, `-f` = .f, `-x` = .x, `-2` = .arg_2, `-s` = .s, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

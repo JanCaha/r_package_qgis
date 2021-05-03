@@ -20,6 +20,7 @@
 
 qgis_smoothgeometry <- function(INPUT = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), OFFSET = qgisprocess::qgis_default_value(), MAX_ANGLE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:smoothgeometry")
   output <- qgisprocess::qgis_run_algorithm("native:smoothgeometry",`INPUT` = INPUT, `ITERATIONS` = ITERATIONS, `OFFSET` = OFFSET, `MAX_ANGLE` = MAX_ANGLE, `OUTPUT` = OUTPUT,...)

@@ -20,6 +20,7 @@
 
 saga_simplefilter <- function(INPUT = qgisprocess::qgis_default_value(), MODE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:simplefilter")
   output <- qgisprocess::qgis_run_algorithm("saga:simplefilter",`INPUT` = INPUT, `MODE` = MODE, `METHOD` = METHOD, `RADIUS` = RADIUS, `RESULT` = RESULT,...)

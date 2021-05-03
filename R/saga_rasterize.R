@@ -26,6 +26,7 @@
 
 saga_rasterize <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MULTIPLE = qgisprocess::qgis_default_value(), LINE_TYPE = qgisprocess::qgis_default_value(), POLY_TYPE = qgisprocess::qgis_default_value(), GRID_TYPE = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:rasterize")
   output <- qgisprocess::qgis_run_algorithm("saga:rasterize",`INPUT` = INPUT, `FIELD` = FIELD, `OUTPUT` = OUTPUT, `MULTIPLE` = MULTIPLE, `LINE_TYPE` = LINE_TYPE, `POLY_TYPE` = POLY_TYPE, `GRID_TYPE` = GRID_TYPE, `TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX` = TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX, `TARGET_USER_SIZE` = TARGET_USER_SIZE, `TARGET_USER_FITS` = TARGET_USER_FITS, `GRID` = GRID,...)

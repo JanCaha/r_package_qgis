@@ -26,6 +26,7 @@
 
 grass7_i_smap <- function(input = qgisprocess::qgis_default_value(), signaturefile = qgisprocess::qgis_default_value(), blocksize = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), goodness = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:i.smap")
   output <- qgisprocess::qgis_run_algorithm("grass7:i.smap",`input` = input, `signaturefile` = signaturefile, `blocksize` = blocksize, `-m` = .m, `output` = output, `goodness` = goodness, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

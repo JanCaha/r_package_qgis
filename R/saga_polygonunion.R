@@ -19,6 +19,7 @@
 
 saga_polygonunion <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonunion")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonunion",`A` = A, `B` = B, `SPLIT` = SPLIT, `RESULT` = RESULT,...)

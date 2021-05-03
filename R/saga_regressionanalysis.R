@@ -23,6 +23,7 @@
 
 saga_regressionanalysis <- function(GRID = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), INTERPOL = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUAL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:regressionanalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:regressionanalysis",`GRID` = GRID, `SHAPES` = SHAPES, `ATTRIBUTE` = ATTRIBUTE, `INTERPOL` = INTERPOL, `METHOD` = METHOD, `REGRESSION` = REGRESSION, `RESIDUAL` = RESIDUAL,...)

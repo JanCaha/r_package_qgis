@@ -29,6 +29,7 @@
 
 saga_boostingclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), MAX_DEPTH = qgisprocess::qgis_default_value(), MIN_SAMPLES = qgisprocess::qgis_default_value(), MAX_CATEGRS = qgisprocess::qgis_default_value(), arg_1SE_RULE = qgisprocess::qgis_default_value(), TRUNC_PRUNED = qgisprocess::qgis_default_value(), REG_ACCURACY = qgisprocess::qgis_default_value(), WEAK_COUNT = qgisprocess::qgis_default_value(), WGT_TRIM_RATE = qgisprocess::qgis_default_value(), BOOST_TYPE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:boostingclassificationopencv")
   output <- qgisprocess::qgis_run_algorithm("saga:boostingclassificationopencv",`FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `MAX_DEPTH` = MAX_DEPTH, `MIN_SAMPLES` = MIN_SAMPLES, `MAX_CATEGRS` = MAX_CATEGRS, `1SE_RULE` = arg_1SE_RULE, `TRUNC_PRUNED` = TRUNC_PRUNED, `REG_ACCURACY` = REG_ACCURACY, `WEAK_COUNT` = WEAK_COUNT, `WGT_TRIM_RATE` = WGT_TRIM_RATE, `BOOST_TYPE` = BOOST_TYPE,...)

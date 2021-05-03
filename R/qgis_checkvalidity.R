@@ -26,6 +26,7 @@
 
 qgis_checkvalidity <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), IGNORE_RING_SELF_INTERSECTION = qgisprocess::qgis_default_value(), VALID_OUTPUT = qgisprocess::qgis_default_value(), INVALID_OUTPUT = qgisprocess::qgis_default_value(), ERROR_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("qgis:checkvalidity")
   output <- qgisprocess::qgis_run_algorithm("qgis:checkvalidity",`INPUT_LAYER` = INPUT_LAYER, `METHOD` = METHOD, `IGNORE_RING_SELF_INTERSECTION` = IGNORE_RING_SELF_INTERSECTION, `VALID_OUTPUT` = VALID_OUTPUT, `INVALID_OUTPUT` = INVALID_OUTPUT, `ERROR_OUTPUT` = ERROR_OUTPUT,...)

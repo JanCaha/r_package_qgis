@@ -20,6 +20,7 @@
 
 saga_clippointswithpolygons <- function(POINTS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CLIPS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:clippointswithpolygons")
   output <- qgisprocess::qgis_run_algorithm("saga:clippointswithpolygons",`POINTS` = POINTS, `POLYGONS` = POLYGONS, `FIELD` = FIELD, `METHOD` = METHOD, `CLIPS` = CLIPS,...)

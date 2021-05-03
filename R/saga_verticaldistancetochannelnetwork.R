@@ -22,6 +22,7 @@
 
 saga_verticaldistancetochannelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), NOUNDERGROUND = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), BASELEVEL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:verticaldistancetochannelnetwork")
   output <- qgisprocess::qgis_run_algorithm("saga:verticaldistancetochannelnetwork",`ELEVATION` = ELEVATION, `CHANNELS` = CHANNELS, `THRESHOLD` = THRESHOLD, `NOUNDERGROUND` = NOUNDERGROUND, `DISTANCE` = DISTANCE, `BASELEVEL` = BASELEVEL,...)

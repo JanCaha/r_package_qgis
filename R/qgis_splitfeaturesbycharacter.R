@@ -20,6 +20,7 @@
 
 qgis_splitfeaturesbycharacter <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), CHAR = qgisprocess::qgis_default_value(), REGEX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:splitfeaturesbycharacter")
   output <- qgisprocess::qgis_run_algorithm("native:splitfeaturesbycharacter",`INPUT` = INPUT, `FIELD` = FIELD, `CHAR` = CHAR, `REGEX` = REGEX, `OUTPUT` = OUTPUT,...)

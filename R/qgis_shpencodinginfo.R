@@ -18,6 +18,7 @@
 
 qgis_shpencodinginfo <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:shpencodinginfo")
   output <- qgisprocess::qgis_run_algorithm("native:shpencodinginfo",`INPUT` = INPUT,...)

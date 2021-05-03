@@ -24,6 +24,7 @@
 
 gdal_slope <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), AS_PERCENT = qgisprocess::qgis_default_value(), COMPUTE_EDGES = qgisprocess::qgis_default_value(), ZEVENBERGEN = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:slope")
   output <- qgisprocess::qgis_run_algorithm("gdal:slope",`INPUT` = INPUT, `BAND` = BAND, `SCALE` = SCALE, `AS_PERCENT` = AS_PERCENT, `COMPUTE_EDGES` = COMPUTE_EDGES, `ZEVENBERGEN` = ZEVENBERGEN, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)

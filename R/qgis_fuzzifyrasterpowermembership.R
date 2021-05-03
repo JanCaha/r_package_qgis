@@ -26,6 +26,7 @@
 
 qgis_fuzzifyrasterpowermembership <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FUZZYLOWBOUND = qgisprocess::qgis_default_value(), FUZZYHIGHBOUND = qgisprocess::qgis_default_value(), FUZZYEXPONENT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:fuzzifyrasterpowermembership")
   output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterpowermembership",`INPUT` = INPUT, `BAND` = BAND, `FUZZYLOWBOUND` = FUZZYLOWBOUND, `FUZZYHIGHBOUND` = FUZZYHIGHBOUND, `FUZZYEXPONENT` = FUZZYEXPONENT, `OUTPUT` = OUTPUT,...)

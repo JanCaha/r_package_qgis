@@ -20,6 +20,7 @@
 
 saga_surfaceandgradient <- function(MASK = qgisprocess::qgis_default_value(), SURF = qgisprocess::qgis_default_value(), GRAD = qgisprocess::qgis_default_value(), SURF_E = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:surfaceandgradient")
   output <- qgisprocess::qgis_run_algorithm("saga:surfaceandgradient",`MASK` = MASK, `SURF` = SURF, `GRAD` = GRAD, `SURF_E` = SURF_E,...)

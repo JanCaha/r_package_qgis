@@ -20,6 +20,7 @@
 
 saga_waterretentioncapacity <- function(SHAPES = qgisprocess::qgis_default_value(), DEM = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), RETENTION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:waterretentioncapacity")
   output <- qgisprocess::qgis_run_algorithm("saga:waterretentioncapacity",`SHAPES` = SHAPES, `DEM` = DEM, `OUTPUT` = OUTPUT, `RETENTION` = RETENTION,...)

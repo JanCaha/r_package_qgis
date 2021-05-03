@@ -24,6 +24,7 @@
 
 saga_clusteranalysis <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), CLUSTER = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NCLUSTER = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:clusteranalysis")
   output <- qgisprocess::qgis_run_algorithm("saga:clusteranalysis",`INPUT` = INPUT, `RESULT` = RESULT, `STATISTICS` = STATISTICS, `FIELDS` = FIELDS, `CLUSTER` = CLUSTER, `METHOD` = METHOD, `NCLUSTER` = NCLUSTER, `NORMALISE` = NORMALISE,...)

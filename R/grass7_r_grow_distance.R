@@ -26,6 +26,7 @@
 
 grass7_r_grow_distance <- function(input = qgisprocess::qgis_default_value(), metric = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), . = qgisprocess::qgis_default_value(), distance = qgisprocess::qgis_default_value(), value = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.grow.distance")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.grow.distance",`input` = input, `metric` = metric, `-m` = .m, `-` = ., `distance` = distance, `value` = value, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

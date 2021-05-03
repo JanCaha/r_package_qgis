@@ -28,6 +28,7 @@
 
 grass7_v_univar <- function(map = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), percentile = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:v.univar")
   output <- qgisprocess::qgis_run_algorithm("grass7:v.univar",`map` = map, `type` = type, `where` = where, `column` = column, `percentile` = percentile, `-g` = .g, `-e` = .e, `-w` = .w, `-d` = .d, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)

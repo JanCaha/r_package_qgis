@@ -19,6 +19,7 @@
 
 qgis_pixelstopoints <- function(INPUT_RASTER = qgisprocess::qgis_default_value(), RASTER_BAND = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:pixelstopoints")
   output <- qgisprocess::qgis_run_algorithm("native:pixelstopoints",`INPUT_RASTER` = INPUT_RASTER, `RASTER_BAND` = RASTER_BAND, `FIELD_NAME` = FIELD_NAME, `OUTPUT` = OUTPUT,...)

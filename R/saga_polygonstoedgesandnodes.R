@@ -19,6 +19,7 @@
 
 saga_polygonstoedgesandnodes <- function(POLYGONS = qgisprocess::qgis_default_value(), EDGES = qgisprocess::qgis_default_value(), NODES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:polygonstoedgesandnodes")
   output <- qgisprocess::qgis_run_algorithm("saga:polygonstoedgesandnodes",`POLYGONS` = POLYGONS, `EDGES` = EDGES, `NODES` = NODES,...)

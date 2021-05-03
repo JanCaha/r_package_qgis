@@ -18,6 +18,7 @@
 
 saga_catchmentarea <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:catchmentarea")
   output <- qgisprocess::qgis_run_algorithm("saga:catchmentarea",`ELEVATION` = ELEVATION, `METHOD` = METHOD, `FLOW` = FLOW,...)

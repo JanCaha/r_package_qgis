@@ -22,6 +22,7 @@
 
 qgis_extractbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OPERATOR = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), FAIL_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:extractbyattribute")
   output <- qgisprocess::qgis_run_algorithm("native:extractbyattribute",`INPUT` = INPUT, `FIELD` = FIELD, `OPERATOR` = OPERATOR, `VALUE` = VALUE, `OUTPUT` = OUTPUT, `FAIL_OUTPUT` = FAIL_OUTPUT,...)

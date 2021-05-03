@@ -19,6 +19,7 @@
 
 saga_fillgapsinrecords <- function(TABLE = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NOGAPS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:fillgapsinrecords")
   output <- qgisprocess::qgis_run_algorithm("saga:fillgapsinrecords",`TABLE` = TABLE, `ORDER` = ORDER, `METHOD` = METHOD, `NOGAPS` = NOGAPS,...)

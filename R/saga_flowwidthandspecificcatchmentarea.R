@@ -21,6 +21,7 @@
 
 saga_flowwidthandspecificcatchmentarea <- function(DEM = qgisprocess::qgis_default_value(), TCA = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), SCA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:flowwidthandspecificcatchmentarea")
   output <- qgisprocess::qgis_run_algorithm("saga:flowwidthandspecificcatchmentarea",`DEM` = DEM, `TCA` = TCA, `METHOD` = METHOD, `WIDTH` = WIDTH, `SCA` = SCA,...)

@@ -21,6 +21,7 @@
 
 saga_splitrgbbands <- function(INPUT = qgisprocess::qgis_default_value(), R = qgisprocess::qgis_default_value(), G = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:splitrgbbands")
   output <- qgisprocess::qgis_run_algorithm("saga:splitrgbbands",`INPUT` = INPUT, `R` = R, `G` = G, `B` = B,...)

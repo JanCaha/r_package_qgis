@@ -28,6 +28,7 @@
 
 gdal_warpreproject <- function(INPUT = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), TARGET_RESOLUTION = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), TARGET_EXTENT = qgisprocess::qgis_default_value(), TARGET_EXTENT_CRS = qgisprocess::qgis_default_value(), MULTITHREADING = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("gdal:warpreproject")
   output <- qgisprocess::qgis_run_algorithm("gdal:warpreproject",`INPUT` = INPUT, `SOURCE_CRS` = SOURCE_CRS, `TARGET_CRS` = TARGET_CRS, `RESAMPLING` = RESAMPLING, `NODATA` = NODATA, `TARGET_RESOLUTION` = TARGET_RESOLUTION, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `TARGET_EXTENT` = TARGET_EXTENT, `TARGET_EXTENT_CRS` = TARGET_EXTENT_CRS, `MULTITHREADING` = MULTITHREADING, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)

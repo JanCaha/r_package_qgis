@@ -19,6 +19,7 @@
 
 qgis_rotatefeatures <- function(INPUT = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), ANCHOR = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:rotatefeatures")
   output <- qgisprocess::qgis_run_algorithm("native:rotatefeatures",`INPUT` = INPUT, `ANGLE` = ANGLE, `ANCHOR` = ANCHOR, `OUTPUT` = OUTPUT,...)

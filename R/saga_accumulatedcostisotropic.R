@@ -21,6 +21,7 @@
 
 saga_accumulatedcostisotropic <- function(COST = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ACCCOST = qgisprocess::qgis_default_value(), CLOSESTPT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:accumulatedcostisotropic")
   output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostisotropic",`COST` = COST, `POINTS` = POINTS, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST, `CLOSESTPT` = CLOSESTPT,...)

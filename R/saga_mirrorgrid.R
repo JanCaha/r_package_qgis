@@ -18,6 +18,7 @@
 
 saga_mirrorgrid <- function(GRID = qgisprocess::qgis_default_value(), MIRROR = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:mirrorgrid")
   output <- qgisprocess::qgis_run_algorithm("saga:mirrorgrid",`GRID` = GRID, `MIRROR` = MIRROR, `METHOD` = METHOD,...)

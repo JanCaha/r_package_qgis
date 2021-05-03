@@ -21,6 +21,7 @@
 
 qgis_countpointsinpolygon <- function(POLYGONS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), CLASSFIELD = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:countpointsinpolygon")
   output <- qgisprocess::qgis_run_algorithm("native:countpointsinpolygon",`POLYGONS` = POLYGONS, `POINTS` = POINTS, `WEIGHT` = WEIGHT, `CLASSFIELD` = CLASSFIELD, `FIELD` = FIELD, `OUTPUT` = OUTPUT,...)

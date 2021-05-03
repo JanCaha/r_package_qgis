@@ -23,6 +23,7 @@
 
 qgis_addautoincrementalfield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), GROUP_FIELDS = qgisprocess::qgis_default_value(), SORT_EXPRESSION = qgisprocess::qgis_default_value(), SORT_ASCENDING = qgisprocess::qgis_default_value(), SORT_NULLS_FIRST = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:addautoincrementalfield")
   output <- qgisprocess::qgis_run_algorithm("native:addautoincrementalfield",`INPUT` = INPUT, `FIELD_NAME` = FIELD_NAME, `START` = START, `GROUP_FIELDS` = GROUP_FIELDS, `SORT_EXPRESSION` = SORT_EXPRESSION, `SORT_ASCENDING` = SORT_ASCENDING, `SORT_NULLS_FIRST` = SORT_NULLS_FIRST, `OUTPUT` = OUTPUT,...)

@@ -26,6 +26,7 @@
 
 saga_tasseledcaptransformation <- function(BLUE = qgisprocess::qgis_default_value(), RED = qgisprocess::qgis_default_value(), GREEN = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), MIR1 = qgisprocess::qgis_default_value(), MIR2 = qgisprocess::qgis_default_value(), BRIGHTNESS = qgisprocess::qgis_default_value(), GREENNESS = qgisprocess::qgis_default_value(), WETNESS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:tasseledcaptransformation")
   output <- qgisprocess::qgis_run_algorithm("saga:tasseledcaptransformation",`BLUE` = BLUE, `RED` = RED, `GREEN` = GREEN, `NIR` = NIR, `MIR1` = MIR1, `MIR2` = MIR2, `BRIGHTNESS` = BRIGHTNESS, `GREENNESS` = GREENNESS, `WETNESS` = WETNESS,...)

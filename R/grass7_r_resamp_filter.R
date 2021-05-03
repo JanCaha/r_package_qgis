@@ -26,6 +26,7 @@
 
 grass7_r_resamp_filter <- function(input = qgisprocess::qgis_default_value(), filter = qgisprocess::qgis_default_value(), radius = qgisprocess::qgis_default_value(), x_radius = qgisprocess::qgis_default_value(), y_radius = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:r.resamp.filter")
   output <- qgisprocess::qgis_run_algorithm("grass7:r.resamp.filter",`input` = input, `filter` = filter, `radius` = radius, `x_radius` = x_radius, `y_radius` = y_radius, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)

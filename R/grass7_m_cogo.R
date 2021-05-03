@@ -23,6 +23,7 @@
 
 grass7_m_cogo <- function(input = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .q = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("grass7:m.cogo")
   output <- qgisprocess::qgis_run_algorithm("grass7:m.cogo",`input` = input, `output` = output, `coordinates` = coordinates, `-l` = .l, `-q` = .q, `-r` = .r, `-c` = .c, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER,...)

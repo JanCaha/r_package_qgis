@@ -20,6 +20,7 @@
 
 qgis_package <- function(LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(), SAVE_STYLES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:package")
   output <- qgisprocess::qgis_run_algorithm("native:package",`LAYERS` = LAYERS, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE, `SAVE_STYLES` = SAVE_STYLES,...)

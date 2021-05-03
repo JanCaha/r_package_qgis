@@ -30,6 +30,7 @@
 
 saga_multipleregressionanalysisgridandpredictorgrids <- function(DEPENDENT = qgisprocess::qgis_default_value(), PREDICTORS = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(), INFO_COEFF = qgisprocess::qgis_default_value(), INFO_MODEL = qgisprocess::qgis_default_value(), INFO_STEPS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), COORD_X = qgisprocess::qgis_default_value(), COORD_Y = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), P_VALUE = qgisprocess::qgis_default_value(), CROSSVAL = qgisprocess::qgis_default_value(), CROSSVAL_K = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:multipleregressionanalysisgridandpredictorgrids")
   output <- qgisprocess::qgis_run_algorithm("saga:multipleregressionanalysisgridandpredictorgrids",`DEPENDENT` = DEPENDENT, `PREDICTORS` = PREDICTORS, `REGRESSION` = REGRESSION, `RESIDUALS` = RESIDUALS, `INFO_COEFF` = INFO_COEFF, `INFO_MODEL` = INFO_MODEL, `INFO_STEPS` = INFO_STEPS, `RESAMPLING` = RESAMPLING, `COORD_X` = COORD_X, `COORD_Y` = COORD_Y, `METHOD` = METHOD, `P_VALUE` = P_VALUE, `CROSSVAL` = CROSSVAL, `CROSSVAL_K` = CROSSVAL_K,...)

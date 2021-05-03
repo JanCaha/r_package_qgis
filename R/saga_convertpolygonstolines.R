@@ -17,6 +17,7 @@
 
 saga_convertpolygonstolines <- function(POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:convertpolygonstolines")
   output <- qgisprocess::qgis_run_algorithm("saga:convertpolygonstolines",`POLYGONS` = POLYGONS, `LINES` = LINES,...)

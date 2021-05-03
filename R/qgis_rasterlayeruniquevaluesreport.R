@@ -26,6 +26,7 @@
 
 qgis_rasterlayeruniquevaluesreport <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(), OUTPUT_TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:rasterlayeruniquevaluesreport")
   output <- qgisprocess::qgis_run_algorithm("native:rasterlayeruniquevaluesreport",`INPUT` = INPUT, `BAND` = BAND, `OUTPUT_HTML_FILE` = OUTPUT_HTML_FILE, `OUTPUT_TABLE` = OUTPUT_TABLE,...)

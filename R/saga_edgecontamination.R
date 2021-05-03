@@ -17,6 +17,7 @@
 
 saga_edgecontamination <- function(DEM = qgisprocess::qgis_default_value(), CONTAMINATION = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:edgecontamination")
   output <- qgisprocess::qgis_run_algorithm("saga:edgecontamination",`DEM` = DEM, `CONTAMINATION` = CONTAMINATION,...)

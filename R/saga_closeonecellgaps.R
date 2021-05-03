@@ -17,6 +17,7 @@
 
 saga_closeonecellgaps <- function(INPUT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:closeonecellgaps")
   output <- qgisprocess::qgis_run_algorithm("saga:closeonecellgaps",`INPUT` = INPUT, `RESULT` = RESULT,...)

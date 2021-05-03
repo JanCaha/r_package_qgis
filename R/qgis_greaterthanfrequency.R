@@ -29,6 +29,7 @@
 
 qgis_greaterthanfrequency <- function(INPUT_VALUE_RASTER = qgisprocess::qgis_default_value(), INPUT_VALUE_RASTER_BAND = qgisprocess::qgis_default_value(), INPUT_RASTERS = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:greaterthanfrequency")
   output <- qgisprocess::qgis_run_algorithm("native:greaterthanfrequency",`INPUT_VALUE_RASTER` = INPUT_VALUE_RASTER, `INPUT_VALUE_RASTER_BAND` = INPUT_VALUE_RASTER_BAND, `INPUT_RASTERS` = INPUT_RASTERS, `IGNORE_NODATA` = IGNORE_NODATA, `OUTPUT_NODATA_VALUE` = OUTPUT_NODATA_VALUE, `OUTPUT` = OUTPUT,...)

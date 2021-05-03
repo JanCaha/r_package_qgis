@@ -19,6 +19,7 @@
 
 qgis_reprojectlayer <- function(INPUT = qgisprocess::qgis_default_value(), TARGET_CRS = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("native:reprojectlayer")
   output <- qgisprocess::qgis_run_algorithm("native:reprojectlayer",`INPUT` = INPUT, `TARGET_CRS` = TARGET_CRS, `OPERATION` = OPERATION, `OUTPUT` = OUTPUT,...)

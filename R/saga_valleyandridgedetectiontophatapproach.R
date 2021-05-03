@@ -29,6 +29,7 @@
 
 saga_valleyandridgedetectiontophatapproach <- function(DEM = qgisprocess::qgis_default_value(), VALLEY = qgisprocess::qgis_default_value(), HILL = qgisprocess::qgis_default_value(), VALLEY_IDX = qgisprocess::qgis_default_value(), HILL_IDX = qgisprocess::qgis_default_value(), SLOPE_IDX = qgisprocess::qgis_default_value(), RADIUS_VALLEY = qgisprocess::qgis_default_value(), RADIUS_HILL = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:valleyandridgedetectiontophatapproach")
   output <- qgisprocess::qgis_run_algorithm("saga:valleyandridgedetectiontophatapproach",`DEM` = DEM, `VALLEY` = VALLEY, `HILL` = HILL, `VALLEY_IDX` = VALLEY_IDX, `HILL_IDX` = HILL_IDX, `SLOPE_IDX` = SLOPE_IDX, `RADIUS_VALLEY` = RADIUS_VALLEY, `RADIUS_HILL` = RADIUS_HILL, `THRESHOLD` = THRESHOLD, `METHOD` = METHOD,...)

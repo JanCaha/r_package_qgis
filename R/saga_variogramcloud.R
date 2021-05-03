@@ -20,6 +20,7 @@
 
 saga_variogramcloud <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), DISTMAX = qgisprocess::qgis_default_value(), NSKIP = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
+  check_QGIS_versions()
   qgisprocess::assert_qgis()
   qgisprocess::assert_qgis_algorithm("saga:variogramcloud")
   output <- qgisprocess::qgis_run_algorithm("saga:variogramcloud",`POINTS` = POINTS, `FIELD` = FIELD, `DISTMAX` = DISTMAX, `NSKIP` = NSKIP, `RESULT` = RESULT,...)
