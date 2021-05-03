@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   local_instalation: local_instalation.html
-last_built: 2021-05-03T13:50Z
+last_built: 2021-05-03T15:46Z
 urls:
   reference: https://jancaha.github.io/r_package_qgis/reference
   article: https://jancaha.github.io/r_package_qgis/articles
