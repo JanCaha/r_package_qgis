@@ -5,8 +5,10 @@ on:
       - .github/workflows/**
       - NEWS.md
       - README.Rmd
-    schedule:
-      - cron: "0 0 1 * *"
+  schedule:
+    - cron: "0 0 1 * *"
+  issues:
+    types: [closed]
 
 name: Build package
 
