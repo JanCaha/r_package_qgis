@@ -25,23 +25,9 @@ build_fn_code <- function(alg, arguments, main_output) {
   fn_arguments_qgis_run <- purrr::map(arguments$name, ~ glue::glue("`{.x}` = {convert_to_R_arg_names(.x)}"))
   fn_arguments_qgis_run <- glue::glue_collapse(fn_arguments_qgis_run, sep=", ")
 
-  glue::glue("{fn_name} <- function({fn_arguments},..., .complete_output = TRUE) {{\n",
-             "\n",
-             "  check_QGIS_versions()",
-             "\n",
-             "  qgisprocess::assert_qgis()",
-             "\n",
-             "  qgisprocess::assert_qgis_algorithm(\"{alg$algorithm}\")",
-             "\n",
-             "  output <- qgisprocess::qgis_run_algorithm(\"{alg$algorithm}\",{fn_arguments_qgis_run},...)\n",
-             "\n",
-             "  if (.complete_output) {{\n",
-             "    return(output)\n",
-             "  }}\n",
-             "  else{{\n",
-             "    qgisprocess::qgis_output(output, \"{main_output}\")\n",
-             "  }}\n",
-             "}}")
+  fun_tmpl <- readr::read_file("build-package/templates/qgis_function.R")
+
+  glue::glue(fun_tmpl)
 }
 
 build_fn_doc <- function(alg, arguments, outputs){
@@ -83,23 +69,7 @@ build_fn_doc <- function(alg, arguments, outputs){
 
   description_outputs <- glue::glue_collapse(description_outputs, sep = "\n")
 
-  glue::glue(
-    "##' QGIS Algorithm provided by {provider} {title} ({algorithm_id})\n",
-    "##'\n",
-    "##' @title QGIS algorithm {title}\n",
-    "##'\n",
-    "{description_arguments}",
-    "\n",
-    "##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`\n",
-    "##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.\n",
-    "##'\n",
-    "##' @details\n",
-    "##' ## Outputs description\n",
-    "{description_outputs}",
-    "\n",
-    "##'\n",
-    "##' @export\n",
-    "##' @md\n",
-    "##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value\n",
-  )
+  fun_help_tmpl <- readr::read_file("build-package/templates/qgis_help.R")
+
+  glue::glue(fun_help_tmpl)
 }
