@@ -14,11 +14,11 @@ Encoding: UTF-8
 LazyData: true
 VignetteBuilder: knitr
 Imports: qgisprocess
+         glue,
+         stringr
 Suggests: 
     sf,
     raster,
-    glue,
-    stringr,
     testthat (>= 2.99.0),
     rmarkdown,
     knitr,
