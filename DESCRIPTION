@@ -17,6 +17,8 @@ Imports: qgisprocess
 Suggests: 
     sf,
     raster,
+    glue,
+    stringr,
     testthat (>= 2.99.0),
     rmarkdown,
     knitr,
