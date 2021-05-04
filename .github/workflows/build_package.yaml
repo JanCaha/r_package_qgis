@@ -24,6 +24,9 @@ jobs:
 
     steps:
 
+      - run: |
+          echo "${{ github.event }}"
+
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
