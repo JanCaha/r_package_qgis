@@ -15,11 +15,6 @@ file_text <- function(x){
 
 library(qgisprocess)
 
-print("-----------------------")
-qgisprocess::qgis_configure()
-print(qgisprocess::has_qgis())
-print("-----------------------")
-
 if (!qgisprocess::has_qgis()){
   stop("Cannot build package `qgis` because QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
 }
