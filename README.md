@@ -84,9 +84,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpoosVjn/file9cbe532003ba/file9cbe3613cd3.gpkg' \
+    #>   '--INPUT=/tmp/Rtmp4OmVdE/file9bee1794180b/file9bee1e5a92fd.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpoosVjn/file9cbe532003ba/file9cbe3c9dd589.gpkg'
+    #>   '--OUTPUT=/tmp/Rtmp4OmVdE/file9bee1794180b/file9bee19c520fd.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -95,9 +95,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpoosVjn/file9cbe532003ba/file9cbe3613cd3.gpkg
+    #> INPUT:   /tmp/Rtmp4OmVdE/file9bee1794180b/file9bee1e5a92fd.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpoosVjn/file9cbe532003ba/file9cbe3c9dd589.gpkg
+    #> OUTPUT:  /tmp/Rtmp4OmVdE/file9bee1794180b/file9bee19c520fd.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -105,7 +105,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpoosVjn/file9cbe532003ba/file9cbe3c9dd589.gpkg
+    #> OUTPUT:  /tmp/Rtmp4OmVdE/file9bee1794180b/file9bee19c520fd.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
