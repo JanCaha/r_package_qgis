@@ -7,8 +7,6 @@ on:
       - README.Rmd
   schedule:
     - cron: "0 0 1 * *"
-  issues:
-    types: [closed]
 
 name: Build package
 
@@ -23,9 +21,6 @@ jobs:
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
 
     steps:
-
-      - run: |
-          echo "${{ github.event }}"
 
       - uses: actions/checkout@v2
         with:
