@@ -79,7 +79,7 @@ jobs:
           qgisprocess::qgis_run()
           print("---------------------")
           print("Has QGIS:")
-          qgisprocess::has_qgis()
+          print(qgisprocess::has_qgis())
         shell: Rscript {0}
 
       - name: Delete all files in R
