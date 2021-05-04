@@ -4,9 +4,9 @@
 
 .onLoad <- function(libname, pkgname){{
 
-  if (!qgisprocess::has_qgis()){
+  if (!qgisprocess::has_qgis()) {{
     stop("Cannot load package `qgis` because working QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
-  }
+  }}
 
   qgis_build <- "{qgis_build_version}"
 
