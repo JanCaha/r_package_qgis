@@ -4,6 +4,10 @@
 
 .onLoad <- function(libname, pkgname){
 
+  if (!qgisprocess::has_qgis()) {
+    stop("Cannot load package `qgis` because working QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
+  }
+
   qgis_build <- "3.18.2"
 
   qgis_local <- stringr::str_match(qgisprocess::qgis_version(), "[0-9.]+[[:cntrl:][:alnum:]]")[,1]
@@ -17,5 +21,12 @@ check_algorithm_necessities <- function(alg_name){
 
   qgisprocess::assert_qgis()
 
+  provider <- stringr::str_split(alg_name, ":", simplify = TRUE)[1]
+
+  if (!qgisprocess::qgis_has_provider(provider)){
+    stop(glue::glue("Error: Can not find specified provider `{provider}` in local QGIS installation."))
+  }
+
   qgisprocess::assert_qgis_algorithm(alg_name)
+
 }
