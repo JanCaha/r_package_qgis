@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.6.0</span>
       </span>
     </div>
 
@@ -149,6 +149,7 @@
   title <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   .d <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   output <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  threshold <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   GRASS_REGION_PARAMETER <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   GRASS_REGION_CELLSIZE_PARAMETER <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   GRASS_RASTER_FORMAT_OPT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
@@ -175,6 +176,10 @@
     <tr>
       <th>output</th>
       <td><p><code>rasterDestination</code> - Clumps. Path for new raster layer.</p></td>
+    </tr>
+    <tr>
+      <th>threshold</th>
+      <td><p><code>number</code> - Threshold to identify similar cells. A numeric value.</p></td>
     </tr>
     <tr>
       <th>GRASS_REGION_PARAMETER</th>

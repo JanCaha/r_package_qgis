@@ -574,6 +574,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_quantile.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_quantile_plain.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_random.html</loc>
   </url>
   <url>
@@ -1111,6 +1114,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_basicstatisticsforfields.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_batchnominatimgeocoder.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_bookmarkstolayer.html</loc>
   </url>
   <url>
@@ -1601,6 +1607,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rasterlayerhistogram.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rasterlayerproperties.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rasterlayerstatistics.html</loc>
