@@ -9,6 +9,8 @@ qgis_package(
   OUTPUT = qgisprocess::qgis_default_value(),
   OVERWRITE = qgisprocess::qgis_default_value(),
   SAVE_STYLES = qgisprocess::qgis_default_value(),
+  SAVE_METADATA = qgisprocess::qgis_default_value(),
+  SELECTED_FEATURES_ONLY = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
 )
@@ -21,6 +23,10 @@ qgis_package(
 \item{OVERWRITE}{\code{boolean} - Overwrite existing GeoPackage. 1 for true/yes. 0 for false/no.}
 
 \item{SAVE_STYLES}{\code{boolean} - Save layer styles into GeoPackage. 1 for true/yes. 0 for false/no.}
+
+\item{SAVE_METADATA}{\code{boolean} - Save layer metadata into GeoPackage. 1 for true/yes. 0 for false/no.}
+
+\item{SELECTED_FEATURES_ONLY}{\code{boolean} - Save only selected features. 1 for true/yes. 0 for false/no.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 

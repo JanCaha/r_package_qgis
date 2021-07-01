@@ -6,6 +6,8 @@
 ##' @param OUTPUT `fileDestination` - Destination GeoPackage. Path for new file.
 ##' @param OVERWRITE `boolean` - Overwrite existing GeoPackage. 1 for true/yes. 0 for false/no.
 ##' @param SAVE_STYLES `boolean` - Save layer styles into GeoPackage. 1 for true/yes. 0 for false/no.
+##' @param SAVE_METADATA `boolean` - Save layer metadata into GeoPackage. 1 for true/yes. 0 for false/no.
+##' @param SELECTED_FEATURES_ONLY `boolean` - Save only selected features. 1 for true/yes. 0 for false/no.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##'
@@ -19,11 +21,11 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_package <- function(LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(), SAVE_STYLES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_package <- function(LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(), SAVE_STYLES = qgisprocess::qgis_default_value(), SAVE_METADATA = qgisprocess::qgis_default_value(), SELECTED_FEATURES_ONLY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("native:package")
 
-  output <- qgisprocess::qgis_run_algorithm("native:package", `LAYERS` = LAYERS, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE, `SAVE_STYLES` = SAVE_STYLES,...)
+  output <- qgisprocess::qgis_run_algorithm("native:package", `LAYERS` = LAYERS, `OUTPUT` = OUTPUT, `OVERWRITE` = OVERWRITE, `SAVE_STYLES` = SAVE_STYLES, `SAVE_METADATA` = SAVE_METADATA, `SELECTED_FEATURES_ONLY` = SELECTED_FEATURES_ONLY,...)
 
   if (.complete_output) {
     return(output)

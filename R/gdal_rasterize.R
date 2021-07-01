@@ -5,6 +5,7 @@
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Field to use for a burn-in value. The name of an existing field. ; delimited list of existing field names.
 ##' @param BURN `number` - A fixed value to burn. A numeric value.
+##' @param USE_Z `boolean` - Burn value extracted from the "Z" values of the feature. 1 for true/yes. 0 for false/no.
 ##' @param UNITS `enum`  of `("Pixels", "Georeferenced units")` - Output raster size units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param WIDTH `number` - Width/Horizontal resolution. A numeric value.
 ##' @param HEIGHT `number` - Height/Vertical resolution. A numeric value.
@@ -28,11 +29,11 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-gdal_rasterize <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(), UNITS = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), HEIGHT = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), INIT = qgisprocess::qgis_default_value(), INVERT = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+gdal_rasterize <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(), USE_Z = qgisprocess::qgis_default_value(), UNITS = qgisprocess::qgis_default_value(), WIDTH = qgisprocess::qgis_default_value(), HEIGHT = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), INIT = qgisprocess::qgis_default_value(), INVERT = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("gdal:rasterize")
 
-  output <- qgisprocess::qgis_run_algorithm("gdal:rasterize", `INPUT` = INPUT, `FIELD` = FIELD, `BURN` = BURN, `UNITS` = UNITS, `WIDTH` = WIDTH, `HEIGHT` = HEIGHT, `EXTENT` = EXTENT, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `INIT` = INIT, `INVERT` = INVERT, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  output <- qgisprocess::qgis_run_algorithm("gdal:rasterize", `INPUT` = INPUT, `FIELD` = FIELD, `BURN` = BURN, `USE_Z` = USE_Z, `UNITS` = UNITS, `WIDTH` = WIDTH, `HEIGHT` = HEIGHT, `EXTENT` = EXTENT, `NODATA` = NODATA, `OPTIONS` = OPTIONS, `DATA_TYPE` = DATA_TYPE, `INIT` = INIT, `INVERT` = INVERT, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

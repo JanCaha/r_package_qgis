@@ -42,7 +42,7 @@ The names of the functions follow general pattern of
 algorithms using `qgis` algorithm provider instead of `native`.
 
 The available providers are: 3d, gdal, grass7, native, qgis, saga. The
-overall number of available algorithms is 985.
+overall number of available algorithms is 988.
 
 Example
 -------
@@ -67,7 +67,8 @@ This example uses `qgisprocess` pipe ability to directly load output to
 
     fname <- system.file("shape/nc.shp", package="sf")
     nc <- st_read(fname)
-    #> Reading layer `nc' from data source `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'
+    #> Reading layer `nc' from data source 
+    #>   `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'
     #> Simple feature collection with 100 features and 14 fields
     #> Geometry type: MULTIPOLYGON
     #> Dimension:     XY
@@ -84,9 +85,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpW1fFR8/file92eb2270ce3c/file92eb4c507ccf.gpkg' \
+    #>   '--INPUT=/tmp/Rtmpvayp5z/file986a4be1ea41/file986a1215ede2.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpW1fFR8/file92eb2270ce3c/file92eb77f7c3de.gpkg'
+    #>   '--OUTPUT=/tmp/Rtmpvayp5z/file986a4be1ea41/file986a6e0a80a5.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> 
     #> ----------------
@@ -95,9 +96,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpW1fFR8/file92eb2270ce3c/file92eb4c507ccf.gpkg
+    #> INPUT:   /tmp/Rtmpvayp5z/file986a4be1ea41/file986a1215ede2.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpW1fFR8/file92eb2270ce3c/file92eb77f7c3de.gpkg
+    #> OUTPUT:  /tmp/Rtmpvayp5z/file986a4be1ea41/file986a6e0a80a5.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -105,7 +106,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpW1fFR8/file92eb2270ce3c/file92eb77f7c3de.gpkg
+    #> OUTPUT:  /tmp/Rtmpvayp5z/file986a4be1ea41/file986a6e0a80a5.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
