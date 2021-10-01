@@ -18,6 +18,9 @@ test_that("Test run qgis::qgis_buffer", {
   expect_identical(as.data.frame(sf::st_drop_geometry(buffered_data)),
                    sf::st_drop_geometry(sf_nc))
 
+  expect_equal(sf::st_crs(buffered_data),
+               sf::st_crs(sf_nc))
+
   expect_equal(sf::st_contains(sf::st_as_sfc(sf::st_bbox(buffered_data)),
                                sf::st_as_sfc(sf::st_bbox(sf_nc)))[[1]],
                1)
