@@ -30,7 +30,7 @@ grass7_r_neighbors(
 
 \item{method}{\code{enum}  of \verb{("average", "median", "mode", "minimum", "maximum", "range", "stddev", "sum", "count", "variance", "diversity", "interspersion", "quart1", "quart3", "perc90", "quantile")} - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{size}{\code{number} - Neighborhood size. A numeric value.}
+\item{size}{\code{number} - Neighborhood size (must be odd). A numeric value.}
 
 \item{gauss}{\code{number} - Sigma (in cells) for Gaussian filter. A numeric value.}
 

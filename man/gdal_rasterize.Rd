@@ -8,6 +8,7 @@ gdal_rasterize(
   INPUT = qgisprocess::qgis_default_value(),
   FIELD = qgisprocess::qgis_default_value(),
   BURN = qgisprocess::qgis_default_value(),
+  USE_Z = qgisprocess::qgis_default_value(),
   UNITS = qgisprocess::qgis_default_value(),
   WIDTH = qgisprocess::qgis_default_value(),
   HEIGHT = qgisprocess::qgis_default_value(),
@@ -29,6 +30,8 @@ gdal_rasterize(
 \item{FIELD}{\code{field} - Field to use for a burn-in value. The name of an existing field. ; delimited list of existing field names.}
 
 \item{BURN}{\code{number} - A fixed value to burn. A numeric value.}
+
+\item{USE_Z}{\code{boolean} - Burn value extracted from the "Z" values of the feature. 1 for true/yes. 0 for false/no.}
 
 \item{UNITS}{\code{enum}  of \verb{("Pixels", "Georeferenced units")} - Output raster size units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

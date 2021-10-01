@@ -5,7 +5,7 @@
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param selection `raster` - Raster layer to select the cells which should be processed. Path to a raster layer.
 ##' @param method `enum`  of `("average", "median", "mode", "minimum", "maximum", "range", "stddev", "sum", "count", "variance", "diversity", "interspersion", "quart1", "quart3", "perc90", "quantile")` - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param size `number` - Neighborhood size. A numeric value.
+##' @param size `number` - Neighborhood size (must be odd). A numeric value.
 ##' @param gauss `number` - Sigma (in cells) for Gaussian filter. A numeric value.
 ##' @param quantile `string` - Quantile to calculate for method=quantile. String value.
 ##' @param .c `boolean` - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
