@@ -15,7 +15,7 @@ qgis_polygonize(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{KEEP_FIELDS}{\code{boolean} - Keep fields from the input layer. 1 for true/yes. 0 for false/no.}
+\item{KEEP_FIELDS}{\code{boolean} - Keep table structure of line layer. 1 for true/yes. 0 for false/no.}
 
 \item{OUTPUT}{\code{sink} - Polygons. Path for new vector layer.}
 

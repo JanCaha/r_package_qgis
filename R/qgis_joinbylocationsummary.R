@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm Join attributes by location (summary)
 ##'
-##' @param INPUT `source` - Input layer. Path to a vector layer.
+##' @param INPUT `source` - Base layer. Path to a vector layer.
 ##' @param JOIN `source` - Join layer. Path to a vector layer.
 ##' @param PREDICATE `enum`  of `("intersects", "contains", "equals", "touches", "overlaps", "within", "crosses")` - Geometric predicate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param JOIN_FIELDS `field` - Fields to summarise (leave empty to use all fields). The name of an existing field. ; delimited list of existing field names.

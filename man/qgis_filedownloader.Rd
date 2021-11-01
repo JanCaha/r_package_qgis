@@ -6,6 +6,8 @@
 \usage{
 qgis_filedownloader(
   URL = qgisprocess::qgis_default_value(),
+  METHOD = qgisprocess::qgis_default_value(),
+  DATA = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -13,6 +15,10 @@ qgis_filedownloader(
 }
 \arguments{
 \item{URL}{\code{string} - URL. String value.}
+
+\item{METHOD}{\code{enum}  of \verb{("GET", "POST")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+
+\item{DATA}{\code{string} - Data. String value.}
 
 \item{OUTPUT}{\code{fileDestination} - File destination. Path for new file.}
 

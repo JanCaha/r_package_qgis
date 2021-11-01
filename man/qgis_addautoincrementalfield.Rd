@@ -8,6 +8,7 @@ qgis_addautoincrementalfield(
   INPUT = qgisprocess::qgis_default_value(),
   FIELD_NAME = qgisprocess::qgis_default_value(),
   START = qgisprocess::qgis_default_value(),
+  MODULUS = qgisprocess::qgis_default_value(),
   GROUP_FIELDS = qgisprocess::qgis_default_value(),
   SORT_EXPRESSION = qgisprocess::qgis_default_value(),
   SORT_ASCENDING = qgisprocess::qgis_default_value(),
@@ -23,6 +24,8 @@ qgis_addautoincrementalfield(
 \item{FIELD_NAME}{\code{string} - Field name. String value.}
 
 \item{START}{\code{number} - Start values at. A numeric value.}
+
+\item{MODULUS}{\code{number} - Modulus value. A numeric value.}
 
 \item{GROUP_FIELDS}{\code{field} - Group values by. The name of an existing field. ; delimited list of existing field names.}
 

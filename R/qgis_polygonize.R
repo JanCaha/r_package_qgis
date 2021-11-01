@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm Polygonize
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param KEEP_FIELDS `boolean` - Keep fields from the input layer. 1 for true/yes. 0 for false/no.
+##' @param KEEP_FIELDS `boolean` - Keep table structure of line layer. 1 for true/yes. 0 for false/no.
 ##' @param OUTPUT `sink` - Polygons. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

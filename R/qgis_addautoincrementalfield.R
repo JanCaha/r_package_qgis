@@ -5,6 +5,7 @@
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD_NAME `string` - Field name. String value.
 ##' @param START `number` - Start values at. A numeric value.
+##' @param MODULUS `number` - Modulus value. A numeric value.
 ##' @param GROUP_FIELDS `field` - Group values by. The name of an existing field. ; delimited list of existing field names.
 ##' @param SORT_EXPRESSION `expression` - Sort expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.
 ##' @param SORT_ASCENDING `boolean` - Sort ascending. 1 for true/yes. 0 for false/no.
@@ -22,11 +23,11 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_addautoincrementalfield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), GROUP_FIELDS = qgisprocess::qgis_default_value(), SORT_EXPRESSION = qgisprocess::qgis_default_value(), SORT_ASCENDING = qgisprocess::qgis_default_value(), SORT_NULLS_FIRST = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_addautoincrementalfield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), MODULUS = qgisprocess::qgis_default_value(), GROUP_FIELDS = qgisprocess::qgis_default_value(), SORT_EXPRESSION = qgisprocess::qgis_default_value(), SORT_ASCENDING = qgisprocess::qgis_default_value(), SORT_NULLS_FIRST = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("native:addautoincrementalfield")
 
-  output <- qgisprocess::qgis_run_algorithm("native:addautoincrementalfield", `INPUT` = INPUT, `FIELD_NAME` = FIELD_NAME, `START` = START, `GROUP_FIELDS` = GROUP_FIELDS, `SORT_EXPRESSION` = SORT_EXPRESSION, `SORT_ASCENDING` = SORT_ASCENDING, `SORT_NULLS_FIRST` = SORT_NULLS_FIRST, `OUTPUT` = OUTPUT,...)
+  output <- qgisprocess::qgis_run_algorithm("native:addautoincrementalfield", `INPUT` = INPUT, `FIELD_NAME` = FIELD_NAME, `START` = START, `MODULUS` = MODULUS, `GROUP_FIELDS` = GROUP_FIELDS, `SORT_EXPRESSION` = SORT_EXPRESSION, `SORT_ASCENDING` = SORT_ASCENDING, `SORT_NULLS_FIRST` = SORT_NULLS_FIRST, `OUTPUT` = OUTPUT,...)
 
   if (.complete_output) {
     return(output)

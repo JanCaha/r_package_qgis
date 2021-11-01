@@ -16,7 +16,7 @@ qgis_tinmeshcreation(
 \arguments{
 \item{SOURCE_DATA}{\code{tininputlayers} - Input layers. .}
 
-\item{MESH_FORMAT}{\code{enum}  of \verb{("2DM", "SELAFIN", "Ugrid")} - Output format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{MESH_FORMAT}{\code{enum}  of \verb{("2DM", "SELAFIN", "PLY", "Ugrid")} - Output format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{CRS_OUTPUT}{\code{crs} - Output Coordinate System. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 

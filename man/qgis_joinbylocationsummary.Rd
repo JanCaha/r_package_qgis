@@ -17,7 +17,7 @@ qgis_joinbylocationsummary(
 )
 }
 \arguments{
-\item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
+\item{INPUT}{\code{source} - Base layer. Path to a vector layer.}
 
 \item{JOIN}{\code{source} - Join layer. Path to a vector layer.}
 

@@ -41,8 +41,8 @@ The names of the functions follow general pattern of
 `algorithm-provider_algorithm-id` with only the native **QGIS**
 algorithms using `qgis` algorithm provider instead of `native`.
 
-The available providers are: 3d, gdal, grass7, native, qgis, saga. The
-overall number of available algorithms is 988.
+The available providers are: 3d, gdal, native, qgis. The overall number
+of available algorithms is 327.
 
 Example
 -------
@@ -85,10 +85,15 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpnbqyTr/file9914730f9017/file99143ded597.gpkg' \
+    #>   '--INPUT=/tmp/RtmpZFJWsB/file6fb534a7af68/file6fb5561b3d3b.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpnbqyTr/file9914730f9017/file99141dc980f3.gpkg'
+    #>   '--OUTPUT=/tmp/RtmpZFJWsB/file6fb534a7af68/file6fb57557d61e.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
+    #> proj_create_from_database: Cannot find proj.db
+    #> proj_create_from_database: Cannot find proj.db
+    #> proj_create_from_wkt: Cannot find proj.db
+    #> proj_create_from_database: Cannot find proj.db
+    #> proj_get_authorities_from_database: Cannot find proj.db
     #> 
     #> ----------------
     #> Inputs
@@ -96,9 +101,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpnbqyTr/file9914730f9017/file99143ded597.gpkg
+    #> INPUT:   /tmp/RtmpZFJWsB/file6fb534a7af68/file6fb5561b3d3b.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpnbqyTr/file9914730f9017/file99141dc980f3.gpkg
+    #> OUTPUT:  /tmp/RtmpZFJWsB/file6fb534a7af68/file6fb57557d61e.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -106,10 +111,10 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpnbqyTr/file9914730f9017/file99141dc980f3.gpkg
+    #> OUTPUT:  /tmp/RtmpZFJWsB/file6fb534a7af68/file6fb57557d61e.gpkg
 
     plot(buffered)
-    #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
+    #> Warning: plotting the first 10 out of 14 attributes; use max.plot = 14 to plot
     #> all
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
