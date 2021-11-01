@@ -78,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.8.0</span>
       </span>
     </div>
 
@@ -145,8 +145,10 @@
     </div>
 
     <pre class="usage"><span class='fu'>qgis_filedownloader</span><span class='op'>(</span>
-  URL <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
-  OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/as_qgis_argument.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  URL <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  METHOD <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  DATA <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
+  OUTPUT <span class='op'>=</span> <span class='fu'>qgisprocess</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html'>qgis_default_value</a></span><span class='op'>(</span><span class='op'>)</span>,
   <span class='va'>...</span>,
   .complete_output <span class='op'>=</span> <span class='cn'>TRUE</span>
 <span class='op'>)</span></pre>
@@ -157,6 +159,14 @@
     <tr>
       <th>URL</th>
       <td><p><code>string</code> - URL. String value.</p></td>
+    </tr>
+    <tr>
+      <th>METHOD</th>
+      <td><p><code>enum</code>  of <code>("GET", "POST")</code> - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></td>
+    </tr>
+    <tr>
+      <th>DATA</th>
+      <td><p><code>string</code> - Data. String value.</p></td>
     </tr>
     <tr>
       <th>OUTPUT</th>
