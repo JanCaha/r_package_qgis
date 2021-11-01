@@ -7,8 +7,9 @@ test_that("Test run qgis::qgis_buffer", {
                                      DISTANCE = 0.5,
                                      END_CAP_STYLE = "Flat",
                                      .complete_output = TRUE) %>%
-    sf::st_as_sf() %>%
-    sf::st_transform(sf::st_crs(sf_nc))
+    sf::st_as_sf()
+
+  sf::st_crs(buffered_data) <- sf::st_crs(sf_nc)
 
   expect_s3_class(buffered_data, "sf")
 
