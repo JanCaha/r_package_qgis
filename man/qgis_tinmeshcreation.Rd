@@ -18,9 +18,9 @@ qgis_tinmeshcreation(
 
 \item{MESH_FORMAT}{\code{enum}  of \verb{("2DM", "SELAFIN", "PLY", "Ugrid")} - Output format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{CRS_OUTPUT}{\code{crs} - Output Coordinate System. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
+\item{CRS_OUTPUT}{\code{crs} - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{OUTPUT_MESH}{\code{fileDestination} - Output File. Path for new file.}
+\item{OUTPUT_MESH}{\code{fileDestination} - Output file. Path for new file.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) TIN Mesh Creation (native:tinmeshcr
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_MESH - outputFile - Output File
+\item OUTPUT_MESH - outputFile - Output file
 }
 }
 }

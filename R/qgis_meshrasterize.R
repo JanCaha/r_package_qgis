@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm Rasterize mesh dataset
 ##'
-##' @param INPUT `mesh` - Input Mesh Layer. Path to a mesh layer.
+##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
 ##' @param EXTENT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

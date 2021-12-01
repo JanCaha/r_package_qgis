@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm Export contours
 ##'
-##' @param INPUT `mesh` - Input Mesh Layer. Path to a mesh layer.
+##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
 ##' @param INCREMENT `number` - Increment between contour levels. A numeric value.

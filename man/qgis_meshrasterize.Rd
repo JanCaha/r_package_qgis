@@ -17,7 +17,7 @@ qgis_meshrasterize(
 )
 }
 \arguments{
-\item{INPUT}{\code{mesh} - Input Mesh Layer. Path to a mesh layer.}
+\item{INPUT}{\code{mesh} - Input mesh layer. Path to a mesh layer.}
 
 \item{DATASET_GROUPS}{\code{meshdatasetgroups} - Dataset groups. .}
 

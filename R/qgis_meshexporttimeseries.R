@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm Export time series values from points of a mesh dataset
 ##'
-##' @param INPUT `mesh` - Input Mesh Layer. Path to a mesh layer.
+##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param STARTING_TIME `meshdatasettime` - Starting time. .
 ##' @param FINISHING_TIME `meshdatasettime` - Finishing time. .

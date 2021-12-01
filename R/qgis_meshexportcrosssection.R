@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm Export cross section dataset values on lines from mesh
 ##'
-##' @param INPUT `mesh` - Input Mesh Layer. Path to a mesh layer.
+##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
 ##' @param INPUT_LINES `source` - Lines for data export. Path to a vector layer.
