@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/404.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/LICENSE.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/articles/local_instalation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/authors.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/index.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/news/index.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_aspect.html</loc>
@@ -161,6 +182,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_warpreproject.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/index.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_3d_tessellate.html</loc>
@@ -958,6 +982,6 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_zonalstatisticsfb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/articles/local_instalation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/workflow-fail-template.html</loc>
   </url>
 </urlset>
