@@ -85,9 +85,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpJhh4NS/fileb6ce9ca9e59/fileb6ce7ca37f32.gpkg' \
+    #>   '--INPUT=/tmp/Rtmp9s9eaF/file71fc77b8618b/file71fcbd532c9.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpJhh4NS/fileb6ce9ca9e59/fileb6cea6c1ef2.gpkg'
+    #>   '--OUTPUT=/tmp/Rtmp9s9eaF/file71fc77b8618b/file71fc6f93a2c2.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> proj_create_from_database: Cannot find proj.db
     #> proj_create_from_database: Cannot find proj.db
@@ -101,9 +101,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpJhh4NS/fileb6ce9ca9e59/fileb6ce7ca37f32.gpkg
+    #> INPUT:   /tmp/Rtmp9s9eaF/file71fc77b8618b/file71fcbd532c9.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpJhh4NS/fileb6ce9ca9e59/fileb6cea6c1ef2.gpkg
+    #> OUTPUT:  /tmp/Rtmp9s9eaF/file71fc77b8618b/file71fc6f93a2c2.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -111,10 +111,10 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpJhh4NS/fileb6ce9ca9e59/fileb6cea6c1ef2.gpkg
+    #> OUTPUT:  /tmp/Rtmp9s9eaF/file71fc77b8618b/file71fc6f93a2c2.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 10 out of 14 attributes; use max.plot = 14 to plot
     #> all
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/unnamed-chunk-4-1.png" width="100%" />
