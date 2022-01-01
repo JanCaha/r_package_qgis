@@ -63,7 +63,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
 **R**.
 
     library(sf)
-    #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
+    #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE
 
     fname <- system.file("shape/nc.shp", package="sf")
     nc <- st_read(fname)
@@ -85,9 +85,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/Rtmp9s9eaF/file71fc77b8618b/file71fcbd532c9.gpkg' \
+    #>   '--INPUT=/tmp/RtmpBATsuw/file70f271b049de/file70f26eba0adc.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/Rtmp9s9eaF/file71fc77b8618b/file71fc6f93a2c2.gpkg'
+    #>   '--OUTPUT=/tmp/RtmpBATsuw/file70f271b049de/file70f220657564.gpkg'
     #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
     #> proj_create_from_database: Cannot find proj.db
     #> proj_create_from_database: Cannot find proj.db
@@ -101,9 +101,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/Rtmp9s9eaF/file71fc77b8618b/file71fcbd532c9.gpkg
+    #> INPUT:   /tmp/RtmpBATsuw/file70f271b049de/file70f26eba0adc.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/Rtmp9s9eaF/file71fc77b8618b/file71fc6f93a2c2.gpkg
+    #> OUTPUT:  /tmp/RtmpBATsuw/file70f271b049de/file70f220657564.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -111,7 +111,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/Rtmp9s9eaF/file71fc77b8618b/file71fc6f93a2c2.gpkg
+    #> OUTPUT:  /tmp/RtmpBATsuw/file70f271b049de/file70f220657564.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 10 out of 14 attributes; use max.plot = 14 to plot
