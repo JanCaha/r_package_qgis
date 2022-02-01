@@ -1,7 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-qgis
-====
+# qgis
 
 <!-- badges: start -->
 
@@ -23,8 +22,7 @@ The package is highly experimental and things are quite likely to change
 a lot in the future. The definition of individual functions can change
 if it changes in the QGIS.
 
-Installation
-------------
+## Installation
 
 You can install the released version of **qgis** from GitHub with:
 
@@ -34,18 +32,16 @@ You can install the released version of **qgis** from GitHub with:
 The information about local installation are in a vignette
 `vignette("local_instalation")`.
 
-Functions names
----------------
+## Functions names
 
 The names of the functions follow general pattern of
 `algorithm-provider_algorithm-id` with only the native **QGIS**
 algorithms using `qgis` algorithm provider instead of `native`.
 
-The available providers are: 3d, gdal, native, qgis. The overall number
-of available algorithms is 327.
+The available providers are: 3d, gdal, grass7, native, qgis, saga. The
+overall number of available algorithms is 997.
 
-Example
--------
+## Example
 
 The package is not meant to be load directly as this would significant
 number of functions (&lt;900). Instead the functions should be called
@@ -56,8 +52,7 @@ as:
 This allows you to show the help page for the function (at least in
 **RStudio** using the key shortcut **F1**).
 
-Example in the wild
--------------------
+## Example in the wild
 
 This example uses `qgisprocess` pipe ability to directly load output to
 **R**.
@@ -85,15 +80,10 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
     #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpBATsuw/file70f271b049de/file70f26eba0adc.gpkg' \
+    #>   '--INPUT=/tmp/RtmpJ6HNp8/file914372f42ca0/file914313f557b6.gpkg' \
     #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpBATsuw/file70f271b049de/file70f220657564.gpkg'
-    #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-runner'
-    #> proj_create_from_database: Cannot find proj.db
-    #> proj_create_from_database: Cannot find proj.db
-    #> proj_create_from_wkt: Cannot find proj.db
-    #> proj_create_from_database: Cannot find proj.db
-    #> proj_get_authorities_from_database: Cannot find proj.db
+    #>   '--OUTPUT=/tmp/RtmpJ6HNp8/file914372f42ca0/file91436898420c.gpkg'
+    #> QStandardPaths: wrong ownership on runtime directory /tmp, 0 instead of 1001
     #> 
     #> ----------------
     #> Inputs
@@ -101,9 +91,9 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> 
     #> DISTANCE:    0.5
     #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpBATsuw/file70f271b049de/file70f26eba0adc.gpkg
+    #> INPUT:   /tmp/RtmpJ6HNp8/file914372f42ca0/file914313f557b6.gpkg
     #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpBATsuw/file70f271b049de/file70f220657564.gpkg
+    #> OUTPUT:  /tmp/RtmpJ6HNp8/file914372f42ca0/file91436898420c.gpkg
     #> 
     #> 
     #> 0...10...20...30...40...50...60...70...80...90...
@@ -111,10 +101,10 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Results
     #> ----------------
     #> 
-    #> OUTPUT:  /tmp/RtmpBATsuw/file70f271b049de/file70f220657564.gpkg
+    #> OUTPUT:  /tmp/RtmpJ6HNp8/file914372f42ca0/file91436898420c.gpkg
 
     plot(buffered)
-    #> Warning: plotting the first 10 out of 14 attributes; use max.plot = 14 to plot
+    #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
     #> all
 
 <img src="man/figures/unnamed-chunk-4-1.png" width="100%" />
