@@ -40,6 +40,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
 
+      - name: Activate plugins
+        run: |
+          qgis_process plugins
+          qgis_process plugins enable processing
+          qgis_process plugins enable grassprovider
+          qgis_process plugins enable sagaprovider
+
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
         shell: Rscript {0}
