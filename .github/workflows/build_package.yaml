@@ -53,10 +53,11 @@ jobs:
 
       - name: Install system dependencies
         run: |
-          while read -r cmd
-          do
-            eval $cmd
-          done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
+          reqs <- remotes::system_requirements("ubuntu", "20.04")
+          for (req in reqs){
+            system(req)
+          }
+        shell: Rscript {0}
 
       - name: Install R dependencies
         run: |
