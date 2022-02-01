@@ -2,6 +2,10 @@ source(here::here("build-package", "functions_fix_parameter_names.R"))
 source(here::here("build-package", "functions_fix_algorithm_id.R"))
 source(here::here("build-package", "functions_build_code_and_doc.R"))
 
+Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
+options(qgisprocess.use_json_output = FALSE)
+
+
 file_text <- function(x){
   purrr::map_chr(x, function(x){
     if (fs::is_file(x)) {
@@ -16,6 +20,8 @@ file_text <- function(x){
 library(qgisprocess)
 library(dplyr)
 
+qgis_configure(use_cached_data = FALSE)
+
 if (!qgisprocess::has_qgis()){
   stop("Cannot build package `qgis` because QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
 }
@@ -26,8 +32,8 @@ source(here::here("build-package", "build_utils.R"))
 
 previous_files <- readr::read_rds(here::here("data-raw", "previous-files.rds"))
 
-algs <- qgis_algorithms() %>%
-  dplyr::select(!c(tags, supported_output_raster_extensions, supported_output_table_extensions, supported_output_vector_extensions))
+algs <- qgis_algorithms()
+# dplyr::select(!c(tags, supported_output_raster_extensions, supported_output_table_extensions, supported_output_vector_extensions))
 
 dir.create("data-raw", showWarnings = FALSE)
 
