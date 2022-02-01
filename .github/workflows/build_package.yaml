@@ -27,6 +27,12 @@ jobs:
 
     steps:
 
+      - name: Enable plugings
+        run: |
+          qgis_process plugins enable grassprovider
+          qgis_process plugins enable sagaprovider
+          qgis_process plugins enable processing
+
       - name: Mkdir for R Packages
         run: mkdir ${{ env.R_LIBS_USER }}
 
@@ -72,9 +78,6 @@ jobs:
           print("Has QGIS:")
           print(qgisprocess::has_qgis())
           print(qgisprocess::qgis_configure())
-          cat(qgisprocess::qgis_run("plugins")$stdout)
-          qgisprocess::qgis_run("plugins enable grassprovider")
-          qgisprocess::qgis_run("plugins enable sagaprovider")
           cat(qgisprocess::qgis_run("plugins")$stdout)
         shell: Rscript {0}
 
