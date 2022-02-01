@@ -51,6 +51,8 @@ for (i in 1:nrow(algs)) {
     file_name <- glue::glue("{alg$provider}_{fix_algorithm_id(alg$algorithm_id)}")
   }
 
+  print(alg$algorithm_id)
+
   arguments <- qgisprocess::qgis_arguments(alg$algorithm[1])
   outputs <- qgisprocess::qgis_outputs(alg$algorithm[1])
 
