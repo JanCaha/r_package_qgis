@@ -51,13 +51,13 @@ jobs:
           qgis_process plugins enable grassprovider
           qgis_process plugins enable sagaprovider
 
-      - name: Install remotes and package build dependencies
-        run: source("./build-package/install_save_deps.R")
-        shell: Rscript {0}
-
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 2
+
+      - name: Install remotes and package build dependencies
+        run: source("./build-package/install_save_deps.R")
+        shell: Rscript {0}
 
       - name: Cache R packages
         uses: actions/cache@v2
@@ -65,12 +65,6 @@ jobs:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ hashFiles('.github/R-version') }}-1-
-
-      - name: Install R dependencies
-        run: |
-          remotes::install_deps(dependencies = TRUE)
-          # remotes::install_cran("rcmdcheck")
-        shell: Rscript {0}
 
       - name: Print QGIS info
         run: |
