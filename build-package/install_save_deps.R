@@ -1,6 +1,6 @@
 # install packages necessary to build the package code
 install.packages(c("remotes", "desc", "glue", "readr", "purrr", "stringr", "here",
-                   "fs", "knitr", "rmarkdown", "devtools", "pkgdown", "progress"))
+                   "fs", "knitr", "rmarkdown", "devtools", "pkgdown", "progress", "dplyr"))
 
 remotes::install_github("paleolimbot/qgisprocess", upgrade="ask")
 
