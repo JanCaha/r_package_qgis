@@ -55,7 +55,7 @@ jobs:
         run: |
           while read -r cmd
           do
-            eval sudo $cmd
+            eval $cmd
           done < <(Rscript -e 'writeLines(remotes::system_requirements("ubuntu", "20.04"))')
 
       - name: Install R dependencies
