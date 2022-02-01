@@ -41,6 +41,10 @@ for (i in 1:nrow(algs)) {
 
   alg <- algs[i,]
 
+  if (i %% 25 == 0){
+    print(glue::glue("Done {i}/{nrow(algs)}."))
+  }
+
   if (alg$provider[1] == "native") {
     file_name <- glue::glue("qgis_{fix_algorithm_id(alg$algorithm_id)}")
   } else {
@@ -61,6 +65,8 @@ for (i in 1:nrow(algs)) {
 print("Algorithms and helps builded!")
 
 devtools::document(roclets = c('rd', 'collate', 'namespace', 'vignette'))
+
+print("Algorithms documented!")
 
 actual_files <- fileSnapshot(path = c(here::here("R"), here::here("man")),
                              full.names = TRUE,
