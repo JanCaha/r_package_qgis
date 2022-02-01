@@ -33,6 +33,8 @@ dir.create("data-raw", showWarnings = FALSE)
 
 write.csv(algs, here::here("data-raw", "algorithms.csv"))
 
+print("Algorithms collected!")
+
 pb <- progress::progress_bar$new(total = nrow(algs))
 
 for (i in 1:nrow(algs)) {
@@ -55,6 +57,8 @@ for (i in 1:nrow(algs)) {
 
   pb$tick()
 }
+
+print("Algorithms and helps builded!")
 
 devtools::document(roclets = c('rd', 'collate', 'namespace', 'vignette'))
 
