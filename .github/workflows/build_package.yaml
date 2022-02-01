@@ -23,8 +23,13 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      R_LIBS_USER: "/home/RLIBS"
 
     steps:
+
+      - name: Mkdir for R Packages
+        run: mkdir ${{ env.R_LIBS_USER }}
+
       - name: Install R
         run: |
           apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
