@@ -41,25 +41,26 @@ for (i in 1:nrow(algs)) {
 
   alg <- algs[i,]
 
-  if (i %% 25 == 0){
-    print(glue::glue("Done {i}/{nrow(algs)}."))
-  }
-
   if (alg$provider[1] == "native") {
     file_name <- glue::glue("qgis_{fix_algorithm_id(alg$algorithm_id)}")
   } else {
     file_name <- glue::glue("{alg$provider}_{fix_algorithm_id(alg$algorithm_id)}")
   }
 
-  print(alg$algorithm_id)
+  tryCatch(
+    error = function(cnd) {
+      print(glue::glue("Cant generate function - {alg$algorithm_id}."))
+    },
+    {
+      arguments <- qgisprocess::qgis_arguments(alg$algorithm[1])
+      outputs <- qgisprocess::qgis_outputs(alg$algorithm[1])
 
-  arguments <- qgisprocess::qgis_arguments(alg$algorithm[1])
-  outputs <- qgisprocess::qgis_outputs(alg$algorithm[1])
-
-  readr::write_file(glue::glue_collapse(list(build_fn_doc(alg, arguments, outputs),
-                                             build_fn_code(alg, arguments, outputs$name[1])),
-                                        sep = "\n\n"),
-                    glue::glue("./R/{file_name}.R"))
+      readr::write_file(glue::glue_collapse(list(build_fn_doc(alg, arguments, outputs),
+                                                 build_fn_code(alg, arguments, outputs$name[1])),
+                                            sep = "\n\n"),
+                        glue::glue("./R/{file_name}.R"))
+    }
+  )
 
   pb$tick()
 }
