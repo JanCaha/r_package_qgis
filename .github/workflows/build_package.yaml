@@ -55,20 +55,16 @@ jobs:
         run: source("./build-package/install_save_deps.R")
         shell: Rscript {0}
 
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          cache-version: 2
+
       - name: Cache R packages
         uses: actions/cache@v2
         with:
           path: ${{ env.R_LIBS_USER }}
           key: ${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ hashFiles('.github/R-version') }}-1-
-
-      - name: Install system dependencies
-        run: |
-          reqs <- remotes::system_requirements("ubuntu", "20.04")
-          for (req in reqs){
-            system(req)
-          }
-        shell: Rscript {0}
 
       - name: Install R dependencies
         run: |
