@@ -29,7 +29,7 @@ jobs:
         run: |
           apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
           add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
-          apt install r-base pandoc git
+          apt install -y r-base pandoc git
 
       - uses: actions/checkout@v2
         with:
@@ -114,11 +114,3 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./docs
-
-      - uses: JasonEtco/create-an-issue@v2
-        if: ${{ failure() }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WORKFLOW: build-package
-        with:
-          filename: .github/workflow-fail-template.md
