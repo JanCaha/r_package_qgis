@@ -82,6 +82,9 @@ jobs:
           print(qgisprocess::has_qgis())
           print(qgisprocess::qgis_configure())
           cat(qgisprocess::qgis_run("plugins")$stdout)
+          qgisprocess::qgis_run("plugins enable grassprovider")
+          qgisprocess::qgis_run("plugins enable sagaprovider")
+          cat(qgisprocess::qgis_run("plugins")$stdout)
         shell: Rscript {0}
 
       - name: Delete all files in R
