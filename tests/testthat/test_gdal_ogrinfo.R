@@ -9,9 +9,9 @@ test_that("Test run qgis::gdal_ogrinfo", {
 
   expect_s3_class(result$OUTPUT, "qgis_outputHtml")
 
-  expect_match(result$.processx_result$stdout, "Inputs")
+  expect_equal(result$.processx_result$status, 0)
   expect_match(result$.processx_result$stdout, "GDAL command")
-  expect_match(result$.processx_result$stdout, "GDAL command output")
-  expect_match(result$.processx_result$stdout, "Layer SRS WKT")
+  expect_match(result$.processx_result$stderr, "qt5ct")
+  expect_equal(result$.processx_result$timeout, FALSE)
 
 })
