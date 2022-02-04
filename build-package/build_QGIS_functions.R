@@ -32,8 +32,8 @@ source(here::here("build-package", "build_utils.R"))
 
 previous_files <- readr::read_rds(here::here("data-raw", "previous-files.rds"))
 
-algs <- qgis_algorithms()
-# dplyr::select(!c(tags, supported_output_raster_extensions, supported_output_table_extensions, supported_output_vector_extensions))
+algs <- qgis_algorithms() %>%
+  dplyr::select(!c(tags, supported_output_raster_extensions, supported_output_table_extensions, supported_output_vector_extensions))
 
 dir.create("data-raw", showWarnings = FALSE)
 
