@@ -11,7 +11,6 @@ test_that("Test run qgis::gdal_ogrinfo", {
 
   expect_equal(result$.processx_result$status, 0)
   expect_match(result$.processx_result$stdout, "GDAL command")
-  expect_match(result$.processx_result$stderr, "qt5ct")
   expect_equal(result$.processx_result$timeout, FALSE)
 
 })
