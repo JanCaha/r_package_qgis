@@ -2,8 +2,8 @@ source(here::here("build-package", "functions_fix_parameter_names.R"))
 source(here::here("build-package", "functions_fix_algorithm_id.R"))
 source(here::here("build-package", "functions_build_code_and_doc.R"))
 
-Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
-options(qgisprocess.use_json_output = FALSE)
+# Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
+# options(qgisprocess.use_json_output = FALSE)
 
 
 file_text <- function(x){
