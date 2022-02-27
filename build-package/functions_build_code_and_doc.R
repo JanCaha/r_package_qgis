@@ -49,11 +49,13 @@ build_fn_doc <- function(alg, arguments, outputs){
                                            string_values <- glue::glue(" of `({string_values})` ")
                                          }
 
-                                         if (identical(acceptable_values, character(0))) {
+                                         if (identical(acceptable_values, character(0))| rlang::is_null(acceptable_values) | length(acceptable_values) == 0) {
                                            string_acceptable_values <- ""
                                          } else {
                                           string_acceptable_values <- glue::glue_collapse(acceptable_values, sep = ". ")
                                          }
+
+                                         # print(glue::glue("##' @param {convert_to_R_arg_names(name)} `{qgis_type}` {string_values}- {fix_description(description)}. {string_acceptable_values}.{original_param_name}"))
 
                                          glue::glue("##' @param {convert_to_R_arg_names(name)} `{qgis_type}` {string_values}- {fix_description(description)}. {string_acceptable_values}.{original_param_name}")
                                        }
