@@ -42,7 +42,7 @@ build_fn_doc <- function(alg, arguments, outputs){
                                                                        glue::glue(" Original algorithm parameter name: {name}."),
                                                                        "")
 
-                                         if (identical(available_values, character(0))){
+                                         if (identical(available_values, character(0)) | rlang::is_null(available_values)){
                                            string_values <- ""
                                          } else {
                                            string_values <- glue::glue_collapse(glue::double_quote(available_values), sep = ", ")
