@@ -1,6 +1,5 @@
 library(desc)
 library(glue)
-library(desc)
 library(qgisprocess)
 
 files_changed_from_last_run <- readr::read_rds(here::here("data-raw", "changed_files.rds"))
