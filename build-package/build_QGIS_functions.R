@@ -3,7 +3,7 @@ source(here::here("build-package", "functions_fix_algorithm_id.R"))
 source(here::here("build-package", "functions_build_code_and_doc.R"))
 
 # Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
-options(qgisprocess.use_json_output = FALSE)
+# options(qgisprocess.use_json_output = FALSE)
 
 
 file_text <- function(x){
@@ -55,10 +55,11 @@ for (i in 1:nrow(algs)) {
 
   tryCatch(
     error = function(cnd) {
-      print(glue::glue("Cant generate function - {alg$algorithm_id}."))
+      print(glue::glue("Cant generate function - {alg$provider}_{alg$algorithm_id}."))
     },
     {
-      arguments <- qgisprocess::qgis_arguments(alg$algorithm[1])
+      arguments <- qgisprocess::qgis_arguments(alg$algorithm[1]) %>%
+        dplyr::filter(!is.na(name))
       outputs <- qgisprocess::qgis_outputs(alg$algorithm[1])
 
       readr::write_file(glue::glue_collapse(list(build_fn_doc(alg, arguments, outputs),
