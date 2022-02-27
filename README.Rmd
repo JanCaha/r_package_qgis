@@ -23,6 +23,10 @@ knitr::opts_chunk$set(
 
 The package is highly experimental and things are quite likely to change a lot in the future. The definition of individual functions can change if it changes in the QGIS.
 
+## Latest version
+
+Latest package version **`r desc::desc_get_field("Version")`** is build against QGIS version **`r qgisprocess::qgis_version()`**.
+
 ## Installation
 
 You can install the released version of **qgis** from GitHub with:
