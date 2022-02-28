@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUT_SHAPES - outputVector - Output shapes with field
+##' * OUT_SHAPES - outputVector - Output shapes with field(s) deleted
 ##'
 ##'
 ##' @export

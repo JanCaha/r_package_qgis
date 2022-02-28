@@ -62,12 +62,12 @@ QGIS Algorithm provided by SAGA Ls-factor, field based (saga:lsfactorfieldbased)
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item BALANCE - outputRaster - Sediment Balance
+\item LS_FACTOR - outputRaster - LS Factor
 \item STATISTICS - outputVector - Field Statistics
 \item UPSLOPE_AREA - outputRaster - Upslope Length Factor
 \item UPSLOPE_LENGTH - outputRaster - Effective Flow Length
 \item UPSLOPE_SLOPE - outputRaster - Upslope Slope
-\item LS_FACTOR - outputRaster - LS Factor
-\item BALANCE - outputRaster - Sediment Balance
 }
 }
 }

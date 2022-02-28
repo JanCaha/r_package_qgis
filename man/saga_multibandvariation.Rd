@@ -9,7 +9,6 @@ saga_multibandvariation(
   RADIUS = qgisprocess::qgis_default_value(),
   DISTANCE_WEIGHTING_WEIGHTING = qgisprocess::qgis_default_value(),
   DISTANCE_WEIGHTING_IDW_POWER = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_IDW_OFFSET = qgisprocess::qgis_default_value(),
   DISTANCE_WEIGHTING_BANDWIDTH = qgisprocess::qgis_default_value(),
   MEAN = qgisprocess::qgis_default_value(),
   STDDEV = qgisprocess::qgis_default_value(),
@@ -26,8 +25,6 @@ saga_multibandvariation(
 \item{DISTANCE_WEIGHTING_WEIGHTING}{\code{enum}  of \verb{("[0] no distance weighting", "[1] inverse distance to a power", "[2] exponential", "[3] gaussian weighting")} - Distance Weighting. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{DISTANCE_WEIGHTING_IDW_POWER}{\code{number} - Inverse Distance Weighting Power. A numeric value.}
-
-\item{DISTANCE_WEIGHTING_IDW_OFFSET}{\code{boolean} - Inverse Distance Offset. 1 for true/yes. 0 for false/no.}
 
 \item{DISTANCE_WEIGHTING_BANDWIDTH}{\code{number} - Gaussian and Exponential Weighting Bandwidth. A numeric value.}
 
@@ -47,9 +44,9 @@ QGIS Algorithm provided by SAGA Multi-band variation (saga:multibandvariation)
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item DIFF - outputRaster - Distance
 \item MEAN - outputRaster - Mean Distance
 \item STDDEV - outputRaster - Standard Deviation
-\item DIFF - outputRaster - Distance
 }
 }
 }

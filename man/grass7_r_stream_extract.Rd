@@ -77,9 +77,9 @@ QGIS Algorithm provided by GRASS r.stream.extract (grass7:r.stream.extract)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item stream_raster - outputRaster - Unique stream ids
-\item stream_vector - outputVector - Unique stream ids
 \item direction - outputRaster - Flow direction
+\item stream_raster - outputRaster - Unique stream ids (rast)
+\item stream_vector - outputVector - Unique stream ids (vect)
 }
 }
 }

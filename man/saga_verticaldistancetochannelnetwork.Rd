@@ -8,7 +8,6 @@ saga_verticaldistancetochannelnetwork(
   ELEVATION = qgisprocess::qgis_default_value(),
   CHANNELS = qgisprocess::qgis_default_value(),
   THRESHOLD = qgisprocess::qgis_default_value(),
-  NOUNDERGROUND = qgisprocess::qgis_default_value(),
   DISTANCE = qgisprocess::qgis_default_value(),
   BASELEVEL = qgisprocess::qgis_default_value(),
   ...,
@@ -21,8 +20,6 @@ saga_verticaldistancetochannelnetwork(
 \item{CHANNELS}{\code{raster} - Channel Network. Path to a raster layer.}
 
 \item{THRESHOLD}{\code{number} - Tension Threshold (Percentage of Cell Size). A numeric value.}
-
-\item{NOUNDERGROUND}{\code{boolean} - Keep Base Level below Surface. 1 for true/yes. 0 for false/no.}
 
 \item{DISTANCE}{\code{rasterDestination} - Vertical Distance to Channel Network. Path for new raster layer.}
 
@@ -38,8 +35,8 @@ QGIS Algorithm provided by SAGA Vertical distance to channel network (saga:verti
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DISTANCE - outputRaster - Vertical Distance to Channel Network
 \item BASELEVEL - outputRaster - Channel Network Base Level
+\item DISTANCE - outputRaster - Vertical Distance to Channel Network
 }
 }
 }

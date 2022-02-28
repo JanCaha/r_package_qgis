@@ -20,7 +20,7 @@ qgis_addfieldtoattributestable(
 
 \item{FIELD_NAME}{\code{string} - Field name. String value.}
 
-\item{FIELD_TYPE}{\code{enum}  of \verb{("Integer", "Float", "String")} - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{FIELD_TYPE}{\code{enum}  of \verb{("Integer (32 bit)", "Decimal (double)", "Text (string)", "Boolean", "Date", "Time", "Date & Time", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")} - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{FIELD_LENGTH}{\code{number} - Field length. A numeric value.}
 

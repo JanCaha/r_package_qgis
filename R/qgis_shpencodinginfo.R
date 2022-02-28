@@ -8,8 +8,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * ENCODING - outputString - Shapefile Encoding
 ##' * CPG_ENCODING - outputString - CPG Encoding
+##' * ENCODING - outputString - Shapefile Encoding
 ##' * LDID_ENCODING - outputString - LDID Encoding
 ##'
 ##'
@@ -27,6 +27,6 @@ qgis_shpencodinginfo <- function(INPUT = qgisprocess::qgis_default_value(),..., 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ENCODING")
+    qgisprocess::qgis_output(output, "CPG_ENCODING")
   }
 }

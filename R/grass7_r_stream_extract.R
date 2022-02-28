@@ -26,9 +26,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * stream_raster - outputRaster - Unique stream ids 
-##' * stream_vector - outputVector - Unique stream ids 
 ##' * direction - outputRaster - Flow direction
+##' * stream_raster - outputRaster - Unique stream ids (rast)
+##' * stream_vector - outputVector - Unique stream ids (vect)
 ##'
 ##'
 ##' @export
@@ -45,6 +45,6 @@ grass7_r_stream_extract <- function(elevation = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "stream_raster")
+    qgisprocess::qgis_output(output, "direction")
   }
 }

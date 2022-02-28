@@ -41,11 +41,11 @@ QGIS Algorithm provided by SAGA Upslope and downslope curvature (saga:upslopeand
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item C_DOWN - outputRaster - Downslope Curvature
+\item C_DOWN_LOCAL - outputRaster - Local Downslope Curvature
 \item C_LOCAL - outputRaster - Local Curvature
 \item C_UP - outputRaster - Upslope Curvature
 \item C_UP_LOCAL - outputRaster - Local Upslope Curvature
-\item C_DOWN - outputRaster - Downslope Curvature
-\item C_DOWN_LOCAL - outputRaster - Local Downslope Curvature
 }
 }
 }

@@ -32,8 +32,8 @@ QGIS Algorithm provided by SAGA Fourier transform (vigra) (saga:fouriertransform
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item REAL - outputRaster - Real
 \item IMAG - outputRaster - Imaginary
+\item REAL - outputRaster - Real
 }
 }
 }

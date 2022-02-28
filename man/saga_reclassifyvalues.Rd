@@ -16,9 +16,7 @@ saga_reclassifyvalues(
   ROPERATOR = qgisprocess::qgis_default_value(),
   RETAB = qgisprocess::qgis_default_value(),
   TOPERATOR = qgisprocess::qgis_default_value(),
-  NODATAOPT = qgisprocess::qgis_default_value(),
   NODATA = qgisprocess::qgis_default_value(),
-  OTHEROPT = qgisprocess::qgis_default_value(),
   OTHERS = qgisprocess::qgis_default_value(),
   RESULT = qgisprocess::qgis_default_value(),
   ...,
@@ -48,11 +46,7 @@ saga_reclassifyvalues(
 
 \item{TOPERATOR}{\code{enum}  of \verb{("[0] min <= value < max", "[1] min <= value <= max", "[2] min < value <= max", "[3] min < value < max")} - operator (for table). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NODATAOPT}{\code{boolean} - replace no data values. 1 for true/yes. 0 for false/no.}
-
 \item{NODATA}{\code{number} - new value for no data values. A numeric value.}
-
-\item{OTHEROPT}{\code{boolean} - replace other values. 1 for true/yes. 0 for false/no.}
 
 \item{OTHERS}{\code{number} - new value for other values. A numeric value.}
 

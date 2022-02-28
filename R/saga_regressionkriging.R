@@ -37,13 +37,13 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * REGRESSION - outputRaster - Regression
+##' * INFO_COEFF - outputVector - Regression: Coefficients
+##' * INFO_MODEL - outputVector - Regression: Model
+##' * INFO_STEPS - outputVector - Regression: Steps
 ##' * PREDICTION - outputRaster - Prediction
+##' * REGRESSION - outputRaster - Regression
 ##' * RESIDUALS - outputRaster - Residuals
 ##' * VARIANCE - outputRaster - Quality Measure
-##' * INFO_COEFF - outputVector - Regression
-##' * INFO_MODEL - outputVector - Regression
-##' * INFO_STEPS - outputVector - Regression
 ##'
 ##'
 ##' @export
@@ -60,6 +60,6 @@ saga_regressionkriging <- function(POINTS = qgisprocess::qgis_default_value(), F
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REGRESSION")
+    qgisprocess::qgis_output(output, "INFO_COEFF")
   }
 }

@@ -113,13 +113,13 @@ QGIS Algorithm provided by GRASS r.sim.sediment (grass7:r.sim.sediment)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item transport_capacity - outputRaster - Transport capacity
-\item tlimit_erosion_deposition - outputRaster - Transport limited erosion
-\item sediment_concentration - outputRaster - Sediment concentration
-\item sediment_flux - outputRaster - Sediment flux
-\item erosion_deposition - outputRaster - Erosion
-\item walkers_output - outputVector - Name of the output walkers vector points layer
+\item erosion_deposition - outputRaster - Erosion-deposition (kg/m2s)
 \item logfile - outputFile - Name for sampling points output text file.
+\item sediment_concentration - outputRaster - Sediment concentration (particle/m3)
+\item sediment_flux - outputRaster - Sediment flux (kg/ms)
+\item tlimit_erosion_deposition - outputRaster - Transport limited erosion-deposition (kg/m2s)
+\item transport_capacity - outputRaster - Transport capacity (kg/ms)
+\item walkers_output - outputVector - Name of the output walkers vector points layer
 }
 }
 }

@@ -62,12 +62,12 @@ QGIS Algorithm provided by GRASS r.terraflow (grass7:r.terraflow)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item filled - outputRaster - Filled
-\item direction - outputRaster - Flow direction
-\item swatershed - outputRaster - Sink
 \item accumulation - outputRaster - Flow accumulation
-\item tci - outputRaster - Topographic convergence index
+\item direction - outputRaster - Flow direction
+\item filled - outputRaster - Filled (flooded) elevation
 \item stats - outputFile - Runtime statistics
+\item swatershed - outputRaster - Sink-watershed
+\item tci - outputRaster - Topographic convergence index (tci)
 }
 }
 }

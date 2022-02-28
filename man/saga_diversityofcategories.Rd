@@ -59,11 +59,11 @@ QGIS Algorithm provided by SAGA Diversity of categories (saga:diversityofcategor
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item CONNECTIVITY - outputRaster - Connectivity
 \item COUNT - outputRaster - Number of Categories
 \item DIVERSITY - outputRaster - Diversity
 \item SIZE_MEAN - outputRaster - Average Size
 \item SIZE_SKEW - outputRaster - Skewness
-\item CONNECTIVITY - outputRaster - Connectivity
 }
 }
 }

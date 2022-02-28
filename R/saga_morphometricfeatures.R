@@ -24,16 +24,16 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * FEATURES - outputRaster - Morphometric Features
-##' * ELEVATION - outputRaster - Generalized Surface
-##' * SLOPE - outputRaster - Slope
 ##' * ASPECT - outputRaster - Aspect
-##' * PROFC - outputRaster - Profile Curvature
-##' * PLANC - outputRaster - Plan Curvature
+##' * CROSC - outputRaster - Cross-Sectional Curvature
+##' * ELEVATION - outputRaster - Generalized Surface
+##' * FEATURES - outputRaster - Morphometric Features
 ##' * LONGC - outputRaster - Longitudinal Curvature
-##' * CROSC - outputRaster - Cross
 ##' * MAXIC - outputRaster - Maximum Curvature
 ##' * MINIC - outputRaster - Minimum Curvature
+##' * PLANC - outputRaster - Plan Curvature
+##' * PROFC - outputRaster - Profile Curvature
+##' * SLOPE - outputRaster - Slope
 ##'
 ##'
 ##' @export
@@ -50,6 +50,6 @@ saga_morphometricfeatures <- function(DEM = qgisprocess::qgis_default_value(), F
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FEATURES")
+    qgisprocess::qgis_output(output, "ASPECT")
   }
 }

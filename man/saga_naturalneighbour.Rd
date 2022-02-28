@@ -24,7 +24,7 @@ saga_naturalneighbour(
 
 \item{FIELD}{\code{field} - Attribute. The name of an existing field. ; delimited list of existing field names.}
 
-\item{METHOD}{\code{enum}  of \verb{("[0] Linear", "[1] Sibson", "[2] Non-Sibson")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{METHOD}{\code{enum}  of \verb{("[0] Linear", "[1] Sibson", " [2] Non-Sibson")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX}{\code{extent} - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.}
 

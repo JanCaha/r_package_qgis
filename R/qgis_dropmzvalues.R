@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Z
+##' * OUTPUT - outputVector - Z/M Dropped
 ##'
 ##'
 ##' @export

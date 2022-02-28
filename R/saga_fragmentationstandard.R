@@ -22,8 +22,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * DENSITY - outputRaster - Density 
-##' * CONNECTIVITY - outputRaster - Connectivity 
+##' * CONNECTIVITY - outputRaster - Connectivity (Percent)
+##' * DENSITY - outputRaster - Density (Percent)
 ##' * FRAGMENTATION - outputRaster - Fragmentation
 ##' * FRAGSTATS - outputVector - Summary
 ##'
@@ -42,6 +42,6 @@ saga_fragmentationstandard <- function(CLASSES = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DENSITY")
+    qgisprocess::qgis_output(output, "CONNECTIVITY")
   }
 }

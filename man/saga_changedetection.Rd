@@ -15,7 +15,6 @@ saga_changedetection(
   FIN_LUT_MIN = qgisprocess::qgis_default_value(),
   FIN_LUT_MAX = qgisprocess::qgis_default_value(),
   FIN_LUT_NAM = qgisprocess::qgis_default_value(),
-  NOCHANGE = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   CHANGE = qgisprocess::qgis_default_value(),
   CHANGES = qgisprocess::qgis_default_value(),
@@ -43,8 +42,6 @@ saga_changedetection(
 \item{FIN_LUT_MAX}{\code{field} - Value (Maximum). The name of an existing field. ; delimited list of existing field names.}
 
 \item{FIN_LUT_NAM}{\code{field} - Name. The name of an existing field. ; delimited list of existing field names.}
-
-\item{NOCHANGE}{\code{boolean} - Report Unchanged Classes. 1 for true/yes. 0 for false/no.}
 
 \item{OUTPUT}{\code{enum}  of \verb{("[0] cells", "[1] percent", "[2] area")} - Output as.... Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

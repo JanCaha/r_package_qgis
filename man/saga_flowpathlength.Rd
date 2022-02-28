@@ -7,7 +7,6 @@
 saga_flowpathlength(
   ELEVATION = qgisprocess::qgis_default_value(),
   SEED = qgisprocess::qgis_default_value(),
-  SEEDS_ONLY = qgisprocess::qgis_default_value(),
   METHOD = qgisprocess::qgis_default_value(),
   CONVERGENCE = qgisprocess::qgis_default_value(),
   LENGTH = qgisprocess::qgis_default_value(),
@@ -19,8 +18,6 @@ saga_flowpathlength(
 \item{ELEVATION}{\code{raster} - Elevation. Path to a raster layer.}
 
 \item{SEED}{\code{raster} - Seeds. Path to a raster layer.}
-
-\item{SEEDS_ONLY}{\code{boolean} - Seeds Only. 1 for true/yes. 0 for false/no.}
 
 \item{METHOD}{\code{enum}  of \verb{("[0] Deterministic 8 (D8)", "[1] Multiple Flow Direction (FD8)")} - Flow Routing Algorithm. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

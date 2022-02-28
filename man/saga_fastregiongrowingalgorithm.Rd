@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Fast region growing algorithm (saga:fastregiongr
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item RESULT - outputRaster - Segmente
 \item MEAN - outputRaster - Mean
+\item RESULT - outputRaster - Segmente
 }
 }
 }

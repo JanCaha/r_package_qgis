@@ -20,8 +20,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * SEED_GRID - outputRaster - Seeds Grid
-##' * VARIANCE - outputRaster - Variance
 ##' * SEED_POINTS - outputVector - Seeds Points
+##' * VARIANCE - outputRaster - Variance
 ##'
 ##'
 ##' @export

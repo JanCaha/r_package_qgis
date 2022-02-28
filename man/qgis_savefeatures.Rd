@@ -35,9 +35,9 @@ QGIS Algorithm provided by QGIS (native c++) Save vector features to file (nativ
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputFile - Saved features
 \item FILE_PATH - outputString - File name and path
 \item LAYER_NAME - outputString - Layer name
+\item OUTPUT - outputFile - Saved features
 }
 }
 }

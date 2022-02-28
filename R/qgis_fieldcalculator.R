@@ -4,7 +4,7 @@
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD_NAME `string` - Field name. String value.
-##' @param FIELD_TYPE `enum`  of `("Float", "Integer", "String", "Date")` - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param FIELD_TYPE `enum`  of `("Decimal (double)", "Integer (32 bit)", "Text (string)", "Date", "Time", "Date & Time", "Boolean", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")` - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param FIELD_LENGTH `number` - Result field length. A numeric value.
 ##' @param FIELD_PRECISION `number` - Result field precision. A numeric value.
 ##' @param FORMULA `expression` - Formula. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.

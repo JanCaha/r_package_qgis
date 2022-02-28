@@ -23,8 +23,8 @@ QGIS Algorithm provided by QGIS (native c++) Extract Shapefile encoding (native:
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item ENCODING - outputString - Shapefile Encoding
 \item CPG_ENCODING - outputString - CPG Encoding
+\item ENCODING - outputString - Shapefile Encoding
 \item LDID_ENCODING - outputString - LDID Encoding
 }
 }

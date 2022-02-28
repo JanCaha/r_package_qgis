@@ -24,7 +24,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * output - outputVector - Classified
-##' * terrain - outputVector - Only 
+##' * terrain - outputVector - Only 'terrain' points
 ##'
 ##'
 ##' @export

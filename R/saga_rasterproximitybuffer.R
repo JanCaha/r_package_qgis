@@ -13,9 +13,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * DISTANCE - outputRaster - Distance Grid
 ##' * ALLOC - outputRaster - Allocation Grid
 ##' * BUFFER - outputRaster - Buffer Grid
+##' * DISTANCE - outputRaster - Distance Grid
 ##'
 ##'
 ##' @export
@@ -32,6 +32,6 @@ saga_rasterproximitybuffer <- function(SOURCE = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DISTANCE")
+    qgisprocess::qgis_output(output, "ALLOC")
   }
 }

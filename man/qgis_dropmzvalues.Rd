@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalue
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Z
+\item OUTPUT - outputVector - Z/M Dropped
 }
 }
 }

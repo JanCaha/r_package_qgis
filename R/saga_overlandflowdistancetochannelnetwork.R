@@ -14,8 +14,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * DISTANCE - outputRaster - Overland Flow Distance
-##' * DISTVERT - outputRaster - Vertical Overland Flow Distance
 ##' * DISTHORZ - outputRaster - Horizontal Overland Flow Distance
+##' * DISTVERT - outputRaster - Vertical Overland Flow Distance
 ##'
 ##'
 ##' @export

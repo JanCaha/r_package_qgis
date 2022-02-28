@@ -26,19 +26,19 @@ QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:ras
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item X_MIN - outputNumber - Minimum x
-\item X_MAX - outputNumber - Maximum x
-\item Y_MIN - outputNumber - Minimum y
-\item Y_MAX - outputNumber - Maximum y
-\item EXTENT - outputString - Extent
-\item PIXEL_WIDTH - outputNumber - Pixel size
-\item PIXEL_HEIGHT - outputNumber - Pixel size
-\item CRS_AUTHID - outputString - CRS authority identifier
-\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
-\item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-\item HAS_NODATA_VALUE - outputBoolean - Band has a nodata value set
-\item NODATA_VALUE - outputNumber - Band nodata value
 \item BAND_COUNT - outputNumber - Number of bands in raster
+\item CRS_AUTHID - outputString - CRS authority identifier
+\item EXTENT - outputString - Extent
+\item HAS_NODATA_VALUE - outputBoolean - Band has a nodata value set
+\item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+\item NODATA_VALUE - outputNumber - Band nodata value
+\item PIXEL_HEIGHT - outputNumber - Pixel size (height) in map units
+\item PIXEL_WIDTH - outputNumber - Pixel size (width) in map units
+\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
+\item X_MAX - outputNumber - Maximum x-coordinate
+\item X_MIN - outputNumber - Minimum x-coordinate
+\item Y_MAX - outputNumber - Maximum y-coordinate
+\item Y_MIN - outputNumber - Minimum y-coordinate
 }
 }
 }

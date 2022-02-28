@@ -32,14 +32,14 @@ QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item CRS_AUTHID - outputString - CRS authority identifier
+\item EXTENT - outputString - Extent
+\item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+\item NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
 \item OUTPUT_HTML_FILE - outputHtml - Unique values report
 \item OUTPUT_TABLE - outputVector - Unique values table
-\item EXTENT - outputString - Extent
-\item CRS_AUTHID - outputString - CRS authority identifier
-\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
-\item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
 \item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
-\item NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
 }
 }
 }

@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm r.water.outlet
 ##'
-##' @param input `raster` - Name of input raster map. Path to a raster layer.
+##' @param input `raster` - Drainage direction raster. Path to a raster layer.
 ##' @param coordinates `point` - Coordinates of outlet point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param output `rasterDestination` - Basin. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

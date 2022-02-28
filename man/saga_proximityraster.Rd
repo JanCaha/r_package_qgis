@@ -32,9 +32,9 @@ QGIS Algorithm provided by SAGA Proximity raster (saga:proximityraster)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DISTANCE - outputRaster - Distance
-\item DIRECTION - outputRaster - Direction
 \item ALLOCATION - outputRaster - Allocation
+\item DIRECTION - outputRaster - Direction
+\item DISTANCE - outputRaster - Distance
 }
 }
 }

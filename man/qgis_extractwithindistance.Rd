@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:ext
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Extracted
+\item OUTPUT - outputVector - Extracted (location)
 }
 }
 }

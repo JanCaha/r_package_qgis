@@ -17,9 +17,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * SURF - outputRaster - Surface
-##' * GRAD - outputRaster - Gradient
 ##' * CONC - outputRaster - Concentration
+##' * GRAD - outputRaster - Gradient
+##' * SURF - outputRaster - Surface
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ saga_surfacegradientandconcentration <- function(MASK = qgisprocess::qgis_defaul
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SURF")
+    qgisprocess::qgis_output(output, "CONC")
   }
 }

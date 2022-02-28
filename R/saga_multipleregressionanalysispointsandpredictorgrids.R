@@ -25,12 +25,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * INFO_COEFF - outputVector - Details
-##' * INFO_MODEL - outputVector - Details
-##' * INFO_STEPS - outputVector - Details
-##' * RESIDUALS - outputVector - Residuals
-##' * REGRESSION - outputRaster - Regression
+##' * INFO_COEFF - outputVector - Details: Coefficients
+##' * INFO_MODEL - outputVector - Details: Model
+##' * INFO_STEPS - outputVector - Details: Steps
 ##' * REGRESCORR - outputRaster - Regression with Residual Correction
+##' * REGRESSION - outputRaster - Regression
+##' * RESIDUALS - outputVector - Residuals
 ##'
 ##'
 ##' @export

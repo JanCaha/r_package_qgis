@@ -9,19 +9,19 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * X_MIN - outputNumber - Minimum x
-##' * X_MAX - outputNumber - Maximum x
-##' * Y_MIN - outputNumber - Minimum y
-##' * Y_MAX - outputNumber - Maximum y
-##' * EXTENT - outputString - Extent
-##' * PIXEL_WIDTH - outputNumber - Pixel size 
-##' * PIXEL_HEIGHT - outputNumber - Pixel size 
-##' * CRS_AUTHID - outputString - CRS authority identifier
-##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
-##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-##' * HAS_NODATA_VALUE - outputBoolean - Band has a nodata value set
-##' * NODATA_VALUE - outputNumber - Band nodata value
 ##' * BAND_COUNT - outputNumber - Number of bands in raster
+##' * CRS_AUTHID - outputString - CRS authority identifier
+##' * EXTENT - outputString - Extent
+##' * HAS_NODATA_VALUE - outputBoolean - Band has a nodata value set
+##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+##' * NODATA_VALUE - outputNumber - Band nodata value
+##' * PIXEL_HEIGHT - outputNumber - Pixel size (height) in map units
+##' * PIXEL_WIDTH - outputNumber - Pixel size (width) in map units
+##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
+##' * X_MAX - outputNumber - Maximum x-coordinate
+##' * X_MIN - outputNumber - Minimum x-coordinate
+##' * Y_MAX - outputNumber - Maximum y-coordinate
+##' * Y_MIN - outputNumber - Minimum y-coordinate
 ##'
 ##'
 ##' @export
@@ -38,6 +38,6 @@ qgis_rasterlayerproperties <- function(INPUT = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "X_MIN")
+    qgisprocess::qgis_output(output, "BAND_COUNT")
   }
 }

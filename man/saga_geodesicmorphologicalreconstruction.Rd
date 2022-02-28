@@ -41,8 +41,8 @@ QGIS Algorithm provided by SAGA Geodesic morphological reconstruction (saga:geod
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item DIFFERENCE_GRID - outputRaster - Difference Input - Reconstruction
 \item OBJECT_GRID - outputRaster - Object Grid
-\item DIFFERENCE_GRID - outputRaster - Difference Input
 }
 }
 }

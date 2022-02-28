@@ -10,7 +10,6 @@ saga_closegapswithspline(
   MAXGAPCELLS = qgisprocess::qgis_default_value(),
   MAXPOINTS = qgisprocess::qgis_default_value(),
   LOCALPOINTS = qgisprocess::qgis_default_value(),
-  EXTENDED = qgisprocess::qgis_default_value(),
   NEIGHBOURS = qgisprocess::qgis_default_value(),
   RADIUS = qgisprocess::qgis_default_value(),
   RELAXATION = qgisprocess::qgis_default_value(),
@@ -29,8 +28,6 @@ saga_closegapswithspline(
 \item{MAXPOINTS}{\code{number} - Maximum Points. A numeric value.}
 
 \item{LOCALPOINTS}{\code{number} - Number of Points for Local Interpolation. A numeric value.}
-
-\item{EXTENDED}{\code{boolean} - Extended Neighourhood. 1 for true/yes. 0 for false/no.}
 
 \item{NEIGHBOURS}{\code{enum}  of \verb{("[0] Neumann", "[1] Moore")} - Neighbourhood. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

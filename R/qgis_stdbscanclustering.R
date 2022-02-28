@@ -16,8 +16,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Clusters
 ##' * NUM_CLUSTERS - outputNumber - Number of clusters
+##' * OUTPUT - outputVector - Clusters
 ##'
 ##'
 ##' @export
@@ -34,6 +34,6 @@ qgis_stdbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), D
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "NUM_CLUSTERS")
   }
 }

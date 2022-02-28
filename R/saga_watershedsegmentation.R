@@ -17,9 +17,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * SEGMENTS - outputRaster - Segments
-##' * SEEDS - outputVector - Seed Points
 ##' * BORDERS - outputRaster - Borders
+##' * SEEDS - outputVector - Seed Points
+##' * SEGMENTS - outputRaster - Segments
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ saga_watershedsegmentation <- function(GRID = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SEGMENTS")
+    qgisprocess::qgis_output(output, "BORDERS")
   }
 }

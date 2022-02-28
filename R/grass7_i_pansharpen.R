@@ -21,9 +21,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * redoutput - outputRaster - Enhanced Red
-##' * greenoutput - outputRaster - Enhanced Green
 ##' * blueoutput - outputRaster - Enhanced Blue
+##' * greenoutput - outputRaster - Enhanced Green
+##' * redoutput - outputRaster - Enhanced Red
 ##'
 ##'
 ##' @export
@@ -40,6 +40,6 @@ grass7_i_pansharpen <- function(red = qgisprocess::qgis_default_value(), green =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "redoutput")
+    qgisprocess::qgis_output(output, "blueoutput")
   }
 }

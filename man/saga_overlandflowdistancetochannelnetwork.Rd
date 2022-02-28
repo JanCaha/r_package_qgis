@@ -39,8 +39,8 @@ QGIS Algorithm provided by SAGA Overland flow distance to channel network (saga:
 \subsection{Outputs description}{
 \itemize{
 \item DISTANCE - outputRaster - Overland Flow Distance
-\item DISTVERT - outputRaster - Vertical Overland Flow Distance
 \item DISTHORZ - outputRaster - Horizontal Overland Flow Distance
+\item DISTVERT - outputRaster - Vertical Overland Flow Distance
 }
 }
 }

@@ -50,8 +50,8 @@ QGIS Algorithm provided by SAGA Confusion matrix (polygons / grid) (saga:confusi
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item CONFUSION - outputVector - Confusion Matrix
 \item CLASSES - outputVector - Class Values
+\item CONFUSION - outputVector - Confusion Matrix
 \item SUMMARY - outputVector - Summary
 }
 }

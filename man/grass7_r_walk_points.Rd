@@ -80,8 +80,8 @@ QGIS Algorithm provided by GRASS r.walk.points (grass7:r.walk.points)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Cumulative cost
 \item outdir - outputRaster - Movement Directions
+\item output - outputRaster - Cumulative cost
 }
 }
 }

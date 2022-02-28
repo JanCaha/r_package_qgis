@@ -83,18 +83,18 @@ QGIS Algorithm provided by SAGA Directional statistics for raster layer (saga:di
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item MEAN - outputRaster - Arithmetic Mean
-\item DIFMEAN - outputRaster - Difference from Arithmetic Mean
-\item MIN - outputRaster - Minimum
-\item MAX - outputRaster - Maximum
-\item RANGE - outputRaster - Range
-\item VAR - outputRaster - Variance
-\item STDDEV - outputRaster - Standard Deviation
-\item STDDEVLO - outputRaster - Mean less Standard Deviation
-\item STDDEVHI - outputRaster - Mean plus Standard Deviation
 \item DEVMEAN - outputRaster - Deviation from Arithmetic Mean
+\item DIFMEAN - outputRaster - Difference from Arithmetic Mean
+\item MAX - outputRaster - Maximum
+\item MEAN - outputRaster - Arithmetic Mean
+\item MIN - outputRaster - Minimum
 \item PERCENT - outputRaster - Percentile
 \item POINTS_OUT - outputVector - Directional Statistics for Points
+\item RANGE - outputRaster - Range
+\item STDDEV - outputRaster - Standard Deviation
+\item STDDEVHI - outputRaster - Mean plus Standard Deviation
+\item STDDEVLO - outputRaster - Mean less Standard Deviation
+\item VAR - outputRaster - Variance
 }
 }
 }

@@ -69,7 +69,7 @@ QGIS Algorithm provided by GRASS v.lidar.correction (grass7:v.lidar.correction)
 \subsection{Outputs description}{
 \itemize{
 \item output - outputVector - Classified
-\item terrain - outputVector - Only
+\item terrain - outputVector - Only 'terrain' points
 }
 }
 }

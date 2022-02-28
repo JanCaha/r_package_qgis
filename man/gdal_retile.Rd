@@ -66,7 +66,7 @@ QGIS Algorithm provided by GDAL Retile (gdal:retile)
 \subsection{Outputs description}{
 \itemize{
 \item OUTPUT - outputFolder - Output directory
-\item OUTPUT_CSV - outputFile - CSV file containing the tile
+\item OUTPUT_CSV - outputFile - CSV file containing the tile(s) georeferencing information
 }
 }
 }

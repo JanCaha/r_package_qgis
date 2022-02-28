@@ -6,6 +6,7 @@
 \usage{
 gdal_convertformat(
   INPUT = qgisprocess::qgis_default_value(),
+  CONVERT_ALL_LAYERS = qgisprocess::qgis_default_value(),
   OPTIONS = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
@@ -14,6 +15,8 @@ gdal_convertformat(
 }
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
+
+\item{CONVERT_ALL_LAYERS}{\code{boolean} - Convert all layers from dataset. 1 for true/yes. 0 for false/no.}
 
 \item{OPTIONS}{\code{string} - Additional creation options. String value.}
 

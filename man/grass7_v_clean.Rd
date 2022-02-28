@@ -65,8 +65,8 @@ QGIS Algorithm provided by GRASS v.clean (grass7:v.clean)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Cleaned
 \item error - outputVector - Errors
+\item output - outputVector - Cleaned
 }
 }
 }

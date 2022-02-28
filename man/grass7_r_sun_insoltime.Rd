@@ -85,7 +85,7 @@ grass7_r_sun_insoltime(
 
 \item{.m}{\code{boolean} - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
 
-\item{insol_time}{\code{rasterDestination} - Insolation time (h). Path for new raster layer.}
+\item{insol_time}{\code{rasterDestination} - Insolation time (h) . Path for new raster layer.}
 
 \item{beam_rad}{\code{rasterDestination} - Irradiation raster map (Wh.m-2.day-1). Path for new raster layer.}
 
@@ -113,11 +113,11 @@ QGIS Algorithm provided by GRASS r.sun.insoltime (grass7:r.sun.insoltime)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item insol_time - outputRaster - Insolation time
-\item beam_rad - outputRaster - Irradiation raster map
-\item diff_rad - outputRaster - Irradiation raster map
-\item refl_rad - outputRaster - Irradiation raster map
-\item glob_rad - outputRaster - Irradiance
+\item beam_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
+\item diff_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
+\item glob_rad - outputRaster - Irradiance/irradiation raster map (Wh.m-2.day-1)
+\item insol_time - outputRaster - Insolation time (h)
+\item refl_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
 }
 }
 }

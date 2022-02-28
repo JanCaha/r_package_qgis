@@ -38,9 +38,9 @@ QGIS Algorithm provided by SAGA Raster proximity buffer (saga:rasterproximitybuf
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DISTANCE - outputRaster - Distance Grid
 \item ALLOC - outputRaster - Allocation Grid
 \item BUFFER - outputRaster - Buffer Grid
+\item DISTANCE - outputRaster - Distance Grid
 }
 }
 }

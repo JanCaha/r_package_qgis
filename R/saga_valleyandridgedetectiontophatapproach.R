@@ -17,11 +17,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * VALLEY - outputRaster - Valley Depth
 ##' * HILL - outputRaster - Hill Height
-##' * VALLEY_IDX - outputRaster - Valley Index
 ##' * HILL_IDX - outputRaster - Hill Index
 ##' * SLOPE_IDX - outputRaster - Hillslope Index
+##' * VALLEY - outputRaster - Valley Depth
+##' * VALLEY_IDX - outputRaster - Valley Index
 ##'
 ##'
 ##' @export
@@ -38,6 +38,6 @@ saga_valleyandridgedetectiontophatapproach <- function(DEM = qgisprocess::qgis_d
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "VALLEY")
+    qgisprocess::qgis_output(output, "HILL")
   }
 }

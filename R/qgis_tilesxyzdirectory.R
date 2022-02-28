@@ -21,7 +21,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * OUTPUT_DIRECTORY - outputFolder - Output directory
-##' * OUTPUT_HTML - outputHtml - Output html 
+##' * OUTPUT_HTML - outputHtml - Output html (Leaflet)
 ##'
 ##'
 ##' @export

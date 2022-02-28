@@ -122,11 +122,11 @@ QGIS Algorithm provided by GRASS r.sim.water (grass7:r.sim.water)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item depth - outputRaster - Water depth
-\item discharge - outputRaster - Water discharge
-\item error - outputRaster - Simulation error
-\item walkers_output - outputVector - Name of the output walkers vector points layer
+\item depth - outputRaster - Water depth (m)
+\item discharge - outputRaster - Water discharge (m3/s)
+\item error - outputRaster - Simulation error (m)
 \item logfile - outputFile - Name for sampling points output text file.
+\item walkers_output - outputVector - Name of the output walkers vector points layer
 }
 }
 }

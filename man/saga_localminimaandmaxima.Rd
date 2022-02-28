@@ -29,8 +29,8 @@ QGIS Algorithm provided by SAGA Local minima and maxima (saga:localminimaandmaxi
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item MINIMA - outputVector - Minima
 \item MAXIMA - outputVector - Maxima
+\item MINIMA - outputVector - Minima
 }
 }
 }

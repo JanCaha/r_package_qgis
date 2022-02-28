@@ -11,9 +11,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * DISTANCE - outputRaster - Distance
-##' * DIRECTION - outputRaster - Direction
 ##' * ALLOCATION - outputRaster - Allocation
+##' * DIRECTION - outputRaster - Direction
+##' * DISTANCE - outputRaster - Distance
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_proximityraster <- function(FEATURES = qgisprocess::qgis_default_value(), D
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DISTANCE")
+    qgisprocess::qgis_output(output, "ALLOCATION")
   }
 }

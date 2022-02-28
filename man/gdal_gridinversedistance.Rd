@@ -62,7 +62,7 @@ QGIS Algorithm provided by GDAL Grid (Inverse distance to a power) (gdal:gridinv
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Interpolated
+\item OUTPUT - outputRaster - Interpolated (IDW)
 }
 }
 }

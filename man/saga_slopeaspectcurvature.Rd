@@ -68,18 +68,18 @@ QGIS Algorithm provided by SAGA Slope, aspect, curvature (saga:slopeaspectcurvat
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item SLOPE - outputRaster - Slope
 \item ASPECT - outputRaster - Aspect
+\item C_CROS - outputRaster - Cross-Sectional Curvature
 \item C_GENE - outputRaster - General Curvature
+\item C_LONG - outputRaster - Longitudinal Curvature
+\item C_MAXI - outputRaster - Maximal Curvature
+\item C_MINI - outputRaster - Minimal Curvature
 \item C_PLAN - outputRaster - Plan Curvature
 \item C_PROF - outputRaster - Profile Curvature
+\item C_ROTO - outputRaster - Flow-Line Curvature
 \item C_TANG - outputRaster - Tangential Curvature
-\item C_LONG - outputRaster - Longitudinal Curvature
-\item C_CROS - outputRaster - Cross
-\item C_MINI - outputRaster - Minimal Curvature
-\item C_MAXI - outputRaster - Maximal Curvature
 \item C_TOTA - outputRaster - Total Curvature
-\item C_ROTO - outputRaster - Flow
+\item SLOPE - outputRaster - Slope
 }
 }
 }

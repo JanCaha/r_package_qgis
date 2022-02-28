@@ -45,8 +45,8 @@ QGIS Algorithm provided by SAGA Connectivity analysis (saga:connectivityanalysis
 \subsection{Outputs description}{
 \itemize{
 \item FILTERED_MASK - outputRaster - Filtered Image
-\item SYMBOLIC_IMAGE - outputRaster - Symbolic Image
 \item OUTLINES - outputVector - Outlines
+\item SYMBOLIC_IMAGE - outputRaster - Symbolic Image
 }
 }
 }

@@ -17,7 +17,7 @@ grass7_r_water_outlet(
 )
 }
 \arguments{
-\item{input}{\code{raster} - Name of input raster map. Path to a raster layer.}
+\item{input}{\code{raster} - Drainage direction raster. Path to a raster layer.}
 
 \item{coordinates}{\code{point} - Coordinates of outlet point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 

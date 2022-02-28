@@ -60,7 +60,7 @@ QGIS Algorithm provided by QGIS Generate XYZ tiles (Directory) (qgis:tilesxyzdir
 \subsection{Outputs description}{
 \itemize{
 \item OUTPUT_DIRECTORY - outputFolder - Output directory
-\item OUTPUT_HTML - outputHtml - Output html
+\item OUTPUT_HTML - outputHtml - Output html (Leaflet)
 }
 }
 }

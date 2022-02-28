@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * NOFLATS - outputRaster - No Flats
 ##' * FLATS - outputRaster - Flat Areas
+##' * NOFLATS - outputRaster - No Flats
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ saga_flatdetection <- function(DEM = qgisprocess::qgis_default_value(), FLAT_OUT
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NOFLATS")
+    qgisprocess::qgis_output(output, "FLATS")
   }
 }

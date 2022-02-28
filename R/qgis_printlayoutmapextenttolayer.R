@@ -11,11 +11,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Extent
-##' * WIDTH - outputNumber - Map width
 ##' * HEIGHT - outputNumber - Map height
-##' * SCALE - outputNumber - Map scale
+##' * OUTPUT - outputVector - Extent
 ##' * ROTATION - outputNumber - Map rotation
+##' * SCALE - outputNumber - Map scale
+##' * WIDTH - outputNumber - Map width
 ##'
 ##'
 ##' @export
@@ -32,6 +32,6 @@ qgis_printlayoutmapextenttolayer <- function(LAYOUT = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "HEIGHT")
   }
 }

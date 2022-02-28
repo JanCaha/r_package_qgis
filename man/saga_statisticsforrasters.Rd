@@ -56,16 +56,16 @@ QGIS Algorithm provided by SAGA Statistics for rasters (saga:statisticsforraster
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item MAX - outputRaster - Maximum
 \item MEAN - outputRaster - Arithmetic Mean
 \item MIN - outputRaster - Minimum
-\item MAX - outputRaster - Maximum
-\item VAR - outputRaster - Variance
-\item SUM - outputRaster - Sum
-\item RANGE - outputRaster - Range
 \item PCTL - outputRaster - Percentile
+\item RANGE - outputRaster - Range
 \item STDDEV - outputRaster - Standard Deviation
-\item STDDEVLO - outputRaster - Mean less Standard Deviation
 \item STDDEVHI - outputRaster - Mean plus Standard Deviation
+\item STDDEVLO - outputRaster - Mean less Standard Deviation
+\item SUM - outputRaster - Sum
+\item VAR - outputRaster - Variance
 }
 }
 }

@@ -41,12 +41,12 @@ QGIS Algorithm provided by QGIS (native c++) Detect dataset changes (native:dete
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item UNCHANGED - outputVector - Unchanged features
 \item ADDED - outputVector - Added features
-\item DELETED - outputVector - Deleted features
-\item UNCHANGED_COUNT - outputNumber - Count of unchanged features
 \item ADDED_COUNT - outputNumber - Count of features added in revised layer
+\item DELETED - outputVector - Deleted features
 \item DELETED_COUNT - outputNumber - Count of features deleted from original layer
+\item UNCHANGED - outputVector - Unchanged features
+\item UNCHANGED_COUNT - outputNumber - Count of unchanged features
 }
 }
 }

@@ -15,11 +15,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * FEATURES_WITH_EMPTY_OR_NO_GEOMETRY - outputNumber - Number of features with empty or no geometry
 ##' * OUTPUT - outputVector - Random points in polygons
 ##' * OUTPUT_POINTS - outputNumber - Total number of points generated
 ##' * POINTS_MISSED - outputNumber - Number of missed points
 ##' * POLYGONS_WITH_MISSED_POINTS - outputNumber - Number of polygons with missed points
-##' * FEATURES_WITH_EMPTY_OR_NO_GEOMETRY - outputNumber - Number of features with empty or no geometry
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ qgis_randompointsinpolygons <- function(INPUT = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "FEATURES_WITH_EMPTY_OR_NO_GEOMETRY")
   }
 }

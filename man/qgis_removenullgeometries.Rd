@@ -32,8 +32,8 @@ QGIS Algorithm provided by QGIS (native c++) Remove null geometries (native:remo
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Non null geometries
 \item NULL_OUTPUT - outputVector - Null geometries
+\item OUTPUT - outputVector - Non null geometries
 }
 }
 }

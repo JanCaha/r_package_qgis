@@ -21,7 +21,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Interpolated 
+##' * OUTPUT - outputRaster - Interpolated (IDW)
 ##'
 ##'
 ##' @export

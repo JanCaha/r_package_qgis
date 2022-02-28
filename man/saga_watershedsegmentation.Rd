@@ -50,9 +50,9 @@ QGIS Algorithm provided by SAGA Watershed segmentation (saga:watershedsegmentati
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item SEGMENTS - outputRaster - Segments
-\item SEEDS - outputVector - Seed Points
 \item BORDERS - outputRaster - Borders
+\item SEEDS - outputVector - Seed Points
+\item SEGMENTS - outputRaster - Segments
 }
 }
 }

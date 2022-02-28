@@ -50,12 +50,12 @@ QGIS Algorithm provided by SAGA Vegetation index (distance based) (saga:vegetati
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item PVI0 - outputRaster - Perpendicular Vegetation Index
-\item PVI1 - outputRaster - Perpendicular Vegetation Index
-\item PVI2 - outputRaster - Perpendicular Vegetation Index
-\item PVI3 - outputRaster - Perpendicular Vegetation Index
-\item TSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index
-\item ATSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index
+\item ATSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index (Baret and Guyot, 1991)
+\item PVI0 - outputRaster - Perpendicular Vegetation Index (Richardson and Wiegand, 1977)
+\item PVI1 - outputRaster - Perpendicular Vegetation Index (Perry and Lautenschlager, 1984)
+\item PVI2 - outputRaster - Perpendicular Vegetation Index (Walther and Shabaani)
+\item PVI3 - outputRaster - Perpendicular Vegetation Index (Qi, et al., 1994)
+\item TSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index (Baret et al. 1989)
 }
 }
 }

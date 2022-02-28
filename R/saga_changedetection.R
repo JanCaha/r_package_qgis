@@ -12,7 +12,6 @@
 ##' @param FIN_LUT_MIN `field` - Value. The name of an existing field. ; delimited list of existing field names.
 ##' @param FIN_LUT_MAX `field` - Value (Maximum). The name of an existing field. ; delimited list of existing field names.
 ##' @param FIN_LUT_NAM `field` - Name. The name of an existing field. ; delimited list of existing field names.
-##' @param NOCHANGE `boolean` - Report Unchanged Classes. 1 for true/yes. 0 for false/no.
 ##' @param OUTPUT `enum`  of `("[0] cells", "[1] percent", "[2] area")` - Output as.... Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param CHANGE `rasterDestination` - Changes. Path for new raster layer.
 ##' @param CHANGES `vectorDestination` - Changes. Path for new vector layer.
@@ -29,11 +28,11 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_changedetection <- function(INITIAL = qgisprocess::qgis_default_value(), INI_LUT = qgisprocess::qgis_default_value(), INI_LUT_MIN = qgisprocess::qgis_default_value(), INI_LUT_MAX = qgisprocess::qgis_default_value(), INI_LUT_NAM = qgisprocess::qgis_default_value(), FINAL = qgisprocess::qgis_default_value(), FIN_LUT = qgisprocess::qgis_default_value(), FIN_LUT_MIN = qgisprocess::qgis_default_value(), FIN_LUT_MAX = qgisprocess::qgis_default_value(), FIN_LUT_NAM = qgisprocess::qgis_default_value(), NOCHANGE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), CHANGE = qgisprocess::qgis_default_value(), CHANGES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_changedetection <- function(INITIAL = qgisprocess::qgis_default_value(), INI_LUT = qgisprocess::qgis_default_value(), INI_LUT_MIN = qgisprocess::qgis_default_value(), INI_LUT_MAX = qgisprocess::qgis_default_value(), INI_LUT_NAM = qgisprocess::qgis_default_value(), FINAL = qgisprocess::qgis_default_value(), FIN_LUT = qgisprocess::qgis_default_value(), FIN_LUT_MIN = qgisprocess::qgis_default_value(), FIN_LUT_MAX = qgisprocess::qgis_default_value(), FIN_LUT_NAM = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), CHANGE = qgisprocess::qgis_default_value(), CHANGES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("saga:changedetection")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:changedetection", `INITIAL` = INITIAL, `INI_LUT` = INI_LUT, `INI_LUT_MIN` = INI_LUT_MIN, `INI_LUT_MAX` = INI_LUT_MAX, `INI_LUT_NAM` = INI_LUT_NAM, `FINAL` = FINAL, `FIN_LUT` = FIN_LUT, `FIN_LUT_MIN` = FIN_LUT_MIN, `FIN_LUT_MAX` = FIN_LUT_MAX, `FIN_LUT_NAM` = FIN_LUT_NAM, `NOCHANGE` = NOCHANGE, `OUTPUT` = OUTPUT, `CHANGE` = CHANGE, `CHANGES` = CHANGES,...)
+  output <- qgisprocess::qgis_run_algorithm("saga:changedetection", `INITIAL` = INITIAL, `INI_LUT` = INI_LUT, `INI_LUT_MIN` = INI_LUT_MIN, `INI_LUT_MAX` = INI_LUT_MAX, `INI_LUT_NAM` = INI_LUT_NAM, `FINAL` = FINAL, `FIN_LUT` = FIN_LUT, `FIN_LUT_MIN` = FIN_LUT_MIN, `FIN_LUT_MAX` = FIN_LUT_MAX, `FIN_LUT_NAM` = FIN_LUT_NAM, `OUTPUT` = OUTPUT, `CHANGE` = CHANGE, `CHANGES` = CHANGES,...)
 
   if (.complete_output) {
     return(output)

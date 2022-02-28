@@ -116,11 +116,11 @@ QGIS Algorithm provided by GRASS r.sun.incidout (grass7:r.sun.incidout)
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item beam_rad - outputRaster - Beam irradiance (W.m-2)
+\item diff_rad - outputRaster - Diffuse irradiance (W.m-2)
+\item glob_rad - outputRaster - Global (total) irradiance/irradiation (W.m-2)
 \item incidout - outputRaster - incidence angle raster map
-\item beam_rad - outputRaster - Beam irradiance
-\item diff_rad - outputRaster - Diffuse irradiance
-\item refl_rad - outputRaster - Ground reflected irradiance
-\item glob_rad - outputRaster - Global
+\item refl_rad - outputRaster - Ground reflected irradiance (W.m-2)
 }
 }
 }

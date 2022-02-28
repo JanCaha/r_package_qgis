@@ -38,13 +38,13 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * transport_capacity - outputRaster - Transport capacity 
-##' * tlimit_erosion_deposition - outputRaster - Transport limited erosion
-##' * sediment_concentration - outputRaster - Sediment concentration 
-##' * sediment_flux - outputRaster - Sediment flux 
-##' * erosion_deposition - outputRaster - Erosion
-##' * walkers_output - outputVector - Name of the output walkers vector points layer
+##' * erosion_deposition - outputRaster - Erosion-deposition (kg/m2s)
 ##' * logfile - outputFile - Name for sampling points output text file.
+##' * sediment_concentration - outputRaster - Sediment concentration (particle/m3)
+##' * sediment_flux - outputRaster - Sediment flux (kg/ms)
+##' * tlimit_erosion_deposition - outputRaster - Transport limited erosion-deposition (kg/m2s)
+##' * transport_capacity - outputRaster - Transport capacity (kg/ms)
+##' * walkers_output - outputVector - Name of the output walkers vector points layer
 ##'
 ##'
 ##' @export
@@ -61,6 +61,6 @@ grass7_r_sim_sediment <- function(elevation = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "transport_capacity")
+    qgisprocess::qgis_output(output, "erosion_deposition")
   }
 }

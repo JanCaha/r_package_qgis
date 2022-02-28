@@ -18,8 +18,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * TARGET_OUT_GRID - outputRaster - Grid
 ##' * RESIDUALS - outputVector - Residuals
+##' * TARGET_OUT_GRID - outputRaster - Grid
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ saga_polynomialregression <- function(POINTS = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "TARGET_OUT_GRID")
+    qgisprocess::qgis_output(output, "RESIDUALS")
   }
 }

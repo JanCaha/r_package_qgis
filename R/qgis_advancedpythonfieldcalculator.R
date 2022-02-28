@@ -4,7 +4,7 @@
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD_NAME `string` - Result field name. String value.
-##' @param FIELD_TYPE `enum`  of `("Integer", "Float", "String")` - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param FIELD_TYPE `enum`  of `("Integer (32 bit)", "Decimal (double)", "Text (string)", "Boolean", "Date", "Time", "Date & Time", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")` - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param FIELD_LENGTH `number` - Field length. A numeric value.
 ##' @param FIELD_PRECISION `number` - Field precision. A numeric value.
 ##' @param GLOBAL `string` - Global expression. String value.

@@ -25,10 +25,10 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * RESIDUALS - outputVector - Residuals
-##' * REGRESSION - outputRaster - Regression
-##' * QUALITY - outputRaster - Coefficient of Determination
 ##' * INTERCEPT - outputRaster - Intercept
+##' * QUALITY - outputRaster - Coefficient of Determination
+##' * REGRESSION - outputRaster - Regression
+##' * RESIDUALS - outputVector - Residuals
 ##' * SLOPE - outputRaster - Slope
 ##'
 ##'
@@ -46,6 +46,6 @@ saga_gwrforsinglepredictorlayer <- function(POINTS = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESIDUALS")
+    qgisprocess::qgis_output(output, "INTERCEPT")
   }
 }

@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Least cost paths (saga:leastcostpaths)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item POINTS - outputVector - Profile
-\item LINE - outputVector - Profile
+\item LINE - outputVector - Profile (lines)
+\item POINTS - outputVector - Profile (points)
 }
 }
 }

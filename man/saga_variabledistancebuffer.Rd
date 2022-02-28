@@ -10,8 +10,6 @@ saga_variabledistancebuffer(
   DIST_SCALE = qgisprocess::qgis_default_value(),
   NZONES = qgisprocess::qgis_default_value(),
   DARC = qgisprocess::qgis_default_value(),
-  DISSOLVE = qgisprocess::qgis_default_value(),
-  POLY_INNER = qgisprocess::qgis_default_value(),
   BUFFER = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -27,10 +25,6 @@ saga_variabledistancebuffer(
 \item{NZONES}{\code{number} - Number of Buffer Zones. A numeric value.}
 
 \item{DARC}{\code{number} - Arc Vertex Distance (Degree). A numeric value.}
-
-\item{DISSOLVE}{\code{boolean} - Dissolve Buffers. 1 for true/yes. 0 for false/no.}
-
-\item{POLY_INNER}{\code{boolean} - Inner Buffer. 1 for true/yes. 0 for false/no.}
 
 \item{BUFFER}{\code{vectorDestination} - Buffer. Path for new vector layer.}
 

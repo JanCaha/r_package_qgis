@@ -38,8 +38,8 @@ QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extrac
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Extracted
-\item FAIL_OUTPUT - outputVector - Extracted
+\item FAIL_OUTPUT - outputVector - Extracted (non-matching)
+\item OUTPUT - outputVector - Extracted (attribute)
 }
 }
 }

@@ -50,8 +50,8 @@ QGIS Algorithm provided by GRASS i.smap (grass7:i.smap)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Classification
 \item goodness - outputRaster - Goodness_of_fit
+\item output - outputRaster - Classification
 }
 }
 }

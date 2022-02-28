@@ -32,7 +32,7 @@ QGIS Algorithm provided by GDAL Clip vector by mask layer (gdal:clipvectorbypoly
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Clipped
+\item OUTPUT - outputVector - Clipped (mask)
 }
 }
 }

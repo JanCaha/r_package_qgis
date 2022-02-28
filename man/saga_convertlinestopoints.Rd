@@ -6,7 +6,6 @@
 \usage{
 saga_convertlinestopoints(
   LINES = qgisprocess::qgis_default_value(),
-  ADD = qgisprocess::qgis_default_value(),
   DIST = qgisprocess::qgis_default_value(),
   POINTS = qgisprocess::qgis_default_value(),
   ...,
@@ -15,8 +14,6 @@ saga_convertlinestopoints(
 }
 \arguments{
 \item{LINES}{\code{source} - Lines. Path to a vector layer.}
-
-\item{ADD}{\code{boolean} - Insert Additional Points. 1 for true/yes. 0 for false/no.}
 
 \item{DIST}{\code{number} - Insert Distance. A numeric value.}
 

@@ -22,8 +22,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Cleaned
 ##' * error - outputVector - Errors
+##' * output - outputVector - Cleaned
 ##'
 ##'
 ##' @export
@@ -40,6 +40,6 @@ grass7_v_clean <- function(input = qgisprocess::qgis_default_value(), type = qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "error")
   }
 }

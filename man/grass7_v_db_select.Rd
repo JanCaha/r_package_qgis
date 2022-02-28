@@ -25,7 +25,7 @@ grass7_v_db_select(
 )
 }
 \arguments{
-\item{map}{\code{source} - Input vector map. Path to a vector layer.}
+\item{map}{\code{source} - Input vector map . Path to a vector layer.}
 
 \item{layer}{\code{number} - Layer Number. A numeric value.}
 

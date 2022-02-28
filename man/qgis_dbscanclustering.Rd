@@ -41,8 +41,8 @@ QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclu
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Clusters
 \item NUM_CLUSTERS - outputNumber - Number of clusters
+\item OUTPUT - outputVector - Clusters
 }
 }
 }

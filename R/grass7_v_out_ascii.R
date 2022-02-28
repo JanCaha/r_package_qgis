@@ -20,7 +20,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputFile - Name for output ASCII file or ASCII vector name if 
+##' * output - outputFile - Name for output ASCII file or ASCII vector name if '-o' is defined
 ##'
 ##'
 ##' @export

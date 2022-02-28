@@ -65,8 +65,8 @@ QGIS Algorithm provided by QGIS (native c++) Service area (from point) (native:s
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_LINES - outputVector - Service area
-\item OUTPUT - outputVector - Service area
+\item OUTPUT - outputVector - Service area (boundary nodes)
+\item OUTPUT_LINES - outputVector - Service area (lines)
 }
 }
 }

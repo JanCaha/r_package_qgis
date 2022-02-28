@@ -26,8 +26,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * base_ros - outputRaster - Base ROS
-##' * max_ros - outputRaster - Max ROS
 ##' * direction_ros - outputRaster - Direction ROS
+##' * max_ros - outputRaster - Max ROS
 ##' * spotting_distance - outputRaster - Spotting Distance
 ##'
 ##'

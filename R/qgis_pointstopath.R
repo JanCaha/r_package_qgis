@@ -14,9 +14,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * NUM_PATHS - outputNumber - Number of paths
 ##' * OUTPUT - outputVector - Paths
 ##' * OUTPUT_TEXT_DIR - outputFolder - Directory for text output
-##' * NUM_PATHS - outputNumber - Number of paths
 ##'
 ##'
 ##' @export
@@ -33,6 +33,6 @@ qgis_pointstopath <- function(INPUT = qgisprocess::qgis_default_value(), CLOSE_P
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "NUM_PATHS")
   }
 }

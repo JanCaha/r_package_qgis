@@ -6,8 +6,8 @@
 \usage{
 qgis_joinattributesbylocation(
   INPUT = qgisprocess::qgis_default_value(),
-  JOIN = qgisprocess::qgis_default_value(),
   PREDICATE = qgisprocess::qgis_default_value(),
+  JOIN = qgisprocess::qgis_default_value(),
   JOIN_FIELDS = qgisprocess::qgis_default_value(),
   METHOD = qgisprocess::qgis_default_value(),
   DISCARD_NONMATCHING = qgisprocess::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_joinattributesbylocation(
 )
 }
 \arguments{
-\item{INPUT}{\code{source} - Base Layer. Path to a vector layer.}
+\item{INPUT}{\code{source} - Join to features in. Path to a vector layer.}
 
-\item{JOIN}{\code{source} - Join Layer. Path to a vector layer.}
+\item{PREDICATE}{\code{enum}  of \verb{("intersect", "contain", "equal", "touch", "overlap", "are within", "cross")} - Features they (geometric predicate). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{PREDICATE}{\code{enum}  of \verb{("intersects", "contains", "equals", "touches", "overlaps", "within", "crosses")} - Geometric predicate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{JOIN}{\code{source} - By comparing to. Path to a vector layer.}
 
 \item{JOIN_FIELDS}{\code{field} - Fields to add (leave empty to use all fields). The name of an existing field. ; delimited list of existing field names.}
 
@@ -47,9 +47,9 @@ QGIS Algorithm provided by QGIS (native c++) Join attributes by location (native
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Joined layer
-\item NON_MATCHING - outputVector - Unjoinable features from first layer
 \item JOINED_COUNT - outputNumber - Number of joined features from input table
+\item NON_MATCHING - outputVector - Unjoinable features from first layer
+\item OUTPUT - outputVector - Joined layer
 }
 }
 }

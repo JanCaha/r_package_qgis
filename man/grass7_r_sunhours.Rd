@@ -65,8 +65,8 @@ QGIS Algorithm provided by GRASS r.sunhours (grass7:r.sunhours)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item elevation - outputRaster - Solar Elevation Angle
 \item azimuth - outputRaster - Solar Azimuth Angle
+\item elevation - outputRaster - Solar Elevation Angle
 \item sunhour - outputRaster - Sunshine Hours
 }
 }

@@ -24,8 +24,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Segmented Raster
 ##' * goodness - outputRaster - Goodness Raster
+##' * output - outputRaster - Segmented Raster
 ##'
 ##'
 ##' @export
@@ -42,6 +42,6 @@ grass7_i_segment <- function(input = qgisprocess::qgis_default_value(), threshol
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "goodness")
   }
 }

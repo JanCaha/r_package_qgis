@@ -11,14 +11,14 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * CRS_AUTHID - outputString - CRS authority identifier
+##' * EXTENT - outputString - Extent
+##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+##' * NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
 ##' * OUTPUT_HTML_FILE - outputHtml - Unique values report
 ##' * OUTPUT_TABLE - outputVector - Unique values table
-##' * EXTENT - outputString - Extent
-##' * CRS_AUTHID - outputString - CRS authority identifier
-##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
-##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
-##' * NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
 ##'
 ##'
 ##' @export
@@ -35,6 +35,6 @@ qgis_rasterlayeruniquevaluesreport <- function(INPUT = qgisprocess::qgis_default
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_HTML_FILE")
+    qgisprocess::qgis_output(output, "CRS_AUTHID")
   }
 }

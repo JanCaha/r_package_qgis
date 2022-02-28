@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * LST - outputRaster - Land Surface Temperature 
+##' * LST - outputRaster - Land Surface Temperature (Deg.Celsius)
 ##'
 ##'
 ##' @export

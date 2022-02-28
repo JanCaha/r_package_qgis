@@ -35,7 +35,7 @@ QGIS Algorithm provided by QGIS Random extract within subsets (qgis:randomextrac
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Extracted
+\item OUTPUT - outputVector - Extracted (random stratified)
 }
 }
 }

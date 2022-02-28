@@ -41,9 +41,9 @@ QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item NUM_PATHS - outputNumber - Number of paths
 \item OUTPUT - outputVector - Paths
 \item OUTPUT_TEXT_DIR - outputFolder - Directory for text output
-\item NUM_PATHS - outputNumber - Number of paths
 }
 }
 }

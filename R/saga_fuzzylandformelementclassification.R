@@ -36,25 +36,25 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * PLAIN - outputRaster - Plain
-##' * PIT - outputRaster - Pit
-##' * PEAK - outputRaster - Peak
-##' * RIDGE - outputRaster - Ridge
-##' * CHANNEL - outputRaster - Channel
-##' * SADDLE - outputRaster - Saddle
 ##' * BSLOPE - outputRaster - Back Slope
-##' * FSLOPE - outputRaster - Foot Slope
-##' * SSLOPE - outputRaster - Shoulder Slope
-##' * HOLLOW - outputRaster - Hollow
+##' * CHANNEL - outputRaster - Channel
+##' * CI - outputRaster - Confusion Index
+##' * ENTROPY - outputRaster - Entropy
 ##' * FHOLLOW - outputRaster - Foot Hollow
+##' * FORM - outputRaster - Landform
+##' * FSLOPE - outputRaster - Foot Slope
+##' * FSPUR - outputRaster - Foot Spur
+##' * HOLLOW - outputRaster - Hollow
+##' * MEM - outputRaster - Maximum Membership
+##' * PEAK - outputRaster - Peak
+##' * PIT - outputRaster - Pit
+##' * PLAIN - outputRaster - Plain
+##' * RIDGE - outputRaster - Ridge
+##' * SADDLE - outputRaster - Saddle
 ##' * SHOLLOW - outputRaster - Shoulder Hollow
 ##' * SPUR - outputRaster - Spur
-##' * FSPUR - outputRaster - Foot Spur
+##' * SSLOPE - outputRaster - Shoulder Slope
 ##' * SSPUR - outputRaster - Shoulder Spur
-##' * FORM - outputRaster - Landform
-##' * MEM - outputRaster - Maximum Membership
-##' * ENTROPY - outputRaster - Entropy
-##' * CI - outputRaster - Confusion Index
 ##'
 ##'
 ##' @export
@@ -71,6 +71,6 @@ saga_fuzzylandformelementclassification <- function(SLOPE = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PLAIN")
+    qgisprocess::qgis_output(output, "BSLOPE")
   }
 }

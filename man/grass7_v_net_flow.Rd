@@ -77,8 +77,8 @@ QGIS Algorithm provided by GRASS v.net.flow (grass7:v.net.flow)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Network_Flow
 \item cut - outputVector - Network_Cut
+\item output - outputVector - Network_Flow
 }
 }
 }

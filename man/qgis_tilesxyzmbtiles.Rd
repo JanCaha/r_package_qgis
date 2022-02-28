@@ -47,7 +47,7 @@ QGIS Algorithm provided by QGIS Generate XYZ tiles (MBTiles) (qgis:tilesxyzmbtil
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_FILE - outputFile - Output file
+\item OUTPUT_FILE - outputFile - Output file (for MBTiles)
 }
 }
 }

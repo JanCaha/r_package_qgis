@@ -65,8 +65,8 @@ QGIS Algorithm provided by SAGA Fragmentation (standard) (saga:fragmentationstan
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DENSITY - outputRaster - Density
-\item CONNECTIVITY - outputRaster - Connectivity
+\item CONNECTIVITY - outputRaster - Connectivity (Percent)
+\item DENSITY - outputRaster - Density (Percent)
 \item FRAGMENTATION - outputRaster - Fragmentation
 \item FRAGSTATS - outputVector - Summary
 }

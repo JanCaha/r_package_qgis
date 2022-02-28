@@ -19,8 +19,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * RESIDUALS - outputVector - Residuals
 ##' * REGRESSION - outputRaster - Regression
+##' * RESIDUALS - outputVector - Residuals
 ##'
 ##'
 ##' @export
@@ -37,6 +37,6 @@ saga_zonalmultipleregressionanalysispointsandpredictorgrids <- function(PREDICTO
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESIDUALS")
+    qgisprocess::qgis_output(output, "REGRESSION")
   }
 }

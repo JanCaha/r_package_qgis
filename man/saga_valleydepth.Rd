@@ -38,8 +38,8 @@ QGIS Algorithm provided by SAGA Valley depth (saga:valleydepth)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item VALLEY_DEPTH - outputRaster - Valley Depth
 \item RIDGE_LEVEL - outputRaster - Ridge Level
+\item VALLEY_DEPTH - outputRaster - Valley Depth
 }
 }
 }

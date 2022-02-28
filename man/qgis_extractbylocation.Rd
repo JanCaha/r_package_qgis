@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extract
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Extracted
+\item OUTPUT - outputVector - Extracted (location)
 }
 }
 }

@@ -10,8 +10,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * MINIMA - outputVector - Minima
 ##' * MAXIMA - outputVector - Maxima
+##' * MINIMA - outputVector - Minima
 ##'
 ##'
 ##' @export
@@ -28,6 +28,6 @@ saga_localminimaandmaxima <- function(GRID = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MINIMA")
+    qgisprocess::qgis_output(output, "MAXIMA")
   }
 }

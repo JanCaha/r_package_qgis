@@ -17,11 +17,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * VISIBLE - outputRaster - Visible Sky
-##' * SVF - outputRaster - Sky View Factor
-##' * SIMPLE - outputRaster - Sky View Factor 
-##' * TERRAIN - outputRaster - Terrain View Factor
 ##' * DISTANCE - outputRaster - Terrain View Factor
+##' * SIMPLE - outputRaster - Sky View Factor (Simplified)
+##' * SVF - outputRaster - Sky View Factor
+##' * TERRAIN - outputRaster - Terrain View Factor
+##' * VISIBLE - outputRaster - Visible Sky
 ##'
 ##'
 ##' @export
@@ -38,6 +38,6 @@ saga_skyviewfactor <- function(DEM = qgisprocess::qgis_default_value(), RADIUS =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "VISIBLE")
+    qgisprocess::qgis_output(output, "DISTANCE")
   }
 }

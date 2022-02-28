@@ -41,8 +41,8 @@ QGIS Algorithm provided by GRASS i.fft (grass7:i.fft)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item real - outputRaster - Real part arrays
 \item imaginary - outputRaster - Imaginary part arrays
+\item real - outputRaster - Real part arrays
 }
 }
 }

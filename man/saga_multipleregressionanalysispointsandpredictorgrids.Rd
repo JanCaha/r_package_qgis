@@ -75,12 +75,12 @@ QGIS Algorithm provided by SAGA Multiple regression analysis (points and predict
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item INFO_COEFF - outputVector - Details
-\item INFO_MODEL - outputVector - Details
-\item INFO_STEPS - outputVector - Details
-\item RESIDUALS - outputVector - Residuals
-\item REGRESSION - outputRaster - Regression
+\item INFO_COEFF - outputVector - Details: Coefficients
+\item INFO_MODEL - outputVector - Details: Model
+\item INFO_STEPS - outputVector - Details: Steps
 \item REGRESCORR - outputRaster - Regression with Residual Correction
+\item REGRESSION - outputRaster - Regression
+\item RESIDUALS - outputVector - Residuals
 }
 }
 }

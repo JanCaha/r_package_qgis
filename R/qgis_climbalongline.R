@@ -9,11 +9,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * MAXELEVATION - outputNumber - Maximum elevation
+##' * MINELEVATION - outputNumber - Minimum elevation
 ##' * OUTPUT - outputVector - Climb layer
 ##' * TOTALCLIMB - outputNumber - Total climb
 ##' * TOTALDESCENT - outputNumber - Total descent
-##' * MINELEVATION - outputNumber - Minimum elevation
-##' * MAXELEVATION - outputNumber - Maximum elevation
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ qgis_climbalongline <- function(INPUT = qgisprocess::qgis_default_value(), OUTPU
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "MAXELEVATION")
   }
 }

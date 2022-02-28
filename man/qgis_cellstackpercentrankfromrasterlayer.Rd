@@ -44,12 +44,12 @@ QGIS Algorithm provided by QGIS (native c++) Cell stack percentrank from raster 
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Output layer
-\item EXTENT - outputString - Extent
 \item CRS_AUTHID - outputString - CRS authority identifier
-\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
+\item EXTENT - outputString - Extent
 \item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+\item OUTPUT - outputRaster - Output layer
 \item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
 }
 }
 }

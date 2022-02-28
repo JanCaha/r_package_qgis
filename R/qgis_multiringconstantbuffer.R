@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Multi
+##' * OUTPUT - outputVector - Multi-ring buffer (constant distance)
 ##'
 ##'
 ##' @export

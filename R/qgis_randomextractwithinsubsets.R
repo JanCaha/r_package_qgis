@@ -12,7 +12,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Extracted 
+##' * OUTPUT - outputVector - Extracted (random stratified)
 ##'
 ##'
 ##' @export

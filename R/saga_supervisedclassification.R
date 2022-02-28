@@ -7,7 +7,7 @@
 ##' @param ROI_ID `field` - Class Identifier. The name of an existing field. ; delimited list of existing field names.
 ##' @param STATS `source` - Class Statistics. Path to a vector layer.
 ##' @param STATS_SRC `enum`  of `("[0] training areas", "[1] table")` - Get Class Statistics from.... Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param METHOD `enum`  of `("[0] Binary Encoding", "[1] Parallelepiped", "[2] Minimum Distance", "[3] Mahalanobis Distance", "[4] Maximum Likelihood", "[5] Spectral Angle Mapping", "[6] Winner Takes All")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param METHOD `enum`  of `("[0] Binary Encoding", "[1] Parallelepiped", "[2] Minimum Distance", "[3] Mahalanobis Distance", "[4] Maximum Likelihood", "[5] Spectral Angle Mapping", " [6] Winner Takes All")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param NORMALISE `boolean` - Normalise. 1 for true/yes. 0 for false/no.
 ##' @param THRESHOLD_DIST `number` - Distance Threshold. A numeric value.
 ##' @param THRESHOLD_PROB `number` - Probability Threshold (Percent). A numeric value.
@@ -27,8 +27,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * CLASS_INFO - outputVector - Class Information
 ##' * CLASSES - outputRaster - Classification
+##' * CLASS_INFO - outputVector - Class Information
 ##' * QUALITY - outputRaster - Quality
 ##'
 ##'
@@ -46,6 +46,6 @@ saga_supervisedclassification <- function(GRIDS = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLASS_INFO")
+    qgisprocess::qgis_output(output, "CLASSES")
   }
 }

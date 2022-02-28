@@ -13,8 +13,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * PROBABILITY - outputRaster - Probability
 ##' * CLASSES - outputRaster - Classification
+##' * PROBABILITY - outputRaster - Probability
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ saga_normalbayesclassificationopencv <- function(FEATURES = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PROBABILITY")
+    qgisprocess::qgis_output(output, "CLASSES")
   }
 }

@@ -16,7 +16,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - One
+##' * OUTPUT - outputVector - One-sided buffer
 ##'
 ##'
 ##' @export

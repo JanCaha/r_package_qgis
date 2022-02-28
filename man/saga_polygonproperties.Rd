@@ -6,10 +6,6 @@
 \usage{
 saga_polygonproperties(
   POLYGONS = qgisprocess::qgis_default_value(),
-  BPARTS = qgisprocess::qgis_default_value(),
-  BPOINTS = qgisprocess::qgis_default_value(),
-  BLENGTH = qgisprocess::qgis_default_value(),
-  BAREA = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -17,14 +13,6 @@ saga_polygonproperties(
 }
 \arguments{
 \item{POLYGONS}{\code{source} - Polygons. Path to a vector layer.}
-
-\item{BPARTS}{\code{boolean} - Number of Parts. 1 for true/yes. 0 for false/no.}
-
-\item{BPOINTS}{\code{boolean} - Number of Vertices. 1 for true/yes. 0 for false/no.}
-
-\item{BLENGTH}{\code{boolean} - Perimeter. 1 for true/yes. 0 for false/no.}
-
-\item{BAREA}{\code{boolean} - Area. 1 for true/yes. 0 for false/no.}
 
 \item{OUTPUT}{\code{vectorDestination} - Polygons with Property Attributes. Path for new vector layer.}
 

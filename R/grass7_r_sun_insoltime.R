@@ -24,7 +24,7 @@
 ##' @param civil_time `number` - Civil time zone value, if none, the time will be local solar time. A numeric value.
 ##' @param .p `boolean` - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.
 ##' @param .m `boolean` - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
-##' @param insol_time `rasterDestination` - Insolation time (h). Path for new raster layer.
+##' @param insol_time `rasterDestination` - Insolation time (h) . Path for new raster layer.
 ##' @param beam_rad `rasterDestination` - Irradiation raster map (Wh.m-2.day-1). Path for new raster layer.
 ##' @param diff_rad `rasterDestination` - Irradiation raster map (Wh.m-2.day-1). Path for new raster layer.
 ##' @param refl_rad `rasterDestination` - Irradiation raster map (Wh.m-2.day-1). Path for new raster layer.
@@ -38,11 +38,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * insol_time - outputRaster - Insolation time 
-##' * beam_rad - outputRaster - Irradiation raster map 
-##' * diff_rad - outputRaster - Irradiation raster map 
-##' * refl_rad - outputRaster - Irradiation raster map 
-##' * glob_rad - outputRaster - Irradiance
+##' * beam_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
+##' * diff_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
+##' * glob_rad - outputRaster - Irradiance/irradiation raster map (Wh.m-2.day-1)
+##' * insol_time - outputRaster - Insolation time (h) 
+##' * refl_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
 ##'
 ##'
 ##' @export
@@ -59,6 +59,6 @@ grass7_r_sun_insoltime <- function(elevation = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "insol_time")
+    qgisprocess::qgis_output(output, "beam_rad")
   }
 }

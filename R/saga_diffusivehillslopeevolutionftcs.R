@@ -16,8 +16,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * MODEL - outputRaster - Modelled Elevation
 ##' * DIFF - outputRaster - Elevation Difference
+##' * MODEL - outputRaster - Modelled Elevation
 ##'
 ##'
 ##' @export
@@ -34,6 +34,6 @@ saga_diffusivehillslopeevolutionftcs <- function(DEM = qgisprocess::qgis_default
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MODEL")
+    qgisprocess::qgis_output(output, "DIFF")
   }
 }

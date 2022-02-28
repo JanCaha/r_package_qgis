@@ -35,9 +35,9 @@ QGIS Algorithm provided by SAGA Spatial point pattern analysis (saga:spatialpoin
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item BBOX - outputVector - Bounding Box
 \item CENTRE - outputVector - Mean Centre
 \item STDDIST - outputVector - Standard Distance
-\item BBOX - outputVector - Bounding Box
 }
 }
 }

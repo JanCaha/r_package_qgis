@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * SURF - outputRaster - Surface
 ##' * GRAD - outputRaster - Gradient
+##' * SURF - outputRaster - Surface
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ saga_surfaceandgradient <- function(MASK = qgisprocess::qgis_default_value(), SU
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SURF")
+    qgisprocess::qgis_output(output, "GRAD")
   }
 }

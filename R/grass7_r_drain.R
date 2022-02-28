@@ -27,8 +27,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Least cost path
 ##' * drain - outputVector - Drain
+##' * output - outputRaster - Least cost path
 ##'
 ##'
 ##' @export
@@ -45,6 +45,6 @@ grass7_r_drain <- function(input = qgisprocess::qgis_default_value(), direction 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "drain")
   }
 }

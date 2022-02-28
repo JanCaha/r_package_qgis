@@ -14,8 +14,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * real - outputRaster - Real part arrays
 ##' * imaginary - outputRaster - Imaginary part arrays
+##' * real - outputRaster - Real part arrays
 ##'
 ##'
 ##' @export
@@ -32,6 +32,6 @@ grass7_i_fft <- function(input = qgisprocess::qgis_default_value(), real = qgisp
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "real")
+    qgisprocess::qgis_output(output, "imaginary")
   }
 }

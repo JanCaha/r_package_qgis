@@ -12,8 +12,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * AREA - outputRaster - Catchment Area
-##' * ZMAX - outputRaster - Maximum Height
 ##' * MRN - outputRaster - Melton Ruggedness Number
+##' * ZMAX - outputRaster - Maximum Height
 ##'
 ##'
 ##' @export

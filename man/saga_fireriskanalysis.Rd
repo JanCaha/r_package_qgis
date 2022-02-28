@@ -68,8 +68,8 @@ QGIS Algorithm provided by SAGA Fire risk analysis (saga:fireriskanalysis)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DANGER - outputRaster - Danger
 \item COMPPROB - outputRaster - Compound Probability
+\item DANGER - outputRaster - Danger
 \item PRIORITY - outputRaster - Priority Index
 }
 }

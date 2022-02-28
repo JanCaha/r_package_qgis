@@ -101,8 +101,8 @@ QGIS Algorithm provided by GRASS v.generalize (grass7:v.generalize)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Generalized
 \item error - outputVector - Errors
+\item output - outputVector - Generalized
 }
 }
 }

@@ -38,12 +38,12 @@ QGIS Algorithm provided by QGIS Check validity (qgis:checkvalidity)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item VALID_OUTPUT - outputVector - Valid output
-\item VALID_COUNT - outputNumber - Count of valid features
-\item INVALID_OUTPUT - outputVector - Invalid output
-\item INVALID_COUNT - outputNumber - Count of invalid features
-\item ERROR_OUTPUT - outputVector - Error output
 \item ERROR_COUNT - outputNumber - Count of errors
+\item ERROR_OUTPUT - outputVector - Error output
+\item INVALID_COUNT - outputNumber - Count of invalid features
+\item INVALID_OUTPUT - outputVector - Invalid output
+\item VALID_COUNT - outputNumber - Count of valid features
+\item VALID_OUTPUT - outputVector - Valid output
 }
 }
 }

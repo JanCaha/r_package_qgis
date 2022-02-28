@@ -9,6 +9,7 @@ gdal_cliprasterbymasklayer(
   MASK = qgisprocess::qgis_default_value(),
   SOURCE_CRS = qgisprocess::qgis_default_value(),
   TARGET_CRS = qgisprocess::qgis_default_value(),
+  TARGET_EXTENT = qgisprocess::qgis_default_value(),
   NODATA = qgisprocess::qgis_default_value(),
   ALPHA_BAND = qgisprocess::qgis_default_value(),
   CROP_TO_CUTLINE = qgisprocess::qgis_default_value(),
@@ -33,6 +34,8 @@ gdal_cliprasterbymasklayer(
 \item{SOURCE_CRS}{\code{crs} - Source CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
 \item{TARGET_CRS}{\code{crs} - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
+
+\item{TARGET_EXTENT}{\code{extent} - Target extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
 \item{NODATA}{\code{number} - Assign a specified nodata value to output bands. A numeric value.}
 
@@ -68,7 +71,7 @@ QGIS Algorithm provided by GDAL Clip raster by mask layer (gdal:cliprasterbymask
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Clipped
+\item OUTPUT - outputRaster - Clipped (mask)
 }
 }
 }

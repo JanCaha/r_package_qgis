@@ -32,10 +32,10 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * TARGET_OUT_GRID - outputRaster - Target Grid
 ##' * INTERCEPT - outputRaster - Intercept
-##' * SLOPE - outputRaster - Slope
 ##' * QUALITY - outputRaster - Quality
+##' * SLOPE - outputRaster - Slope
+##' * TARGET_OUT_GRID - outputRaster - Target Grid
 ##'
 ##'
 ##' @export
@@ -52,6 +52,6 @@ saga_gwrforsinglepredictorgriddedmodeloutput <- function(POINTS = qgisprocess::q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "TARGET_OUT_GRID")
+    qgisprocess::qgis_output(output, "INTERCEPT")
   }
 }

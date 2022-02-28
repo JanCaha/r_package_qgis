@@ -18,14 +18,14 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * CTVI - outputRaster - Corrected Transformed Vegetation Index
 ##' * DVI - outputRaster - Difference Vegetation Index
 ##' * NDVI - outputRaster - Normalized Difference Vegetation Index
-##' * RVI - outputRaster - Ratio Vegetation Index
 ##' * NRVI - outputRaster - Normalized Ratio Vegetation Index
-##' * TVI - outputRaster - Transformed Vegetation Index
-##' * CTVI - outputRaster - Corrected Transformed Vegetation Index
-##' * TTVI - outputRaster - Thiam
+##' * RVI - outputRaster - Ratio Vegetation Index
 ##' * SAVI - outputRaster - Soil Adjusted Vegetation Index
+##' * TTVI - outputRaster - Thiam's Transformed Vegetation Index
+##' * TVI - outputRaster - Transformed Vegetation Index
 ##'
 ##'
 ##' @export
@@ -42,6 +42,6 @@ saga_vegetationindexslopebased <- function(NIR = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DVI")
+    qgisprocess::qgis_output(output, "CTVI")
   }
 }

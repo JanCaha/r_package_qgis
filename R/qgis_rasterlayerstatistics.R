@@ -10,13 +10,13 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_HTML_FILE - outputHtml - Statistics
-##' * MIN - outputNumber - Minimum value
 ##' * MAX - outputNumber - Maximum value
-##' * RANGE - outputNumber - Range
-##' * SUM - outputNumber - Sum
 ##' * MEAN - outputNumber - Mean value
+##' * MIN - outputNumber - Minimum value
+##' * OUTPUT_HTML_FILE - outputHtml - Statistics
+##' * RANGE - outputNumber - Range
 ##' * STD_DEV - outputNumber - Standard deviation
+##' * SUM - outputNumber - Sum
 ##' * SUM_OF_SQUARES - outputNumber - Sum of the squares
 ##'
 ##'
@@ -34,6 +34,6 @@ qgis_rasterlayerstatistics <- function(INPUT = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_HTML_FILE")
+    qgisprocess::qgis_output(output, "MAX")
   }
 }

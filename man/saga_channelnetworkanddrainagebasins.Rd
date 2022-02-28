@@ -47,13 +47,13 @@ QGIS Algorithm provided by SAGA Channel network and drainage basins (saga:channe
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DIRECTION - outputRaster - Flow Direction
-\item CONNECTION - outputRaster - Flow Connectivity
-\item ORDER - outputRaster - Strahler Order
 \item BASIN - outputRaster - Drainage Basins
-\item SEGMENTS - outputVector - Channels
 \item BASINS - outputVector - Drainage Basins
+\item CONNECTION - outputRaster - Flow Connectivity
+\item DIRECTION - outputRaster - Flow Direction
 \item NODES - outputVector - Junctions
+\item ORDER - outputRaster - Strahler Order
+\item SEGMENTS - outputVector - Channels
 }
 }
 }

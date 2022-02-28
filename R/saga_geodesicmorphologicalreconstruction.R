@@ -14,8 +14,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * DIFFERENCE_GRID - outputRaster - Difference Input - Reconstruction
 ##' * OBJECT_GRID - outputRaster - Object Grid
-##' * DIFFERENCE_GRID - outputRaster - Difference Input 
 ##'
 ##'
 ##' @export
@@ -32,6 +32,6 @@ saga_geodesicmorphologicalreconstruction <- function(INPUT_GRID = qgisprocess::q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OBJECT_GRID")
+    qgisprocess::qgis_output(output, "DIFFERENCE_GRID")
   }
 }

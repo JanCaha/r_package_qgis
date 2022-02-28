@@ -13,11 +13,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * AREA - outputNumber - Area
 ##' * OUTPUT_HTML_FILE - outputHtml - Surface volume report
 ##' * OUTPUT_TABLE - outputVector - Surface volume table
-##' * VOLUME - outputNumber - Volume
 ##' * PIXEL_COUNT - outputNumber - Pixel count
-##' * AREA - outputNumber - Area
+##' * VOLUME - outputNumber - Volume
 ##'
 ##'
 ##' @export
@@ -34,6 +34,6 @@ qgis_rastersurfacevolume <- function(INPUT = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_HTML_FILE")
+    qgisprocess::qgis_output(output, "AREA")
   }
 }

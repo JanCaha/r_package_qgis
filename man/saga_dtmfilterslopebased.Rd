@@ -8,7 +8,6 @@ saga_dtmfilterslopebased(
   INPUT = qgisprocess::qgis_default_value(),
   RADIUS = qgisprocess::qgis_default_value(),
   TERRAINSLOPE = qgisprocess::qgis_default_value(),
-  STDDEV = qgisprocess::qgis_default_value(),
   GROUND = qgisprocess::qgis_default_value(),
   NONGROUND = qgisprocess::qgis_default_value(),
   ...,
@@ -21,8 +20,6 @@ saga_dtmfilterslopebased(
 \item{RADIUS}{\code{number} - Search Radius. A numeric value.}
 
 \item{TERRAINSLOPE}{\code{number} - Approx. Terrain Slope. A numeric value.}
-
-\item{STDDEV}{\code{boolean} - Use Confidence Interval. 1 for true/yes. 0 for false/no.}
 
 \item{GROUND}{\code{rasterDestination} - Bare Earth. Path for new raster layer.}
 

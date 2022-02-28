@@ -50,11 +50,11 @@ QGIS Algorithm provided by SAGA Valley and ridge detection (top hat approach) (s
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item VALLEY - outputRaster - Valley Depth
 \item HILL - outputRaster - Hill Height
-\item VALLEY_IDX - outputRaster - Valley Index
 \item HILL_IDX - outputRaster - Hill Index
 \item SLOPE_IDX - outputRaster - Hillslope Index
+\item VALLEY - outputRaster - Valley Depth
+\item VALLEY_IDX - outputRaster - Valley Index
 }
 }
 }

@@ -10,12 +10,10 @@ saga_fragmentationalternative(
   NEIGHBORHOOD_MIN = qgisprocess::qgis_default_value(),
   NEIGHBORHOOD_MAX = qgisprocess::qgis_default_value(),
   AGGREGATION = qgisprocess::qgis_default_value(),
-  BORDER = qgisprocess::qgis_default_value(),
   WEIGHT = qgisprocess::qgis_default_value(),
   DENSITY_MIN = qgisprocess::qgis_default_value(),
   DENSITY_INT = qgisprocess::qgis_default_value(),
   LEVEL_GROW = qgisprocess::qgis_default_value(),
-  DENSITY_MEAN = qgisprocess::qgis_default_value(),
   DENSITY = qgisprocess::qgis_default_value(),
   CONNECTIVITY = qgisprocess::qgis_default_value(),
   FRAGMENTATION = qgisprocess::qgis_default_value(),
@@ -35,8 +33,6 @@ saga_fragmentationalternative(
 
 \item{AGGREGATION}{\code{enum}  of \verb{("[0] average", "[1] multiplicative")} - Level Aggregation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{BORDER}{\code{boolean} - Add Border. 1 for true/yes. 0 for false/no.}
-
 \item{WEIGHT}{\code{number} - Connectivity Weighting. A numeric value.}
 
 \item{DENSITY_MIN}{\code{number} - Minimum Density (Percent). A numeric value.}
@@ -44,8 +40,6 @@ saga_fragmentationalternative(
 \item{DENSITY_INT}{\code{number} - Minimum Density for Interior Forest (Percent). A numeric value.}
 
 \item{LEVEL_GROW}{\code{number} - Search Distance Increment. A numeric value.}
-
-\item{DENSITY_MEAN}{\code{boolean} - Density from Neighbourhood. 1 for true/yes. 0 for false/no.}
 
 \item{DENSITY}{\code{rasterDestination} - Density (Percent). Path for new raster layer.}
 
@@ -65,8 +59,8 @@ QGIS Algorithm provided by SAGA Fragmentation (alternative) (saga:fragmentationa
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item DENSITY - outputRaster - Density
-\item CONNECTIVITY - outputRaster - Connectivity
+\item CONNECTIVITY - outputRaster - Connectivity (Percent)
+\item DENSITY - outputRaster - Density (Percent)
 \item FRAGMENTATION - outputRaster - Fragmentation
 \item FRAGSTATS - outputVector - Summary
 }

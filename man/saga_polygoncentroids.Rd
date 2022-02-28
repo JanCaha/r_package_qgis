@@ -6,7 +6,6 @@
 \usage{
 saga_polygoncentroids(
   POLYGONS = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
   CENTROIDS = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -14,8 +13,6 @@ saga_polygoncentroids(
 }
 \arguments{
 \item{POLYGONS}{\code{source} - Polygons. Path to a vector layer.}
-
-\item{METHOD}{\code{boolean} - Centroids for each part. 1 for true/yes. 0 for false/no.}
 
 \item{CENTROIDS}{\code{vectorDestination} - Centroids. Path for new vector layer.}
 

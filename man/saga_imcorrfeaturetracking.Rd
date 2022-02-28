@@ -47,8 +47,8 @@ QGIS Algorithm provided by SAGA Imcorr - feature tracking (saga:imcorrfeaturetra
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item CORRPOINTS - outputVector - Correlated Points
 \item CORRLINES - outputVector - Displacement Vector
+\item CORRPOINTS - outputVector - Correlated Points
 }
 }
 }

@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Clipped 
+##' * OUTPUT - outputRaster - Clipped (extent)
 ##'
 ##'
 ##' @export

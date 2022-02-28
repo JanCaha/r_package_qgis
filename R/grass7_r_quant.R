@@ -18,7 +18,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputFolder - Quantized raster
+##' * output - outputFolder - Quantized raster(s)
 ##'
 ##'
 ##' @export

@@ -12,9 +12,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * BBOX - outputVector - Bounding Box
 ##' * CENTRE - outputVector - Mean Centre
 ##' * STDDIST - outputVector - Standard Distance
-##' * BBOX - outputVector - Bounding Box
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ saga_spatialpointpatternanalysis <- function(POINTS = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CENTRE")
+    qgisprocess::qgis_output(output, "BBOX")
   }
 }

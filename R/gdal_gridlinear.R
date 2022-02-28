@@ -4,7 +4,7 @@
 ##'
 ##' @param INPUT `source` - Point layer. Path to a vector layer.
 ##' @param Z_FIELD `field` - Z value from field. The name of an existing field. ; delimited list of existing field names.
-##' @param RADIUS `number` - Search distance. A numeric value.
+##' @param RADIUS `number` - Search distance . A numeric value.
 ##' @param NODATA `number` - NODATA marker to fill empty points. A numeric value.
 ##' @param OPTIONS `string` - Additional creation options. String value.
 ##' @param EXTRA `string` - Additional command-line parameters. String value.
@@ -15,7 +15,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Interpolated 
+##' * OUTPUT - outputRaster - Interpolated (Linear)
 ##'
 ##'
 ##' @export

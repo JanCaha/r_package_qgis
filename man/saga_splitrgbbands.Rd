@@ -32,9 +32,9 @@ QGIS Algorithm provided by SAGA Split RGB bands (saga:splitrgbbands)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item R - outputRaster - Output R band layer
-\item G - outputRaster - Output G band layer
 \item B - outputRaster - Output B band layer
+\item G - outputRaster - Output G band layer
+\item R - outputRaster - Output R band layer
 }
 }
 }

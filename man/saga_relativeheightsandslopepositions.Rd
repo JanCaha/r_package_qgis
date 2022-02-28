@@ -49,9 +49,9 @@ QGIS Algorithm provided by SAGA Relative heights and slope positions (saga:relat
 \itemize{
 \item HO - outputRaster - Slope Height
 \item HU - outputRaster - Valley Depth
+\item MS - outputRaster - Mid-Slope Position
 \item NH - outputRaster - Normalized Height
 \item SH - outputRaster - Standardized Height
-\item MS - outputRaster - Mid
 }
 }
 }

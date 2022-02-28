@@ -23,9 +23,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * CLASSES - outputVector - Class Values
 ##' * COMBINED - outputRaster - Combined Classes
 ##' * CONFUSION - outputVector - Confusion Matrix
-##' * CLASSES - outputVector - Class Values
 ##' * SUMMARY - outputVector - Summary
 ##'
 ##'
@@ -43,6 +43,6 @@ saga_confusionmatrixtwogrids <- function(ONE = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "COMBINED")
+    qgisprocess::qgis_output(output, "CLASSES")
   }
 }

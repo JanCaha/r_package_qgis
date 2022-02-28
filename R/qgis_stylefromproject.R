@@ -10,11 +10,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * COLORRAMPS - outputNumber - Color ramp count
+##' * LABELSETTINGS - outputNumber - Label settings count
 ##' * OUTPUT - outputFile - Output style database
 ##' * SYMBOLS - outputNumber - Symbol count
-##' * COLORRAMPS - outputNumber - Color ramp count
 ##' * TEXTFORMATS - outputNumber - Text format count
-##' * LABELSETTINGS - outputNumber - Label settings count
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ qgis_stylefromproject <- function(INPUT = qgisprocess::qgis_default_value(), OUT
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "COLORRAMPS")
   }
 }

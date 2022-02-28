@@ -32,7 +32,7 @@ QGIS Algorithm provided by SAGA Aspect-slope grid (saga:aspectslopegrid)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item ASPECT_SLOPE - outputRaster - Aspect
+\item ASPECT_SLOPE - outputRaster - Aspect-Slope
 }
 }
 }

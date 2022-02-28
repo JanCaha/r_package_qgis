@@ -16,9 +16,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Joined layer
-##' * NON_MATCHING - outputVector - Unjoinable features from first layer
 ##' * JOINED_COUNT - outputNumber - Number of joined features from input table
+##' * NON_MATCHING - outputVector - Unjoinable features from first layer
+##' * OUTPUT - outputVector - Joined layer
 ##' * UNJOINABLE_COUNT - outputNumber - Number of unjoinable features from input table
 ##'
 ##'
@@ -36,6 +36,6 @@ qgis_joinbynearest <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "JOINED_COUNT")
   }
 }

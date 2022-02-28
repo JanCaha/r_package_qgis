@@ -26,8 +26,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Network_Flow
 ##' * cut - outputVector - Network_Cut
+##' * output - outputVector - Network_Flow
 ##'
 ##'
 ##' @export
@@ -44,6 +44,6 @@ grass7_v_net_flow <- function(input = qgisprocess::qgis_default_value(), points 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "cut")
   }
 }

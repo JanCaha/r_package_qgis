@@ -23,11 +23,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * FLOW - outputRaster - Flow Accumulation
-##' * VAL_MEAN - outputRaster - Mean over Catchment
-##' * ACCU_TOTAL - outputRaster - Accumulated Material
 ##' * ACCU_LEFT - outputRaster - Accumulated Material from left side
 ##' * ACCU_RIGHT - outputRaster - Accumulated Material from right side
+##' * ACCU_TOTAL - outputRaster - Accumulated Material
+##' * FLOW - outputRaster - Flow Accumulation
+##' * VAL_MEAN - outputRaster - Mean over Catchment
 ##'
 ##'
 ##' @export
@@ -44,6 +44,6 @@ saga_catchmentareaflowtracing <- function(ELEVATION = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLOW")
+    qgisprocess::qgis_output(output, "ACCU_LEFT")
   }
 }

@@ -32,8 +32,8 @@ QGIS Algorithm provided by SAGA Resampling filter (saga:resamplingfilter)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item LOPASS - outputRaster - Low Pass Filter
 \item HIPASS - outputRaster - High Pass Filter
+\item LOPASS - outputRaster - Low Pass Filter
 }
 }
 }

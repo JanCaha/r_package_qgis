@@ -95,10 +95,10 @@ QGIS Algorithm provided by SAGA Gwr for single predictor (gridded model output) 
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item TARGET_OUT_GRID - outputRaster - Target Grid
 \item INTERCEPT - outputRaster - Intercept
-\item SLOPE - outputRaster - Slope
 \item QUALITY - outputRaster - Quality
+\item SLOPE - outputRaster - Slope
+\item TARGET_OUT_GRID - outputRaster - Target Grid
 }
 }
 }

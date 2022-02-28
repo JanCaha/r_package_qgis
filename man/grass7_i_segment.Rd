@@ -71,8 +71,8 @@ QGIS Algorithm provided by GRASS i.segment (grass7:i.segment)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Segmented Raster
 \item goodness - outputRaster - Goodness Raster
+\item output - outputRaster - Segmented Raster
 }
 }
 }

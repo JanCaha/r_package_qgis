@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * FAIL_OUTPUT - outputVector - Non-matching
 ##' * OUTPUT - outputVector - Matching features
-##' * FAIL_OUTPUT - outputVector - Non
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ qgis_extractbyexpression <- function(INPUT = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "FAIL_OUTPUT")
   }
 }

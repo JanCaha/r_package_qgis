@@ -32,8 +32,8 @@ QGIS Algorithm provided by QGIS (native c++) Extract by expression (native:extra
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item FAIL_OUTPUT - outputVector - Non-matching
 \item OUTPUT - outputVector - Matching features
-\item FAIL_OUTPUT - outputVector - Non
 }
 }
 }

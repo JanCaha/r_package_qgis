@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_atlaslayouttopdf.R
 \name{qgis_atlaslayouttopdf}
 \alias{qgis_atlaslayouttopdf}
-\title{QGIS algorithm Export atlas layout as PDF}
+\title{QGIS algorithm Export atlas layout as PDF (single file)}
 \usage{
 qgis_atlaslayouttopdf(
   LAYOUT = qgisprocess::qgis_default_value(),
@@ -10,7 +10,6 @@ qgis_atlaslayouttopdf(
   FILTER_EXPRESSION = qgisprocess::qgis_default_value(),
   SORTBY_EXPRESSION = qgisprocess::qgis_default_value(),
   SORTBY_REVERSE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
   LAYERS = qgisprocess::qgis_default_value(),
   DPI = qgisprocess::qgis_default_value(),
   FORCE_VECTOR = qgisprocess::qgis_default_value(),
@@ -19,6 +18,7 @@ qgis_atlaslayouttopdf(
   DISABLE_TILED = qgisprocess::qgis_default_value(),
   SIMPLIFY = qgisprocess::qgis_default_value(),
   TEXT_FORMAT = qgisprocess::qgis_default_value(),
+  OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
 )
@@ -33,8 +33,6 @@ qgis_atlaslayouttopdf(
 \item{SORTBY_EXPRESSION}{\code{expression} - Sort expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
 \item{SORTBY_REVERSE}{\code{boolean} - Reverse sort order (used when a sort expression is provided). 1 for true/yes. 0 for false/no.}
-
-\item{OUTPUT}{\code{fileDestination} - PDF file. Path for new file.}
 
 \item{LAYERS}{\code{multilayer} - Map layers to assign to unlocked map item(s). .}
 
@@ -52,12 +50,14 @@ qgis_atlaslayouttopdf(
 
 \item{TEXT_FORMAT}{\code{enum}  of \verb{("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects")} - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
+\item{OUTPUT}{\code{fileDestination} - PDF file. Path for new file.}
+
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
 \item{.complete_output}{logical specifing if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export atlas layout as PDF (native:atlaslayouttopdf)
+QGIS Algorithm provided by QGIS (native c++) Export atlas layout as PDF (single file) (native:atlaslayouttopdf)
 }
 \details{
 \subsection{Outputs description}{

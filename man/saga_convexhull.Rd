@@ -32,8 +32,8 @@ QGIS Algorithm provided by SAGA Convex hull (saga:convexhull)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item HULLS - outputVector - Convex Hull
 \item BOXES - outputVector - Minimum Bounding Box
+\item HULLS - outputVector - Convex Hull
 }
 }
 }

@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * ASPECT_SLOPE - outputRaster - Aspect
+##' * ASPECT_SLOPE - outputRaster - Aspect-Slope
 ##'
 ##'
 ##' @export

@@ -19,8 +19,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * DELIVERY - outputRaster - Delivery Index
-##' * RISK_POINT - outputRaster - Locational Risk
 ##' * RISK_DIFFUSE - outputRaster - Diffuse Pollution Risk
+##' * RISK_POINT - outputRaster - Locational Risk
 ##'
 ##'
 ##' @export

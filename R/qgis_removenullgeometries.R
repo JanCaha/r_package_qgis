@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Non null geometries
 ##' * NULL_OUTPUT - outputVector - Null geometries
+##' * OUTPUT - outputVector - Non null geometries
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ qgis_removenullgeometries <- function(INPUT = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "NULL_OUTPUT")
   }
 }

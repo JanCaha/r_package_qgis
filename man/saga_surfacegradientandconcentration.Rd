@@ -50,9 +50,9 @@ QGIS Algorithm provided by SAGA Surface, gradient and concentration (saga:surfac
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item SURF - outputRaster - Surface
-\item GRAD - outputRaster - Gradient
 \item CONC - outputRaster - Concentration
+\item GRAD - outputRaster - Gradient
+\item SURF - outputRaster - Surface
 }
 }
 }

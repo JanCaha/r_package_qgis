@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Flow width and specific catchment area (saga:flo
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item SCA - outputRaster - Specific Catchment Area (SCA)
 \item WIDTH - outputRaster - Flow Width
-\item SCA - outputRaster - Specific Catchment Area
 }
 }
 }

@@ -12,12 +12,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output layer
-##' * EXTENT - outputString - Extent
 ##' * CRS_AUTHID - outputString - CRS authority identifier
-##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
+##' * EXTENT - outputString - Extent
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+##' * OUTPUT - outputRaster - Output layer
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
 ##'
 ##'
 ##' @export
@@ -34,6 +34,6 @@ qgis_lowestpositioninrasterstack <- function(INPUT_RASTERS = qgisprocess::qgis_d
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "CRS_AUTHID")
   }
 }

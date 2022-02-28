@@ -14,8 +14,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * POS - outputRaster - Positive Openness
 ##' * NEG - outputRaster - Negative Openness
+##' * POS - outputRaster - Positive Openness
 ##'
 ##'
 ##' @export
@@ -32,6 +32,6 @@ saga_topographicopenness <- function(DEM = qgisprocess::qgis_default_value(), PO
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "POS")
+    qgisprocess::qgis_output(output, "NEG")
   }
 }

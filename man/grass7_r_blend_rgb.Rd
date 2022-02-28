@@ -50,9 +50,9 @@ QGIS Algorithm provided by GRASS r.blend.rgb (grass7:r.blend.rgb)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output_red - outputRaster - Blended Red
-\item output_green - outputRaster - Blended Green
 \item output_blue - outputRaster - Blended Blue
+\item output_green - outputRaster - Blended Green
+\item output_red - outputRaster - Blended Red
 }
 }
 }

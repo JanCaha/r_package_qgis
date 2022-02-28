@@ -54,8 +54,8 @@ QGIS Algorithm provided by SAGA Diffuse pollution risk (saga:diffusepollutionris
 \subsection{Outputs description}{
 \itemize{
 \item DELIVERY - outputRaster - Delivery Index
-\item RISK_POINT - outputRaster - Locational Risk
 \item RISK_DIFFUSE - outputRaster - Diffuse Pollution Risk
+\item RISK_POINT - outputRaster - Locational Risk
 }
 }
 }

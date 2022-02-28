@@ -14,12 +14,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * UNCHANGED - outputVector - Unchanged features
 ##' * ADDED - outputVector - Added features
-##' * DELETED - outputVector - Deleted features
-##' * UNCHANGED_COUNT - outputNumber - Count of unchanged features
 ##' * ADDED_COUNT - outputNumber - Count of features added in revised layer
+##' * DELETED - outputVector - Deleted features
 ##' * DELETED_COUNT - outputNumber - Count of features deleted from original layer
+##' * UNCHANGED - outputVector - Unchanged features
+##' * UNCHANGED_COUNT - outputNumber - Count of unchanged features
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "UNCHANGED")
+    qgisprocess::qgis_output(output, "ADDED")
   }
 }

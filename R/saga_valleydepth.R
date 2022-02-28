@@ -13,8 +13,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * VALLEY_DEPTH - outputRaster - Valley Depth
 ##' * RIDGE_LEVEL - outputRaster - Ridge Level
+##' * VALLEY_DEPTH - outputRaster - Valley Depth
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ saga_valleydepth <- function(ELEVATION = qgisprocess::qgis_default_value(), VALL
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "VALLEY_DEPTH")
+    qgisprocess::qgis_output(output, "RIDGE_LEVEL")
   }
 }

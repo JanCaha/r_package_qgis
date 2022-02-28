@@ -51,7 +51,7 @@ QGIS Algorithm provided by SAGA Accumulation functions (saga:accumulationfunctio
 \subsection{Outputs description}{
 \itemize{
 \item FLUX - outputRaster - Flux
-\item STATE_OUT - outputRaster - State t
+\item STATE_OUT - outputRaster - State t + 1
 }
 }
 }

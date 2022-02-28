@@ -34,8 +34,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Generalized
 ##' * error - outputVector - Errors
+##' * output - outputVector - Generalized
 ##'
 ##'
 ##' @export
@@ -52,6 +52,6 @@ grass7_v_generalize <- function(input = qgisprocess::qgis_default_value(), type 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "error")
   }
 }

@@ -32,7 +32,7 @@ QGIS Algorithm provided by GDAL Clip vector by extent (gdal:clipvectorbyextent)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Clipped
+\item OUTPUT - outputVector - Clipped (extent)
 }
 }
 }

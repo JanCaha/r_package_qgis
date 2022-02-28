@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * POINTS - outputVector - Profile 
-##' * LINE - outputVector - Profile 
+##' * LINE - outputVector - Profile (lines)
+##' * POINTS - outputVector - Profile (points)
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_leastcostpaths <- function(SOURCE = qgisprocess::qgis_default_value(), DEM 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "POINTS")
+    qgisprocess::qgis_output(output, "LINE")
   }
 }

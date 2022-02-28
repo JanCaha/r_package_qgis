@@ -16,9 +16,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * residuals - outputRaster - Residual Map
 ##' * estimates - outputRaster - Estimates Map
 ##' * html - outputHtml - Regression coefficients
+##' * residuals - outputRaster - Residual Map
 ##'
 ##'
 ##' @export
@@ -35,6 +35,6 @@ grass7_r_regression_multi <- function(mapx = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "residuals")
+    qgisprocess::qgis_output(output, "estimates")
   }
 }

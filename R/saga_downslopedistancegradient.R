@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * GRADIENT - outputRaster - Gradient
 ##' * DIFFERENCE - outputRaster - Gradient Difference
+##' * GRADIENT - outputRaster - Gradient
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_downslopedistancegradient <- function(DEM = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "GRADIENT")
+    qgisprocess::qgis_output(output, "DIFFERENCE")
   }
 }

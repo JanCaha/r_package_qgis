@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Fill sinks (wang & liu) (saga:fillsinkswangliu)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item FILLED - outputRaster - Filled DEM
 \item FDIR - outputRaster - Flow Directions
+\item FILLED - outputRaster - Filled DEM
 \item WSHED - outputRaster - Watershed Basins
 }
 }

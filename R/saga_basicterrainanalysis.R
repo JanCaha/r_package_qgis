@@ -25,22 +25,22 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * SHADE - outputRaster - Analytical Hillshading
-##' * SLOPE - outputRaster - Slope
 ##' * ASPECT - outputRaster - Aspect
-##' * HCURV - outputRaster - Plan Curvature
-##' * VCURV - outputRaster - Profile Curvature
-##' * CONVERGENCE - outputRaster - Convergence Index
-##' * SINKS - outputRaster - Closed Depressions
-##' * FLOW - outputRaster - Total Catchment Area
-##' * WETNESS - outputRaster - Topographic Wetness Index
-##' * LSFACTOR - outputRaster - LS
-##' * CHANNELS - outputVector - Channel Network
 ##' * BASINS - outputVector - Drainage Basins
+##' * CHANNELS - outputVector - Channel Network
 ##' * CHNL_BASE - outputRaster - Channel Network Base Level
 ##' * CHNL_DIST - outputRaster - Channel Network Distance
-##' * VALL_DEPTH - outputRaster - Valley Depth
+##' * CONVERGENCE - outputRaster - Convergence Index
+##' * FLOW - outputRaster - Total Catchment Area
+##' * HCURV - outputRaster - Plan Curvature
+##' * LSFACTOR - outputRaster - LS-Factor
 ##' * RSP - outputRaster - Relative Slope Position
+##' * SHADE - outputRaster - Analytical Hillshading
+##' * SINKS - outputRaster - Closed Depressions
+##' * SLOPE - outputRaster - Slope
+##' * VALL_DEPTH - outputRaster - Valley Depth
+##' * VCURV - outputRaster - Profile Curvature
+##' * WETNESS - outputRaster - Topographic Wetness Index
 ##'
 ##'
 ##' @export
@@ -57,6 +57,6 @@ saga_basicterrainanalysis <- function(ELEVATION = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SHADE")
+    qgisprocess::qgis_output(output, "ASPECT")
   }
 }

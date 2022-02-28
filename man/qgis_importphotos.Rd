@@ -32,8 +32,8 @@ QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:imp
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Photos
 \item INVALID - outputVector - Invalid photos table
+\item OUTPUT - outputVector - Photos
 }
 }
 }

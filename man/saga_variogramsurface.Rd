@@ -42,8 +42,8 @@ QGIS Algorithm provided by SAGA Variogram surface (saga:variogramsurface)
 \subsection{Outputs description}{
 \itemize{
 \item COUNT - outputRaster - Number of Pairs
-\item VARIANCE - outputRaster - Variogram Surface
 \item COVARIANCE - outputRaster - Covariance Surface
+\item VARIANCE - outputRaster - Variogram Surface
 }
 }
 }

@@ -9,10 +9,8 @@ saga_effectiveairflowheights(
   DIR = qgisprocess::qgis_default_value(),
   LEN = qgisprocess::qgis_default_value(),
   DIR_CONST = qgisprocess::qgis_default_value(),
-  OLDVER = qgisprocess::qgis_default_value(),
   MAXDIST = qgisprocess::qgis_default_value(),
   ACCEL = qgisprocess::qgis_default_value(),
-  PYRAMIDS = qgisprocess::qgis_default_value(),
   LEEFACT = qgisprocess::qgis_default_value(),
   LUVFACT = qgisprocess::qgis_default_value(),
   DIR_UNITS = qgisprocess::qgis_default_value(),
@@ -31,13 +29,9 @@ saga_effectiveairflowheights(
 
 \item{DIR_CONST}{\code{number} - Constant Wind Direction (Degree). A numeric value.}
 
-\item{OLDVER}{\code{boolean} - Old Version. 1 for true/yes. 0 for false/no.}
-
 \item{MAXDIST}{\code{number} - Search Distance (km). A numeric value.}
 
 \item{ACCEL}{\code{number} - Acceleration. A numeric value.}
-
-\item{PYRAMIDS}{\code{boolean} - Use Pyramids with New Version. 1 for true/yes. 0 for false/no.}
 
 \item{LEEFACT}{\code{number} - Lee Factor. A numeric value.}
 

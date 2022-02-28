@@ -17,7 +17,7 @@ qgis_linedensity(
 \arguments{
 \item{INPUT}{\code{source} - Input line layer. Path to a vector layer.}
 
-\item{WEIGHT}{\code{field} - Weight field. The name of an existing field. ; delimited list of existing field names.}
+\item{WEIGHT}{\code{field} - Weight field . The name of an existing field. ; delimited list of existing field names.}
 
 \item{RADIUS}{\code{distance} - Search radius. A numeric value.}
 

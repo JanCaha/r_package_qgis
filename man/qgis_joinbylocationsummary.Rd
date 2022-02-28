@@ -6,8 +6,8 @@
 \usage{
 qgis_joinbylocationsummary(
   INPUT = qgisprocess::qgis_default_value(),
-  JOIN = qgisprocess::qgis_default_value(),
   PREDICATE = qgisprocess::qgis_default_value(),
+  JOIN = qgisprocess::qgis_default_value(),
   JOIN_FIELDS = qgisprocess::qgis_default_value(),
   SUMMARIES = qgisprocess::qgis_default_value(),
   DISCARD_NONMATCHING = qgisprocess::qgis_default_value(),
@@ -17,11 +17,11 @@ qgis_joinbylocationsummary(
 )
 }
 \arguments{
-\item{INPUT}{\code{source} - Base layer. Path to a vector layer.}
+\item{INPUT}{\code{source} - Join to features in. Path to a vector layer.}
 
-\item{JOIN}{\code{source} - Join layer. Path to a vector layer.}
+\item{PREDICATE}{\code{enum}  of \verb{("intersect", "contain", "equal", "touch", "overlap", "are within", "cross")} - Where the features. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{PREDICATE}{\code{enum}  of \verb{("intersects", "contains", "equals", "touches", "overlaps", "within", "crosses")} - Geometric predicate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{JOIN}{\code{source} - By comparing to. Path to a vector layer.}
 
 \item{JOIN_FIELDS}{\code{field} - Fields to summarise (leave empty to use all fields). The name of an existing field. ; delimited list of existing field names.}
 

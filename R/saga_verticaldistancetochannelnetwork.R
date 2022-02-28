@@ -5,7 +5,6 @@
 ##' @param ELEVATION `raster` - Elevation. Path to a raster layer.
 ##' @param CHANNELS `raster` - Channel Network. Path to a raster layer.
 ##' @param THRESHOLD `number` - Tension Threshold (Percentage of Cell Size). A numeric value.
-##' @param NOUNDERGROUND `boolean` - Keep Base Level below Surface. 1 for true/yes. 0 for false/no.
 ##' @param DISTANCE `rasterDestination` - Vertical Distance to Channel Network. Path for new raster layer.
 ##' @param BASELEVEL `rasterDestination` - Channel Network Base Level. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
@@ -13,24 +12,24 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * DISTANCE - outputRaster - Vertical Distance to Channel Network
 ##' * BASELEVEL - outputRaster - Channel Network Base Level
+##' * DISTANCE - outputRaster - Vertical Distance to Channel Network
 ##'
 ##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_verticaldistancetochannelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), NOUNDERGROUND = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), BASELEVEL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_verticaldistancetochannelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), BASELEVEL = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("saga:verticaldistancetochannelnetwork")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:verticaldistancetochannelnetwork", `ELEVATION` = ELEVATION, `CHANNELS` = CHANNELS, `THRESHOLD` = THRESHOLD, `NOUNDERGROUND` = NOUNDERGROUND, `DISTANCE` = DISTANCE, `BASELEVEL` = BASELEVEL,...)
+  output <- qgisprocess::qgis_run_algorithm("saga:verticaldistancetochannelnetwork", `ELEVATION` = ELEVATION, `CHANNELS` = CHANNELS, `THRESHOLD` = THRESHOLD, `DISTANCE` = DISTANCE, `BASELEVEL` = BASELEVEL,...)
 
   if (.complete_output) {
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DISTANCE")
+    qgisprocess::qgis_output(output, "BASELEVEL")
   }
 }

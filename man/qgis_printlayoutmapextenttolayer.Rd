@@ -32,11 +32,11 @@ QGIS Algorithm provided by QGIS (native c++) Print layout map extent to layer (n
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Extent
-\item WIDTH - outputNumber - Map width
 \item HEIGHT - outputNumber - Map height
-\item SCALE - outputNumber - Map scale
+\item OUTPUT - outputVector - Extent
 \item ROTATION - outputNumber - Map rotation
+\item SCALE - outputNumber - Map scale
+\item WIDTH - outputNumber - Map width
 }
 }
 }

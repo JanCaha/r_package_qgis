@@ -29,7 +29,7 @@ QGIS Algorithm provided by SAGA Raster difference (saga:rasterdifference)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item C - outputRaster - Difference
+\item C - outputRaster - Difference (A - B)
 }
 }
 }

@@ -21,12 +21,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * filled - outputRaster - Filled 
-##' * direction - outputRaster - Flow direction
-##' * swatershed - outputRaster - Sink
 ##' * accumulation - outputRaster - Flow accumulation
-##' * tci - outputRaster - Topographic convergence index 
+##' * direction - outputRaster - Flow direction
+##' * filled - outputRaster - Filled (flooded) elevation
 ##' * stats - outputFile - Runtime statistics
+##' * swatershed - outputRaster - Sink-watershed
+##' * tci - outputRaster - Topographic convergence index (tci)
 ##'
 ##'
 ##' @export
@@ -43,6 +43,6 @@ grass7_r_terraflow <- function(elevation = qgisprocess::qgis_default_value(), .s
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "filled")
+    qgisprocess::qgis_output(output, "accumulation")
   }
 }

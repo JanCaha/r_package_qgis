@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Soil texture classification (saga:soiltexturecla
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item TEXTURE - outputRaster - Soil Texture
 \item SUM - outputRaster - Sum
+\item TEXTURE - outputRaster - Soil Texture
 }
 }
 }

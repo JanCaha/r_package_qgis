@@ -32,10 +32,10 @@ QGIS Algorithm provided by QGIS (native c++) Delete duplicates by attribute (nat
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Filtered
-\item DUPLICATES - outputVector - Filtered
-\item RETAINED_COUNT - outputNumber - Count of retained records
+\item DUPLICATES - outputVector - Filtered (duplicates)
 \item DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
+\item OUTPUT - outputVector - Filtered (no duplicates)
+\item RETAINED_COUNT - outputNumber - Count of retained records
 }
 }
 }

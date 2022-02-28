@@ -53,8 +53,8 @@ QGIS Algorithm provided by GRASS v.patch (grass7:v.patch)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Combined
 \item bbox - outputVector - Bounding boxes
+\item output - outputVector - Combined
 }
 }
 }

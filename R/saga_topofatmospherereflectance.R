@@ -74,16 +74,18 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * RF_MSS01 - outputRaster - Reflectance Band 1
-##' * RF_MSS02 - outputRaster - Reflectance Band 2
-##' * RF_MSS03 - outputRaster - Reflectance Band 3
-##' * RF_MSS04 - outputRaster - Reflectance Band 4
 ##' * RF_ETM01 - outputRaster - Reflectance Band 1
 ##' * RF_ETM02 - outputRaster - Reflectance Band 2
 ##' * RF_ETM03 - outputRaster - Reflectance Band 3
 ##' * RF_ETM04 - outputRaster - Reflectance Band 4
 ##' * RF_ETM05 - outputRaster - Reflectance Band 5
 ##' * RF_ETM07 - outputRaster - Reflectance Band 7
+##' * RF_ETM61 - outputRaster - Reflectance Band 61
+##' * RF_ETM62 - outputRaster - Reflectance Band 62
+##' * RF_MSS01 - outputRaster - Reflectance Band 1
+##' * RF_MSS02 - outputRaster - Reflectance Band 2
+##' * RF_MSS03 - outputRaster - Reflectance Band 3
+##' * RF_MSS04 - outputRaster - Reflectance Band 4
 ##' * RF_OLI01 - outputRaster - Reflectance Band 1
 ##' * RF_OLI02 - outputRaster - Reflectance Band 2
 ##' * RF_OLI03 - outputRaster - Reflectance Band 3
@@ -92,12 +94,10 @@
 ##' * RF_OLI06 - outputRaster - Reflectance Band 6
 ##' * RF_OLI07 - outputRaster - Reflectance Band 7
 ##' * RF_OLI09 - outputRaster - Reflectance Band 9
-##' * RF__TM06 - outputRaster - Reflectance Band 6
-##' * RF_ETM61 - outputRaster - Reflectance Band 61
-##' * RF_ETM62 - outputRaster - Reflectance Band 62
 ##' * RF_OLI10 - outputRaster - Reflectance Band 10
 ##' * RF_OLI11 - outputRaster - Reflectance Band 11
 ##' * RF_PAN08 - outputRaster - Reflectance Band 8
+##' * RF__TM06 - outputRaster - Reflectance Band 6
 ##'
 ##'
 ##' @export
@@ -114,6 +114,6 @@ saga_topofatmospherereflectance <- function(DN_MSS01 = qgisprocess::qgis_default
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RF_MSS01")
+    qgisprocess::qgis_output(output, "RF_ETM01")
   }
 }

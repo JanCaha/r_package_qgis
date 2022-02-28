@@ -44,7 +44,7 @@ QGIS Algorithm provided by SAGA Land surface temperature (saga:landsurfacetemper
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item LST - outputRaster - Land Surface Temperature
+\item LST - outputRaster - Land Surface Temperature (Deg.Celsius)
 }
 }
 }

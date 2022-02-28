@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * RESULTGRID - outputRaster - Cross
-##' * RESULTTABLE - outputVector - Cross
+##' * RESULTGRID - outputRaster - Cross-Classification Grid
+##' * RESULTTABLE - outputVector - Cross-Tabulation Table
 ##'
 ##'
 ##' @export

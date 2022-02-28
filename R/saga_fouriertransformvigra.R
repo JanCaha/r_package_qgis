@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * REAL - outputRaster - Real
 ##' * IMAG - outputRaster - Imaginary
+##' * REAL - outputRaster - Real
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ saga_fouriertransformvigra <- function(INPUT = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REAL")
+    qgisprocess::qgis_output(output, "IMAG")
   }
 }

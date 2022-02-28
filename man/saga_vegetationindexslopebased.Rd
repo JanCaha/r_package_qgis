@@ -53,14 +53,14 @@ QGIS Algorithm provided by SAGA Vegetation index (slope based) (saga:vegetationi
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item CTVI - outputRaster - Corrected Transformed Vegetation Index
 \item DVI - outputRaster - Difference Vegetation Index
 \item NDVI - outputRaster - Normalized Difference Vegetation Index
-\item RVI - outputRaster - Ratio Vegetation Index
 \item NRVI - outputRaster - Normalized Ratio Vegetation Index
-\item TVI - outputRaster - Transformed Vegetation Index
-\item CTVI - outputRaster - Corrected Transformed Vegetation Index
-\item TTVI - outputRaster - Thiam
+\item RVI - outputRaster - Ratio Vegetation Index
 \item SAVI - outputRaster - Soil Adjusted Vegetation Index
+\item TTVI - outputRaster - Thiam's Transformed Vegetation Index
+\item TVI - outputRaster - Transformed Vegetation Index
 }
 }
 }

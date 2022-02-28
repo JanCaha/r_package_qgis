@@ -39,11 +39,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * beam_rad - outputRaster - Beam irradiance (W.m-2)
+##' * diff_rad - outputRaster - Diffuse irradiance (W.m-2)
+##' * glob_rad - outputRaster - Global (total) irradiance/irradiation (W.m-2)
 ##' * incidout - outputRaster - incidence angle raster map
-##' * beam_rad - outputRaster - Beam irradiance 
-##' * diff_rad - outputRaster - Diffuse irradiance 
-##' * refl_rad - outputRaster - Ground reflected irradiance 
-##' * glob_rad - outputRaster - Global 
+##' * refl_rad - outputRaster - Ground reflected irradiance (W.m-2)
 ##'
 ##'
 ##' @export
@@ -60,6 +60,6 @@ grass7_r_sun_incidout <- function(elevation = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "incidout")
+    qgisprocess::qgis_output(output, "beam_rad")
   }
 }

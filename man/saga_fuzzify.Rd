@@ -11,7 +11,6 @@ saga_fuzzify(
   C = qgisprocess::qgis_default_value(),
   D = qgisprocess::qgis_default_value(),
   TYPE = qgisprocess::qgis_default_value(),
-  AUTOFIT = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -29,8 +28,6 @@ saga_fuzzify(
 \item{D}{\code{number} - D. A numeric value.}
 
 \item{TYPE}{\code{enum}  of \verb{("[0] linear", "[1] sigmoidal", "[2] j-shaped")} - Membership Function Type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
-
-\item{AUTOFIT}{\code{boolean} - Adjust to Grid. 1 for true/yes. 0 for false/no.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified Grid. Path for new raster layer.}
 

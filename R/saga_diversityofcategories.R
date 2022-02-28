@@ -20,11 +20,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * CONNECTIVITY - outputRaster - Connectivity
 ##' * COUNT - outputRaster - Number of Categories
 ##' * DIVERSITY - outputRaster - Diversity
 ##' * SIZE_MEAN - outputRaster - Average Size
 ##' * SIZE_SKEW - outputRaster - Skewness
-##' * CONNECTIVITY - outputRaster - Connectivity
 ##'
 ##'
 ##' @export
@@ -41,6 +41,6 @@ saga_diversityofcategories <- function(CATEGORIES = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "COUNT")
+    qgisprocess::qgis_output(output, "CONNECTIVITY")
   }
 }

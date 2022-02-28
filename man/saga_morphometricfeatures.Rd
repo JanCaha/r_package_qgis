@@ -71,16 +71,16 @@ QGIS Algorithm provided by SAGA Morphometric features (saga:morphometricfeatures
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item FEATURES - outputRaster - Morphometric Features
-\item ELEVATION - outputRaster - Generalized Surface
-\item SLOPE - outputRaster - Slope
 \item ASPECT - outputRaster - Aspect
-\item PROFC - outputRaster - Profile Curvature
-\item PLANC - outputRaster - Plan Curvature
+\item CROSC - outputRaster - Cross-Sectional Curvature
+\item ELEVATION - outputRaster - Generalized Surface
+\item FEATURES - outputRaster - Morphometric Features
 \item LONGC - outputRaster - Longitudinal Curvature
-\item CROSC - outputRaster - Cross
 \item MAXIC - outputRaster - Maximum Curvature
 \item MINIC - outputRaster - Minimum Curvature
+\item PLANC - outputRaster - Plan Curvature
+\item PROFC - outputRaster - Profile Curvature
+\item SLOPE - outputRaster - Slope
 }
 }
 }

@@ -19,9 +19,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * RESULT1 - outputRaster - Low-pass 1
+##' * RESULT2 - outputRaster - Low-pass 2
 ##' * RESULT3 - outputRaster - Destriped Grid
-##' * RESULT1 - outputRaster - Low
-##' * RESULT2 - outputRaster - Low
 ##'
 ##'
 ##' @export
@@ -38,6 +38,6 @@ saga_destripingwithmask <- function(INPUT = qgisprocess::qgis_default_value(), M
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT3")
+    qgisprocess::qgis_output(output, "RESULT1")
   }
 }

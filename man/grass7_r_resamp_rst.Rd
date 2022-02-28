@@ -86,12 +86,12 @@ QGIS Algorithm provided by GRASS r.resamp.rst (grass7:r.resamp.rst)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item elevation - outputRaster - Resampled RST
-\item slope - outputRaster - Slope raster
 \item aspect - outputRaster - Aspect raster
-\item pcurvature - outputRaster - Profile curvature raster
-\item tcurvature - outputRaster - Tangential curvature raster
+\item elevation - outputRaster - Resampled RST
 \item mcurvature - outputRaster - Mean curvature raster
+\item pcurvature - outputRaster - Profile curvature raster
+\item slope - outputRaster - Slope raster
+\item tcurvature - outputRaster - Tangential curvature raster
 }
 }
 }

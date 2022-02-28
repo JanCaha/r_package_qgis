@@ -53,7 +53,7 @@ QGIS Algorithm provided by GRASS r.quant (grass7:r.quant)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputFolder - Quantized raster
+\item output - outputFolder - Quantized raster(s)
 }
 }
 }

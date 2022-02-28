@@ -29,8 +29,8 @@ QGIS Algorithm provided by SAGA Geographic coordinate grids (saga:geographiccoor
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item LON - outputRaster - Longitude
 \item LAT - outputRaster - Latitude
+\item LON - outputRaster - Longitude
 }
 }
 }

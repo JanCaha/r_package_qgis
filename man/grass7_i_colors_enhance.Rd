@@ -65,9 +65,9 @@ QGIS Algorithm provided by GRASS i.colors.enhance (grass7:i.colors.enhance)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item redoutput - outputRaster - Enhanced Red
-\item greenoutput - outputRaster - Enhanced Green
 \item blueoutput - outputRaster - Enhanced Blue
+\item greenoutput - outputRaster - Enhanced Green
+\item redoutput - outputRaster - Enhanced Red
 }
 }
 }

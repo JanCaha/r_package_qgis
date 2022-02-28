@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * HULLS - outputVector - Convex Hull
 ##' * BOXES - outputVector - Minimum Bounding Box
+##' * HULLS - outputVector - Convex Hull
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ saga_convexhull <- function(SHAPES = qgisprocess::qgis_default_value(), POLYPOIN
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "HULLS")
+    qgisprocess::qgis_output(output, "BOXES")
   }
 }

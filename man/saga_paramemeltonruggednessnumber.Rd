@@ -33,8 +33,8 @@ QGIS Algorithm provided by SAGA Paramemelton ruggedness number (saga:paramemelto
 \subsection{Outputs description}{
 \itemize{
 \item AREA - outputRaster - Catchment Area
-\item ZMAX - outputRaster - Maximum Height
 \item MRN - outputRaster - Melton Ruggedness Number
+\item ZMAX - outputRaster - Maximum Height
 }
 }
 }

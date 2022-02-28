@@ -11,9 +11,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * R - outputRaster - Output R band layer
-##' * G - outputRaster - Output G band layer
 ##' * B - outputRaster - Output B band layer
+##' * G - outputRaster - Output G band layer
+##' * R - outputRaster - Output R band layer
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_splitrgbbands <- function(INPUT = qgisprocess::qgis_default_value(), R = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "R")
+    qgisprocess::qgis_output(output, "B")
   }
 }

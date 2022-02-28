@@ -13,12 +13,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * VALID_OUTPUT - outputVector - Valid output
-##' * VALID_COUNT - outputNumber - Count of valid features
-##' * INVALID_OUTPUT - outputVector - Invalid output
-##' * INVALID_COUNT - outputNumber - Count of invalid features
-##' * ERROR_OUTPUT - outputVector - Error output
 ##' * ERROR_COUNT - outputNumber - Count of errors
+##' * ERROR_OUTPUT - outputVector - Error output
+##' * INVALID_COUNT - outputNumber - Count of invalid features
+##' * INVALID_OUTPUT - outputVector - Invalid output
+##' * VALID_COUNT - outputNumber - Count of valid features
+##' * VALID_OUTPUT - outputVector - Valid output
 ##'
 ##'
 ##' @export
@@ -35,6 +35,6 @@ qgis_checkvalidity <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "VALID_OUTPUT")
+    qgisprocess::qgis_output(output, "ERROR_COUNT")
   }
 }

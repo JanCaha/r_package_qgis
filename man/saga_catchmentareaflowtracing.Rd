@@ -68,11 +68,11 @@ QGIS Algorithm provided by SAGA Catchment area (flow tracing) (saga:catchmentare
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item FLOW - outputRaster - Flow Accumulation
-\item VAL_MEAN - outputRaster - Mean over Catchment
-\item ACCU_TOTAL - outputRaster - Accumulated Material
 \item ACCU_LEFT - outputRaster - Accumulated Material from left side
 \item ACCU_RIGHT - outputRaster - Accumulated Material from right side
+\item ACCU_TOTAL - outputRaster - Accumulated Material
+\item FLOW - outputRaster - Flow Accumulation
+\item VAL_MEAN - outputRaster - Mean over Catchment
 }
 }
 }

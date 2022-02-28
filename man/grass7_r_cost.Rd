@@ -80,9 +80,9 @@ QGIS Algorithm provided by GRASS r.cost (grass7:r.cost)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Cumulative cost
 \item nearest - outputRaster - Cost allocation map
 \item outdir - outputRaster - Movement directions
+\item output - outputRaster - Cumulative cost
 }
 }
 }

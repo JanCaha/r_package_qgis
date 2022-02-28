@@ -77,8 +77,8 @@ QGIS Algorithm provided by GRASS r.resamp.bspline (grass7:r.resamp.bspline)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Resampled BSpline
 \item grid - outputVector - Interpolation Grid
+\item output - outputRaster - Resampled BSpline
 }
 }
 }

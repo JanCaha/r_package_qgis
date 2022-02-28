@@ -47,8 +47,8 @@ QGIS Algorithm provided by SAGA Diffusive hillslope evolution (ftcs) (saga:diffu
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item MODEL - outputRaster - Modelled Elevation
 \item DIFF - outputRaster - Elevation Difference
+\item MODEL - outputRaster - Modelled Elevation
 }
 }
 }

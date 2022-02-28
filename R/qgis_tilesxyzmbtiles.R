@@ -16,7 +16,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_FILE - outputFile - Output file 
+##' * OUTPUT_FILE - outputFile - Output file (for MBTiles)
 ##'
 ##'
 ##' @export

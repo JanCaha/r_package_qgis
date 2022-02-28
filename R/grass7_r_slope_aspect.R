@@ -28,15 +28,15 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * slope - outputRaster - Slope
 ##' * aspect - outputRaster - Aspect
-##' * pcurvature - outputRaster - Profile curvature
-##' * tcurvature - outputRaster - Tangential curvature
-##' * dx - outputRaster - First order partial derivative dx 
-##' * dy - outputRaster - First order partial derivative dy 
+##' * dx - outputRaster - First order partial derivative dx (E-W slope)
 ##' * dxx - outputRaster - Second order partial derivative dxx
-##' * dyy - outputRaster - Second order partial derivative dyy
 ##' * dxy - outputRaster - Second order partial derivative dxy
+##' * dy - outputRaster - First order partial derivative dy (N-S slope)
+##' * dyy - outputRaster - Second order partial derivative dyy
+##' * pcurvature - outputRaster - Profile curvature
+##' * slope - outputRaster - Slope
+##' * tcurvature - outputRaster - Tangential curvature
 ##'
 ##'
 ##' @export
@@ -53,6 +53,6 @@ grass7_r_slope_aspect <- function(elevation = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "slope")
+    qgisprocess::qgis_output(output, "aspect")
   }
 }

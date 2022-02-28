@@ -26,12 +26,12 @@ QGIS Algorithm provided by QGIS (native c++) Nearest neighbour analysis (native:
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_HTML_FILE - outputHtml - Nearest neighbour
-\item OBSERVED_MD - outputNumber - Observed mean distance
 \item EXPECTED_MD - outputNumber - Expected mean distance
 \item NN_INDEX - outputNumber - Nearest neighbour index
+\item OBSERVED_MD - outputNumber - Observed mean distance
+\item OUTPUT_HTML_FILE - outputHtml - Nearest neighbour
 \item POINT_COUNT - outputNumber - Number of points
-\item Z_SCORE - outputNumber - Z
+\item Z_SCORE - outputNumber - Z-score
 }
 }
 }

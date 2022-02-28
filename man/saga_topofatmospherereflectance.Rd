@@ -221,16 +221,18 @@ QGIS Algorithm provided by SAGA Top of atmosphere reflectance (saga:topofatmosph
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item RF_MSS01 - outputRaster - Reflectance Band 1
-\item RF_MSS02 - outputRaster - Reflectance Band 2
-\item RF_MSS03 - outputRaster - Reflectance Band 3
-\item RF_MSS04 - outputRaster - Reflectance Band 4
 \item RF_ETM01 - outputRaster - Reflectance Band 1
 \item RF_ETM02 - outputRaster - Reflectance Band 2
 \item RF_ETM03 - outputRaster - Reflectance Band 3
 \item RF_ETM04 - outputRaster - Reflectance Band 4
 \item RF_ETM05 - outputRaster - Reflectance Band 5
 \item RF_ETM07 - outputRaster - Reflectance Band 7
+\item RF_ETM61 - outputRaster - Reflectance Band 61
+\item RF_ETM62 - outputRaster - Reflectance Band 62
+\item RF_MSS01 - outputRaster - Reflectance Band 1
+\item RF_MSS02 - outputRaster - Reflectance Band 2
+\item RF_MSS03 - outputRaster - Reflectance Band 3
+\item RF_MSS04 - outputRaster - Reflectance Band 4
 \item RF_OLI01 - outputRaster - Reflectance Band 1
 \item RF_OLI02 - outputRaster - Reflectance Band 2
 \item RF_OLI03 - outputRaster - Reflectance Band 3
@@ -239,12 +241,10 @@ QGIS Algorithm provided by SAGA Top of atmosphere reflectance (saga:topofatmosph
 \item RF_OLI06 - outputRaster - Reflectance Band 6
 \item RF_OLI07 - outputRaster - Reflectance Band 7
 \item RF_OLI09 - outputRaster - Reflectance Band 9
-\item RF__TM06 - outputRaster - Reflectance Band 6
-\item RF_ETM61 - outputRaster - Reflectance Band 61
-\item RF_ETM62 - outputRaster - Reflectance Band 62
 \item RF_OLI10 - outputRaster - Reflectance Band 10
 \item RF_OLI11 - outputRaster - Reflectance Band 11
 \item RF_PAN08 - outputRaster - Reflectance Band 8
+\item RF__TM06 - outputRaster - Reflectance Band 6
 }
 }
 }

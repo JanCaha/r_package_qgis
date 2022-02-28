@@ -6,9 +6,6 @@
 \usage{
 saga_lineproperties(
   LINES = qgisprocess::qgis_default_value(),
-  BPARTS = qgisprocess::qgis_default_value(),
-  BPOINTS = qgisprocess::qgis_default_value(),
-  BLENGTH = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -16,12 +13,6 @@ saga_lineproperties(
 }
 \arguments{
 \item{LINES}{\code{source} - Lines. Path to a vector layer.}
-
-\item{BPARTS}{\code{boolean} - Number of Parts. 1 for true/yes. 0 for false/no.}
-
-\item{BPOINTS}{\code{boolean} - Number of Vertices. 1 for true/yes. 0 for false/no.}
-
-\item{BLENGTH}{\code{boolean} - Length. 1 for true/yes. 0 for false/no.}
 
 \item{OUTPUT}{\code{vectorDestination} - Lines with Property Attributes. Path for new vector layer.}
 

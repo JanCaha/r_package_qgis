@@ -44,7 +44,7 @@ QGIS Algorithm provided by GDAL Clip raster by extent (gdal:cliprasterbyextent)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Clipped
+\item OUTPUT - outputRaster - Clipped (extent)
 }
 }
 }

@@ -19,8 +19,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * AREA - outputRaster - Catchment area
-##' * SLOPE - outputRaster - Catchment slope
 ##' * AREA_MOD - outputRaster - Modified catchment area
+##' * SLOPE - outputRaster - Catchment slope
 ##' * TWI - outputRaster - Topographic Wetness Index
 ##'
 ##'

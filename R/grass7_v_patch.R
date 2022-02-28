@@ -18,8 +18,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Combined
 ##' * bbox - outputVector - Bounding boxes
+##' * output - outputVector - Combined
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ grass7_v_patch <- function(input = qgisprocess::qgis_default_value(), .e = qgisp
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "bbox")
   }
 }

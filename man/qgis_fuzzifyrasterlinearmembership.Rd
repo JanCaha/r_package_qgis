@@ -35,12 +35,12 @@ QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (linear membership) 
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item EXTENT - outputString - Extent
 \item CRS_AUTHID - outputString - CRS authority identifier
-\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
+\item EXTENT - outputString - Extent
 \item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-\item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 \item OUTPUT - outputRaster - Fuzzified raster
+\item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
 }
 }
 }

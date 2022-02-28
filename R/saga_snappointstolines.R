@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Result
 ##' * MOVES - outputVector - Moves
+##' * OUTPUT - outputVector - Result
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_snappointstolines <- function(INPUT = qgisprocess::qgis_default_value(), SN
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "MOVES")
   }
 }

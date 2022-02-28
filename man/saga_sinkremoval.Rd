@@ -8,7 +8,6 @@ saga_sinkremoval(
   DEM = qgisprocess::qgis_default_value(),
   SINKROUTE = qgisprocess::qgis_default_value(),
   METHOD = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
   THRSHEIGHT = qgisprocess::qgis_default_value(),
   DEM_PREPROC = qgisprocess::qgis_default_value(),
   ...,
@@ -21,8 +20,6 @@ saga_sinkremoval(
 \item{SINKROUTE}{\code{raster} - Sink Route. Path to a raster layer.}
 
 \item{METHOD}{\code{enum}  of \verb{("[0] Deepen Drainage Routes", "[1] Fill Sinks")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
-
-\item{THRESHOLD}{\code{boolean} - Threshold. 1 for true/yes. 0 for false/no.}
 
 \item{THRSHEIGHT}{\code{number} - Threshold Height. A numeric value.}
 

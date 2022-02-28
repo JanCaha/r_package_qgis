@@ -13,8 +13,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Relief
 ##' * FREQUENCY_DISTRIBUTION - outputFile - Frequency distribution
+##' * OUTPUT - outputRaster - Relief
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ qgis_relief <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "FREQUENCY_DISTRIBUTION")
   }
 }

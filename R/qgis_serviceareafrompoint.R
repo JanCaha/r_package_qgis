@@ -22,8 +22,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_LINES - outputVector - Service area 
-##' * OUTPUT - outputVector - Service area 
+##' * OUTPUT - outputVector - Service area (boundary nodes)
+##' * OUTPUT_LINES - outputVector - Service area (lines)
 ##'
 ##'
 ##' @export
@@ -40,6 +40,6 @@ qgis_serviceareafrompoint <- function(INPUT = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_LINES")
+    qgisprocess::qgis_output(output, "OUTPUT")
   }
 }

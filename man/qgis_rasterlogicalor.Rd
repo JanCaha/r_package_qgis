@@ -38,15 +38,15 @@ QGIS Algorithm provided by QGIS (native c++) Raster boolean OR (native:rasterlog
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Output layer
-\item EXTENT - outputString - Extent
 \item CRS_AUTHID - outputString - CRS authority identifier
-\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
-\item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-\item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
-\item NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
-\item TRUE_PIXEL_COUNT - outputNumber - True pixel count
+\item EXTENT - outputString - Extent
 \item FALSE_PIXEL_COUNT - outputNumber - False pixel count
+\item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+\item NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+\item OUTPUT - outputRaster - Output layer
+\item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+\item TRUE_PIXEL_COUNT - outputNumber - True pixel count
+\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
 }
 }
 }

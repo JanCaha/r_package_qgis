@@ -23,18 +23,18 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * SLOPE - outputRaster - Slope
 ##' * ASPECT - outputRaster - Aspect
+##' * C_CROS - outputRaster - Cross-Sectional Curvature
 ##' * C_GENE - outputRaster - General Curvature
+##' * C_LONG - outputRaster - Longitudinal Curvature
+##' * C_MAXI - outputRaster - Maximal Curvature
+##' * C_MINI - outputRaster - Minimal Curvature
 ##' * C_PLAN - outputRaster - Plan Curvature
 ##' * C_PROF - outputRaster - Profile Curvature
+##' * C_ROTO - outputRaster - Flow-Line Curvature
 ##' * C_TANG - outputRaster - Tangential Curvature
-##' * C_LONG - outputRaster - Longitudinal Curvature
-##' * C_CROS - outputRaster - Cross
-##' * C_MINI - outputRaster - Minimal Curvature
-##' * C_MAXI - outputRaster - Maximal Curvature
 ##' * C_TOTA - outputRaster - Total Curvature
-##' * C_ROTO - outputRaster - Flow
+##' * SLOPE - outputRaster - Slope
 ##'
 ##'
 ##' @export
@@ -51,6 +51,6 @@ saga_slopeaspectcurvature <- function(ELEVATION = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SLOPE")
+    qgisprocess::qgis_output(output, "ASPECT")
   }
 }

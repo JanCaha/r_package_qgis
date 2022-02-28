@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Downslope distance gradient (saga:downslopedista
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item GRADIENT - outputRaster - Gradient
 \item DIFFERENCE - outputRaster - Gradient Difference
+\item GRADIENT - outputRaster - Gradient
 }
 }
 }

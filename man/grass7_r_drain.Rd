@@ -80,8 +80,8 @@ QGIS Algorithm provided by GRASS r.drain (grass7:r.drain)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Least cost path
 \item drain - outputVector - Drain
+\item output - outputRaster - Least cost path
 }
 }
 }

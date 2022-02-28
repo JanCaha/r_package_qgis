@@ -74,22 +74,22 @@ QGIS Algorithm provided by SAGA Basic terrain analysis (saga:basicterrainanalysi
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item SHADE - outputRaster - Analytical Hillshading
-\item SLOPE - outputRaster - Slope
 \item ASPECT - outputRaster - Aspect
-\item HCURV - outputRaster - Plan Curvature
-\item VCURV - outputRaster - Profile Curvature
-\item CONVERGENCE - outputRaster - Convergence Index
-\item SINKS - outputRaster - Closed Depressions
-\item FLOW - outputRaster - Total Catchment Area
-\item WETNESS - outputRaster - Topographic Wetness Index
-\item LSFACTOR - outputRaster - LS
-\item CHANNELS - outputVector - Channel Network
 \item BASINS - outputVector - Drainage Basins
+\item CHANNELS - outputVector - Channel Network
 \item CHNL_BASE - outputRaster - Channel Network Base Level
 \item CHNL_DIST - outputRaster - Channel Network Distance
-\item VALL_DEPTH - outputRaster - Valley Depth
+\item CONVERGENCE - outputRaster - Convergence Index
+\item FLOW - outputRaster - Total Catchment Area
+\item HCURV - outputRaster - Plan Curvature
+\item LSFACTOR - outputRaster - LS-Factor
 \item RSP - outputRaster - Relative Slope Position
+\item SHADE - outputRaster - Analytical Hillshading
+\item SINKS - outputRaster - Closed Depressions
+\item SLOPE - outputRaster - Slope
+\item VALL_DEPTH - outputRaster - Valley Depth
+\item VCURV - outputRaster - Profile Curvature
+\item WETNESS - outputRaster - Topographic Wetness Index
 }
 }
 }

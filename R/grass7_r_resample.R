@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm r.resample
 ##'
-##' @param input `raster` - Input raster layer. Path to a raster layer.
+##' @param input `raster` - Input raster layer . Path to a raster layer.
 ##' @param output `rasterDestination` - Resampled NN. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.

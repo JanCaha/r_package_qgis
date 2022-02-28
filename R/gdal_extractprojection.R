@@ -9,8 +9,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * WORLD_FILE - outputFile - World file
 ##' * PRJ_FILE - outputFile - ESRI Shapefile prj file
+##' * WORLD_FILE - outputFile - World file
 ##'
 ##'
 ##' @export
@@ -27,6 +27,6 @@ gdal_extractprojection <- function(INPUT = qgisprocess::qgis_default_value(), PR
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "WORLD_FILE")
+    qgisprocess::qgis_output(output, "PRJ_FILE")
   }
 }

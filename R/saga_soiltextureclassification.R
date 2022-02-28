@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * TEXTURE - outputRaster - Soil Texture
 ##' * SUM - outputRaster - Sum
+##' * TEXTURE - outputRaster - Soil Texture
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_soiltextureclassification <- function(SAND = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "TEXTURE")
+    qgisprocess::qgis_output(output, "SUM")
   }
 }

@@ -9,7 +9,6 @@
 ##' @param SIG_1 `number` - Variance in Feature Space. A numeric value.
 ##' @param SIG_2 `number` - Variance in Position Space. A numeric value.
 ##' @param THRESHOLD `number` - Threshold - Similarity. A numeric value.
-##' @param REFRESH `boolean` - Refresh. 1 for true/yes. 0 for false/no.
 ##' @param LEAFSIZE `number` - Leaf Size (for Speed Optimisation). A numeric value.
 ##' @param SEGMENTS `rasterDestination` - Segments. Path for new raster layer.
 ##' @param SIMILARITY `rasterDestination` - Similarity. Path for new raster layer.
@@ -28,11 +27,11 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_simpleregiongrowing <- function(SEEDS = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NEIGHBOUR = qgisprocess::qgis_default_value(), SIG_1 = qgisprocess::qgis_default_value(), SIG_2 = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), REFRESH = qgisprocess::qgis_default_value(), LEAFSIZE = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), SIMILARITY = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_simpleregiongrowing <- function(SEEDS = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NEIGHBOUR = qgisprocess::qgis_default_value(), SIG_1 = qgisprocess::qgis_default_value(), SIG_2 = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), LEAFSIZE = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), SIMILARITY = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("saga:simpleregiongrowing")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:simpleregiongrowing", `SEEDS` = SEEDS, `FEATURES` = FEATURES, `METHOD` = METHOD, `NEIGHBOUR` = NEIGHBOUR, `SIG_1` = SIG_1, `SIG_2` = SIG_2, `THRESHOLD` = THRESHOLD, `REFRESH` = REFRESH, `LEAFSIZE` = LEAFSIZE, `SEGMENTS` = SEGMENTS, `SIMILARITY` = SIMILARITY, `TABLE` = TABLE,...)
+  output <- qgisprocess::qgis_run_algorithm("saga:simpleregiongrowing", `SEEDS` = SEEDS, `FEATURES` = FEATURES, `METHOD` = METHOD, `NEIGHBOUR` = NEIGHBOUR, `SIG_1` = SIG_1, `SIG_2` = SIG_2, `THRESHOLD` = THRESHOLD, `LEAFSIZE` = LEAFSIZE, `SEGMENTS` = SEGMENTS, `SIMILARITY` = SIMILARITY, `TABLE` = TABLE,...)
 
   if (.complete_output) {
     return(output)

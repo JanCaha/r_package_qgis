@@ -22,7 +22,7 @@ gdal_gridlinear(
 
 \item{Z_FIELD}{\code{field} - Z value from field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{RADIUS}{\code{number} - Search distance. A numeric value.}
+\item{RADIUS}{\code{number} - Search distance . A numeric value.}
 
 \item{NODATA}{\code{number} - NODATA marker to fill empty points. A numeric value.}
 
@@ -44,7 +44,7 @@ QGIS Algorithm provided by GDAL Grid (Linear) (gdal:gridlinear)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Interpolated
+\item OUTPUT - outputRaster - Interpolated (Linear)
 }
 }
 }

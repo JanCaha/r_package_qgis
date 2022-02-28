@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Clipped 
+##' * OUTPUT - outputVector - Clipped (extent)
 ##'
 ##'
 ##' @export

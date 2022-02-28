@@ -41,8 +41,8 @@ QGIS Algorithm provided by SAGA Topographic openness (saga:topographicopenness)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item POS - outputRaster - Positive Openness
 \item NEG - outputRaster - Negative Openness
+\item POS - outputRaster - Positive Openness
 }
 }
 }

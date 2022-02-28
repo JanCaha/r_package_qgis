@@ -23,14 +23,14 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * MEAN - outputRaster - Mean Value
-##' * DIFF - outputRaster - Difference from Mean Value
-##' * STDDEV - outputRaster - Standard Deviation
-##' * RANGE - outputRaster - Value Range
-##' * MIN - outputRaster - Minimum Value
-##' * MAX - outputRaster - Maximum Value
 ##' * DEVMEAN - outputRaster - Deviation from Mean Value
+##' * DIFF - outputRaster - Difference from Mean Value
+##' * MAX - outputRaster - Maximum Value
+##' * MEAN - outputRaster - Mean Value
+##' * MIN - outputRaster - Minimum Value
 ##' * PERCENT - outputRaster - Percentile
+##' * RANGE - outputRaster - Value Range
+##' * STDDEV - outputRaster - Standard Deviation
 ##'
 ##'
 ##' @export
@@ -47,6 +47,6 @@ saga_residualanalysis <- function(GRID = qgisprocess::qgis_default_value(), MODE
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MEAN")
+    qgisprocess::qgis_output(output, "DEVMEAN")
   }
 }

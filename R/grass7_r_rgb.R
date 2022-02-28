@@ -15,9 +15,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * red - outputRaster - Red
-##' * green - outputRaster - Green
 ##' * blue - outputRaster - Blue
+##' * green - outputRaster - Green
+##' * red - outputRaster - Red
 ##'
 ##'
 ##' @export
@@ -34,6 +34,6 @@ grass7_r_rgb <- function(input = qgisprocess::qgis_default_value(), red = qgispr
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "red")
+    qgisprocess::qgis_output(output, "blue")
   }
 }

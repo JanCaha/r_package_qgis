@@ -35,9 +35,9 @@ QGIS Algorithm provided by SAGA Quadtree structure to polygons (saga:quadtreestr
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item POLYGONS - outputVector - Polygons
 \item LINES - outputVector - Lines
 \item POINTS - outputVector - Duplicated Points
+\item POLYGONS - outputVector - Polygons
 }
 }
 }

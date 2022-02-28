@@ -68,8 +68,8 @@ QGIS Algorithm provided by GRASS v.outlier (grass7:v.outlier)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputVector - Layer without outliers
 \item outlier - outputVector - Outliers
+\item output - outputVector - Layer without outliers
 }
 }
 }

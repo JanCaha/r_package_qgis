@@ -7,7 +7,6 @@
 saga_splitshapeslayerrandomly(
   SHAPES = qgisprocess::qgis_default_value(),
   PERCENT = qgisprocess::qgis_default_value(),
-  EXACT = qgisprocess::qgis_default_value(),
   A = qgisprocess::qgis_default_value(),
   B = qgisprocess::qgis_default_value(),
   ...,
@@ -18,8 +17,6 @@ saga_splitshapeslayerrandomly(
 \item{SHAPES}{\code{source} - Shapes. Path to a vector layer.}
 
 \item{PERCENT}{\code{number} - Split ratio (\%). A numeric value.}
-
-\item{EXACT}{\code{boolean} - Split exactly. 1 for true/yes. 0 for false/no.}
 
 \item{A}{\code{vectorDestination} - Group A. Path for new vector layer.}
 

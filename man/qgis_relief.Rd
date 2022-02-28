@@ -38,8 +38,8 @@ QGIS Algorithm provided by QGIS Relief (qgis:relief)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Relief
 \item FREQUENCY_DISTRIBUTION - outputFile - Frequency distribution
+\item OUTPUT - outputRaster - Relief
 }
 }
 }

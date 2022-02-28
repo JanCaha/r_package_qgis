@@ -13,15 +13,15 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputRaster - Output layer
-##' * OCCURRENCE_COUNT - outputNumber - Count of value occurrences
-##' * FOUND_LOCATIONS_COUNT - outputNumber - Count of cells with equal value occurrences
-##' * MEAN_FREQUENCY_PER_LOCATION - outputNumber - Mean frequency at valid cell locations
-##' * EXTENT - outputString - Extent
 ##' * CRS_AUTHID - outputString - CRS authority identifier
-##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
+##' * EXTENT - outputString - Extent
+##' * FOUND_LOCATIONS_COUNT - outputNumber - Count of cells with equal value occurrences
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+##' * MEAN_FREQUENCY_PER_LOCATION - outputNumber - Mean frequency at valid cell locations
+##' * OCCURRENCE_COUNT - outputNumber - Count of value occurrences
+##' * OUTPUT - outputRaster - Output layer
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
 ##'
 ##'
 ##' @export
@@ -38,6 +38,6 @@ qgis_equaltofrequency <- function(INPUT_VALUE_RASTER = qgisprocess::qgis_default
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "CRS_AUTHID")
   }
 }

@@ -8,7 +8,7 @@
     stop("Cannot load package `qgis` because working QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
   }
 
-  qgis_build <- "3.22.3"
+  qgis_build <- "3.24.0"
 
   qgis_local <- stringr::str_match(qgisprocess::qgis_version(), "[0-9.]+[[:cntrl:][:alnum:]]")[,1]
 

@@ -22,6 +22,11 @@ The package is highly experimental and things are quite likely to change
 a lot in the future. The definition of individual functions can change
 if it changes in the QGIS.
 
+## Latest version
+
+Latest package version **1.12.0** is build against QGIS version
+**3.24.0-Tisler**.
+
 ## Installation
 
 You can install the released version of **qgis** from GitHub with:
@@ -39,7 +44,7 @@ The names of the functions follow general pattern of
 algorithms using `qgis` algorithm provider instead of `native`.
 
 The available providers are: 3d, gdal, grass7, native, qgis, saga. The
-overall number of available algorithms is 997.
+overall number of available algorithms is 1014.
 
 ## Example
 
@@ -79,29 +84,19 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> Argument `MITER_LIMIT` is unspecified (using QGIS default value).
     #> Argument `DISSOLVE` is unspecified (using QGIS default value).
     #> Using `OUTPUT = qgis_tmp_vector()`
-    #> Running qgis_process run 'native:buffer' \
-    #>   '--INPUT=/tmp/RtmpJ6HNp8/file914372f42ca0/file914313f557b6.gpkg' \
-    #>   '--DISTANCE=0.5' '--END_CAP_STYLE=1' '--JOIN_STYLE=0' \
-    #>   '--OUTPUT=/tmp/RtmpJ6HNp8/file914372f42ca0/file91436898420c.gpkg'
+    #> JSON input ----
+    #> {
+    #>   "inputs": {
+    #>     "INPUT": "/tmp/Rtmp3gPVyd/filec70c78658334/filec70c5060ac2c.gpkg",
+    #>     "DISTANCE": 0.5,
+    #>     "END_CAP_STYLE": 1,
+    #>     "JOIN_STYLE": 0,
+    #>     "OUTPUT": "/tmp/Rtmp3gPVyd/filec70c78658334/filec70c6ffff861.gpkg"
+    #>   }
+    #> }
+    #> 
+    #> Running qgis_process --json run 'native:buffer' -
     #> QStandardPaths: wrong ownership on runtime directory /tmp, 0 instead of 1001
-    #> 
-    #> ----------------
-    #> Inputs
-    #> ----------------
-    #> 
-    #> DISTANCE:    0.5
-    #> END_CAP_STYLE:   1
-    #> INPUT:   /tmp/RtmpJ6HNp8/file914372f42ca0/file914313f557b6.gpkg
-    #> JOIN_STYLE:  0
-    #> OUTPUT:  /tmp/RtmpJ6HNp8/file914372f42ca0/file91436898420c.gpkg
-    #> 
-    #> 
-    #> 0...10...20...30...40...50...60...70...80...90...
-    #> ----------------
-    #> Results
-    #> ----------------
-    #> 
-    #> OUTPUT:  /tmp/RtmpJ6HNp8/file914372f42ca0/file91436898420c.gpkg
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot

@@ -62,9 +62,9 @@ QGIS Algorithm provided by GRASS i.pansharpen (grass7:i.pansharpen)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item redoutput - outputRaster - Enhanced Red
-\item greenoutput - outputRaster - Enhanced Green
 \item blueoutput - outputRaster - Enhanced Blue
+\item greenoutput - outputRaster - Enhanced Green
+\item redoutput - outputRaster - Enhanced Red
 }
 }
 }

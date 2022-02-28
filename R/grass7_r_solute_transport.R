@@ -40,8 +40,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * output - outputRaster - Solute Transport
-##' * vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction 
-##' * vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction 
+##' * vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction (m/s)
+##' * vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction (m/s)
 ##'
 ##'
 ##' @export

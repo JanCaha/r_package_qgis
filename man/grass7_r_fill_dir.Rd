@@ -50,9 +50,9 @@ QGIS Algorithm provided by GRASS r.fill.dir (grass7:r.fill.dir)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Depressionless DEM
-\item direction - outputRaster - Flow direction
 \item areas - outputRaster - Problem areas
+\item direction - outputRaster - Flow direction
+\item output - outputRaster - Depressionless DEM
 }
 }
 }

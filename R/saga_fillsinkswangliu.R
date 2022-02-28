@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * FILLED - outputRaster - Filled DEM
 ##' * FDIR - outputRaster - Flow Directions
+##' * FILLED - outputRaster - Filled DEM
 ##' * WSHED - outputRaster - Watershed Basins
 ##'
 ##'
@@ -31,6 +31,6 @@ saga_fillsinkswangliu <- function(ELEV = qgisprocess::qgis_default_value(), MINS
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FILLED")
+    qgisprocess::qgis_output(output, "FDIR")
   }
 }

@@ -41,11 +41,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * depth - outputRaster - Water depth 
-##' * discharge - outputRaster - Water discharge 
-##' * error - outputRaster - Simulation error 
-##' * walkers_output - outputVector - Name of the output walkers vector points layer
+##' * depth - outputRaster - Water depth (m)
+##' * discharge - outputRaster - Water discharge (m3/s)
+##' * error - outputRaster - Simulation error (m)
 ##' * logfile - outputFile - Name for sampling points output text file.
+##' * walkers_output - outputVector - Name of the output walkers vector points layer
 ##'
 ##'
 ##' @export

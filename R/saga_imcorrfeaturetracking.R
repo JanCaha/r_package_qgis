@@ -16,8 +16,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * CORRPOINTS - outputVector - Correlated Points
 ##' * CORRLINES - outputVector - Displacement Vector
+##' * CORRPOINTS - outputVector - Correlated Points
 ##'
 ##'
 ##' @export
@@ -34,6 +34,6 @@ saga_imcorrfeaturetracking <- function(GRID_1 = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CORRPOINTS")
+    qgisprocess::qgis_output(output, "CORRLINES")
   }
 }

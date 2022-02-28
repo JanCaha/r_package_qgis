@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Cross-classification and tabulation (saga:crossc
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item RESULTGRID - outputRaster - Cross
-\item RESULTTABLE - outputVector - Cross
+\item RESULTGRID - outputRaster - Cross-Classification Grid
+\item RESULTTABLE - outputVector - Cross-Tabulation Table
 }
 }
 }

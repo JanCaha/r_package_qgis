@@ -50,11 +50,11 @@ QGIS Algorithm provided by SAGA Sky view factor (saga:skyviewfactor)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item VISIBLE - outputRaster - Visible Sky
-\item SVF - outputRaster - Sky View Factor
-\item SIMPLE - outputRaster - Sky View Factor
-\item TERRAIN - outputRaster - Terrain View Factor
 \item DISTANCE - outputRaster - Terrain View Factor
+\item SIMPLE - outputRaster - Sky View Factor (Simplified)
+\item SVF - outputRaster - Sky View Factor
+\item TERRAIN - outputRaster - Terrain View Factor
+\item VISIBLE - outputRaster - Visible Sky
 }
 }
 }

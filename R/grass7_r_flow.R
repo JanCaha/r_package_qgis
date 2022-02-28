@@ -26,9 +26,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * flowline - outputVector - Flow line
-##' * flowlength - outputRaster - Flow path length
 ##' * flowaccumulation - outputRaster - Flow accumulation
+##' * flowlength - outputRaster - Flow path length
+##' * flowline - outputVector - Flow line
 ##'
 ##'
 ##' @export
@@ -45,6 +45,6 @@ grass7_r_flow <- function(elevation = qgisprocess::qgis_default_value(), aspect 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "flowline")
+    qgisprocess::qgis_output(output, "flowaccumulation")
   }
 }

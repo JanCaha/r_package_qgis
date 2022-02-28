@@ -23,7 +23,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * OUTPUT - outputFolder - Output directory
-##' * OUTPUT_CSV - outputFile - CSV file containing the tile
+##' * OUTPUT_CSV - outputFile - CSV file containing the tile(s) georeferencing information
 ##'
 ##'
 ##' @export

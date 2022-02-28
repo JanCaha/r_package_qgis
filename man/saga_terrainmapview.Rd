@@ -47,10 +47,10 @@ QGIS Algorithm provided by SAGA Terrain map view (saga:terrainmapview)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item SHADE - outputRaster - Shade
-\item OPENNESS - outputRaster - Openness
-\item SLOPE - outputRaster - Slope
 \item CONTOURS - outputVector - Contours
+\item OPENNESS - outputRaster - Openness
+\item SHADE - outputRaster - Shade
+\item SLOPE - outputRaster - Slope
 }
 }
 }

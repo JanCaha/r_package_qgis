@@ -13,8 +13,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Extracted 
-##' * FAIL_OUTPUT - outputVector - Extracted 
+##' * FAIL_OUTPUT - outputVector - Extracted (non-matching)
+##' * OUTPUT - outputVector - Extracted (attribute)
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ qgis_extractbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), F
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "FAIL_OUTPUT")
   }
 }

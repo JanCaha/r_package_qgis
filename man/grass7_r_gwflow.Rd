@@ -107,10 +107,10 @@ QGIS Algorithm provided by GRASS r.gwflow (grass7:r.gwflow)
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item budget - outputRaster - Groundwater budget for each cell (m^3/s)
 \item output - outputRaster - Groundwater flow
-\item vx - outputRaster - Groundwater filter velocity vector part in x direction
-\item vy - outputRaster - Groundwater filter velocity vector part in y direction
-\item budget - outputRaster - Groundwater budget for each cell
+\item vx - outputRaster - Groundwater filter velocity vector part in x direction (m/s)
+\item vy - outputRaster - Groundwater filter velocity vector part in y direction (m/s)
 }
 }
 }

@@ -77,9 +77,9 @@ QGIS Algorithm provided by GRASS r.flow (grass7:r.flow)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item flowline - outputVector - Flow line
-\item flowlength - outputRaster - Flow path length
 \item flowaccumulation - outputRaster - Flow accumulation
+\item flowlength - outputRaster - Flow path length
+\item flowline - outputVector - Flow line
 }
 }
 }

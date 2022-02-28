@@ -18,7 +18,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * FLUX - outputRaster - Flux
-##' * STATE_OUT - outputRaster - State t 
+##' * STATE_OUT - outputRaster - State t + 1
 ##'
 ##'
 ##' @export

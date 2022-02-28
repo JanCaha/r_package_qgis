@@ -23,8 +23,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputVector - Layer without outliers
 ##' * outlier - outputVector - Outliers
+##' * output - outputVector - Layer without outliers
 ##'
 ##'
 ##' @export
@@ -41,6 +41,6 @@ grass7_v_outlier <- function(input = qgisprocess::qgis_default_value(), ew_step 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "outlier")
   }
 }

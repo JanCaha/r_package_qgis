@@ -68,14 +68,14 @@ QGIS Algorithm provided by SAGA Residual analysis (saga:residualanalysis)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item MEAN - outputRaster - Mean Value
-\item DIFF - outputRaster - Difference from Mean Value
-\item STDDEV - outputRaster - Standard Deviation
-\item RANGE - outputRaster - Value Range
-\item MIN - outputRaster - Minimum Value
-\item MAX - outputRaster - Maximum Value
 \item DEVMEAN - outputRaster - Deviation from Mean Value
+\item DIFF - outputRaster - Difference from Mean Value
+\item MAX - outputRaster - Maximum Value
+\item MEAN - outputRaster - Mean Value
+\item MIN - outputRaster - Minimum Value
 \item PERCENT - outputRaster - Percentile
+\item RANGE - outputRaster - Value Range
+\item STDDEV - outputRaster - Standard Deviation
 }
 }
 }

@@ -16,12 +16,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * RELATIVE - outputRaster - Relative Richness
+##' * CVN - outputRaster - Center Versus Neighbours
 ##' * DIVERSITY - outputRaster - Diversity
 ##' * DOMINANCE - outputRaster - Dominance
 ##' * FRAGMENTATION - outputRaster - Fragmentation
 ##' * NDC - outputRaster - Number of Different Classes
-##' * CVN - outputRaster - Center Versus Neighbours
+##' * RELATIVE - outputRaster - Relative Richness
 ##'
 ##'
 ##' @export
@@ -38,6 +38,6 @@ saga_patternanalysis <- function(INPUT = qgisprocess::qgis_default_value(), WINS
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RELATIVE")
+    qgisprocess::qgis_output(output, "CVN")
   }
 }

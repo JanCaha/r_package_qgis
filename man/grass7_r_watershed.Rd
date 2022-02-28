@@ -102,14 +102,14 @@ QGIS Algorithm provided by GRASS r.watershed (grass7:r.watershed)
 \subsection{Outputs description}{
 \itemize{
 \item accumulation - outputRaster - Number of cells that drain through each cell
-\item drainage - outputRaster - Drainage direction
 \item basin - outputRaster - Unique label for each watershed basin
+\item drainage - outputRaster - Drainage direction
+\item half_basin - outputRaster - Half-basins
+\item length_slope - outputRaster - Slope length and steepness (LS) factor for USLE
+\item slope_steepness - outputRaster - Slope steepness (S) factor for USLE
+\item spi - outputRaster - Stream power index a * tan(b)
 \item stream - outputRaster - Stream segments
-\item half_basin - outputRaster - Half
-\item length_slope - outputRaster - Slope length and steepness
-\item slope_steepness - outputRaster - Slope steepness
-\item tci - outputRaster - Topographic index ln
-\item spi - outputRaster - Stream power index a
+\item tci - outputRaster - Topographic index ln(a / tan(b))
 }
 }
 }

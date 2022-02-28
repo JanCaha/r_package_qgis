@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * SCA - outputRaster - Specific Catchment Area (SCA)
 ##' * WIDTH - outputRaster - Flow Width
-##' * SCA - outputRaster - Specific Catchment Area 
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_flowwidthandspecificcatchmentarea <- function(DEM = qgisprocess::qgis_defau
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "WIDTH")
+    qgisprocess::qgis_output(output, "SCA")
   }
 }

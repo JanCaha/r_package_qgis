@@ -56,7 +56,7 @@ QGIS Algorithm provided by GDAL Grid (Data metrics) (gdal:griddatametrics)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Interpolated
+\item OUTPUT - outputRaster - Interpolated (data metrics)
 }
 }
 }

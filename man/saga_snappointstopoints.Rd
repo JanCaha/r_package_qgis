@@ -35,8 +35,8 @@ QGIS Algorithm provided by SAGA Snap points to points (saga:snappointstopoints)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Result
 \item MOVES - outputVector - Moves
+\item OUTPUT - outputVector - Result
 }
 }
 }

@@ -68,9 +68,9 @@ QGIS Algorithm provided by SAGA Confusion matrix (two grids) (saga:confusionmatr
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item CLASSES - outputVector - Class Values
 \item COMBINED - outputRaster - Combined Classes
 \item CONFUSION - outputVector - Confusion Matrix
-\item CLASSES - outputVector - Class Values
 \item SUMMARY - outputVector - Summary
 }
 }

@@ -17,8 +17,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Classification
 ##' * goodness - outputRaster - Goodness_of_fit
+##' * output - outputRaster - Classification
 ##'
 ##'
 ##' @export
@@ -35,6 +35,6 @@ grass7_i_smap <- function(input = qgisprocess::qgis_default_value(), signaturefi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "goodness")
   }
 }

@@ -17,12 +17,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * PVI0 - outputRaster - Perpendicular Vegetation Index 
-##' * PVI1 - outputRaster - Perpendicular Vegetation Index 
-##' * PVI2 - outputRaster - Perpendicular Vegetation Index 
-##' * PVI3 - outputRaster - Perpendicular Vegetation Index 
-##' * TSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index 
-##' * ATSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index 
+##' * ATSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index (Baret and Guyot, 1991)
+##' * PVI0 - outputRaster - Perpendicular Vegetation Index (Richardson and Wiegand, 1977)
+##' * PVI1 - outputRaster - Perpendicular Vegetation Index (Perry and Lautenschlager, 1984)
+##' * PVI2 - outputRaster - Perpendicular Vegetation Index (Walther and Shabaani)
+##' * PVI3 - outputRaster - Perpendicular Vegetation Index (Qi, et al., 1994)
+##' * TSAVI - outputRaster - Transformed Soil Adjusted Vegetation Index (Baret et al. 1989)
 ##'
 ##'
 ##' @export
@@ -39,6 +39,6 @@ saga_vegetationindexdistancebased <- function(RED = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PVI0")
+    qgisprocess::qgis_output(output, "ATSAVI")
   }
 }

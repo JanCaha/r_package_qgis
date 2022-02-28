@@ -9,8 +9,6 @@ saga_multipleregressionanalysispointsraster(
   SHAPES = qgisprocess::qgis_default_value(),
   ATTRIBUTE = qgisprocess::qgis_default_value(),
   INTERPOL = qgisprocess::qgis_default_value(),
-  COORD_X = qgisprocess::qgis_default_value(),
-  COORD_Y = qgisprocess::qgis_default_value(),
   METHOD = qgisprocess::qgis_default_value(),
   P_IN = qgisprocess::qgis_default_value(),
   P_OUT = qgisprocess::qgis_default_value(),
@@ -31,10 +29,6 @@ saga_multipleregressionanalysispointsraster(
 \item{ATTRIBUTE}{\code{field} - Attribute. The name of an existing field. ; delimited list of existing field names.}
 
 \item{INTERPOL}{\code{enum}  of \verb{("[0] Nearest Neighbor", "[1] Bilinear Interpolation", "[2] Inverse Distance Interpolation", "[3] Bicubic Spline Interpolation", "[4] B-Spline Interpolation")} - Grid Interpolation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
-
-\item{COORD_X}{\code{boolean} - Include X Coordinate. 1 for true/yes. 0 for false/no.}
-
-\item{COORD_Y}{\code{boolean} - Include Y Coordinate. 1 for true/yes. 0 for false/no.}
 
 \item{METHOD}{\code{enum}  of \verb{("[0] include all", "[1] forward", "[2] backward", "[3] stepwise")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -62,11 +56,11 @@ QGIS Algorithm provided by SAGA Multiple regression analysis (points/raster) (sa
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item INFO_COEFF - outputVector - Details
-\item INFO_MODEL - outputVector - Details
-\item INFO_STEPS - outputVector - Details
-\item RESIDUALS - outputVector - Residuals
+\item INFO_COEFF - outputVector - Details: Coefficients
+\item INFO_MODEL - outputVector - Details: Model
+\item INFO_STEPS - outputVector - Details: Steps
 \item REGRESSION - outputRaster - Regression
+\item RESIDUALS - outputVector - Residuals
 }
 }
 }

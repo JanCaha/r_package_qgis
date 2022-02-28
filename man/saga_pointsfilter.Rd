@@ -10,7 +10,6 @@ saga_pointsfilter(
   RADIUS = qgisprocess::qgis_default_value(),
   MINNUM = qgisprocess::qgis_default_value(),
   MAXNUM = qgisprocess::qgis_default_value(),
-  QUADRANTS = qgisprocess::qgis_default_value(),
   METHOD = qgisprocess::qgis_default_value(),
   TOLERANCE = qgisprocess::qgis_default_value(),
   PERCENT = qgisprocess::qgis_default_value(),
@@ -29,8 +28,6 @@ saga_pointsfilter(
 \item{MINNUM}{\code{number} - Minimum Number of Points. A numeric value.}
 
 \item{MAXNUM}{\code{number} - Maximum Number of Points. A numeric value.}
-
-\item{QUADRANTS}{\code{boolean} - Quadrants. 1 for true/yes. 0 for false/no.}
 
 \item{METHOD}{\code{enum}  of \verb{("[0] keep maxima (with tolerance)", "[1] keep minima (with tolerance)", "[2] remove maxima (with tolerance)", "[3] remove minima (with tolerance)", "[4] remove below percentile", "[5] remove above percentile")} - Filter Criterion. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

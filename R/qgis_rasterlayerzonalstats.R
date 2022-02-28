@@ -13,13 +13,13 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_TABLE - outputVector - Statistics
-##' * EXTENT - outputString - Extent
 ##' * CRS_AUTHID - outputString - CRS authority identifier
-##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
+##' * EXTENT - outputString - Extent
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##' * NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+##' * OUTPUT_TABLE - outputVector - Statistics
+##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ qgis_rasterlayerzonalstats <- function(INPUT = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_TABLE")
+    qgisprocess::qgis_output(output, "CRS_AUTHID")
   }
 }

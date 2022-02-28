@@ -59,7 +59,7 @@ QGIS Algorithm provided by GRASS v.out.ascii (grass7:v.out.ascii)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputFile - Name for output ASCII file or ASCII vector name if
+\item output - outputFile - Name for output ASCII file or ASCII vector name if '-o' is defined
 }
 }
 }

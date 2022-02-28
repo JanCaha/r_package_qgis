@@ -125,15 +125,15 @@ QGIS Algorithm provided by GRASS v.surf.rst (grass7:v.surf.rst)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item elevation - outputRaster - Interpolated RST
-\item slope - outputRaster - Slope
 \item aspect - outputRaster - Aspect
-\item pcurvature - outputRaster - Profile curvature
-\item tcurvature - outputRaster - Tangential curvature
-\item mcurvature - outputRaster - Mean curvature
 \item deviations - outputVector - Deviations
-\item treeseg - outputVector - Quadtree Segmentation
+\item elevation - outputRaster - Interpolated RST
+\item mcurvature - outputRaster - Mean curvature
 \item overwin - outputVector - Overlapping Windows
+\item pcurvature - outputRaster - Profile curvature
+\item slope - outputRaster - Slope
+\item tcurvature - outputRaster - Tangential curvature
+\item treeseg - outputVector - Quadtree Segmentation
 }
 }
 }

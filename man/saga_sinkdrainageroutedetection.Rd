@@ -6,7 +6,6 @@
 \usage{
 saga_sinkdrainageroutedetection(
   ELEVATION = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
   THRSHEIGHT = qgisprocess::qgis_default_value(),
   SINKROUTE = qgisprocess::qgis_default_value(),
   ...,
@@ -15,8 +14,6 @@ saga_sinkdrainageroutedetection(
 }
 \arguments{
 \item{ELEVATION}{\code{raster} - Elevation. Path to a raster layer.}
-
-\item{THRESHOLD}{\code{boolean} - Threshold. 1 for true/yes. 0 for false/no.}
 
 \item{THRSHEIGHT}{\code{number} - Threshold Height. A numeric value.}
 

@@ -24,8 +24,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Cumulative cost
 ##' * outdir - outputRaster - Movement Directions
+##' * output - outputRaster - Cumulative cost
 ##'
 ##'
 ##' @export
@@ -42,6 +42,6 @@ grass7_r_walk_rast <- function(elevation = qgisprocess::qgis_default_value(), fr
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "outdir")
   }
 }

@@ -56,9 +56,9 @@ QGIS Algorithm provided by SAGA Destriping with mask (saga:destripingwithmask)
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item RESULT1 - outputRaster - Low-pass 1
+\item RESULT2 - outputRaster - Low-pass 2
 \item RESULT3 - outputRaster - Destriped Grid
-\item RESULT1 - outputRaster - Low
-\item RESULT2 - outputRaster - Low
 }
 }
 }

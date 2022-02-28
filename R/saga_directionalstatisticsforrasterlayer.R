@@ -28,18 +28,18 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * MEAN - outputRaster - Arithmetic Mean
-##' * DIFMEAN - outputRaster - Difference from Arithmetic Mean
-##' * MIN - outputRaster - Minimum
-##' * MAX - outputRaster - Maximum
-##' * RANGE - outputRaster - Range
-##' * VAR - outputRaster - Variance
-##' * STDDEV - outputRaster - Standard Deviation
-##' * STDDEVLO - outputRaster - Mean less Standard Deviation
-##' * STDDEVHI - outputRaster - Mean plus Standard Deviation
 ##' * DEVMEAN - outputRaster - Deviation from Arithmetic Mean
+##' * DIFMEAN - outputRaster - Difference from Arithmetic Mean
+##' * MAX - outputRaster - Maximum
+##' * MEAN - outputRaster - Arithmetic Mean
+##' * MIN - outputRaster - Minimum
 ##' * PERCENT - outputRaster - Percentile
 ##' * POINTS_OUT - outputVector - Directional Statistics for Points
+##' * RANGE - outputRaster - Range
+##' * STDDEV - outputRaster - Standard Deviation
+##' * STDDEVHI - outputRaster - Mean plus Standard Deviation
+##' * STDDEVLO - outputRaster - Mean less Standard Deviation
+##' * VAR - outputRaster - Variance
 ##'
 ##'
 ##' @export
@@ -56,6 +56,6 @@ saga_directionalstatisticsforrasterlayer <- function(GRID = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MEAN")
+    qgisprocess::qgis_output(output, "DEVMEAN")
   }
 }

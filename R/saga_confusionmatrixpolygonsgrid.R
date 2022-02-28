@@ -17,8 +17,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * CONFUSION - outputVector - Confusion Matrix
 ##' * CLASSES - outputVector - Class Values
+##' * CONFUSION - outputVector - Confusion Matrix
 ##' * SUMMARY - outputVector - Summary
 ##'
 ##'
@@ -36,6 +36,6 @@ saga_confusionmatrixpolygonsgrid <- function(GRID = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CONFUSION")
+    qgisprocess::qgis_output(output, "CLASSES")
   }
 }

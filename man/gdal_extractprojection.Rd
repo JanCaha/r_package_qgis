@@ -26,8 +26,8 @@ QGIS Algorithm provided by GDAL Extract projection (gdal:extractprojection)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item WORLD_FILE - outputFile - World file
 \item PRJ_FILE - outputFile - ESRI Shapefile prj file
+\item WORLD_FILE - outputFile - World file
 }
 }
 }

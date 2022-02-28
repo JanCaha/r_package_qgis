@@ -38,11 +38,11 @@ QGIS Algorithm provided by QGIS (native c++) Raster surface volume (native:raste
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item AREA - outputNumber - Area
 \item OUTPUT_HTML_FILE - outputHtml - Surface volume report
 \item OUTPUT_TABLE - outputVector - Surface volume table
-\item VOLUME - outputNumber - Volume
 \item PIXEL_COUNT - outputNumber - Pixel count
-\item AREA - outputNumber - Area
+\item VOLUME - outputNumber - Volume
 }
 }
 }

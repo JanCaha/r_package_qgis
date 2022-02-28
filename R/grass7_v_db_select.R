@@ -2,7 +2,7 @@
 ##'
 ##' @title QGIS algorithm v.db.select
 ##'
-##' @param map `source` - Input vector map. Path to a vector layer.
+##' @param map `source` - Input vector map . Path to a vector layer.
 ##' @param layer `number` - Layer Number. A numeric value.
 ##' @param columns `string` - Name of attribute column(s), comma separated. String value.
 ##' @param .c `boolean` - Do not include column names in output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.

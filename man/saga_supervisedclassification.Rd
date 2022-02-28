@@ -40,7 +40,7 @@ saga_supervisedclassification(
 
 \item{STATS_SRC}{\code{enum}  of \verb{("[0] training areas", "[1] table")} - Get Class Statistics from.... Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{METHOD}{\code{enum}  of \verb{("[0] Binary Encoding", "[1] Parallelepiped", "[2] Minimum Distance", "[3] Mahalanobis Distance", "[4] Maximum Likelihood", "[5] Spectral Angle Mapping", "[6] Winner Takes All")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{METHOD}{\code{enum}  of \verb{("[0] Binary Encoding", "[1] Parallelepiped", "[2] Minimum Distance", "[3] Mahalanobis Distance", "[4] Maximum Likelihood", "[5] Spectral Angle Mapping", " [6] Winner Takes All")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{NORMALISE}{\code{boolean} - Normalise. 1 for true/yes. 0 for false/no.}
 
@@ -80,8 +80,8 @@ QGIS Algorithm provided by SAGA Supervised classification (saga:supervisedclassi
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item CLASS_INFO - outputVector - Class Information
 \item CLASSES - outputRaster - Classification
+\item CLASS_INFO - outputVector - Class Information
 \item QUALITY - outputRaster - Quality
 }
 }

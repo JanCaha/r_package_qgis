@@ -36,10 +36,10 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * budget - outputRaster - Groundwater budget for each cell (m^3/s)
 ##' * output - outputRaster - Groundwater flow
-##' * vx - outputRaster - Groundwater filter velocity vector part in x direction 
-##' * vy - outputRaster - Groundwater filter velocity vector part in y direction 
-##' * budget - outputRaster - Groundwater budget for each cell 
+##' * vx - outputRaster - Groundwater filter velocity vector part in x direction (m/s)
+##' * vy - outputRaster - Groundwater filter velocity vector part in y direction (m/s)
 ##'
 ##'
 ##' @export
@@ -56,6 +56,6 @@ grass7_r_gwflow <- function(phead = qgisprocess::qgis_default_value(), status = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "budget")
   }
 }

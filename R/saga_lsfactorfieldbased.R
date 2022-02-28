@@ -21,12 +21,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * BALANCE - outputRaster - Sediment Balance
+##' * LS_FACTOR - outputRaster - LS Factor
 ##' * STATISTICS - outputVector - Field Statistics
 ##' * UPSLOPE_AREA - outputRaster - Upslope Length Factor
 ##' * UPSLOPE_LENGTH - outputRaster - Effective Flow Length
 ##' * UPSLOPE_SLOPE - outputRaster - Upslope Slope
-##' * LS_FACTOR - outputRaster - LS Factor
-##' * BALANCE - outputRaster - Sediment Balance
 ##'
 ##'
 ##' @export
@@ -43,6 +43,6 @@ saga_lsfactorfieldbased <- function(DEM = qgisprocess::qgis_default_value(), FIE
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "STATISTICS")
+    qgisprocess::qgis_output(output, "BALANCE")
   }
 }

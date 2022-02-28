@@ -29,27 +29,27 @@ QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatistic
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_HTML_FILE - outputHtml - Statistics
 \item COUNT - outputNumber - Count
-\item UNIQUE - outputNumber - Number of unique values
-\item EMPTY - outputNumber - Number of empty
-\item FILLED - outputNumber - Number of non
-\item MIN - outputNumber - Minimum value
-\item MAX - outputNumber - Maximum value
-\item MIN_LENGTH - outputNumber - Minimum length
-\item MAX_LENGTH - outputNumber - Maximum length
-\item MEAN_LENGTH - outputNumber - Mean length
 \item CV - outputNumber - Coefficient of Variation
-\item SUM - outputNumber - Sum
-\item MEAN - outputNumber - Mean value
-\item STD_DEV - outputNumber - Standard deviation
-\item RANGE - outputNumber - Range
-\item MEDIAN - outputNumber - Median
-\item MINORITY - outputNumber - Minority
-\item MAJORITY - outputNumber - Majority
+\item EMPTY - outputNumber - Number of empty (null) values
+\item FILLED - outputNumber - Number of non-empty values
 \item FIRSTQUARTILE - outputNumber - First quartile
+\item IQR - outputNumber - Interquartile Range (IQR)
+\item MAJORITY - outputNumber - Majority (most frequently occurring value)
+\item MAX - outputNumber - Maximum value
+\item MAX_LENGTH - outputNumber - Maximum length
+\item MEAN - outputNumber - Mean value
+\item MEAN_LENGTH - outputNumber - Mean length
+\item MEDIAN - outputNumber - Median
+\item MIN - outputNumber - Minimum value
+\item MINORITY - outputNumber - Minority (rarest occurring value)
+\item MIN_LENGTH - outputNumber - Minimum length
+\item OUTPUT_HTML_FILE - outputHtml - Statistics
+\item RANGE - outputNumber - Range
+\item STD_DEV - outputNumber - Standard deviation
+\item SUM - outputNumber - Sum
 \item THIRDQUARTILE - outputNumber - Third quartile
-\item IQR - outputNumber - Interquartile Range
+\item UNIQUE - outputNumber - Number of unique values
 }
 }
 }

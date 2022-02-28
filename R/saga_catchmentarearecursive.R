@@ -26,12 +26,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * FLOW - outputRaster - Catchment Area
-##' * VAL_MEAN - outputRaster - Mean over Catchment
-##' * ACCU_TOTAL - outputRaster - Accumulated Material
 ##' * ACCU_LEFT - outputRaster - Accumulated Material from left side
 ##' * ACCU_RIGHT - outputRaster - Accumulated Material from right side
+##' * ACCU_TOTAL - outputRaster - Accumulated Material
+##' * FLOW - outputRaster - Catchment Area
 ##' * FLOW_LENGTH - outputRaster - Flow Path Length
+##' * VAL_MEAN - outputRaster - Mean over Catchment
 ##' * WEIGHT_LOSS - outputRaster - Loss through Negative Weights
 ##'
 ##'
@@ -49,6 +49,6 @@ saga_catchmentarearecursive <- function(ELEVATION = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLOW")
+    qgisprocess::qgis_output(output, "ACCU_LEFT")
   }
 }

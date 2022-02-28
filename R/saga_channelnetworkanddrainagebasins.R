@@ -16,13 +16,13 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * DIRECTION - outputRaster - Flow Direction
-##' * CONNECTION - outputRaster - Flow Connectivity
-##' * ORDER - outputRaster - Strahler Order
 ##' * BASIN - outputRaster - Drainage Basins
-##' * SEGMENTS - outputVector - Channels
 ##' * BASINS - outputVector - Drainage Basins
+##' * CONNECTION - outputRaster - Flow Connectivity
+##' * DIRECTION - outputRaster - Flow Direction
 ##' * NODES - outputVector - Junctions
+##' * ORDER - outputRaster - Strahler Order
+##' * SEGMENTS - outputVector - Channels
 ##'
 ##'
 ##' @export
@@ -39,6 +39,6 @@ saga_channelnetworkanddrainagebasins <- function(DEM = qgisprocess::qgis_default
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DIRECTION")
+    qgisprocess::qgis_output(output, "BASIN")
   }
 }

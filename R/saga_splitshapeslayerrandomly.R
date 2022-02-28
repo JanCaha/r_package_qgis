@@ -4,7 +4,6 @@
 ##'
 ##' @param SHAPES `source` - Shapes. Path to a vector layer.
 ##' @param PERCENT `number` - Split ratio (%). A numeric value.
-##' @param EXACT `boolean` - Split exactly. 1 for true/yes. 0 for false/no.
 ##' @param A `vectorDestination` - Group A. Path for new vector layer.
 ##' @param B `vectorDestination` - Group B. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
@@ -20,11 +19,11 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_splitshapeslayerrandomly <- function(SHAPES = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), EXACT = qgisprocess::qgis_default_value(), A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_splitshapeslayerrandomly <- function(SHAPES = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
 
   check_algorithm_necessities("saga:splitshapeslayerrandomly")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:splitshapeslayerrandomly", `SHAPES` = SHAPES, `PERCENT` = PERCENT, `EXACT` = EXACT, `A` = A, `B` = B,...)
+  output <- qgisprocess::qgis_run_algorithm("saga:splitshapeslayerrandomly", `SHAPES` = SHAPES, `PERCENT` = PERCENT, `A` = A, `B` = B,...)
 
   if (.complete_output) {
     return(output)

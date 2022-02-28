@@ -9,9 +9,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
 ##' * OUTPUT - outputVector - Cleaned
 ##' * RETAINED_COUNT - outputNumber - Count of retained records
-##' * DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
 ##'
 ##'
 ##' @export
@@ -28,6 +28,6 @@ qgis_deleteduplicategeometries <- function(INPUT = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "DUPLICATE_COUNT")
   }
 }

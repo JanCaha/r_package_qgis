@@ -57,8 +57,8 @@ QGIS Algorithm provided by SAGA Zonal multiple regression analysis (points and p
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item RESIDUALS - outputVector - Residuals
 \item REGRESSION - outputRaster - Regression
+\item RESIDUALS - outputVector - Residuals
 }
 }
 }

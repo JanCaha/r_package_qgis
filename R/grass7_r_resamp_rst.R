@@ -29,12 +29,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * elevation - outputRaster - Resampled RST
-##' * slope - outputRaster - Slope raster
 ##' * aspect - outputRaster - Aspect raster
-##' * pcurvature - outputRaster - Profile curvature raster
-##' * tcurvature - outputRaster - Tangential curvature raster
+##' * elevation - outputRaster - Resampled RST
 ##' * mcurvature - outputRaster - Mean curvature raster
+##' * pcurvature - outputRaster - Profile curvature raster
+##' * slope - outputRaster - Slope raster
+##' * tcurvature - outputRaster - Tangential curvature raster
 ##'
 ##'
 ##' @export
@@ -51,6 +51,6 @@ grass7_r_resamp_rst <- function(input = qgisprocess::qgis_default_value(), smoot
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "elevation")
+    qgisprocess::qgis_output(output, "aspect")
   }
 }

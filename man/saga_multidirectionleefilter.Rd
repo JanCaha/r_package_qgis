@@ -8,7 +8,6 @@ saga_multidirectionleefilter(
   INPUT = qgisprocess::qgis_default_value(),
   NOISE_ABS = qgisprocess::qgis_default_value(),
   NOISE_REL = qgisprocess::qgis_default_value(),
-  WEIGHTED = qgisprocess::qgis_default_value(),
   METHOD = qgisprocess::qgis_default_value(),
   RESULT = qgisprocess::qgis_default_value(),
   STDDEV = qgisprocess::qgis_default_value(),
@@ -23,8 +22,6 @@ saga_multidirectionleefilter(
 \item{NOISE_ABS}{\code{number} - Estimated Noise (absolute). A numeric value.}
 
 \item{NOISE_REL}{\code{number} - Estimated Noise (relative). A numeric value.}
-
-\item{WEIGHTED}{\code{boolean} - Weighted. 1 for true/yes. 0 for false/no.}
 
 \item{METHOD}{\code{enum}  of \verb{("[0] noise variance given as absolute value", "[1] noise variance given relative to mean standard deviation", "[2] original calculation (Ringeler)")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -44,9 +41,9 @@ QGIS Algorithm provided by SAGA Multi direction lee filter (saga:multidirectionl
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item DIR - outputRaster - Direction of Minimum Standard Deviation
 \item RESULT - outputRaster - Filtered Grid
 \item STDDEV - outputRaster - Minimum Standard Deviation
-\item DIR - outputRaster - Direction of Minimum Standard Deviation
 }
 }
 }

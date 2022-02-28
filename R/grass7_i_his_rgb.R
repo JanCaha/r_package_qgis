@@ -17,9 +17,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * red - outputRaster - Red
-##' * green - outputRaster - Green
 ##' * blue - outputRaster - Blue
+##' * green - outputRaster - Green
+##' * red - outputRaster - Red
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ grass7_i_his_rgb <- function(hue = qgisprocess::qgis_default_value(), intensity 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "red")
+    qgisprocess::qgis_output(output, "blue")
   }
 }

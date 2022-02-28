@@ -83,15 +83,15 @@ QGIS Algorithm provided by GRASS r.slope.aspect (grass7:r.slope.aspect)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item slope - outputRaster - Slope
 \item aspect - outputRaster - Aspect
-\item pcurvature - outputRaster - Profile curvature
-\item tcurvature - outputRaster - Tangential curvature
-\item dx - outputRaster - First order partial derivative dx
-\item dy - outputRaster - First order partial derivative dy
+\item dx - outputRaster - First order partial derivative dx (E-W slope)
 \item dxx - outputRaster - Second order partial derivative dxx
-\item dyy - outputRaster - Second order partial derivative dyy
 \item dxy - outputRaster - Second order partial derivative dxy
+\item dy - outputRaster - First order partial derivative dy (N-S slope)
+\item dyy - outputRaster - Second order partial derivative dyy
+\item pcurvature - outputRaster - Profile curvature
+\item slope - outputRaster - Slope
+\item tcurvature - outputRaster - Tangential curvature
 }
 }
 }

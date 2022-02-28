@@ -57,8 +57,8 @@ QGIS Algorithm provided by SAGA Seed generation (saga:seedgeneration)
 \subsection{Outputs description}{
 \itemize{
 \item SEED_GRID - outputRaster - Seeds Grid
-\item VARIANCE - outputRaster - Variance
 \item SEED_POINTS - outputVector - Seeds Points
+\item VARIANCE - outputRaster - Variance
 }
 }
 }

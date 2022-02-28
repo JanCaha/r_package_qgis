@@ -56,8 +56,8 @@ QGIS Algorithm provided by GRASS i.cluster (grass7:i.cluster)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item signaturefile - outputFile - Signature File
 \item reportfile - outputFile - Final Report File
+\item signaturefile - outputFile - Signature File
 }
 }
 }

@@ -23,8 +23,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * DANGER - outputRaster - Danger
 ##' * COMPPROB - outputRaster - Compound Probability
+##' * DANGER - outputRaster - Danger
 ##' * PRIORITY - outputRaster - Priority Index
 ##'
 ##'
@@ -42,6 +42,6 @@ saga_fireriskanalysis <- function(DEM = qgisprocess::qgis_default_value(), FUEL 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DANGER")
+    qgisprocess::qgis_output(output, "COMPPROB")
   }
 }

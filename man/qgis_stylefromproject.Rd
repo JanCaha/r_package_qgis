@@ -29,11 +29,11 @@ QGIS Algorithm provided by QGIS (native c++) Create style database from project 
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item COLORRAMPS - outputNumber - Color ramp count
+\item LABELSETTINGS - outputNumber - Label settings count
 \item OUTPUT - outputFile - Output style database
 \item SYMBOLS - outputNumber - Symbol count
-\item COLORRAMPS - outputNumber - Color ramp count
 \item TEXTFORMATS - outputNumber - Text format count
-\item LABELSETTINGS - outputNumber - Label settings count
 }
 }
 }

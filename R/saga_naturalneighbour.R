@@ -4,7 +4,7 @@
 ##'
 ##' @param SHAPES `source` - Points. Path to a vector layer.
 ##' @param FIELD `field` - Attribute. The name of an existing field. ; delimited list of existing field names.
-##' @param METHOD `enum`  of `("[0] Linear", "[1] Sibson", "[2] Non-Sibson")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param METHOD `enum`  of `("[0] Linear", "[1] Sibson", " [2] Non-Sibson")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX `extent` - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used.. Original algorithm parameter name: TARGET_USER_XMIN TARGET_USER_XMAX TARGET_USER_YMIN TARGET_USER_YMAX.
 ##' @param TARGET_USER_SIZE `number` - Cellsize. A numeric value.
 ##' @param TARGET_USER_FITS `enum`  of `("[0] nodes", "[1] cells")` - Fit. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

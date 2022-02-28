@@ -12,8 +12,6 @@ saga_multiresolutionindexofvalleybottomflatnessmrvbf(
   T_PCTL_R = qgisprocess::qgis_default_value(),
   P_SLOPE = qgisprocess::qgis_default_value(),
   P_PCTL = qgisprocess::qgis_default_value(),
-  UPDATE = qgisprocess::qgis_default_value(),
-  CLASSIFY = qgisprocess::qgis_default_value(),
   MAX_RES = qgisprocess::qgis_default_value(),
   MRVBF = qgisprocess::qgis_default_value(),
   MRRTF = qgisprocess::qgis_default_value(),
@@ -34,10 +32,6 @@ saga_multiresolutionindexofvalleybottomflatnessmrvbf(
 
 \item{P_PCTL}{\code{number} - Shape Parameter for Elevation Percentile. A numeric value.}
 
-\item{UPDATE}{\code{boolean} - Update Views. 1 for true/yes. 0 for false/no.}
-
-\item{CLASSIFY}{\code{boolean} - Classify. 1 for true/yes. 0 for false/no.}
-
 \item{MAX_RES}{\code{number} - Maximum Resolution (Percentage). A numeric value.}
 
 \item{MRVBF}{\code{rasterDestination} - MRVBF. Path for new raster layer.}
@@ -54,8 +48,8 @@ QGIS Algorithm provided by SAGA Multiresolution index of valley bottom flatness 
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item MRVBF - outputRaster - MRVBF
 \item MRRTF - outputRaster - MRRTF
+\item MRVBF - outputRaster - MRVBF
 }
 }
 }

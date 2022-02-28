@@ -32,8 +32,8 @@ QGIS Algorithm provided by SAGA Surface and gradient (saga:surfaceandgradient)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item SURF - outputRaster - Surface
 \item GRAD - outputRaster - Gradient
+\item SURF - outputRaster - Surface
 }
 }
 }

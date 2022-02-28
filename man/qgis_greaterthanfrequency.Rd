@@ -38,15 +38,15 @@ QGIS Algorithm provided by QGIS (native c++) Greater than frequency (native:grea
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Output layer
-\item OCCURRENCE_COUNT - outputNumber - Count of value occurrences
-\item FOUND_LOCATIONS_COUNT - outputNumber - Count of cells with equal value occurrences
-\item MEAN_FREQUENCY_PER_LOCATION - outputNumber - Mean frequency at valid cell locations
-\item EXTENT - outputString - Extent
 \item CRS_AUTHID - outputString - CRS authority identifier
-\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
+\item EXTENT - outputString - Extent
+\item FOUND_LOCATIONS_COUNT - outputNumber - Count of cells with equal value occurrences
 \item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
+\item MEAN_FREQUENCY_PER_LOCATION - outputNumber - Mean frequency at valid cell locations
+\item OCCURRENCE_COUNT - outputNumber - Count of value occurrences
+\item OUTPUT - outputRaster - Output layer
 \item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
+\item WIDTH_IN_PIXELS - outputNumber - Width in pixels
 }
 }
 }

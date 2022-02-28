@@ -75,8 +75,8 @@ QGIS Algorithm provided by GRASS r.ros (grass7:r.ros)
 \subsection{Outputs description}{
 \itemize{
 \item base_ros - outputRaster - Base ROS
-\item max_ros - outputRaster - Max ROS
 \item direction_ros - outputRaster - Direction ROS
+\item max_ros - outputRaster - Max ROS
 \item spotting_distance - outputRaster - Spotting Distance
 }
 }

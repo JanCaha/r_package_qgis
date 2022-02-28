@@ -56,9 +56,9 @@ QGIS Algorithm provided by GRASS r.his (grass7:r.his)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item red - outputRaster - Red
-\item green - outputRaster - Green
 \item blue - outputRaster - Blue
+\item green - outputRaster - Green
+\item red - outputRaster - Red
 }
 }
 }

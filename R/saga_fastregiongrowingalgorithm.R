@@ -12,8 +12,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * RESULT - outputRaster - Segmente
 ##' * MEAN - outputRaster - Mean
+##' * RESULT - outputRaster - Segmente
 ##'
 ##'
 ##' @export
@@ -30,6 +30,6 @@ saga_fastregiongrowingalgorithm <- function(INPUT = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_output(output, "MEAN")
   }
 }

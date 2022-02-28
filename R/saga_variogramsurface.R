@@ -15,8 +15,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * COUNT - outputRaster - Number of Pairs
-##' * VARIANCE - outputRaster - Variogram Surface
 ##' * COVARIANCE - outputRaster - Covariance Surface
+##' * VARIANCE - outputRaster - Variogram Surface
 ##'
 ##'
 ##' @export

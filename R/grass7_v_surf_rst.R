@@ -42,15 +42,15 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * elevation - outputRaster - Interpolated RST
-##' * slope - outputRaster - Slope
 ##' * aspect - outputRaster - Aspect
-##' * pcurvature - outputRaster - Profile curvature
-##' * tcurvature - outputRaster - Tangential curvature
-##' * mcurvature - outputRaster - Mean curvature
 ##' * deviations - outputVector - Deviations
-##' * treeseg - outputVector - Quadtree Segmentation
+##' * elevation - outputRaster - Interpolated RST
+##' * mcurvature - outputRaster - Mean curvature
 ##' * overwin - outputVector - Overlapping Windows
+##' * pcurvature - outputRaster - Profile curvature
+##' * slope - outputRaster - Slope
+##' * tcurvature - outputRaster - Tangential curvature
+##' * treeseg - outputVector - Quadtree Segmentation
 ##'
 ##'
 ##' @export
@@ -67,6 +67,6 @@ grass7_v_surf_rst <- function(input = qgisprocess::qgis_default_value(), zcolumn
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "elevation")
+    qgisprocess::qgis_output(output, "aspect")
   }
 }

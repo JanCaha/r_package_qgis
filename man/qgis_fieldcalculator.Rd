@@ -21,7 +21,7 @@ qgis_fieldcalculator(
 
 \item{FIELD_NAME}{\code{string} - Field name. String value.}
 
-\item{FIELD_TYPE}{\code{enum}  of \verb{("Float", "Integer", "String", "Date")} - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{FIELD_TYPE}{\code{enum}  of \verb{("Decimal (double)", "Integer (32 bit)", "Text (string)", "Date", "Time", "Date & Time", "Boolean", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")} - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{FIELD_LENGTH}{\code{number} - Result field length. A numeric value.}
 

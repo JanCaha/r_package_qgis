@@ -27,9 +27,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Cumulative cost
 ##' * nearest - outputRaster - Cost allocation map
 ##' * outdir - outputRaster - Movement directions
+##' * output - outputRaster - Cumulative cost
 ##'
 ##'
 ##' @export
@@ -46,6 +46,6 @@ grass7_r_cost <- function(input = qgisprocess::qgis_default_value(), start_coord
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "nearest")
   }
 }

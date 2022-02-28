@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm Line density
 ##'
 ##' @param INPUT `source` - Input line layer. Path to a vector layer.
-##' @param WEIGHT `field` - Weight field. The name of an existing field. ; delimited list of existing field names.
+##' @param WEIGHT `field` - Weight field . The name of an existing field. ; delimited list of existing field names.
 ##' @param RADIUS `distance` - Search radius. A numeric value.
 ##' @param PIXEL_SIZE `distance` - Pixel size. A numeric value.
 ##' @param OUTPUT `rasterDestination` - Line density raster. Path for new raster layer.

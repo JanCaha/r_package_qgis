@@ -22,8 +22,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * elevation - outputRaster - Solar Elevation Angle
 ##' * azimuth - outputRaster - Solar Azimuth Angle
+##' * elevation - outputRaster - Solar Elevation Angle
 ##' * sunhour - outputRaster - Sunshine Hours
 ##'
 ##'
@@ -41,6 +41,6 @@ grass7_r_sunhours <- function(year = qgisprocess::qgis_default_value(), month = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "elevation")
+    qgisprocess::qgis_output(output, "azimuth")
   }
 }

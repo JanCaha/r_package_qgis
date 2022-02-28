@@ -9,13 +9,6 @@ saga_pointstatisticsforpolygons(
   POLYGONS = qgisprocess::qgis_default_value(),
   FIELDS = qgisprocess::qgis_default_value(),
   FIELD_NAME = qgisprocess::qgis_default_value(),
-  SUM = qgisprocess::qgis_default_value(),
-  AVG = qgisprocess::qgis_default_value(),
-  VAR = qgisprocess::qgis_default_value(),
-  DEV = qgisprocess::qgis_default_value(),
-  MIN = qgisprocess::qgis_default_value(),
-  MAX = qgisprocess::qgis_default_value(),
-  NUM = qgisprocess::qgis_default_value(),
   STATISTICS = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -29,20 +22,6 @@ saga_pointstatisticsforpolygons(
 \item{FIELDS}{\code{field} - Attribute Table field. The name of an existing field. ; delimited list of existing field names.}
 
 \item{FIELD_NAME}{\code{enum}  of \verb{("[0] variable type + original name", "[1] original name + variable type", "[2] original name", "[3] variable type")} - Field Naming Choice. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
-
-\item{SUM}{\code{boolean} - Sum. 1 for true/yes. 0 for false/no.}
-
-\item{AVG}{\code{boolean} - Mean. 1 for true/yes. 0 for false/no.}
-
-\item{VAR}{\code{boolean} - Variance. 1 for true/yes. 0 for false/no.}
-
-\item{DEV}{\code{boolean} - Deviation. 1 for true/yes. 0 for false/no.}
-
-\item{MIN}{\code{boolean} - Minimum. 1 for true/yes. 0 for false/no.}
-
-\item{MAX}{\code{boolean} - Maximum. 1 for true/yes. 0 for false/no.}
-
-\item{NUM}{\code{boolean} - Count. 1 for true/yes. 0 for false/no.}
 
 \item{STATISTICS}{\code{vectorDestination} - Statistics. Path for new vector layer.}
 

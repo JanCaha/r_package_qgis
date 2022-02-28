@@ -26,11 +26,11 @@ QGIS Algorithm provided by QGIS Climb along line (qgis:climbalongline)
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item MAXELEVATION - outputNumber - Maximum elevation
+\item MINELEVATION - outputNumber - Minimum elevation
 \item OUTPUT - outputVector - Climb layer
 \item TOTALCLIMB - outputNumber - Total climb
 \item TOTALDESCENT - outputNumber - Total descent
-\item MINELEVATION - outputNumber - Minimum elevation
-\item MAXELEVATION - outputNumber - Maximum elevation
 }
 }
 }

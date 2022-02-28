@@ -12,9 +12,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * POLYGONS - outputVector - Polygons
 ##' * LINES - outputVector - Lines
 ##' * POINTS - outputVector - Duplicated Points
+##' * POLYGONS - outputVector - Polygons
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ saga_quadtreestructuretopolygons <- function(SHAPES = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "POLYGONS")
+    qgisprocess::qgis_output(output, "LINES")
   }
 }

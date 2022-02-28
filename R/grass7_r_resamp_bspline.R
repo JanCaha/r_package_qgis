@@ -26,8 +26,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Resampled BSpline
 ##' * grid - outputVector - Interpolation Grid
+##' * output - outputRaster - Resampled BSpline
 ##'
 ##'
 ##' @export
@@ -44,6 +44,6 @@ grass7_r_resamp_bspline <- function(input = qgisprocess::qgis_default_value(), m
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "grid")
   }
 }

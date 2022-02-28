@@ -29,8 +29,8 @@ QGIS Algorithm provided by SAGA Fourier transformation (opencv) (saga:fouriertra
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item REAL - outputRaster - Fourier Transformation
-\item IMAG - outputRaster - Fourier Transformation
+\item IMAG - outputRaster - Fourier Transformation (Imaginary)
+\item REAL - outputRaster - Fourier Transformation (Real)
 }
 }
 }

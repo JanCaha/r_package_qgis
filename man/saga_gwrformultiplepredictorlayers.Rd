@@ -74,8 +74,8 @@ QGIS Algorithm provided by SAGA Gwr for multiple predictor layers (saga:gwrformu
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item REGRESSION - outputRaster - Regression
 \item QUALITY - outputRaster - Coefficient of Determination
+\item REGRESSION - outputRaster - Regression
 \item RESIDUALS - outputVector - Residuals
 }
 }

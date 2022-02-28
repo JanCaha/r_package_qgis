@@ -25,8 +25,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * REGRESSION - outputRaster - Regression
 ##' * QUALITY - outputRaster - Coefficient of Determination
+##' * REGRESSION - outputRaster - Regression
 ##' * RESIDUALS - outputVector - Residuals
 ##'
 ##'
@@ -44,6 +44,6 @@ saga_gwrformultiplepredictorlayers <- function(PREDICTORS = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REGRESSION")
+    qgisprocess::qgis_output(output, "QUALITY")
   }
 }

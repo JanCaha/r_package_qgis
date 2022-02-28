@@ -6,7 +6,6 @@
 \usage{
 saga_polygonpartstoseparatepolygons(
   POLYGONS = qgisprocess::qgis_default_value(),
-  LAKES = qgisprocess::qgis_default_value(),
   PARTS = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -14,8 +13,6 @@ saga_polygonpartstoseparatepolygons(
 }
 \arguments{
 \item{POLYGONS}{\code{source} - Polygons. Path to a vector layer.}
-
-\item{LAKES}{\code{boolean} - Ignore Lakes. 1 for true/yes. 0 for false/no.}
 
 \item{PARTS}{\code{vectorDestination} - Polygon Parts. Path for new vector layer.}
 

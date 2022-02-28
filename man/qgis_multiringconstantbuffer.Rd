@@ -32,7 +32,7 @@ QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distanc
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Multi
+\item OUTPUT - outputVector - Multi-ring buffer (constant distance)
 }
 }
 }

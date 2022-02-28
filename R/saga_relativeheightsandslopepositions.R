@@ -18,9 +18,9 @@
 ##' ## Outputs description
 ##' * HO - outputRaster - Slope Height
 ##' * HU - outputRaster - Valley Depth
+##' * MS - outputRaster - Mid-Slope Position
 ##' * NH - outputRaster - Normalized Height
 ##' * SH - outputRaster - Standardized Height
-##' * MS - outputRaster - Mid
 ##'
 ##'
 ##' @export

@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Photos
 ##' * INVALID - outputVector - Invalid photos table
+##' * OUTPUT - outputVector - Photos
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ qgis_importphotos <- function(FOLDER = qgisprocess::qgis_default_value(), RECURS
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "INVALID")
   }
 }

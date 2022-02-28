@@ -9,10 +9,8 @@ saga_windeffect(
   DIR = qgisprocess::qgis_default_value(),
   LEN = qgisprocess::qgis_default_value(),
   DIR_CONST = qgisprocess::qgis_default_value(),
-  OLDVER = qgisprocess::qgis_default_value(),
   MAXDIST = qgisprocess::qgis_default_value(),
   ACCEL = qgisprocess::qgis_default_value(),
-  PYRAMIDS = qgisprocess::qgis_default_value(),
   DIR_UNITS = qgisprocess::qgis_default_value(),
   LEN_SCALE = qgisprocess::qgis_default_value(),
   EFFECT = qgisprocess::qgis_default_value(),
@@ -31,13 +29,9 @@ saga_windeffect(
 
 \item{DIR_CONST}{\code{number} - Constant Wind Direction (Degree). A numeric value.}
 
-\item{OLDVER}{\code{boolean} - Old Version. 1 for true/yes. 0 for false/no.}
-
 \item{MAXDIST}{\code{number} - Search Distance (km). A numeric value.}
 
 \item{ACCEL}{\code{number} - Acceleration. A numeric value.}
-
-\item{PYRAMIDS}{\code{boolean} - Use Pyramids. 1 for true/yes. 0 for false/no.}
 
 \item{DIR_UNITS}{\code{enum}  of \verb{("[0] radians", "[1] degree")} - Wind Direction Units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -60,8 +54,8 @@ QGIS Algorithm provided by SAGA Wind effect (saga:windeffect)
 \subsection{Outputs description}{
 \itemize{
 \item EFFECT - outputRaster - Wind Effect
-\item LUV - outputRaster - Windward Effect
 \item LEE - outputRaster - Leeward Effect
+\item LUV - outputRaster - Windward Effect
 }
 }
 }

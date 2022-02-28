@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Extracted 
+##' * OUTPUT - outputVector - Extracted (location)
 ##'
 ##'
 ##' @export

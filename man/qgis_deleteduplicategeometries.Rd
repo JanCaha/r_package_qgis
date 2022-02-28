@@ -26,9 +26,9 @@ QGIS Algorithm provided by QGIS (native c++) Delete duplicate geometries (native
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
 \item OUTPUT - outputVector - Cleaned
 \item RETAINED_COUNT - outputNumber - Count of retained records
-\item DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
 }
 }
 }

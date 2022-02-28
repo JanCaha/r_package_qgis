@@ -16,7 +16,7 @@ grass7_r_resample(
 )
 }
 \arguments{
-\item{input}{\code{raster} - Input raster layer. Path to a raster layer.}
+\item{input}{\code{raster} - Input raster layer . Path to a raster layer.}
 
 \item{output}{\code{rasterDestination} - Resampled NN. Path for new raster layer.}
 

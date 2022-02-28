@@ -110,13 +110,13 @@ QGIS Algorithm provided by SAGA Regression kriging (saga:regressionkriging)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item REGRESSION - outputRaster - Regression
+\item INFO_COEFF - outputVector - Regression: Coefficients
+\item INFO_MODEL - outputVector - Regression: Model
+\item INFO_STEPS - outputVector - Regression: Steps
 \item PREDICTION - outputRaster - Prediction
+\item REGRESSION - outputRaster - Regression
 \item RESIDUALS - outputRaster - Residuals
 \item VARIANCE - outputRaster - Quality Measure
-\item INFO_COEFF - outputVector - Regression
-\item INFO_MODEL - outputVector - Regression
-\item INFO_STEPS - outputVector - Regression
 }
 }
 }

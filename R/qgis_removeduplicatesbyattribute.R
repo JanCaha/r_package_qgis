@@ -11,10 +11,10 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Filtered 
-##' * DUPLICATES - outputVector - Filtered 
-##' * RETAINED_COUNT - outputNumber - Count of retained records
+##' * DUPLICATES - outputVector - Filtered (duplicates)
 ##' * DUPLICATE_COUNT - outputNumber - Count of discarded duplicate records
+##' * OUTPUT - outputVector - Filtered (no duplicates)
+##' * RETAINED_COUNT - outputNumber - Count of retained records
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ qgis_removeduplicatesbyattribute <- function(INPUT = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "DUPLICATES")
   }
 }

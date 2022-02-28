@@ -54,8 +54,8 @@ QGIS Algorithm provided by SAGA Polynomial regression (saga:polynomialregression
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item TARGET_OUT_GRID - outputRaster - Grid
 \item RESIDUALS - outputVector - Residuals
+\item TARGET_OUT_GRID - outputRaster - Grid
 }
 }
 }

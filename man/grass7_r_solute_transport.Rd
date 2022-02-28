@@ -117,8 +117,8 @@ QGIS Algorithm provided by GRASS r.solute.transport (grass7:r.solute.transport)
 \subsection{Outputs description}{
 \itemize{
 \item output - outputRaster - Solute Transport
-\item vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction
-\item vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction
+\item vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction (m/s)
+\item vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction (m/s)
 }
 }
 }

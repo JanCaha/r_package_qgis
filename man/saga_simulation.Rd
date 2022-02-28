@@ -15,7 +15,6 @@ saga_simulation(
   MHERB = qgisprocess::qgis_default_value(),
   MWOOD = qgisprocess::qgis_default_value(),
   IGNITION = qgisprocess::qgis_default_value(),
-  UPDATEVIEW = qgisprocess::qgis_default_value(),
   TIME = qgisprocess::qgis_default_value(),
   FLAME = qgisprocess::qgis_default_value(),
   INTENSITY = qgisprocess::qgis_default_value(),
@@ -44,8 +43,6 @@ saga_simulation(
 
 \item{IGNITION}{\code{raster} - Ignition Points. Path to a raster layer.}
 
-\item{UPDATEVIEW}{\code{boolean} - Update View. 1 for true/yes. 0 for false/no.}
-
 \item{TIME}{\code{rasterDestination} - Time. Path for new raster layer.}
 
 \item{FLAME}{\code{rasterDestination} - Flame Length. Path for new raster layer.}
@@ -62,9 +59,9 @@ QGIS Algorithm provided by SAGA Simulation (saga:simulation)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item TIME - outputRaster - Time
 \item FLAME - outputRaster - Flame Length
 \item INTENSITY - outputRaster - Intensity
+\item TIME - outputRaster - Time
 }
 }
 }

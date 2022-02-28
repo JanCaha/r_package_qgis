@@ -38,8 +38,8 @@ QGIS Algorithm provided by SAGA Normal bayes classification (opencv) (saga:norma
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item PROBABILITY - outputRaster - Probability
 \item CLASSES - outputRaster - Classification
+\item PROBABILITY - outputRaster - Probability
 }
 }
 }

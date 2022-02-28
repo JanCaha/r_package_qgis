@@ -12,9 +12,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputFile - Saved features
 ##' * FILE_PATH - outputString - File name and path
 ##' * LAYER_NAME - outputString - Layer name
+##' * OUTPUT - outputFile - Saved features
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ qgis_savefeatures <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_output(output, "FILE_PATH")
   }
 }

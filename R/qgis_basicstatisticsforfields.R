@@ -10,27 +10,27 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_HTML_FILE - outputHtml - Statistics
 ##' * COUNT - outputNumber - Count
-##' * UNIQUE - outputNumber - Number of unique values
-##' * EMPTY - outputNumber - Number of empty 
-##' * FILLED - outputNumber - Number of non
-##' * MIN - outputNumber - Minimum value
-##' * MAX - outputNumber - Maximum value
-##' * MIN_LENGTH - outputNumber - Minimum length
-##' * MAX_LENGTH - outputNumber - Maximum length
-##' * MEAN_LENGTH - outputNumber - Mean length
 ##' * CV - outputNumber - Coefficient of Variation
-##' * SUM - outputNumber - Sum
-##' * MEAN - outputNumber - Mean value
-##' * STD_DEV - outputNumber - Standard deviation
-##' * RANGE - outputNumber - Range
-##' * MEDIAN - outputNumber - Median
-##' * MINORITY - outputNumber - Minority 
-##' * MAJORITY - outputNumber - Majority 
+##' * EMPTY - outputNumber - Number of empty (null) values
+##' * FILLED - outputNumber - Number of non-empty values
 ##' * FIRSTQUARTILE - outputNumber - First quartile
+##' * IQR - outputNumber - Interquartile Range (IQR)
+##' * MAJORITY - outputNumber - Majority (most frequently occurring value)
+##' * MAX - outputNumber - Maximum value
+##' * MAX_LENGTH - outputNumber - Maximum length
+##' * MEAN - outputNumber - Mean value
+##' * MEAN_LENGTH - outputNumber - Mean length
+##' * MEDIAN - outputNumber - Median
+##' * MIN - outputNumber - Minimum value
+##' * MINORITY - outputNumber - Minority (rarest occurring value)
+##' * MIN_LENGTH - outputNumber - Minimum length
+##' * OUTPUT_HTML_FILE - outputHtml - Statistics
+##' * RANGE - outputNumber - Range
+##' * STD_DEV - outputNumber - Standard deviation
+##' * SUM - outputNumber - Sum
 ##' * THIRDQUARTILE - outputNumber - Third quartile
-##' * IQR - outputNumber - Interquartile Range 
+##' * UNIQUE - outputNumber - Number of unique values
 ##'
 ##'
 ##' @export
@@ -47,6 +47,6 @@ qgis_basicstatisticsforfields <- function(INPUT_LAYER = qgisprocess::qgis_defaul
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_HTML_FILE")
+    qgisprocess::qgis_output(output, "COUNT")
   }
 }

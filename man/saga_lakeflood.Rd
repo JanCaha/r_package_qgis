@@ -7,7 +7,6 @@
 saga_lakeflood(
   ELEV = qgisprocess::qgis_default_value(),
   SEEDS = qgisprocess::qgis_default_value(),
-  LEVEL = qgisprocess::qgis_default_value(),
   OUTDEPTH = qgisprocess::qgis_default_value(),
   OUTLEVEL = qgisprocess::qgis_default_value(),
   ...,
@@ -18,8 +17,6 @@ saga_lakeflood(
 \item{ELEV}{\code{raster} - DEM. Path to a raster layer.}
 
 \item{SEEDS}{\code{raster} - Seeds. Path to a raster layer.}
-
-\item{LEVEL}{\code{boolean} - Absolute Water Levels. 1 for true/yes. 0 for false/no.}
 
 \item{OUTDEPTH}{\code{rasterDestination} - Lake. Path for new raster layer.}
 

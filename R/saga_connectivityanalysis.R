@@ -16,8 +16,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * FILTERED_MASK - outputRaster - Filtered Image
-##' * SYMBOLIC_IMAGE - outputRaster - Symbolic Image
 ##' * OUTLINES - outputVector - Outlines
+##' * SYMBOLIC_IMAGE - outputRaster - Symbolic Image
 ##'
 ##'
 ##' @export

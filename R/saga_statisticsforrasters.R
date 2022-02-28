@@ -19,16 +19,16 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * MAX - outputRaster - Maximum
 ##' * MEAN - outputRaster - Arithmetic Mean
 ##' * MIN - outputRaster - Minimum
-##' * MAX - outputRaster - Maximum
-##' * VAR - outputRaster - Variance
-##' * SUM - outputRaster - Sum
-##' * RANGE - outputRaster - Range
 ##' * PCTL - outputRaster - Percentile
+##' * RANGE - outputRaster - Range
 ##' * STDDEV - outputRaster - Standard Deviation
-##' * STDDEVLO - outputRaster - Mean less Standard Deviation
 ##' * STDDEVHI - outputRaster - Mean plus Standard Deviation
+##' * STDDEVLO - outputRaster - Mean less Standard Deviation
+##' * SUM - outputRaster - Sum
+##' * VAR - outputRaster - Variance
 ##'
 ##'
 ##' @export
@@ -45,6 +45,6 @@ saga_statisticsforrasters <- function(GRIDS = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MEAN")
+    qgisprocess::qgis_output(output, "MAX")
   }
 }

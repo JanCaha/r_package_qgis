@@ -12,7 +12,6 @@ saga_tpibasedlandformclassification(
   RADIUS_B_MAX = qgisprocess::qgis_default_value(),
   DW_WEIGHTING = qgisprocess::qgis_default_value(),
   DW_IDW_POWER = qgisprocess::qgis_default_value(),
-  DW_IDW_OFFSET = qgisprocess::qgis_default_value(),
   DW_BANDWIDTH = qgisprocess::qgis_default_value(),
   LANDFORMS = qgisprocess::qgis_default_value(),
   ...,
@@ -33,8 +32,6 @@ saga_tpibasedlandformclassification(
 \item{DW_WEIGHTING}{\code{enum}  of \verb{("[0] no distance weighting", "[1] inverse distance to a power", "[2] exponential", "[3] gaussian weighting")} - Distance Weighting. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{DW_IDW_POWER}{\code{number} - Inverse Distance Weighting Power. A numeric value.}
-
-\item{DW_IDW_OFFSET}{\code{boolean} - Inverse Distance Offset. 1 for true/yes. 0 for false/no.}
 
 \item{DW_BANDWIDTH}{\code{number} - Gaussian and Exponential Weighting Bandwidth. A numeric value.}
 

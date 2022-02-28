@@ -50,9 +50,9 @@ QGIS Algorithm provided by QGIS (native c++) Join attributes by field value (nat
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Joined layer
-\item NON_MATCHING - outputVector - Unjoinable features from first layer
 \item JOINED_COUNT - outputNumber - Number of joined features from input table
+\item NON_MATCHING - outputVector - Unjoinable features from first layer
+\item OUTPUT - outputVector - Joined layer
 \item UNJOINABLE_COUNT - outputNumber - Number of unjoinable features from input table
 }
 }

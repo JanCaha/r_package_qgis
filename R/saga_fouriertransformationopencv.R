@@ -10,8 +10,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * REAL - outputRaster - Fourier Transformation 
-##' * IMAG - outputRaster - Fourier Transformation 
+##' * IMAG - outputRaster - Fourier Transformation (Imaginary)
+##' * REAL - outputRaster - Fourier Transformation (Real)
 ##'
 ##'
 ##' @export
@@ -28,6 +28,6 @@ saga_fouriertransformationopencv <- function(INPUT = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REAL")
+    qgisprocess::qgis_output(output, "IMAG")
   }
 }

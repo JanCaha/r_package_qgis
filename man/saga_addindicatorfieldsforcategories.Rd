@@ -32,7 +32,7 @@ QGIS Algorithm provided by SAGA Add indicator fields for categories (saga:addind
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUT_SHAPES - outputVector - Output shapes with field
+\item OUT_SHAPES - outputVector - Output shapes with field(s) deleted
 }
 }
 }

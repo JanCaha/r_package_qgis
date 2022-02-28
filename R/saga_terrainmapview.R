@@ -16,10 +16,10 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * SHADE - outputRaster - Shade
-##' * OPENNESS - outputRaster - Openness
-##' * SLOPE - outputRaster - Slope
 ##' * CONTOURS - outputVector - Contours
+##' * OPENNESS - outputRaster - Openness
+##' * SHADE - outputRaster - Shade
+##' * SLOPE - outputRaster - Slope
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ saga_terrainmapview <- function(DEM = qgisprocess::qgis_default_value(), SHADE =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SHADE")
+    qgisprocess::qgis_output(output, "CONTOURS")
   }
 }

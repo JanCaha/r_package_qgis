@@ -47,7 +47,7 @@ QGIS Algorithm provided by GDAL One side buffer (gdal:onesidebuffer)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - One
+\item OUTPUT - outputVector - One-sided buffer
 }
 }
 }

@@ -44,11 +44,11 @@ QGIS Algorithm provided by QGIS (native c++) Random points in polygons (native:r
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item FEATURES_WITH_EMPTY_OR_NO_GEOMETRY - outputNumber - Number of features with empty or no geometry
 \item OUTPUT - outputVector - Random points in polygons
 \item OUTPUT_POINTS - outputNumber - Total number of points generated
 \item POINTS_MISSED - outputNumber - Number of missed points
 \item POLYGONS_WITH_MISSED_POINTS - outputNumber - Number of polygons with missed points
-\item FEATURES_WITH_EMPTY_OR_NO_GEOMETRY - outputNumber - Number of features with empty or no geometry
 }
 }
 }

@@ -29,8 +29,8 @@ QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Polygons
 \item NUM_POLYGONS - outputNumber - Number of polygons
+\item OUTPUT - outputVector - Polygons
 }
 }
 }

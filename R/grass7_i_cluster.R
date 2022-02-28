@@ -19,8 +19,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * signaturefile - outputFile - Signature File
 ##' * reportfile - outputFile - Final Report File
+##' * signaturefile - outputFile - Signature File
 ##'
 ##'
 ##' @export
@@ -37,6 +37,6 @@ grass7_i_cluster <- function(input = qgisprocess::qgis_default_value(), classes 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "signaturefile")
+    qgisprocess::qgis_output(output, "reportfile")
   }
 }

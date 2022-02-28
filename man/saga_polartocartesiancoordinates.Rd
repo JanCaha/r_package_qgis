@@ -9,7 +9,6 @@ saga_polartocartesiancoordinates(
   F_EXAGG = qgisprocess::qgis_default_value(),
   D_EXAGG = qgisprocess::qgis_default_value(),
   RADIUS = qgisprocess::qgis_default_value(),
-  DEGREE = qgisprocess::qgis_default_value(),
   CARTES = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = TRUE
@@ -23,8 +22,6 @@ saga_polartocartesiancoordinates(
 \item{D_EXAGG}{\code{number} - Exaggeration Factor. A numeric value.}
 
 \item{RADIUS}{\code{number} - Radius. A numeric value.}
-
-\item{DEGREE}{\code{boolean} - Degree. 1 for true/yes. 0 for false/no.}
 
 \item{CARTES}{\code{vectorDestination} - Cartesian Coordinates. Path for new vector layer.}
 

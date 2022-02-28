@@ -107,25 +107,25 @@ QGIS Algorithm provided by SAGA Fuzzy landform element classification (saga:fuzz
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item PLAIN - outputRaster - Plain
-\item PIT - outputRaster - Pit
-\item PEAK - outputRaster - Peak
-\item RIDGE - outputRaster - Ridge
-\item CHANNEL - outputRaster - Channel
-\item SADDLE - outputRaster - Saddle
 \item BSLOPE - outputRaster - Back Slope
-\item FSLOPE - outputRaster - Foot Slope
-\item SSLOPE - outputRaster - Shoulder Slope
-\item HOLLOW - outputRaster - Hollow
+\item CHANNEL - outputRaster - Channel
+\item CI - outputRaster - Confusion Index
+\item ENTROPY - outputRaster - Entropy
 \item FHOLLOW - outputRaster - Foot Hollow
+\item FORM - outputRaster - Landform
+\item FSLOPE - outputRaster - Foot Slope
+\item FSPUR - outputRaster - Foot Spur
+\item HOLLOW - outputRaster - Hollow
+\item MEM - outputRaster - Maximum Membership
+\item PEAK - outputRaster - Peak
+\item PIT - outputRaster - Pit
+\item PLAIN - outputRaster - Plain
+\item RIDGE - outputRaster - Ridge
+\item SADDLE - outputRaster - Saddle
 \item SHOLLOW - outputRaster - Shoulder Hollow
 \item SPUR - outputRaster - Spur
-\item FSPUR - outputRaster - Foot Spur
+\item SSLOPE - outputRaster - Shoulder Slope
 \item SSPUR - outputRaster - Shoulder Spur
-\item FORM - outputRaster - Landform
-\item MEM - outputRaster - Maximum Membership
-\item ENTROPY - outputRaster - Entropy
-\item CI - outputRaster - Confusion Index
 }
 }
 }

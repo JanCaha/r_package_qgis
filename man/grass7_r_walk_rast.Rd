@@ -71,8 +71,8 @@ QGIS Algorithm provided by GRASS r.walk.rast (grass7:r.walk.rast)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputRaster - Cumulative cost
 \item outdir - outputRaster - Movement Directions
+\item output - outputRaster - Cumulative cost
 }
 }
 }

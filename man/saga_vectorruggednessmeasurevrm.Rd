@@ -9,7 +9,6 @@ saga_vectorruggednessmeasurevrm(
   RADIUS = qgisprocess::qgis_default_value(),
   DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess::qgis_default_value(),
   DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_DW_IDW_OFFSET = qgisprocess::qgis_default_value(),
   DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess::qgis_default_value(),
   VRM = qgisprocess::qgis_default_value(),
   ...,
@@ -25,8 +24,6 @@ saga_vectorruggednessmeasurevrm(
 
 \item{DISTANCE_WEIGHTING_DW_IDW_POWER}{\code{number} - Inverse Distance Weighting Power. A numeric value.}
 
-\item{DISTANCE_WEIGHTING_DW_IDW_OFFSET}{\code{boolean} - Inverse Distance Offset. 1 for true/yes. 0 for false/no.}
-
 \item{DISTANCE_WEIGHTING_DW_BANDWIDTH}{\code{number} - Gaussian and Exponential Weighting Bandwidth. A numeric value.}
 
 \item{VRM}{\code{rasterDestination} - Vector Terrain Ruggedness (VRM). Path for new raster layer.}
@@ -41,7 +38,7 @@ QGIS Algorithm provided by SAGA Vector ruggedness measure (vrm) (saga:vectorrugg
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item VRM - outputRaster - Vector Terrain Ruggedness
+\item VRM - outputRaster - Vector Terrain Ruggedness (VRM)
 }
 }
 }

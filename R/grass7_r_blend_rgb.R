@@ -17,9 +17,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output_red - outputRaster - Blended Red
-##' * output_green - outputRaster - Blended Green
 ##' * output_blue - outputRaster - Blended Blue
+##' * output_green - outputRaster - Blended Green
+##' * output_red - outputRaster - Blended Red
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ grass7_r_blend_rgb <- function(first = qgisprocess::qgis_default_value(), second
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output_red")
+    qgisprocess::qgis_output(output, "output_blue")
   }
 }

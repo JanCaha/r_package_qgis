@@ -56,7 +56,7 @@ QGIS Algorithm provided by GDAL Grid (IDW with nearest neighbor searching) (gdal
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputRaster - Interpolated
+\item OUTPUT - outputRaster - Interpolated (IDW with NN search)
 }
 }
 }

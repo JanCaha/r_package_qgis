@@ -12,7 +12,6 @@ saga_simpleregiongrowing(
   SIG_1 = qgisprocess::qgis_default_value(),
   SIG_2 = qgisprocess::qgis_default_value(),
   THRESHOLD = qgisprocess::qgis_default_value(),
-  REFRESH = qgisprocess::qgis_default_value(),
   LEAFSIZE = qgisprocess::qgis_default_value(),
   SEGMENTS = qgisprocess::qgis_default_value(),
   SIMILARITY = qgisprocess::qgis_default_value(),
@@ -35,8 +34,6 @@ saga_simpleregiongrowing(
 \item{SIG_2}{\code{number} - Variance in Position Space. A numeric value.}
 
 \item{THRESHOLD}{\code{number} - Threshold - Similarity. A numeric value.}
-
-\item{REFRESH}{\code{boolean} - Refresh. 1 for true/yes. 0 for false/no.}
 
 \item{LEAFSIZE}{\code{number} - Leaf Size (for Speed Optimisation). A numeric value.}
 

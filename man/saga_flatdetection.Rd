@@ -32,8 +32,8 @@ QGIS Algorithm provided by SAGA Flat detection (saga:flatdetection)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item NOFLATS - outputRaster - No Flats
 \item FLATS - outputRaster - Flat Areas
+\item NOFLATS - outputRaster - No Flats
 }
 }
 }

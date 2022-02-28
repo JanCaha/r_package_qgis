@@ -14,11 +14,11 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * C_DOWN - outputRaster - Downslope Curvature
+##' * C_DOWN_LOCAL - outputRaster - Local Downslope Curvature
 ##' * C_LOCAL - outputRaster - Local Curvature
 ##' * C_UP - outputRaster - Upslope Curvature
 ##' * C_UP_LOCAL - outputRaster - Local Upslope Curvature
-##' * C_DOWN - outputRaster - Downslope Curvature
-##' * C_DOWN_LOCAL - outputRaster - Local Downslope Curvature
 ##'
 ##'
 ##' @export
@@ -35,6 +35,6 @@ saga_upslopeanddownslopecurvature <- function(DEM = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "C_LOCAL")
+    qgisprocess::qgis_output(output, "C_DOWN")
   }
 }

@@ -11,8 +11,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * LOPASS - outputRaster - Low Pass Filter
 ##' * HIPASS - outputRaster - High Pass Filter
+##' * LOPASS - outputRaster - Low Pass Filter
 ##'
 ##'
 ##' @export
@@ -29,6 +29,6 @@ saga_resamplingfilter <- function(GRID = qgisprocess::qgis_default_value(), LOPA
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "LOPASS")
+    qgisprocess::qgis_output(output, "HIPASS")
   }
 }

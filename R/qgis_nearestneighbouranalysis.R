@@ -9,12 +9,12 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT_HTML_FILE - outputHtml - Nearest neighbour
-##' * OBSERVED_MD - outputNumber - Observed mean distance
 ##' * EXPECTED_MD - outputNumber - Expected mean distance
 ##' * NN_INDEX - outputNumber - Nearest neighbour index
+##' * OBSERVED_MD - outputNumber - Observed mean distance
+##' * OUTPUT_HTML_FILE - outputHtml - Nearest neighbour
 ##' * POINT_COUNT - outputNumber - Number of points
-##' * Z_SCORE - outputNumber - Z
+##' * Z_SCORE - outputNumber - Z-score
 ##'
 ##'
 ##' @export
@@ -31,6 +31,6 @@ qgis_nearestneighbouranalysis <- function(INPUT = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_HTML_FILE")
+    qgisprocess::qgis_output(output, "EXPECTED_MD")
   }
 }

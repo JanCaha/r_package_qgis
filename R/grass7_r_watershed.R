@@ -35,14 +35,14 @@
 ##' @details
 ##' ## Outputs description
 ##' * accumulation - outputRaster - Number of cells that drain through each cell
-##' * drainage - outputRaster - Drainage direction
 ##' * basin - outputRaster - Unique label for each watershed basin
+##' * drainage - outputRaster - Drainage direction
+##' * half_basin - outputRaster - Half-basins
+##' * length_slope - outputRaster - Slope length and steepness (LS) factor for USLE
+##' * slope_steepness - outputRaster - Slope steepness (S) factor for USLE
+##' * spi - outputRaster - Stream power index a * tan(b)
 ##' * stream - outputRaster - Stream segments
-##' * half_basin - outputRaster - Half
-##' * length_slope - outputRaster - Slope length and steepness 
-##' * slope_steepness - outputRaster - Slope steepness 
-##' * tci - outputRaster - Topographic index ln
-##' * spi - outputRaster - Stream power index a 
+##' * tci - outputRaster - Topographic index ln(a / tan(b))
 ##'
 ##'
 ##' @export

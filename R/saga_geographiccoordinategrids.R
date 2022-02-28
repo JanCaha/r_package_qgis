@@ -10,8 +10,8 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * LON - outputRaster - Longitude
 ##' * LAT - outputRaster - Latitude
+##' * LON - outputRaster - Longitude
 ##'
 ##'
 ##' @export
@@ -28,6 +28,6 @@ saga_geographiccoordinategrids <- function(GRID = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "LON")
+    qgisprocess::qgis_output(output, "LAT")
   }
 }

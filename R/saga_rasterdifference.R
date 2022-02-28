@@ -10,7 +10,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * C - outputRaster - Difference 
+##' * C - outputRaster - Difference (A - B)
 ##'
 ##'
 ##' @export

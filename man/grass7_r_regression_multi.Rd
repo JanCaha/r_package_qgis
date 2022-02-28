@@ -47,9 +47,9 @@ QGIS Algorithm provided by GRASS r.regression.multi (grass7:r.regression.multi)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item residuals - outputRaster - Residual Map
 \item estimates - outputRaster - Estimates Map
 \item html - outputHtml - Regression coefficients
+\item residuals - outputRaster - Residual Map
 }
 }
 }

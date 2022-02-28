@@ -54,8 +54,8 @@ QGIS Algorithm provided by SAGA Saga wetness index (saga:sagawetnessindex)
 \subsection{Outputs description}{
 \itemize{
 \item AREA - outputRaster - Catchment area
-\item SLOPE - outputRaster - Catchment slope
 \item AREA_MOD - outputRaster - Modified catchment area
+\item SLOPE - outputRaster - Catchment slope
 \item TWI - outputRaster - Topographic Wetness Index
 }
 }

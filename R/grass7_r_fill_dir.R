@@ -17,9 +17,9 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputRaster - Depressionless DEM
-##' * direction - outputRaster - Flow direction
 ##' * areas - outputRaster - Problem areas
+##' * direction - outputRaster - Flow direction
+##' * output - outputRaster - Depressionless DEM
 ##'
 ##'
 ##' @export
@@ -36,6 +36,6 @@ grass7_r_fill_dir <- function(input = qgisprocess::qgis_default_value(), format 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_output(output, "areas")
   }
 }

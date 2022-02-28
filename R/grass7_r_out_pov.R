@@ -14,7 +14,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * output - outputFile - Name of output povray file 
+##' * output - outputFile - Name of output povray file (TGA height field file)
 ##'
 ##'
 ##' @export

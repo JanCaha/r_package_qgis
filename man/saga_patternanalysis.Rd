@@ -47,12 +47,12 @@ QGIS Algorithm provided by SAGA Pattern analysis (saga:patternanalysis)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item RELATIVE - outputRaster - Relative Richness
+\item CVN - outputRaster - Center Versus Neighbours
 \item DIVERSITY - outputRaster - Diversity
 \item DOMINANCE - outputRaster - Dominance
 \item FRAGMENTATION - outputRaster - Fragmentation
 \item NDC - outputRaster - Number of Different Classes
-\item CVN - outputRaster - Center Versus Neighbours
+\item RELATIVE - outputRaster - Relative Richness
 }
 }
 }

@@ -74,10 +74,10 @@ QGIS Algorithm provided by SAGA Gwr for single predictor layer (saga:gwrforsingl
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item RESIDUALS - outputVector - Residuals
-\item REGRESSION - outputRaster - Regression
-\item QUALITY - outputRaster - Coefficient of Determination
 \item INTERCEPT - outputRaster - Intercept
+\item QUALITY - outputRaster - Coefficient of Determination
+\item REGRESSION - outputRaster - Regression
+\item RESIDUALS - outputVector - Residuals
 \item SLOPE - outputRaster - Slope
 }
 }

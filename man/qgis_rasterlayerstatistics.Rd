@@ -29,13 +29,13 @@ QGIS Algorithm provided by QGIS (native c++) Raster layer statistics (native:ras
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_HTML_FILE - outputHtml - Statistics
-\item MIN - outputNumber - Minimum value
 \item MAX - outputNumber - Maximum value
-\item RANGE - outputNumber - Range
-\item SUM - outputNumber - Sum
 \item MEAN - outputNumber - Mean value
+\item MIN - outputNumber - Minimum value
+\item OUTPUT_HTML_FILE - outputHtml - Statistics
+\item RANGE - outputNumber - Range
 \item STD_DEV - outputNumber - Standard deviation
+\item SUM - outputNumber - Sum
 \item SUM_OF_SQUARES - outputNumber - Sum of the squares
 }
 }

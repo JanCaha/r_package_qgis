@@ -41,7 +41,7 @@ QGIS Algorithm provided by GRASS r.out.pov (grass7:r.out.pov)
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item output - outputFile - Name of output povray file
+\item output - outputFile - Name of output povray file (TGA height field file)
 }
 }
 }
