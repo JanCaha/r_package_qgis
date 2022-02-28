@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.11.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
       </span>
     </div>
 
@@ -73,13 +73,6 @@
   POLYGONS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   FIELDS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   FIELD_NAME <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  SUM <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  AVG <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  VAR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DEV <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  NUM <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   STATISTICS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="va">...</span>,
   .complete_output <span class="op">=</span> <span class="cn">TRUE</span>
@@ -96,20 +89,6 @@
 <dd><p><code>field</code> - Attribute Table field. The name of an existing field. ; delimited list of existing field names.</p></dd>
 <dt>FIELD_NAME</dt>
 <dd><p><code>enum</code>  of <code>("[0] variable type + original name", "[1] original name + variable type", "[2] original name", "[3] variable type")</code> - Field Naming Choice. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
-<dt>SUM</dt>
-<dd><p><code>boolean</code> - Sum. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>AVG</dt>
-<dd><p><code>boolean</code> - Mean. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>VAR</dt>
-<dd><p><code>boolean</code> - Variance. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>DEV</dt>
-<dd><p><code>boolean</code> - Deviation. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>MIN</dt>
-<dd><p><code>boolean</code> - Minimum. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>MAX</dt>
-<dd><p><code>boolean</code> - Maximum. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>NUM</dt>
-<dd><p><code>boolean</code> - Count. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>STATISTICS</dt>
 <dd><p><code>vectorDestination</code> - Statistics. Path for new vector layer.</p></dd>
 <dt>...</dt>

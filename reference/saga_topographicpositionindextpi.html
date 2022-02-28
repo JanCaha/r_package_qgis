@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.11.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
       </span>
     </div>
 
@@ -70,12 +70,10 @@
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">saga_topographicpositionindextpi</span><span class="op">(</span>
   DEM <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  STANDARD <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   RADIUS_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   RADIUS_MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   DW_WEIGHTING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   DW_IDW_POWER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DW_IDW_OFFSET <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   DW_BANDWIDTH <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   TPI <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="va">...</span>,
@@ -87,8 +85,6 @@
     <h2>Arguments</h2>
     <dl><dt>DEM</dt>
 <dd><p><code>raster</code> - Elevation. Path to a raster layer.</p></dd>
-<dt>STANDARD</dt>
-<dd><p><code>boolean</code> - Standardize. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>RADIUS_MIN</dt>
 <dd><p><code>number</code> - Min Radius. A numeric value.</p></dd>
 <dt>RADIUS_MAX</dt>
@@ -97,8 +93,6 @@
 <dd><p><code>enum</code>  of <code>("[0] no distance weighting", "[1] inverse distance to a power", "[2] exponential", "[3] gaussian weighting")</code> - Distance Weighting. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
 <dt>DW_IDW_POWER</dt>
 <dd><p><code>number</code> - Inverse Distance Weighting Power. A numeric value.</p></dd>
-<dt>DW_IDW_OFFSET</dt>
-<dd><p><code>boolean</code> - Inverse Distance Offset. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>DW_BANDWIDTH</dt>
 <dd><p><code>number</code> - Gaussian and Exponential Weighting Bandwidth. A numeric value.</p></dd>
 <dt>TPI</dt>

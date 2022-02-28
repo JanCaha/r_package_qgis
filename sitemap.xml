@@ -1225,6 +1225,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_createconstantrasterlayer.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_createdirectory.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_creategrid.html</loc>
   </url>
   <url>
@@ -1366,6 +1369,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_extractbylocation.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_extractlabels.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_extractmvalues.html</loc>
   </url>
   <url>
@@ -1388,6 +1394,12 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_fillnodata.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_filterbygeometry.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_filterlayersbytype.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_filterverticesbym.html</loc>
@@ -1681,6 +1693,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rectanglesovalsdiamonds.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rectanglesovalsdiamondsvariable.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_refactorfields.html</loc>
   </url>
   <url>
@@ -1697,6 +1712,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_removenullgeometries.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_renamelayer.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_renametablefield.html</loc>
@@ -1720,6 +1738,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rotatefeatures.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_roundness.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_roundrastervalues.html</loc>
   </url>
   <url>
@@ -1727,6 +1748,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_savefeatures.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_savelog.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_saveselectedfeatures.html</loc>
@@ -1763,6 +1787,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_setzvalue.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_shortestline.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_shortestpathlayertopoint.html</loc>
@@ -1811,6 +1838,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_stdbscanclustering.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_stringconcatenation.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_stylefromproject.html</loc>
@@ -1864,6 +1894,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_union.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_variabledistancebuffer.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_vectorlayerhistogram.html</loc>
   </url>
   <url>
@@ -1883,6 +1916,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_zonalhistogram.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_zonalstatistics.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_zonalstatisticsfb.html</loc>

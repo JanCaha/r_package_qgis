@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.11.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
       </span>
     </div>
 
@@ -70,10 +70,6 @@
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">saga_polygonproperties</span><span class="op">(</span>
   POLYGONS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BPARTS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BPOINTS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BLENGTH <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BAREA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="va">...</span>,
   .complete_output <span class="op">=</span> <span class="cn">TRUE</span>
@@ -84,14 +80,6 @@
     <h2>Arguments</h2>
     <dl><dt>POLYGONS</dt>
 <dd><p><code>source</code> - Polygons. Path to a vector layer.</p></dd>
-<dt>BPARTS</dt>
-<dd><p><code>boolean</code> - Number of Parts. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>BPOINTS</dt>
-<dd><p><code>boolean</code> - Number of Vertices. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>BLENGTH</dt>
-<dd><p><code>boolean</code> - Perimeter. 1 for true/yes. 0 for false/no.</p></dd>
-<dt>BAREA</dt>
-<dd><p><code>boolean</code> - Area. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>OUTPUT</dt>
 <dd><p><code>vectorDestination</code> - Polygons with Property Attributes. Path for new vector layer.</p></dd>
 <dt>...</dt>

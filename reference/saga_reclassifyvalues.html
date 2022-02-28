@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.11.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
       </span>
     </div>
 
@@ -80,9 +80,7 @@
   ROPERATOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   RETAB <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   TOPERATOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  NODATAOPT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   NODATA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OTHEROPT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   OTHERS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   RESULT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="va">...</span>,
@@ -114,12 +112,8 @@
 <dd><p><code>matrix</code> - Lookup Table. A comma delimited list of values.</p></dd>
 <dt>TOPERATOR</dt>
 <dd><p><code>enum</code>  of <code>("[0] min &lt;= value &lt; max", "[1] min &lt;= value &lt;= max", "[2] min &lt; value &lt;= max", "[3] min &lt; value &lt; max")</code> - operator (for table). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
-<dt>NODATAOPT</dt>
-<dd><p><code>boolean</code> - replace no data values. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>NODATA</dt>
 <dd><p><code>number</code> - new value for no data values. A numeric value.</p></dd>
-<dt>OTHEROPT</dt>
-<dd><p><code>boolean</code> - replace other values. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>OTHERS</dt>
 <dd><p><code>number</code> - new value for other values. A numeric value.</p></dd>
 <dt>RESULT</dt>

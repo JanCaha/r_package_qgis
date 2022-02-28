@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.11.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
       </span>
     </div>
 
@@ -74,12 +74,10 @@
   NEIGHBORHOOD_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   NEIGHBORHOOD_MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   AGGREGATION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BORDER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   WEIGHT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   DENSITY_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   DENSITY_INT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   LEVEL_GROW <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DENSITY_MEAN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   DENSITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   CONNECTIVITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   FRAGMENTATION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
@@ -101,8 +99,6 @@
 <dd><p><code>number</code> - Neighborhood Max. A numeric value.</p></dd>
 <dt>AGGREGATION</dt>
 <dd><p><code>enum</code>  of <code>("[0] average", "[1] multiplicative")</code> - Level Aggregation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
-<dt>BORDER</dt>
-<dd><p><code>boolean</code> - Add Border. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>WEIGHT</dt>
 <dd><p><code>number</code> - Connectivity Weighting. A numeric value.</p></dd>
 <dt>DENSITY_MIN</dt>
@@ -111,8 +107,6 @@
 <dd><p><code>number</code> - Minimum Density for Interior Forest (Percent). A numeric value.</p></dd>
 <dt>LEVEL_GROW</dt>
 <dd><p><code>number</code> - Search Distance Increment. A numeric value.</p></dd>
-<dt>DENSITY_MEAN</dt>
-<dd><p><code>boolean</code> - Density from Neighbourhood. 1 for true/yes. 0 for false/no.</p></dd>
 <dt>DENSITY</dt>
 <dd><p><code>rasterDestination</code> - Density (Percent). Path for new raster layer.</p></dd>
 <dt>CONNECTIVITY</dt>
@@ -132,8 +126,8 @@
 <div class="section">
 <h3 id="outputs-description">Outputs description<a class="anchor" aria-label="anchor" href="#outputs-description"></a></h3>
 
-<ul><li><p>DENSITY - outputRaster - Density</p></li>
-<li><p>CONNECTIVITY - outputRaster - Connectivity</p></li>
+<ul><li><p>CONNECTIVITY - outputRaster - Connectivity (Percent)</p></li>
+<li><p>DENSITY - outputRaster - Density (Percent)</p></li>
 <li><p>FRAGMENTATION - outputRaster - Fragmentation</p></li>
 <li><p>FRAGSTATS - outputVector - Summary</p></li>
 </ul></div>
