@@ -65,7 +65,7 @@ build_fn_doc <- function(alg, arguments, outputs){
 
   description_outputs <- purrr::pmap(outputs,
                                      function(name, description, qgis_output_type, ...) {
-                                       glue::glue("##' * {name} - {qgis_output_type} - {description}")
+                                       glue::glue("##' * {name} - {qgis_output_type} - {fix_description(description)}")
                                      }
   )
 
