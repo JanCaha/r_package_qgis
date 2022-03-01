@@ -92,11 +92,11 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> JSON input ----
     #> {
     #>   "inputs": {
-    #>     "INPUT": "/tmp/RtmpCeJNkZ/filec05168e34eb6/filec051539edb11.gpkg",
+    #>     "INPUT": "/tmp/RtmpgcbLzt/filec0cf71952d83/filec0cf14c1ae47.gpkg",
     #>     "DISTANCE": 0.5,
     #>     "END_CAP_STYLE": 1,
     #>     "JOIN_STYLE": 0,
-    #>     "OUTPUT": "/tmp/RtmpCeJNkZ/filec05168e34eb6/filec0511bd05f9.gpkg"
+    #>     "OUTPUT": "/tmp/RtmpgcbLzt/filec0cf71952d83/filec0cf4de3309f.gpkg"
     #>   }
     #> }
     #> 
