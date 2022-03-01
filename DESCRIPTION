@@ -23,7 +23,9 @@ Suggests:
     rmarkdown,
     knitr,
     curl,
-    dplyr
+    dplyr,
+    readr,
+    here
 Config/testthat/edition: 3
 Remotes: 
     r-lib/testthat,
