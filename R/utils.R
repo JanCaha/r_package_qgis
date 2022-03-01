@@ -31,6 +31,7 @@ check_algorithm_necessities <- function(alg_name){
 
 }
 
+
 .message_option <- function(){
 
   message_option <- getOption("qgis.message")
