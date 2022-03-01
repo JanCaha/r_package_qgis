@@ -18,7 +18,9 @@
 ##' @param OUTPUT `folderDestination` - Output directory. Path for an existing or new folder.
 ##' @param OUTPUT_CSV `fileDestination` - CSV file containing the tile(s) georeferencing information. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
