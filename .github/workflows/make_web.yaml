@@ -5,6 +5,7 @@ on:
       - NEWS.md
       - README.Rmd
       - DESCRIPTION
+      - .github/workflows/make_web.yaml
 
 name: Make website
 
@@ -25,6 +26,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Install QGIS
+        run: |
+          wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import || true
+          sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+          sudo add-apt-repository "deb https://qgis.org/ubuntu `lsb_release -c -s` main"
+          sudo apt-get update
+          sudo apt-get install -y qgis qgis-plugin-grass saga
+
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-r@v2
@@ -34,6 +43,12 @@ jobs:
           cache-version: 2
           extra-packages: |
             any::pkgdown
+            any::devtools
+
+      - name: Install package
+        run: |
+          devtools::install()
+        shell: Rscript {0}
 
       - name: Render README
         run: source("./build-package/render_README.R")
