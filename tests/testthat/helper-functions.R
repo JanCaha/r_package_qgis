@@ -1,5 +1,7 @@
 get_alg_help <- function(alg_name){
 
+  source(here::here("build-package", "functions_fix_algorithm_id.R"))
+  source(here::here("build-package", "functions_fix_parameter_names.R"))
   source(here::here("build-package", "functions_build_code_and_doc.R"))
 
   algs <- qgisprocess::qgis_algorithms() %>%
