@@ -2,7 +2,7 @@ grass7_i_cluster <- function(input = qgisprocess::qgis_default_value(), classes 
 
   check_algorithm_necessities("grass7:i.cluster")
 
-  if (messages){
+  if (.messages){
     output <- qgisprocess::qgis_run_algorithm("grass7:i.cluster", `input` = input, `classes` = classes, `seed` = seed, `sample` = sample, `iterations` = iterations, `convergence` = convergence, `separation` = separation, `min_size` = min_size, `signaturefile` = signaturefile, `reportfile` = reportfile, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,..., .quiet = .quiet)
   } else {
     suppressMessages(

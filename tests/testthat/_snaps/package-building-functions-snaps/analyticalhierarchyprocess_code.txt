@@ -2,7 +2,7 @@ saga_analyticalhierarchyprocess <- function(GRIDS = qgisprocess::qgis_default_va
 
   check_algorithm_necessities("saga:analyticalhierarchyprocess")
 
-  if (messages){
+  if (.messages){
     output <- qgisprocess::qgis_run_algorithm("saga:analyticalhierarchyprocess", `GRIDS` = GRIDS, `TABLE` = TABLE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(

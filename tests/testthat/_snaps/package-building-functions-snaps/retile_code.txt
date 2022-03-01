@@ -2,7 +2,7 @@ gdal_retile <- function(INPUT = qgisprocess::qgis_default_value(), TILE_SIZE_X =
 
   check_algorithm_necessities("gdal:retile")
 
-  if (messages){
+  if (.messages){
     output <- qgisprocess::qgis_run_algorithm("gdal:retile", `INPUT` = INPUT, `TILE_SIZE_X` = TILE_SIZE_X, `TILE_SIZE_Y` = TILE_SIZE_Y, `OVERLAP` = OVERLAP, `LEVELS` = LEVELS, `SOURCE_CRS` = SOURCE_CRS, `RESAMPLING` = RESAMPLING, `DELIMITER` = DELIMITER, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `DATA_TYPE` = DATA_TYPE, `ONLY_PYRAMIDS` = ONLY_PYRAMIDS, `DIR_FOR_ROW` = DIR_FOR_ROW, `OUTPUT` = OUTPUT, `OUTPUT_CSV` = OUTPUT_CSV,..., .quiet = .quiet)
   } else {
     suppressMessages(

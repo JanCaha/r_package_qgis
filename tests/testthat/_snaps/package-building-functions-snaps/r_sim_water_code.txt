@@ -2,7 +2,7 @@ grass7_r_sim_water <- function(elevation = qgisprocess::qgis_default_value(), dx
 
   check_algorithm_necessities("grass7:r.sim.water")
 
-  if (messages){
+  if (.messages){
     output <- qgisprocess::qgis_run_algorithm("grass7:r.sim.water", `elevation` = elevation, `dx` = dx, `dy` = dy, `rain` = rain, `rain_value` = rain_value, `infil` = infil, `infil_value` = infil_value, `man` = man, `man_value` = man_value, `flow_control` = flow_control, `observation` = observation, `nwalkers` = nwalkers, `niterations` = niterations, `output_step` = output_step, `diffusion_coeff` = diffusion_coeff, `hmax` = hmax, `halpha` = halpha, `hbeta` = hbeta, `-t` = .t, `depth` = depth, `discharge` = discharge, `error` = error, `walkers_output` = walkers_output, `logfile` = logfile, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,..., .quiet = .quiet)
   } else {
     suppressMessages(
