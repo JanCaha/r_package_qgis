@@ -2,7 +2,7 @@
 
   check_algorithm_necessities("{alg$algorithm}")
 
-  if (messages){{
+  if (.messages){{
     output <- qgisprocess::qgis_run_algorithm("{alg$algorithm}", {fn_arguments_qgis_run},..., .quiet = .quiet)
   }} else {{
     suppressMessages(
