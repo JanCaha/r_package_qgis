@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.13.0</span>
       </span>
     </div>
 
@@ -77,7 +77,9 @@
   OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   OUTPUT_TEXT_DIR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
   <span class="va">...</span>,
-  .complete_output <span class="op">=</span> <span class="cn">TRUE</span>
+  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,
+  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,
+  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
@@ -100,7 +102,11 @@
 <dt>...</dt>
 <dd><p>further parameters passed to <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code></p></dd>
 <dt>.complete_output</dt>
-<dd><p>logical specifing if complete out of <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be used (<code>TRUE</code>) or first output (most likely the main) should read (<code>FALSE</code>). Default value is <code>TRUE</code>.</p></dd>
+<dd><p>logical specifying if complete out of <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be used (<code>TRUE</code>) or first output (most likely the main) should read (<code>FALSE</code>). Default value is <code>TRUE</code>.</p></dd>
+<dt>.quiet</dt>
+<dd><p>logical specifying if parameter <code>.quiet</code> for <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> Default value is <code>TRUE</code>.</p></dd>
+<dt>.messages</dt>
+<dd><p>logical specifying if messages from <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be printed (<code>TRUE</code>) or not (<code>FALSE</code>). Default value is <code>FALSE</code>.</p></dd>
 </dl></div>
     <div id="details">
     <h2>Details</h2>

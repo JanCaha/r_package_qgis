@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.12.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.13.0</span>
       </span>
     </div>
 
@@ -96,7 +96,7 @@
 <div class="section level2">
 <h2 id="latest-version">Latest version<a class="anchor" aria-label="anchor" href="#latest-version"></a>
 </h2>
-<p>Latest package version <strong>1.12.0</strong> is build against QGIS version <strong>3.24.0-Tisler</strong>.</p>
+<p>Latest package version <strong>1.13.0</strong> is build against QGIS version <strong>3.24.0-Tisler</strong>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -111,6 +111,15 @@
 </h2>
 <p>The names of the functions follow general pattern of <code>algorithm-provider_algorithm-id</code> with only the native <strong>QGIS</strong> algorithms using <code>qgis</code> algorithm provider instead of <code>native</code>.</p>
 <p>The available providers are: 3d, gdal, grass7, native, qgis, saga. The overall number of available algorithms is 1014.</p>
+</div>
+<div class="section level2">
+<h2 id="functions-parameters">Functions parameters<a class="anchor" aria-label="anchor" href="#functions-parameters"></a>
+</h2>
+<p>Every functions carries three boolean parameters that allow better utilization of these functions in R pipelines and reports. These are <code>.complete_output</code>, <code>.quiet</code> and <code>.messages</code>. The default setting of these variables is such that the calls are as silent as possible and create pretty much no output in R console at all.</p>
+<p>Parameter <code>.quiet</code> (default values is <code>TRUE</code>) is the same as in <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> only in <code>qgis</code> the functions are silent by default while in <code>qgisprocess</code> they are talkative.</p>
+<p>Parameter <code>.messages</code> (default value is <code>FALSE</code>) controls if messages produced by <code>qgisprocess</code> (such as information about parameters not being set etc.) should be outputed or not.</p>
+<p>Parameter <code>.complete_output</code>(default values is <code>TRUE</code>) specifies whether whole QGIS process output should be returned or only first variable in it, which is usually the main output.</p>
+<p>These three parameters can also be set as R session options using <code>options(qgis.quiet = TRUE)</code>, <code>options(qgis.messages = FALSE)</code> and <code>options(qgis.complete_output = TRUE)</code> to avoid the need to set them for every individual function call.</p>
 </div>
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
@@ -140,28 +149,10 @@
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>                              <span class="at">DISTANCE =</span> <span class="fl">0.5</span>, </span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                              <span class="at">END_CAP_STYLE =</span> <span class="st">"Flat"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_as_sf</span>()</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Argument `SEGMENTS` is unspecified (using QGIS default value).</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Using `JOIN_STYLE = "Round"`</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Argument `MITER_LIMIT` is unspecified (using QGIS default value).</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Argument `DISSOLVE` is unspecified (using QGIS default value).</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Using `OUTPUT = qgis_tmp_vector()`</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; JSON input ----</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; {</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   "inputs": {</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     "INPUT": "/tmp/RtmputqEMw/filec27771d8e4b0/filec2775a75d111.gpkg",</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     "DISTANCE": 0.5,</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     "END_CAP_STYLE": 1,</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     "JOIN_STYLE": 0,</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     "OUTPUT": "/tmp/RtmputqEMw/filec27771d8e4b0/filec2777a41162e.gpkg"</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   }</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; }</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Running qgis_process --json run 'native:buffer' -</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; QStandardPaths: wrong ownership on runtime directory /tmp, 0 instead of 1001</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(buffered)</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; all</span></span></code></pre></div>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(buffered)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; all</span></span></code></pre></div>
 <p><img src="reference/figures/unnamed-chunk-4-1.png" width="100%"></p>
 </div>
 </div>
