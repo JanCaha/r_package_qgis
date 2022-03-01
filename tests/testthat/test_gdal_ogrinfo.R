@@ -1,7 +1,7 @@
 test_that("Test run qgis::gdal_ogrinfo", {
   skip_if_not_installed("sf")
 
-  sf_nc <- sf::st_read(system.file("shape/nc.shp", package="sf"))
+  sf_nc <- sf::st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
 
   result <- qgis::gdal_ogrinfo(INPUT = sf_nc)
 

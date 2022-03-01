@@ -1,7 +1,7 @@
 test_that("Test run qgis::qgis_buffer", {
   skip_if_not_installed("sf")
 
-  sf_nc <- sf::st_read(system.file("shape/nc.shp", package="sf"))
+  sf_nc <- sf::st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
 
   buffered_data <- qgis::qgis_buffer(INPUT = sf_nc,
                                      DISTANCE = 0.5,
