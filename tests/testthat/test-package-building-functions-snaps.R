@@ -2,6 +2,8 @@
 
 test_that("Functions build code and doc tessellate", {
 
+  skip_in_RCDMCHECK()
+
   alg_help <- get_alg_help("tessellate")
 
   expect_snapshot_file(save_txt(alg_help$doc), name = "tesselate_help.txt")
@@ -9,6 +11,8 @@ test_that("Functions build code and doc tessellate", {
 })
 
 test_that("Functions build code and doc retile", {
+
+  skip_in_RCDMCHECK()
 
   alg_help <- get_alg_help("retile")
 
@@ -18,6 +22,8 @@ test_that("Functions build code and doc retile", {
 
 test_that("Functions build code and doc i.cluster", {
 
+  skip_in_RCDMCHECK()
+
   alg_help <- get_alg_help("i.cluster")
 
   expect_snapshot_file(save_txt(alg_help$doc), name = "i_cluster_help.txt")
@@ -26,6 +32,8 @@ test_that("Functions build code and doc i.cluster", {
 
 test_that("Functions build code and doc r.sim.water", {
 
+  skip_in_RCDMCHECK()
+
   alg_help <- get_alg_help("r.sim.water")
 
   expect_snapshot_file(save_txt(alg_help$doc), name = "r_sim_water_help.txt")
@@ -33,6 +41,8 @@ test_that("Functions build code and doc r.sim.water", {
 })
 
 test_that("Functions build code and doc analyticalhierarchyprocess", {
+
+  skip_in_RCDMCHECK()
 
   alg_help <- get_alg_help("analyticalhierarchyprocess")
 

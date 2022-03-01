@@ -2,6 +2,8 @@
 
 test_that("Functions fix parameter names", {
 
+  skip_in_RCDMCHECK()
+
   source(here::here("build-package", "functions_fix_parameter_names.R"))
 
   argument <- replace_starting_minus("-m")
@@ -32,6 +34,8 @@ test_that("Functions fix parameter names", {
 
 test_that("Functions fix_description", {
 
+  skip_in_RCDMCHECK()
+
   source(here::here("build-package", "functions_fix_parameter_names.R"))
 
   argument <- remove_brackets("text [a]")
@@ -45,6 +49,8 @@ test_that("Functions fix_description", {
 })
 
 test_that("Functions fix_description", {
+
+  skip_in_RCDMCHECK()
 
   source(here::here("build-package", "functions_fix_parameter_names.R"))
 
@@ -66,6 +72,8 @@ test_that("Functions fix_description", {
 })
 
 test_that("Functions fix_description", {
+
+  skip_in_RCDMCHECK()
 
   source(here::here("build-package", "functions_fix_algorithm_id.R"))
 
