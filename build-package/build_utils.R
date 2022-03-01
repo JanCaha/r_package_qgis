@@ -8,6 +8,7 @@ fun_tmpl <- readr::read_file("build-package/templates/fun_onLoad.R")
 fun_code <- glue::glue(fun_tmpl)
 
 readr::write_file(glue::glue_collapse(list(fun_code,
-                                           readr::read_file("build-package/functions/check_algorithm_necessities.R")),
+                                           readr::read_file("build-package/functions/check_algorithm_necessities.R"),
+                                           readr::read_file("build-package/functions/option_checking_functions.R")),
                                       sep = "\n\n"),
                   glue::glue("./R/utils.R"))
