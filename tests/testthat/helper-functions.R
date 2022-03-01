@@ -1,3 +1,7 @@
+skip_in_RCDMCHECK <- function(){
+  skip_if(Sys.getenv("_R_CHECK_CODE_USAGE_WITH_ONLY_BASE_ATTACHED_") == TRUE, "Skipping for RCMDCHECK")
+}
+
 get_alg_help <- function(alg_name){
 
   source(here::here("build-package", "functions_fix_algorithm_id.R"))
