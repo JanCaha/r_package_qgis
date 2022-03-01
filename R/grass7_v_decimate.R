@@ -26,7 +26,9 @@
 ##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value.
 ##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -37,11 +39,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_v_decimate <- function(input = qgisprocess::qgis_default_value(), zrange = qgisprocess::qgis_default_value(), cats = qgisprocess::qgis_default_value(), skip = qgisprocess::qgis_default_value(), preserve = qgisprocess::qgis_default_value(), offset = qgisprocess::qgis_default_value(), limit = qgisprocess::qgis_default_value(), zdiff = qgisprocess::qgis_default_value(), cell_limit = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .x = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_v_decimate <- function(input = qgisprocess::qgis_default_value(), zrange = qgisprocess::qgis_default_value(), cats = qgisprocess::qgis_default_value(), skip = qgisprocess::qgis_default_value(), preserve = qgisprocess::qgis_default_value(), offset = qgisprocess::qgis_default_value(), limit = qgisprocess::qgis_default_value(), zdiff = qgisprocess::qgis_default_value(), cell_limit = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .x = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.decimate")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.decimate", `input` = input, `zrange` = zrange, `cats` = cats, `skip` = skip, `preserve` = preserve, `offset` = offset, `limit` = limit, `zdiff` = zdiff, `cell_limit` = cell_limit, `-g` = .g, `-f` = .f, `-c` = .c, `-z` = .z, `-x` = .x, `-b` = .b, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:v.decimate", `input` = input, `zrange` = zrange, `cats` = cats, `skip` = skip, `preserve` = preserve, `offset` = offset, `limit` = limit, `zdiff` = zdiff, `cell_limit` = cell_limit, `-g` = .g, `-f` = .f, `-c` = .c, `-z` = .z, `-x` = .x, `-b` = .b, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:v.decimate", `input` = input, `zrange` = zrange, `cats` = cats, `skip` = skip, `preserve` = preserve, `offset` = offset, `limit` = limit, `zdiff` = zdiff, `cell_limit` = cell_limit, `-g` = .g, `-f` = .f, `-c` = .c, `-z` = .z, `-x` = .x, `-b` = .b, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER, `GRASS_OUTPUT_TYPE_PARAMETER` = GRASS_OUTPUT_TYPE_PARAMETER, `GRASS_VECTOR_DSCO` = GRASS_VECTOR_DSCO, `GRASS_VECTOR_LCO` = GRASS_VECTOR_LCO, `GRASS_VECTOR_EXPORT_NOCAT` = GRASS_VECTOR_EXPORT_NOCAT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

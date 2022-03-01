@@ -15,7 +15,9 @@
 ##' @param STDDEVLO `rasterDestination` - Mean less Standard Deviation. Path for new raster layer.
 ##' @param STDDEVHI `rasterDestination` - Mean plus Standard Deviation. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -35,11 +37,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_statisticsforrasters <- function(GRIDS = qgisprocess::qgis_default_value(), PCTL_VAL = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), PCTL = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), STDDEVLO = qgisprocess::qgis_default_value(), STDDEVHI = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_statisticsforrasters <- function(GRIDS = qgisprocess::qgis_default_value(), PCTL_VAL = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), PCTL = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), STDDEVLO = qgisprocess::qgis_default_value(), STDDEVHI = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:statisticsforrasters")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:statisticsforrasters", `GRIDS` = GRIDS, `PCTL_VAL` = PCTL_VAL, `MEAN` = MEAN, `MIN` = MIN, `MAX` = MAX, `VAR` = VAR, `SUM` = SUM, `RANGE` = RANGE, `PCTL` = PCTL, `STDDEV` = STDDEV, `STDDEVLO` = STDDEVLO, `STDDEVHI` = STDDEVHI,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:statisticsforrasters", `GRIDS` = GRIDS, `PCTL_VAL` = PCTL_VAL, `MEAN` = MEAN, `MIN` = MIN, `MAX` = MAX, `VAR` = VAR, `SUM` = SUM, `RANGE` = RANGE, `PCTL` = PCTL, `STDDEV` = STDDEV, `STDDEVLO` = STDDEVLO, `STDDEVHI` = STDDEVHI,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:statisticsforrasters", `GRIDS` = GRIDS, `PCTL_VAL` = PCTL_VAL, `MEAN` = MEAN, `MIN` = MIN, `MAX` = MAX, `VAR` = VAR, `SUM` = SUM, `RANGE` = RANGE, `PCTL` = PCTL, `STDDEV` = STDDEV, `STDDEVLO` = STDDEVLO, `STDDEVHI` = STDDEVHI,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

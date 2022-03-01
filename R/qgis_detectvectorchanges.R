@@ -10,7 +10,9 @@
 ##' @param ADDED `sink` - Added features. Path for new vector layer.
 ##' @param DELETED `sink` - Deleted features. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -26,11 +28,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess::qgis_default_value(), REVISED = qgisprocess::qgis_default_value(), COMPARE_ATTRIBUTES = qgisprocess::qgis_default_value(), MATCH_TYPE = qgisprocess::qgis_default_value(), UNCHANGED = qgisprocess::qgis_default_value(), ADDED = qgisprocess::qgis_default_value(), DELETED = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess::qgis_default_value(), REVISED = qgisprocess::qgis_default_value(), COMPARE_ATTRIBUTES = qgisprocess::qgis_default_value(), MATCH_TYPE = qgisprocess::qgis_default_value(), UNCHANGED = qgisprocess::qgis_default_value(), ADDED = qgisprocess::qgis_default_value(), DELETED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:detectvectorchanges")
 
-  output <- qgisprocess::qgis_run_algorithm("native:detectvectorchanges", `ORIGINAL` = ORIGINAL, `REVISED` = REVISED, `COMPARE_ATTRIBUTES` = COMPARE_ATTRIBUTES, `MATCH_TYPE` = MATCH_TYPE, `UNCHANGED` = UNCHANGED, `ADDED` = ADDED, `DELETED` = DELETED,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("native:detectvectorchanges", `ORIGINAL` = ORIGINAL, `REVISED` = REVISED, `COMPARE_ATTRIBUTES` = COMPARE_ATTRIBUTES, `MATCH_TYPE` = MATCH_TYPE, `UNCHANGED` = UNCHANGED, `ADDED` = ADDED, `DELETED` = DELETED,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("native:detectvectorchanges", `ORIGINAL` = ORIGINAL, `REVISED` = REVISED, `COMPARE_ATTRIBUTES` = COMPARE_ATTRIBUTES, `MATCH_TYPE` = MATCH_TYPE, `UNCHANGED` = UNCHANGED, `ADDED` = ADDED, `DELETED` = DELETED,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

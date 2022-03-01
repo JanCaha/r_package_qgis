@@ -10,7 +10,9 @@
 ##' @param RESAMPLING `enum`  of `("[0] Nearest Neighbour", "[1] Bilinear Interpolation", "[2] Bicubic Spline Interpolation", "[3] B-Spline Interpolation")` - Resampling. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param METHOD `enum`  of `("[0] Y = a + b * X (linear)", "[1] Y = a + b / X", "[2] Y = a / (b - X)", "[3] Y = a * X^b (power)", "[4] Y = a e^(b * X) (exponential)", "[5] Y = a + b * ln(X) (logarithmic)")` - Regression Function. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -22,11 +24,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_regressionanalysispointsandpredictorgrid <- function(PREDICTOR = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUAL = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_regressionanalysispointsandpredictorgrid <- function(PREDICTOR = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUAL = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:regressionanalysispointsandpredictorgrid")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:regressionanalysispointsandpredictorgrid", `PREDICTOR` = PREDICTOR, `POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `REGRESSION` = REGRESSION, `RESIDUAL` = RESIDUAL, `RESAMPLING` = RESAMPLING, `METHOD` = METHOD,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:regressionanalysispointsandpredictorgrid", `PREDICTOR` = PREDICTOR, `POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `REGRESSION` = REGRESSION, `RESIDUAL` = RESIDUAL, `RESAMPLING` = RESAMPLING, `METHOD` = METHOD,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:regressionanalysispointsandpredictorgrid", `PREDICTOR` = PREDICTOR, `POINTS` = POINTS, `ATTRIBUTE` = ATTRIBUTE, `REGRESSION` = REGRESSION, `RESIDUAL` = RESIDUAL, `RESAMPLING` = RESAMPLING, `METHOD` = METHOD,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

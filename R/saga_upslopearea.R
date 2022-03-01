@@ -11,7 +11,9 @@
 ##' @param CONVERGE `number` - Convergence. A numeric value.
 ##' @param AREA `rasterDestination` - Upslope Area. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -22,11 +24,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_upslopearea <- function(TARGET = qgisprocess::qgis_default_value(), TARGET_PT_X = qgisprocess::qgis_default_value(), TARGET_PT_Y = qgisprocess::qgis_default_value(), ELEVATION = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CONVERGE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_upslopearea <- function(TARGET = qgisprocess::qgis_default_value(), TARGET_PT_X = qgisprocess::qgis_default_value(), TARGET_PT_Y = qgisprocess::qgis_default_value(), ELEVATION = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CONVERGE = qgisprocess::qgis_default_value(), AREA = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:upslopearea")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:upslopearea", `TARGET` = TARGET, `TARGET_PT_X` = TARGET_PT_X, `TARGET_PT_Y` = TARGET_PT_Y, `ELEVATION` = ELEVATION, `SINKROUTE` = SINKROUTE, `METHOD` = METHOD, `CONVERGE` = CONVERGE, `AREA` = AREA,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:upslopearea", `TARGET` = TARGET, `TARGET_PT_X` = TARGET_PT_X, `TARGET_PT_Y` = TARGET_PT_Y, `ELEVATION` = ELEVATION, `SINKROUTE` = SINKROUTE, `METHOD` = METHOD, `CONVERGE` = CONVERGE, `AREA` = AREA,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:upslopearea", `TARGET` = TARGET, `TARGET_PT_X` = TARGET_PT_X, `TARGET_PT_Y` = TARGET_PT_Y, `ELEVATION` = ELEVATION, `SINKROUTE` = SINKROUTE, `METHOD` = METHOD, `CONVERGE` = CONVERGE, `AREA` = AREA,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

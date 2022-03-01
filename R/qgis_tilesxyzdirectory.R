@@ -16,7 +16,9 @@
 ##' @param OUTPUT_DIRECTORY `folderDestination` - Output directory. Path for an existing or new folder.
 ##' @param OUTPUT_HTML `fileDestination` - Output html (Leaflet). Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -28,11 +30,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_tilesxyzdirectory <- function(EXTENT = qgisprocess::qgis_default_value(), ZOOM_MIN = qgisprocess::qgis_default_value(), ZOOM_MAX = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), BACKGROUND_COLOR = qgisprocess::qgis_default_value(), TILE_FORMAT = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), METATILESIZE = qgisprocess::qgis_default_value(), TILE_WIDTH = qgisprocess::qgis_default_value(), TILE_HEIGHT = qgisprocess::qgis_default_value(), TMS_CONVENTION = qgisprocess::qgis_default_value(), OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(), OUTPUT_HTML = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_tilesxyzdirectory <- function(EXTENT = qgisprocess::qgis_default_value(), ZOOM_MIN = qgisprocess::qgis_default_value(), ZOOM_MAX = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), BACKGROUND_COLOR = qgisprocess::qgis_default_value(), TILE_FORMAT = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), METATILESIZE = qgisprocess::qgis_default_value(), TILE_WIDTH = qgisprocess::qgis_default_value(), TILE_HEIGHT = qgisprocess::qgis_default_value(), TMS_CONVENTION = qgisprocess::qgis_default_value(), OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(), OUTPUT_HTML = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("qgis:tilesxyzdirectory")
 
-  output <- qgisprocess::qgis_run_algorithm("qgis:tilesxyzdirectory", `EXTENT` = EXTENT, `ZOOM_MIN` = ZOOM_MIN, `ZOOM_MAX` = ZOOM_MAX, `DPI` = DPI, `BACKGROUND_COLOR` = BACKGROUND_COLOR, `TILE_FORMAT` = TILE_FORMAT, `QUALITY` = QUALITY, `METATILESIZE` = METATILESIZE, `TILE_WIDTH` = TILE_WIDTH, `TILE_HEIGHT` = TILE_HEIGHT, `TMS_CONVENTION` = TMS_CONVENTION, `OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY, `OUTPUT_HTML` = OUTPUT_HTML,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("qgis:tilesxyzdirectory", `EXTENT` = EXTENT, `ZOOM_MIN` = ZOOM_MIN, `ZOOM_MAX` = ZOOM_MAX, `DPI` = DPI, `BACKGROUND_COLOR` = BACKGROUND_COLOR, `TILE_FORMAT` = TILE_FORMAT, `QUALITY` = QUALITY, `METATILESIZE` = METATILESIZE, `TILE_WIDTH` = TILE_WIDTH, `TILE_HEIGHT` = TILE_HEIGHT, `TMS_CONVENTION` = TMS_CONVENTION, `OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY, `OUTPUT_HTML` = OUTPUT_HTML,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("qgis:tilesxyzdirectory", `EXTENT` = EXTENT, `ZOOM_MIN` = ZOOM_MIN, `ZOOM_MAX` = ZOOM_MAX, `DPI` = DPI, `BACKGROUND_COLOR` = BACKGROUND_COLOR, `TILE_FORMAT` = TILE_FORMAT, `QUALITY` = QUALITY, `METATILESIZE` = METATILESIZE, `TILE_WIDTH` = TILE_WIDTH, `TILE_HEIGHT` = TILE_HEIGHT, `TMS_CONVENTION` = TMS_CONVENTION, `OUTPUT_DIRECTORY` = OUTPUT_DIRECTORY, `OUTPUT_HTML` = OUTPUT_HTML,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

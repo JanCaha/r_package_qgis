@@ -7,7 +7,9 @@
 ##' @param RANGE_MIN `number` - Range (Min). A numeric value.
 ##' @param RANGE_MAX `number` - Range (Max). A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -18,11 +20,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_singlevaluedecompositionopencv <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), RANGE_MIN = qgisprocess::qgis_default_value(), RANGE_MAX = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_singlevaluedecompositionopencv <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), RANGE_MIN = qgisprocess::qgis_default_value(), RANGE_MAX = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:singlevaluedecompositionopencv")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:singlevaluedecompositionopencv", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:singlevaluedecompositionopencv", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:singlevaluedecompositionopencv", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `RANGE_MIN` = RANGE_MIN, `RANGE_MAX` = RANGE_MAX,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

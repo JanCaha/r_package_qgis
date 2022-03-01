@@ -20,7 +20,9 @@
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -31,11 +33,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_i_landsat_toar <- function(rasters = qgisprocess::qgis_default_value(), metfile = qgisprocess::qgis_default_value(), sensor = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), date = qgisprocess::qgis_default_value(), sun_elevation = qgisprocess::qgis_default_value(), product_date = qgisprocess::qgis_default_value(), gain = qgisprocess::qgis_default_value(), percent = qgisprocess::qgis_default_value(), pixel = qgisprocess::qgis_default_value(), rayleigh = qgisprocess::qgis_default_value(), scale = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_i_landsat_toar <- function(rasters = qgisprocess::qgis_default_value(), metfile = qgisprocess::qgis_default_value(), sensor = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), date = qgisprocess::qgis_default_value(), sun_elevation = qgisprocess::qgis_default_value(), product_date = qgisprocess::qgis_default_value(), gain = qgisprocess::qgis_default_value(), percent = qgisprocess::qgis_default_value(), pixel = qgisprocess::qgis_default_value(), rayleigh = qgisprocess::qgis_default_value(), scale = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.landsat.toar")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.landsat.toar", `rasters` = rasters, `metfile` = metfile, `sensor` = sensor, `method` = method, `date` = date, `sun_elevation` = sun_elevation, `product_date` = product_date, `gain` = gain, `percent` = percent, `pixel` = pixel, `rayleigh` = rayleigh, `scale` = scale, `-r` = .r, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:i.landsat.toar", `rasters` = rasters, `metfile` = metfile, `sensor` = sensor, `method` = method, `date` = date, `sun_elevation` = sun_elevation, `product_date` = product_date, `gain` = gain, `percent` = percent, `pixel` = pixel, `rayleigh` = rayleigh, `scale` = scale, `-r` = .r, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:i.landsat.toar", `rasters` = rasters, `metfile` = metfile, `sensor` = sensor, `method` = method, `date` = date, `sun_elevation` = sun_elevation, `product_date` = product_date, `gain` = gain, `percent` = percent, `pixel` = pixel, `rayleigh` = rayleigh, `scale` = scale, `-r` = .r, `-n` = .n, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

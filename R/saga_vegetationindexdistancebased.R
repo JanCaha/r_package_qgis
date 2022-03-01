@@ -13,7 +13,9 @@
 ##' @param INTERCEPT `number` - Intercept of Soil Line. A numeric value.
 ##' @param SLOPE `number` - Slope of Soil Line. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -29,11 +31,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_vegetationindexdistancebased <- function(RED = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), PVI0 = qgisprocess::qgis_default_value(), PVI1 = qgisprocess::qgis_default_value(), PVI2 = qgisprocess::qgis_default_value(), PVI3 = qgisprocess::qgis_default_value(), TSAVI = qgisprocess::qgis_default_value(), ATSAVI = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_vegetationindexdistancebased <- function(RED = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), PVI0 = qgisprocess::qgis_default_value(), PVI1 = qgisprocess::qgis_default_value(), PVI2 = qgisprocess::qgis_default_value(), PVI3 = qgisprocess::qgis_default_value(), TSAVI = qgisprocess::qgis_default_value(), ATSAVI = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:vegetationindexdistancebased")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:vegetationindexdistancebased", `RED` = RED, `NIR` = NIR, `PVI0` = PVI0, `PVI1` = PVI1, `PVI2` = PVI2, `PVI3` = PVI3, `TSAVI` = TSAVI, `ATSAVI` = ATSAVI, `INTERCEPT` = INTERCEPT, `SLOPE` = SLOPE,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:vegetationindexdistancebased", `RED` = RED, `NIR` = NIR, `PVI0` = PVI0, `PVI1` = PVI1, `PVI2` = PVI2, `PVI3` = PVI3, `TSAVI` = TSAVI, `ATSAVI` = ATSAVI, `INTERCEPT` = INTERCEPT, `SLOPE` = SLOPE,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:vegetationindexdistancebased", `RED` = RED, `NIR` = NIR, `PVI0` = PVI0, `PVI1` = PVI1, `PVI2` = PVI2, `PVI3` = PVI3, `TSAVI` = TSAVI, `ATSAVI` = ATSAVI, `INTERCEPT` = INTERCEPT, `SLOPE` = SLOPE,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

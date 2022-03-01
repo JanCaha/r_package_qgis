@@ -15,7 +15,9 @@
 ##' @param TEMPLATE `raster` - Target System. Path to a raster layer.
 ##' @param OUT_GRID `rasterDestination` - Target Grid. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -26,11 +28,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_constantgrid <- function(NAME = qgisprocess::qgis_default_value(), CONST = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), DEFINITION = qgisprocess::qgis_default_value(), USER_SIZE = qgisprocess::qgis_default_value(), USER_XMIN = qgisprocess::qgis_default_value(), USER_XMAX = qgisprocess::qgis_default_value(), USER_YMIN = qgisprocess::qgis_default_value(), USER_YMAX = qgisprocess::qgis_default_value(), USER_FITS = qgisprocess::qgis_default_value(), TEMPLATE = qgisprocess::qgis_default_value(), OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_constantgrid <- function(NAME = qgisprocess::qgis_default_value(), CONST = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), DEFINITION = qgisprocess::qgis_default_value(), USER_SIZE = qgisprocess::qgis_default_value(), USER_XMIN = qgisprocess::qgis_default_value(), USER_XMAX = qgisprocess::qgis_default_value(), USER_YMIN = qgisprocess::qgis_default_value(), USER_YMAX = qgisprocess::qgis_default_value(), USER_FITS = qgisprocess::qgis_default_value(), TEMPLATE = qgisprocess::qgis_default_value(), OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:constantgrid")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:constantgrid", `NAME` = NAME, `CONST` = CONST, `TYPE` = TYPE, `DEFINITION` = DEFINITION, `USER_SIZE` = USER_SIZE, `USER_XMIN` = USER_XMIN, `USER_XMAX` = USER_XMAX, `USER_YMIN` = USER_YMIN, `USER_YMAX` = USER_YMAX, `USER_FITS` = USER_FITS, `TEMPLATE` = TEMPLATE, `OUT_GRID` = OUT_GRID,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:constantgrid", `NAME` = NAME, `CONST` = CONST, `TYPE` = TYPE, `DEFINITION` = DEFINITION, `USER_SIZE` = USER_SIZE, `USER_XMIN` = USER_XMIN, `USER_XMAX` = USER_XMAX, `USER_YMIN` = USER_YMIN, `USER_YMAX` = USER_YMAX, `USER_FITS` = USER_FITS, `TEMPLATE` = TEMPLATE, `OUT_GRID` = OUT_GRID,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:constantgrid", `NAME` = NAME, `CONST` = CONST, `TYPE` = TYPE, `DEFINITION` = DEFINITION, `USER_SIZE` = USER_SIZE, `USER_XMIN` = USER_XMIN, `USER_XMAX` = USER_XMAX, `USER_YMIN` = USER_YMIN, `USER_YMAX` = USER_YMAX, `USER_FITS` = USER_FITS, `TEMPLATE` = TEMPLATE, `OUT_GRID` = OUT_GRID,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

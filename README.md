@@ -29,7 +29,7 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **1.12.0** is build against QGIS version
+Latest package version **1.13.0** is build against QGIS version
 **3.24.0-Tisler**.
 
 ## Installation
@@ -50,6 +50,31 @@ algorithms using `qgis` algorithm provider instead of `native`.
 
 The available providers are: 3d, gdal, grass7, native, qgis, saga. The
 overall number of available algorithms is 1014.
+
+## Functions parameters
+
+Every functions carries three boolean parameters that allow better
+utilization of these functions in R pipelines and reports. These are
+`.complete_output`, `.quiet` and `.messages`. The default setting of
+these variables is such that the calls are as silent as possible and
+create pretty much no output in R console at all.
+
+Parameter `.quiet` (default values is `TRUE`) is the same as in
+`qgisprocess::qgis_run_algorithm()` only in `qgis` the functions are
+silent by default while in `qgisprocess` they are talkative.
+
+Parameter `.messages` (default value is `FALSE`) controls if messages
+produced by `qgisprocess` (such as information about parameters not
+being set etc.) should be outputed or not.
+
+Parameter `.complete_output`(default values is `TRUE`) specifies whether
+whole QGIS process output should be returned or only first variable in
+it, which is usually the main output.
+
+These three parameters can also be set as R session options using
+`options(qgis.quiet = TRUE)`, `options(qgis.messages = FALSE)` and
+`options(qgis.complete_output = TRUE)` to avoid the need to set them for
+every individual function call.
 
 ## Example
 
@@ -84,24 +109,6 @@ This example uses `qgisprocess` pipe ability to directly load output to
                                   DISTANCE = 0.5, 
                                   END_CAP_STYLE = "Flat") %>% 
       st_as_sf()
-    #> Argument `SEGMENTS` is unspecified (using QGIS default value).
-    #> Using `JOIN_STYLE = "Round"`
-    #> Argument `MITER_LIMIT` is unspecified (using QGIS default value).
-    #> Argument `DISSOLVE` is unspecified (using QGIS default value).
-    #> Using `OUTPUT = qgis_tmp_vector()`
-    #> JSON input ----
-    #> {
-    #>   "inputs": {
-    #>     "INPUT": "/tmp/RtmputqEMw/filec27771d8e4b0/filec2775a75d111.gpkg",
-    #>     "DISTANCE": 0.5,
-    #>     "END_CAP_STYLE": 1,
-    #>     "JOIN_STYLE": 0,
-    #>     "OUTPUT": "/tmp/RtmputqEMw/filec27771d8e4b0/filec2777a41162e.gpkg"
-    #>   }
-    #> }
-    #> 
-    #> Running qgis_process --json run 'native:buffer' -
-    #> QStandardPaths: wrong ownership on runtime directory /tmp, 0 instead of 1001
 
     plot(buffered)
     #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot

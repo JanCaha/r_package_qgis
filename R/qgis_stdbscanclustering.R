@@ -12,7 +12,9 @@
 ##' @param SIZE_FIELD_NAME `string` - Cluster size field name. String value.
 ##' @param OUTPUT `sink` - Clusters. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -24,11 +26,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_stdbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), DATETIME_FIELD = qgisprocess::qgis_default_value(), MIN_SIZE = qgisprocess::qgis_default_value(), EPS = qgisprocess::qgis_default_value(), EPS2 = qgisprocess::qgis_default_value(), DBSCAN = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), SIZE_FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_stdbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), DATETIME_FIELD = qgisprocess::qgis_default_value(), MIN_SIZE = qgisprocess::qgis_default_value(), EPS = qgisprocess::qgis_default_value(), EPS2 = qgisprocess::qgis_default_value(), DBSCAN = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), SIZE_FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:stdbscanclustering")
 
-  output <- qgisprocess::qgis_run_algorithm("native:stdbscanclustering", `INPUT` = INPUT, `DATETIME_FIELD` = DATETIME_FIELD, `MIN_SIZE` = MIN_SIZE, `EPS` = EPS, `EPS2` = EPS2, `DBSCAN*` = DBSCAN, `FIELD_NAME` = FIELD_NAME, `SIZE_FIELD_NAME` = SIZE_FIELD_NAME, `OUTPUT` = OUTPUT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("native:stdbscanclustering", `INPUT` = INPUT, `DATETIME_FIELD` = DATETIME_FIELD, `MIN_SIZE` = MIN_SIZE, `EPS` = EPS, `EPS2` = EPS2, `DBSCAN*` = DBSCAN, `FIELD_NAME` = FIELD_NAME, `SIZE_FIELD_NAME` = SIZE_FIELD_NAME, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("native:stdbscanclustering", `INPUT` = INPUT, `DATETIME_FIELD` = DATETIME_FIELD, `MIN_SIZE` = MIN_SIZE, `EPS` = EPS, `EPS2` = EPS2, `DBSCAN*` = DBSCAN, `FIELD_NAME` = FIELD_NAME, `SIZE_FIELD_NAME` = SIZE_FIELD_NAME, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

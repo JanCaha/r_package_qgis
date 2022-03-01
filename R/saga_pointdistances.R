@@ -10,7 +10,9 @@
 ##' @param MAX_DIST `number` - Maximum Distance. A numeric value.
 ##' @param DISTANCES `vectorDestination` - Distances. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -21,11 +23,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_pointdistances <- function(POINTS = qgisprocess::qgis_default_value(), ID_POINTS = qgisprocess::qgis_default_value(), NEAR = qgisprocess::qgis_default_value(), ID_NEAR = qgisprocess::qgis_default_value(), FORMAT = qgisprocess::qgis_default_value(), MAX_DIST = qgisprocess::qgis_default_value(), DISTANCES = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_pointdistances <- function(POINTS = qgisprocess::qgis_default_value(), ID_POINTS = qgisprocess::qgis_default_value(), NEAR = qgisprocess::qgis_default_value(), ID_NEAR = qgisprocess::qgis_default_value(), FORMAT = qgisprocess::qgis_default_value(), MAX_DIST = qgisprocess::qgis_default_value(), DISTANCES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:pointdistances")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:pointdistances", `POINTS` = POINTS, `ID_POINTS` = ID_POINTS, `NEAR` = NEAR, `ID_NEAR` = ID_NEAR, `FORMAT` = FORMAT, `MAX_DIST` = MAX_DIST, `DISTANCES` = DISTANCES,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:pointdistances", `POINTS` = POINTS, `ID_POINTS` = ID_POINTS, `NEAR` = NEAR, `ID_NEAR` = ID_NEAR, `FORMAT` = FORMAT, `MAX_DIST` = MAX_DIST, `DISTANCES` = DISTANCES,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:pointdistances", `POINTS` = POINTS, `ID_POINTS` = ID_POINTS, `NEAR` = NEAR, `ID_NEAR` = ID_NEAR, `FORMAT` = FORMAT, `MAX_DIST` = MAX_DIST, `DISTANCES` = DISTANCES,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

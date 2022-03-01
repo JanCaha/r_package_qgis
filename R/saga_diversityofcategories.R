@@ -16,7 +16,9 @@
 ##' @param SIZE_SKEW `rasterDestination` - Skewness. Path for new raster layer.
 ##' @param CONNECTIVITY `rasterDestination` - Connectivity. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -31,11 +33,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_diversityofcategories <- function(CATEGORIES = qgisprocess::qgis_default_value(), SEARCH_MODE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), NB_CASE = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), DIVERSITY = qgisprocess::qgis_default_value(), SIZE_MEAN = qgisprocess::qgis_default_value(), SIZE_SKEW = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_diversityofcategories <- function(CATEGORIES = qgisprocess::qgis_default_value(), SEARCH_MODE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), NB_CASE = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), DIVERSITY = qgisprocess::qgis_default_value(), SIZE_MEAN = qgisprocess::qgis_default_value(), SIZE_SKEW = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:diversityofcategories")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:diversityofcategories", `CATEGORIES` = CATEGORIES, `SEARCH_MODE` = SEARCH_MODE, `SEARCH_RADIUS` = SEARCH_RADIUS, `NB_CASE` = NB_CASE, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `COUNT` = COUNT, `DIVERSITY` = DIVERSITY, `SIZE_MEAN` = SIZE_MEAN, `SIZE_SKEW` = SIZE_SKEW, `CONNECTIVITY` = CONNECTIVITY,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:diversityofcategories", `CATEGORIES` = CATEGORIES, `SEARCH_MODE` = SEARCH_MODE, `SEARCH_RADIUS` = SEARCH_RADIUS, `NB_CASE` = NB_CASE, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `COUNT` = COUNT, `DIVERSITY` = DIVERSITY, `SIZE_MEAN` = SIZE_MEAN, `SIZE_SKEW` = SIZE_SKEW, `CONNECTIVITY` = CONNECTIVITY,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:diversityofcategories", `CATEGORIES` = CATEGORIES, `SEARCH_MODE` = SEARCH_MODE, `SEARCH_RADIUS` = SEARCH_RADIUS, `NB_CASE` = NB_CASE, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `COUNT` = COUNT, `DIVERSITY` = DIVERSITY, `SIZE_MEAN` = SIZE_MEAN, `SIZE_SKEW` = SIZE_SKEW, `CONNECTIVITY` = CONNECTIVITY,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

@@ -13,7 +13,9 @@
 ##' @param ALLOCATION `rasterDestination` - Allocation. Path for new raster layer.
 ##' @param THRESHOLD `number` - Threshold for different route. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -25,11 +27,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_accumulatedcost <- function(DEST_TYPE = qgisprocess::qgis_default_value(), DEST_POINTS = qgisprocess::qgis_default_value(), DEST_GRID = qgisprocess::qgis_default_value(), COST = qgisprocess::qgis_default_value(), DIR_MAXCOST = qgisprocess::qgis_default_value(), DIR_UNIT = qgisprocess::qgis_default_value(), DIR_K = qgisprocess::qgis_default_value(), ACCUMULATED = qgisprocess::qgis_default_value(), ALLOCATION = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_accumulatedcost <- function(DEST_TYPE = qgisprocess::qgis_default_value(), DEST_POINTS = qgisprocess::qgis_default_value(), DEST_GRID = qgisprocess::qgis_default_value(), COST = qgisprocess::qgis_default_value(), DIR_MAXCOST = qgisprocess::qgis_default_value(), DIR_UNIT = qgisprocess::qgis_default_value(), DIR_K = qgisprocess::qgis_default_value(), ACCUMULATED = qgisprocess::qgis_default_value(), ALLOCATION = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:accumulatedcost")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcost", `DEST_TYPE` = DEST_TYPE, `DEST_POINTS` = DEST_POINTS, `DEST_GRID` = DEST_GRID, `COST` = COST, `DIR_MAXCOST` = DIR_MAXCOST, `DIR_UNIT` = DIR_UNIT, `DIR_K` = DIR_K, `ACCUMULATED` = ACCUMULATED, `ALLOCATION` = ALLOCATION, `THRESHOLD` = THRESHOLD,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcost", `DEST_TYPE` = DEST_TYPE, `DEST_POINTS` = DEST_POINTS, `DEST_GRID` = DEST_GRID, `COST` = COST, `DIR_MAXCOST` = DIR_MAXCOST, `DIR_UNIT` = DIR_UNIT, `DIR_K` = DIR_K, `ACCUMULATED` = ACCUMULATED, `ALLOCATION` = ALLOCATION, `THRESHOLD` = THRESHOLD,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcost", `DEST_TYPE` = DEST_TYPE, `DEST_POINTS` = DEST_POINTS, `DEST_GRID` = DEST_GRID, `COST` = COST, `DIR_MAXCOST` = DIR_MAXCOST, `DIR_UNIT` = DIR_UNIT, `DIR_K` = DIR_K, `ACCUMULATED` = ACCUMULATED, `ALLOCATION` = ALLOCATION, `THRESHOLD` = THRESHOLD,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

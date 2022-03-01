@@ -20,7 +20,9 @@
 ##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
 ##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -31,11 +33,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_i_eb_hsebal01_coords <- function(netradiation = qgisprocess::qgis_default_value(), soilheatflux = qgisprocess::qgis_default_value(), aerodynresistance = qgisprocess::qgis_default_value(), temperaturemeansealevel = qgisprocess::qgis_default_value(), frictionvelocitystar = qgisprocess::qgis_default_value(), vapourpressureactual = qgisprocess::qgis_default_value(), row_wet_pixel = qgisprocess::qgis_default_value(), column_wet_pixel = qgisprocess::qgis_default_value(), row_dry_pixel = qgisprocess::qgis_default_value(), column_dry_pixel = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_i_eb_hsebal01_coords <- function(netradiation = qgisprocess::qgis_default_value(), soilheatflux = qgisprocess::qgis_default_value(), aerodynresistance = qgisprocess::qgis_default_value(), temperaturemeansealevel = qgisprocess::qgis_default_value(), frictionvelocitystar = qgisprocess::qgis_default_value(), vapourpressureactual = qgisprocess::qgis_default_value(), row_wet_pixel = qgisprocess::qgis_default_value(), column_wet_pixel = qgisprocess::qgis_default_value(), row_dry_pixel = qgisprocess::qgis_default_value(), column_dry_pixel = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.eb.hsebal01.coords")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.hsebal01.coords", `netradiation` = netradiation, `soilheatflux` = soilheatflux, `aerodynresistance` = aerodynresistance, `temperaturemeansealevel` = temperaturemeansealevel, `frictionvelocitystar` = frictionvelocitystar, `vapourpressureactual` = vapourpressureactual, `row_wet_pixel` = row_wet_pixel, `column_wet_pixel` = column_wet_pixel, `row_dry_pixel` = row_dry_pixel, `column_dry_pixel` = column_dry_pixel, `-a` = .a, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.hsebal01.coords", `netradiation` = netradiation, `soilheatflux` = soilheatflux, `aerodynresistance` = aerodynresistance, `temperaturemeansealevel` = temperaturemeansealevel, `frictionvelocitystar` = frictionvelocitystar, `vapourpressureactual` = vapourpressureactual, `row_wet_pixel` = row_wet_pixel, `column_wet_pixel` = column_wet_pixel, `row_dry_pixel` = row_dry_pixel, `column_dry_pixel` = column_dry_pixel, `-a` = .a, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.hsebal01.coords", `netradiation` = netradiation, `soilheatflux` = soilheatflux, `aerodynresistance` = aerodynresistance, `temperaturemeansealevel` = temperaturemeansealevel, `frictionvelocitystar` = frictionvelocitystar, `vapourpressureactual` = vapourpressureactual, `row_wet_pixel` = row_wet_pixel, `column_wet_pixel` = column_wet_pixel, `row_dry_pixel` = row_dry_pixel, `column_dry_pixel` = column_dry_pixel, `-a` = .a, `-c` = .c, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

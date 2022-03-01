@@ -12,7 +12,9 @@
 ##' @param MTEXT `boolean` - Export labels as MTEXT elements. 1 for true/yes. 0 for false/no.
 ##' @param OUTPUT `fileDestination` - DXF. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -23,11 +25,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_dxfexport <- function(LAYERS = qgisprocess::qgis_default_value(), SYMBOLOGY_MODE = qgisprocess::qgis_default_value(), SYMBOLOGY_SCALE = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), USE_LAYER_TITLE = qgisprocess::qgis_default_value(), FORCE_2D = qgisprocess::qgis_default_value(), MTEXT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_dxfexport <- function(LAYERS = qgisprocess::qgis_default_value(), SYMBOLOGY_MODE = qgisprocess::qgis_default_value(), SYMBOLOGY_SCALE = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), USE_LAYER_TITLE = qgisprocess::qgis_default_value(), FORCE_2D = qgisprocess::qgis_default_value(), MTEXT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:dxfexport")
 
-  output <- qgisprocess::qgis_run_algorithm("native:dxfexport", `LAYERS` = LAYERS, `SYMBOLOGY_MODE` = SYMBOLOGY_MODE, `SYMBOLOGY_SCALE` = SYMBOLOGY_SCALE, `ENCODING` = ENCODING, `CRS` = CRS, `USE_LAYER_TITLE` = USE_LAYER_TITLE, `FORCE_2D` = FORCE_2D, `MTEXT` = MTEXT, `OUTPUT` = OUTPUT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("native:dxfexport", `LAYERS` = LAYERS, `SYMBOLOGY_MODE` = SYMBOLOGY_MODE, `SYMBOLOGY_SCALE` = SYMBOLOGY_SCALE, `ENCODING` = ENCODING, `CRS` = CRS, `USE_LAYER_TITLE` = USE_LAYER_TITLE, `FORCE_2D` = FORCE_2D, `MTEXT` = MTEXT, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("native:dxfexport", `LAYERS` = LAYERS, `SYMBOLOGY_MODE` = SYMBOLOGY_MODE, `SYMBOLOGY_SCALE` = SYMBOLOGY_SCALE, `ENCODING` = ENCODING, `CRS` = CRS, `USE_LAYER_TITLE` = USE_LAYER_TITLE, `FORCE_2D` = FORCE_2D, `MTEXT` = MTEXT, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

@@ -21,7 +21,9 @@
 ##' @param EXTRA `string` - Additional command-line parameters. String value.
 ##' @param OUTPUT `rasterDestination` - Calculated. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -32,11 +34,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-gdal_rastercalculator <- function(INPUT_A = qgisprocess::qgis_default_value(), BAND_A = qgisprocess::qgis_default_value(), INPUT_B = qgisprocess::qgis_default_value(), BAND_B = qgisprocess::qgis_default_value(), INPUT_C = qgisprocess::qgis_default_value(), BAND_C = qgisprocess::qgis_default_value(), INPUT_D = qgisprocess::qgis_default_value(), BAND_D = qgisprocess::qgis_default_value(), INPUT_E = qgisprocess::qgis_default_value(), BAND_E = qgisprocess::qgis_default_value(), INPUT_F = qgisprocess::qgis_default_value(), BAND_F = qgisprocess::qgis_default_value(), FORMULA = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), RTYPE = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+gdal_rastercalculator <- function(INPUT_A = qgisprocess::qgis_default_value(), BAND_A = qgisprocess::qgis_default_value(), INPUT_B = qgisprocess::qgis_default_value(), BAND_B = qgisprocess::qgis_default_value(), INPUT_C = qgisprocess::qgis_default_value(), BAND_C = qgisprocess::qgis_default_value(), INPUT_D = qgisprocess::qgis_default_value(), BAND_D = qgisprocess::qgis_default_value(), INPUT_E = qgisprocess::qgis_default_value(), BAND_E = qgisprocess::qgis_default_value(), INPUT_F = qgisprocess::qgis_default_value(), BAND_F = qgisprocess::qgis_default_value(), FORMULA = qgisprocess::qgis_default_value(), NO_DATA = qgisprocess::qgis_default_value(), RTYPE = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:rastercalculator")
 
-  output <- qgisprocess::qgis_run_algorithm("gdal:rastercalculator", `INPUT_A` = INPUT_A, `BAND_A` = BAND_A, `INPUT_B` = INPUT_B, `BAND_B` = BAND_B, `INPUT_C` = INPUT_C, `BAND_C` = BAND_C, `INPUT_D` = INPUT_D, `BAND_D` = BAND_D, `INPUT_E` = INPUT_E, `BAND_E` = BAND_E, `INPUT_F` = INPUT_F, `BAND_F` = BAND_F, `FORMULA` = FORMULA, `NO_DATA` = NO_DATA, `RTYPE` = RTYPE, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("gdal:rastercalculator", `INPUT_A` = INPUT_A, `BAND_A` = BAND_A, `INPUT_B` = INPUT_B, `BAND_B` = BAND_B, `INPUT_C` = INPUT_C, `BAND_C` = BAND_C, `INPUT_D` = INPUT_D, `BAND_D` = BAND_D, `INPUT_E` = INPUT_E, `BAND_E` = BAND_E, `INPUT_F` = INPUT_F, `BAND_F` = BAND_F, `FORMULA` = FORMULA, `NO_DATA` = NO_DATA, `RTYPE` = RTYPE, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("gdal:rastercalculator", `INPUT_A` = INPUT_A, `BAND_A` = BAND_A, `INPUT_B` = INPUT_B, `BAND_B` = BAND_B, `INPUT_C` = INPUT_C, `BAND_C` = BAND_C, `INPUT_D` = INPUT_D, `BAND_D` = BAND_D, `INPUT_E` = INPUT_E, `BAND_E` = BAND_E, `INPUT_F` = INPUT_F, `BAND_F` = BAND_F, `FORMULA` = FORMULA, `NO_DATA` = NO_DATA, `RTYPE` = RTYPE, `OPTIONS` = OPTIONS, `EXTRA` = EXTRA, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

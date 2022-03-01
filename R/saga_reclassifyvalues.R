@@ -17,7 +17,9 @@
 ##' @param OTHERS `number` - new value for other values. A numeric value.
 ##' @param RESULT `rasterDestination` - Reclassified Grid. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -28,11 +30,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_reclassifyvalues <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), OLD = qgisprocess::qgis_default_value(), NEW = qgisprocess::qgis_default_value(), SOPERATOR = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RNEW = qgisprocess::qgis_default_value(), ROPERATOR = qgisprocess::qgis_default_value(), RETAB = qgisprocess::qgis_default_value(), TOPERATOR = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OTHERS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_reclassifyvalues <- function(INPUT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), OLD = qgisprocess::qgis_default_value(), NEW = qgisprocess::qgis_default_value(), SOPERATOR = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RNEW = qgisprocess::qgis_default_value(), ROPERATOR = qgisprocess::qgis_default_value(), RETAB = qgisprocess::qgis_default_value(), TOPERATOR = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OTHERS = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:reclassifyvalues")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvalues", `INPUT` = INPUT, `METHOD` = METHOD, `OLD` = OLD, `NEW` = NEW, `SOPERATOR` = SOPERATOR, `MIN` = MIN, `MAX` = MAX, `RNEW` = RNEW, `ROPERATOR` = ROPERATOR, `RETAB` = RETAB, `TOPERATOR` = TOPERATOR, `NODATA` = NODATA, `OTHERS` = OTHERS, `RESULT` = RESULT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvalues", `INPUT` = INPUT, `METHOD` = METHOD, `OLD` = OLD, `NEW` = NEW, `SOPERATOR` = SOPERATOR, `MIN` = MIN, `MAX` = MAX, `RNEW` = RNEW, `ROPERATOR` = ROPERATOR, `RETAB` = RETAB, `TOPERATOR` = TOPERATOR, `NODATA` = NODATA, `OTHERS` = OTHERS, `RESULT` = RESULT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:reclassifyvalues", `INPUT` = INPUT, `METHOD` = METHOD, `OLD` = OLD, `NEW` = NEW, `SOPERATOR` = SOPERATOR, `MIN` = MIN, `MAX` = MAX, `RNEW` = RNEW, `ROPERATOR` = ROPERATOR, `RETAB` = RETAB, `TOPERATOR` = TOPERATOR, `NODATA` = NODATA, `OTHERS` = OTHERS, `RESULT` = RESULT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

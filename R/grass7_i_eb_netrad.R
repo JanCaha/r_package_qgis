@@ -17,7 +17,9 @@
 ##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
 ##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -28,11 +30,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_i_eb_netrad <- function(albedo = qgisprocess::qgis_default_value(), ndvi = qgisprocess::qgis_default_value(), temperature = qgisprocess::qgis_default_value(), localutctime = qgisprocess::qgis_default_value(), temperaturedifference2m = qgisprocess::qgis_default_value(), emissivity = qgisprocess::qgis_default_value(), transmissivity_singleway = qgisprocess::qgis_default_value(), dayofyear = qgisprocess::qgis_default_value(), sunzenithangle = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_i_eb_netrad <- function(albedo = qgisprocess::qgis_default_value(), ndvi = qgisprocess::qgis_default_value(), temperature = qgisprocess::qgis_default_value(), localutctime = qgisprocess::qgis_default_value(), temperaturedifference2m = qgisprocess::qgis_default_value(), emissivity = qgisprocess::qgis_default_value(), transmissivity_singleway = qgisprocess::qgis_default_value(), dayofyear = qgisprocess::qgis_default_value(), sunzenithangle = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.eb.netrad")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.netrad", `albedo` = albedo, `ndvi` = ndvi, `temperature` = temperature, `localutctime` = localutctime, `temperaturedifference2m` = temperaturedifference2m, `emissivity` = emissivity, `transmissivity_singleway` = transmissivity_singleway, `dayofyear` = dayofyear, `sunzenithangle` = sunzenithangle, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.netrad", `albedo` = albedo, `ndvi` = ndvi, `temperature` = temperature, `localutctime` = localutctime, `temperaturedifference2m` = temperaturedifference2m, `emissivity` = emissivity, `transmissivity_singleway` = transmissivity_singleway, `dayofyear` = dayofyear, `sunzenithangle` = sunzenithangle, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:i.eb.netrad", `albedo` = albedo, `ndvi` = ndvi, `temperature` = temperature, `localutctime` = localutctime, `temperaturedifference2m` = temperaturedifference2m, `emissivity` = emissivity, `transmissivity_singleway` = transmissivity_singleway, `dayofyear` = dayofyear, `sunzenithangle` = sunzenithangle, `output` = output, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)
