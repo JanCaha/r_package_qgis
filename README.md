@@ -4,8 +4,8 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-yellow)
 ![GitHub R package
 version](https://img.shields.io/github/r-package/v/JanCaha/r_package_qgis)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-blue) [![Build
