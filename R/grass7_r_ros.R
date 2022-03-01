@@ -21,7 +21,9 @@
 ##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
 ##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -35,11 +37,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_r_ros <- function(model = qgisprocess::qgis_default_value(), moisture_1h = qgisprocess::qgis_default_value(), moisture_10h = qgisprocess::qgis_default_value(), moisture_100h = qgisprocess::qgis_default_value(), moisture_live = qgisprocess::qgis_default_value(), velocity = qgisprocess::qgis_default_value(), direction = qgisprocess::qgis_default_value(), slope = qgisprocess::qgis_default_value(), aspect = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), base_ros = qgisprocess::qgis_default_value(), max_ros = qgisprocess::qgis_default_value(), direction_ros = qgisprocess::qgis_default_value(), spotting_distance = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_r_ros <- function(model = qgisprocess::qgis_default_value(), moisture_1h = qgisprocess::qgis_default_value(), moisture_10h = qgisprocess::qgis_default_value(), moisture_100h = qgisprocess::qgis_default_value(), moisture_live = qgisprocess::qgis_default_value(), velocity = qgisprocess::qgis_default_value(), direction = qgisprocess::qgis_default_value(), slope = qgisprocess::qgis_default_value(), aspect = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), base_ros = qgisprocess::qgis_default_value(), max_ros = qgisprocess::qgis_default_value(), direction_ros = qgisprocess::qgis_default_value(), spotting_distance = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.ros")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.ros", `model` = model, `moisture_1h` = moisture_1h, `moisture_10h` = moisture_10h, `moisture_100h` = moisture_100h, `moisture_live` = moisture_live, `velocity` = velocity, `direction` = direction, `slope` = slope, `aspect` = aspect, `elevation` = elevation, `base_ros` = base_ros, `max_ros` = max_ros, `direction_ros` = direction_ros, `spotting_distance` = spotting_distance, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:r.ros", `model` = model, `moisture_1h` = moisture_1h, `moisture_10h` = moisture_10h, `moisture_100h` = moisture_100h, `moisture_live` = moisture_live, `velocity` = velocity, `direction` = direction, `slope` = slope, `aspect` = aspect, `elevation` = elevation, `base_ros` = base_ros, `max_ros` = max_ros, `direction_ros` = direction_ros, `spotting_distance` = spotting_distance, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:r.ros", `model` = model, `moisture_1h` = moisture_1h, `moisture_10h` = moisture_10h, `moisture_100h` = moisture_100h, `moisture_live` = moisture_live, `velocity` = velocity, `direction` = direction, `slope` = slope, `aspect` = aspect, `elevation` = elevation, `base_ros` = base_ros, `max_ros` = max_ros, `direction_ros` = direction_ros, `spotting_distance` = spotting_distance, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

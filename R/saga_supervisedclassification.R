@@ -23,7 +23,9 @@
 ##' @param CLASSES `rasterDestination` - Classification. Path for new raster layer.
 ##' @param QUALITY `rasterDestination` - Quality. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -36,11 +38,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_supervisedclassification <- function(GRIDS = qgisprocess::qgis_default_value(), ROI = qgisprocess::qgis_default_value(), ROI_ID = qgisprocess::qgis_default_value(), STATS = qgisprocess::qgis_default_value(), STATS_SRC = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), THRESHOLD_DIST = qgisprocess::qgis_default_value(), THRESHOLD_PROB = qgisprocess::qgis_default_value(), RELATIVE_PROB = qgisprocess::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess::qgis_default_value(), WTA_0 = qgisprocess::qgis_default_value(), WTA_1 = qgisprocess::qgis_default_value(), WTA_2 = qgisprocess::qgis_default_value(), WTA_3 = qgisprocess::qgis_default_value(), WTA_4 = qgisprocess::qgis_default_value(), WTA_5 = qgisprocess::qgis_default_value(), CLASS_INFO = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_supervisedclassification <- function(GRIDS = qgisprocess::qgis_default_value(), ROI = qgisprocess::qgis_default_value(), ROI_ID = qgisprocess::qgis_default_value(), STATS = qgisprocess::qgis_default_value(), STATS_SRC = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), THRESHOLD_DIST = qgisprocess::qgis_default_value(), THRESHOLD_PROB = qgisprocess::qgis_default_value(), RELATIVE_PROB = qgisprocess::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess::qgis_default_value(), WTA_0 = qgisprocess::qgis_default_value(), WTA_1 = qgisprocess::qgis_default_value(), WTA_2 = qgisprocess::qgis_default_value(), WTA_3 = qgisprocess::qgis_default_value(), WTA_4 = qgisprocess::qgis_default_value(), WTA_5 = qgisprocess::qgis_default_value(), CLASS_INFO = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:supervisedclassification")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassification", `GRIDS` = GRIDS, `ROI` = ROI, `ROI_ID` = ROI_ID, `STATS` = STATS, `STATS_SRC` = STATS_SRC, `METHOD` = METHOD, `NORMALISE` = NORMALISE, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5, `CLASS_INFO` = CLASS_INFO, `CLASSES` = CLASSES, `QUALITY` = QUALITY,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassification", `GRIDS` = GRIDS, `ROI` = ROI, `ROI_ID` = ROI_ID, `STATS` = STATS, `STATS_SRC` = STATS_SRC, `METHOD` = METHOD, `NORMALISE` = NORMALISE, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5, `CLASS_INFO` = CLASS_INFO, `CLASSES` = CLASSES, `QUALITY` = QUALITY,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassification", `GRIDS` = GRIDS, `ROI` = ROI, `ROI_ID` = ROI_ID, `STATS` = STATS, `STATS_SRC` = STATS_SRC, `METHOD` = METHOD, `NORMALISE` = NORMALISE, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5, `CLASS_INFO` = CLASS_INFO, `CLASSES` = CLASSES, `QUALITY` = QUALITY,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

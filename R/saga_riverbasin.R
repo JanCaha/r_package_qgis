@@ -20,7 +20,9 @@
 ##' @param EnfVmax `boolean` - Maximal Geschwindigkeit des Hauptgerinnes beruecksichtigen. 1 for true/yes. 0 for false/no.
 ##' @param VTresh `number` - Maximalgeschwindigkeit im Hauptgerinne in km/h. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -38,11 +40,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_riverbasin <- function(INPUT = qgisprocess::qgis_default_value(), INPUT2 = qgisprocess::qgis_default_value(), INPUT3 = qgisprocess::qgis_default_value(), WCons = qgisprocess::qgis_default_value(), WCons2 = qgisprocess::qgis_default_value(), OUTPUT2 = qgisprocess::qgis_default_value(), OUTPUT3 = qgisprocess::qgis_default_value(), OUTPUT4 = qgisprocess::qgis_default_value(), OUTPUT5 = qgisprocess::qgis_default_value(), OUTPUT6 = qgisprocess::qgis_default_value(), OUTPUT7 = qgisprocess::qgis_default_value(), OUTPUT8 = qgisprocess::qgis_default_value(), OUTPUT9 = qgisprocess::qgis_default_value(), pCr = qgisprocess::qgis_default_value(), nCr = qgisprocess::qgis_default_value(), EnfVmax = qgisprocess::qgis_default_value(), VTresh = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_riverbasin <- function(INPUT = qgisprocess::qgis_default_value(), INPUT2 = qgisprocess::qgis_default_value(), INPUT3 = qgisprocess::qgis_default_value(), WCons = qgisprocess::qgis_default_value(), WCons2 = qgisprocess::qgis_default_value(), OUTPUT2 = qgisprocess::qgis_default_value(), OUTPUT3 = qgisprocess::qgis_default_value(), OUTPUT4 = qgisprocess::qgis_default_value(), OUTPUT5 = qgisprocess::qgis_default_value(), OUTPUT6 = qgisprocess::qgis_default_value(), OUTPUT7 = qgisprocess::qgis_default_value(), OUTPUT8 = qgisprocess::qgis_default_value(), OUTPUT9 = qgisprocess::qgis_default_value(), pCr = qgisprocess::qgis_default_value(), nCr = qgisprocess::qgis_default_value(), EnfVmax = qgisprocess::qgis_default_value(), VTresh = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:riverbasin")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:riverbasin", `INPUT` = INPUT, `INPUT2` = INPUT2, `INPUT3` = INPUT3, `WCons` = WCons, `WCons2` = WCons2, `OUTPUT2` = OUTPUT2, `OUTPUT3` = OUTPUT3, `OUTPUT4` = OUTPUT4, `OUTPUT5` = OUTPUT5, `OUTPUT6` = OUTPUT6, `OUTPUT7` = OUTPUT7, `OUTPUT8` = OUTPUT8, `OUTPUT9` = OUTPUT9, `pCr` = pCr, `nCr` = nCr, `EnfVmax` = EnfVmax, `VTresh` = VTresh,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:riverbasin", `INPUT` = INPUT, `INPUT2` = INPUT2, `INPUT3` = INPUT3, `WCons` = WCons, `WCons2` = WCons2, `OUTPUT2` = OUTPUT2, `OUTPUT3` = OUTPUT3, `OUTPUT4` = OUTPUT4, `OUTPUT5` = OUTPUT5, `OUTPUT6` = OUTPUT6, `OUTPUT7` = OUTPUT7, `OUTPUT8` = OUTPUT8, `OUTPUT9` = OUTPUT9, `pCr` = pCr, `nCr` = nCr, `EnfVmax` = EnfVmax, `VTresh` = VTresh,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:riverbasin", `INPUT` = INPUT, `INPUT2` = INPUT2, `INPUT3` = INPUT3, `WCons` = WCons, `WCons2` = WCons2, `OUTPUT2` = OUTPUT2, `OUTPUT3` = OUTPUT3, `OUTPUT4` = OUTPUT4, `OUTPUT5` = OUTPUT5, `OUTPUT6` = OUTPUT6, `OUTPUT7` = OUTPUT7, `OUTPUT8` = OUTPUT8, `OUTPUT9` = OUTPUT9, `pCr` = pCr, `nCr` = nCr, `EnfVmax` = EnfVmax, `VTresh` = VTresh,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

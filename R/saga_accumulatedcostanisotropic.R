@@ -9,7 +9,9 @@
 ##' @param THRESHOLD `number` - Threshold for different route. A numeric value.
 ##' @param ACCCOST `rasterDestination` - Accumulated Cost. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -20,11 +22,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_accumulatedcostanisotropic <- function(COST = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), K = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ACCCOST = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_accumulatedcostanisotropic <- function(COST = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), K = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), ACCCOST = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:accumulatedcostanisotropic")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostanisotropic", `COST` = COST, `DIRECTION` = DIRECTION, `POINTS` = POINTS, `K` = K, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostanisotropic", `COST` = COST, `DIRECTION` = DIRECTION, `POINTS` = POINTS, `K` = K, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:accumulatedcostanisotropic", `COST` = COST, `DIRECTION` = DIRECTION, `POINTS` = POINTS, `K` = K, `THRESHOLD` = THRESHOLD, `ACCCOST` = ACCCOST,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

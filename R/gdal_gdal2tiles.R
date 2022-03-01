@@ -19,7 +19,9 @@
 ##' @param NO_KML `boolean` - Avoid automatic generation of KML files for EPSG:4326. 1 for true/yes. 0 for false/no.
 ##' @param OUTPUT `folderDestination` - Output directory. Path for an existing or new folder.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -30,11 +32,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-gdal_gdal2tiles <- function(INPUT = qgisprocess::qgis_default_value(), PROFILE = qgisprocess::qgis_default_value(), ZOOM = qgisprocess::qgis_default_value(), VIEWER = qgisprocess::qgis_default_value(), TITLE = qgisprocess::qgis_default_value(), COPYRIGHT = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), URL = qgisprocess::qgis_default_value(), GOOGLE_KEY = qgisprocess::qgis_default_value(), BING_KEY = qgisprocess::qgis_default_value(), RESUME = qgisprocess::qgis_default_value(), KML = qgisprocess::qgis_default_value(), NO_KML = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+gdal_gdal2tiles <- function(INPUT = qgisprocess::qgis_default_value(), PROFILE = qgisprocess::qgis_default_value(), ZOOM = qgisprocess::qgis_default_value(), VIEWER = qgisprocess::qgis_default_value(), TITLE = qgisprocess::qgis_default_value(), COPYRIGHT = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), URL = qgisprocess::qgis_default_value(), GOOGLE_KEY = qgisprocess::qgis_default_value(), BING_KEY = qgisprocess::qgis_default_value(), RESUME = qgisprocess::qgis_default_value(), KML = qgisprocess::qgis_default_value(), NO_KML = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:gdal2tiles")
 
-  output <- qgisprocess::qgis_run_algorithm("gdal:gdal2tiles", `INPUT` = INPUT, `PROFILE` = PROFILE, `ZOOM` = ZOOM, `VIEWER` = VIEWER, `TITLE` = TITLE, `COPYRIGHT` = COPYRIGHT, `RESAMPLING` = RESAMPLING, `SOURCE_CRS` = SOURCE_CRS, `NODATA` = NODATA, `URL` = URL, `GOOGLE_KEY` = GOOGLE_KEY, `BING_KEY` = BING_KEY, `RESUME` = RESUME, `KML` = KML, `NO_KML` = NO_KML, `OUTPUT` = OUTPUT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("gdal:gdal2tiles", `INPUT` = INPUT, `PROFILE` = PROFILE, `ZOOM` = ZOOM, `VIEWER` = VIEWER, `TITLE` = TITLE, `COPYRIGHT` = COPYRIGHT, `RESAMPLING` = RESAMPLING, `SOURCE_CRS` = SOURCE_CRS, `NODATA` = NODATA, `URL` = URL, `GOOGLE_KEY` = GOOGLE_KEY, `BING_KEY` = BING_KEY, `RESUME` = RESUME, `KML` = KML, `NO_KML` = NO_KML, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("gdal:gdal2tiles", `INPUT` = INPUT, `PROFILE` = PROFILE, `ZOOM` = ZOOM, `VIEWER` = VIEWER, `TITLE` = TITLE, `COPYRIGHT` = COPYRIGHT, `RESAMPLING` = RESAMPLING, `SOURCE_CRS` = SOURCE_CRS, `NODATA` = NODATA, `URL` = URL, `GOOGLE_KEY` = GOOGLE_KEY, `BING_KEY` = BING_KEY, `RESUME` = RESUME, `KML` = KML, `NO_KML` = NO_KML, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

@@ -13,7 +13,9 @@
 ##' @param LINEAR `boolean` - Switch to Linear Flow. 1 for true/yes. 0 for false/no.
 ##' @param THRES_LINEAR `number` - Threshold Linear Flow. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -25,11 +27,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_accumulationfunctions <- function(SURFACE = qgisprocess::qgis_default_value(), INPUT = qgisprocess::qgis_default_value(), STATE_IN = qgisprocess::qgis_default_value(), CONTROL = qgisprocess::qgis_default_value(), CTRL_LINEAR = qgisprocess::qgis_default_value(), FLUX = qgisprocess::qgis_default_value(), STATE_OUT = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), LINEAR = qgisprocess::qgis_default_value(), THRES_LINEAR = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_accumulationfunctions <- function(SURFACE = qgisprocess::qgis_default_value(), INPUT = qgisprocess::qgis_default_value(), STATE_IN = qgisprocess::qgis_default_value(), CONTROL = qgisprocess::qgis_default_value(), CTRL_LINEAR = qgisprocess::qgis_default_value(), FLUX = qgisprocess::qgis_default_value(), STATE_OUT = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), LINEAR = qgisprocess::qgis_default_value(), THRES_LINEAR = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:accumulationfunctions")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:accumulationfunctions", `SURFACE` = SURFACE, `INPUT` = INPUT, `STATE_IN` = STATE_IN, `CONTROL` = CONTROL, `CTRL_LINEAR` = CTRL_LINEAR, `FLUX` = FLUX, `STATE_OUT` = STATE_OUT, `OPERATION` = OPERATION, `LINEAR` = LINEAR, `THRES_LINEAR` = THRES_LINEAR,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:accumulationfunctions", `SURFACE` = SURFACE, `INPUT` = INPUT, `STATE_IN` = STATE_IN, `CONTROL` = CONTROL, `CTRL_LINEAR` = CTRL_LINEAR, `FLUX` = FLUX, `STATE_OUT` = STATE_OUT, `OPERATION` = OPERATION, `LINEAR` = LINEAR, `THRES_LINEAR` = THRES_LINEAR,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:accumulationfunctions", `SURFACE` = SURFACE, `INPUT` = INPUT, `STATE_IN` = STATE_IN, `CONTROL` = CONTROL, `CTRL_LINEAR` = CTRL_LINEAR, `FLUX` = FLUX, `STATE_OUT` = STATE_OUT, `OPERATION` = OPERATION, `LINEAR` = LINEAR, `THRES_LINEAR` = THRES_LINEAR,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

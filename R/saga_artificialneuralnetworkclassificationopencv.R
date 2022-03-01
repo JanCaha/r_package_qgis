@@ -23,7 +23,9 @@
 ##' @param ANN_BP_DW `number` - Weight Gradient Term. A numeric value.
 ##' @param ANN_BP_MOMENT `number` - Moment Term. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -34,11 +36,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_artificialneuralnetworkclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), ANN_LAYERS = qgisprocess::qgis_default_value(), ANN_NEURONS = qgisprocess::qgis_default_value(), ANN_MAXITER = qgisprocess::qgis_default_value(), ANN_EPSILON = qgisprocess::qgis_default_value(), ANN_ACTIVATION = qgisprocess::qgis_default_value(), ANN_ACT_ALPHA = qgisprocess::qgis_default_value(), ANN_ACT_BETA = qgisprocess::qgis_default_value(), ANN_PROPAGATION = qgisprocess::qgis_default_value(), ANN_RP_DW0 = qgisprocess::qgis_default_value(), ANN_RP_DW_PLUS = qgisprocess::qgis_default_value(), ANN_RP_DW_MINUS = qgisprocess::qgis_default_value(), ANN_RP_DW_MIN = qgisprocess::qgis_default_value(), ANN_RP_DW_MAX = qgisprocess::qgis_default_value(), ANN_BP_DW = qgisprocess::qgis_default_value(), ANN_BP_MOMENT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_artificialneuralnetworkclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), ANN_LAYERS = qgisprocess::qgis_default_value(), ANN_NEURONS = qgisprocess::qgis_default_value(), ANN_MAXITER = qgisprocess::qgis_default_value(), ANN_EPSILON = qgisprocess::qgis_default_value(), ANN_ACTIVATION = qgisprocess::qgis_default_value(), ANN_ACT_ALPHA = qgisprocess::qgis_default_value(), ANN_ACT_BETA = qgisprocess::qgis_default_value(), ANN_PROPAGATION = qgisprocess::qgis_default_value(), ANN_RP_DW0 = qgisprocess::qgis_default_value(), ANN_RP_DW_PLUS = qgisprocess::qgis_default_value(), ANN_RP_DW_MINUS = qgisprocess::qgis_default_value(), ANN_RP_DW_MIN = qgisprocess::qgis_default_value(), ANN_RP_DW_MAX = qgisprocess::qgis_default_value(), ANN_BP_DW = qgisprocess::qgis_default_value(), ANN_BP_MOMENT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:artificialneuralnetworkclassificationopencv")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:artificialneuralnetworkclassificationopencv", `FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `ANN_LAYERS` = ANN_LAYERS, `ANN_NEURONS` = ANN_NEURONS, `ANN_MAXITER` = ANN_MAXITER, `ANN_EPSILON` = ANN_EPSILON, `ANN_ACTIVATION` = ANN_ACTIVATION, `ANN_ACT_ALPHA` = ANN_ACT_ALPHA, `ANN_ACT_BETA` = ANN_ACT_BETA, `ANN_PROPAGATION` = ANN_PROPAGATION, `ANN_RP_DW0` = ANN_RP_DW0, `ANN_RP_DW_PLUS` = ANN_RP_DW_PLUS, `ANN_RP_DW_MINUS` = ANN_RP_DW_MINUS, `ANN_RP_DW_MIN` = ANN_RP_DW_MIN, `ANN_RP_DW_MAX` = ANN_RP_DW_MAX, `ANN_BP_DW` = ANN_BP_DW, `ANN_BP_MOMENT` = ANN_BP_MOMENT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:artificialneuralnetworkclassificationopencv", `FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `ANN_LAYERS` = ANN_LAYERS, `ANN_NEURONS` = ANN_NEURONS, `ANN_MAXITER` = ANN_MAXITER, `ANN_EPSILON` = ANN_EPSILON, `ANN_ACTIVATION` = ANN_ACTIVATION, `ANN_ACT_ALPHA` = ANN_ACT_ALPHA, `ANN_ACT_BETA` = ANN_ACT_BETA, `ANN_PROPAGATION` = ANN_PROPAGATION, `ANN_RP_DW0` = ANN_RP_DW0, `ANN_RP_DW_PLUS` = ANN_RP_DW_PLUS, `ANN_RP_DW_MINUS` = ANN_RP_DW_MINUS, `ANN_RP_DW_MIN` = ANN_RP_DW_MIN, `ANN_RP_DW_MAX` = ANN_RP_DW_MAX, `ANN_BP_DW` = ANN_BP_DW, `ANN_BP_MOMENT` = ANN_BP_MOMENT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:artificialneuralnetworkclassificationopencv", `FEATURES` = FEATURES, `NORMALIZE` = NORMALIZE, `TRAIN_AREAS` = TRAIN_AREAS, `TRAIN_CLASS` = TRAIN_CLASS, `CLASSES` = CLASSES, `ANN_LAYERS` = ANN_LAYERS, `ANN_NEURONS` = ANN_NEURONS, `ANN_MAXITER` = ANN_MAXITER, `ANN_EPSILON` = ANN_EPSILON, `ANN_ACTIVATION` = ANN_ACTIVATION, `ANN_ACT_ALPHA` = ANN_ACT_ALPHA, `ANN_ACT_BETA` = ANN_ACT_BETA, `ANN_PROPAGATION` = ANN_PROPAGATION, `ANN_RP_DW0` = ANN_RP_DW0, `ANN_RP_DW_PLUS` = ANN_RP_DW_PLUS, `ANN_RP_DW_MINUS` = ANN_RP_DW_MINUS, `ANN_RP_DW_MIN` = ANN_RP_DW_MIN, `ANN_RP_DW_MAX` = ANN_RP_DW_MAX, `ANN_BP_DW` = ANN_BP_DW, `ANN_BP_MOMENT` = ANN_BP_MOMENT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

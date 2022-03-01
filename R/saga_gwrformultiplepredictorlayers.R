@@ -21,7 +21,9 @@
 ##' @param QUALITY `rasterDestination` - Coefficient of Determination. Path for new raster layer.
 ##' @param RESIDUALS `vectorDestination` - Residuals. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -34,11 +36,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_gwrformultiplepredictorlayers <- function(PREDICTORS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), DEPENDENT = qgisprocess::qgis_default_value(), RESOLUTION = qgisprocess::qgis_default_value(), RESOLUTION_VAL = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_gwrformultiplepredictorlayers <- function(PREDICTORS = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), DEPENDENT = qgisprocess::qgis_default_value(), RESOLUTION = qgisprocess::qgis_default_value(), RESOLUTION_VAL = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:gwrformultiplepredictorlayers")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:gwrformultiplepredictorlayers", `PREDICTORS` = PREDICTORS, `POINTS` = POINTS, `DEPENDENT` = DEPENDENT, `RESOLUTION` = RESOLUTION, `RESOLUTION_VAL` = RESOLUTION_VAL, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `REGRESSION` = REGRESSION, `QUALITY` = QUALITY, `RESIDUALS` = RESIDUALS,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:gwrformultiplepredictorlayers", `PREDICTORS` = PREDICTORS, `POINTS` = POINTS, `DEPENDENT` = DEPENDENT, `RESOLUTION` = RESOLUTION, `RESOLUTION_VAL` = RESOLUTION_VAL, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `REGRESSION` = REGRESSION, `QUALITY` = QUALITY, `RESIDUALS` = RESIDUALS,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:gwrformultiplepredictorlayers", `PREDICTORS` = PREDICTORS, `POINTS` = POINTS, `DEPENDENT` = DEPENDENT, `RESOLUTION` = RESOLUTION, `RESOLUTION_VAL` = RESOLUTION_VAL, `DW_WEIGHTING` = DW_WEIGHTING, `DW_IDW_POWER` = DW_IDW_POWER, `DW_IDW_OFFSET` = DW_IDW_OFFSET, `DW_BANDWIDTH` = DW_BANDWIDTH, `SEARCH_RANGE` = SEARCH_RANGE, `SEARCH_RADIUS` = SEARCH_RADIUS, `SEARCH_POINTS_ALL` = SEARCH_POINTS_ALL, `SEARCH_POINTS_MIN` = SEARCH_POINTS_MIN, `SEARCH_POINTS_MAX` = SEARCH_POINTS_MAX, `SEARCH_DIRECTION` = SEARCH_DIRECTION, `REGRESSION` = REGRESSION, `QUALITY` = QUALITY, `RESIDUALS` = RESIDUALS,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

@@ -21,7 +21,9 @@
 ##' @param WTA_4 `boolean` - Maximum Likelihood. 1 for true/yes. 0 for false/no.
 ##' @param WTA_5 `boolean` - Spectral Angle Mapping. 1 for true/yes. 0 for false/no.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -32,11 +34,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_supervisedclassificationforshapes <- function(SHAPES = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), TRAINING = qgisprocess::qgis_default_value(), FILE_LOAD = qgisprocess::qgis_default_value(), FILE_SAVE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), THRESHOLD_DIST = qgisprocess::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess::qgis_default_value(), THRESHOLD_PROB = qgisprocess::qgis_default_value(), RELATIVE_PROB = qgisprocess::qgis_default_value(), WTA_0 = qgisprocess::qgis_default_value(), WTA_1 = qgisprocess::qgis_default_value(), WTA_2 = qgisprocess::qgis_default_value(), WTA_3 = qgisprocess::qgis_default_value(), WTA_4 = qgisprocess::qgis_default_value(), WTA_5 = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_supervisedclassificationforshapes <- function(SHAPES = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), TRAINING = qgisprocess::qgis_default_value(), FILE_LOAD = qgisprocess::qgis_default_value(), FILE_SAVE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), THRESHOLD_DIST = qgisprocess::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess::qgis_default_value(), THRESHOLD_PROB = qgisprocess::qgis_default_value(), RELATIVE_PROB = qgisprocess::qgis_default_value(), WTA_0 = qgisprocess::qgis_default_value(), WTA_1 = qgisprocess::qgis_default_value(), WTA_2 = qgisprocess::qgis_default_value(), WTA_3 = qgisprocess::qgis_default_value(), WTA_4 = qgisprocess::qgis_default_value(), WTA_5 = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:supervisedclassificationforshapes")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassificationforshapes", `SHAPES` = SHAPES, `CLASSES` = CLASSES, `FEATURES` = FEATURES, `NORMALISE` = NORMALISE, `TRAINING` = TRAINING, `FILE_LOAD` = FILE_LOAD, `FILE_SAVE` = FILE_SAVE, `METHOD` = METHOD, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassificationforshapes", `SHAPES` = SHAPES, `CLASSES` = CLASSES, `FEATURES` = FEATURES, `NORMALISE` = NORMALISE, `TRAINING` = TRAINING, `FILE_LOAD` = FILE_LOAD, `FILE_SAVE` = FILE_SAVE, `METHOD` = METHOD, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:supervisedclassificationforshapes", `SHAPES` = SHAPES, `CLASSES` = CLASSES, `FEATURES` = FEATURES, `NORMALISE` = NORMALISE, `TRAINING` = TRAINING, `FILE_LOAD` = FILE_LOAD, `FILE_SAVE` = FILE_SAVE, `METHOD` = METHOD, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

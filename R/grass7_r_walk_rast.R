@@ -20,7 +20,9 @@
 ##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
 ##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -32,11 +34,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_r_walk_rast <- function(elevation = qgisprocess::qgis_default_value(), friction = qgisprocess::qgis_default_value(), start_raster = qgisprocess::qgis_default_value(), walk_coeff = qgisprocess::qgis_default_value(), lambda = qgisprocess::qgis_default_value(), slope_factor = qgisprocess::qgis_default_value(), max_cost = qgisprocess::qgis_default_value(), null_cost = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .k = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), outdir = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_r_walk_rast <- function(elevation = qgisprocess::qgis_default_value(), friction = qgisprocess::qgis_default_value(), start_raster = qgisprocess::qgis_default_value(), walk_coeff = qgisprocess::qgis_default_value(), lambda = qgisprocess::qgis_default_value(), slope_factor = qgisprocess::qgis_default_value(), max_cost = qgisprocess::qgis_default_value(), null_cost = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .k = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), outdir = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.walk.rast")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:r.walk.rast", `elevation` = elevation, `friction` = friction, `start_raster` = start_raster, `walk_coeff` = walk_coeff, `lambda` = lambda, `slope_factor` = slope_factor, `max_cost` = max_cost, `null_cost` = null_cost, `memory` = memory, `-k` = .k, `-n` = .n, `output` = output, `outdir` = outdir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:r.walk.rast", `elevation` = elevation, `friction` = friction, `start_raster` = start_raster, `walk_coeff` = walk_coeff, `lambda` = lambda, `slope_factor` = slope_factor, `max_cost` = max_cost, `null_cost` = null_cost, `memory` = memory, `-k` = .k, `-n` = .n, `output` = output, `outdir` = outdir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:r.walk.rast", `elevation` = elevation, `friction` = friction, `start_raster` = start_raster, `walk_coeff` = walk_coeff, `lambda` = lambda, `slope_factor` = slope_factor, `max_cost` = max_cost, `null_cost` = null_cost, `memory` = memory, `-k` = .k, `-n` = .n, `output` = output, `outdir` = outdir, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_REGION_CELLSIZE_PARAMETER` = GRASS_REGION_CELLSIZE_PARAMETER, `GRASS_RASTER_FORMAT_OPT` = GRASS_RASTER_FORMAT_OPT, `GRASS_RASTER_FORMAT_META` = GRASS_RASTER_FORMAT_META,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

@@ -9,7 +9,9 @@
 ##' @param FUZZYEXPONENT `number` - Membership function exponent. A numeric value.
 ##' @param OUTPUT `rasterDestination` - Fuzzified raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -25,11 +27,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-qgis_fuzzifyrasterpowermembership <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FUZZYLOWBOUND = qgisprocess::qgis_default_value(), FUZZYHIGHBOUND = qgisprocess::qgis_default_value(), FUZZYEXPONENT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+qgis_fuzzifyrasterpowermembership <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FUZZYLOWBOUND = qgisprocess::qgis_default_value(), FUZZYHIGHBOUND = qgisprocess::qgis_default_value(), FUZZYEXPONENT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:fuzzifyrasterpowermembership")
 
-  output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterpowermembership", `INPUT` = INPUT, `BAND` = BAND, `FUZZYLOWBOUND` = FUZZYLOWBOUND, `FUZZYHIGHBOUND` = FUZZYHIGHBOUND, `FUZZYEXPONENT` = FUZZYEXPONENT, `OUTPUT` = OUTPUT,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterpowermembership", `INPUT` = INPUT, `BAND` = BAND, `FUZZYLOWBOUND` = FUZZYLOWBOUND, `FUZZYHIGHBOUND` = FUZZYHIGHBOUND, `FUZZYEXPONENT` = FUZZYEXPONENT, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("native:fuzzifyrasterpowermembership", `INPUT` = INPUT, `BAND` = BAND, `FUZZYLOWBOUND` = FUZZYLOWBOUND, `FUZZYHIGHBOUND` = FUZZYHIGHBOUND, `FUZZYEXPONENT` = FUZZYEXPONENT, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

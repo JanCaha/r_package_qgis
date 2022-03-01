@@ -15,7 +15,9 @@
 ##' @param PASS2 `boolean` - Bypass second-pass processing, and merge warm (not ambiguous) and cold clouds. 1 for true/yes. 0 for false/no.
 ##' @param SHADOW `boolean` - Include a category for cloud shadows. 1 for true/yes. 0 for false/no.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -26,11 +28,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_automatedcloudcoverassessment <- function(BAND2 = qgisprocess::qgis_default_value(), BAND3 = qgisprocess::qgis_default_value(), BAND4 = qgisprocess::qgis_default_value(), BAND5 = qgisprocess::qgis_default_value(), BAND6 = qgisprocess::qgis_default_value(), CLOUD = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(), B56C = qgisprocess::qgis_default_value(), B45R = qgisprocess::qgis_default_value(), CSIG = qgisprocess::qgis_default_value(), PASS2 = qgisprocess::qgis_default_value(), SHADOW = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_automatedcloudcoverassessment <- function(BAND2 = qgisprocess::qgis_default_value(), BAND3 = qgisprocess::qgis_default_value(), BAND4 = qgisprocess::qgis_default_value(), BAND5 = qgisprocess::qgis_default_value(), BAND6 = qgisprocess::qgis_default_value(), CLOUD = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(), B56C = qgisprocess::qgis_default_value(), B45R = qgisprocess::qgis_default_value(), CSIG = qgisprocess::qgis_default_value(), PASS2 = qgisprocess::qgis_default_value(), SHADOW = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:automatedcloudcoverassessment")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:automatedcloudcoverassessment", `BAND2` = BAND2, `BAND3` = BAND3, `BAND4` = BAND4, `BAND5` = BAND5, `BAND6` = BAND6, `CLOUD` = CLOUD, `FILTER` = FILTER, `B56C` = B56C, `B45R` = B45R, `CSIG` = CSIG, `PASS2` = PASS2, `SHADOW` = SHADOW,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:automatedcloudcoverassessment", `BAND2` = BAND2, `BAND3` = BAND3, `BAND4` = BAND4, `BAND5` = BAND5, `BAND6` = BAND6, `CLOUD` = CLOUD, `FILTER` = FILTER, `B56C` = B56C, `B45R` = B45R, `CSIG` = CSIG, `PASS2` = PASS2, `SHADOW` = SHADOW,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:automatedcloudcoverassessment", `BAND2` = BAND2, `BAND3` = BAND3, `BAND4` = BAND4, `BAND5` = BAND5, `BAND6` = BAND6, `CLOUD` = CLOUD, `FILTER` = FILTER, `B56C` = B56C, `B45R` = B45R, `CSIG` = CSIG, `PASS2` = PASS2, `SHADOW` = SHADOW,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

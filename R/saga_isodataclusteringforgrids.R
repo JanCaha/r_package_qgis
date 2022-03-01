@@ -11,7 +11,9 @@
 ##' @param CLUSTER_MAX `number` - Maximum Number of Clusters. A numeric value.
 ##' @param SAMPLES_MIN `number` - Minimum Number of Samples in a Cluster. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -22,11 +24,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_isodataclusteringforgrids <- function(FEATURES = qgisprocess::qgis_default_value(), CLUSTER = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), CLUSTER_INI = qgisprocess::qgis_default_value(), CLUSTER_MAX = qgisprocess::qgis_default_value(), SAMPLES_MIN = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_isodataclusteringforgrids <- function(FEATURES = qgisprocess::qgis_default_value(), CLUSTER = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), CLUSTER_INI = qgisprocess::qgis_default_value(), CLUSTER_MAX = qgisprocess::qgis_default_value(), SAMPLES_MIN = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:isodataclusteringforgrids")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:isodataclusteringforgrids", `FEATURES` = FEATURES, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS, `NORMALIZE` = NORMALIZE, `ITERATIONS` = ITERATIONS, `CLUSTER_INI` = CLUSTER_INI, `CLUSTER_MAX` = CLUSTER_MAX, `SAMPLES_MIN` = SAMPLES_MIN,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:isodataclusteringforgrids", `FEATURES` = FEATURES, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS, `NORMALIZE` = NORMALIZE, `ITERATIONS` = ITERATIONS, `CLUSTER_INI` = CLUSTER_INI, `CLUSTER_MAX` = CLUSTER_MAX, `SAMPLES_MIN` = SAMPLES_MIN,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:isodataclusteringforgrids", `FEATURES` = FEATURES, `CLUSTER` = CLUSTER, `STATISTICS` = STATISTICS, `NORMALIZE` = NORMALIZE, `ITERATIONS` = ITERATIONS, `CLUSTER_INI` = CLUSTER_INI, `CLUSTER_MAX` = CLUSTER_MAX, `SAMPLES_MIN` = SAMPLES_MIN,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

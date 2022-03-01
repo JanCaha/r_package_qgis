@@ -16,7 +16,9 @@
 ##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.
 ##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -27,11 +29,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-grass7_v_univar <- function(map = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), percentile = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+grass7_v_univar <- function(map = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), percentile = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.univar")
 
-  output <- qgisprocess::qgis_run_algorithm("grass7:v.univar", `map` = map, `type` = type, `where` = where, `column` = column, `percentile` = percentile, `-g` = .g, `-e` = .e, `-w` = .w, `-d` = .d, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("grass7:v.univar", `map` = map, `type` = type, `where` = where, `column` = column, `percentile` = percentile, `-g` = .g, `-e` = .e, `-w` = .w, `-d` = .d, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("grass7:v.univar", `map` = map, `type` = type, `where` = where, `column` = column, `percentile` = percentile, `-g` = .g, `-e` = .e, `-w` = .w, `-d` = .d, `html` = html, `GRASS_REGION_PARAMETER` = GRASS_REGION_PARAMETER, `GRASS_SNAP_TOLERANCE_PARAMETER` = GRASS_SNAP_TOLERANCE_PARAMETER, `GRASS_MIN_AREA_PARAMETER` = GRASS_MIN_AREA_PARAMETER,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

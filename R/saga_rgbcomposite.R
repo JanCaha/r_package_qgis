@@ -25,7 +25,9 @@
 ##' @param B_STDDEV `number` - Standard deviation for BLUE. A numeric value.
 ##' @param RGB `rasterDestination` - Output RGB. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -36,11 +38,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_rgbcomposite <- function(R_GRID = qgisprocess::qgis_default_value(), G_GRID = qgisprocess::qgis_default_value(), B_GRID = qgisprocess::qgis_default_value(), R_METHOD = qgisprocess::qgis_default_value(), G_METHOD = qgisprocess::qgis_default_value(), B_METHOD = qgisprocess::qgis_default_value(), R_RANGE_MIN = qgisprocess::qgis_default_value(), R_RANGE_MAX = qgisprocess::qgis_default_value(), R_PERCTL_MIN = qgisprocess::qgis_default_value(), R_PERCTL_MAX = qgisprocess::qgis_default_value(), R_STDDEV = qgisprocess::qgis_default_value(), G_RANGE_MIN = qgisprocess::qgis_default_value(), G_RANGE_MAX = qgisprocess::qgis_default_value(), G_PERCTL_MIN = qgisprocess::qgis_default_value(), G_PERCTL_MAX = qgisprocess::qgis_default_value(), G_STDDEV = qgisprocess::qgis_default_value(), B_RANGE_MIN = qgisprocess::qgis_default_value(), B_RANGE_MAX = qgisprocess::qgis_default_value(), B_PERCTL_MIN = qgisprocess::qgis_default_value(), B_PERCTL_MAX = qgisprocess::qgis_default_value(), B_STDDEV = qgisprocess::qgis_default_value(), RGB = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_rgbcomposite <- function(R_GRID = qgisprocess::qgis_default_value(), G_GRID = qgisprocess::qgis_default_value(), B_GRID = qgisprocess::qgis_default_value(), R_METHOD = qgisprocess::qgis_default_value(), G_METHOD = qgisprocess::qgis_default_value(), B_METHOD = qgisprocess::qgis_default_value(), R_RANGE_MIN = qgisprocess::qgis_default_value(), R_RANGE_MAX = qgisprocess::qgis_default_value(), R_PERCTL_MIN = qgisprocess::qgis_default_value(), R_PERCTL_MAX = qgisprocess::qgis_default_value(), R_STDDEV = qgisprocess::qgis_default_value(), G_RANGE_MIN = qgisprocess::qgis_default_value(), G_RANGE_MAX = qgisprocess::qgis_default_value(), G_PERCTL_MIN = qgisprocess::qgis_default_value(), G_PERCTL_MAX = qgisprocess::qgis_default_value(), G_STDDEV = qgisprocess::qgis_default_value(), B_RANGE_MIN = qgisprocess::qgis_default_value(), B_RANGE_MAX = qgisprocess::qgis_default_value(), B_PERCTL_MIN = qgisprocess::qgis_default_value(), B_PERCTL_MAX = qgisprocess::qgis_default_value(), B_STDDEV = qgisprocess::qgis_default_value(), RGB = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rgbcomposite")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:rgbcomposite", `R_GRID` = R_GRID, `G_GRID` = G_GRID, `B_GRID` = B_GRID, `R_METHOD` = R_METHOD, `G_METHOD` = G_METHOD, `B_METHOD` = B_METHOD, `R_RANGE_MIN` = R_RANGE_MIN, `R_RANGE_MAX` = R_RANGE_MAX, `R_PERCTL_MIN` = R_PERCTL_MIN, `R_PERCTL_MAX` = R_PERCTL_MAX, `R_STDDEV` = R_STDDEV, `G_RANGE_MIN` = G_RANGE_MIN, `G_RANGE_MAX` = G_RANGE_MAX, `G_PERCTL_MIN` = G_PERCTL_MIN, `G_PERCTL_MAX` = G_PERCTL_MAX, `G_STDDEV` = G_STDDEV, `B_RANGE_MIN` = B_RANGE_MIN, `B_RANGE_MAX` = B_RANGE_MAX, `B_PERCTL_MIN` = B_PERCTL_MIN, `B_PERCTL_MAX` = B_PERCTL_MAX, `B_STDDEV` = B_STDDEV, `RGB` = RGB,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:rgbcomposite", `R_GRID` = R_GRID, `G_GRID` = G_GRID, `B_GRID` = B_GRID, `R_METHOD` = R_METHOD, `G_METHOD` = G_METHOD, `B_METHOD` = B_METHOD, `R_RANGE_MIN` = R_RANGE_MIN, `R_RANGE_MAX` = R_RANGE_MAX, `R_PERCTL_MIN` = R_PERCTL_MIN, `R_PERCTL_MAX` = R_PERCTL_MAX, `R_STDDEV` = R_STDDEV, `G_RANGE_MIN` = G_RANGE_MIN, `G_RANGE_MAX` = G_RANGE_MAX, `G_PERCTL_MIN` = G_PERCTL_MIN, `G_PERCTL_MAX` = G_PERCTL_MAX, `G_STDDEV` = G_STDDEV, `B_RANGE_MIN` = B_RANGE_MIN, `B_RANGE_MAX` = B_RANGE_MAX, `B_PERCTL_MIN` = B_PERCTL_MIN, `B_PERCTL_MAX` = B_PERCTL_MAX, `B_STDDEV` = B_STDDEV, `RGB` = RGB,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:rgbcomposite", `R_GRID` = R_GRID, `G_GRID` = G_GRID, `B_GRID` = B_GRID, `R_METHOD` = R_METHOD, `G_METHOD` = G_METHOD, `B_METHOD` = B_METHOD, `R_RANGE_MIN` = R_RANGE_MIN, `R_RANGE_MAX` = R_RANGE_MAX, `R_PERCTL_MIN` = R_PERCTL_MIN, `R_PERCTL_MAX` = R_PERCTL_MAX, `R_STDDEV` = R_STDDEV, `G_RANGE_MIN` = G_RANGE_MIN, `G_RANGE_MAX` = G_RANGE_MAX, `G_PERCTL_MIN` = G_PERCTL_MIN, `G_PERCTL_MAX` = G_PERCTL_MAX, `G_STDDEV` = G_STDDEV, `B_RANGE_MIN` = B_RANGE_MIN, `B_RANGE_MAX` = B_RANGE_MAX, `B_PERCTL_MIN` = B_PERCTL_MIN, `B_PERCTL_MAX` = B_PERCTL_MAX, `B_STDDEV` = B_STDDEV, `RGB` = RGB,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

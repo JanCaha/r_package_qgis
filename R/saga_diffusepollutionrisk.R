@@ -14,7 +14,9 @@
 ##' @param METHOD `enum`  of `("[0] single", "[1] multiple")` - Flow Direction Algorithm. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param CHANNEL_START `number` - Channel Initiation Threshold. A numeric value.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -27,11 +29,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_diffusepollutionrisk <- function(DEM = qgisprocess::qgis_default_value(), CHANNEL = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), WEIGHT_DEFAULT = qgisprocess::qgis_default_value(), RAIN = qgisprocess::qgis_default_value(), RAIN_DEFAULT = qgisprocess::qgis_default_value(), DELIVERY = qgisprocess::qgis_default_value(), RISK_POINT = qgisprocess::qgis_default_value(), RISK_DIFFUSE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CHANNEL_START = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_diffusepollutionrisk <- function(DEM = qgisprocess::qgis_default_value(), CHANNEL = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), WEIGHT_DEFAULT = qgisprocess::qgis_default_value(), RAIN = qgisprocess::qgis_default_value(), RAIN_DEFAULT = qgisprocess::qgis_default_value(), DELIVERY = qgisprocess::qgis_default_value(), RISK_POINT = qgisprocess::qgis_default_value(), RISK_DIFFUSE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CHANNEL_START = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:diffusepollutionrisk")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:diffusepollutionrisk", `DEM` = DEM, `CHANNEL` = CHANNEL, `WEIGHT` = WEIGHT, `WEIGHT_DEFAULT` = WEIGHT_DEFAULT, `RAIN` = RAIN, `RAIN_DEFAULT` = RAIN_DEFAULT, `DELIVERY` = DELIVERY, `RISK_POINT` = RISK_POINT, `RISK_DIFFUSE` = RISK_DIFFUSE, `METHOD` = METHOD, `CHANNEL_START` = CHANNEL_START,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:diffusepollutionrisk", `DEM` = DEM, `CHANNEL` = CHANNEL, `WEIGHT` = WEIGHT, `WEIGHT_DEFAULT` = WEIGHT_DEFAULT, `RAIN` = RAIN, `RAIN_DEFAULT` = RAIN_DEFAULT, `DELIVERY` = DELIVERY, `RISK_POINT` = RISK_POINT, `RISK_DIFFUSE` = RISK_DIFFUSE, `METHOD` = METHOD, `CHANNEL_START` = CHANNEL_START,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:diffusepollutionrisk", `DEM` = DEM, `CHANNEL` = CHANNEL, `WEIGHT` = WEIGHT, `WEIGHT_DEFAULT` = WEIGHT_DEFAULT, `RAIN` = RAIN, `RAIN_DEFAULT` = RAIN_DEFAULT, `DELIVERY` = DELIVERY, `RISK_POINT` = RISK_POINT, `RISK_DIFFUSE` = RISK_DIFFUSE, `METHOD` = METHOD, `CHANNEL_START` = CHANNEL_START,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)

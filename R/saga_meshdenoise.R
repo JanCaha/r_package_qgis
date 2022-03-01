@@ -10,7 +10,9 @@
 ##' @param NB_CV `enum`  of `("[0] Common Vertex", "[1] Common Edge")` - Common Edge Type of Face Neighbourhood. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param ZONLY `boolean` - Only Z-Direction Position is Updated. 1 for true/yes. 0 for false/no.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
-##' @param .complete_output logical specifing if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
 ##'
 ##' @details
 ##' ## Outputs description
@@ -21,11 +23,17 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
 
-saga_meshdenoise <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SIGMA = qgisprocess::qgis_default_value(), ITER = qgisprocess::qgis_default_value(), VITER = qgisprocess::qgis_default_value(), NB_CV = qgisprocess::qgis_default_value(), ZONLY = qgisprocess::qgis_default_value(),..., .complete_output = TRUE) {
+saga_meshdenoise <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SIGMA = qgisprocess::qgis_default_value(), ITER = qgisprocess::qgis_default_value(), VITER = qgisprocess::qgis_default_value(), NB_CV = qgisprocess::qgis_default_value(), ZONLY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:meshdenoise")
 
-  output <- qgisprocess::qgis_run_algorithm("saga:meshdenoise", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `SIGMA` = SIGMA, `ITER` = ITER, `VITER` = VITER, `NB_CV` = NB_CV, `ZONLY` = ZONLY,...)
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("saga:meshdenoise", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `SIGMA` = SIGMA, `ITER` = ITER, `VITER` = VITER, `NB_CV` = NB_CV, `ZONLY` = ZONLY,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("saga:meshdenoise", `INPUT` = INPUT, `OUTPUT` = OUTPUT, `SIGMA` = SIGMA, `ITER` = ITER, `VITER` = VITER, `NB_CV` = NB_CV, `ZONLY` = ZONLY,..., .quiet = .quiet)
+      )
+  }
 
   if (.complete_output) {
     return(output)
