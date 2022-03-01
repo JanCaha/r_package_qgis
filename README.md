@@ -6,6 +6,11 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+![GitHub R package
+version](https://img.shields.io/github/r-package/v/JanCaha/r_package_qgis)
+![Licence MIT](https://img.shields.io/badge/licence-MIT-blue) [![Build
+package](https://github.com/JanCaha/r_package_qgis/actions/workflows/build_package.yaml/badge.svg)](https://github.com/JanCaha/r_package_qgis/actions/workflows/build_package.yaml)
+
 <!-- badges: end -->
 
 **qgis** is automatically generated package which originates from
@@ -87,11 +92,11 @@ This example uses `qgisprocess` pipe ability to directly load output to
     #> JSON input ----
     #> {
     #>   "inputs": {
-    #>     "INPUT": "/tmp/Rtmp3gPVyd/filec70c78658334/filec70c5060ac2c.gpkg",
+    #>     "INPUT": "/tmp/RtmpgcbLzt/filec0cf71952d83/filec0cf14c1ae47.gpkg",
     #>     "DISTANCE": 0.5,
     #>     "END_CAP_STYLE": 1,
     #>     "JOIN_STYLE": 0,
-    #>     "OUTPUT": "/tmp/Rtmp3gPVyd/filec70c78658334/filec70c6ffff861.gpkg"
+    #>     "OUTPUT": "/tmp/RtmpgcbLzt/filec0cf71952d83/filec0cf4de3309f.gpkg"
     #>   }
     #> }
     #> 
