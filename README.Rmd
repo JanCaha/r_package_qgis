@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # qgis
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-yellow)
 ![GitHub R package version](https://img.shields.io/github/r-package/v/JanCaha/r_package_qgis)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-blue)
 [![Build package](https://github.com/JanCaha/r_package_qgis/actions/workflows/build_package.yaml/badge.svg)](https://github.com/JanCaha/r_package_qgis/actions/workflows/build_package.yaml)
