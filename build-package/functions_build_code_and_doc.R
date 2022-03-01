@@ -25,7 +25,7 @@ build_fn_code <- function(alg, arguments, main_output) {
   fn_arguments_qgis_run <- purrr::map(arguments$name, ~ glue::glue("`{.x}` = {convert_to_R_arg_names(.x)}"))
   fn_arguments_qgis_run <- glue::glue_collapse(fn_arguments_qgis_run, sep=", ")
 
-  fun_tmpl <- readr::read_file("build-package/templates/qgis_function.R")
+  fun_tmpl <- readr::read_file(here::here("build-package", "templates", "qgis_function.R"))
 
   glue::glue(fun_tmpl)
 }
@@ -71,7 +71,7 @@ build_fn_doc <- function(alg, arguments, outputs){
 
   description_outputs <- glue::glue_collapse(description_outputs, sep = "\n")
 
-  fun_help_tmpl <- readr::read_file("build-package/templates/qgis_help.R")
+  fun_help_tmpl <- readr::read_file(here::here("build-package", "templates", "qgis_help.R"))
 
   glue::glue(fun_help_tmpl)
 }
