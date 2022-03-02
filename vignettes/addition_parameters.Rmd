@@ -1,0 +1,75 @@
+---
+title: "Controling outputs from functions"
+author: "Jan Caha"
+date: "2 3 2022"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Controling outputs from functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+Every functions carries three boolean parameters that allow better utilization of these functions in R pipelines and reports. These are `.complete_output`, `.quiet` and `.messages`. The default setting of these variables is such that the calls are as silent as possible and create pretty much no output in R console at all.
+
+## Session setup
+
+To avoid the situation where you have a lot of calls to `qgis` functions and you want them all to behave in the same non-standard way (i.e. you would prefer that the functions should be more talkative) you can set the parameters as R options. The options are: `options(qgis.quiet = TRUE)`, `options(qgis.messages = FALSE)` and `options(qgis.complete_output = TRUE)`. The values of these options are used as inputs for functions if these options exist, otherwise default values are used.
+
+## Examples setup
+```{r}
+library(sf)
+
+nc <- st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
+```
+
+## Parameter .quiet
+
+Parameter `.quiet` (default values is `TRUE`) is the same as in `qgisprocess::qgis_run_algorithm()` only in `qgis` the functions are silent by default while in `qgisprocess` they are talkative.
+
+### Examples
+
+Default values is `TRUE` and the output is silent.
+```{r}
+buffered <- qgis::qgis_buffer(INPUT = nc, 
+                              DISTANCE = 0.5, 
+                              END_CAP_STYLE = "Flat", 
+                              .quiet = TRUE) %>% 
+  st_as_sf()
+```
+
+With value set to `FALSE` the function tells you about the parameters and **qgis_process** call.
+```{r}
+buffered <- qgis::qgis_buffer(INPUT = nc, 
+                              DISTANCE = 0.5, 
+                              END_CAP_STYLE = "Flat", 
+                              .quiet = FALSE) %>% 
+  st_as_sf()
+```
+
+## Parameter .messages
+
+Parameter `.messages` (default value is `FALSE`) controls if messages produced by `qgisprocess` (such as information about parameters not being set etc.) should be outputed or not.
+
+### Examples
+
+Default values is `FALSE` and the output is silent.
+```{r}
+buffered <- qgis::qgis_buffer(INPUT = nc, 
+                              DISTANCE = 0.5, 
+                              END_CAP_STYLE = "Flat", 
+                              .messages = FALSE) %>% 
+  st_as_sf()
+```
+
+With value set to `TRUE` the function tells you about default parameters values that were not set in the call.
+```{r}
+buffered <- qgis::qgis_buffer(INPUT = nc, 
+                              DISTANCE = 0.5, 
+                              END_CAP_STYLE = "Flat", 
+                              .messages = TRUE) %>% 
+  st_as_sf()
+```
+
+## Parameter .complete_output
+
+Parameter `.complete_output`(default values is `TRUE`) specifies whether whole QGIS process output should be returned or only first variable in it, which is usually the main output. In many QGIS functions it is also the only output, that there is.
