@@ -32,6 +32,9 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu"><li>
+      <a href="../articles/addition_parameters.html">Controling outputs from functions</a>
+    </li>
+    <li>
       <a href="../articles/local_instalation.html">Instalation based on local QGIS instance</a>
     </li>
   </ul></li>
@@ -62,6 +65,12 @@
       <small>Source: <a href="https://github.com/JanCaha/r_package_qgis/blob/HEAD/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="page-header" data-toc-text="1.13.0" id="qgis-1130">qgis 1.13.0<a class="anchor" aria-label="anchor" href="#qgis-1130"></a></h2>
+<ul><li><p>change version number system, the first three components are now identical to QGIS version used to build the package and the dev component indicates version of the package</p></li>
+<li><p>addition of .complete_output, .quiet and .messages to all the functions to allow control of what is printed to R console</p></li>
+<li><p>allow handling of the parameters, mentioned above, using R options: options(qgis.quiet = TRUE), options(qgis.messages = FALSE), options(qgis.complete_output = TRUE)</p></li>
+</ul></div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="1.0.0" id="qgis-100">qgis 1.0.0<a class="anchor" aria-label="anchor" href="#qgis-100"></a></h2>
 <ul><li>add checks to verify that QGIS is available and the selected algorithm exists (because local QGIS installation can vary from the QGIS installation used to build the package)</li>
