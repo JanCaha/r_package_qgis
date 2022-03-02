@@ -4,12 +4,16 @@
 
 <!-- badges: start -->
 
-![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-yellow)
-![GitHub R package
-version](https://img.shields.io/github/r-package/v/JanCaha/r_package_qgis)
-![Licence MIT](https://img.shields.io/badge/licence-MIT-blue) [![Build
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-yellow)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
+[![GitHub R package
+version](https://img.shields.io/github/r-package/v/JanCaha/r_package_qgis)](https://github.com/JanCaha/r_package_qgis/blob/master/DESCRIPTION)
+[![Licence
+MIT](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/JanCaha/r_package_qgis/blob/master/LICENSE.md)
+[![Build
 package](https://github.com/JanCaha/r_package_qgis/actions/workflows/build_package.yaml/badge.svg)](https://github.com/JanCaha/r_package_qgis/actions/workflows/build_package.yaml)
+[![Make
+website](https://github.com/JanCaha/r_package_qgis/actions/workflows/make_web.yaml/badge.svg)](https://github.com/JanCaha/r_package_qgis/actions/workflows/make_web.yaml)
 
 <!-- badges: end -->
 
@@ -29,7 +33,7 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **1.13.0** is build against QGIS version
+Latest package version **3.24.0.9000** is build against QGIS version
 **3.24.0-Tisler**.
 
 ## Installation
