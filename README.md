@@ -99,23 +99,13 @@ This example uses `qgisprocess` pipe ability to directly load output to
     library(sf)
     #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE
 
-    fname <- system.file("shape/nc.shp", package="sf")
-    nc <- st_read(fname)
-    #> Reading layer `nc' from data source 
-    #>   `/home/runner/work/_temp/Library/sf/shape/nc.shp' using driver `ESRI Shapefile'
-    #> Simple feature collection with 100 features and 14 fields
-    #> Geometry type: MULTIPOLYGON
-    #> Dimension:     XY
-    #> Bounding box:  xmin: -84.32385 ymin: 33.88199 xmax: -75.45698 ymax: 36.58965
-    #> Geodetic CRS:  NAD27
+    nc <- st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
 
     buffered <- qgis::qgis_buffer(INPUT = nc, 
-                                  DISTANCE = 0.5, 
+                                  DISTANCE = 0.2, 
                                   END_CAP_STYLE = "Flat") %>% 
       st_as_sf()
 
-    plot(buffered)
-    #> Warning: plotting the first 9 out of 14 attributes; use max.plot = 14 to plot
-    #> all
+    plot(buffered["NAME"])
 
 <img src="man/figures/unnamed-chunk-4-1.png" width="100%" />
