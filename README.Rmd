@@ -82,14 +82,13 @@ This example uses `qgisprocess` pipe ability to directly load output to **R**.
 ```{r}
 library(sf)
 
-fname <- system.file("shape/nc.shp", package="sf")
-nc <- st_read(fname)
+nc <- st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
 
 buffered <- qgis::qgis_buffer(INPUT = nc, 
-                              DISTANCE = 0.5, 
+                              DISTANCE = 0.2, 
                               END_CAP_STYLE = "Flat") %>% 
   st_as_sf()
 
-plot(buffered)
+plot(buffered["NAME"])
 ```
 
