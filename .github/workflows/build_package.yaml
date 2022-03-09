@@ -42,13 +42,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
 
-      - name: Activate plugins
-        run: |
-          qgis_process plugins
-          qgis_process plugins enable processing
-          qgis_process plugins enable grassprovider
-          qgis_process plugins enable sagaprovider
-
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 2
