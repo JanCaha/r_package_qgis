@@ -79,7 +79,7 @@ actual_files <- fileSnapshot(path = c(here::here("R"), here::here("man")),
 
 changed <- changedFiles(previous_files, actual_files, check.file.info = c("size", "digest"))
 
-rlang::inform(glue::as_glue("Number of files added {length(changed$added)}, deleted {length(changed$deleted)} and modified {length(changed$changed)}."))
+rlang::inform(glue::glue("Number of files added {length(changed$added)}, deleted {length(changed$deleted)} and modified {length(changed$changed)}."))
 
 if (runs_on_github_actions()){
 
