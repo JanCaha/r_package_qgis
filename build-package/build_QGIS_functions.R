@@ -16,6 +16,11 @@ if (!qgisprocess::has_qgis()){
   stop("Cannot build package `qgis` because QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
 }
 
+print_plugins()
+enable_plugins(c("processing", "grassprovider", "sagaprovider"))
+print_plugins()
+
+
 dir.create("R", showWarnings = FALSE)
 
 source(here::here("build-package", "build_utils.R"))
