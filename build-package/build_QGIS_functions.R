@@ -1,21 +1,11 @@
-source(here::here("build-package", "functions_fix_parameter_names.R"))
-source(here::here("build-package", "functions_fix_algorithm_id.R"))
-source(here::here("build-package", "functions_build_code_and_doc.R"))
+source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
+source(here::here("build-package", "build-functions", "functions_fix_algorithm_id.R"))
+source(here::here("build-package", "build-functions", "functions_build_code_and_doc.R"))
+source(here::here("build-package", "build-functions", "functions_plugins.R"))
+source(here::here("build-package", "build-functions", "function_file_text.R"))
 
 # Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
 # options(qgisprocess.use_json_output = FALSE)
-
-
-file_text <- function(x){
-  purrr::map_chr(x, function(x){
-    if (fs::is_file(x)) {
-      readr::read_file(x)
-    } else {
-      dir <- fs::dir_info("R")
-      glue::glue_collapse(dir$path, sep = ",")
-    }
-  })
-}
 
 library(qgisprocess)
 library(dplyr)
