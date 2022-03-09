@@ -8,7 +8,6 @@ on:
       - NEWS.md
       - README.Rmd
       - DESCRIPTION
-      - .github/workflows/make_web.yaml
 
 name: Make website
 
