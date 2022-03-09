@@ -2,6 +2,7 @@ on:
   push:
     paths:
       - man/**
+      - vignettes/**
       - NEWS.md
       - README.Rmd
       - DESCRIPTION
