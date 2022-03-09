@@ -4,7 +4,7 @@ test_that("Functions fix parameter names", {
 
   skip_in_RCDMCHECK()
 
-  source(here::here("build-package", "functions_fix_parameter_names.R"))
+  source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
 
   argument <- replace_starting_minus("-m")
 
@@ -36,7 +36,7 @@ test_that("Functions fix_description", {
 
   skip_in_RCDMCHECK()
 
-  source(here::here("build-package", "functions_fix_parameter_names.R"))
+  source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
 
   argument <- remove_brackets("text [a]")
 
@@ -52,7 +52,7 @@ test_that("Functions fix_description", {
 
   skip_in_RCDMCHECK()
 
-  source(here::here("build-package", "functions_fix_parameter_names.R"))
+  source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
 
   argument <- convert_to_R_arg_names("-m*")
 
@@ -75,7 +75,7 @@ test_that("Functions fix_description", {
 
   skip_in_RCDMCHECK()
 
-  source(here::here("build-package", "functions_fix_algorithm_id.R"))
+  source(here::here("build-package", "build-functions", "functions_fix_algorithm_id.R"))
 
   alg_id <- fix_algorithm_id("grass7.r.do_something")
 
