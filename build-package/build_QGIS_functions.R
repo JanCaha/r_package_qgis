@@ -10,8 +10,6 @@ source(here::here("build-package", "build-functions", "function_file_text.R"))
 library(qgisprocess)
 library(dplyr)
 
-qgis_configure(use_cached_data = FALSE)
-
 if (!qgisprocess::has_qgis()){
   stop("Cannot build package `qgis` because QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
 }
@@ -20,6 +18,7 @@ print_plugins()
 enable_plugins(c("processing", "grassprovider", "sagaprovider"))
 print_plugins()
 
+qgis_configure(use_cached_data = FALSE)
 
 dir.create("R", showWarnings = FALSE)
 
