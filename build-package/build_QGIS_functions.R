@@ -3,6 +3,7 @@ source(here::here("build-package", "build-functions", "functions_fix_algorithm_i
 source(here::here("build-package", "build-functions", "functions_build_code_and_doc.R"))
 source(here::here("build-package", "build-functions", "functions_plugins.R"))
 source(here::here("build-package", "build-functions", "function_file_text.R"))
+source(here::here("build-package", "build-functions", "function_runs_on_github_actions.R"))
 
 # Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
 # options(qgisprocess.use_json_output = FALSE)
@@ -78,6 +79,13 @@ actual_files <- fileSnapshot(path = c(here::here("R"), here::here("man")),
 
 changed <- changedFiles(previous_files, actual_files, check.file.info = c("size", "digest"))
 
-readr::write_rds(changed$changed, here::here("data-raw", "changed_files.rds"))
+rlang::inform(glue::glue("Number of files added {length(changed$added)}, deleted {length(changed$deleted)} and modified {length(changed$changed)}."))
 
-readr::write_rds(actual_files, here::here("data-raw", "previous-files.rds"))
+if (runs_on_github_actions()){
+
+  rlang::inform("Saving changes to rds files.")
+
+  readr::write_rds(changed$changed, here::here("data-raw", "changed_files.rds"))
+
+  readr::write_rds(actual_files, here::here("data-raw", "previous-files.rds"))
+}
