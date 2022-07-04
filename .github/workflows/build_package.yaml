@@ -50,9 +50,11 @@ jobs:
         run: source("./build-package/install_save_deps.R")
         shell: Rscript {0}
 
+      - name: Set ENV
+        run: export R_QGISPROCESS_PATH=/usr/bin/qgis_process
+
       - name: Print QGIS info
         run: |
-          export R_QGISPROCESS_PATH=/usr/bin/qgis_process
           qgisprocess::qgis_run()
           print("---------------------")
           print("Has QGIS:")
