@@ -52,7 +52,7 @@ jobs:
 
       - name: Print QGIS info
         run: |
-          export R_QGISPROCESS_PATH="/usr/bin/qgis_process"
+          export R_QGISPROCESS_PATH=/usr/bin/qgis_process
           qgisprocess::qgis_run()
           print("---------------------")
           print("Has QGIS:")
