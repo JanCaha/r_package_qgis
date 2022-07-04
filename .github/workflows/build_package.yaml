@@ -46,12 +46,12 @@ jobs:
         with:
           cache-version: 2
 
+      - name: Test qgis_process
+        run: qgis_process
+
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
         shell: Rscript {0}
-
-      - name: Set ENV
-        run: export R_QGISPROCESS_PATH=/usr/bin/qgis_process
 
       - name: Print QGIS info
         run: |
