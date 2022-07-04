@@ -47,7 +47,9 @@ jobs:
           cache-version: 2
 
       - name: Test qgis_process
-        run: qgis_process
+        run: |
+          whereis qgis_process
+          qgis_process
 
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
