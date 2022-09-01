@@ -36,8 +36,8 @@ jobs:
 
       - name: Install QGIS
         run: |
-          wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import || true
-          sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+          sudo mkdir -m755 -p /etc/apt/keyrings
+          sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
           sudo add-apt-repository "deb https://qgis.org/ubuntu `lsb_release -c -s` main"
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
@@ -45,11 +45,6 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 2
-
-      - name: Test qgis_process
-        run: |
-          whereis qgis_process
-          qgis_process
 
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
