@@ -36,8 +36,10 @@ jobs:
 
       - name: Install QGIS
         run: |
+          sudo apt install gnupg software-properties-common
           sudo mkdir -m755 -p /etc/apt/keyrings
           sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+          sudo apt-get update
           sudo add-apt-repository "deb https://qgis.org/ubuntu `lsb_release -c -s` main"
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
