@@ -7,6 +7,7 @@
 qgis_dissolve(
   INPUT = qgisprocess::qgis_default_value(),
   FIELD = qgisprocess::qgis_default_value(),
+  SEPARATE_DISJOINT = qgisprocess::qgis_default_value(),
   OUTPUT = qgisprocess::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -18,6 +19,8 @@ qgis_dissolve(
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
 \item{FIELD}{\code{field} - Dissolve field(s). The name of an existing field. ; delimited list of existing field names.}
+
+\item{SEPARATE_DISJOINT}{\code{boolean} - Keep disjoint features separate. 1 for true/yes. 0 for false/no.}
 
 \item{OUTPUT}{\code{sink} - Dissolved. Path for new vector layer.}
 

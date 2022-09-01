@@ -19,8 +19,8 @@ saga_gwrformultiplepredictorsgriddedmodeloutput(
   SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(),
   SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(),
   SEARCH_DIRECTION = qgisprocess::qgis_default_value(),
- 
-    TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(),
+  TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX =
+    qgisprocess::qgis_default_value(),
   TARGET_USER_SIZE = qgisprocess::qgis_default_value(),
   TARGET_USER_FITS = qgisprocess::qgis_default_value(),
   REGRESSION = qgisprocess::qgis_default_value(),
