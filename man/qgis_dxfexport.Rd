@@ -27,7 +27,7 @@ qgis_dxfexport(
 
 \item{SYMBOLOGY_SCALE}{\code{scale} - Symbology scale. A numeric value representing the scale denominator.}
 
-\item{ENCODING}{\code{enum}  of \verb{("ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "Shift_JIS", "Big5", "CP936", "GB2312")} - Encoding. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{ENCODING}{\code{enum}  of \verb{("ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "Shift_JIS", "Big5", "CP936", "GB2312", "ms949", "cp850", "cp866", "cp1250", "cp1251", "cp1252", "cp1253", "cp1254", "cp1255", "cp1256", "cp1257", "cp1258", "macroman")} - Encoding. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{CRS}{\code{crs} - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
