@@ -6,8 +6,7 @@
 \usage{
 saga_createpolygonsgraticule(
   EXTENT = qgisprocess::qgis_default_value(),
- 
-    EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX = qgisprocess::qgis_default_value(),
+  EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX = qgisprocess::qgis_default_value(),
   DIVISION_X = qgisprocess::qgis_default_value(),
   DIVISION_Y = qgisprocess::qgis_default_value(),
   ALIGNMENT = qgisprocess::qgis_default_value(),
