@@ -5,7 +5,7 @@
 ##' @param LAYERS `dxflayers` - Input layers. .
 ##' @param SYMBOLOGY_MODE `enum`  of `("No Symbology", "Feature Symbology", "Symbol Layer Symbology")` - Symbology mode. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param SYMBOLOGY_SCALE `scale` - Symbology scale. A numeric value representing the scale denominator.
-##' @param ENCODING `enum`  of `("ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "Shift_JIS", "Big5", "CP936", "GB2312")` - Encoding. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param ENCODING `enum`  of `("ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "Shift_JIS", "Big5", "CP936", "GB2312", "ms949", "cp850", "cp866", "cp1250", "cp1251", "cp1252", "cp1253", "cp1254", "cp1255", "cp1256", "cp1257", "cp1258", "macroman")` - Encoding. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param CRS `crs` - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param USE_LAYER_TITLE `boolean` - Use layer title as name. 1 for true/yes. 0 for false/no.
 ##' @param FORCE_2D `boolean` - Force 2D output. 1 for true/yes. 0 for false/no.
