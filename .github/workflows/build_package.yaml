@@ -58,6 +58,11 @@ jobs:
           echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
           echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
 
+      - name: Install GDAL
+        run: |
+          sudo apt install gdal-bin
+          ogrinfo --version
+
       - name: Add QGIS source
         run: |
           KEYRING=/etc/apt/keyrings/qgis-archive-keyring.gpg
