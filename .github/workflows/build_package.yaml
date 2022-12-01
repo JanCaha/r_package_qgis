@@ -60,6 +60,7 @@ jobs:
 
       - name: Install GDAL
         run: |
+          sudo apt update
           sudo apt install gdal-bin
           ogrinfo --version
 
