@@ -30,14 +30,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: r-lib/actions/setup-pandoc@v2
-
-      - uses: r-lib/actions/setup-r@v2
-
-      - name: Install QGIS
+      - name: Prepare GPG
         run: |
+          sudo gpg -k
           sudo mkdir -m755 -p /etc/apt/keyrings
 
+      - name: Add UbuntuGIS source
+        run: |
           KEYRING=/usr/share/keyrings/ubuntugis-archive-keyring.gpg
           sudo gpg --no-default-keyring --keyring $KEYRING --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
           echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
@@ -47,16 +46,26 @@ jobs:
           echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
           echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
 
-          sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+      - name: Add QGIS source
+        run: |
+          KEYRING=/etc/apt/keyrings/qgis-archive-keyring.gpg
+          sudo wget -O $KEYRING https://download.qgis.org/downloads/qgis-archive-keyring.gpg
           sudo touch /etc/apt/sources.list.d/qgis.sources
           echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           echo 'URIs: https://qgis.org/ubuntu' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           echo 'Suites: focal' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           echo 'Architectures: amd64' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+          echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+
+      - name: Install QGIS
+        run: |
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
