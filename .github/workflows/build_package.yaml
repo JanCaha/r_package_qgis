@@ -53,8 +53,8 @@ jobs:
           echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
           echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
 
-      -name: Install GDAL
-       run: |
+      - name: Install GDAL
+        run: |
           sudo apt install gdal-bin
           gdal-config --version
           gdal-config --libs
