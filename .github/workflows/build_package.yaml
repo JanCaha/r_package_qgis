@@ -30,6 +30,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Update && upgrade
+        run: |
+          sudo apt update
+          sudo apt upgrade -y
+
       - name: Prepare GPG
         run: |
           sudo gpg -k
