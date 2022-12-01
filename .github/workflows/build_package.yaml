@@ -13,7 +13,7 @@ jobs:
 
   build-package:
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -30,54 +30,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Update && upgrade
-        run: |
-          sudo apt update
-          sudo apt upgrade -y
-
-      - name: Prepare GPG
-        run: |
-          sudo gpg -k
-          sudo mkdir -m755 -p /etc/apt/keyrings
-
-      - name: Add UbuntuGIS stable, unstable sources
-        run: |
-          KEYRING=/usr/share/keyrings/ubuntugis-archive-keyring.gpg
-          sudo gpg --no-default-keyring --keyring $KEYRING --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 6B827C12C2D425E227EDCA75089EBE08314DF160
-          echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
-          echo 'URIs: https://ppa.launchpadcontent.net/ubuntugis/ppa/ubuntu' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
-          echo 'Suites: focal' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
-          echo 'Architectures: '$(dpkg --print-architecture) | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
-          echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
-          echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/ubuntugis-stable.sources
-
-          echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
-          echo 'URIs:https://ppa.launchpadcontent.net/ubuntugis/ubuntugis-unstable/ubuntu' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
-          echo 'Suites: focal' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
-          echo 'Architectures: '$(dpkg --print-architecture) | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
-          echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
-          echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/ubuntugis-unstable.sources
-
-      - name: Install GDAL
-        run: |
-          sudo apt update
-          sudo apt install gdal-bin
-          ogrinfo --version
-
-      - name: Add QGIS source
-        run: |
-          KEYRING=/etc/apt/keyrings/qgis-archive-keyring.gpg
-          sudo wget -O $KEYRING https://download.qgis.org/downloads/qgis-archive-keyring.gpg
-          sudo touch /etc/apt/sources.list.d/qgis.sources
-          echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'URIs: https://qgis.org/ubuntu' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Suites: focal' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Architectures: amd64' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Signed-By: '$KEYRING | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-
       - name: Install QGIS
         run: |
+          wget -qO - https://qgis.org/downloads/qgis-2022.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import || true
+          sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+          sudo add-apt-repository "deb https://qgis.org/ubuntu `lsb_release -c -s` main"
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
 
