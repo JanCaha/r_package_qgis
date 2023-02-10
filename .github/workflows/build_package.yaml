@@ -1,13 +1,15 @@
+name: Build package and update Code and website
+
 on:
   push:
+    branches:
+      - master
     paths:
       - build-package/**
       - tests/**
       - .github/workflows/build_package.yaml
   schedule:
     - cron: "0 0 1 * *"
-
-name: Build package
 
 jobs:
 
@@ -39,12 +41,16 @@ jobs:
           sudo apt-get install -y qgis qgis-plugin-grass saga
 
       - uses: r-lib/actions/setup-pandoc@v2
+        extra-packages: |
+            any::pkgdown
 
       - uses: r-lib/actions/setup-r@v2
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 2
+
+      - uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
@@ -82,9 +88,24 @@ jobs:
           devtools::install()
         shell: Rscript {0}
 
+      - name: Render README
+        run: source("./build-package/render_README.R")
+        shell: Rscript {0}
+
       - uses: EndBug/add-and-commit@v8
         with:
           default_author: github_actions
           message: "current update"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build package website
+        run: |
+          pkgdown::build_site()
+        shell: Rscript {0}
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./docs
