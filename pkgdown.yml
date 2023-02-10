@@ -1,10 +1,10 @@
-pandoc: 2.14.2
-pkgdown: 2.0.2
+pandoc: 2.19.2
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   addition_parameters: addition_parameters.html
   local_instalation: local_instalation.html
-last_built: 2022-03-09T14:03Z
+last_built: 2023-02-10T09:14Z
 urls:
   reference: https://jancaha.github.io/r_package_qgis/reference
   article: https://jancaha.github.io/r_package_qgis/articles

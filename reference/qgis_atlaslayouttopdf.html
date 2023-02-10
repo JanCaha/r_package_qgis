@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.24.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9004</span>
       </span>
     </div>
 
@@ -71,66 +71,101 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">qgis_atlaslayouttopdf</span><span class="op">(</span>
-  LAYOUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  COVERAGE_LAYER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  FILTER_EXPRESSION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  SORTBY_EXPRESSION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  SORTBY_REVERSE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  LAYERS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DPI <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  FORCE_VECTOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  GEOREFERENCE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  INCLUDE_METADATA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DISABLE_TILED <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  SIMPLIFY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TEXT_FORMAT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">...</span>,
-  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,
-  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,
-  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">qgis_atlaslayouttopdf</span><span class="op">(</span></span>
+<span>  LAYOUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  COVERAGE_LAYER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  FILTER_EXPRESSION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SORTBY_EXPRESSION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SORTBY_REVERSE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  LAYERS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DPI <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  FORCE_VECTOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  GEOREFERENCE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  INCLUDE_METADATA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DISABLE_TILED <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SIMPLIFY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TEXT_FORMAT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>LAYOUT</dt>
 <dd><p><code>layout</code> - Atlas layout. Name of print layout in current project.</p></dd>
+
+
 <dt>COVERAGE_LAYER</dt>
 <dd><p><code>vector</code> - Coverage layer. Path to a vector layer.</p></dd>
+
+
 <dt>FILTER_EXPRESSION</dt>
 <dd><p><code>expression</code> - Filter expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.</p></dd>
+
+
 <dt>SORTBY_EXPRESSION</dt>
 <dd><p><code>expression</code> - Sort expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.</p></dd>
+
+
 <dt>SORTBY_REVERSE</dt>
 <dd><p><code>boolean</code> - Reverse sort order (used when a sort expression is provided). 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>LAYERS</dt>
 <dd><p><code>multilayer</code> - Map layers to assign to unlocked map item(s). .</p></dd>
+
+
 <dt>DPI</dt>
 <dd><p><code>number</code> - DPI (leave blank for default layout DPI). A numeric value.</p></dd>
+
+
 <dt>FORCE_VECTOR</dt>
 <dd><p><code>boolean</code> - Always export as vectors. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>GEOREFERENCE</dt>
 <dd><p><code>boolean</code> - Append georeference information. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>INCLUDE_METADATA</dt>
 <dd><p><code>boolean</code> - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>DISABLE_TILED</dt>
 <dd><p><code>boolean</code> - Disable tiled raster layer exports. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>SIMPLIFY</dt>
 <dd><p><code>boolean</code> - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>TEXT_FORMAT</dt>
 <dd><p><code>enum</code>  of <code>("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects")</code> - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>OUTPUT</dt>
 <dd><p><code>fileDestination</code> - PDF file. Path for new file.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>further parameters passed to <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code></p></dd>
+
+
 <dt>.complete_output</dt>
 <dd><p>logical specifying if complete out of <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be used (<code>TRUE</code>) or first output (most likely the main) should read (<code>FALSE</code>). Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.quiet</dt>
 <dd><p>logical specifying if parameter <code>.quiet</code> for <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.messages</dt>
 <dd><p>logical specifying if messages from <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be printed (<code>TRUE</code>) or not (<code>FALSE</code>). Default value is <code>FALSE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -155,7 +190,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.24.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9004</span>
       </span>
     </div>
 
@@ -71,72 +71,111 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">gdal_gdal2tiles</span><span class="op">(</span>
-  INPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  PROFILE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  ZOOM <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  VIEWER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TITLE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  COPYRIGHT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  RESAMPLING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  SOURCE_CRS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  NODATA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  URL <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  GOOGLE_KEY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BING_KEY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  RESUME <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  KML <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  NO_KML <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">...</span>,
-  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,
-  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,
-  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">gdal_gdal2tiles</span><span class="op">(</span></span>
+<span>  INPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  PROFILE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  ZOOM <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  VIEWER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TITLE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  COPYRIGHT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RESAMPLING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SOURCE_CRS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  NODATA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  URL <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  GOOGLE_KEY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  BING_KEY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RESUME <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  KML <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  NO_KML <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>INPUT</dt>
 <dd><p><code>raster</code> - Input layer. Path to a raster layer.</p></dd>
+
+
 <dt>PROFILE</dt>
 <dd><p><code>enum</code>  of <code>("Mercator", "Geodetic", "Raster")</code> - Tile cutting profile. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>ZOOM</dt>
 <dd><p><code>string</code> - Zoom levels to render. String value.</p></dd>
+
+
 <dt>VIEWER</dt>
 <dd><p><code>enum</code>  of <code>("All", "GoogleMaps", "OpenLayers", "Leaflet", "None")</code> - Web viewer to generate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>TITLE</dt>
 <dd><p><code>string</code> - Title of the map. String value.</p></dd>
+
+
 <dt>COPYRIGHT</dt>
 <dd><p><code>string</code> - Copyright of the map. String value.</p></dd>
+
+
 <dt>RESAMPLING</dt>
 <dd><p><code>enum</code>  of <code>("Average", "Nearest neighbour", "Bilinear", "Cubic", "Cubic spline", "Lanczos windowed sinc", "Antialias")</code> - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>SOURCE_CRS</dt>
 <dd><p><code>crs</code> - The spatial reference system used for the source input data. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..</p></dd>
+
+
 <dt>NODATA</dt>
 <dd><p><code>number</code> - Transparency value to assign to the input data. A numeric value.</p></dd>
+
+
 <dt>URL</dt>
 <dd><p><code>string</code> - URL address where the generated tiles are going to be published. String value.</p></dd>
+
+
 <dt>GOOGLE_KEY</dt>
 <dd><p><code>string</code> - Google Maps API key (http://code.google.com/apis/maps/signup.html). String value.</p></dd>
+
+
 <dt>BING_KEY</dt>
 <dd><p><code>string</code> - Bing Maps API key (https://www.bingmapsportal.com/). String value.</p></dd>
+
+
 <dt>RESUME</dt>
 <dd><p><code>boolean</code> - Generate only missing files. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>KML</dt>
 <dd><p><code>boolean</code> - Generate KML for Google Earth. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>NO_KML</dt>
 <dd><p><code>boolean</code> - Avoid automatic generation of KML files for EPSG:4326. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>OUTPUT</dt>
 <dd><p><code>folderDestination</code> - Output directory. Path for an existing or new folder.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>further parameters passed to <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code></p></dd>
+
+
 <dt>.complete_output</dt>
 <dd><p>logical specifying if complete out of <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be used (<code>TRUE</code>) or first output (most likely the main) should read (<code>FALSE</code>). Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.quiet</dt>
 <dd><p>logical specifying if parameter <code>.quiet</code> for <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.messages</dt>
 <dd><p>logical specifying if messages from <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be printed (<code>TRUE</code>) or not (<code>FALSE</code>). Default value is <code>FALSE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -161,7 +200,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

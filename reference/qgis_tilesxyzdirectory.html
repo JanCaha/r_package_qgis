@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.24.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9004</span>
       </span>
     </div>
 
@@ -71,63 +71,96 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">qgis_tilesxyzdirectory</span><span class="op">(</span>
-  EXTENT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  ZOOM_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  ZOOM_MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DPI <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  BACKGROUND_COLOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TILE_FORMAT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  QUALITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  METATILESIZE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TILE_WIDTH <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TILE_HEIGHT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TMS_CONVENTION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OUTPUT_DIRECTORY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OUTPUT_HTML <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">...</span>,
-  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,
-  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,
-  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">qgis_tilesxyzdirectory</span><span class="op">(</span></span>
+<span>  EXTENT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  ZOOM_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  ZOOM_MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DPI <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  BACKGROUND_COLOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TILE_FORMAT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  QUALITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  METATILESIZE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TILE_WIDTH <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TILE_HEIGHT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TMS_CONVENTION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT_DIRECTORY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT_HTML <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>EXTENT</dt>
 <dd><p><code>extent</code> - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..</p></dd>
+
+
 <dt>ZOOM_MIN</dt>
 <dd><p><code>number</code> - Minimum zoom. A numeric value.</p></dd>
+
+
 <dt>ZOOM_MAX</dt>
 <dd><p><code>number</code> - Maximum zoom. A numeric value.</p></dd>
+
+
 <dt>DPI</dt>
 <dd><p><code>number</code> - DPI. A numeric value.</p></dd>
+
+
 <dt>BACKGROUND_COLOR</dt>
 <dd><p><code>color</code> - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8).</p></dd>
+
+
 <dt>TILE_FORMAT</dt>
 <dd><p><code>enum</code>  of <code>("PNG", "JPG")</code> - Tile format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>QUALITY</dt>
 <dd><p><code>number</code> - Quality (JPG only). A numeric value.</p></dd>
+
+
 <dt>METATILESIZE</dt>
 <dd><p><code>number</code> - Metatile size. A numeric value.</p></dd>
+
+
 <dt>TILE_WIDTH</dt>
 <dd><p><code>number</code> - Tile width. A numeric value.</p></dd>
+
+
 <dt>TILE_HEIGHT</dt>
 <dd><p><code>number</code> - Tile height. A numeric value.</p></dd>
+
+
 <dt>TMS_CONVENTION</dt>
 <dd><p><code>boolean</code> - Use inverted tile Y axis (TMS convention). 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>OUTPUT_DIRECTORY</dt>
 <dd><p><code>folderDestination</code> - Output directory. Path for an existing or new folder.</p></dd>
+
+
 <dt>OUTPUT_HTML</dt>
 <dd><p><code>fileDestination</code> - Output html (Leaflet). Path for new file.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>further parameters passed to <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code></p></dd>
+
+
 <dt>.complete_output</dt>
 <dd><p>logical specifying if complete out of <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be used (<code>TRUE</code>) or first output (most likely the main) should read (<code>FALSE</code>). Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.quiet</dt>
 <dd><p>logical specifying if parameter <code>.quiet</code> for <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.messages</dt>
 <dd><p>logical specifying if messages from <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be printed (<code>TRUE</code>) or not (<code>FALSE</code>). Default value is <code>FALSE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -153,7 +186,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

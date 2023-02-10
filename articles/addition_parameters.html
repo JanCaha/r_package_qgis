@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.24.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9004</span>
       </span>
     </div>
 
@@ -101,88 +101,112 @@
 
     
     
-<p>Every functions carries three boolean parameters that allow better utilization of these functions in R pipelines and reports. These are <code>.complete_output</code>, <code>.quiet</code> and <code>.messages</code>. The default setting of these variables is such that the calls are as silent as possible and create pretty much no output in R console at all.</p>
+<p>Every functions carries three boolean parameters that allow better
+utilization of these functions in R pipelines and reports. These are
+<code>.complete_output</code>, <code>.quiet</code> and
+<code>.messages</code>. The default setting of these variables is such
+that the calls are as silent as possible and create pretty much no
+output in R console at all.</p>
 <div class="section level2">
 <h2 id="session-setup">Session setup<a class="anchor" aria-label="anchor" href="#session-setup"></a>
 </h2>
-<p>To avoid the situation where you have a lot of calls to <code>qgis</code> functions and you want them all to behave in the same non-standard way (i.e. you would prefer that the functions should be more talkative) you can set the parameters as R options. The options are: <code>options(qgis.quiet = TRUE)</code>, <code>options(qgis.messages = FALSE)</code> and <code>options(qgis.complete_output = TRUE)</code>. The values of these options are used as inputs for functions if these options exist, otherwise default values are used.</p>
+<p>To avoid the situation where you have a lot of calls to
+<code>qgis</code> functions and you want them all to behave in the same
+non-standard way (i.e. you would prefer that the functions should be
+more talkative) you can set the parameters as R options. The options
+are: <code>options(qgis.quiet = TRUE)</code>,
+<code>options(qgis.messages = FALSE)</code> and
+<code>options(qgis.complete_output = TRUE)</code>. The values of these
+options are used as inputs for functions if these options exist,
+otherwise default values are used.</p>
 </div>
 <div class="section level2">
 <h2 id="examples-setup">Examples setup<a class="anchor" aria-label="anchor" href="#examples-setup"></a>
 </h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE</span></code></pre>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE</span></span></code></pre>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">nc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shape/nc.shp"</span>, package<span class="op">=</span><span class="st">"sf"</span><span class="op">)</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="va">nc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_read.html" class="external-link">st_read</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"shape/nc.shp"</span>, package<span class="op">=</span><span class="st">"sf"</span><span class="op">)</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="parameter--quiet">Parameter .quiet<a class="anchor" aria-label="anchor" href="#parameter--quiet"></a>
 </h2>
-<p>Parameter <code>.quiet</code> (default values is <code>TRUE</code>) is the same as in <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> only in <code>qgis</code> the functions are silent by default while in <code>qgisprocess</code> they are talkative.</p>
+<p>Parameter <code>.quiet</code> (default values is <code>TRUE</code>)
+is the same as in <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> only in
+<code>qgis</code> the functions are silent by default while in
+<code>qgisprocess</code> they are talkative.</p>
 <div class="section level3">
 <h3 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h3>
 <p>Default values is <code>TRUE</code> and the output is silent.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, 
-                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, 
-                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, 
-                              .quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>With value set to <code>FALSE</code> the function tells you about the parameters and <strong>qgis_process</strong> call.</p>
+<code class="sourceCode R"><span><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, </span>
+<span>                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, </span>
+<span>                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, </span>
+<span>                              .quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>With value set to <code>FALSE</code> the function tells you about the
+parameters and <strong>qgis_process</strong> call.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, 
-                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, 
-                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, 
-                              .quiet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## JSON input ----</span>
-<span class="co">## {</span>
-<span class="co">##   "inputs": {</span>
-<span class="co">##     "INPUT": "/tmp/Rtmpmnrgip/file7bc97d19e7a4/file7bc947aae630.gpkg",</span>
-<span class="co">##     "DISTANCE": 0.5,</span>
-<span class="co">##     "END_CAP_STYLE": 1,</span>
-<span class="co">##     "JOIN_STYLE": 0,</span>
-<span class="co">##     "OUTPUT": "/tmp/Rtmpmnrgip/file7bc97d19e7a4/file7bc93131c9c0.gpkg"</span>
-<span class="co">##   }</span>
-<span class="co">## }</span>
-<span class="co">## </span>
-<span class="co">## Running qgis_process --json run 'native:buffer' -</span></code></pre>
+<code class="sourceCode R"><span><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, </span>
+<span>                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, </span>
+<span>                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, </span>
+<span>                              .quiet <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## JSON input ----</span></span>
+<span><span class="co">## {</span></span>
+<span><span class="co">##   "inputs": {</span></span>
+<span><span class="co">##     "INPUT": "/tmp/Rtmpaq9IlI/file125d0485cdb07/file125d0b380d2e.gpkg",</span></span>
+<span><span class="co">##     "DISTANCE": 0.5,</span></span>
+<span><span class="co">##     "END_CAP_STYLE": 1,</span></span>
+<span><span class="co">##     "JOIN_STYLE": 0,</span></span>
+<span><span class="co">##     "OUTPUT": "/tmp/Rtmpaq9IlI/file125d0485cdb07/file125d04834ca83.gpkg"</span></span>
+<span><span class="co">##   }</span></span>
+<span><span class="co">## }</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Running qgis_process --json run 'native:buffer' -</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="parameter--messages">Parameter .messages<a class="anchor" aria-label="anchor" href="#parameter--messages"></a>
 </h2>
-<p>Parameter <code>.messages</code> (default value is <code>FALSE</code>) controls if messages produced by <code>qgisprocess</code> (such as information about parameters not being set etc.) should be outputed or not.</p>
+<p>Parameter <code>.messages</code> (default value is
+<code>FALSE</code>) controls if messages produced by
+<code>qgisprocess</code> (such as information about parameters not being
+set etc.) should be outputed or not.</p>
 <div class="section level3">
 <h3 id="examples-1">Examples<a class="anchor" aria-label="anchor" href="#examples-1"></a>
 </h3>
 <p>Default values is <code>FALSE</code> and the output is silent.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, 
-                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, 
-                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, 
-                              .messages <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p>With value set to <code>TRUE</code> the function tells you about default parameters values that were not set in the call.</p>
+<code class="sourceCode R"><span><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, </span>
+<span>                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, </span>
+<span>                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, </span>
+<span>                              .messages <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>With value set to <code>TRUE</code> the function tells you about
+default parameters values that were not set in the call.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, 
-                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, 
-                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, 
-                              .messages <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> 
-  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<pre><code><span class="co">## Argument `SEGMENTS` is unspecified (using QGIS default value).</span></code></pre>
-<pre><code><span class="co">## Using `JOIN_STYLE = "Round"`</span></code></pre>
-<pre><code><span class="co">## Argument `MITER_LIMIT` is unspecified (using QGIS default value).</span></code></pre>
-<pre><code><span class="co">## Argument `DISSOLVE` is unspecified (using QGIS default value).</span></code></pre>
-<pre><code><span class="co">## Using `OUTPUT = qgis_tmp_vector()`</span></code></pre>
+<code class="sourceCode R"><span><span class="va">buffered</span> <span class="op">&lt;-</span> <span class="fu">qgis</span><span class="fu">::</span><span class="fu"><a href="../reference/qgis_buffer.html">qgis_buffer</a></span><span class="op">(</span>INPUT <span class="op">=</span> <span class="va">nc</span>, </span>
+<span>                              DISTANCE <span class="op">=</span> <span class="fl">0.5</span>, </span>
+<span>                              END_CAP_STYLE <span class="op">=</span> <span class="st">"Flat"</span>, </span>
+<span>                              .messages <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://r-spatial.github.io/sf/reference/st_as_sf.html" class="external-link">st_as_sf</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## Argument `SEGMENTS` is unspecified (using QGIS default value).</span></span></code></pre>
+<pre><code><span><span class="co">## Using `JOIN_STYLE = "Round"`</span></span></code></pre>
+<pre><code><span><span class="co">## Argument `MITER_LIMIT` is unspecified (using QGIS default value).</span></span></code></pre>
+<pre><code><span><span class="co">## Argument `DISSOLVE` is unspecified (using QGIS default value).</span></span></code></pre>
+<pre><code><span><span class="co">## Using `OUTPUT = qgis_tmp_vector()`</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">
 <h2 id="parameter--complete_output">Parameter .complete_output<a class="anchor" aria-label="anchor" href="#parameter--complete_output"></a>
 </h2>
-<p>Parameter <code>.complete_output</code>(default values is <code>TRUE</code>) specifies whether whole QGIS process output should be returned or only first variable in it, which is usually the main output. In many QGIS functions it is also the only output, that there is.</p>
+<p>Parameter <code>.complete_output</code>(default values is
+<code>TRUE</code>) specifies whether whole QGIS process output should be
+returned or only first variable in it, which is usually the main output.
+In many QGIS functions it is also the only output, that there is.</p>
 </div>
   </div>
 
@@ -203,7 +227,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>

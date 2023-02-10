@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.24.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9004</span>
       </span>
     </div>
 
@@ -71,69 +71,106 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">gdal_retile</span><span class="op">(</span>
-  INPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TILE_SIZE_X <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  TILE_SIZE_Y <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OVERLAP <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  LEVELS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  SOURCE_CRS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  RESAMPLING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DELIMITER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OPTIONS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  EXTRA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DATA_TYPE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  ONLY_PYRAMIDS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  DIR_FOR_ROW <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  OUTPUT_CSV <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,
-  <span class="va">...</span>,
-  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,
-  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,
-  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">gdal_retile</span><span class="op">(</span></span>
+<span>  INPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TILE_SIZE_X <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  TILE_SIZE_Y <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OVERLAP <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  LEVELS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SOURCE_CRS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RESAMPLING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DELIMITER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OPTIONS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  EXTRA <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DATA_TYPE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  ONLY_PYRAMIDS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DIR_FOR_ROW <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT_CSV <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="va">...</span>,</span>
+<span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .messages <span class="op">=</span> <span class="fu">.message_option</span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>INPUT</dt>
 <dd><p><code>multilayer</code> - Input files. .</p></dd>
+
+
 <dt>TILE_SIZE_X</dt>
 <dd><p><code>number</code> - Tile width. A numeric value.</p></dd>
+
+
 <dt>TILE_SIZE_Y</dt>
 <dd><p><code>number</code> - Tile height. A numeric value.</p></dd>
+
+
 <dt>OVERLAP</dt>
 <dd><p><code>number</code> - Overlap in pixels between consecutive tiles. A numeric value.</p></dd>
+
+
 <dt>LEVELS</dt>
 <dd><p><code>number</code> - Number of pyramids levels to build. A numeric value.</p></dd>
+
+
 <dt>SOURCE_CRS</dt>
 <dd><p><code>crs</code> - Source coordinate reference system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..</p></dd>
+
+
 <dt>RESAMPLING</dt>
 <dd><p><code>enum</code>  of <code>("Nearest Neighbour", "Bilinear", "Cubic", "Cubic Spline", "Lanczos Windowed Sinc")</code> - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>DELIMITER</dt>
 <dd><p><code>string</code> - Column delimiter used in the CSV file. String value.</p></dd>
+
+
 <dt>OPTIONS</dt>
 <dd><p><code>string</code> - Additional creation options. String value.</p></dd>
+
+
 <dt>EXTRA</dt>
 <dd><p><code>string</code> - Additional command-line parameters. String value.</p></dd>
+
+
 <dt>DATA_TYPE</dt>
 <dd><p><code>enum</code>  of <code>("Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")</code> - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt>ONLY_PYRAMIDS</dt>
 <dd><p><code>boolean</code> - Build only the pyramids. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>DIR_FOR_ROW</dt>
 <dd><p><code>boolean</code> - Use separate directory for each tiles row. 1 for true/yes. 0 for false/no.</p></dd>
+
+
 <dt>OUTPUT</dt>
 <dd><p><code>folderDestination</code> - Output directory. Path for an existing or new folder.</p></dd>
+
+
 <dt>OUTPUT_CSV</dt>
 <dd><p><code>fileDestination</code> - CSV file containing the tile(s) georeferencing information. Path for new file.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>further parameters passed to <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code></p></dd>
+
+
 <dt>.complete_output</dt>
 <dd><p>logical specifying if complete out of <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be used (<code>TRUE</code>) or first output (most likely the main) should read (<code>FALSE</code>). Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.quiet</dt>
 <dd><p>logical specifying if parameter <code>.quiet</code> for <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> Default value is <code>TRUE</code>.</p></dd>
+
+
 <dt>.messages</dt>
 <dd><p>logical specifying if messages from <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> should be printed (<code>TRUE</code>) or not (<code>FALSE</code>). Default value is <code>FALSE</code>.</p></dd>
+
 </dl></div>
     <div id="details">
     <h2>Details</h2>
@@ -159,7 +196,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
