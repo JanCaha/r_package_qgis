@@ -43,6 +43,10 @@ remotes::install_github("JanCaha/r_package_qgis")
 
 The information about local installation are in a vignette `vignette("local_instalation")`.
 
+## Using/Loading the package
+
+The idea of the package is that it should not be loaded directly using `library(qgis)` but rather functions should be called using `qgis::function_name()` syntax. Even though tests showed ([see them here](https://github.com/JanCaha/r_package_qgis/issues/32#issuecomment-1431139318)) that loading the package does not takes significant amount of resources. The author's suggestion is still to avoid loading and use the `package::function()` notation.
+
 ## Functions names
 
 The names of the functions follow general pattern of `algorithm-provider_algorithm-id` with only the native **QGIS** algorithms using `qgis` algorithm provider instead of `native`. 
@@ -66,8 +70,6 @@ Parameter `.complete_output`(default values is `TRUE`) specifies whether whole Q
 These three parameters can also be set as R session options using `options(qgis.quiet = TRUE)`, `options(qgis.messages = FALSE)` and `options(qgis.complete_output = TRUE)` to avoid the need to set them for every individual function call.
 
 ## Example
-
-The package is not meant to be load directly as this would significant number of functions (<900). Instead the functions should be called as: 
 
 ```{r, eval=FALSE}
 qgis::qgis_buffer()
