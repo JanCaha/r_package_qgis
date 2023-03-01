@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9004</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9005</span>
       </span>
     </div>
 
@@ -99,7 +99,7 @@
 <div class="section level2">
 <h2 id="latest-version">Latest version<a class="anchor" aria-label="anchor" href="#latest-version"></a>
 </h2>
-<p>Latest package version <strong>3.26.3.9004</strong> is build against QGIS version <strong>3.26.3-Buenos</strong>.</p>
+<p>Latest package version <strong>3.26.3.9005</strong> is build against QGIS version <strong>3.26.3-Buenos</strong>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -108,6 +108,11 @@
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># install.package("remotes")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"JanCaha/r_package_qgis"</span>)</span></code></pre></div>
 <p>The information about local installation are in a vignette <code><a href="articles/local_instalation.html">vignette("local_instalation")</a></code>.</p>
+</div>
+<div class="section level2">
+<h2 id="usingloading-the-package">Using/Loading the package<a class="anchor" aria-label="anchor" href="#usingloading-the-package"></a>
+</h2>
+<p>The idea of the package is that it should not be loaded directly using <code><a href="https://jancaha.github.io/r_package_qgis/">library(qgis)</a></code> but rather functions should be called using <code>qgis::function_name()</code> syntax. Even though tests showed (<a href="https://github.com/JanCaha/r_package_qgis/issues/32#issuecomment-1431139318" class="external-link">see them here</a>) that loading the package does not takes significant amount of resources. The author’s suggestion is still to avoid loading and use the <code>package::function()</code> notation.</p>
 </div>
 <div class="section level2">
 <h2 id="functions-names">Functions names<a class="anchor" aria-label="anchor" href="#functions-names"></a>
@@ -127,7 +132,6 @@
 <div class="section level2">
 <h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
 </h2>
-<p>The package is not meant to be load directly as this would significant number of functions (&lt;900). Instead the functions should be called as:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>qgis<span class="sc">::</span><span class="fu">qgis_buffer</span>()</span></code></pre></div>
 <p>This allows you to show the help page for the function (at least in <strong>RStudio</strong> using the key shortcut <strong>F1</strong>).</p>
 </div>
