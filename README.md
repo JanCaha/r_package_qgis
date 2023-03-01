@@ -33,7 +33,7 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.26.3.9004** is build against QGIS version
+Latest package version **3.26.3.9005** is build against QGIS version
 **3.26.3-Buenos**.
 
 ## Installation
@@ -45,6 +45,16 @@ You can install the released version of **qgis** from GitHub with:
 
 The information about local installation are in a vignette
 `vignette("local_instalation")`.
+
+## Using/Loading the package
+
+The idea of the package is that it should not be loaded directly using
+`library(qgis)` but rather functions should be called using
+`qgis::function_name()` syntax. Even though tests showed ([see them
+here](https://github.com/JanCaha/r_package_qgis/issues/32#issuecomment-1431139318))
+that loading the package does not takes significant amount of resources.
+The author’s suggestion is still to avoid loading and use the
+`package::function()` notation.
 
 ## Functions names
 
@@ -81,10 +91,6 @@ These three parameters can also be set as R session options using
 every individual function call.
 
 ## Example
-
-The package is not meant to be load directly as this would significant
-number of functions (&lt;900). Instead the functions should be called
-as:
 
     qgis::qgis_buffer()
 
