@@ -53,9 +53,9 @@ for (i in 1:nrow(algs)) {
       print(glue::glue("Cant generate function - {alg$provider}_{alg$algorithm_id}."))
     },
     {
-      arguments <- qgisprocess::qgis_arguments(alg$algorithm[1]) %>%
+      arguments <- qgisprocess::qgis_get_argument_specs(alg$algorithm[1]) %>%
         dplyr::filter(!is.na(name))
-      outputs <- qgisprocess::qgis_outputs(alg$algorithm[1])
+      outputs <- qgisprocess::qgis_get_output_specs(alg$algorithm[1])
 
       readr::write_file(glue::glue_collapse(list(build_fn_doc(alg, arguments, outputs),
                                                  build_fn_code(alg, arguments, outputs$name[1])),
