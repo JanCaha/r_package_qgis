@@ -14,9 +14,9 @@ get_alg_help <- function(alg_name){
   alg <- algs %>%
     dplyr::filter(algorithm_id == alg_name)
 
-  arguments <- qgisprocess::qgis_arguments(alg$algorithm[1]) %>%
+  arguments <- qgisprocess::qgis_get_argument_specs(alg$algorithm[1]) %>%
     dplyr::filter(!is.na(name))
-  outputs <- qgisprocess::qgis_outputs(alg$algorithm[1])
+  outputs <- qgisprocess::qgis_get_output_specs(alg$algorithm[1])
 
   list(doc = build_fn_doc(alg, arguments, outputs),
        code = build_fn_code(alg, arguments, outputs$name[1]))

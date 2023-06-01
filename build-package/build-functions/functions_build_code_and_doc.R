@@ -16,7 +16,7 @@ build_fn_code <- function(alg, arguments, main_output) {
 
   fn_arguments <- purrr::pmap(arguments,
                               function(name, ...){
-                                  return(glue::glue("{convert_to_R_arg_names(name)} = qgisprocess::qgis_default_value()"))
+                                  return(glue::glue("{convert_to_R_arg_names(name)} = qgisprocess:::qgis_default_value()"))
                               })
 
   fn_arguments <- glue::glue_collapse(fn_arguments, sep = ", ")

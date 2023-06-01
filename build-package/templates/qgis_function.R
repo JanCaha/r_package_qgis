@@ -14,6 +14,6 @@
     return(output)
   }}
   else{{
-    qgisprocess::qgis_output(output, "{main_output}")
+    qgisprocess::qgis_extract_output(output, "{main_output}")
   }}
 }}
