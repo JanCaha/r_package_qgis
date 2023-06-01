@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9007</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9008</span>
       </span>
     </div>
 
@@ -72,24 +72,24 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">saga_gwrforsinglepredictorlayer</span><span class="op">(</span></span>
-<span>  POINTS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  PREDICTOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  DEPENDENT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  DW_WEIGHTING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  DW_IDW_POWER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  DW_IDW_OFFSET <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  DW_BANDWIDTH <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SEARCH_RANGE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SEARCH_RADIUS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SEARCH_POINTS_ALL <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SEARCH_POINTS_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SEARCH_POINTS_MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SEARCH_DIRECTION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RESIDUALS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  REGRESSION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  QUALITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  INTERCEPT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  SLOPE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  POINTS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  PREDICTOR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DEPENDENT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DW_WEIGHTING <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DW_IDW_POWER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DW_IDW_OFFSET <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DW_BANDWIDTH <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SEARCH_RANGE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SEARCH_RADIUS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SEARCH_POINTS_ALL <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SEARCH_POINTS_MIN <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SEARCH_POINTS_MAX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SEARCH_DIRECTION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RESIDUALS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  REGRESSION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  QUALITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  INTERCEPT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  SLOPE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span>,</span>
 <span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>

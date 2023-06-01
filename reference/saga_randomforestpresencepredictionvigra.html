@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9007</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9008</span>
       </span>
     </div>
 
@@ -72,24 +72,24 @@
 
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">saga_randomforestpresencepredictionvigra</span><span class="op">(</span></span>
-<span>  FEATURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  PREDICTION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  PROBABILITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  PRESENCE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  BACKGROUND <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  DO_MRMR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  mRMR_NFEATURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  mRMR_DISCRETIZE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  mRMR_THRESHOLD <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  mRMR_METHOD <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_IMPORT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_EXPORT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_TREE_COUNT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_TREE_SAMPLES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_REPLACE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_SPLIT_MIN_SIZE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_NODE_FEATURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  RF_STRATIFICATION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_sanitize_arguments.html" class="external-link">qgis_default_value</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  FEATURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  PREDICTION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  PROBABILITY <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  PRESENCE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  BACKGROUND <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  DO_MRMR <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  mRMR_NFEATURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  mRMR_DISCRETIZE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  mRMR_THRESHOLD <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  mRMR_METHOD <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_IMPORT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_EXPORT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_TREE_COUNT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_TREE_SAMPLES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_REPLACE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_SPLIT_MIN_SIZE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_NODE_FEATURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  RF_STRATIFICATION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span>,</span>
 <span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>
