@@ -31,9 +31,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_diversityofcategories <- function(CATEGORIES = qgisprocess::qgis_default_value(), SEARCH_MODE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), NB_CASE = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), DIVERSITY = qgisprocess::qgis_default_value(), SIZE_MEAN = qgisprocess::qgis_default_value(), SIZE_SKEW = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_diversityofcategories <- function(CATEGORIES = qgisprocess:::qgis_default_value(), SEARCH_MODE = qgisprocess:::qgis_default_value(), SEARCH_RADIUS = qgisprocess:::qgis_default_value(), NB_CASE = qgisprocess:::qgis_default_value(), DW_WEIGHTING = qgisprocess:::qgis_default_value(), DW_IDW_POWER = qgisprocess:::qgis_default_value(), DW_IDW_OFFSET = qgisprocess:::qgis_default_value(), DW_BANDWIDTH = qgisprocess:::qgis_default_value(), COUNT = qgisprocess:::qgis_default_value(), DIVERSITY = qgisprocess:::qgis_default_value(), SIZE_MEAN = qgisprocess:::qgis_default_value(), SIZE_SKEW = qgisprocess:::qgis_default_value(), CONNECTIVITY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:diversityofcategories")
 
@@ -49,6 +49,6 @@ saga_diversityofcategories <- function(CATEGORIES = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CONNECTIVITY")
+    qgisprocess::qgis_extract_output(output, "CONNECTIVITY")
   }
 }

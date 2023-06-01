@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_topmodel_topidxstats <- function(topidx = qgisprocess::qgis_default_value(), ntopidxclasses = qgisprocess::qgis_default_value(), outtopidxstats = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_topmodel_topidxstats <- function(topidx = qgisprocess:::qgis_default_value(), ntopidxclasses = qgisprocess:::qgis_default_value(), outtopidxstats = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.topmodel.topidxstats")
 
@@ -37,6 +37,6 @@ grass7_r_topmodel_topidxstats <- function(topidx = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "outtopidxstats")
+    qgisprocess::qgis_extract_output(output, "outtopidxstats")
   }
 }

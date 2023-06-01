@@ -5,9 +5,9 @@
 \title{QGIS algorithm Remove small pixel clumps (to no-data)}
 \usage{
 saga_removesmallpixelclumpstonodata(
-  GRID = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -31,9 +31,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_random <- function(input = qgisprocess::qgis_default_value(), cover = qgisprocess::qgis_default_value(), npoints = qgisprocess::qgis_default_value(), .z = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), raster = qgisprocess::qgis_default_value(), vector = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_random <- function(input = qgisprocess:::qgis_default_value(), cover = qgisprocess:::qgis_default_value(), npoints = qgisprocess:::qgis_default_value(), .z = qgisprocess:::qgis_default_value(), .d = qgisprocess:::qgis_default_value(), .b = qgisprocess:::qgis_default_value(), raster = qgisprocess:::qgis_default_value(), vector = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.random")
 
@@ -49,6 +49,6 @@ grass7_r_random <- function(input = qgisprocess::qgis_default_value(), cover = q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "raster")
+    qgisprocess::qgis_extract_output(output, "raster")
   }
 }

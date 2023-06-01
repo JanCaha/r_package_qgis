@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_onesidebuffer <- function(INPUT = qgisprocess::qgis_default_value(), GEOMETRY = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), BUFFER_SIDE = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), DISSOLVE = qgisprocess::qgis_default_value(), EXPLODE_COLLECTIONS = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_onesidebuffer <- function(INPUT = qgisprocess:::qgis_default_value(), GEOMETRY = qgisprocess:::qgis_default_value(), DISTANCE = qgisprocess:::qgis_default_value(), BUFFER_SIDE = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), DISSOLVE = qgisprocess:::qgis_default_value(), EXPLODE_COLLECTIONS = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:onesidebuffer")
 
@@ -41,6 +41,6 @@ gdal_onesidebuffer <- function(INPUT = qgisprocess::qgis_default_value(), GEOMET
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_connectivityanalysis <- function(INPUT_GRID = qgisprocess::qgis_default_value(), FILTERED_MASK = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(), SIZE = qgisprocess::qgis_default_value(), SYMBOLIC_IMAGE = qgisprocess::qgis_default_value(), OUTLINES = qgisprocess::qgis_default_value(), BORDER_PIXEL_CENTERS = qgisprocess::qgis_default_value(), REMOVE_MARGINAL_REGIONS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_connectivityanalysis <- function(INPUT_GRID = qgisprocess:::qgis_default_value(), FILTERED_MASK = qgisprocess:::qgis_default_value(), FILTER = qgisprocess:::qgis_default_value(), SIZE = qgisprocess:::qgis_default_value(), SYMBOLIC_IMAGE = qgisprocess:::qgis_default_value(), OUTLINES = qgisprocess:::qgis_default_value(), BORDER_PIXEL_CENTERS = qgisprocess:::qgis_default_value(), REMOVE_MARGINAL_REGIONS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:connectivityanalysis")
 
@@ -42,6 +42,6 @@ saga_connectivityanalysis <- function(INPUT_GRID = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FILTERED_MASK")
+    qgisprocess::qgis_extract_output(output, "FILTERED_MASK")
   }
 }

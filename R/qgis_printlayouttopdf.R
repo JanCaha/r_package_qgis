@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_printlayouttopdf <- function(LAYOUT = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), FORCE_VECTOR = qgisprocess::qgis_default_value(), GEOREFERENCE = qgisprocess::qgis_default_value(), INCLUDE_METADATA = qgisprocess::qgis_default_value(), DISABLE_TILED = qgisprocess::qgis_default_value(), SIMPLIFY = qgisprocess::qgis_default_value(), TEXT_FORMAT = qgisprocess::qgis_default_value(), SEPARATE_LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_printlayouttopdf <- function(LAYOUT = qgisprocess:::qgis_default_value(), LAYERS = qgisprocess:::qgis_default_value(), DPI = qgisprocess:::qgis_default_value(), FORCE_VECTOR = qgisprocess:::qgis_default_value(), GEOREFERENCE = qgisprocess:::qgis_default_value(), INCLUDE_METADATA = qgisprocess:::qgis_default_value(), DISABLE_TILED = qgisprocess:::qgis_default_value(), SIMPLIFY = qgisprocess:::qgis_default_value(), TEXT_FORMAT = qgisprocess:::qgis_default_value(), SEPARATE_LAYERS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:printlayouttopdf")
 
@@ -43,6 +43,6 @@ qgis_printlayouttopdf <- function(LAYOUT = qgisprocess::qgis_default_value(), LA
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_contourlines <- function(GRID = qgisprocess::qgis_default_value(), VERTEX = qgisprocess::qgis_default_value(), ZMIN = qgisprocess::qgis_default_value(), ZMAX = qgisprocess::qgis_default_value(), ZSTEP = qgisprocess::qgis_default_value(), CONTOUR = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_contourlines <- function(GRID = qgisprocess:::qgis_default_value(), VERTEX = qgisprocess:::qgis_default_value(), ZMIN = qgisprocess:::qgis_default_value(), ZMAX = qgisprocess:::qgis_default_value(), ZSTEP = qgisprocess:::qgis_default_value(), CONTOUR = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:contourlines")
 
@@ -38,6 +38,6 @@ saga_contourlines <- function(GRID = qgisprocess::qgis_default_value(), VERTEX =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CONTOUR")
+    qgisprocess::qgis_extract_output(output, "CONTOUR")
   }
 }

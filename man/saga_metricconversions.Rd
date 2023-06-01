@@ -5,9 +5,9 @@
 \title{QGIS algorithm Metric conversions}
 \usage{
 saga_metricconversions(
-  GRID = qgisprocess::qgis_default_value(),
-  CONVERSION = qgisprocess::qgis_default_value(),
-  CONV = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  CONVERSION = qgisprocess:::qgis_default_value(),
+  CONV = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -16,9 +16,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_invertgrid <- function(GRID = qgisprocess::qgis_default_value(), INVERSE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_invertgrid <- function(GRID = qgisprocess:::qgis_default_value(), INVERSE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:invertgrid")
 
@@ -34,6 +34,6 @@ saga_invertgrid <- function(GRID = qgisprocess::qgis_default_value(), INVERSE = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "INVERSE")
+    qgisprocess::qgis_extract_output(output, "INVERSE")
   }
 }

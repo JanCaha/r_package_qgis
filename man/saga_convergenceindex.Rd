@@ -5,10 +5,10 @@
 \title{QGIS algorithm Convergence index}
 \usage{
 saga_convergenceindex(
-  ELEVATION = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  NEIGHBOURS = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  ELEVATION = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  NEIGHBOURS = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

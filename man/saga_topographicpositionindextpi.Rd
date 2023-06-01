@@ -5,13 +5,13 @@
 \title{QGIS algorithm Topographic position index (tpi)}
 \usage{
 saga_topographicpositionindextpi(
-  DEM = qgisprocess::qgis_default_value(),
-  RADIUS_MIN = qgisprocess::qgis_default_value(),
-  RADIUS_MAX = qgisprocess::qgis_default_value(),
-  DW_WEIGHTING = qgisprocess::qgis_default_value(),
-  DW_IDW_POWER = qgisprocess::qgis_default_value(),
-  DW_BANDWIDTH = qgisprocess::qgis_default_value(),
-  TPI = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  RADIUS_MIN = qgisprocess:::qgis_default_value(),
+  RADIUS_MAX = qgisprocess:::qgis_default_value(),
+  DW_WEIGHTING = qgisprocess:::qgis_default_value(),
+  DW_IDW_POWER = qgisprocess:::qgis_default_value(),
+  DW_BANDWIDTH = qgisprocess:::qgis_default_value(),
+  TPI = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

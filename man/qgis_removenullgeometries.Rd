@@ -5,10 +5,10 @@
 \title{QGIS algorithm Remove null geometries}
 \usage{
 qgis_removenullgeometries(
-  INPUT = qgisprocess::qgis_default_value(),
-  REMOVE_EMPTY = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  NULL_OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  REMOVE_EMPTY = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  NULL_OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

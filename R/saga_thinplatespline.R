@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_thinplatespline <- function(SHAPES = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), REGULARISATION = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), TARGET_TEMPLATE = qgisprocess::qgis_default_value(), TARGET_OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_thinplatespline <- function(SHAPES = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), REGULARISATION = qgisprocess:::qgis_default_value(), SEARCH_RANGE = qgisprocess:::qgis_default_value(), SEARCH_RADIUS = qgisprocess:::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess:::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess:::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess:::qgis_default_value(), SEARCH_DIRECTION = qgisprocess:::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess:::qgis_default_value(), TARGET_USER_SIZE = qgisprocess:::qgis_default_value(), TARGET_USER_FITS = qgisprocess:::qgis_default_value(), TARGET_TEMPLATE = qgisprocess:::qgis_default_value(), TARGET_OUT_GRID = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:thinplatespline")
 
@@ -46,6 +46,6 @@ saga_thinplatespline <- function(SHAPES = qgisprocess::qgis_default_value(), FIE
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "TARGET_OUT_GRID")
+    qgisprocess::qgis_extract_output(output, "TARGET_OUT_GRID")
   }
 }

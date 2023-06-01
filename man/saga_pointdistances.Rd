@@ -5,13 +5,13 @@
 \title{QGIS algorithm Point distances}
 \usage{
 saga_pointdistances(
-  POINTS = qgisprocess::qgis_default_value(),
-  ID_POINTS = qgisprocess::qgis_default_value(),
-  NEAR = qgisprocess::qgis_default_value(),
-  ID_NEAR = qgisprocess::qgis_default_value(),
-  FORMAT = qgisprocess::qgis_default_value(),
-  MAX_DIST = qgisprocess::qgis_default_value(),
-  DISTANCES = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  ID_POINTS = qgisprocess:::qgis_default_value(),
+  NEAR = qgisprocess:::qgis_default_value(),
+  ID_NEAR = qgisprocess:::qgis_default_value(),
+  FORMAT = qgisprocess:::qgis_default_value(),
+  MAX_DIST = qgisprocess:::qgis_default_value(),
+  DISTANCES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

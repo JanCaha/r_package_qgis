@@ -5,11 +5,11 @@
 \title{QGIS algorithm r.regression.line}
 \usage{
 grass7_r_regression_line(
-  mapx = qgisprocess::qgis_default_value(),
-  mapy = qgisprocess::qgis_default_value(),
-  html = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  mapx = qgisprocess:::qgis_default_value(),
+  mapy = qgisprocess:::qgis_default_value(),
+  html = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

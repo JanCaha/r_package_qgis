@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess::qgis_default_value(), REVISED = qgisprocess::qgis_default_value(), COMPARE_ATTRIBUTES = qgisprocess::qgis_default_value(), MATCH_TYPE = qgisprocess::qgis_default_value(), UNCHANGED = qgisprocess::qgis_default_value(), ADDED = qgisprocess::qgis_default_value(), DELETED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess:::qgis_default_value(), REVISED = qgisprocess:::qgis_default_value(), COMPARE_ATTRIBUTES = qgisprocess:::qgis_default_value(), MATCH_TYPE = qgisprocess:::qgis_default_value(), UNCHANGED = qgisprocess:::qgis_default_value(), ADDED = qgisprocess:::qgis_default_value(), DELETED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:detectvectorchanges")
 
@@ -44,6 +44,6 @@ qgis_detectvectorchanges <- function(ORIGINAL = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ADDED")
+    qgisprocess::qgis_extract_output(output, "ADDED")
   }
 }

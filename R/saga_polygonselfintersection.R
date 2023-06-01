@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_polygonselfintersection <- function(POLYGONS = qgisprocess::qgis_default_value(), ID = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_polygonselfintersection <- function(POLYGONS = qgisprocess:::qgis_default_value(), ID = qgisprocess:::qgis_default_value(), INTERSECT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:polygonselfintersection")
 
@@ -35,6 +35,6 @@ saga_polygonselfintersection <- function(POLYGONS = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "INTERSECT")
+    qgisprocess::qgis_extract_output(output, "INTERSECT")
   }
 }

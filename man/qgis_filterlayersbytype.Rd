@@ -5,9 +5,9 @@
 \title{QGIS algorithm Filter layers by type}
 \usage{
 qgis_filterlayersbytype(
-  INPUT = qgisprocess::qgis_default_value(),
-  VECTOR = qgisprocess::qgis_default_value(),
-  RASTER = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  VECTOR = qgisprocess:::qgis_default_value(),
+  RASTER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

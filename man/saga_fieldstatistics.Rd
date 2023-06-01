@@ -5,9 +5,9 @@
 \title{QGIS algorithm Field statistics}
 \usage{
 saga_fieldstatistics(
-  TABLE = qgisprocess::qgis_default_value(),
-  FIELDS = qgisprocess::qgis_default_value(),
-  STATISTICS = qgisprocess::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  FIELDS = qgisprocess:::qgis_default_value(),
+  STATISTICS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_proximityraster <- function(FEATURES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), ALLOCATION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_proximityraster <- function(FEATURES = qgisprocess:::qgis_default_value(), DISTANCE = qgisprocess:::qgis_default_value(), DIRECTION = qgisprocess:::qgis_default_value(), ALLOCATION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:proximityraster")
 
@@ -38,6 +38,6 @@ saga_proximityraster <- function(FEATURES = qgisprocess::qgis_default_value(), D
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ALLOCATION")
+    qgisprocess::qgis_extract_output(output, "ALLOCATION")
   }
 }

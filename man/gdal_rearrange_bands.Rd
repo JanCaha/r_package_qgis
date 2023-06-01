@@ -5,11 +5,11 @@
 \title{QGIS algorithm Rearrange bands}
 \usage{
 gdal_rearrange_bands(
-  INPUT = qgisprocess::qgis_default_value(),
-  BANDS = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  DATA_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BANDS = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  DATA_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

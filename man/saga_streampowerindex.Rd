@@ -5,10 +5,10 @@
 \title{QGIS algorithm Stream power index}
 \usage{
 saga_streampowerindex(
-  SLOPE = qgisprocess::qgis_default_value(),
-  AREA = qgisprocess::qgis_default_value(),
-  CONV = qgisprocess::qgis_default_value(),
-  SPI = qgisprocess::qgis_default_value(),
+  SLOPE = qgisprocess:::qgis_default_value(),
+  AREA = qgisprocess:::qgis_default_value(),
+  CONV = qgisprocess:::qgis_default_value(),
+  SPI = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -30,9 +30,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_i_pansharpen <- function(red = qgisprocess::qgis_default_value(), green = qgisprocess::qgis_default_value(), blue = qgisprocess::qgis_default_value(), pan = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), redoutput = qgisprocess::qgis_default_value(), greenoutput = qgisprocess::qgis_default_value(), blueoutput = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_i_pansharpen <- function(red = qgisprocess:::qgis_default_value(), green = qgisprocess:::qgis_default_value(), blue = qgisprocess:::qgis_default_value(), pan = qgisprocess:::qgis_default_value(), method = qgisprocess:::qgis_default_value(), .l = qgisprocess:::qgis_default_value(), .s = qgisprocess:::qgis_default_value(), redoutput = qgisprocess:::qgis_default_value(), greenoutput = qgisprocess:::qgis_default_value(), blueoutput = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.pansharpen")
 
@@ -48,6 +48,6 @@ grass7_i_pansharpen <- function(red = qgisprocess::qgis_default_value(), green =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "blueoutput")
+    qgisprocess::qgis_extract_output(output, "blueoutput")
   }
 }

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_splitrgbbands <- function(INPUT = qgisprocess::qgis_default_value(), R = qgisprocess::qgis_default_value(), G = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_splitrgbbands <- function(INPUT = qgisprocess:::qgis_default_value(), R = qgisprocess:::qgis_default_value(), G = qgisprocess:::qgis_default_value(), B = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:splitrgbbands")
 
@@ -38,6 +38,6 @@ saga_splitrgbbands <- function(INPUT = qgisprocess::qgis_default_value(), R = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "B")
+    qgisprocess::qgis_extract_output(output, "B")
   }
 }

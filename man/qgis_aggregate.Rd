@@ -5,10 +5,10 @@
 \title{QGIS algorithm Aggregate}
 \usage{
 qgis_aggregate(
-  INPUT = qgisprocess::qgis_default_value(),
-  GROUP_BY = qgisprocess::qgis_default_value(),
-  AGGREGATES = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  GROUP_BY = qgisprocess:::qgis_default_value(),
+  AGGREGATES = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

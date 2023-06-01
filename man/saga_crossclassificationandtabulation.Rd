@@ -5,11 +5,11 @@
 \title{QGIS algorithm Cross-classification and tabulation}
 \usage{
 saga_crossclassificationandtabulation(
-  INPUT = qgisprocess::qgis_default_value(),
-  INPUT2 = qgisprocess::qgis_default_value(),
-  MAXNUMCLASS = qgisprocess::qgis_default_value(),
-  RESULTGRID = qgisprocess::qgis_default_value(),
-  RESULTTABLE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  INPUT2 = qgisprocess:::qgis_default_value(),
+  MAXNUMCLASS = qgisprocess:::qgis_default_value(),
+  RESULTGRID = qgisprocess:::qgis_default_value(),
+  RESULTTABLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

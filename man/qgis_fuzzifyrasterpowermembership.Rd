@@ -5,12 +5,12 @@
 \title{QGIS algorithm Fuzzify raster (power membership)}
 \usage{
 qgis_fuzzifyrasterpowermembership(
-  INPUT = qgisprocess::qgis_default_value(),
-  BAND = qgisprocess::qgis_default_value(),
-  FUZZYLOWBOUND = qgisprocess::qgis_default_value(),
-  FUZZYHIGHBOUND = qgisprocess::qgis_default_value(),
-  FUZZYEXPONENT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BAND = qgisprocess:::qgis_default_value(),
+  FUZZYLOWBOUND = qgisprocess:::qgis_default_value(),
+  FUZZYHIGHBOUND = qgisprocess:::qgis_default_value(),
+  FUZZYEXPONENT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

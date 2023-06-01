@@ -5,10 +5,10 @@
 \title{QGIS algorithm Resampling filter}
 \usage{
 saga_resamplingfilter(
-  GRID = qgisprocess::qgis_default_value(),
-  LOPASS = qgisprocess::qgis_default_value(),
-  HIPASS = qgisprocess::qgis_default_value(),
-  SCALE = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  LOPASS = qgisprocess:::qgis_default_value(),
+  HIPASS = qgisprocess:::qgis_default_value(),
+  SCALE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -56,9 +56,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_bioclimaticvariables <- function(TMEAN = qgisprocess::qgis_default_value(), TMIN = qgisprocess::qgis_default_value(), TMAX = qgisprocess::qgis_default_value(), P = qgisprocess::qgis_default_value(), BIO_01 = qgisprocess::qgis_default_value(), BIO_02 = qgisprocess::qgis_default_value(), BIO_03 = qgisprocess::qgis_default_value(), BIO_04 = qgisprocess::qgis_default_value(), BIO_05 = qgisprocess::qgis_default_value(), BIO_06 = qgisprocess::qgis_default_value(), BIO_07 = qgisprocess::qgis_default_value(), BIO_08 = qgisprocess::qgis_default_value(), BIO_09 = qgisprocess::qgis_default_value(), BIO_10 = qgisprocess::qgis_default_value(), BIO_11 = qgisprocess::qgis_default_value(), BIO_12 = qgisprocess::qgis_default_value(), BIO_13 = qgisprocess::qgis_default_value(), BIO_14 = qgisprocess::qgis_default_value(), BIO_15 = qgisprocess::qgis_default_value(), BIO_16 = qgisprocess::qgis_default_value(), BIO_17 = qgisprocess::qgis_default_value(), BIO_18 = qgisprocess::qgis_default_value(), BIO_19 = qgisprocess::qgis_default_value(), SEASONALITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_bioclimaticvariables <- function(TMEAN = qgisprocess:::qgis_default_value(), TMIN = qgisprocess:::qgis_default_value(), TMAX = qgisprocess:::qgis_default_value(), P = qgisprocess:::qgis_default_value(), BIO_01 = qgisprocess:::qgis_default_value(), BIO_02 = qgisprocess:::qgis_default_value(), BIO_03 = qgisprocess:::qgis_default_value(), BIO_04 = qgisprocess:::qgis_default_value(), BIO_05 = qgisprocess:::qgis_default_value(), BIO_06 = qgisprocess:::qgis_default_value(), BIO_07 = qgisprocess:::qgis_default_value(), BIO_08 = qgisprocess:::qgis_default_value(), BIO_09 = qgisprocess:::qgis_default_value(), BIO_10 = qgisprocess:::qgis_default_value(), BIO_11 = qgisprocess:::qgis_default_value(), BIO_12 = qgisprocess:::qgis_default_value(), BIO_13 = qgisprocess:::qgis_default_value(), BIO_14 = qgisprocess:::qgis_default_value(), BIO_15 = qgisprocess:::qgis_default_value(), BIO_16 = qgisprocess:::qgis_default_value(), BIO_17 = qgisprocess:::qgis_default_value(), BIO_18 = qgisprocess:::qgis_default_value(), BIO_19 = qgisprocess:::qgis_default_value(), SEASONALITY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:bioclimaticvariables")
 
@@ -74,6 +74,6 @@ saga_bioclimaticvariables <- function(TMEAN = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BIO_01")
+    qgisprocess::qgis_extract_output(output, "BIO_01")
   }
 }

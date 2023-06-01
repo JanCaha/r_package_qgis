@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_spatialpointpatternanalysis <- function(POINTS = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), CENTRE = qgisprocess::qgis_default_value(), STDDIST = qgisprocess::qgis_default_value(), BBOX = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_spatialpointpatternanalysis <- function(POINTS = qgisprocess:::qgis_default_value(), STEP = qgisprocess:::qgis_default_value(), CENTRE = qgisprocess:::qgis_default_value(), STDDIST = qgisprocess:::qgis_default_value(), BBOX = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:spatialpointpatternanalysis")
 
@@ -39,6 +39,6 @@ saga_spatialpointpatternanalysis <- function(POINTS = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BBOX")
+    qgisprocess::qgis_extract_output(output, "BBOX")
   }
 }

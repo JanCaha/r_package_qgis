@@ -5,10 +5,10 @@
 \title{QGIS algorithm Simplify}
 \usage{
 qgis_simplifygeometries(
-  INPUT = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  TOLERANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  TOLERANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

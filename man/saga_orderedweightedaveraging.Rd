@@ -5,9 +5,9 @@
 \title{QGIS algorithm Ordered weighted averaging}
 \usage{
 saga_orderedweightedaveraging(
-  GRIDS = qgisprocess::qgis_default_value(),
-  WEIGHTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  WEIGHTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

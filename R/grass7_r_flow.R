@@ -35,9 +35,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_flow <- function(elevation = qgisprocess::qgis_default_value(), aspect = qgisprocess::qgis_default_value(), barrier = qgisprocess::qgis_default_value(), skip = qgisprocess::qgis_default_value(), bound = qgisprocess::qgis_default_value(), .u = qgisprocess::qgis_default_value(), .arg_3 = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), flowline = qgisprocess::qgis_default_value(), flowlength = qgisprocess::qgis_default_value(), flowaccumulation = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_flow <- function(elevation = qgisprocess:::qgis_default_value(), aspect = qgisprocess:::qgis_default_value(), barrier = qgisprocess:::qgis_default_value(), skip = qgisprocess:::qgis_default_value(), bound = qgisprocess:::qgis_default_value(), .u = qgisprocess:::qgis_default_value(), .arg_3 = qgisprocess:::qgis_default_value(), .m = qgisprocess:::qgis_default_value(), flowline = qgisprocess:::qgis_default_value(), flowlength = qgisprocess:::qgis_default_value(), flowaccumulation = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.flow")
 
@@ -53,6 +53,6 @@ grass7_r_flow <- function(elevation = qgisprocess::qgis_default_value(), aspect 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "flowaccumulation")
+    qgisprocess::qgis_extract_output(output, "flowaccumulation")
   }
 }

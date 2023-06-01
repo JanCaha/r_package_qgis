@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_rastersampling <- function(INPUT = qgisprocess::qgis_default_value(), RASTERCOPY = qgisprocess::qgis_default_value(), COLUMN_PREFIX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_rastersampling <- function(INPUT = qgisprocess:::qgis_default_value(), RASTERCOPY = qgisprocess:::qgis_default_value(), COLUMN_PREFIX = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:rastersampling")
 
@@ -36,6 +36,6 @@ qgis_rastersampling <- function(INPUT = qgisprocess::qgis_default_value(), RASTE
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

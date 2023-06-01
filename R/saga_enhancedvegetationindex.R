@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_enhancedvegetationindex <- function(BLUE = qgisprocess::qgis_default_value(), RED = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), EVI = qgisprocess::qgis_default_value(), GAIN = qgisprocess::qgis_default_value(), L = qgisprocess::qgis_default_value(), CBLUE = qgisprocess::qgis_default_value(), CRED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_enhancedvegetationindex <- function(BLUE = qgisprocess:::qgis_default_value(), RED = qgisprocess:::qgis_default_value(), NIR = qgisprocess:::qgis_default_value(), EVI = qgisprocess:::qgis_default_value(), GAIN = qgisprocess:::qgis_default_value(), L = qgisprocess:::qgis_default_value(), CBLUE = qgisprocess:::qgis_default_value(), CRED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:enhancedvegetationindex")
 
@@ -40,6 +40,6 @@ saga_enhancedvegetationindex <- function(BLUE = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "EVI")
+    qgisprocess::qgis_extract_output(output, "EVI")
   }
 }

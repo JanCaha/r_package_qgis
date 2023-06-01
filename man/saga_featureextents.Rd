@@ -5,9 +5,9 @@
 \title{QGIS algorithm Feature extents}
 \usage{
 saga_featureextents(
-  SHAPES = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  EXTENTS = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  EXTENTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

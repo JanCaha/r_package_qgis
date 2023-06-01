@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_zonalrasterstatistics <- function(ZONES = qgisprocess::qgis_default_value(), CATLIST = qgisprocess::qgis_default_value(), STATLIST = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), SHORTNAMES = qgisprocess::qgis_default_value(), OUTTAB = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_zonalrasterstatistics <- function(ZONES = qgisprocess:::qgis_default_value(), CATLIST = qgisprocess:::qgis_default_value(), STATLIST = qgisprocess:::qgis_default_value(), ASPECT = qgisprocess:::qgis_default_value(), SHORTNAMES = qgisprocess:::qgis_default_value(), OUTTAB = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:zonalrasterstatistics")
 
@@ -38,6 +38,6 @@ saga_zonalrasterstatistics <- function(ZONES = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTTAB")
+    qgisprocess::qgis_extract_output(output, "OUTTAB")
   }
 }

@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_localminimaandmaxima <- function(GRID = qgisprocess::qgis_default_value(), MINIMA = qgisprocess::qgis_default_value(), MAXIMA = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_localminimaandmaxima <- function(GRID = qgisprocess:::qgis_default_value(), MINIMA = qgisprocess:::qgis_default_value(), MAXIMA = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:localminimaandmaxima")
 
@@ -36,6 +36,6 @@ saga_localminimaandmaxima <- function(GRID = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MAXIMA")
+    qgisprocess::qgis_extract_output(output, "MAXIMA")
   }
 }

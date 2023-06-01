@@ -5,9 +5,9 @@
 \title{QGIS algorithm Local minima and maxima}
 \usage{
 saga_localminimaandmaxima(
-  GRID = qgisprocess::qgis_default_value(),
-  MINIMA = qgisprocess::qgis_default_value(),
-  MAXIMA = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  MINIMA = qgisprocess:::qgis_default_value(),
+  MAXIMA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,9 +5,9 @@
 \title{QGIS algorithm Geographic coordinate grids}
 \usage{
 saga_geographiccoordinategrids(
-  GRID = qgisprocess::qgis_default_value(),
-  LON = qgisprocess::qgis_default_value(),
-  LAT = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  LON = qgisprocess:::qgis_default_value(),
+  LAT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

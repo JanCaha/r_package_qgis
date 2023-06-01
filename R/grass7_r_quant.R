@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_quant <- function(input = qgisprocess::qgis_default_value(), basemap = qgisprocess::qgis_default_value(), fprange = qgisprocess::qgis_default_value(), range = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_quant <- function(input = qgisprocess:::qgis_default_value(), basemap = qgisprocess:::qgis_default_value(), fprange = qgisprocess:::qgis_default_value(), range = qgisprocess:::qgis_default_value(), .t = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.quant")
 
@@ -43,6 +43,6 @@ grass7_r_quant <- function(input = qgisprocess::qgis_default_value(), basemap = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

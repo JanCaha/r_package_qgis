@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_his <- function(hue = qgisprocess::qgis_default_value(), intensity = qgisprocess::qgis_default_value(), saturation = qgisprocess::qgis_default_value(), bgcolor = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), red = qgisprocess::qgis_default_value(), green = qgisprocess::qgis_default_value(), blue = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_his <- function(hue = qgisprocess:::qgis_default_value(), intensity = qgisprocess:::qgis_default_value(), saturation = qgisprocess:::qgis_default_value(), bgcolor = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), red = qgisprocess:::qgis_default_value(), green = qgisprocess:::qgis_default_value(), blue = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.his")
 
@@ -46,6 +46,6 @@ grass7_r_his <- function(hue = qgisprocess::qgis_default_value(), intensity = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "blue")
+    qgisprocess::qgis_extract_output(output, "blue")
   }
 }

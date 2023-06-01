@@ -5,14 +5,14 @@
 \title{QGIS algorithm Connectivity analysis}
 \usage{
 saga_connectivityanalysis(
-  INPUT_GRID = qgisprocess::qgis_default_value(),
-  FILTERED_MASK = qgisprocess::qgis_default_value(),
-  FILTER = qgisprocess::qgis_default_value(),
-  SIZE = qgisprocess::qgis_default_value(),
-  SYMBOLIC_IMAGE = qgisprocess::qgis_default_value(),
-  OUTLINES = qgisprocess::qgis_default_value(),
-  BORDER_PIXEL_CENTERS = qgisprocess::qgis_default_value(),
-  REMOVE_MARGINAL_REGIONS = qgisprocess::qgis_default_value(),
+  INPUT_GRID = qgisprocess:::qgis_default_value(),
+  FILTERED_MASK = qgisprocess:::qgis_default_value(),
+  FILTER = qgisprocess:::qgis_default_value(),
+  SIZE = qgisprocess:::qgis_default_value(),
+  SYMBOLIC_IMAGE = qgisprocess:::qgis_default_value(),
+  OUTLINES = qgisprocess:::qgis_default_value(),
+  BORDER_PIXEL_CENTERS = qgisprocess:::qgis_default_value(),
+  REMOVE_MARGINAL_REGIONS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

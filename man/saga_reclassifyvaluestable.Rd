@@ -5,14 +5,14 @@
 \title{QGIS algorithm Reclassify values (table)}
 \usage{
 saga_reclassifyvaluestable(
-  INPUT = qgisprocess::qgis_default_value(),
-  RETAB = qgisprocess::qgis_default_value(),
-  TOPERATOR = qgisprocess::qgis_default_value(),
-  NODATAOPT = qgisprocess::qgis_default_value(),
-  NODATA = qgisprocess::qgis_default_value(),
-  OTHEROPT = qgisprocess::qgis_default_value(),
-  OTHERS = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RETAB = qgisprocess:::qgis_default_value(),
+  TOPERATOR = qgisprocess:::qgis_default_value(),
+  NODATAOPT = qgisprocess:::qgis_default_value(),
+  NODATA = qgisprocess:::qgis_default_value(),
+  OTHEROPT = qgisprocess:::qgis_default_value(),
+  OTHERS = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

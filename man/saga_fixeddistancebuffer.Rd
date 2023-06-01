@@ -5,13 +5,13 @@
 \title{QGIS algorithm Fixed distance buffer}
 \usage{
 saga_fixeddistancebuffer(
-  SHAPES = qgisprocess::qgis_default_value(),
-  DIST_FIELD_DEFAULT = qgisprocess::qgis_default_value(),
-  NZONES = qgisprocess::qgis_default_value(),
-  DARC = qgisprocess::qgis_default_value(),
-  DISSOLVE = qgisprocess::qgis_default_value(),
-  POLY_INNER = qgisprocess::qgis_default_value(),
-  BUFFER = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  DIST_FIELD_DEFAULT = qgisprocess:::qgis_default_value(),
+  NZONES = qgisprocess:::qgis_default_value(),
+  DARC = qgisprocess:::qgis_default_value(),
+  DISSOLVE = qgisprocess:::qgis_default_value(),
+  POLY_INNER = qgisprocess:::qgis_default_value(),
+  BUFFER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

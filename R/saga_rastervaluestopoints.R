@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rastervaluestopoints <- function(GRIDS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rastervaluestopoints <- function(GRIDS = qgisprocess:::qgis_default_value(), POLYGONS = qgisprocess:::qgis_default_value(), NODATA = qgisprocess:::qgis_default_value(), TYPE = qgisprocess:::qgis_default_value(), SHAPES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rastervaluestopoints")
 
@@ -37,6 +37,6 @@ saga_rastervaluestopoints <- function(GRIDS = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SHAPES")
+    qgisprocess::qgis_extract_output(output, "SHAPES")
   }
 }

@@ -29,9 +29,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_vegetationindexdistancebased <- function(RED = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), PVI0 = qgisprocess::qgis_default_value(), PVI1 = qgisprocess::qgis_default_value(), PVI2 = qgisprocess::qgis_default_value(), PVI3 = qgisprocess::qgis_default_value(), TSAVI = qgisprocess::qgis_default_value(), ATSAVI = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_vegetationindexdistancebased <- function(RED = qgisprocess:::qgis_default_value(), NIR = qgisprocess:::qgis_default_value(), PVI0 = qgisprocess:::qgis_default_value(), PVI1 = qgisprocess:::qgis_default_value(), PVI2 = qgisprocess:::qgis_default_value(), PVI3 = qgisprocess:::qgis_default_value(), TSAVI = qgisprocess:::qgis_default_value(), ATSAVI = qgisprocess:::qgis_default_value(), INTERCEPT = qgisprocess:::qgis_default_value(), SLOPE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:vegetationindexdistancebased")
 
@@ -47,6 +47,6 @@ saga_vegetationindexdistancebased <- function(RED = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ATSAVI")
+    qgisprocess::qgis_extract_output(output, "ATSAVI")
   }
 }

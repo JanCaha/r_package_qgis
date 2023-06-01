@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_simpleregiongrowing <- function(SEEDS = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NEIGHBOUR = qgisprocess::qgis_default_value(), SIG_1 = qgisprocess::qgis_default_value(), SIG_2 = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), LEAFSIZE = qgisprocess::qgis_default_value(), SEGMENTS = qgisprocess::qgis_default_value(), SIMILARITY = qgisprocess::qgis_default_value(), TABLE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_simpleregiongrowing <- function(SEEDS = qgisprocess:::qgis_default_value(), FEATURES = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), NEIGHBOUR = qgisprocess:::qgis_default_value(), SIG_1 = qgisprocess:::qgis_default_value(), SIG_2 = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(), LEAFSIZE = qgisprocess:::qgis_default_value(), SEGMENTS = qgisprocess:::qgis_default_value(), SIMILARITY = qgisprocess:::qgis_default_value(), TABLE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:simpleregiongrowing")
 
@@ -45,6 +45,6 @@ saga_simpleregiongrowing <- function(SEEDS = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SEGMENTS")
+    qgisprocess::qgis_extract_output(output, "SEGMENTS")
   }
 }

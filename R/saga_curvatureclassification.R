@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_curvatureclassification <- function(DEM = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_curvatureclassification <- function(DEM = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(), CLASS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:curvatureclassification")
 
@@ -35,6 +35,6 @@ saga_curvatureclassification <- function(DEM = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLASS")
+    qgisprocess::qgis_extract_output(output, "CLASS")
   }
 }

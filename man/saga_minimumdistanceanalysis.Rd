@@ -5,8 +5,8 @@
 \title{QGIS algorithm Minimum distance analysis}
 \usage{
 saga_minimumdistanceanalysis(
-  POINTS = qgisprocess::qgis_default_value(),
-  TABLE = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

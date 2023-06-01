@@ -5,12 +5,12 @@
 \title{QGIS algorithm Extract labels}
 \usage{
 qgis_extractlabels(
-  EXTENT = qgisprocess::qgis_default_value(),
-  SCALE = qgisprocess::qgis_default_value(),
-  MAP_THEME = qgisprocess::qgis_default_value(),
-  INCLUDE_UNPLACED = qgisprocess::qgis_default_value(),
-  DPI = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  SCALE = qgisprocess:::qgis_default_value(),
+  MAP_THEME = qgisprocess:::qgis_default_value(),
+  INCLUDE_UNPLACED = qgisprocess:::qgis_default_value(),
+  DPI = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

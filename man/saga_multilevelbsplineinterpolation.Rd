@@ -5,16 +5,16 @@
 \title{QGIS algorithm Multilevel b-spline interpolation}
 \usage{
 saga_multilevelbsplineinterpolation(
-  SHAPES = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  EPSILON = qgisprocess::qgis_default_value(),
-  LEVEL_MAX = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  EPSILON = qgisprocess:::qgis_default_value(),
+  LEVEL_MAX = qgisprocess:::qgis_default_value(),
   TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX =
-    qgisprocess::qgis_default_value(),
-  TARGET_USER_SIZE = qgisprocess::qgis_default_value(),
-  TARGET_USER_FITS = qgisprocess::qgis_default_value(),
-  TARGET_OUT_GRID = qgisprocess::qgis_default_value(),
+    qgisprocess:::qgis_default_value(),
+  TARGET_USER_SIZE = qgisprocess:::qgis_default_value(),
+  TARGET_USER_FITS = qgisprocess:::qgis_default_value(),
+  TARGET_OUT_GRID = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

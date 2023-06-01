@@ -5,13 +5,13 @@
 \title{QGIS algorithm Detect dataset changes}
 \usage{
 qgis_detectvectorchanges(
-  ORIGINAL = qgisprocess::qgis_default_value(),
-  REVISED = qgisprocess::qgis_default_value(),
-  COMPARE_ATTRIBUTES = qgisprocess::qgis_default_value(),
-  MATCH_TYPE = qgisprocess::qgis_default_value(),
-  UNCHANGED = qgisprocess::qgis_default_value(),
-  ADDED = qgisprocess::qgis_default_value(),
-  DELETED = qgisprocess::qgis_default_value(),
+  ORIGINAL = qgisprocess:::qgis_default_value(),
+  REVISED = qgisprocess:::qgis_default_value(),
+  COMPARE_ATTRIBUTES = qgisprocess:::qgis_default_value(),
+  MATCH_TYPE = qgisprocess:::qgis_default_value(),
+  UNCHANGED = qgisprocess:::qgis_default_value(),
+  ADDED = qgisprocess:::qgis_default_value(),
+  DELETED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

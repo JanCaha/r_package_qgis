@@ -5,10 +5,10 @@
 \title{QGIS algorithm Reclassify values (simple)}
 \usage{
 saga_reclassifyvaluessimple(
-  GRID_IN = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  LOOKUP = qgisprocess::qgis_default_value(),
-  GRID_OUT = qgisprocess::qgis_default_value(),
+  GRID_IN = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  LOOKUP = qgisprocess:::qgis_default_value(),
+  GRID_OUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

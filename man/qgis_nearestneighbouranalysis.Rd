@@ -5,8 +5,8 @@
 \title{QGIS algorithm Nearest neighbour analysis}
 \usage{
 qgis_nearestneighbouranalysis(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT_HTML_FILE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,14 +5,14 @@
 \title{QGIS algorithm r.univar}
 \usage{
 grass7_r_univar(
-  map = qgisprocess::qgis_default_value(),
-  zones = qgisprocess::qgis_default_value(),
-  percentile = qgisprocess::qgis_default_value(),
-  separator = qgisprocess::qgis_default_value(),
-  .e = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  map = qgisprocess:::qgis_default_value(),
+  zones = qgisprocess:::qgis_default_value(),
+  percentile = qgisprocess:::qgis_default_value(),
+  separator = qgisprocess:::qgis_default_value(),
+  .e = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

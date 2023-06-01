@@ -5,10 +5,10 @@
 \title{QGIS algorithm Extract binary field}
 \usage{
 qgis_extractbinary(
-  INPUT = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  FILENAME = qgisprocess::qgis_default_value(),
-  FOLDER = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  FILENAME = qgisprocess:::qgis_default_value(),
+  FOLDER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

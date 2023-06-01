@@ -5,11 +5,11 @@
 \title{QGIS algorithm Points displacement}
 \usage{
 qgis_pointsdisplacement(
-  INPUT = qgisprocess::qgis_default_value(),
-  PROXIMITY = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  HORIZONTAL = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  PROXIMITY = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  HORIZONTAL = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

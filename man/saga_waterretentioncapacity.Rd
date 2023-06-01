@@ -5,10 +5,10 @@
 \title{QGIS algorithm Water retention capacity}
 \usage{
 saga_waterretentioncapacity(
-  SHAPES = qgisprocess::qgis_default_value(),
-  DEM = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  RETENTION = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  RETENTION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

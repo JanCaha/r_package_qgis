@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_regressionanalysis <- function(GRID = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), INTERPOL = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESIDUAL = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_regressionanalysis <- function(GRID = qgisprocess:::qgis_default_value(), SHAPES = qgisprocess:::qgis_default_value(), ATTRIBUTE = qgisprocess:::qgis_default_value(), INTERPOL = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), REGRESSION = qgisprocess:::qgis_default_value(), RESIDUAL = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:regressionanalysis")
 
@@ -40,6 +40,6 @@ saga_regressionanalysis <- function(GRID = qgisprocess::qgis_default_value(), SH
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REGRESSION")
+    qgisprocess::qgis_extract_output(output, "REGRESSION")
   }
 }

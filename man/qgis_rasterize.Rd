@@ -5,14 +5,14 @@
 \title{QGIS algorithm Convert map to raster}
 \usage{
 qgis_rasterize(
-  EXTENT = qgisprocess::qgis_default_value(),
-  EXTENT_BUFFER = qgisprocess::qgis_default_value(),
-  TILE_SIZE = qgisprocess::qgis_default_value(),
-  MAP_UNITS_PER_PIXEL = qgisprocess::qgis_default_value(),
-  MAKE_BACKGROUND_TRANSPARENT = qgisprocess::qgis_default_value(),
-  MAP_THEME = qgisprocess::qgis_default_value(),
-  LAYERS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  EXTENT_BUFFER = qgisprocess:::qgis_default_value(),
+  TILE_SIZE = qgisprocess:::qgis_default_value(),
+  MAP_UNITS_PER_PIXEL = qgisprocess:::qgis_default_value(),
+  MAKE_BACKGROUND_TRANSPARENT = qgisprocess:::qgis_default_value(),
+  MAP_THEME = qgisprocess:::qgis_default_value(),
+  LAYERS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

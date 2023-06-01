@@ -5,12 +5,12 @@
 \title{QGIS algorithm Cross profiles}
 \usage{
 saga_crossprofiles(
-  DEM = qgisprocess::qgis_default_value(),
-  LINES = qgisprocess::qgis_default_value(),
-  DIST_LINE = qgisprocess::qgis_default_value(),
-  DIST_PROFILE = qgisprocess::qgis_default_value(),
-  NUM_PROFILE = qgisprocess::qgis_default_value(),
-  PROFILES = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  DIST_LINE = qgisprocess:::qgis_default_value(),
+  DIST_PROFILE = qgisprocess:::qgis_default_value(),
+  NUM_PROFILE = qgisprocess:::qgis_default_value(),
+  PROFILES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

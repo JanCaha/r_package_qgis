@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rasterize <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MULTIPLE = qgisprocess::qgis_default_value(), LINE_TYPE = qgisprocess::qgis_default_value(), POLY_TYPE = qgisprocess::qgis_default_value(), GRID_TYPE = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), GRID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rasterize <- function(INPUT = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), MULTIPLE = qgisprocess:::qgis_default_value(), LINE_TYPE = qgisprocess:::qgis_default_value(), POLY_TYPE = qgisprocess:::qgis_default_value(), GRID_TYPE = qgisprocess:::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess:::qgis_default_value(), TARGET_USER_SIZE = qgisprocess:::qgis_default_value(), TARGET_USER_FITS = qgisprocess:::qgis_default_value(), GRID = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rasterize")
 
@@ -43,6 +43,6 @@ saga_rasterize <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "GRID")
+    qgisprocess::qgis_extract_output(output, "GRID")
   }
 }

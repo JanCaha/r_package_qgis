@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_dissolve <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), GEOMETRY = qgisprocess::qgis_default_value(), EXPLODE_COLLECTIONS = qgisprocess::qgis_default_value(), KEEP_ATTRIBUTES = qgisprocess::qgis_default_value(), COUNT_FEATURES = qgisprocess::qgis_default_value(), COMPUTE_AREA = qgisprocess::qgis_default_value(), COMPUTE_STATISTICS = qgisprocess::qgis_default_value(), STATISTICS_ATTRIBUTE = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_dissolve <- function(INPUT = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), GEOMETRY = qgisprocess:::qgis_default_value(), EXPLODE_COLLECTIONS = qgisprocess:::qgis_default_value(), KEEP_ATTRIBUTES = qgisprocess:::qgis_default_value(), COUNT_FEATURES = qgisprocess:::qgis_default_value(), COMPUTE_AREA = qgisprocess:::qgis_default_value(), COMPUTE_STATISTICS = qgisprocess:::qgis_default_value(), STATISTICS_ATTRIBUTE = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:dissolve")
 
@@ -43,6 +43,6 @@ gdal_dissolve <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

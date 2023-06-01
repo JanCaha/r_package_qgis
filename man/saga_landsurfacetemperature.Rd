@@ -5,14 +5,14 @@
 \title{QGIS algorithm Land surface temperature}
 \usage{
 saga_landsurfacetemperature(
-  DEM = qgisprocess::qgis_default_value(),
-  SWR = qgisprocess::qgis_default_value(),
-  LAI = qgisprocess::qgis_default_value(),
-  Z_REFERENCE = qgisprocess::qgis_default_value(),
-  T_REFERENCE = qgisprocess::qgis_default_value(),
-  T_GRADIENT = qgisprocess::qgis_default_value(),
-  C_FACTOR = qgisprocess::qgis_default_value(),
-  LST = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  SWR = qgisprocess:::qgis_default_value(),
+  LAI = qgisprocess:::qgis_default_value(),
+  Z_REFERENCE = qgisprocess:::qgis_default_value(),
+  T_REFERENCE = qgisprocess:::qgis_default_value(),
+  T_GRADIENT = qgisprocess:::qgis_default_value(),
+  C_FACTOR = qgisprocess:::qgis_default_value(),
+  LST = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

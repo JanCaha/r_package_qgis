@@ -5,9 +5,9 @@
 \title{QGIS algorithm Analytical hierarchy process}
 \usage{
 saga_analyticalhierarchyprocess(
-  GRIDS = qgisprocess::qgis_default_value(),
-  TABLE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

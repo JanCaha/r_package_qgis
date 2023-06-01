@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_colorrelief <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), COMPUTE_EDGES = qgisprocess::qgis_default_value(), COLOR_TABLE = qgisprocess::qgis_default_value(), MATCH_MODE = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_colorrelief <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), COMPUTE_EDGES = qgisprocess:::qgis_default_value(), COLOR_TABLE = qgisprocess:::qgis_default_value(), MATCH_MODE = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:colorrelief")
 
@@ -40,6 +40,6 @@ gdal_colorrelief <- function(INPUT = qgisprocess::qgis_default_value(), BAND = q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

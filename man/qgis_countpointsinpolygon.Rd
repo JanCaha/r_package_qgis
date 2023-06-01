@@ -5,12 +5,12 @@
 \title{QGIS algorithm Count points in polygon}
 \usage{
 qgis_countpointsinpolygon(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
-  WEIGHT = qgisprocess::qgis_default_value(),
-  CLASSFIELD = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  WEIGHT = qgisprocess:::qgis_default_value(),
+  CLASSFIELD = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,9 +5,9 @@
 \title{QGIS algorithm Fill sinks xxl (wang & liu)}
 \usage{
 saga_fillsinksxxlwangliu(
-  ELEV = qgisprocess::qgis_default_value(),
-  MINSLOPE = qgisprocess::qgis_default_value(),
-  FILLED = qgisprocess::qgis_default_value(),
+  ELEV = qgisprocess:::qgis_default_value(),
+  MINSLOPE = qgisprocess:::qgis_default_value(),
+  FILLED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

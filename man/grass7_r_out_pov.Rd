@@ -5,13 +5,13 @@
 \title{QGIS algorithm r.out.pov}
 \usage{
 grass7_r_out_pov(
-  input = qgisprocess::qgis_default_value(),
-  hftype = qgisprocess::qgis_default_value(),
-  bias = qgisprocess::qgis_default_value(),
-  scale = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  hftype = qgisprocess:::qgis_default_value(),
+  bias = qgisprocess:::qgis_default_value(),
+  scale = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

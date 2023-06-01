@@ -1,6 +1,6 @@
 character(0)
 
-grass7_nviz <- function(elevation = qgisprocess::qgis_default_value(), color = qgisprocess::qgis_default_value(), vector = qgisprocess::qgis_default_value(), point = qgisprocess::qgis_default_value(), volume = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_nviz <- function(elevation = qgisprocess:::qgis_default_value(), color = qgisprocess:::qgis_default_value(), vector = qgisprocess:::qgis_default_value(), point = qgisprocess:::qgis_default_value(), volume = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:nviz")
 
@@ -16,6 +16,6 @@ grass7_nviz <- function(elevation = qgisprocess::qgis_default_value(), color = q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

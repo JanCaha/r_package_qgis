@@ -34,9 +34,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_kernel_vector <- function(input = qgisprocess::qgis_default_value(), net = qgisprocess::qgis_default_value(), radius = qgisprocess::qgis_default_value(), dsize = qgisprocess::qgis_default_value(), segmax = qgisprocess::qgis_default_value(), distmax = qgisprocess::qgis_default_value(), multiplier = qgisprocess::qgis_default_value(), node = qgisprocess::qgis_default_value(), kernel = qgisprocess::qgis_default_value(), .o = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_kernel_vector <- function(input = qgisprocess:::qgis_default_value(), net = qgisprocess:::qgis_default_value(), radius = qgisprocess:::qgis_default_value(), dsize = qgisprocess:::qgis_default_value(), segmax = qgisprocess:::qgis_default_value(), distmax = qgisprocess:::qgis_default_value(), multiplier = qgisprocess:::qgis_default_value(), node = qgisprocess:::qgis_default_value(), kernel = qgisprocess:::qgis_default_value(), .o = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), .m = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.kernel.vector")
 
@@ -52,6 +52,6 @@ grass7_v_kernel_vector <- function(input = qgisprocess::qgis_default_value(), ne
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

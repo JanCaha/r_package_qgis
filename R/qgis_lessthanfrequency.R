@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_lessthanfrequency <- function(INPUT_VALUE_RASTER = qgisprocess::qgis_default_value(), INPUT_VALUE_RASTER_BAND = qgisprocess::qgis_default_value(), INPUT_RASTERS = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_lessthanfrequency <- function(INPUT_VALUE_RASTER = qgisprocess:::qgis_default_value(), INPUT_VALUE_RASTER_BAND = qgisprocess:::qgis_default_value(), INPUT_RASTERS = qgisprocess:::qgis_default_value(), IGNORE_NODATA = qgisprocess:::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:lessthanfrequency")
 
@@ -46,6 +46,6 @@ qgis_lessthanfrequency <- function(INPUT_VALUE_RASTER = qgisprocess::qgis_defaul
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CRS_AUTHID")
+    qgisprocess::qgis_extract_output(output, "CRS_AUTHID")
   }
 }

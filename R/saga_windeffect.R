@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_windeffect <- function(DEM = qgisprocess::qgis_default_value(), DIR = qgisprocess::qgis_default_value(), LEN = qgisprocess::qgis_default_value(), DIR_CONST = qgisprocess::qgis_default_value(), MAXDIST = qgisprocess::qgis_default_value(), ACCEL = qgisprocess::qgis_default_value(), DIR_UNITS = qgisprocess::qgis_default_value(), LEN_SCALE = qgisprocess::qgis_default_value(), EFFECT = qgisprocess::qgis_default_value(), LUV = qgisprocess::qgis_default_value(), LEE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_windeffect <- function(DEM = qgisprocess:::qgis_default_value(), DIR = qgisprocess:::qgis_default_value(), LEN = qgisprocess:::qgis_default_value(), DIR_CONST = qgisprocess:::qgis_default_value(), MAXDIST = qgisprocess:::qgis_default_value(), ACCEL = qgisprocess:::qgis_default_value(), DIR_UNITS = qgisprocess:::qgis_default_value(), LEN_SCALE = qgisprocess:::qgis_default_value(), EFFECT = qgisprocess:::qgis_default_value(), LUV = qgisprocess:::qgis_default_value(), LEE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:windeffect")
 
@@ -45,6 +45,6 @@ saga_windeffect <- function(DEM = qgisprocess::qgis_default_value(), DIR = qgisp
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "EFFECT")
+    qgisprocess::qgis_extract_output(output, "EFFECT")
   }
 }

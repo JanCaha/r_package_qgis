@@ -5,13 +5,13 @@
 \title{QGIS algorithm r.transect}
 \usage{
 grass7_r_transect(
-  map = qgisprocess::qgis_default_value(),
-  line = qgisprocess::qgis_default_value(),
-  null_value = qgisprocess::qgis_default_value(),
-  .g = qgisprocess::qgis_default_value(),
-  html = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  map = qgisprocess:::qgis_default_value(),
+  line = qgisprocess:::qgis_default_value(),
+  null_value = qgisprocess:::qgis_default_value(),
+  .g = qgisprocess:::qgis_default_value(),
+  html = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

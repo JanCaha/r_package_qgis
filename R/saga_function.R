@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_function <- function(XMIN = qgisprocess::qgis_default_value(), XMAX = qgisprocess::qgis_default_value(), YMIN = qgisprocess::qgis_default_value(), YMAX = qgisprocess::qgis_default_value(), FORMUL = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_function <- function(XMIN = qgisprocess:::qgis_default_value(), XMAX = qgisprocess:::qgis_default_value(), YMIN = qgisprocess:::qgis_default_value(), YMAX = qgisprocess:::qgis_default_value(), FORMUL = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:function")
 
@@ -38,6 +38,6 @@ saga_function <- function(XMIN = qgisprocess::qgis_default_value(), XMAX = qgisp
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

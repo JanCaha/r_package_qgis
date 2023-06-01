@@ -40,9 +40,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_morphometricfeatures <- function(DEM = qgisprocess::qgis_default_value(), FEATURES = qgisprocess::qgis_default_value(), ELEVATION = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), PROFC = qgisprocess::qgis_default_value(), PLANC = qgisprocess::qgis_default_value(), LONGC = qgisprocess::qgis_default_value(), CROSC = qgisprocess::qgis_default_value(), MAXIC = qgisprocess::qgis_default_value(), MINIC = qgisprocess::qgis_default_value(), SIZE = qgisprocess::qgis_default_value(), TOL_SLOPE = qgisprocess::qgis_default_value(), TOL_CURVE = qgisprocess::qgis_default_value(), EXPONENT = qgisprocess::qgis_default_value(), ZSCALE = qgisprocess::qgis_default_value(), CONSTRAIN = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_morphometricfeatures <- function(DEM = qgisprocess:::qgis_default_value(), FEATURES = qgisprocess:::qgis_default_value(), ELEVATION = qgisprocess:::qgis_default_value(), SLOPE = qgisprocess:::qgis_default_value(), ASPECT = qgisprocess:::qgis_default_value(), PROFC = qgisprocess:::qgis_default_value(), PLANC = qgisprocess:::qgis_default_value(), LONGC = qgisprocess:::qgis_default_value(), CROSC = qgisprocess:::qgis_default_value(), MAXIC = qgisprocess:::qgis_default_value(), MINIC = qgisprocess:::qgis_default_value(), SIZE = qgisprocess:::qgis_default_value(), TOL_SLOPE = qgisprocess:::qgis_default_value(), TOL_CURVE = qgisprocess:::qgis_default_value(), EXPONENT = qgisprocess:::qgis_default_value(), ZSCALE = qgisprocess:::qgis_default_value(), CONSTRAIN = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:morphometricfeatures")
 
@@ -58,6 +58,6 @@ saga_morphometricfeatures <- function(DEM = qgisprocess::qgis_default_value(), F
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ASPECT")
+    qgisprocess::qgis_extract_output(output, "ASPECT")
   }
 }

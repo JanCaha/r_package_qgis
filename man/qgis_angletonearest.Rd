@@ -5,12 +5,12 @@
 \title{QGIS algorithm Align points to features}
 \usage{
 qgis_angletonearest(
-  INPUT = qgisprocess::qgis_default_value(),
-  REFERENCE_LAYER = qgisprocess::qgis_default_value(),
-  MAX_DISTANCE = qgisprocess::qgis_default_value(),
-  FIELD_NAME = qgisprocess::qgis_default_value(),
-  APPLY_SYMBOLOGY = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
+  MAX_DISTANCE = qgisprocess:::qgis_default_value(),
+  FIELD_NAME = qgisprocess:::qgis_default_value(),
+  APPLY_SYMBOLOGY = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

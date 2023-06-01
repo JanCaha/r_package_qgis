@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_vectorruggednessmeasurevrm <- function(DEM = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess::qgis_default_value(), VRM = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_vectorruggednessmeasurevrm <- function(DEM = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess:::qgis_default_value(), VRM = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:vectorruggednessmeasurevrm")
 
@@ -38,6 +38,6 @@ saga_vectorruggednessmeasurevrm <- function(DEM = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "VRM")
+    qgisprocess::qgis_extract_output(output, "VRM")
   }
 }

@@ -39,9 +39,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_surf_rst_cvdev <- function(input = qgisprocess::qgis_default_value(), zcolumn = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), mask = qgisprocess::qgis_default_value(), tension = qgisprocess::qgis_default_value(), smooth = qgisprocess::qgis_default_value(), smooth_column = qgisprocess::qgis_default_value(), segmax = qgisprocess::qgis_default_value(), npmin = qgisprocess::qgis_default_value(), dmin = qgisprocess::qgis_default_value(), dmax = qgisprocess::qgis_default_value(), zscale = qgisprocess::qgis_default_value(), theta = qgisprocess::qgis_default_value(), scalex = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), cvdev = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_surf_rst_cvdev <- function(input = qgisprocess:::qgis_default_value(), zcolumn = qgisprocess:::qgis_default_value(), where = qgisprocess:::qgis_default_value(), mask = qgisprocess:::qgis_default_value(), tension = qgisprocess:::qgis_default_value(), smooth = qgisprocess:::qgis_default_value(), smooth_column = qgisprocess:::qgis_default_value(), segmax = qgisprocess:::qgis_default_value(), npmin = qgisprocess:::qgis_default_value(), dmin = qgisprocess:::qgis_default_value(), dmax = qgisprocess:::qgis_default_value(), zscale = qgisprocess:::qgis_default_value(), theta = qgisprocess:::qgis_default_value(), scalex = qgisprocess:::qgis_default_value(), .t = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), cvdev = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.surf.rst.cvdev")
 
@@ -57,6 +57,6 @@ grass7_v_surf_rst_cvdev <- function(input = qgisprocess::qgis_default_value(), z
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "cvdev")
+    qgisprocess::qgis_extract_output(output, "cvdev")
   }
 }

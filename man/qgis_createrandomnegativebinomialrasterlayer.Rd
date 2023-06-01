@@ -5,13 +5,13 @@
 \title{QGIS algorithm Create random raster layer (negative binomial distribution)}
 \usage{
 qgis_createrandomnegativebinomialrasterlayer(
-  EXTENT = qgisprocess::qgis_default_value(),
-  TARGET_CRS = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  OUTPUT_TYPE = qgisprocess::qgis_default_value(),
-  K_PARAMETER = qgisprocess::qgis_default_value(),
-  PROBABILITY = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  TARGET_CRS = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
+  K_PARAMETER = qgisprocess:::qgis_default_value(),
+  PROBABILITY = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

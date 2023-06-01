@@ -5,14 +5,14 @@
 \title{QGIS algorithm r.quantile.plain}
 \usage{
 grass7_r_quantile_plain(
-  input = qgisprocess::qgis_default_value(),
-  quantiles = qgisprocess::qgis_default_value(),
-  percentiles = qgisprocess::qgis_default_value(),
-  bins = qgisprocess::qgis_default_value(),
-  .r = qgisprocess::qgis_default_value(),
-  file = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  quantiles = qgisprocess:::qgis_default_value(),
+  percentiles = qgisprocess:::qgis_default_value(),
+  bins = qgisprocess:::qgis_default_value(),
+  .r = qgisprocess:::qgis_default_value(),
+  file = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

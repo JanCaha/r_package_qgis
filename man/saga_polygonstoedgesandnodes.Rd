@@ -5,9 +5,9 @@
 \title{QGIS algorithm Polygons to edges and nodes}
 \usage{
 saga_polygonstoedgesandnodes(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  EDGES = qgisprocess::qgis_default_value(),
-  NODES = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  EDGES = qgisprocess:::qgis_default_value(),
+  NODES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

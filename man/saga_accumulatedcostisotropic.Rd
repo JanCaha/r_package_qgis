@@ -5,11 +5,11 @@
 \title{QGIS algorithm Accumulated cost (isotropic)}
 \usage{
 saga_accumulatedcostisotropic(
-  COST = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  ACCCOST = qgisprocess::qgis_default_value(),
-  CLOSESTPT = qgisprocess::qgis_default_value(),
+  COST = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  ACCCOST = qgisprocess:::qgis_default_value(),
+  CLOSESTPT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

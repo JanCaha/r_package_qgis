@@ -5,12 +5,12 @@
 \title{QGIS algorithm Create random raster layer (exponential distribution)}
 \usage{
 qgis_createrandomexponentialrasterlayer(
-  EXTENT = qgisprocess::qgis_default_value(),
-  TARGET_CRS = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  OUTPUT_TYPE = qgisprocess::qgis_default_value(),
-  LAMBDA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  TARGET_CRS = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
+  LAMBDA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

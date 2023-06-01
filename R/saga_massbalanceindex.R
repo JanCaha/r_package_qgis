@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_massbalanceindex <- function(DEM = qgisprocess::qgis_default_value(), HREL = qgisprocess::qgis_default_value(), TSLOPE = qgisprocess::qgis_default_value(), TCURVE = qgisprocess::qgis_default_value(), THREL = qgisprocess::qgis_default_value(), MBI = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_massbalanceindex <- function(DEM = qgisprocess:::qgis_default_value(), HREL = qgisprocess:::qgis_default_value(), TSLOPE = qgisprocess:::qgis_default_value(), TCURVE = qgisprocess:::qgis_default_value(), THREL = qgisprocess:::qgis_default_value(), MBI = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:massbalanceindex")
 
@@ -38,6 +38,6 @@ saga_massbalanceindex <- function(DEM = qgisprocess::qgis_default_value(), HREL 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MBI")
+    qgisprocess::qgis_extract_output(output, "MBI")
   }
 }

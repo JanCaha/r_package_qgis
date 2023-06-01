@@ -5,14 +5,14 @@
 \title{QGIS algorithm Multi-band variation}
 \usage{
 saga_multibandvariation(
-  BANDS = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_WEIGHTING = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_IDW_POWER = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_BANDWIDTH = qgisprocess::qgis_default_value(),
-  MEAN = qgisprocess::qgis_default_value(),
-  STDDEV = qgisprocess::qgis_default_value(),
-  DIFF = qgisprocess::qgis_default_value(),
+  BANDS = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  DISTANCE_WEIGHTING_WEIGHTING = qgisprocess:::qgis_default_value(),
+  DISTANCE_WEIGHTING_IDW_POWER = qgisprocess:::qgis_default_value(),
+  DISTANCE_WEIGHTING_BANDWIDTH = qgisprocess:::qgis_default_value(),
+  MEAN = qgisprocess:::qgis_default_value(),
+  STDDEV = qgisprocess:::qgis_default_value(),
+  DIFF = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

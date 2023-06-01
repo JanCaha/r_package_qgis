@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_gradientvectorfrompolartocartesiancoordinates <- function(DIR = qgisprocess::qgis_default_value(), LEN = qgisprocess::qgis_default_value(), UNITS = qgisprocess::qgis_default_value(), SYSTEM = qgisprocess::qgis_default_value(), SYSTEM_ZERO = qgisprocess::qgis_default_value(), SYSTEM_ORIENT = qgisprocess::qgis_default_value(), DX = qgisprocess::qgis_default_value(), DY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_gradientvectorfrompolartocartesiancoordinates <- function(DIR = qgisprocess:::qgis_default_value(), LEN = qgisprocess:::qgis_default_value(), UNITS = qgisprocess:::qgis_default_value(), SYSTEM = qgisprocess:::qgis_default_value(), SYSTEM_ZERO = qgisprocess:::qgis_default_value(), SYSTEM_ORIENT = qgisprocess:::qgis_default_value(), DX = qgisprocess:::qgis_default_value(), DY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:gradientvectorfrompolartocartesiancoordinates")
 
@@ -41,6 +41,6 @@ saga_gradientvectorfrompolartocartesiancoordinates <- function(DIR = qgisprocess
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DX")
+    qgisprocess::qgis_extract_output(output, "DX")
   }
 }

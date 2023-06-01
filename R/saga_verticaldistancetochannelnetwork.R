@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_verticaldistancetochannelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), BASELEVEL = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_verticaldistancetochannelnetwork <- function(ELEVATION = qgisprocess:::qgis_default_value(), CHANNELS = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(), DISTANCE = qgisprocess:::qgis_default_value(), BASELEVEL = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:verticaldistancetochannelnetwork")
 
@@ -38,6 +38,6 @@ saga_verticaldistancetochannelnetwork <- function(ELEVATION = qgisprocess::qgis_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BASELEVEL")
+    qgisprocess::qgis_extract_output(output, "BASELEVEL")
   }
 }

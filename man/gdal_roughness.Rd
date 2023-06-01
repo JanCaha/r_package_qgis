@@ -5,11 +5,11 @@
 \title{QGIS algorithm Roughness}
 \usage{
 gdal_roughness(
-  INPUT = qgisprocess::qgis_default_value(),
-  BAND = qgisprocess::qgis_default_value(),
-  COMPUTE_EDGES = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BAND = qgisprocess:::qgis_default_value(),
+  COMPUTE_EDGES = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

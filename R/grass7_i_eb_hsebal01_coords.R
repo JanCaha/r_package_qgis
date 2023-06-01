@@ -31,9 +31,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_i_eb_hsebal01_coords <- function(netradiation = qgisprocess::qgis_default_value(), soilheatflux = qgisprocess::qgis_default_value(), aerodynresistance = qgisprocess::qgis_default_value(), temperaturemeansealevel = qgisprocess::qgis_default_value(), frictionvelocitystar = qgisprocess::qgis_default_value(), vapourpressureactual = qgisprocess::qgis_default_value(), row_wet_pixel = qgisprocess::qgis_default_value(), column_wet_pixel = qgisprocess::qgis_default_value(), row_dry_pixel = qgisprocess::qgis_default_value(), column_dry_pixel = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_i_eb_hsebal01_coords <- function(netradiation = qgisprocess:::qgis_default_value(), soilheatflux = qgisprocess:::qgis_default_value(), aerodynresistance = qgisprocess:::qgis_default_value(), temperaturemeansealevel = qgisprocess:::qgis_default_value(), frictionvelocitystar = qgisprocess:::qgis_default_value(), vapourpressureactual = qgisprocess:::qgis_default_value(), row_wet_pixel = qgisprocess:::qgis_default_value(), column_wet_pixel = qgisprocess:::qgis_default_value(), row_dry_pixel = qgisprocess:::qgis_default_value(), column_dry_pixel = qgisprocess:::qgis_default_value(), .a = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.eb.hsebal01.coords")
 
@@ -49,6 +49,6 @@ grass7_i_eb_hsebal01_coords <- function(netradiation = qgisprocess::qgis_default
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

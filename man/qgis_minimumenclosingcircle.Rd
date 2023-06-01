@@ -5,9 +5,9 @@
 \title{QGIS algorithm Minimum enclosing circles}
 \usage{
 qgis_minimumenclosingcircle(
-  INPUT = qgisprocess::qgis_default_value(),
-  SEGMENTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  SEGMENTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,14 +5,14 @@
 \title{QGIS algorithm Angmap}
 \usage{
 saga_angmap(
-  DEM = qgisprocess::qgis_default_value(),
-  C = qgisprocess::qgis_default_value(),
-  D = qgisprocess::qgis_default_value(),
-  fB = qgisprocess::qgis_default_value(),
-  fC = qgisprocess::qgis_default_value(),
-  E = qgisprocess::qgis_default_value(),
-  F = qgisprocess::qgis_default_value(),
-  G = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  C = qgisprocess:::qgis_default_value(),
+  D = qgisprocess:::qgis_default_value(),
+  fB = qgisprocess:::qgis_default_value(),
+  fC = qgisprocess:::qgis_default_value(),
+  E = qgisprocess:::qgis_default_value(),
+  F = qgisprocess:::qgis_default_value(),
+  G = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

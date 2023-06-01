@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_rastersurfacevolume <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), LEVEL = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(), OUTPUT_TABLE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_rastersurfacevolume <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), LEVEL = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess:::qgis_default_value(), OUTPUT_TABLE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:rastersurfacevolume")
 
@@ -42,6 +42,6 @@ qgis_rastersurfacevolume <- function(INPUT = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "AREA")
+    qgisprocess::qgis_extract_output(output, "AREA")
   }
 }

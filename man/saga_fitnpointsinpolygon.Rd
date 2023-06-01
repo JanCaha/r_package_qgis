@@ -5,9 +5,9 @@
 \title{QGIS algorithm Fit n points in polygon}
 \usage{
 saga_fitnpointsinpolygon(
-  SHAPES = qgisprocess::qgis_default_value(),
-  NUMPOINTS = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  NUMPOINTS = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

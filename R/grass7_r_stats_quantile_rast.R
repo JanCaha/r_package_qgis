@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_stats_quantile_rast <- function(base = qgisprocess::qgis_default_value(), cover = qgisprocess::qgis_default_value(), quantiles = qgisprocess::qgis_default_value(), percentiles = qgisprocess::qgis_default_value(), bins = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_stats_quantile_rast <- function(base = qgisprocess:::qgis_default_value(), cover = qgisprocess:::qgis_default_value(), quantiles = qgisprocess:::qgis_default_value(), percentiles = qgisprocess:::qgis_default_value(), bins = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.stats.quantile.rast")
 
@@ -41,6 +41,6 @@ grass7_r_stats_quantile_rast <- function(base = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

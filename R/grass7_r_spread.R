@@ -37,9 +37,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_spread <- function(base_ros = qgisprocess::qgis_default_value(), max_ros = qgisprocess::qgis_default_value(), direction_ros = qgisprocess::qgis_default_value(), start = qgisprocess::qgis_default_value(), spotting_distance = qgisprocess::qgis_default_value(), wind_speed = qgisprocess::qgis_default_value(), fuel_moisture = qgisprocess::qgis_default_value(), backdrop = qgisprocess::qgis_default_value(), least_size = qgisprocess::qgis_default_value(), comp_dens = qgisprocess::qgis_default_value(), init_time = qgisprocess::qgis_default_value(), lag = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), x_output = qgisprocess::qgis_default_value(), y_output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_spread <- function(base_ros = qgisprocess:::qgis_default_value(), max_ros = qgisprocess:::qgis_default_value(), direction_ros = qgisprocess:::qgis_default_value(), start = qgisprocess:::qgis_default_value(), spotting_distance = qgisprocess:::qgis_default_value(), wind_speed = qgisprocess:::qgis_default_value(), fuel_moisture = qgisprocess:::qgis_default_value(), backdrop = qgisprocess:::qgis_default_value(), least_size = qgisprocess:::qgis_default_value(), comp_dens = qgisprocess:::qgis_default_value(), init_time = qgisprocess:::qgis_default_value(), lag = qgisprocess:::qgis_default_value(), .s = qgisprocess:::qgis_default_value(), .i = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), x_output = qgisprocess:::qgis_default_value(), y_output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.spread")
 
@@ -55,6 +55,6 @@ grass7_r_spread <- function(base_ros = qgisprocess::qgis_default_value(), max_ro
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_diffusepollutionrisk <- function(DEM = qgisprocess::qgis_default_value(), CHANNEL = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), WEIGHT_DEFAULT = qgisprocess::qgis_default_value(), RAIN = qgisprocess::qgis_default_value(), RAIN_DEFAULT = qgisprocess::qgis_default_value(), DELIVERY = qgisprocess::qgis_default_value(), RISK_POINT = qgisprocess::qgis_default_value(), RISK_DIFFUSE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CHANNEL_START = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_diffusepollutionrisk <- function(DEM = qgisprocess:::qgis_default_value(), CHANNEL = qgisprocess:::qgis_default_value(), WEIGHT = qgisprocess:::qgis_default_value(), WEIGHT_DEFAULT = qgisprocess:::qgis_default_value(), RAIN = qgisprocess:::qgis_default_value(), RAIN_DEFAULT = qgisprocess:::qgis_default_value(), DELIVERY = qgisprocess:::qgis_default_value(), RISK_POINT = qgisprocess:::qgis_default_value(), RISK_DIFFUSE = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), CHANNEL_START = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:diffusepollutionrisk")
 
@@ -45,6 +45,6 @@ saga_diffusepollutionrisk <- function(DEM = qgisprocess::qgis_default_value(), C
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DELIVERY")
+    qgisprocess::qgis_extract_output(output, "DELIVERY")
   }
 }

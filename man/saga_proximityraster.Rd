@@ -5,10 +5,10 @@
 \title{QGIS algorithm Proximity raster}
 \usage{
 saga_proximityraster(
-  FEATURES = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  DIRECTION = qgisprocess::qgis_default_value(),
-  ALLOCATION = qgisprocess::qgis_default_value(),
+  FEATURES = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  DIRECTION = qgisprocess:::qgis_default_value(),
+  ALLOCATION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

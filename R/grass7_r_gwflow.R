@@ -46,9 +46,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_gwflow <- function(phead = qgisprocess::qgis_default_value(), status = qgisprocess::qgis_default_value(), hc_x = qgisprocess::qgis_default_value(), hc_y = qgisprocess::qgis_default_value(), q = qgisprocess::qgis_default_value(), s = qgisprocess::qgis_default_value(), recharge = qgisprocess::qgis_default_value(), top = qgisprocess::qgis_default_value(), bottom = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), river_bed = qgisprocess::qgis_default_value(), river_head = qgisprocess::qgis_default_value(), river_leak = qgisprocess::qgis_default_value(), drain_bed = qgisprocess::qgis_default_value(), drain_leak = qgisprocess::qgis_default_value(), dtime = qgisprocess::qgis_default_value(), maxit = qgisprocess::qgis_default_value(), error = qgisprocess::qgis_default_value(), solver = qgisprocess::qgis_default_value(), relax = qgisprocess::qgis_default_value(), .f = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), vx = qgisprocess::qgis_default_value(), vy = qgisprocess::qgis_default_value(), budget = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_gwflow <- function(phead = qgisprocess:::qgis_default_value(), status = qgisprocess:::qgis_default_value(), hc_x = qgisprocess:::qgis_default_value(), hc_y = qgisprocess:::qgis_default_value(), q = qgisprocess:::qgis_default_value(), s = qgisprocess:::qgis_default_value(), recharge = qgisprocess:::qgis_default_value(), top = qgisprocess:::qgis_default_value(), bottom = qgisprocess:::qgis_default_value(), type = qgisprocess:::qgis_default_value(), river_bed = qgisprocess:::qgis_default_value(), river_head = qgisprocess:::qgis_default_value(), river_leak = qgisprocess:::qgis_default_value(), drain_bed = qgisprocess:::qgis_default_value(), drain_leak = qgisprocess:::qgis_default_value(), dtime = qgisprocess:::qgis_default_value(), maxit = qgisprocess:::qgis_default_value(), error = qgisprocess:::qgis_default_value(), solver = qgisprocess:::qgis_default_value(), relax = qgisprocess:::qgis_default_value(), .f = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), vx = qgisprocess:::qgis_default_value(), vy = qgisprocess:::qgis_default_value(), budget = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.gwflow")
 
@@ -64,6 +64,6 @@ grass7_r_gwflow <- function(phead = qgisprocess::qgis_default_value(), status = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "budget")
+    qgisprocess::qgis_extract_output(output, "budget")
   }
 }

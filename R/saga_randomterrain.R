@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_randomterrain <- function(RADIUS = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), TARGET_DEFINITION = qgisprocess::qgis_default_value(), TARGET_USER_SIZE = qgisprocess::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess::qgis_default_value(), TARGET_USER_FITS = qgisprocess::qgis_default_value(), TARGET_TEMPLATE = qgisprocess::qgis_default_value(), TARGET_OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_randomterrain <- function(RADIUS = qgisprocess:::qgis_default_value(), ITERATIONS = qgisprocess:::qgis_default_value(), TARGET_DEFINITION = qgisprocess:::qgis_default_value(), TARGET_USER_SIZE = qgisprocess:::qgis_default_value(), TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX = qgisprocess:::qgis_default_value(), TARGET_USER_FITS = qgisprocess:::qgis_default_value(), TARGET_TEMPLATE = qgisprocess:::qgis_default_value(), TARGET_OUT_GRID = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:randomterrain")
 
@@ -40,6 +40,6 @@ saga_randomterrain <- function(RADIUS = qgisprocess::qgis_default_value(), ITERA
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "TARGET_OUT_GRID")
+    qgisprocess::qgis_extract_output(output, "TARGET_OUT_GRID")
   }
 }

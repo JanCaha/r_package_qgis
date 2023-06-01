@@ -5,11 +5,11 @@
 \title{QGIS algorithm Geometric figures}
 \usage{
 saga_geometricfigures(
-  CELL_COUNT = qgisprocess::qgis_default_value(),
-  CELL_SIZE = qgisprocess::qgis_default_value(),
-  FIGURE = qgisprocess::qgis_default_value(),
-  PLANE = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  CELL_COUNT = qgisprocess:::qgis_default_value(),
+  CELL_SIZE = qgisprocess:::qgis_default_value(),
+  FIGURE = qgisprocess:::qgis_default_value(),
+  PLANE = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

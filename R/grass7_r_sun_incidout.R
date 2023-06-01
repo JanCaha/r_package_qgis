@@ -50,9 +50,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_sun_incidout <- function(elevation = qgisprocess::qgis_default_value(), aspect = qgisprocess::qgis_default_value(), aspect_value = qgisprocess::qgis_default_value(), slope = qgisprocess::qgis_default_value(), slope_value = qgisprocess::qgis_default_value(), linke = qgisprocess::qgis_default_value(), albedo = qgisprocess::qgis_default_value(), albedo_value = qgisprocess::qgis_default_value(), lat = qgisprocess::qgis_default_value(), long = qgisprocess::qgis_default_value(), coeff_bh = qgisprocess::qgis_default_value(), coeff_dh = qgisprocess::qgis_default_value(), horizon_basemap = qgisprocess::qgis_default_value(), horizon_step = qgisprocess::qgis_default_value(), day = qgisprocess::qgis_default_value(), step = qgisprocess::qgis_default_value(), declination = qgisprocess::qgis_default_value(), distance_step = qgisprocess::qgis_default_value(), npartitions = qgisprocess::qgis_default_value(), civil_time = qgisprocess::qgis_default_value(), time = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), incidout = qgisprocess::qgis_default_value(), beam_rad = qgisprocess::qgis_default_value(), diff_rad = qgisprocess::qgis_default_value(), refl_rad = qgisprocess::qgis_default_value(), glob_rad = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_sun_incidout <- function(elevation = qgisprocess:::qgis_default_value(), aspect = qgisprocess:::qgis_default_value(), aspect_value = qgisprocess:::qgis_default_value(), slope = qgisprocess:::qgis_default_value(), slope_value = qgisprocess:::qgis_default_value(), linke = qgisprocess:::qgis_default_value(), albedo = qgisprocess:::qgis_default_value(), albedo_value = qgisprocess:::qgis_default_value(), lat = qgisprocess:::qgis_default_value(), long = qgisprocess:::qgis_default_value(), coeff_bh = qgisprocess:::qgis_default_value(), coeff_dh = qgisprocess:::qgis_default_value(), horizon_basemap = qgisprocess:::qgis_default_value(), horizon_step = qgisprocess:::qgis_default_value(), day = qgisprocess:::qgis_default_value(), step = qgisprocess:::qgis_default_value(), declination = qgisprocess:::qgis_default_value(), distance_step = qgisprocess:::qgis_default_value(), npartitions = qgisprocess:::qgis_default_value(), civil_time = qgisprocess:::qgis_default_value(), time = qgisprocess:::qgis_default_value(), .p = qgisprocess:::qgis_default_value(), .m = qgisprocess:::qgis_default_value(), incidout = qgisprocess:::qgis_default_value(), beam_rad = qgisprocess:::qgis_default_value(), diff_rad = qgisprocess:::qgis_default_value(), refl_rad = qgisprocess:::qgis_default_value(), glob_rad = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.sun.incidout")
 
@@ -68,6 +68,6 @@ grass7_r_sun_incidout <- function(elevation = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "beam_rad")
+    qgisprocess::qgis_extract_output(output, "beam_rad")
   }
 }

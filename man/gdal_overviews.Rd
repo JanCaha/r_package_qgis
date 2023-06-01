@@ -5,12 +5,12 @@
 \title{QGIS algorithm Build overviews (pyramids)}
 \usage{
 gdal_overviews(
-  INPUT = qgisprocess::qgis_default_value(),
-  CLEAN = qgisprocess::qgis_default_value(),
-  LEVELS = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  FORMAT = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  CLEAN = qgisprocess:::qgis_default_value(),
+  LEVELS = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  FORMAT = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

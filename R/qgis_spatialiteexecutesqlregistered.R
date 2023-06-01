@@ -1,6 +1,6 @@
 character(0)
 
-qgis_spatialiteexecutesqlregistered <- function(DATABASE = qgisprocess::qgis_default_value(), SQL = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_spatialiteexecutesqlregistered <- function(DATABASE = qgisprocess:::qgis_default_value(), SQL = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:spatialiteexecutesqlregistered")
 
@@ -16,6 +16,6 @@ qgis_spatialiteexecutesqlregistered <- function(DATABASE = qgisprocess::qgis_def
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

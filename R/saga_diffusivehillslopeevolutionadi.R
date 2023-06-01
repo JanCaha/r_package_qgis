@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_diffusivehillslopeevolutionadi <- function(DEM = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), UPDATE = qgisprocess::qgis_default_value(), KAPPA = qgisprocess::qgis_default_value(), DURATION = qgisprocess::qgis_default_value(), TIMESTEP = qgisprocess::qgis_default_value(), DTIME = qgisprocess::qgis_default_value(), MODEL = qgisprocess::qgis_default_value(), DIFF = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_diffusivehillslopeevolutionadi <- function(DEM = qgisprocess:::qgis_default_value(), CHANNELS = qgisprocess:::qgis_default_value(), UPDATE = qgisprocess:::qgis_default_value(), KAPPA = qgisprocess:::qgis_default_value(), DURATION = qgisprocess:::qgis_default_value(), TIMESTEP = qgisprocess:::qgis_default_value(), DTIME = qgisprocess:::qgis_default_value(), MODEL = qgisprocess:::qgis_default_value(), DIFF = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:diffusivehillslopeevolutionadi")
 
@@ -42,6 +42,6 @@ saga_diffusivehillslopeevolutionadi <- function(DEM = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DIFF")
+    qgisprocess::qgis_extract_output(output, "DIFF")
   }
 }

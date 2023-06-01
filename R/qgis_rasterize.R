@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_rasterize <- function(EXTENT = qgisprocess::qgis_default_value(), EXTENT_BUFFER = qgisprocess::qgis_default_value(), TILE_SIZE = qgisprocess::qgis_default_value(), MAP_UNITS_PER_PIXEL = qgisprocess::qgis_default_value(), MAKE_BACKGROUND_TRANSPARENT = qgisprocess::qgis_default_value(), MAP_THEME = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_rasterize <- function(EXTENT = qgisprocess:::qgis_default_value(), EXTENT_BUFFER = qgisprocess:::qgis_default_value(), TILE_SIZE = qgisprocess:::qgis_default_value(), MAP_UNITS_PER_PIXEL = qgisprocess:::qgis_default_value(), MAKE_BACKGROUND_TRANSPARENT = qgisprocess:::qgis_default_value(), MAP_THEME = qgisprocess:::qgis_default_value(), LAYERS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:rasterize")
 
@@ -40,6 +40,6 @@ qgis_rasterize <- function(EXTENT = qgisprocess::qgis_default_value(), EXTENT_BU
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -5,13 +5,13 @@
 \title{QGIS algorithm Join attributes by location (summary)}
 \usage{
 qgis_joinbylocationsummary(
-  INPUT = qgisprocess::qgis_default_value(),
-  PREDICATE = qgisprocess::qgis_default_value(),
-  JOIN = qgisprocess::qgis_default_value(),
-  JOIN_FIELDS = qgisprocess::qgis_default_value(),
-  SUMMARIES = qgisprocess::qgis_default_value(),
-  DISCARD_NONMATCHING = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  PREDICATE = qgisprocess:::qgis_default_value(),
+  JOIN = qgisprocess:::qgis_default_value(),
+  JOIN_FIELDS = qgisprocess:::qgis_default_value(),
+  SUMMARIES = qgisprocess:::qgis_default_value(),
+  DISCARD_NONMATCHING = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

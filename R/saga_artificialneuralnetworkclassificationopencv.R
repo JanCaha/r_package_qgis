@@ -34,9 +34,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_artificialneuralnetworkclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), ANN_LAYERS = qgisprocess::qgis_default_value(), ANN_NEURONS = qgisprocess::qgis_default_value(), ANN_MAXITER = qgisprocess::qgis_default_value(), ANN_EPSILON = qgisprocess::qgis_default_value(), ANN_ACTIVATION = qgisprocess::qgis_default_value(), ANN_ACT_ALPHA = qgisprocess::qgis_default_value(), ANN_ACT_BETA = qgisprocess::qgis_default_value(), ANN_PROPAGATION = qgisprocess::qgis_default_value(), ANN_RP_DW0 = qgisprocess::qgis_default_value(), ANN_RP_DW_PLUS = qgisprocess::qgis_default_value(), ANN_RP_DW_MINUS = qgisprocess::qgis_default_value(), ANN_RP_DW_MIN = qgisprocess::qgis_default_value(), ANN_RP_DW_MAX = qgisprocess::qgis_default_value(), ANN_BP_DW = qgisprocess::qgis_default_value(), ANN_BP_MOMENT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_artificialneuralnetworkclassificationopencv <- function(FEATURES = qgisprocess:::qgis_default_value(), NORMALIZE = qgisprocess:::qgis_default_value(), TRAIN_AREAS = qgisprocess:::qgis_default_value(), TRAIN_CLASS = qgisprocess:::qgis_default_value(), CLASSES = qgisprocess:::qgis_default_value(), ANN_LAYERS = qgisprocess:::qgis_default_value(), ANN_NEURONS = qgisprocess:::qgis_default_value(), ANN_MAXITER = qgisprocess:::qgis_default_value(), ANN_EPSILON = qgisprocess:::qgis_default_value(), ANN_ACTIVATION = qgisprocess:::qgis_default_value(), ANN_ACT_ALPHA = qgisprocess:::qgis_default_value(), ANN_ACT_BETA = qgisprocess:::qgis_default_value(), ANN_PROPAGATION = qgisprocess:::qgis_default_value(), ANN_RP_DW0 = qgisprocess:::qgis_default_value(), ANN_RP_DW_PLUS = qgisprocess:::qgis_default_value(), ANN_RP_DW_MINUS = qgisprocess:::qgis_default_value(), ANN_RP_DW_MIN = qgisprocess:::qgis_default_value(), ANN_RP_DW_MAX = qgisprocess:::qgis_default_value(), ANN_BP_DW = qgisprocess:::qgis_default_value(), ANN_BP_MOMENT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:artificialneuralnetworkclassificationopencv")
 
@@ -52,6 +52,6 @@ saga_artificialneuralnetworkclassificationopencv <- function(FEATURES = qgisproc
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLASSES")
+    qgisprocess::qgis_extract_output(output, "CLASSES")
   }
 }

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Filter vertices by M value}
 \usage{
 qgis_filterverticesbym(
-  INPUT = qgisprocess::qgis_default_value(),
-  MIN = qgisprocess::qgis_default_value(),
-  MAX = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  MIN = qgisprocess:::qgis_default_value(),
+  MAX = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

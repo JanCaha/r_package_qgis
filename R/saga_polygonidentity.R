@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_polygonidentity <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_polygonidentity <- function(A = qgisprocess:::qgis_default_value(), B = qgisprocess:::qgis_default_value(), SPLIT = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:polygonidentity")
 
@@ -36,6 +36,6 @@ saga_polygonidentity <- function(A = qgisprocess::qgis_default_value(), B = qgis
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

@@ -5,9 +5,9 @@
 \title{QGIS algorithm Fuzzy intersection (and)}
 \usage{
 saga_fuzzyintersectionand(
-  GRIDS = qgisprocess::qgis_default_value(),
-  TYPE = qgisprocess::qgis_default_value(),
-  AND = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  TYPE = qgisprocess:::qgis_default_value(),
+  AND = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

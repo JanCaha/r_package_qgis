@@ -5,13 +5,13 @@
 \title{QGIS algorithm DBSCAN clustering}
 \usage{
 qgis_dbscanclustering(
-  INPUT = qgisprocess::qgis_default_value(),
-  MIN_SIZE = qgisprocess::qgis_default_value(),
-  EPS = qgisprocess::qgis_default_value(),
-  DBSCAN = qgisprocess::qgis_default_value(),
-  FIELD_NAME = qgisprocess::qgis_default_value(),
-  SIZE_FIELD_NAME = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  MIN_SIZE = qgisprocess:::qgis_default_value(),
+  EPS = qgisprocess:::qgis_default_value(),
+  DBSCAN = qgisprocess:::qgis_default_value(),
+  FIELD_NAME = qgisprocess:::qgis_default_value(),
+  SIZE_FIELD_NAME = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

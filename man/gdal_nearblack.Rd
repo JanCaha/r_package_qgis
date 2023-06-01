@@ -5,12 +5,12 @@
 \title{QGIS algorithm Near black}
 \usage{
 gdal_nearblack(
-  INPUT = qgisprocess::qgis_default_value(),
-  NEAR = qgisprocess::qgis_default_value(),
-  WHITE = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  NEAR = qgisprocess:::qgis_default_value(),
+  WHITE = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

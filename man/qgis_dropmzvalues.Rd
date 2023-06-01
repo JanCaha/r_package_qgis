@@ -5,10 +5,10 @@
 \title{QGIS algorithm Drop M/Z values}
 \usage{
 qgis_dropmzvalues(
-  INPUT = qgisprocess::qgis_default_value(),
-  DROP_M_VALUES = qgisprocess::qgis_default_value(),
-  DROP_Z_VALUES = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  DROP_M_VALUES = qgisprocess:::qgis_default_value(),
+  DROP_Z_VALUES = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

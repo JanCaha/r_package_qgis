@@ -5,10 +5,10 @@
 \title{QGIS algorithm Orthogonalize}
 \usage{
 qgis_orthogonalize(
-  INPUT = qgisprocess::qgis_default_value(),
-  ANGLE_TOLERANCE = qgisprocess::qgis_default_value(),
-  MAX_ITERATIONS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  ANGLE_TOLERANCE = qgisprocess:::qgis_default_value(),
+  MAX_ITERATIONS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

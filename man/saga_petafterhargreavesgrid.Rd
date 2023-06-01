@@ -5,14 +5,14 @@
 \title{QGIS algorithm Pet (after hargreaves, grid)}
 \usage{
 saga_petafterhargreavesgrid(
-  T = qgisprocess::qgis_default_value(),
-  T_MIN = qgisprocess::qgis_default_value(),
-  T_MAX = qgisprocess::qgis_default_value(),
-  PET = qgisprocess::qgis_default_value(),
-  LAT = qgisprocess::qgis_default_value(),
-  TIME = qgisprocess::qgis_default_value(),
-  MONTH = qgisprocess::qgis_default_value(),
-  DAY = qgisprocess::qgis_default_value(),
+  T = qgisprocess:::qgis_default_value(),
+  T_MIN = qgisprocess:::qgis_default_value(),
+  T_MAX = qgisprocess:::qgis_default_value(),
+  PET = qgisprocess:::qgis_default_value(),
+  LAT = qgisprocess:::qgis_default_value(),
+  TIME = qgisprocess:::qgis_default_value(),
+  MONTH = qgisprocess:::qgis_default_value(),
+  DAY = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

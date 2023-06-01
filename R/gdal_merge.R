@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_merge <- function(INPUT = qgisprocess::qgis_default_value(), PCT = qgisprocess::qgis_default_value(), SEPARATE = qgisprocess::qgis_default_value(), NODATA_INPUT = qgisprocess::qgis_default_value(), NODATA_OUTPUT = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_merge <- function(INPUT = qgisprocess:::qgis_default_value(), PCT = qgisprocess:::qgis_default_value(), SEPARATE = qgisprocess:::qgis_default_value(), NODATA_INPUT = qgisprocess:::qgis_default_value(), NODATA_OUTPUT = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), DATA_TYPE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:merge")
 
@@ -41,6 +41,6 @@ gdal_merge <- function(INPUT = qgisprocess::qgis_default_value(), PCT = qgisproc
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

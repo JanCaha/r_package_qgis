@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_pointstatisticsforpolygons <- function(POINTS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_pointstatisticsforpolygons <- function(POINTS = qgisprocess:::qgis_default_value(), POLYGONS = qgisprocess:::qgis_default_value(), FIELDS = qgisprocess:::qgis_default_value(), FIELD_NAME = qgisprocess:::qgis_default_value(), STATISTICS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:pointstatisticsforpolygons")
 
@@ -37,6 +37,6 @@ saga_pointstatisticsforpolygons <- function(POINTS = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "STATISTICS")
+    qgisprocess::qgis_extract_output(output, "STATISTICS")
   }
 }

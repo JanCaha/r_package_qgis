@@ -5,13 +5,13 @@
 \title{QGIS algorithm Destriping}
 \usage{
 saga_destriping(
-  INPUT = qgisprocess::qgis_default_value(),
-  RESULT3 = qgisprocess::qgis_default_value(),
-  RESULT1 = qgisprocess::qgis_default_value(),
-  RESULT2 = qgisprocess::qgis_default_value(),
-  ANG = qgisprocess::qgis_default_value(),
-  R = qgisprocess::qgis_default_value(),
-  D = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RESULT3 = qgisprocess:::qgis_default_value(),
+  RESULT1 = qgisprocess:::qgis_default_value(),
+  RESULT2 = qgisprocess:::qgis_default_value(),
+  ANG = qgisprocess:::qgis_default_value(),
+  R = qgisprocess:::qgis_default_value(),
+  D = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

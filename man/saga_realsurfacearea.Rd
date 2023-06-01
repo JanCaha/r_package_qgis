@@ -5,8 +5,8 @@
 \title{QGIS algorithm Real surface area}
 \usage{
 saga_realsurfacearea(
-  DEM = qgisprocess::qgis_default_value(),
-  AREA = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  AREA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

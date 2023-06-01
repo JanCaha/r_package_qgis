@@ -5,13 +5,13 @@
 \title{QGIS algorithm r.out.ppm3}
 \usage{
 grass7_r_out_ppm3(
-  red = qgisprocess::qgis_default_value(),
-  green = qgisprocess::qgis_default_value(),
-  blue = qgisprocess::qgis_default_value(),
-  .c = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  red = qgisprocess:::qgis_default_value(),
+  green = qgisprocess:::qgis_default_value(),
+  blue = qgisprocess:::qgis_default_value(),
+  .c = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

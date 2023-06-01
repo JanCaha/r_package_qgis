@@ -5,10 +5,10 @@
 \title{QGIS algorithm Extract M values}
 \usage{
 qgis_extractmvalues(
-  INPUT = qgisprocess::qgis_default_value(),
-  SUMMARIES = qgisprocess::qgis_default_value(),
-  COLUMN_PREFIX = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  SUMMARIES = qgisprocess:::qgis_default_value(),
+  COLUMN_PREFIX = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

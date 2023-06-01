@@ -16,9 +16,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_convertpolygonstolines <- function(POLYGONS = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_convertpolygonstolines <- function(POLYGONS = qgisprocess:::qgis_default_value(), LINES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:convertpolygonstolines")
 
@@ -34,6 +34,6 @@ saga_convertpolygonstolines <- function(POLYGONS = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "LINES")
+    qgisprocess::qgis_extract_output(output, "LINES")
   }
 }

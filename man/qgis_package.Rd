@@ -5,12 +5,12 @@
 \title{QGIS algorithm Package layers}
 \usage{
 qgis_package(
-  LAYERS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  OVERWRITE = qgisprocess::qgis_default_value(),
-  SAVE_STYLES = qgisprocess::qgis_default_value(),
-  SAVE_METADATA = qgisprocess::qgis_default_value(),
-  SELECTED_FEATURES_ONLY = qgisprocess::qgis_default_value(),
+  LAYERS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  OVERWRITE = qgisprocess:::qgis_default_value(),
+  SAVE_STYLES = qgisprocess:::qgis_default_value(),
+  SAVE_METADATA = qgisprocess:::qgis_default_value(),
+  SELECTED_FEATURES_ONLY = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,11 +5,11 @@
 \title{QGIS algorithm Watershed basins}
 \usage{
 saga_watershedbasins(
-  ELEVATION = qgisprocess::qgis_default_value(),
-  CHANNELS = qgisprocess::qgis_default_value(),
-  SINKROUTE = qgisprocess::qgis_default_value(),
-  MINSIZE = qgisprocess::qgis_default_value(),
-  BASINS = qgisprocess::qgis_default_value(),
+  ELEVATION = qgisprocess:::qgis_default_value(),
+  CHANNELS = qgisprocess:::qgis_default_value(),
+  SINKROUTE = qgisprocess:::qgis_default_value(),
+  MINSIZE = qgisprocess:::qgis_default_value(),
+  BASINS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

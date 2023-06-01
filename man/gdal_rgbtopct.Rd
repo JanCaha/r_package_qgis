@@ -5,9 +5,9 @@
 \title{QGIS algorithm RGB to PCT}
 \usage{
 gdal_rgbtopct(
-  INPUT = qgisprocess::qgis_default_value(),
-  NCOLORS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  NCOLORS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

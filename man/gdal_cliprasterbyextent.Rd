@@ -5,14 +5,14 @@
 \title{QGIS algorithm Clip raster by extent}
 \usage{
 gdal_cliprasterbyextent(
-  INPUT = qgisprocess::qgis_default_value(),
-  PROJWIN = qgisprocess::qgis_default_value(),
-  OVERCRS = qgisprocess::qgis_default_value(),
-  NODATA = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  DATA_TYPE = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  PROJWIN = qgisprocess:::qgis_default_value(),
+  OVERCRS = qgisprocess:::qgis_default_value(),
+  NODATA = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  DATA_TYPE = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

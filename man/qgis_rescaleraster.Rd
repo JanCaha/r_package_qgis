@@ -5,12 +5,12 @@
 \title{QGIS algorithm Rescale raster}
 \usage{
 qgis_rescaleraster(
-  INPUT = qgisprocess::qgis_default_value(),
-  BAND = qgisprocess::qgis_default_value(),
-  MINIMUM = qgisprocess::qgis_default_value(),
-  MAXIMUM = qgisprocess::qgis_default_value(),
-  NODATA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BAND = qgisprocess:::qgis_default_value(),
+  MINIMUM = qgisprocess:::qgis_default_value(),
+  MAXIMUM = qgisprocess:::qgis_default_value(),
+  NODATA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

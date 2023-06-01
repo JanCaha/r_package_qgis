@@ -5,10 +5,10 @@
 \title{QGIS algorithm Points thinning}
 \usage{
 saga_pointsthinning(
-  POINTS = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  RESOLUTION = qgisprocess::qgis_default_value(),
-  THINNED = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  RESOLUTION = qgisprocess:::qgis_default_value(),
+  THINNED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

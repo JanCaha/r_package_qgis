@@ -5,10 +5,10 @@
 \title{QGIS algorithm Transpose raster layers}
 \usage{
 saga_transposerasterlayers(
-  GRIDS = qgisprocess::qgis_default_value(),
-  MIRROR_X = qgisprocess::qgis_default_value(),
-  MIRROR_Y = qgisprocess::qgis_default_value(),
-  TRANSPOSED = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  MIRROR_X = qgisprocess:::qgis_default_value(),
+  MIRROR_Y = qgisprocess:::qgis_default_value(),
+  TRANSPOSED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

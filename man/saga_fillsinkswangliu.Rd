@@ -5,11 +5,11 @@
 \title{QGIS algorithm Fill sinks (wang & liu)}
 \usage{
 saga_fillsinkswangliu(
-  ELEV = qgisprocess::qgis_default_value(),
-  MINSLOPE = qgisprocess::qgis_default_value(),
-  FILLED = qgisprocess::qgis_default_value(),
-  FDIR = qgisprocess::qgis_default_value(),
-  WSHED = qgisprocess::qgis_default_value(),
+  ELEV = qgisprocess:::qgis_default_value(),
+  MINSLOPE = qgisprocess:::qgis_default_value(),
+  FILLED = qgisprocess:::qgis_default_value(),
+  FDIR = qgisprocess:::qgis_default_value(),
+  WSHED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

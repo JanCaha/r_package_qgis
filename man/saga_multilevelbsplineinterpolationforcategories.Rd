@@ -6,15 +6,15 @@
 \title{QGIS algorithm Multilevel b-spline interpolation for categories}
 \usage{
 saga_multilevelbsplineinterpolationforcategories(
-  SHAPES = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
   TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX =
-    qgisprocess::qgis_default_value(),
-  TARGET_USER_SIZE = qgisprocess::qgis_default_value(),
-  TARGET_USER_FITS = qgisprocess::qgis_default_value(),
-  TARGET_TEMPLATE = qgisprocess::qgis_default_value(),
-  TARGET_CATEGORIES = qgisprocess::qgis_default_value(),
-  TARGET_PROPABILITY = qgisprocess::qgis_default_value(),
+    qgisprocess:::qgis_default_value(),
+  TARGET_USER_SIZE = qgisprocess:::qgis_default_value(),
+  TARGET_USER_FITS = qgisprocess:::qgis_default_value(),
+  TARGET_TEMPLATE = qgisprocess:::qgis_default_value(),
+  TARGET_CATEGORIES = qgisprocess:::qgis_default_value(),
+  TARGET_PROPABILITY = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_i_eb_netrad <- function(albedo = qgisprocess::qgis_default_value(), ndvi = qgisprocess::qgis_default_value(), temperature = qgisprocess::qgis_default_value(), localutctime = qgisprocess::qgis_default_value(), temperaturedifference2m = qgisprocess::qgis_default_value(), emissivity = qgisprocess::qgis_default_value(), transmissivity_singleway = qgisprocess::qgis_default_value(), dayofyear = qgisprocess::qgis_default_value(), sunzenithangle = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_i_eb_netrad <- function(albedo = qgisprocess:::qgis_default_value(), ndvi = qgisprocess:::qgis_default_value(), temperature = qgisprocess:::qgis_default_value(), localutctime = qgisprocess:::qgis_default_value(), temperaturedifference2m = qgisprocess:::qgis_default_value(), emissivity = qgisprocess:::qgis_default_value(), transmissivity_singleway = qgisprocess:::qgis_default_value(), dayofyear = qgisprocess:::qgis_default_value(), sunzenithangle = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.eb.netrad")
 
@@ -46,6 +46,6 @@ grass7_i_eb_netrad <- function(albedo = qgisprocess::qgis_default_value(), ndvi 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

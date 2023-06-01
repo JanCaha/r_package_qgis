@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_writevectortiles_mbtiles <- function(OUTPUT = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), MIN_ZOOM = qgisprocess::qgis_default_value(), MAX_ZOOM = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(), META_NAME = qgisprocess::qgis_default_value(), META_DESCRIPTION = qgisprocess::qgis_default_value(), META_ATTRIBUTION = qgisprocess::qgis_default_value(), META_VERSION = qgisprocess::qgis_default_value(), META_TYPE = qgisprocess::qgis_default_value(), META_CENTER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_writevectortiles_mbtiles <- function(OUTPUT = qgisprocess:::qgis_default_value(), LAYERS = qgisprocess:::qgis_default_value(), MIN_ZOOM = qgisprocess:::qgis_default_value(), MAX_ZOOM = qgisprocess:::qgis_default_value(), EXTENT = qgisprocess:::qgis_default_value(), META_NAME = qgisprocess:::qgis_default_value(), META_DESCRIPTION = qgisprocess:::qgis_default_value(), META_ATTRIBUTION = qgisprocess:::qgis_default_value(), META_VERSION = qgisprocess:::qgis_default_value(), META_TYPE = qgisprocess:::qgis_default_value(), META_CENTER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:writevectortiles_mbtiles")
 
@@ -43,6 +43,6 @@ qgis_writevectortiles_mbtiles <- function(OUTPUT = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -5,8 +5,8 @@
 \title{QGIS algorithm Raster product}
 \usage{
 saga_rasterproduct(
-  GRIDS = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

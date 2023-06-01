@@ -5,13 +5,13 @@
 \title{QGIS algorithm Multi direction lee filter}
 \usage{
 saga_multidirectionleefilter(
-  INPUT = qgisprocess::qgis_default_value(),
-  NOISE_ABS = qgisprocess::qgis_default_value(),
-  NOISE_REL = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  STDDEV = qgisprocess::qgis_default_value(),
-  DIR = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  NOISE_ABS = qgisprocess:::qgis_default_value(),
+  NOISE_REL = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  STDDEV = qgisprocess:::qgis_default_value(),
+  DIR = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Fourier transform (vigra)}
 \usage{
 saga_fouriertransformvigra(
-  INPUT = qgisprocess::qgis_default_value(),
-  REAL = qgisprocess::qgis_default_value(),
-  IMAG = qgisprocess::qgis_default_value(),
-  CENTER = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  REAL = qgisprocess:::qgis_default_value(),
+  IMAG = qgisprocess:::qgis_default_value(),
+  CENTER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

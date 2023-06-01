@@ -5,10 +5,10 @@
 \title{QGIS algorithm Raster pixels to points}
 \usage{
 qgis_pixelstopoints(
-  INPUT_RASTER = qgisprocess::qgis_default_value(),
-  RASTER_BAND = qgisprocess::qgis_default_value(),
-  FIELD_NAME = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT_RASTER = qgisprocess:::qgis_default_value(),
+  RASTER_BAND = qgisprocess:::qgis_default_value(),
+  FIELD_NAME = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

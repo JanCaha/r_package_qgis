@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_constantgrid <- function(NAME = qgisprocess::qgis_default_value(), CONST = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), DEFINITION = qgisprocess::qgis_default_value(), USER_SIZE = qgisprocess::qgis_default_value(), USER_XMIN = qgisprocess::qgis_default_value(), USER_XMAX = qgisprocess::qgis_default_value(), USER_YMIN = qgisprocess::qgis_default_value(), USER_YMAX = qgisprocess::qgis_default_value(), USER_FITS = qgisprocess::qgis_default_value(), TEMPLATE = qgisprocess::qgis_default_value(), OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_constantgrid <- function(NAME = qgisprocess:::qgis_default_value(), CONST = qgisprocess:::qgis_default_value(), TYPE = qgisprocess:::qgis_default_value(), DEFINITION = qgisprocess:::qgis_default_value(), USER_SIZE = qgisprocess:::qgis_default_value(), USER_XMIN = qgisprocess:::qgis_default_value(), USER_XMAX = qgisprocess:::qgis_default_value(), USER_YMIN = qgisprocess:::qgis_default_value(), USER_YMAX = qgisprocess:::qgis_default_value(), USER_FITS = qgisprocess:::qgis_default_value(), TEMPLATE = qgisprocess:::qgis_default_value(), OUT_GRID = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:constantgrid")
 
@@ -44,6 +44,6 @@ saga_constantgrid <- function(NAME = qgisprocess::qgis_default_value(), CONST = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUT_GRID")
+    qgisprocess::qgis_extract_output(output, "OUT_GRID")
   }
 }

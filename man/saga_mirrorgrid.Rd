@@ -5,9 +5,9 @@
 \title{QGIS algorithm Mirror grid}
 \usage{
 saga_mirrorgrid(
-  GRID = qgisprocess::qgis_default_value(),
-  MIRROR = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  MIRROR = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

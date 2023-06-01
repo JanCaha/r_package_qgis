@@ -5,11 +5,11 @@
 \title{QGIS algorithm Zonal histogram}
 \usage{
 qgis_zonalhistogram(
-  INPUT_RASTER = qgisprocess::qgis_default_value(),
-  RASTER_BAND = qgisprocess::qgis_default_value(),
-  INPUT_VECTOR = qgisprocess::qgis_default_value(),
-  COLUMN_PREFIX = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT_RASTER = qgisprocess:::qgis_default_value(),
+  RASTER_BAND = qgisprocess:::qgis_default_value(),
+  INPUT_VECTOR = qgisprocess:::qgis_default_value(),
+  COLUMN_PREFIX = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

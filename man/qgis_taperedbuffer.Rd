@@ -5,11 +5,11 @@
 \title{QGIS algorithm Tapered buffers}
 \usage{
 qgis_taperedbuffer(
-  INPUT = qgisprocess::qgis_default_value(),
-  START_WIDTH = qgisprocess::qgis_default_value(),
-  END_WIDTH = qgisprocess::qgis_default_value(),
-  SEGMENTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  START_WIDTH = qgisprocess:::qgis_default_value(),
+  END_WIDTH = qgisprocess:::qgis_default_value(),
+  SEGMENTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

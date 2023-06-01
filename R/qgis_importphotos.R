@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_importphotos <- function(FOLDER = qgisprocess::qgis_default_value(), RECURSIVE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), INVALID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_importphotos <- function(FOLDER = qgisprocess:::qgis_default_value(), RECURSIVE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), INVALID = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:importphotos")
 
@@ -37,6 +37,6 @@ qgis_importphotos <- function(FOLDER = qgisprocess::qgis_default_value(), RECURS
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "INVALID")
+    qgisprocess::qgis_extract_output(output, "INVALID")
   }
 }

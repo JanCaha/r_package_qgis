@@ -5,8 +5,8 @@
 \title{QGIS algorithm Define Shapefile projection}
 \usage{
 qgis_definecurrentprojection(
-  INPUT = qgisprocess::qgis_default_value(),
-  CRS = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  CRS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

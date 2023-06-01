@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_zonalmultipleregressionanalysispointsandpredictorgrids <- function(PREDICTORS = qgisprocess::qgis_default_value(), ZONES = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), ATTRIBUTE = qgisprocess::qgis_default_value(), RESIDUALS = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), COORD_X = qgisprocess::qgis_default_value(), COORD_Y = qgisprocess::qgis_default_value(), INTERCEPT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), P_VALUE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_zonalmultipleregressionanalysispointsandpredictorgrids <- function(PREDICTORS = qgisprocess:::qgis_default_value(), ZONES = qgisprocess:::qgis_default_value(), POINTS = qgisprocess:::qgis_default_value(), ATTRIBUTE = qgisprocess:::qgis_default_value(), RESIDUALS = qgisprocess:::qgis_default_value(), REGRESSION = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), COORD_X = qgisprocess:::qgis_default_value(), COORD_Y = qgisprocess:::qgis_default_value(), INTERCEPT = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), P_VALUE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:zonalmultipleregressionanalysispointsandpredictorgrids")
 
@@ -45,6 +45,6 @@ saga_zonalmultipleregressionanalysispointsandpredictorgrids <- function(PREDICTO
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REGRESSION")
+    qgisprocess::qgis_extract_output(output, "REGRESSION")
   }
 }

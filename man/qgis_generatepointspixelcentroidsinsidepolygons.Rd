@@ -6,9 +6,9 @@
 \title{QGIS algorithm Generate points (pixel centroids) inside polygons}
 \usage{
 qgis_generatepointspixelcentroidsinsidepolygons(
-  INPUT_RASTER = qgisprocess::qgis_default_value(),
-  INPUT_VECTOR = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT_RASTER = qgisprocess:::qgis_default_value(),
+  INPUT_VECTOR = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

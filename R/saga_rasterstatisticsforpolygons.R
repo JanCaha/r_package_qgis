@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rasterstatisticsforpolygons <- function(GRIDS = qgisprocess::qgis_default_value(), POLYGONS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NAMING = qgisprocess::qgis_default_value(), COUNT = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), QUANTILE = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rasterstatisticsforpolygons <- function(GRIDS = qgisprocess:::qgis_default_value(), POLYGONS = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), NAMING = qgisprocess:::qgis_default_value(), COUNT = qgisprocess:::qgis_default_value(), MIN = qgisprocess:::qgis_default_value(), MAX = qgisprocess:::qgis_default_value(), RANGE = qgisprocess:::qgis_default_value(), SUM = qgisprocess:::qgis_default_value(), MEAN = qgisprocess:::qgis_default_value(), VAR = qgisprocess:::qgis_default_value(), STDDEV = qgisprocess:::qgis_default_value(), QUANTILE = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rasterstatisticsforpolygons")
 
@@ -46,6 +46,6 @@ saga_rasterstatisticsforpolygons <- function(GRIDS = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

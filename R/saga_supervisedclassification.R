@@ -36,9 +36,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_supervisedclassification <- function(GRIDS = qgisprocess::qgis_default_value(), ROI = qgisprocess::qgis_default_value(), ROI_ID = qgisprocess::qgis_default_value(), STATS = qgisprocess::qgis_default_value(), STATS_SRC = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NORMALISE = qgisprocess::qgis_default_value(), THRESHOLD_DIST = qgisprocess::qgis_default_value(), THRESHOLD_PROB = qgisprocess::qgis_default_value(), RELATIVE_PROB = qgisprocess::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess::qgis_default_value(), WTA_0 = qgisprocess::qgis_default_value(), WTA_1 = qgisprocess::qgis_default_value(), WTA_2 = qgisprocess::qgis_default_value(), WTA_3 = qgisprocess::qgis_default_value(), WTA_4 = qgisprocess::qgis_default_value(), WTA_5 = qgisprocess::qgis_default_value(), CLASS_INFO = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_supervisedclassification <- function(GRIDS = qgisprocess:::qgis_default_value(), ROI = qgisprocess:::qgis_default_value(), ROI_ID = qgisprocess:::qgis_default_value(), STATS = qgisprocess:::qgis_default_value(), STATS_SRC = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), NORMALISE = qgisprocess:::qgis_default_value(), THRESHOLD_DIST = qgisprocess:::qgis_default_value(), THRESHOLD_PROB = qgisprocess:::qgis_default_value(), RELATIVE_PROB = qgisprocess:::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess:::qgis_default_value(), WTA_0 = qgisprocess:::qgis_default_value(), WTA_1 = qgisprocess:::qgis_default_value(), WTA_2 = qgisprocess:::qgis_default_value(), WTA_3 = qgisprocess:::qgis_default_value(), WTA_4 = qgisprocess:::qgis_default_value(), WTA_5 = qgisprocess:::qgis_default_value(), CLASS_INFO = qgisprocess:::qgis_default_value(), CLASSES = qgisprocess:::qgis_default_value(), QUALITY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:supervisedclassification")
 
@@ -54,6 +54,6 @@ saga_supervisedclassification <- function(GRIDS = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLASSES")
+    qgisprocess::qgis_extract_output(output, "CLASSES")
   }
 }

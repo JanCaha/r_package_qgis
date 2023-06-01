@@ -5,11 +5,11 @@
 \title{QGIS algorithm Fast representativeness}
 \usage{
 saga_fastrepresentativeness(
-  INPUT = qgisprocess::qgis_default_value(),
-  LOD = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  RESULT_LOD = qgisprocess::qgis_default_value(),
-  SEEDS = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  LOD = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  RESULT_LOD = qgisprocess:::qgis_default_value(),
+  SEEDS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

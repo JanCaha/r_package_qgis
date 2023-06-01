@@ -5,12 +5,12 @@
 \title{QGIS algorithm Threshold raster buffer}
 \usage{
 saga_thresholdrasterbuffer(
-  FEATURES = qgisprocess::qgis_default_value(),
-  VALUE = qgisprocess::qgis_default_value(),
-  THRESHOLDGRID = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  THRESHOLDTYPE = qgisprocess::qgis_default_value(),
-  BUFFER = qgisprocess::qgis_default_value(),
+  FEATURES = qgisprocess:::qgis_default_value(),
+  VALUE = qgisprocess:::qgis_default_value(),
+  THRESHOLDGRID = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  THRESHOLDTYPE = qgisprocess:::qgis_default_value(),
+  BUFFER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

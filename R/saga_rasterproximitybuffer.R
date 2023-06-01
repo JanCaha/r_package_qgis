@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rasterproximitybuffer <- function(SOURCE = qgisprocess::qgis_default_value(), DIST = qgisprocess::qgis_default_value(), IVAL = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), ALLOC = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rasterproximitybuffer <- function(SOURCE = qgisprocess:::qgis_default_value(), DIST = qgisprocess:::qgis_default_value(), IVAL = qgisprocess:::qgis_default_value(), DISTANCE = qgisprocess:::qgis_default_value(), ALLOC = qgisprocess:::qgis_default_value(), BUFFER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rasterproximitybuffer")
 
@@ -40,6 +40,6 @@ saga_rasterproximitybuffer <- function(SOURCE = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ALLOC")
+    qgisprocess::qgis_extract_output(output, "ALLOC")
   }
 }

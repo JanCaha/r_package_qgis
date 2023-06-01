@@ -5,11 +5,11 @@
 \title{QGIS algorithm Box plot}
 \usage{
 qgis_boxplot(
-  INPUT = qgisprocess::qgis_default_value(),
-  NAME_FIELD = qgisprocess::qgis_default_value(),
-  VALUE_FIELD = qgisprocess::qgis_default_value(),
-  MSD = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  NAME_FIELD = qgisprocess:::qgis_default_value(),
+  VALUE_FIELD = qgisprocess:::qgis_default_value(),
+  MSD = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

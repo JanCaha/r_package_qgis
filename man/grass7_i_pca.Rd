@@ -5,14 +5,14 @@
 \title{QGIS algorithm i.pca}
 \usage{
 grass7_i_pca(
-  input = qgisprocess::qgis_default_value(),
-  rescale = qgisprocess::qgis_default_value(),
-  percent = qgisprocess::qgis_default_value(),
-  .n = qgisprocess::qgis_default_value(),
-  .f = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  rescale = qgisprocess:::qgis_default_value(),
+  percent = qgisprocess:::qgis_default_value(),
+  .n = qgisprocess:::qgis_default_value(),
+  .f = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

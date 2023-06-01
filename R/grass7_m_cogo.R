@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_m_cogo <- function(input = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .q = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_m_cogo <- function(input = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), coordinates = qgisprocess:::qgis_default_value(), .l = qgisprocess:::qgis_default_value(), .q = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:m.cogo")
 
@@ -40,6 +40,6 @@ grass7_m_cogo <- function(input = qgisprocess::qgis_default_value(), output = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

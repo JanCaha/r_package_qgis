@@ -29,9 +29,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_db_select <- function(map = qgisprocess::qgis_default_value(), layer = qgisprocess::qgis_default_value(), columns = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), group = qgisprocess::qgis_default_value(), vertical_separator = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), .v = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), file = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_db_select <- function(map = qgisprocess:::qgis_default_value(), layer = qgisprocess:::qgis_default_value(), columns = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), separator = qgisprocess:::qgis_default_value(), where = qgisprocess:::qgis_default_value(), group = qgisprocess:::qgis_default_value(), vertical_separator = qgisprocess:::qgis_default_value(), null_value = qgisprocess:::qgis_default_value(), .v = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), file = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.db.select")
 
@@ -47,6 +47,6 @@ grass7_v_db_select <- function(map = qgisprocess::qgis_default_value(), layer = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "file")
+    qgisprocess::qgis_extract_output(output, "file")
   }
 }

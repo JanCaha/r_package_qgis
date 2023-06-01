@@ -5,9 +5,9 @@
 \title{QGIS algorithm Layer of extreme value}
 \usage{
 saga_layerofextremevalue(
-  GRIDS = qgisprocess::qgis_default_value(),
-  CRITERIA = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  CRITERIA = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

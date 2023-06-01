@@ -5,7 +5,7 @@
 \title{QGIS algorithm Create spatial index}
 \usage{
 qgis_createspatialindex(
-  INPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

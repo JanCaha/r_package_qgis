@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_tileset <- function(sourceproj = qgisprocess::qgis_default_value(), sourcescale = qgisprocess::qgis_default_value(), destproj = qgisprocess::qgis_default_value(), destscale = qgisprocess::qgis_default_value(), maxcols = qgisprocess::qgis_default_value(), maxrows = qgisprocess::qgis_default_value(), overlap = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .w = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_tileset <- function(sourceproj = qgisprocess:::qgis_default_value(), sourcescale = qgisprocess:::qgis_default_value(), destproj = qgisprocess:::qgis_default_value(), destscale = qgisprocess:::qgis_default_value(), maxcols = qgisprocess:::qgis_default_value(), maxrows = qgisprocess:::qgis_default_value(), overlap = qgisprocess:::qgis_default_value(), separator = qgisprocess:::qgis_default_value(), .g = qgisprocess:::qgis_default_value(), .w = qgisprocess:::qgis_default_value(), html = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.tileset")
 
@@ -44,6 +44,6 @@ grass7_r_tileset <- function(sourceproj = qgisprocess::qgis_default_value(), sou
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "html")
+    qgisprocess::qgis_extract_output(output, "html")
   }
 }

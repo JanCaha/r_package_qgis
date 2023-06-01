@@ -5,11 +5,11 @@
 \title{QGIS algorithm i.gensig}
 \usage{
 grass7_i_gensig(
-  trainingmap = qgisprocess::qgis_default_value(),
-  input = qgisprocess::qgis_default_value(),
-  signaturefile = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  trainingmap = qgisprocess:::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  signaturefile = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_upslopeanddownslopecurvature <- function(DEM = qgisprocess::qgis_default_value(), C_LOCAL = qgisprocess::qgis_default_value(), C_UP = qgisprocess::qgis_default_value(), C_UP_LOCAL = qgisprocess::qgis_default_value(), C_DOWN = qgisprocess::qgis_default_value(), C_DOWN_LOCAL = qgisprocess::qgis_default_value(), WEIGHTING = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_upslopeanddownslopecurvature <- function(DEM = qgisprocess:::qgis_default_value(), C_LOCAL = qgisprocess:::qgis_default_value(), C_UP = qgisprocess:::qgis_default_value(), C_UP_LOCAL = qgisprocess:::qgis_default_value(), C_DOWN = qgisprocess:::qgis_default_value(), C_DOWN_LOCAL = qgisprocess:::qgis_default_value(), WEIGHTING = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:upslopeanddownslopecurvature")
 
@@ -43,6 +43,6 @@ saga_upslopeanddownslopecurvature <- function(DEM = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "C_DOWN")
+    qgisprocess::qgis_extract_output(output, "C_DOWN")
   }
 }

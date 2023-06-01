@@ -5,14 +5,14 @@
 \title{QGIS algorithm Close gaps with stepwise resampling}
 \usage{
 saga_closegapswithstepwiseresampling(
-  INPUT = qgisprocess::qgis_default_value(),
-  MASK = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  GROW = qgisprocess::qgis_default_value(),
-  PYRAMIDS = qgisprocess::qgis_default_value(),
-  START = qgisprocess::qgis_default_value(),
-  START_SIZE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  MASK = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  GROW = qgisprocess:::qgis_default_value(),
+  PYRAMIDS = qgisprocess:::qgis_default_value(),
+  START = qgisprocess:::qgis_default_value(),
+  START_SIZE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

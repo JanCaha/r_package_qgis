@@ -5,10 +5,10 @@
 \title{QGIS algorithm Convex hull}
 \usage{
 saga_convexhull(
-  SHAPES = qgisprocess::qgis_default_value(),
-  POLYPOINTS = qgisprocess::qgis_default_value(),
-  HULLS = qgisprocess::qgis_default_value(),
-  BOXES = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  POLYPOINTS = qgisprocess:::qgis_default_value(),
+  HULLS = qgisprocess:::qgis_default_value(),
+  BOXES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

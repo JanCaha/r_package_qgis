@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_changedetection <- function(INITIAL = qgisprocess::qgis_default_value(), INI_LUT = qgisprocess::qgis_default_value(), INI_LUT_MIN = qgisprocess::qgis_default_value(), INI_LUT_MAX = qgisprocess::qgis_default_value(), INI_LUT_NAM = qgisprocess::qgis_default_value(), FINAL = qgisprocess::qgis_default_value(), FIN_LUT = qgisprocess::qgis_default_value(), FIN_LUT_MIN = qgisprocess::qgis_default_value(), FIN_LUT_MAX = qgisprocess::qgis_default_value(), FIN_LUT_NAM = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), CHANGE = qgisprocess::qgis_default_value(), CHANGES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_changedetection <- function(INITIAL = qgisprocess:::qgis_default_value(), INI_LUT = qgisprocess:::qgis_default_value(), INI_LUT_MIN = qgisprocess:::qgis_default_value(), INI_LUT_MAX = qgisprocess:::qgis_default_value(), INI_LUT_NAM = qgisprocess:::qgis_default_value(), FINAL = qgisprocess:::qgis_default_value(), FIN_LUT = qgisprocess:::qgis_default_value(), FIN_LUT_MIN = qgisprocess:::qgis_default_value(), FIN_LUT_MAX = qgisprocess:::qgis_default_value(), FIN_LUT_NAM = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), CHANGE = qgisprocess:::qgis_default_value(), CHANGES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:changedetection")
 
@@ -46,6 +46,6 @@ saga_changedetection <- function(INITIAL = qgisprocess::qgis_default_value(), IN
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CHANGE")
+    qgisprocess::qgis_extract_output(output, "CHANGE")
   }
 }

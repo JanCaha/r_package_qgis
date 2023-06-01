@@ -16,9 +16,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_savelog <- function(OUTPUT = qgisprocess::qgis_default_value(), USE_HTML = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_savelog <- function(OUTPUT = qgisprocess:::qgis_default_value(), USE_HTML = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:savelog")
 
@@ -34,6 +34,6 @@ qgis_savelog <- function(OUTPUT = qgisprocess::qgis_default_value(), USE_HTML = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -5,14 +5,14 @@
 \title{QGIS algorithm r.kappa}
 \usage{
 grass7_r_kappa(
-  classification = qgisprocess::qgis_default_value(),
-  reference = qgisprocess::qgis_default_value(),
-  title = qgisprocess::qgis_default_value(),
-  .h = qgisprocess::qgis_default_value(),
-  .w = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  classification = qgisprocess:::qgis_default_value(),
+  reference = qgisprocess:::qgis_default_value(),
+  title = qgisprocess:::qgis_default_value(),
+  .h = qgisprocess:::qgis_default_value(),
+  .w = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

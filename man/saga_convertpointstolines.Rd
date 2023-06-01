@@ -5,10 +5,10 @@
 \title{QGIS algorithm Convert points to line(s)}
 \usage{
 saga_convertpointstolines(
-  POINTS = qgisprocess::qgis_default_value(),
-  ORDER = qgisprocess::qgis_default_value(),
-  SEPARATE = qgisprocess::qgis_default_value(),
-  LINES = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  ORDER = qgisprocess:::qgis_default_value(),
+  SEPARATE = qgisprocess:::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

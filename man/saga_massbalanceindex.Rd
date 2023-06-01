@@ -5,12 +5,12 @@
 \title{QGIS algorithm Mass balance index}
 \usage{
 saga_massbalanceindex(
-  DEM = qgisprocess::qgis_default_value(),
-  HREL = qgisprocess::qgis_default_value(),
-  TSLOPE = qgisprocess::qgis_default_value(),
-  TCURVE = qgisprocess::qgis_default_value(),
-  THREL = qgisprocess::qgis_default_value(),
-  MBI = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  HREL = qgisprocess:::qgis_default_value(),
+  TSLOPE = qgisprocess:::qgis_default_value(),
+  TCURVE = qgisprocess:::qgis_default_value(),
+  THREL = qgisprocess:::qgis_default_value(),
+  MBI = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

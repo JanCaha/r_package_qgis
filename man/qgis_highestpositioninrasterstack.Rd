@@ -5,11 +5,11 @@
 \title{QGIS algorithm Highest position in raster stack}
 \usage{
 qgis_highestpositioninrasterstack(
-  INPUT_RASTERS = qgisprocess::qgis_default_value(),
-  REFERENCE_LAYER = qgisprocess::qgis_default_value(),
-  IGNORE_NODATA = qgisprocess::qgis_default_value(),
-  OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT_RASTERS = qgisprocess:::qgis_default_value(),
+  REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
+  IGNORE_NODATA = qgisprocess:::qgis_default_value(),
+  OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

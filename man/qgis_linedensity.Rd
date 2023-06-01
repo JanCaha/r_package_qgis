@@ -5,11 +5,11 @@
 \title{QGIS algorithm Line density}
 \usage{
 qgis_linedensity(
-  INPUT = qgisprocess::qgis_default_value(),
-  WEIGHT = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  WEIGHT = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

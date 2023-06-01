@@ -5,11 +5,11 @@
 \title{QGIS algorithm Order by expression}
 \usage{
 qgis_orderbyexpression(
-  INPUT = qgisprocess::qgis_default_value(),
-  EXPRESSION = qgisprocess::qgis_default_value(),
-  ASCENDING = qgisprocess::qgis_default_value(),
-  NULLS_FIRST = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  EXPRESSION = qgisprocess:::qgis_default_value(),
+  ASCENDING = qgisprocess:::qgis_default_value(),
+  NULLS_FIRST = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Intersection (multiple)}
 \usage{
 qgis_multiintersection(
-  INPUT = qgisprocess::qgis_default_value(),
-  OVERLAYS = qgisprocess::qgis_default_value(),
-  OVERLAY_FIELDS_PREFIX = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OVERLAYS = qgisprocess:::qgis_default_value(),
+  OVERLAY_FIELDS_PREFIX = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

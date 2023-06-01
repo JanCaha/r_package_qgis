@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_snappointstogrid <- function(INPUT = qgisprocess::qgis_default_value(), GRID = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), MOVES = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), SHAPE = qgisprocess::qgis_default_value(), EXTREME = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_snappointstogrid <- function(INPUT = qgisprocess:::qgis_default_value(), GRID = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), MOVES = qgisprocess:::qgis_default_value(), DISTANCE = qgisprocess:::qgis_default_value(), SHAPE = qgisprocess:::qgis_default_value(), EXTREME = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:snappointstogrid")
 
@@ -40,6 +40,6 @@ saga_snappointstogrid <- function(INPUT = qgisprocess::qgis_default_value(), GRI
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MOVES")
+    qgisprocess::qgis_extract_output(output, "MOVES")
   }
 }

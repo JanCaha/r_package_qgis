@@ -32,9 +32,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_walk_rast <- function(elevation = qgisprocess::qgis_default_value(), friction = qgisprocess::qgis_default_value(), start_raster = qgisprocess::qgis_default_value(), walk_coeff = qgisprocess::qgis_default_value(), lambda = qgisprocess::qgis_default_value(), slope_factor = qgisprocess::qgis_default_value(), max_cost = qgisprocess::qgis_default_value(), null_cost = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .k = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), outdir = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_walk_rast <- function(elevation = qgisprocess:::qgis_default_value(), friction = qgisprocess:::qgis_default_value(), start_raster = qgisprocess:::qgis_default_value(), walk_coeff = qgisprocess:::qgis_default_value(), lambda = qgisprocess:::qgis_default_value(), slope_factor = qgisprocess:::qgis_default_value(), max_cost = qgisprocess:::qgis_default_value(), null_cost = qgisprocess:::qgis_default_value(), memory = qgisprocess:::qgis_default_value(), .k = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), outdir = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.walk.rast")
 
@@ -50,6 +50,6 @@ grass7_r_walk_rast <- function(elevation = qgisprocess::qgis_default_value(), fr
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "outdir")
+    qgisprocess::qgis_extract_output(output, "outdir")
   }
 }

@@ -5,9 +5,9 @@
 \title{QGIS algorithm Polygon clipping}
 \usage{
 saga_polygonclipping(
-  CLIP = qgisprocess::qgis_default_value(),
-  S_INPUT = qgisprocess::qgis_default_value(),
-  S_OUTPUT = qgisprocess::qgis_default_value(),
+  CLIP = qgisprocess:::qgis_default_value(),
+  S_INPUT = qgisprocess:::qgis_default_value(),
+  S_OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

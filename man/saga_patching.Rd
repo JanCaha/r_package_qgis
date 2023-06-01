@@ -5,10 +5,10 @@
 \title{QGIS algorithm Patching}
 \usage{
 saga_patching(
-  ORIGINAL = qgisprocess::qgis_default_value(),
-  ADDITIONAL = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  COMPLETED = qgisprocess::qgis_default_value(),
+  ORIGINAL = qgisprocess:::qgis_default_value(),
+  ADDITIONAL = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  COMPLETED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

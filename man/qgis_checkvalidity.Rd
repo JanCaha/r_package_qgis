@@ -5,12 +5,12 @@
 \title{QGIS algorithm Check validity}
 \usage{
 qgis_checkvalidity(
-  INPUT_LAYER = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  IGNORE_RING_SELF_INTERSECTION = qgisprocess::qgis_default_value(),
-  VALID_OUTPUT = qgisprocess::qgis_default_value(),
-  INVALID_OUTPUT = qgisprocess::qgis_default_value(),
-  ERROR_OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT_LAYER = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  IGNORE_RING_SELF_INTERSECTION = qgisprocess:::qgis_default_value(),
+  VALID_OUTPUT = qgisprocess:::qgis_default_value(),
+  INVALID_OUTPUT = qgisprocess:::qgis_default_value(),
+  ERROR_OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

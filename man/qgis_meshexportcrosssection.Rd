@@ -5,14 +5,14 @@
 \title{QGIS algorithm Export cross section dataset values on lines from mesh}
 \usage{
 qgis_meshexportcrosssection(
-  INPUT = qgisprocess::qgis_default_value(),
-  DATASET_GROUPS = qgisprocess::qgis_default_value(),
-  DATASET_TIME = qgisprocess::qgis_default_value(),
-  INPUT_LINES = qgisprocess::qgis_default_value(),
-  RESOLUTION = qgisprocess::qgis_default_value(),
-  COORDINATES_DIGITS = qgisprocess::qgis_default_value(),
-  DATASET_DIGITS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  DATASET_GROUPS = qgisprocess:::qgis_default_value(),
+  DATASET_TIME = qgisprocess:::qgis_default_value(),
+  INPUT_LINES = qgisprocess:::qgis_default_value(),
+  RESOLUTION = qgisprocess:::qgis_default_value(),
+  COORDINATES_DIGITS = qgisprocess:::qgis_default_value(),
+  DATASET_DIGITS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

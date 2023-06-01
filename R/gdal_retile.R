@@ -30,9 +30,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_retile <- function(INPUT = qgisprocess::qgis_default_value(), TILE_SIZE_X = qgisprocess::qgis_default_value(), TILE_SIZE_Y = qgisprocess::qgis_default_value(), OVERLAP = qgisprocess::qgis_default_value(), LEVELS = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), DELIMITER = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), ONLY_PYRAMIDS = qgisprocess::qgis_default_value(), DIR_FOR_ROW = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), OUTPUT_CSV = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_retile <- function(INPUT = qgisprocess:::qgis_default_value(), TILE_SIZE_X = qgisprocess:::qgis_default_value(), TILE_SIZE_Y = qgisprocess:::qgis_default_value(), OVERLAP = qgisprocess:::qgis_default_value(), LEVELS = qgisprocess:::qgis_default_value(), SOURCE_CRS = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), DELIMITER = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), DATA_TYPE = qgisprocess:::qgis_default_value(), ONLY_PYRAMIDS = qgisprocess:::qgis_default_value(), DIR_FOR_ROW = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), OUTPUT_CSV = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:retile")
 
@@ -48,6 +48,6 @@ gdal_retile <- function(INPUT = qgisprocess::qgis_default_value(), TILE_SIZE_X =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

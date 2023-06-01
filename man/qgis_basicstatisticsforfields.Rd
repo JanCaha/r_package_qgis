@@ -5,9 +5,9 @@
 \title{QGIS algorithm Basic statistics for fields}
 \usage{
 qgis_basicstatisticsforfields(
-  INPUT_LAYER = qgisprocess::qgis_default_value(),
-  FIELD_NAME = qgisprocess::qgis_default_value(),
-  OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),
+  INPUT_LAYER = qgisprocess:::qgis_default_value(),
+  FIELD_NAME = qgisprocess:::qgis_default_value(),
+  OUTPUT_HTML_FILE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

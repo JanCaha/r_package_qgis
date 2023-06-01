@@ -5,11 +5,11 @@
 \title{QGIS algorithm Vertical distance to channel network}
 \usage{
 saga_verticaldistancetochannelnetwork(
-  ELEVATION = qgisprocess::qgis_default_value(),
-  CHANNELS = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  BASELEVEL = qgisprocess::qgis_default_value(),
+  ELEVATION = qgisprocess:::qgis_default_value(),
+  CHANNELS = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  BASELEVEL = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

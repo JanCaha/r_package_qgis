@@ -5,10 +5,10 @@
 \title{QGIS algorithm Paramemelton ruggedness number}
 \usage{
 saga_paramemeltonruggednessnumber(
-  DEM = qgisprocess::qgis_default_value(),
-  AREA = qgisprocess::qgis_default_value(),
-  ZMAX = qgisprocess::qgis_default_value(),
-  MRN = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  AREA = qgisprocess:::qgis_default_value(),
+  ZMAX = qgisprocess:::qgis_default_value(),
+  MRN = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

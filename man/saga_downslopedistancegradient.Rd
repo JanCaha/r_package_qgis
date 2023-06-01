@@ -5,11 +5,11 @@
 \title{QGIS algorithm Downslope distance gradient}
 \usage{
 saga_downslopedistancegradient(
-  DEM = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  GRADIENT = qgisprocess::qgis_default_value(),
-  DIFFERENCE = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  GRADIENT = qgisprocess:::qgis_default_value(),
+  DIFFERENCE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

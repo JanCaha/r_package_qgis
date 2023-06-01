@@ -5,11 +5,11 @@
 \title{QGIS algorithm Watershed segmentation (vigra)}
 \usage{
 saga_watershedsegmentationvigra(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  SCALE = qgisprocess::qgis_default_value(),
-  RGB = qgisprocess::qgis_default_value(),
-  EDGES = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  SCALE = qgisprocess:::qgis_default_value(),
+  RGB = qgisprocess:::qgis_default_value(),
+  EDGES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

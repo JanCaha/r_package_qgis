@@ -5,11 +5,11 @@
 \title{QGIS algorithm Random points inside polygons}
 \usage{
 qgis_randompointsinsidepolygons(
-  INPUT = qgisprocess::qgis_default_value(),
-  STRATEGY = qgisprocess::qgis_default_value(),
-  VALUE = qgisprocess::qgis_default_value(),
-  MIN_DISTANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  STRATEGY = qgisprocess:::qgis_default_value(),
+  VALUE = qgisprocess:::qgis_default_value(),
+  MIN_DISTANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,12 +5,12 @@
 \title{QGIS algorithm Raster surface volume}
 \usage{
 qgis_rastersurfacevolume(
-  INPUT = qgisprocess::qgis_default_value(),
-  BAND = qgisprocess::qgis_default_value(),
-  LEVEL = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),
-  OUTPUT_TABLE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BAND = qgisprocess:::qgis_default_value(),
+  LEVEL = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  OUTPUT_HTML_FILE = qgisprocess:::qgis_default_value(),
+  OUTPUT_TABLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

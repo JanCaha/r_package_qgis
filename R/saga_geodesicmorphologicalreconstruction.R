@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_geodesicmorphologicalreconstruction <- function(INPUT_GRID = qgisprocess::qgis_default_value(), OBJECT_GRID = qgisprocess::qgis_default_value(), DIFFERENCE_GRID = qgisprocess::qgis_default_value(), SHIFT_VALUE = qgisprocess::qgis_default_value(), BORDER_YES_NO = qgisprocess::qgis_default_value(), BIN_YES_NO = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_geodesicmorphologicalreconstruction <- function(INPUT_GRID = qgisprocess:::qgis_default_value(), OBJECT_GRID = qgisprocess:::qgis_default_value(), DIFFERENCE_GRID = qgisprocess:::qgis_default_value(), SHIFT_VALUE = qgisprocess:::qgis_default_value(), BORDER_YES_NO = qgisprocess:::qgis_default_value(), BIN_YES_NO = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:geodesicmorphologicalreconstruction")
 
@@ -40,6 +40,6 @@ saga_geodesicmorphologicalreconstruction <- function(INPUT_GRID = qgisprocess::q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DIFFERENCE_GRID")
+    qgisprocess::qgis_extract_output(output, "DIFFERENCE_GRID")
   }
 }

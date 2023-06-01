@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_geometrybyexpression <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT_GEOMETRY = qgisprocess::qgis_default_value(), WITH_Z = qgisprocess::qgis_default_value(), WITH_M = qgisprocess::qgis_default_value(), EXPRESSION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_geometrybyexpression <- function(INPUT = qgisprocess:::qgis_default_value(), OUTPUT_GEOMETRY = qgisprocess:::qgis_default_value(), WITH_Z = qgisprocess:::qgis_default_value(), WITH_M = qgisprocess:::qgis_default_value(), EXPRESSION = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:geometrybyexpression")
 
@@ -38,6 +38,6 @@ qgis_geometrybyexpression <- function(INPUT = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

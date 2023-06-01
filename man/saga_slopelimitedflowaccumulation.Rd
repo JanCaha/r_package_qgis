@@ -5,14 +5,14 @@
 \title{QGIS algorithm Slope limited flow accumulation}
 \usage{
 saga_slopelimitedflowaccumulation(
-  DEM = qgisprocess::qgis_default_value(),
-  WEIGHT = qgisprocess::qgis_default_value(),
-  FLOW = qgisprocess::qgis_default_value(),
-  SLOPE_MIN = qgisprocess::qgis_default_value(),
-  SLOPE_MAX = qgisprocess::qgis_default_value(),
-  B_FLOW = qgisprocess::qgis_default_value(),
-  T_FLOW_MIN = qgisprocess::qgis_default_value(),
-  T_FLOW_MAX = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  WEIGHT = qgisprocess:::qgis_default_value(),
+  FLOW = qgisprocess:::qgis_default_value(),
+  SLOPE_MIN = qgisprocess:::qgis_default_value(),
+  SLOPE_MAX = qgisprocess:::qgis_default_value(),
+  B_FLOW = qgisprocess:::qgis_default_value(),
+  T_FLOW_MIN = qgisprocess:::qgis_default_value(),
+  T_FLOW_MAX = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_transformvectorlayer <- function(IN = qgisprocess::qgis_default_value(), DX = qgisprocess::qgis_default_value(), DY = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), SCALEX = qgisprocess::qgis_default_value(), SCALEY = qgisprocess::qgis_default_value(), ANCHORX = qgisprocess::qgis_default_value(), ANCHORY = qgisprocess::qgis_default_value(), OUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_transformvectorlayer <- function(IN = qgisprocess:::qgis_default_value(), DX = qgisprocess:::qgis_default_value(), DY = qgisprocess:::qgis_default_value(), ANGLE = qgisprocess:::qgis_default_value(), SCALEX = qgisprocess:::qgis_default_value(), SCALEY = qgisprocess:::qgis_default_value(), ANCHORX = qgisprocess:::qgis_default_value(), ANCHORY = qgisprocess:::qgis_default_value(), OUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:transformvectorlayer")
 
@@ -41,6 +41,6 @@ saga_transformvectorlayer <- function(IN = qgisprocess::qgis_default_value(), DX
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUT")
+    qgisprocess::qgis_extract_output(output, "OUT")
   }
 }

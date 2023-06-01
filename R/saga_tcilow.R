@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_tcilow <- function(DISTANCE = qgisprocess::qgis_default_value(), TWI = qgisprocess::qgis_default_value(), TCILOW = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_tcilow <- function(DISTANCE = qgisprocess:::qgis_default_value(), TWI = qgisprocess:::qgis_default_value(), TCILOW = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:tcilow")
 
@@ -35,6 +35,6 @@ saga_tcilow <- function(DISTANCE = qgisprocess::qgis_default_value(), TWI = qgis
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "TCILOW")
+    qgisprocess::qgis_extract_output(output, "TCILOW")
   }
 }

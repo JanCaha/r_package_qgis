@@ -5,11 +5,11 @@
 \title{QGIS algorithm Profile from points table}
 \usage{
 saga_profilefrompointstable(
-  GRID = qgisprocess::qgis_default_value(),
-  TABLE = qgisprocess::qgis_default_value(),
-  X = qgisprocess::qgis_default_value(),
-  Y = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  X = qgisprocess:::qgis_default_value(),
+  Y = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

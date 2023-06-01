@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_layertobookmarks <- function(INPUT = qgisprocess::qgis_default_value(), DESTINATION = qgisprocess::qgis_default_value(), NAME_EXPRESSION = qgisprocess::qgis_default_value(), GROUP_EXPRESSION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_layertobookmarks <- function(INPUT = qgisprocess:::qgis_default_value(), DESTINATION = qgisprocess:::qgis_default_value(), NAME_EXPRESSION = qgisprocess:::qgis_default_value(), GROUP_EXPRESSION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:layertobookmarks")
 
@@ -36,6 +36,6 @@ qgis_layertobookmarks <- function(INPUT = qgisprocess::qgis_default_value(), DES
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "COUNT")
+    qgisprocess::qgis_extract_output(output, "COUNT")
   }
 }

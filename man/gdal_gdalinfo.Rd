@@ -5,13 +5,13 @@
 \title{QGIS algorithm Raster information}
 \usage{
 gdal_gdalinfo(
-  INPUT = qgisprocess::qgis_default_value(),
-  MIN_MAX = qgisprocess::qgis_default_value(),
-  STATS = qgisprocess::qgis_default_value(),
-  NOGCP = qgisprocess::qgis_default_value(),
-  NO_METADATA = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  MIN_MAX = qgisprocess:::qgis_default_value(),
+  STATS = qgisprocess:::qgis_default_value(),
+  NOGCP = qgisprocess:::qgis_default_value(),
+  NO_METADATA = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

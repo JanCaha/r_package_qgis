@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_variogramcloud <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), DISTMAX = qgisprocess::qgis_default_value(), NSKIP = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_variogramcloud <- function(POINTS = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), DISTMAX = qgisprocess:::qgis_default_value(), NSKIP = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:variogramcloud")
 
@@ -37,6 +37,6 @@ saga_variogramcloud <- function(POINTS = qgisprocess::qgis_default_value(), FIEL
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

@@ -5,14 +5,14 @@
 \title{QGIS algorithm r.out.mpeg}
 \usage{
 grass7_r_out_mpeg(
-  view1 = qgisprocess::qgis_default_value(),
-  view2 = qgisprocess::qgis_default_value(),
-  view3 = qgisprocess::qgis_default_value(),
-  view4 = qgisprocess::qgis_default_value(),
-  quality = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  view1 = qgisprocess:::qgis_default_value(),
+  view2 = qgisprocess:::qgis_default_value(),
+  view3 = qgisprocess:::qgis_default_value(),
+  view4 = qgisprocess:::qgis_default_value(),
+  quality = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -33,9 +33,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_distance <- function(from = qgisprocess::qgis_default_value(), from_type = qgisprocess::qgis_default_value(), to = qgisprocess::qgis_default_value(), to_type = qgisprocess::qgis_default_value(), dmax = qgisprocess::qgis_default_value(), dmin = qgisprocess::qgis_default_value(), upload = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), to_column = qgisprocess::qgis_default_value(), from_output = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_distance <- function(from = qgisprocess:::qgis_default_value(), from_type = qgisprocess:::qgis_default_value(), to = qgisprocess:::qgis_default_value(), to_type = qgisprocess:::qgis_default_value(), dmax = qgisprocess:::qgis_default_value(), dmin = qgisprocess:::qgis_default_value(), upload = qgisprocess:::qgis_default_value(), column = qgisprocess:::qgis_default_value(), to_column = qgisprocess:::qgis_default_value(), from_output = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.distance")
 
@@ -51,6 +51,6 @@ grass7_v_distance <- function(from = qgisprocess::qgis_default_value(), from_typ
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "from_output")
+    qgisprocess::qgis_extract_output(output, "from_output")
   }
 }

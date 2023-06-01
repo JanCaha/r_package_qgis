@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_aggregatepointobservations <- function(REFERENCE = qgisprocess::qgis_default_value(), REFERENCE_ID = qgisprocess::qgis_default_value(), OBSERVATIONS = qgisprocess::qgis_default_value(), X = qgisprocess::qgis_default_value(), Y = qgisprocess::qgis_default_value(), TRACK = qgisprocess::qgis_default_value(), DATE = qgisprocess::qgis_default_value(), TIME = qgisprocess::qgis_default_value(), PARAMETER = qgisprocess::qgis_default_value(), EPS_TIME = qgisprocess::qgis_default_value(), EPS_SPACE = qgisprocess::qgis_default_value(), AGGREGATED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_aggregatepointobservations <- function(REFERENCE = qgisprocess:::qgis_default_value(), REFERENCE_ID = qgisprocess:::qgis_default_value(), OBSERVATIONS = qgisprocess:::qgis_default_value(), X = qgisprocess:::qgis_default_value(), Y = qgisprocess:::qgis_default_value(), TRACK = qgisprocess:::qgis_default_value(), DATE = qgisprocess:::qgis_default_value(), TIME = qgisprocess:::qgis_default_value(), PARAMETER = qgisprocess:::qgis_default_value(), EPS_TIME = qgisprocess:::qgis_default_value(), EPS_SPACE = qgisprocess:::qgis_default_value(), AGGREGATED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:aggregatepointobservations")
 
@@ -44,6 +44,6 @@ saga_aggregatepointobservations <- function(REFERENCE = qgisprocess::qgis_defaul
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "AGGREGATED")
+    qgisprocess::qgis_extract_output(output, "AGGREGATED")
   }
 }

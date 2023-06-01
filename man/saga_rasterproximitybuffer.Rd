@@ -5,12 +5,12 @@
 \title{QGIS algorithm Raster proximity buffer}
 \usage{
 saga_rasterproximitybuffer(
-  SOURCE = qgisprocess::qgis_default_value(),
-  DIST = qgisprocess::qgis_default_value(),
-  IVAL = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  ALLOC = qgisprocess::qgis_default_value(),
-  BUFFER = qgisprocess::qgis_default_value(),
+  SOURCE = qgisprocess:::qgis_default_value(),
+  DIST = qgisprocess:::qgis_default_value(),
+  IVAL = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  ALLOC = qgisprocess:::qgis_default_value(),
+  BUFFER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

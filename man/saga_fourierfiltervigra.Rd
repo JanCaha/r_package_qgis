@@ -5,13 +5,13 @@
 \title{QGIS algorithm Fourier filter (vigra)}
 \usage{
 saga_fourierfiltervigra(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  SCALE = qgisprocess::qgis_default_value(),
-  POWER = qgisprocess::qgis_default_value(),
-  RANGE_MIN = qgisprocess::qgis_default_value(),
-  RANGE_MAX = qgisprocess::qgis_default_value(),
-  FILTER = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  SCALE = qgisprocess:::qgis_default_value(),
+  POWER = qgisprocess:::qgis_default_value(),
+  RANGE_MIN = qgisprocess:::qgis_default_value(),
+  RANGE_MAX = qgisprocess:::qgis_default_value(),
+  FILTER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

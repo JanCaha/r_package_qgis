@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_principlecomponentsanalysis <- function(TABLE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NFIRST = qgisprocess::qgis_default_value(), PCA = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_principlecomponentsanalysis <- function(TABLE = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), NFIRST = qgisprocess:::qgis_default_value(), PCA = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:principlecomponentsanalysis")
 
@@ -36,6 +36,6 @@ saga_principlecomponentsanalysis <- function(TABLE = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PCA")
+    qgisprocess::qgis_extract_output(output, "PCA")
   }
 }

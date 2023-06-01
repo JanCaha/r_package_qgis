@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_destripingwithmask <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), RESULT3 = qgisprocess::qgis_default_value(), RESULT1 = qgisprocess::qgis_default_value(), RESULT2 = qgisprocess::qgis_default_value(), ANG = qgisprocess::qgis_default_value(), R = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), MMIN = qgisprocess::qgis_default_value(), MMAX = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_destripingwithmask <- function(INPUT = qgisprocess:::qgis_default_value(), MASK = qgisprocess:::qgis_default_value(), RESULT3 = qgisprocess:::qgis_default_value(), RESULT1 = qgisprocess:::qgis_default_value(), RESULT2 = qgisprocess:::qgis_default_value(), ANG = qgisprocess:::qgis_default_value(), R = qgisprocess:::qgis_default_value(), D = qgisprocess:::qgis_default_value(), MIN = qgisprocess:::qgis_default_value(), MAX = qgisprocess:::qgis_default_value(), MMIN = qgisprocess:::qgis_default_value(), MMAX = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:destripingwithmask")
 
@@ -46,6 +46,6 @@ saga_destripingwithmask <- function(INPUT = qgisprocess::qgis_default_value(), M
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT1")
+    qgisprocess::qgis_extract_output(output, "RESULT1")
   }
 }

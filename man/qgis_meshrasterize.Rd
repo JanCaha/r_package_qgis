@@ -5,13 +5,13 @@
 \title{QGIS algorithm Rasterize mesh dataset}
 \usage{
 qgis_meshrasterize(
-  INPUT = qgisprocess::qgis_default_value(),
-  DATASET_GROUPS = qgisprocess::qgis_default_value(),
-  DATASET_TIME = qgisprocess::qgis_default_value(),
-  EXTENT = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  CRS_OUTPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  DATASET_GROUPS = qgisprocess:::qgis_default_value(),
+  DATASET_TIME = qgisprocess:::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  CRS_OUTPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

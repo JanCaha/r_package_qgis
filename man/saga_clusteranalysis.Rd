@@ -5,14 +5,14 @@
 \title{QGIS algorithm Cluster analysis}
 \usage{
 saga_clusteranalysis(
-  INPUT = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  STATISTICS = qgisprocess::qgis_default_value(),
-  FIELDS = qgisprocess::qgis_default_value(),
-  CLUSTER = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  NCLUSTER = qgisprocess::qgis_default_value(),
-  NORMALISE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  STATISTICS = qgisprocess:::qgis_default_value(),
+  FIELDS = qgisprocess:::qgis_default_value(),
+  CLUSTER = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  NCLUSTER = qgisprocess:::qgis_default_value(),
+  NORMALISE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

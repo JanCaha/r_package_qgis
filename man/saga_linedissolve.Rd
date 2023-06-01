@@ -5,12 +5,12 @@
 \title{QGIS algorithm Line dissolve}
 \usage{
 saga_linedissolve(
-  LINES = qgisprocess::qgis_default_value(),
-  FIELD_1 = qgisprocess::qgis_default_value(),
-  FIELD_2 = qgisprocess::qgis_default_value(),
-  FIELD_3 = qgisprocess::qgis_default_value(),
-  ALL = qgisprocess::qgis_default_value(),
-  DISSOLVED = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  FIELD_1 = qgisprocess:::qgis_default_value(),
+  FIELD_2 = qgisprocess:::qgis_default_value(),
+  FIELD_3 = qgisprocess:::qgis_default_value(),
+  ALL = qgisprocess:::qgis_default_value(),
+  DISSOLVED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

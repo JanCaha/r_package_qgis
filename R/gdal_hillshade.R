@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_hillshade <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), SCALE = qgisprocess::qgis_default_value(), AZIMUTH = qgisprocess::qgis_default_value(), ALTITUDE = qgisprocess::qgis_default_value(), COMPUTE_EDGES = qgisprocess::qgis_default_value(), ZEVENBERGEN = qgisprocess::qgis_default_value(), COMBINED = qgisprocess::qgis_default_value(), MULTIDIRECTIONAL = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_hillshade <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), Z_FACTOR = qgisprocess:::qgis_default_value(), SCALE = qgisprocess:::qgis_default_value(), AZIMUTH = qgisprocess:::qgis_default_value(), ALTITUDE = qgisprocess:::qgis_default_value(), COMPUTE_EDGES = qgisprocess:::qgis_default_value(), ZEVENBERGEN = qgisprocess:::qgis_default_value(), COMBINED = qgisprocess:::qgis_default_value(), MULTIDIRECTIONAL = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:hillshade")
 
@@ -45,6 +45,6 @@ gdal_hillshade <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_shrinkandexpand <- function(INPUT = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), CIRCLE = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), EXPAND = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_shrinkandexpand <- function(INPUT = qgisprocess:::qgis_default_value(), OPERATION = qgisprocess:::qgis_default_value(), CIRCLE = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), EXPAND = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:shrinkandexpand")
 
@@ -38,6 +38,6 @@ saga_shrinkandexpand <- function(INPUT = qgisprocess::qgis_default_value(), OPER
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

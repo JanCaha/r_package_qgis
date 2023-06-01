@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_pointsfilter <- function(POINTS = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), MINNUM = qgisprocess::qgis_default_value(), MAXNUM = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), FILTER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_pointsfilter <- function(POINTS = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), MINNUM = qgisprocess:::qgis_default_value(), MAXNUM = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), PERCENT = qgisprocess:::qgis_default_value(), FILTER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:pointsfilter")
 
@@ -41,6 +41,6 @@ saga_pointsfilter <- function(POINTS = qgisprocess::qgis_default_value(), FIELD 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FILTER")
+    qgisprocess::qgis_extract_output(output, "FILTER")
   }
 }

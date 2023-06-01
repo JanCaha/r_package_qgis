@@ -5,10 +5,10 @@
 \title{QGIS algorithm Separate points by direction}
 \usage{
 saga_separatepointsbydirection(
-  POINTS = qgisprocess::qgis_default_value(),
-  DIRECTIONS = qgisprocess::qgis_default_value(),
-  TOLERANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  DIRECTIONS = qgisprocess:::qgis_default_value(),
+  TOLERANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

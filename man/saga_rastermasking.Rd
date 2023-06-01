@@ -5,9 +5,9 @@
 \title{QGIS algorithm Raster masking}
 \usage{
 saga_rastermasking(
-  GRID = qgisprocess::qgis_default_value(),
-  MASK = qgisprocess::qgis_default_value(),
-  MASKED = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  MASK = qgisprocess:::qgis_default_value(),
+  MASKED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

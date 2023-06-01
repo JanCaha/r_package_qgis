@@ -5,13 +5,13 @@
 \title{QGIS algorithm Rivergridgeneration}
 \usage{
 saga_rivergridgeneration(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  SX = qgisprocess::qgis_default_value(),
-  SY = qgisprocess::qgis_default_value(),
-  MX = qgisprocess::qgis_default_value(),
-  MY = qgisprocess::qgis_default_value(),
-  Owrite = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  SX = qgisprocess:::qgis_default_value(),
+  SY = qgisprocess:::qgis_default_value(),
+  MX = qgisprocess:::qgis_default_value(),
+  MY = qgisprocess:::qgis_default_value(),
+  Owrite = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

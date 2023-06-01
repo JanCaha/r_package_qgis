@@ -41,9 +41,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_slopeaspectcurvature <- function(ELEVATION = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), UNIT_SLOPE = qgisprocess::qgis_default_value(), UNIT_ASPECT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), C_GENE = qgisprocess::qgis_default_value(), C_PLAN = qgisprocess::qgis_default_value(), C_PROF = qgisprocess::qgis_default_value(), C_TANG = qgisprocess::qgis_default_value(), C_LONG = qgisprocess::qgis_default_value(), C_CROS = qgisprocess::qgis_default_value(), C_MINI = qgisprocess::qgis_default_value(), C_MAXI = qgisprocess::qgis_default_value(), C_TOTA = qgisprocess::qgis_default_value(), C_ROTO = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_slopeaspectcurvature <- function(ELEVATION = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), UNIT_SLOPE = qgisprocess:::qgis_default_value(), UNIT_ASPECT = qgisprocess:::qgis_default_value(), SLOPE = qgisprocess:::qgis_default_value(), ASPECT = qgisprocess:::qgis_default_value(), C_GENE = qgisprocess:::qgis_default_value(), C_PLAN = qgisprocess:::qgis_default_value(), C_PROF = qgisprocess:::qgis_default_value(), C_TANG = qgisprocess:::qgis_default_value(), C_LONG = qgisprocess:::qgis_default_value(), C_CROS = qgisprocess:::qgis_default_value(), C_MINI = qgisprocess:::qgis_default_value(), C_MAXI = qgisprocess:::qgis_default_value(), C_TOTA = qgisprocess:::qgis_default_value(), C_ROTO = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:slopeaspectcurvature")
 
@@ -59,6 +59,6 @@ saga_slopeaspectcurvature <- function(ELEVATION = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ASPECT")
+    qgisprocess::qgis_extract_output(output, "ASPECT")
   }
 }

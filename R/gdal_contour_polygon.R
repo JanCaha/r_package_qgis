@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_contour_polygon <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), INTERVAL = qgisprocess::qgis_default_value(), CREATE_3D = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OFFSET = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), FIELD_NAME_MIN = qgisprocess::qgis_default_value(), FIELD_NAME_MAX = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_contour_polygon <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), INTERVAL = qgisprocess:::qgis_default_value(), CREATE_3D = qgisprocess:::qgis_default_value(), IGNORE_NODATA = qgisprocess:::qgis_default_value(), NODATA = qgisprocess:::qgis_default_value(), OFFSET = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), FIELD_NAME_MIN = qgisprocess:::qgis_default_value(), FIELD_NAME_MAX = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:contour_polygon")
 
@@ -43,6 +43,6 @@ gdal_contour_polygon <- function(INPUT = qgisprocess::qgis_default_value(), BAND
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

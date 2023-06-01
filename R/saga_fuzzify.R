@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fuzzify <- function(INPUT = qgisprocess::qgis_default_value(), A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), D = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fuzzify <- function(INPUT = qgisprocess:::qgis_default_value(), A = qgisprocess:::qgis_default_value(), B = qgisprocess:::qgis_default_value(), C = qgisprocess:::qgis_default_value(), D = qgisprocess:::qgis_default_value(), TYPE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fuzzify")
 
@@ -39,6 +39,6 @@ saga_fuzzify <- function(INPUT = qgisprocess::qgis_default_value(), A = qgisproc
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_supportvectormachineclassificationopencv <- function(FEATURES = qgisprocess::qgis_default_value(), NORMALIZE = qgisprocess::qgis_default_value(), TRAIN_AREAS = qgisprocess::qgis_default_value(), TRAIN_CLASS = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), SVM_TYPE = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(), NU = qgisprocess::qgis_default_value(), P = qgisprocess::qgis_default_value(), KERNEL = qgisprocess::qgis_default_value(), COEF0 = qgisprocess::qgis_default_value(), DEGREE = qgisprocess::qgis_default_value(), GAMMA = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_supportvectormachineclassificationopencv <- function(FEATURES = qgisprocess:::qgis_default_value(), NORMALIZE = qgisprocess:::qgis_default_value(), TRAIN_AREAS = qgisprocess:::qgis_default_value(), TRAIN_CLASS = qgisprocess:::qgis_default_value(), CLASSES = qgisprocess:::qgis_default_value(), SVM_TYPE = qgisprocess:::qgis_default_value(), C = qgisprocess:::qgis_default_value(), NU = qgisprocess:::qgis_default_value(), P = qgisprocess:::qgis_default_value(), KERNEL = qgisprocess:::qgis_default_value(), COEF0 = qgisprocess:::qgis_default_value(), DEGREE = qgisprocess:::qgis_default_value(), GAMMA = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:supportvectormachineclassificationopencv")
 
@@ -45,6 +45,6 @@ saga_supportvectormachineclassificationopencv <- function(FEATURES = qgisprocess
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLASSES")
+    qgisprocess::qgis_extract_output(output, "CLASSES")
   }
 }

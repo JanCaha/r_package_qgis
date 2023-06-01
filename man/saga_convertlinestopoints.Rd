@@ -5,9 +5,9 @@
 \title{QGIS algorithm Convert lines to points}
 \usage{
 saga_convertlinestopoints(
-  LINES = qgisprocess::qgis_default_value(),
-  DIST = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  DIST = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

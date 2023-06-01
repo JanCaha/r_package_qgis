@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_lakeflood <- function(ELEV = qgisprocess::qgis_default_value(), SEEDS = qgisprocess::qgis_default_value(), OUTDEPTH = qgisprocess::qgis_default_value(), OUTLEVEL = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_lakeflood <- function(ELEV = qgisprocess:::qgis_default_value(), SEEDS = qgisprocess:::qgis_default_value(), OUTDEPTH = qgisprocess:::qgis_default_value(), OUTLEVEL = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:lakeflood")
 
@@ -37,6 +37,6 @@ saga_lakeflood <- function(ELEV = qgisprocess::qgis_default_value(), SEEDS = qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTDEPTH")
+    qgisprocess::qgis_extract_output(output, "OUTDEPTH")
   }
 }

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_burnstreamnetworkintodem <- function(DEM = qgisprocess::qgis_default_value(), STREAM = qgisprocess::qgis_default_value(), FLOWDIR = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), EPSILON = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_burnstreamnetworkintodem <- function(DEM = qgisprocess:::qgis_default_value(), STREAM = qgisprocess:::qgis_default_value(), FLOWDIR = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), EPSILON = qgisprocess:::qgis_default_value(), BURN = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:burnstreamnetworkintodem")
 
@@ -38,6 +38,6 @@ saga_burnstreamnetworkintodem <- function(DEM = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BURN")
+    qgisprocess::qgis_extract_output(output, "BURN")
   }
 }

@@ -5,13 +5,13 @@
 \title{QGIS algorithm r.coin}
 \usage{
 grass7_r_coin(
-  first = qgisprocess::qgis_default_value(),
-  second = qgisprocess::qgis_default_value(),
-  units = qgisprocess::qgis_default_value(),
-  .w = qgisprocess::qgis_default_value(),
-  html = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  first = qgisprocess:::qgis_default_value(),
+  second = qgisprocess:::qgis_default_value(),
+  units = qgisprocess:::qgis_default_value(),
+  .w = qgisprocess:::qgis_default_value(),
+  html = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

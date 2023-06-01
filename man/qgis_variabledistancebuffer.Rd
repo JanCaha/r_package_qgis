@@ -5,14 +5,14 @@
 \title{QGIS algorithm Variable distance buffer}
 \usage{
 qgis_variabledistancebuffer(
-  INPUT = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  SEGMENTS = qgisprocess::qgis_default_value(),
-  DISSOLVE = qgisprocess::qgis_default_value(),
-  END_CAP_STYLE = qgisprocess::qgis_default_value(),
-  JOIN_STYLE = qgisprocess::qgis_default_value(),
-  MITER_LIMIT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  SEGMENTS = qgisprocess:::qgis_default_value(),
+  DISSOLVE = qgisprocess:::qgis_default_value(),
+  END_CAP_STYLE = qgisprocess:::qgis_default_value(),
+  JOIN_STYLE = qgisprocess:::qgis_default_value(),
+  MITER_LIMIT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

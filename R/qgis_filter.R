@@ -1,6 +1,6 @@
 character(0)
 
-qgis_filter <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_filter <- function(INPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:filter")
 
@@ -16,6 +16,6 @@ qgis_filter <- function(INPUT = qgisprocess::qgis_default_value(),..., .complete
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

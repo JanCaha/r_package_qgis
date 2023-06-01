@@ -5,9 +5,9 @@
 \title{QGIS algorithm Add geometry attributes}
 \usage{
 qgis_exportaddgeometrycolumns(
-  INPUT = qgisprocess::qgis_default_value(),
-  CALC_METHOD = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  CALC_METHOD = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

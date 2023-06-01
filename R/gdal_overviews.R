@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_overviews <- function(INPUT = qgisprocess::qgis_default_value(), CLEAN = qgisprocess::qgis_default_value(), LEVELS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), FORMAT = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_overviews <- function(INPUT = qgisprocess:::qgis_default_value(), CLEAN = qgisprocess:::qgis_default_value(), LEVELS = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), FORMAT = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:overviews")
 
@@ -38,6 +38,6 @@ gdal_overviews <- function(INPUT = qgisprocess::qgis_default_value(), CLEAN = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

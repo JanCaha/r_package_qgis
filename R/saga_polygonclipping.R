@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_polygonclipping <- function(CLIP = qgisprocess::qgis_default_value(), S_INPUT = qgisprocess::qgis_default_value(), S_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_polygonclipping <- function(CLIP = qgisprocess:::qgis_default_value(), S_INPUT = qgisprocess:::qgis_default_value(), S_OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:polygonclipping")
 
@@ -35,6 +35,6 @@ saga_polygonclipping <- function(CLIP = qgisprocess::qgis_default_value(), S_INP
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "S_OUTPUT")
+    qgisprocess::qgis_extract_output(output, "S_OUTPUT")
   }
 }

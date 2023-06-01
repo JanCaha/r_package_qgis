@@ -5,13 +5,13 @@
 \title{QGIS algorithm Raster calculator}
 \usage{
 saga_rastercalculator(
-  GRIDS = qgisprocess::qgis_default_value(),
-  XGRIDS = qgisprocess::qgis_default_value(),
-  FORMULA = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  USE_NODATA = qgisprocess::qgis_default_value(),
-  TYPE = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  XGRIDS = qgisprocess:::qgis_default_value(),
+  FORMULA = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  USE_NODATA = qgisprocess:::qgis_default_value(),
+  TYPE = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

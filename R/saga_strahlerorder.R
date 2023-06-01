@@ -16,9 +16,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_strahlerorder <- function(DEM = qgisprocess::qgis_default_value(), STRAHLER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_strahlerorder <- function(DEM = qgisprocess:::qgis_default_value(), STRAHLER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:strahlerorder")
 
@@ -34,6 +34,6 @@ saga_strahlerorder <- function(DEM = qgisprocess::qgis_default_value(), STRAHLER
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "STRAHLER")
+    qgisprocess::qgis_extract_output(output, "STRAHLER")
   }
 }

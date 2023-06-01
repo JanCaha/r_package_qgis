@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fillgapsinrecords <- function(TABLE = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), NOGAPS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fillgapsinrecords <- function(TABLE = qgisprocess:::qgis_default_value(), ORDER = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), NOGAPS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fillgapsinrecords")
 
@@ -36,6 +36,6 @@ saga_fillgapsinrecords <- function(TABLE = qgisprocess::qgis_default_value(), OR
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NOGAPS")
+    qgisprocess::qgis_extract_output(output, "NOGAPS")
   }
 }

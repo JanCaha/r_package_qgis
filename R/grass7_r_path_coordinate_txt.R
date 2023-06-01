@@ -32,9 +32,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_path_coordinate_txt <- function(input = qgisprocess::qgis_default_value(), format = qgisprocess::qgis_default_value(), values = qgisprocess::qgis_default_value(), raster_path = qgisprocess::qgis_default_value(), vector_path = qgisprocess::qgis_default_value(), start_coordinates = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_path_coordinate_txt <- function(input = qgisprocess:::qgis_default_value(), format = qgisprocess:::qgis_default_value(), values = qgisprocess:::qgis_default_value(), raster_path = qgisprocess:::qgis_default_value(), vector_path = qgisprocess:::qgis_default_value(), start_coordinates = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), .a = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.path.coordinate.txt")
 
@@ -50,6 +50,6 @@ grass7_r_path_coordinate_txt <- function(input = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "raster_path")
+    qgisprocess::qgis_extract_output(output, "raster_path")
   }
 }

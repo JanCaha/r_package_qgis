@@ -5,12 +5,12 @@
 \title{QGIS algorithm Shortest line between features}
 \usage{
 qgis_shortestline(
-  SOURCE = qgisprocess::qgis_default_value(),
-  DESTINATION = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  NEIGHBORS = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  SOURCE = qgisprocess:::qgis_default_value(),
+  DESTINATION = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  NEIGHBORS = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

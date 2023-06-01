@@ -32,9 +32,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_horizon_height <- function(elevation = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), direction = qgisprocess::qgis_default_value(), step = qgisprocess::qgis_default_value(), start = qgisprocess::qgis_default_value(), end = qgisprocess::qgis_default_value(), bufferzone = qgisprocess::qgis_default_value(), e_buff = qgisprocess::qgis_default_value(), w_buff = qgisprocess::qgis_default_value(), n_buff = qgisprocess::qgis_default_value(), s_buff = qgisprocess::qgis_default_value(), maxdistance = qgisprocess::qgis_default_value(), distance = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_horizon_height <- function(elevation = qgisprocess:::qgis_default_value(), coordinates = qgisprocess:::qgis_default_value(), direction = qgisprocess:::qgis_default_value(), step = qgisprocess:::qgis_default_value(), start = qgisprocess:::qgis_default_value(), end = qgisprocess:::qgis_default_value(), bufferzone = qgisprocess:::qgis_default_value(), e_buff = qgisprocess:::qgis_default_value(), w_buff = qgisprocess:::qgis_default_value(), n_buff = qgisprocess:::qgis_default_value(), s_buff = qgisprocess:::qgis_default_value(), maxdistance = qgisprocess:::qgis_default_value(), distance = qgisprocess:::qgis_default_value(), .d = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), html = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.horizon.height")
 
@@ -50,6 +50,6 @@ grass7_r_horizon_height <- function(elevation = qgisprocess::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "html")
+    qgisprocess::qgis_extract_output(output, "html")
   }
 }

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Extend lines}
 \usage{
 qgis_extendlines(
-  INPUT = qgisprocess::qgis_default_value(),
-  START_DISTANCE = qgisprocess::qgis_default_value(),
-  END_DISTANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  START_DISTANCE = qgisprocess:::qgis_default_value(),
+  END_DISTANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

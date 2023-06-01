@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_info <- function(map = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_info <- function(map = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), .g = qgisprocess:::qgis_default_value(), .e = qgisprocess:::qgis_default_value(), .t = qgisprocess:::qgis_default_value(), html = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.info")
 
@@ -41,6 +41,6 @@ grass7_v_info <- function(map = qgisprocess::qgis_default_value(), .c = qgisproc
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "html")
+    qgisprocess::qgis_extract_output(output, "html")
   }
 }

@@ -33,9 +33,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_randomforestpresencepredictionvigra <- function(FEATURES = qgisprocess::qgis_default_value(), PREDICTION = qgisprocess::qgis_default_value(), PROBABILITY = qgisprocess::qgis_default_value(), PRESENCE = qgisprocess::qgis_default_value(), BACKGROUND = qgisprocess::qgis_default_value(), DO_MRMR = qgisprocess::qgis_default_value(), mRMR_NFEATURES = qgisprocess::qgis_default_value(), mRMR_DISCRETIZE = qgisprocess::qgis_default_value(), mRMR_THRESHOLD = qgisprocess::qgis_default_value(), mRMR_METHOD = qgisprocess::qgis_default_value(), RF_IMPORT = qgisprocess::qgis_default_value(), RF_EXPORT = qgisprocess::qgis_default_value(), RF_TREE_COUNT = qgisprocess::qgis_default_value(), RF_TREE_SAMPLES = qgisprocess::qgis_default_value(), RF_REPLACE = qgisprocess::qgis_default_value(), RF_SPLIT_MIN_SIZE = qgisprocess::qgis_default_value(), RF_NODE_FEATURES = qgisprocess::qgis_default_value(), RF_STRATIFICATION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_randomforestpresencepredictionvigra <- function(FEATURES = qgisprocess:::qgis_default_value(), PREDICTION = qgisprocess:::qgis_default_value(), PROBABILITY = qgisprocess:::qgis_default_value(), PRESENCE = qgisprocess:::qgis_default_value(), BACKGROUND = qgisprocess:::qgis_default_value(), DO_MRMR = qgisprocess:::qgis_default_value(), mRMR_NFEATURES = qgisprocess:::qgis_default_value(), mRMR_DISCRETIZE = qgisprocess:::qgis_default_value(), mRMR_THRESHOLD = qgisprocess:::qgis_default_value(), mRMR_METHOD = qgisprocess:::qgis_default_value(), RF_IMPORT = qgisprocess:::qgis_default_value(), RF_EXPORT = qgisprocess:::qgis_default_value(), RF_TREE_COUNT = qgisprocess:::qgis_default_value(), RF_TREE_SAMPLES = qgisprocess:::qgis_default_value(), RF_REPLACE = qgisprocess:::qgis_default_value(), RF_SPLIT_MIN_SIZE = qgisprocess:::qgis_default_value(), RF_NODE_FEATURES = qgisprocess:::qgis_default_value(), RF_STRATIFICATION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:randomforestpresencepredictionvigra")
 
@@ -51,6 +51,6 @@ saga_randomforestpresencepredictionvigra <- function(FEATURES = qgisprocess::qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PREDICTION")
+    qgisprocess::qgis_extract_output(output, "PREDICTION")
   }
 }

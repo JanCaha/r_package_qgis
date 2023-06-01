@@ -5,9 +5,9 @@
 \title{QGIS algorithm Clip raster with polygon}
 \usage{
 saga_cliprasterwithpolygon(
-  INPUT = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

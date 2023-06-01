@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rasterdivision <- function(A = qgisprocess::qgis_default_value(), B = qgisprocess::qgis_default_value(), C = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rasterdivision <- function(A = qgisprocess:::qgis_default_value(), B = qgisprocess:::qgis_default_value(), C = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rasterdivision")
 
@@ -35,6 +35,6 @@ saga_rasterdivision <- function(A = qgisprocess::qgis_default_value(), B = qgisp
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "C")
+    qgisprocess::qgis_extract_output(output, "C")
   }
 }

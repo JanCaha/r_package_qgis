@@ -5,12 +5,12 @@
 \title{QGIS algorithm Land use scenario generator}
 \usage{
 saga_landusescenariogenerator(
-  FIELDS = qgisprocess::qgis_default_value(),
-  FIELD_ID = qgisprocess::qgis_default_value(),
-  SCENARIO = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  STATISTICS = qgisprocess::qgis_default_value(),
-  KNOWN_CROPS = qgisprocess::qgis_default_value(),
+  FIELDS = qgisprocess:::qgis_default_value(),
+  FIELD_ID = qgisprocess:::qgis_default_value(),
+  SCENARIO = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  STATISTICS = qgisprocess:::qgis_default_value(),
+  KNOWN_CROPS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

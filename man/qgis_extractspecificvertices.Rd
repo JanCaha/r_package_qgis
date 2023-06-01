@@ -5,9 +5,9 @@
 \title{QGIS algorithm Extract specific vertices}
 \usage{
 qgis_extractspecificvertices(
-  INPUT = qgisprocess::qgis_default_value(),
-  VERTICES = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  VERTICES = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

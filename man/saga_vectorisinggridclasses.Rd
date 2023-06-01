@@ -5,11 +5,11 @@
 \title{QGIS algorithm Vectorising grid classes}
 \usage{
 saga_vectorisinggridclasses(
-  GRID = qgisprocess::qgis_default_value(),
-  CLASS_ALL = qgisprocess::qgis_default_value(),
-  CLASS_ID = qgisprocess::qgis_default_value(),
-  SPLIT = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  CLASS_ALL = qgisprocess:::qgis_default_value(),
+  CLASS_ID = qgisprocess:::qgis_default_value(),
+  SPLIT = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

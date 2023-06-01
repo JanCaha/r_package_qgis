@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_profilesfromlines <- function(DEM = qgisprocess::qgis_default_value(), VALUES = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), NAME = qgisprocess::qgis_default_value(), PROFILE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_profilesfromlines <- function(DEM = qgisprocess:::qgis_default_value(), VALUES = qgisprocess:::qgis_default_value(), LINES = qgisprocess:::qgis_default_value(), NAME = qgisprocess:::qgis_default_value(), PROFILE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:profilesfromlines")
 
@@ -37,6 +37,6 @@ saga_profilesfromlines <- function(DEM = qgisprocess::qgis_default_value(), VALU
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PROFILE")
+    qgisprocess::qgis_extract_output(output, "PROFILE")
   }
 }

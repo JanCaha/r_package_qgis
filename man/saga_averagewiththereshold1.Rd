@@ -5,11 +5,11 @@
 \title{QGIS algorithm Average with thereshold 1}
 \usage{
 saga_averagewiththereshold1(
-  INPUT = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  RX = qgisprocess::qgis_default_value(),
-  RY = qgisprocess::qgis_default_value(),
-  THRESH = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  RX = qgisprocess:::qgis_default_value(),
+  RY = qgisprocess:::qgis_default_value(),
+  THRESH = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

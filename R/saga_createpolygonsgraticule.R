@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_createpolygonsgraticule <- function(EXTENT = qgisprocess::qgis_default_value(), EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX = qgisprocess::qgis_default_value(), DIVISION_X = qgisprocess::qgis_default_value(), DIVISION_Y = qgisprocess::qgis_default_value(), ALIGNMENT = qgisprocess::qgis_default_value(), GRATICULE_RECT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_createpolygonsgraticule <- function(EXTENT = qgisprocess:::qgis_default_value(), EXTENT_X_MIN_EXTENT_X_MAX_EXTENT_Y_MIN_EXTENT_Y_MAX = qgisprocess:::qgis_default_value(), DIVISION_X = qgisprocess:::qgis_default_value(), DIVISION_Y = qgisprocess:::qgis_default_value(), ALIGNMENT = qgisprocess:::qgis_default_value(), GRATICULE_RECT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:createpolygonsgraticule")
 
@@ -38,6 +38,6 @@ saga_createpolygonsgraticule <- function(EXTENT = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "GRATICULE_RECT")
+    qgisprocess::qgis_extract_output(output, "GRATICULE_RECT")
   }
 }

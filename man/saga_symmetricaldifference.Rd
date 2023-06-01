@@ -5,10 +5,10 @@
 \title{QGIS algorithm Symmetrical difference}
 \usage{
 saga_symmetricaldifference(
-  A = qgisprocess::qgis_default_value(),
-  B = qgisprocess::qgis_default_value(),
-  SPLIT = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  A = qgisprocess:::qgis_default_value(),
+  B = qgisprocess:::qgis_default_value(),
+  SPLIT = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

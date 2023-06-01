@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_channelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), INIT_GRID = qgisprocess::qgis_default_value(), INIT_METHOD = qgisprocess::qgis_default_value(), INIT_VALUE = qgisprocess::qgis_default_value(), DIV_GRID = qgisprocess::qgis_default_value(), DIV_CELLS = qgisprocess::qgis_default_value(), TRACE_WEIGHT = qgisprocess::qgis_default_value(), MINLEN = qgisprocess::qgis_default_value(), CHNLNTWRK = qgisprocess::qgis_default_value(), CHNLROUTE = qgisprocess::qgis_default_value(), SHAPES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_channelnetwork <- function(ELEVATION = qgisprocess:::qgis_default_value(), SINKROUTE = qgisprocess:::qgis_default_value(), INIT_GRID = qgisprocess:::qgis_default_value(), INIT_METHOD = qgisprocess:::qgis_default_value(), INIT_VALUE = qgisprocess:::qgis_default_value(), DIV_GRID = qgisprocess:::qgis_default_value(), DIV_CELLS = qgisprocess:::qgis_default_value(), TRACE_WEIGHT = qgisprocess:::qgis_default_value(), MINLEN = qgisprocess:::qgis_default_value(), CHNLNTWRK = qgisprocess:::qgis_default_value(), CHNLROUTE = qgisprocess:::qgis_default_value(), SHAPES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:channelnetwork")
 
@@ -46,6 +46,6 @@ saga_channelnetwork <- function(ELEVATION = qgisprocess::qgis_default_value(), S
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CHNLNTWRK")
+    qgisprocess::qgis_extract_output(output, "CHNLNTWRK")
   }
 }

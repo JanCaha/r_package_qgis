@@ -5,13 +5,13 @@
 \title{QGIS algorithm Cell stack percentile}
 \usage{
 qgis_cellstackpercentile(
-  INPUT = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  PERCENTILE = qgisprocess::qgis_default_value(),
-  IGNORE_NODATA = qgisprocess::qgis_default_value(),
-  REFERENCE_LAYER = qgisprocess::qgis_default_value(),
-  OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  PERCENTILE = qgisprocess:::qgis_default_value(),
+  IGNORE_NODATA = qgisprocess:::qgis_default_value(),
+  REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
+  OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

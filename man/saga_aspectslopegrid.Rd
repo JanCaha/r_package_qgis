@@ -5,10 +5,10 @@
 \title{QGIS algorithm Aspect-slope grid}
 \usage{
 saga_aspectslopegrid(
-  ASPECT = qgisprocess::qgis_default_value(),
-  SLOPE = qgisprocess::qgis_default_value(),
-  ASPECT_SLOPE = qgisprocess::qgis_default_value(),
-  LUT = qgisprocess::qgis_default_value(),
+  ASPECT = qgisprocess:::qgis_default_value(),
+  SLOPE = qgisprocess:::qgis_default_value(),
+  ASPECT_SLOPE = qgisprocess:::qgis_default_value(),
+  LUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

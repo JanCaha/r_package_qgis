@@ -5,11 +5,11 @@
 \title{QGIS algorithm Raster values to points}
 \usage{
 saga_rastervaluestopoints(
-  GRIDS = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  NODATA = qgisprocess::qgis_default_value(),
-  TYPE = qgisprocess::qgis_default_value(),
-  SHAPES = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  NODATA = qgisprocess:::qgis_default_value(),
+  TYPE = qgisprocess:::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

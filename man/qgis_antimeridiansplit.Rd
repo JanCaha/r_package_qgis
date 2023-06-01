@@ -5,8 +5,8 @@
 \title{QGIS algorithm Geodesic line split at antimeridian}
 \usage{
 qgis_antimeridiansplit(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

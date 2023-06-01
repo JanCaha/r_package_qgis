@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_morphometricprotectionindex <- function(DEM = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), PROTECTION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_morphometricprotectionindex <- function(DEM = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), PROTECTION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:morphometricprotectionindex")
 
@@ -35,6 +35,6 @@ saga_morphometricprotectionindex <- function(DEM = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PROTECTION")
+    qgisprocess::qgis_extract_output(output, "PROTECTION")
   }
 }

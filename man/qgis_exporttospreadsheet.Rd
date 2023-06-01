@@ -5,11 +5,11 @@
 \title{QGIS algorithm Export to spreadsheet}
 \usage{
 qgis_exporttospreadsheet(
-  LAYERS = qgisprocess::qgis_default_value(),
-  USE_ALIAS = qgisprocess::qgis_default_value(),
-  FORMATTED_VALUES = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  OVERWRITE = qgisprocess::qgis_default_value(),
+  LAYERS = qgisprocess:::qgis_default_value(),
+  USE_ALIAS = qgisprocess:::qgis_default_value(),
+  FORMATTED_VALUES = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  OVERWRITE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_dbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), MIN_SIZE = qgisprocess::qgis_default_value(), EPS = qgisprocess::qgis_default_value(), DBSCAN = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), SIZE_FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_dbscanclustering <- function(INPUT = qgisprocess:::qgis_default_value(), MIN_SIZE = qgisprocess:::qgis_default_value(), EPS = qgisprocess:::qgis_default_value(), DBSCAN = qgisprocess:::qgis_default_value(), FIELD_NAME = qgisprocess:::qgis_default_value(), SIZE_FIELD_NAME = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:dbscanclustering")
 
@@ -40,6 +40,6 @@ qgis_dbscanclustering <- function(INPUT = qgisprocess::qgis_default_value(), MIN
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NUM_CLUSTERS")
+    qgisprocess::qgis_extract_output(output, "NUM_CLUSTERS")
   }
 }

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_li_shape_ascii <- function(input = qgisprocess::qgis_default_value(), config_txt = qgisprocess::qgis_default_value(), config = qgisprocess::qgis_default_value(), output_txt = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_li_shape_ascii <- function(input = qgisprocess:::qgis_default_value(), config_txt = qgisprocess:::qgis_default_value(), config = qgisprocess:::qgis_default_value(), output_txt = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.li.shape.ascii")
 
@@ -38,6 +38,6 @@ grass7_r_li_shape_ascii <- function(input = qgisprocess::qgis_default_value(), c
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output_txt")
+    qgisprocess::qgis_extract_output(output, "output_txt")
   }
 }

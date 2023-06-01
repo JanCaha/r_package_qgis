@@ -5,12 +5,12 @@
 \title{QGIS algorithm Sieving classes}
 \usage{
 saga_sievingclasses(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  MODE = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  ALL = qgisprocess::qgis_default_value(),
-  CLASS = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  MODE = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  ALL = qgisprocess:::qgis_default_value(),
+  CLASS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_tasseledcaptransformation <- function(BLUE = qgisprocess::qgis_default_value(), RED = qgisprocess::qgis_default_value(), GREEN = qgisprocess::qgis_default_value(), NIR = qgisprocess::qgis_default_value(), MIR1 = qgisprocess::qgis_default_value(), MIR2 = qgisprocess::qgis_default_value(), BRIGHTNESS = qgisprocess::qgis_default_value(), GREENNESS = qgisprocess::qgis_default_value(), WETNESS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_tasseledcaptransformation <- function(BLUE = qgisprocess:::qgis_default_value(), RED = qgisprocess:::qgis_default_value(), GREEN = qgisprocess:::qgis_default_value(), NIR = qgisprocess:::qgis_default_value(), MIR1 = qgisprocess:::qgis_default_value(), MIR2 = qgisprocess:::qgis_default_value(), BRIGHTNESS = qgisprocess:::qgis_default_value(), GREENNESS = qgisprocess:::qgis_default_value(), WETNESS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:tasseledcaptransformation")
 
@@ -43,6 +43,6 @@ saga_tasseledcaptransformation <- function(BLUE = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BRIGHTNESS")
+    qgisprocess::qgis_extract_output(output, "BRIGHTNESS")
   }
 }

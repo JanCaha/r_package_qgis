@@ -5,8 +5,8 @@
 \title{QGIS algorithm Close one cell gaps}
 \usage{
 saga_closeonecellgaps(
-  INPUT = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

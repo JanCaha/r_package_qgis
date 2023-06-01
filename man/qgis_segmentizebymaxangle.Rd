@@ -5,9 +5,9 @@
 \title{QGIS algorithm Segmentize by maximum angle}
 \usage{
 qgis_segmentizebymaxangle(
-  INPUT = qgisprocess::qgis_default_value(),
-  ANGLE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  ANGLE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

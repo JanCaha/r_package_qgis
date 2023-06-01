@@ -5,11 +5,11 @@
 \title{QGIS algorithm Points along geometry}
 \usage{
 qgis_pointsalonglines(
-  INPUT = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  START_OFFSET = qgisprocess::qgis_default_value(),
-  END_OFFSET = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  START_OFFSET = qgisprocess:::qgis_default_value(),
+  END_OFFSET = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

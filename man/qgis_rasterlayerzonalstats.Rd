@@ -5,12 +5,12 @@
 \title{QGIS algorithm Raster layer zonal statistics}
 \usage{
 qgis_rasterlayerzonalstats(
-  INPUT = qgisprocess::qgis_default_value(),
-  BAND = qgisprocess::qgis_default_value(),
-  ZONES = qgisprocess::qgis_default_value(),
-  ZONES_BAND = qgisprocess::qgis_default_value(),
-  REF_LAYER = qgisprocess::qgis_default_value(),
-  OUTPUT_TABLE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BAND = qgisprocess:::qgis_default_value(),
+  ZONES = qgisprocess:::qgis_default_value(),
+  ZONES_BAND = qgisprocess:::qgis_default_value(),
+  REF_LAYER = qgisprocess:::qgis_default_value(),
+  OUTPUT_TABLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

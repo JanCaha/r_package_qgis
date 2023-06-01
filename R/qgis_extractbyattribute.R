@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_extractbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), FIELD = qgisprocess::qgis_default_value(), OPERATOR = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), FAIL_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_extractbyattribute <- function(INPUT = qgisprocess:::qgis_default_value(), FIELD = qgisprocess:::qgis_default_value(), OPERATOR = qgisprocess:::qgis_default_value(), VALUE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), FAIL_OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:extractbyattribute")
 
@@ -39,6 +39,6 @@ qgis_extractbyattribute <- function(INPUT = qgisprocess::qgis_default_value(), F
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FAIL_OUTPUT")
+    qgisprocess::qgis_extract_output(output, "FAIL_OUTPUT")
   }
 }

@@ -5,12 +5,12 @@
 \title{QGIS algorithm Vector ruggedness measure (vrm)}
 \usage{
 saga_vectorruggednessmeasurevrm(
-  DEM = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess::qgis_default_value(),
-  DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess::qgis_default_value(),
-  VRM = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess:::qgis_default_value(),
+  DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess:::qgis_default_value(),
+  DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess:::qgis_default_value(),
+  VRM = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Cut vector layer}
 \usage{
 saga_cutvectorlayer(
-  SHAPES = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  POLYGONS_POLYGONS = qgisprocess::qgis_default_value(),
-  CUT = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  POLYGONS_POLYGONS = qgisprocess:::qgis_default_value(),
+  CUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

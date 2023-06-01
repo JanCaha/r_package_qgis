@@ -35,9 +35,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_statisticsforrasters <- function(GRIDS = qgisprocess::qgis_default_value(), PCTL_VAL = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), PCTL = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), STDDEVLO = qgisprocess::qgis_default_value(), STDDEVHI = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_statisticsforrasters <- function(GRIDS = qgisprocess:::qgis_default_value(), PCTL_VAL = qgisprocess:::qgis_default_value(), MEAN = qgisprocess:::qgis_default_value(), MIN = qgisprocess:::qgis_default_value(), MAX = qgisprocess:::qgis_default_value(), VAR = qgisprocess:::qgis_default_value(), SUM = qgisprocess:::qgis_default_value(), RANGE = qgisprocess:::qgis_default_value(), PCTL = qgisprocess:::qgis_default_value(), STDDEV = qgisprocess:::qgis_default_value(), STDDEVLO = qgisprocess:::qgis_default_value(), STDDEVHI = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:statisticsforrasters")
 
@@ -53,6 +53,6 @@ saga_statisticsforrasters <- function(GRIDS = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MAX")
+    qgisprocess::qgis_extract_output(output, "MAX")
   }
 }

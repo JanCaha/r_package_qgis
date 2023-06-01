@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_accumulationfunctions <- function(SURFACE = qgisprocess::qgis_default_value(), INPUT = qgisprocess::qgis_default_value(), STATE_IN = qgisprocess::qgis_default_value(), CONTROL = qgisprocess::qgis_default_value(), CTRL_LINEAR = qgisprocess::qgis_default_value(), FLUX = qgisprocess::qgis_default_value(), STATE_OUT = qgisprocess::qgis_default_value(), OPERATION = qgisprocess::qgis_default_value(), LINEAR = qgisprocess::qgis_default_value(), THRES_LINEAR = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_accumulationfunctions <- function(SURFACE = qgisprocess:::qgis_default_value(), INPUT = qgisprocess:::qgis_default_value(), STATE_IN = qgisprocess:::qgis_default_value(), CONTROL = qgisprocess:::qgis_default_value(), CTRL_LINEAR = qgisprocess:::qgis_default_value(), FLUX = qgisprocess:::qgis_default_value(), STATE_OUT = qgisprocess:::qgis_default_value(), OPERATION = qgisprocess:::qgis_default_value(), LINEAR = qgisprocess:::qgis_default_value(), THRES_LINEAR = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:accumulationfunctions")
 
@@ -43,6 +43,6 @@ saga_accumulationfunctions <- function(SURFACE = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLUX")
+    qgisprocess::qgis_extract_output(output, "FLUX")
   }
 }

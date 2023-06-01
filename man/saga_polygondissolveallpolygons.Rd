@@ -5,9 +5,9 @@
 \title{QGIS algorithm Polygon dissolve (all polygons)}
 \usage{
 saga_polygondissolveallpolygons(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  BND_KEEP = qgisprocess::qgis_default_value(),
-  DISSOLVED = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  BND_KEEP = qgisprocess:::qgis_default_value(),
+  DISSOLVED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,12 +5,12 @@
 \title{QGIS algorithm Categorical coincidence}
 \usage{
 saga_categoricalcoincidence(
-  GRIDS = qgisprocess::qgis_default_value(),
-  CATEGORIES = qgisprocess::qgis_default_value(),
-  COINCIDENCE = qgisprocess::qgis_default_value(),
-  MAJ_COUNT = qgisprocess::qgis_default_value(),
-  MAJ_VALUE = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  CATEGORIES = qgisprocess:::qgis_default_value(),
+  COINCIDENCE = qgisprocess:::qgis_default_value(),
+  MAJ_COUNT = qgisprocess:::qgis_default_value(),
+  MAJ_VALUE = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

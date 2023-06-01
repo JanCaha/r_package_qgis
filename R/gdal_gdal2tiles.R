@@ -30,9 +30,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_gdal2tiles <- function(INPUT = qgisprocess::qgis_default_value(), PROFILE = qgisprocess::qgis_default_value(), ZOOM = qgisprocess::qgis_default_value(), VIEWER = qgisprocess::qgis_default_value(), TITLE = qgisprocess::qgis_default_value(), COPYRIGHT = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), SOURCE_CRS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), URL = qgisprocess::qgis_default_value(), GOOGLE_KEY = qgisprocess::qgis_default_value(), BING_KEY = qgisprocess::qgis_default_value(), RESUME = qgisprocess::qgis_default_value(), KML = qgisprocess::qgis_default_value(), NO_KML = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_gdal2tiles <- function(INPUT = qgisprocess:::qgis_default_value(), PROFILE = qgisprocess:::qgis_default_value(), ZOOM = qgisprocess:::qgis_default_value(), VIEWER = qgisprocess:::qgis_default_value(), TITLE = qgisprocess:::qgis_default_value(), COPYRIGHT = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), SOURCE_CRS = qgisprocess:::qgis_default_value(), NODATA = qgisprocess:::qgis_default_value(), URL = qgisprocess:::qgis_default_value(), GOOGLE_KEY = qgisprocess:::qgis_default_value(), BING_KEY = qgisprocess:::qgis_default_value(), RESUME = qgisprocess:::qgis_default_value(), KML = qgisprocess:::qgis_default_value(), NO_KML = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:gdal2tiles")
 
@@ -48,6 +48,6 @@ gdal_gdal2tiles <- function(INPUT = qgisprocess::qgis_default_value(), PROFILE =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

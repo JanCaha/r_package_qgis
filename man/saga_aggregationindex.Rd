@@ -5,9 +5,9 @@
 \title{QGIS algorithm Aggregation index}
 \usage{
 saga_aggregationindex(
-  INPUT = qgisprocess::qgis_default_value(),
-  MAXNUMCLASS = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  MAXNUMCLASS = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

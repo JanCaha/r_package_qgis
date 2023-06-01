@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_crossprofiles <- function(DEM = qgisprocess::qgis_default_value(), LINES = qgisprocess::qgis_default_value(), DIST_LINE = qgisprocess::qgis_default_value(), DIST_PROFILE = qgisprocess::qgis_default_value(), NUM_PROFILE = qgisprocess::qgis_default_value(), PROFILES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_crossprofiles <- function(DEM = qgisprocess:::qgis_default_value(), LINES = qgisprocess:::qgis_default_value(), DIST_LINE = qgisprocess:::qgis_default_value(), DIST_PROFILE = qgisprocess:::qgis_default_value(), NUM_PROFILE = qgisprocess:::qgis_default_value(), PROFILES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:crossprofiles")
 
@@ -38,6 +38,6 @@ saga_crossprofiles <- function(DEM = qgisprocess::qgis_default_value(), LINES = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PROFILES")
+    qgisprocess::qgis_extract_output(output, "PROFILES")
   }
 }

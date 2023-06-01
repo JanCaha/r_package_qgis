@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_downslopedistancegradient <- function(DEM = qgisprocess::qgis_default_value(), DISTANCE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), GRADIENT = qgisprocess::qgis_default_value(), DIFFERENCE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_downslopedistancegradient <- function(DEM = qgisprocess:::qgis_default_value(), DISTANCE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), GRADIENT = qgisprocess:::qgis_default_value(), DIFFERENCE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:downslopedistancegradient")
 
@@ -38,6 +38,6 @@ saga_downslopedistancegradient <- function(DEM = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DIFFERENCE")
+    qgisprocess::qgis_extract_output(output, "DIFFERENCE")
   }
 }

@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_flowaccumulationqmofesp <- function(DEM = qgisprocess::qgis_default_value(), PREPROC = qgisprocess::qgis_default_value(), DZFILL = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_flowaccumulationqmofesp <- function(DEM = qgisprocess:::qgis_default_value(), PREPROC = qgisprocess:::qgis_default_value(), DZFILL = qgisprocess:::qgis_default_value(), FLOW = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:flowaccumulationqmofesp")
 
@@ -36,6 +36,6 @@ saga_flowaccumulationqmofesp <- function(DEM = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLOW")
+    qgisprocess::qgis_extract_output(output, "FLOW")
   }
 }

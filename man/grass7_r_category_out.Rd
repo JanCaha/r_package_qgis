@@ -5,13 +5,13 @@
 \title{QGIS algorithm r.category.out}
 \usage{
 grass7_r_category_out(
-  map = qgisprocess::qgis_default_value(),
-  cats = qgisprocess::qgis_default_value(),
-  values = qgisprocess::qgis_default_value(),
-  separator = qgisprocess::qgis_default_value(),
-  html = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  map = qgisprocess:::qgis_default_value(),
+  cats = qgisprocess:::qgis_default_value(),
+  values = qgisprocess:::qgis_default_value(),
+  separator = qgisprocess:::qgis_default_value(),
+  html = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

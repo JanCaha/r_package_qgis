@@ -5,12 +5,12 @@
 \title{QGIS algorithm Extract by attribute}
 \usage{
 qgis_extractbyattribute(
-  INPUT = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  OPERATOR = qgisprocess::qgis_default_value(),
-  VALUE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  FAIL_OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  OPERATOR = qgisprocess:::qgis_default_value(),
+  VALUE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  FAIL_OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_out_ascii <- function(input = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), columns = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), format = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), precision = qgisprocess::qgis_default_value(), .o = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_out_ascii <- function(input = qgisprocess:::qgis_default_value(), type = qgisprocess:::qgis_default_value(), columns = qgisprocess:::qgis_default_value(), where = qgisprocess:::qgis_default_value(), format = qgisprocess:::qgis_default_value(), separator = qgisprocess:::qgis_default_value(), precision = qgisprocess:::qgis_default_value(), .o = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.out.ascii")
 
@@ -45,6 +45,6 @@ grass7_v_out_ascii <- function(input = qgisprocess::qgis_default_value(), type =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

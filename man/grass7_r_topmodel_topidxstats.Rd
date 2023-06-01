@@ -5,11 +5,11 @@
 \title{QGIS algorithm r.topmodel.topidxstats}
 \usage{
 grass7_r_topmodel_topidxstats(
-  topidx = qgisprocess::qgis_default_value(),
-  ntopidxclasses = qgisprocess::qgis_default_value(),
-  outtopidxstats = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  topidx = qgisprocess:::qgis_default_value(),
+  ntopidxclasses = qgisprocess:::qgis_default_value(),
+  outtopidxstats = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

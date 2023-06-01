@@ -5,11 +5,11 @@
 \title{QGIS algorithm Split lines at points}
 \usage{
 saga_splitlinesatpoints(
-  LINES = qgisprocess::qgis_default_value(),
-  SPLIT = qgisprocess::qgis_default_value(),
-  INTERSECT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  EPSILON = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  SPLIT = qgisprocess:::qgis_default_value(),
+  INTERSECT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  EPSILON = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

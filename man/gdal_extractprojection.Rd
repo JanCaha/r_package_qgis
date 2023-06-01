@@ -5,8 +5,8 @@
 \title{QGIS algorithm Extract projection}
 \usage{
 gdal_extractprojection(
-  INPUT = qgisprocess::qgis_default_value(),
-  PRJ_FILE_CREATE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  PRJ_FILE_CREATE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

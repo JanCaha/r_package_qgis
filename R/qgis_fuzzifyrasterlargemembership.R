@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_fuzzifyrasterlargemembership <- function(INPUT = qgisprocess::qgis_default_value(), BAND = qgisprocess::qgis_default_value(), FUZZYMIDPOINT = qgisprocess::qgis_default_value(), FUZZYSPREAD = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_fuzzifyrasterlargemembership <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), FUZZYMIDPOINT = qgisprocess:::qgis_default_value(), FUZZYSPREAD = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:fuzzifyrasterlargemembership")
 
@@ -42,6 +42,6 @@ qgis_fuzzifyrasterlargemembership <- function(INPUT = qgisprocess::qgis_default_
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CRS_AUTHID")
+    qgisprocess::qgis_extract_output(output, "CRS_AUTHID")
   }
 }

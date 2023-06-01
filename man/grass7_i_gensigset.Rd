@@ -5,12 +5,12 @@
 \title{QGIS algorithm i.gensigset}
 \usage{
 grass7_i_gensigset(
-  trainingmap = qgisprocess::qgis_default_value(),
-  input = qgisprocess::qgis_default_value(),
-  maxsig = qgisprocess::qgis_default_value(),
-  signaturefile = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  trainingmap = qgisprocess:::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  maxsig = qgisprocess:::qgis_default_value(),
+  signaturefile = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

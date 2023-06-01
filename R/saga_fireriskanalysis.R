@@ -32,9 +32,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fireriskanalysis <- function(DEM = qgisprocess::qgis_default_value(), FUEL = qgisprocess::qgis_default_value(), WINDSPD = qgisprocess::qgis_default_value(), WINDDIR = qgisprocess::qgis_default_value(), M1H = qgisprocess::qgis_default_value(), M10H = qgisprocess::qgis_default_value(), M100H = qgisprocess::qgis_default_value(), MHERB = qgisprocess::qgis_default_value(), MWOOD = qgisprocess::qgis_default_value(), VALUE = qgisprocess::qgis_default_value(), BASEPROB = qgisprocess::qgis_default_value(), MONTECARLO = qgisprocess::qgis_default_value(), INTERVAL = qgisprocess::qgis_default_value(), DANGER = qgisprocess::qgis_default_value(), COMPPROB = qgisprocess::qgis_default_value(), PRIORITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fireriskanalysis <- function(DEM = qgisprocess:::qgis_default_value(), FUEL = qgisprocess:::qgis_default_value(), WINDSPD = qgisprocess:::qgis_default_value(), WINDDIR = qgisprocess:::qgis_default_value(), M1H = qgisprocess:::qgis_default_value(), M10H = qgisprocess:::qgis_default_value(), M100H = qgisprocess:::qgis_default_value(), MHERB = qgisprocess:::qgis_default_value(), MWOOD = qgisprocess:::qgis_default_value(), VALUE = qgisprocess:::qgis_default_value(), BASEPROB = qgisprocess:::qgis_default_value(), MONTECARLO = qgisprocess:::qgis_default_value(), INTERVAL = qgisprocess:::qgis_default_value(), DANGER = qgisprocess:::qgis_default_value(), COMPPROB = qgisprocess:::qgis_default_value(), PRIORITY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fireriskanalysis")
 
@@ -50,6 +50,6 @@ saga_fireriskanalysis <- function(DEM = qgisprocess::qgis_default_value(), FUEL 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "COMPPROB")
+    qgisprocess::qgis_extract_output(output, "COMPPROB")
   }
 }

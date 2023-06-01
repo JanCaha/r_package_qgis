@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fuzzyunionor <- function(GRIDS = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), OR = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fuzzyunionor <- function(GRIDS = qgisprocess:::qgis_default_value(), TYPE = qgisprocess:::qgis_default_value(), OR = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fuzzyunionor")
 
@@ -35,6 +35,6 @@ saga_fuzzyunionor <- function(GRIDS = qgisprocess::qgis_default_value(), TYPE = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OR")
+    qgisprocess::qgis_extract_output(output, "OR")
   }
 }

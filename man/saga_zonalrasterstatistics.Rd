@@ -5,12 +5,12 @@
 \title{QGIS algorithm Zonal raster statistics}
 \usage{
 saga_zonalrasterstatistics(
-  ZONES = qgisprocess::qgis_default_value(),
-  CATLIST = qgisprocess::qgis_default_value(),
-  STATLIST = qgisprocess::qgis_default_value(),
-  ASPECT = qgisprocess::qgis_default_value(),
-  SHORTNAMES = qgisprocess::qgis_default_value(),
-  OUTTAB = qgisprocess::qgis_default_value(),
+  ZONES = qgisprocess:::qgis_default_value(),
+  CATLIST = qgisprocess:::qgis_default_value(),
+  STATLIST = qgisprocess:::qgis_default_value(),
+  ASPECT = qgisprocess:::qgis_default_value(),
+  SHORTNAMES = qgisprocess:::qgis_default_value(),
+  OUTTAB = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

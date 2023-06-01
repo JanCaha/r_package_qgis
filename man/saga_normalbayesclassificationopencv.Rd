@@ -5,12 +5,12 @@
 \title{QGIS algorithm Normal bayes classification (opencv)}
 \usage{
 saga_normalbayesclassificationopencv(
-  FEATURES = qgisprocess::qgis_default_value(),
-  NORMALIZE = qgisprocess::qgis_default_value(),
-  PROBABILITY = qgisprocess::qgis_default_value(),
-  TRAIN_AREAS = qgisprocess::qgis_default_value(),
-  TRAIN_CLASS = qgisprocess::qgis_default_value(),
-  CLASSES = qgisprocess::qgis_default_value(),
+  FEATURES = qgisprocess:::qgis_default_value(),
+  NORMALIZE = qgisprocess:::qgis_default_value(),
+  PROBABILITY = qgisprocess:::qgis_default_value(),
+  TRAIN_AREAS = qgisprocess:::qgis_default_value(),
+  TRAIN_CLASS = qgisprocess:::qgis_default_value(),
+  CLASSES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

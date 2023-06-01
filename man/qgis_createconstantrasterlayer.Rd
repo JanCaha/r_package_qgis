@@ -5,12 +5,12 @@
 \title{QGIS algorithm Create constant raster layer}
 \usage{
 qgis_createconstantrasterlayer(
-  EXTENT = qgisprocess::qgis_default_value(),
-  TARGET_CRS = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  NUMBER = qgisprocess::qgis_default_value(),
-  OUTPUT_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  TARGET_CRS = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  NUMBER = qgisprocess:::qgis_default_value(),
+  OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

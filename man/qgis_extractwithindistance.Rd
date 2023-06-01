@@ -5,10 +5,10 @@
 \title{QGIS algorithm Extract within distance}
 \usage{
 qgis_extractwithindistance(
-  INPUT = qgisprocess::qgis_default_value(),
-  REFERENCE = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  REFERENCE = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

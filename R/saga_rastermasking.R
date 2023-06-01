@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rastermasking <- function(GRID = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), MASKED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rastermasking <- function(GRID = qgisprocess:::qgis_default_value(), MASK = qgisprocess:::qgis_default_value(), MASKED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rastermasking")
 
@@ -35,6 +35,6 @@ saga_rastermasking <- function(GRID = qgisprocess::qgis_default_value(), MASK = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MASKED")
+    qgisprocess::qgis_extract_output(output, "MASKED")
   }
 }

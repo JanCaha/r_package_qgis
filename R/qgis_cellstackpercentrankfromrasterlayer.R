@@ -27,9 +27,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_cellstackpercentrankfromrasterlayer <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_VALUE_RASTER = qgisprocess::qgis_default_value(), VALUE_RASTER_BAND = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), IGNORE_NODATA = qgisprocess::qgis_default_value(), REFERENCE_LAYER = qgisprocess::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_cellstackpercentrankfromrasterlayer <- function(INPUT = qgisprocess:::qgis_default_value(), INPUT_VALUE_RASTER = qgisprocess:::qgis_default_value(), VALUE_RASTER_BAND = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), IGNORE_NODATA = qgisprocess:::qgis_default_value(), REFERENCE_LAYER = qgisprocess:::qgis_default_value(), OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:cellstackpercentrankfromrasterlayer")
 
@@ -45,6 +45,6 @@ qgis_cellstackpercentrankfromrasterlayer <- function(INPUT = qgisprocess::qgis_d
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CRS_AUTHID")
+    qgisprocess::qgis_extract_output(output, "CRS_AUTHID")
   }
 }

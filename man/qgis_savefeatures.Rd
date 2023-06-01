@@ -5,11 +5,11 @@
 \title{QGIS algorithm Save vector features to file}
 \usage{
 qgis_savefeatures(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  LAYER_NAME = qgisprocess::qgis_default_value(),
-  DATASOURCE_OPTIONS = qgisprocess::qgis_default_value(),
-  LAYER_OPTIONS = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  LAYER_NAME = qgisprocess:::qgis_default_value(),
+  DATASOURCE_OPTIONS = qgisprocess:::qgis_default_value(),
+  LAYER_OPTIONS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

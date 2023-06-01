@@ -5,12 +5,12 @@
 \title{QGIS algorithm r.out.xyz}
 \usage{
 grass7_r_out_xyz(
-  input = qgisprocess::qgis_default_value(),
-  separator = qgisprocess::qgis_default_value(),
-  .i = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  separator = qgisprocess:::qgis_default_value(),
+  .i = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

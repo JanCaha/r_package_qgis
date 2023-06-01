@@ -17,9 +17,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_diurnalanisotropicheating <- function(DEM = qgisprocess::qgis_default_value(), ALPHA_MAX = qgisprocess::qgis_default_value(), DAH = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_diurnalanisotropicheating <- function(DEM = qgisprocess:::qgis_default_value(), ALPHA_MAX = qgisprocess:::qgis_default_value(), DAH = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:diurnalanisotropicheating")
 
@@ -35,6 +35,6 @@ saga_diurnalanisotropicheating <- function(DEM = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DAH")
+    qgisprocess::qgis_extract_output(output, "DAH")
   }
 }

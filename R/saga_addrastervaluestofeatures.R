@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_addrastervaluestofeatures <- function(SHAPES = qgisprocess::qgis_default_value(), GRIDS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_addrastervaluestofeatures <- function(SHAPES = qgisprocess:::qgis_default_value(), GRIDS = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:addrastervaluestofeatures")
 
@@ -36,6 +36,6 @@ saga_addrastervaluestofeatures <- function(SHAPES = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

@@ -5,8 +5,8 @@
 \title{QGIS algorithm Set layer encoding}
 \usage{
 qgis_setlayerencoding(
-  INPUT = qgisprocess::qgis_default_value(),
-  ENCODING = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  ENCODING = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

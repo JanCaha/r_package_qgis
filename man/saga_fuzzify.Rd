@@ -5,13 +5,13 @@
 \title{QGIS algorithm Fuzzify}
 \usage{
 saga_fuzzify(
-  INPUT = qgisprocess::qgis_default_value(),
-  A = qgisprocess::qgis_default_value(),
-  B = qgisprocess::qgis_default_value(),
-  C = qgisprocess::qgis_default_value(),
-  D = qgisprocess::qgis_default_value(),
-  TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  A = qgisprocess:::qgis_default_value(),
+  B = qgisprocess:::qgis_default_value(),
+  C = qgisprocess:::qgis_default_value(),
+  D = qgisprocess:::qgis_default_value(),
+  TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

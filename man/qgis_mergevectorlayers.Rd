@@ -5,9 +5,9 @@
 \title{QGIS algorithm Merge vector layers}
 \usage{
 qgis_mergevectorlayers(
-  LAYERS = qgisprocess::qgis_default_value(),
-  CRS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  LAYERS = qgisprocess:::qgis_default_value(),
+  CRS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

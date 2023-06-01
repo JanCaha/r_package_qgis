@@ -5,12 +5,12 @@
 \title{QGIS algorithm Function}
 \usage{
 saga_function(
-  XMIN = qgisprocess::qgis_default_value(),
-  XMAX = qgisprocess::qgis_default_value(),
-  YMIN = qgisprocess::qgis_default_value(),
-  YMAX = qgisprocess::qgis_default_value(),
-  FORMUL = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  XMIN = qgisprocess:::qgis_default_value(),
+  XMAX = qgisprocess:::qgis_default_value(),
+  YMIN = qgisprocess:::qgis_default_value(),
+  YMAX = qgisprocess:::qgis_default_value(),
+  FORMUL = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

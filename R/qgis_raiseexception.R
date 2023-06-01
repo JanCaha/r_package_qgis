@@ -1,6 +1,6 @@
 character(0)
 
-qgis_raiseexception <- function(MESSAGE = qgisprocess::qgis_default_value(), CONDITION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_raiseexception <- function(MESSAGE = qgisprocess:::qgis_default_value(), CONDITION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:raiseexception")
 
@@ -16,6 +16,6 @@ qgis_raiseexception <- function(MESSAGE = qgisprocess::qgis_default_value(), CON
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

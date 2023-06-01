@@ -5,12 +5,12 @@
 \title{QGIS algorithm r.li.patchdensity.ascii}
 \usage{
 grass7_r_li_patchdensity_ascii(
-  input = qgisprocess::qgis_default_value(),
-  config_txt = qgisprocess::qgis_default_value(),
-  config = qgisprocess::qgis_default_value(),
-  output_txt = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  config_txt = qgisprocess:::qgis_default_value(),
+  config = qgisprocess:::qgis_default_value(),
+  output_txt = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

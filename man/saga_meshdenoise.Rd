@@ -5,13 +5,13 @@
 \title{QGIS algorithm Mesh denoise}
 \usage{
 saga_meshdenoise(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  SIGMA = qgisprocess::qgis_default_value(),
-  ITER = qgisprocess::qgis_default_value(),
-  VITER = qgisprocess::qgis_default_value(),
-  NB_CV = qgisprocess::qgis_default_value(),
-  ZONLY = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  SIGMA = qgisprocess:::qgis_default_value(),
+  ITER = qgisprocess:::qgis_default_value(),
+  VITER = qgisprocess:::qgis_default_value(),
+  NB_CV = qgisprocess:::qgis_default_value(),
+  ZONLY = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,8 +5,8 @@
 \title{QGIS algorithm Create attribute index}
 \usage{
 qgis_createattributeindex(
-  INPUT = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

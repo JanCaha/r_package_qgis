@@ -5,14 +5,14 @@
 \title{QGIS algorithm Gradient vectors from direction and length}
 \usage{
 saga_gradientvectorsfromdirectionandlength(
-  DIR = qgisprocess::qgis_default_value(),
-  LEN = qgisprocess::qgis_default_value(),
-  STEP = qgisprocess::qgis_default_value(),
-  SIZE_MIN = qgisprocess::qgis_default_value(),
-  SIZE_MAX = qgisprocess::qgis_default_value(),
-  AGGR = qgisprocess::qgis_default_value(),
-  STYLE = qgisprocess::qgis_default_value(),
-  VECTORS = qgisprocess::qgis_default_value(),
+  DIR = qgisprocess:::qgis_default_value(),
+  LEN = qgisprocess:::qgis_default_value(),
+  STEP = qgisprocess:::qgis_default_value(),
+  SIZE_MIN = qgisprocess:::qgis_default_value(),
+  SIZE_MAX = qgisprocess:::qgis_default_value(),
+  AGGR = qgisprocess:::qgis_default_value(),
+  STYLE = qgisprocess:::qgis_default_value(),
+  VECTORS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

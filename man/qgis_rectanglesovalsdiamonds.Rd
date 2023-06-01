@@ -5,13 +5,13 @@
 \title{QGIS algorithm Rectangles, ovals, diamonds}
 \usage{
 qgis_rectanglesovalsdiamonds(
-  INPUT = qgisprocess::qgis_default_value(),
-  SHAPE = qgisprocess::qgis_default_value(),
-  WIDTH = qgisprocess::qgis_default_value(),
-  HEIGHT = qgisprocess::qgis_default_value(),
-  ROTATION = qgisprocess::qgis_default_value(),
-  SEGMENTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  SHAPE = qgisprocess:::qgis_default_value(),
+  WIDTH = qgisprocess:::qgis_default_value(),
+  HEIGHT = qgisprocess:::qgis_default_value(),
+  ROTATION = qgisprocess:::qgis_default_value(),
+  SEGMENTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

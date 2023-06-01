@@ -5,11 +5,11 @@
 \title{QGIS algorithm Sink removal}
 \usage{
 saga_sinkremoval(
-  DEM = qgisprocess::qgis_default_value(),
-  SINKROUTE = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  THRSHEIGHT = qgisprocess::qgis_default_value(),
-  DEM_PREPROC = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  SINKROUTE = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  THRSHEIGHT = qgisprocess:::qgis_default_value(),
+  DEM_PREPROC = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

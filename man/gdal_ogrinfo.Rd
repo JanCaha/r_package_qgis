@@ -5,10 +5,10 @@
 \title{QGIS algorithm Vector information}
 \usage{
 gdal_ogrinfo(
-  INPUT = qgisprocess::qgis_default_value(),
-  SUMMARY_ONLY = qgisprocess::qgis_default_value(),
-  NO_METADATA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  SUMMARY_ONLY = qgisprocess:::qgis_default_value(),
+  NO_METADATA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,8 +5,8 @@
 \title{QGIS algorithm Line properties}
 \usage{
 saga_lineproperties(
-  LINES = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Principle components analysis}
 \usage{
 saga_principlecomponentsanalysis(
-  TABLE = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  NFIRST = qgisprocess::qgis_default_value(),
-  PCA = qgisprocess::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  NFIRST = qgisprocess:::qgis_default_value(),
+  PCA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

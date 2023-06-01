@@ -5,10 +5,10 @@
 \title{QGIS algorithm Fill sinks (qm of esp)}
 \usage{
 saga_fillsinksqmofesp(
-  DEM = qgisprocess::qgis_default_value(),
-  DZFILL = qgisprocess::qgis_default_value(),
-  FILLED = qgisprocess::qgis_default_value(),
-  SINKS = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  DZFILL = qgisprocess:::qgis_default_value(),
+  FILLED = qgisprocess:::qgis_default_value(),
+  SINKS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

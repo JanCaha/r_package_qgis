@@ -5,14 +5,14 @@
 \title{QGIS algorithm Reclassify by table}
 \usage{
 qgis_reclassifybytable(
-  INPUT_RASTER = qgisprocess::qgis_default_value(),
-  RASTER_BAND = qgisprocess::qgis_default_value(),
-  TABLE = qgisprocess::qgis_default_value(),
-  NO_DATA = qgisprocess::qgis_default_value(),
-  RANGE_BOUNDARIES = qgisprocess::qgis_default_value(),
-  NODATA_FOR_MISSING = qgisprocess::qgis_default_value(),
-  DATA_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT_RASTER = qgisprocess:::qgis_default_value(),
+  RASTER_BAND = qgisprocess:::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  NO_DATA = qgisprocess:::qgis_default_value(),
+  RANGE_BOUNDARIES = qgisprocess:::qgis_default_value(),
+  NODATA_FOR_MISSING = qgisprocess:::qgis_default_value(),
+  DATA_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

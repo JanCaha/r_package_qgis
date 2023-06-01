@@ -5,11 +5,11 @@
 \title{QGIS algorithm Clip points with polygons}
 \usage{
 saga_clippointswithpolygons(
-  POINTS = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  CLIPS = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  CLIPS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

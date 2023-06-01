@@ -5,12 +5,12 @@
 \title{QGIS algorithm Shared polygon edges}
 \usage{
 saga_sharedpolygonedges(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  ATTRIBUTE = qgisprocess::qgis_default_value(),
-  EPSILON = qgisprocess::qgis_default_value(),
-  VERTICES = qgisprocess::qgis_default_value(),
-  DOUBLE = qgisprocess::qgis_default_value(),
-  EDGES = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  ATTRIBUTE = qgisprocess:::qgis_default_value(),
+  EPSILON = qgisprocess:::qgis_default_value(),
+  VERTICES = qgisprocess:::qgis_default_value(),
+  DOUBLE = qgisprocess:::qgis_default_value(),
+  EDGES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

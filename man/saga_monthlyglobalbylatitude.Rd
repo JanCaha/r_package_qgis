@@ -5,11 +5,11 @@
 \title{QGIS algorithm Monthly global by latitude}
 \usage{
 saga_monthlyglobalbylatitude(
-  ALBEDO = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  YEAR = qgisprocess::qgis_default_value(),
-  DLAT = qgisprocess::qgis_default_value(),
-  SOLARRAD = qgisprocess::qgis_default_value(),
+  ALBEDO = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  YEAR = qgisprocess:::qgis_default_value(),
+  DLAT = qgisprocess:::qgis_default_value(),
+  SOLARRAD = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

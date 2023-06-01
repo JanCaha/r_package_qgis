@@ -5,11 +5,11 @@
 \title{QGIS algorithm Point statistics for polygons}
 \usage{
 saga_pointstatisticsforpolygons(
-  POINTS = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  FIELDS = qgisprocess::qgis_default_value(),
-  FIELD_NAME = qgisprocess::qgis_default_value(),
-  STATISTICS = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  FIELDS = qgisprocess:::qgis_default_value(),
+  FIELD_NAME = qgisprocess:::qgis_default_value(),
+  STATISTICS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

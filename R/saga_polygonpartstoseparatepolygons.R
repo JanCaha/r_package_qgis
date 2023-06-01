@@ -16,9 +16,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_polygonpartstoseparatepolygons <- function(POLYGONS = qgisprocess::qgis_default_value(), PARTS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_polygonpartstoseparatepolygons <- function(POLYGONS = qgisprocess:::qgis_default_value(), PARTS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:polygonpartstoseparatepolygons")
 
@@ -34,6 +34,6 @@ saga_polygonpartstoseparatepolygons <- function(POLYGONS = qgisprocess::qgis_def
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PARTS")
+    qgisprocess::qgis_extract_output(output, "PARTS")
   }
 }

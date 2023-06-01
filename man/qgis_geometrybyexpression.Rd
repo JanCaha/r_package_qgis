@@ -5,12 +5,12 @@
 \title{QGIS algorithm Geometry by expression}
 \usage{
 qgis_geometrybyexpression(
-  INPUT = qgisprocess::qgis_default_value(),
-  OUTPUT_GEOMETRY = qgisprocess::qgis_default_value(),
-  WITH_Z = qgisprocess::qgis_default_value(),
-  WITH_M = qgisprocess::qgis_default_value(),
-  EXPRESSION = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT_GEOMETRY = qgisprocess:::qgis_default_value(),
+  WITH_Z = qgisprocess:::qgis_default_value(),
+  WITH_M = qgisprocess:::qgis_default_value(),
+  EXPRESSION = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

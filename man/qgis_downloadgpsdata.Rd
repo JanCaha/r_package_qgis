@@ -5,10 +5,10 @@
 \title{QGIS algorithm Download GPS data from device}
 \usage{
 qgis_downloadgpsdata(
-  DEVICE = qgisprocess::qgis_default_value(),
-  PORT = qgisprocess::qgis_default_value(),
-  FEATURE_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  DEVICE = qgisprocess:::qgis_default_value(),
+  PORT = qgisprocess:::qgis_default_value(),
+  FEATURE_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

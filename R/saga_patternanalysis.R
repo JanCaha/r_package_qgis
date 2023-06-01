@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_patternanalysis <- function(INPUT = qgisprocess::qgis_default_value(), WINSIZE = qgisprocess::qgis_default_value(), MAXNUMCLASS = qgisprocess::qgis_default_value(), RELATIVE = qgisprocess::qgis_default_value(), DIVERSITY = qgisprocess::qgis_default_value(), DOMINANCE = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(), NDC = qgisprocess::qgis_default_value(), CVN = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_patternanalysis <- function(INPUT = qgisprocess:::qgis_default_value(), WINSIZE = qgisprocess:::qgis_default_value(), MAXNUMCLASS = qgisprocess:::qgis_default_value(), RELATIVE = qgisprocess:::qgis_default_value(), DIVERSITY = qgisprocess:::qgis_default_value(), DOMINANCE = qgisprocess:::qgis_default_value(), FRAGMENTATION = qgisprocess:::qgis_default_value(), NDC = qgisprocess:::qgis_default_value(), CVN = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:patternanalysis")
 
@@ -46,6 +46,6 @@ saga_patternanalysis <- function(INPUT = qgisprocess::qgis_default_value(), WINS
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CVN")
+    qgisprocess::qgis_extract_output(output, "CVN")
   }
 }

@@ -49,9 +49,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_watershed <- function(elevation = qgisprocess::qgis_default_value(), depression = qgisprocess::qgis_default_value(), flow = qgisprocess::qgis_default_value(), disturbed_land = qgisprocess::qgis_default_value(), blocking = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), max_slope_length = qgisprocess::qgis_default_value(), convergence = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .s = qgisprocess::qgis_default_value(), .m = qgisprocess::qgis_default_value(), .arg_4 = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), accumulation = qgisprocess::qgis_default_value(), drainage = qgisprocess::qgis_default_value(), basin = qgisprocess::qgis_default_value(), stream = qgisprocess::qgis_default_value(), half_basin = qgisprocess::qgis_default_value(), length_slope = qgisprocess::qgis_default_value(), slope_steepness = qgisprocess::qgis_default_value(), tci = qgisprocess::qgis_default_value(), spi = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_watershed <- function(elevation = qgisprocess:::qgis_default_value(), depression = qgisprocess:::qgis_default_value(), flow = qgisprocess:::qgis_default_value(), disturbed_land = qgisprocess:::qgis_default_value(), blocking = qgisprocess:::qgis_default_value(), threshold = qgisprocess:::qgis_default_value(), max_slope_length = qgisprocess:::qgis_default_value(), convergence = qgisprocess:::qgis_default_value(), memory = qgisprocess:::qgis_default_value(), .s = qgisprocess:::qgis_default_value(), .m = qgisprocess:::qgis_default_value(), .arg_4 = qgisprocess:::qgis_default_value(), .a = qgisprocess:::qgis_default_value(), .b = qgisprocess:::qgis_default_value(), accumulation = qgisprocess:::qgis_default_value(), drainage = qgisprocess:::qgis_default_value(), basin = qgisprocess:::qgis_default_value(), stream = qgisprocess:::qgis_default_value(), half_basin = qgisprocess:::qgis_default_value(), length_slope = qgisprocess:::qgis_default_value(), slope_steepness = qgisprocess:::qgis_default_value(), tci = qgisprocess:::qgis_default_value(), spi = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.watershed")
 
@@ -67,6 +67,6 @@ grass7_r_watershed <- function(elevation = qgisprocess::qgis_default_value(), de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "accumulation")
+    qgisprocess::qgis_extract_output(output, "accumulation")
   }
 }

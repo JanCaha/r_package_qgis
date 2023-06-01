@@ -5,9 +5,9 @@
 \title{QGIS algorithm Tci low}
 \usage{
 saga_tcilow(
-  DISTANCE = qgisprocess::qgis_default_value(),
-  TWI = qgisprocess::qgis_default_value(),
-  TCILOW = qgisprocess::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  TWI = qgisprocess:::qgis_default_value(),
+  TCILOW = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

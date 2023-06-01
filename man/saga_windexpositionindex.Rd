@@ -5,13 +5,13 @@
 \title{QGIS algorithm Wind exposition index}
 \usage{
 saga_windexpositionindex(
-  DEM = qgisprocess::qgis_default_value(),
-  EXPOSITION = qgisprocess::qgis_default_value(),
-  MAXDIST = qgisprocess::qgis_default_value(),
-  STEP = qgisprocess::qgis_default_value(),
-  OLDVER = qgisprocess::qgis_default_value(),
-  ACCEL = qgisprocess::qgis_default_value(),
-  PYRAMIDS = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  EXPOSITION = qgisprocess:::qgis_default_value(),
+  MAXDIST = qgisprocess:::qgis_default_value(),
+  STEP = qgisprocess:::qgis_default_value(),
+  OLDVER = qgisprocess:::qgis_default_value(),
+  ACCEL = qgisprocess:::qgis_default_value(),
+  PYRAMIDS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

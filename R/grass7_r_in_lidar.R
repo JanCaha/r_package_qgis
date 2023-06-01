@@ -40,9 +40,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_in_lidar <- function(input = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), base_raster = qgisprocess::qgis_default_value(), zrange = qgisprocess::qgis_default_value(), zscale = qgisprocess::qgis_default_value(), intensity_range = qgisprocess::qgis_default_value(), intensity_scale = qgisprocess::qgis_default_value(), percent = qgisprocess::qgis_default_value(), pth = qgisprocess::qgis_default_value(), trim = qgisprocess::qgis_default_value(), resolution = qgisprocess::qgis_default_value(), return_filter = qgisprocess::qgis_default_value(), class_filter = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .o = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), .j = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), .v = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_in_lidar <- function(input = qgisprocess:::qgis_default_value(), method = qgisprocess:::qgis_default_value(), type = qgisprocess:::qgis_default_value(), base_raster = qgisprocess:::qgis_default_value(), zrange = qgisprocess:::qgis_default_value(), zscale = qgisprocess:::qgis_default_value(), intensity_range = qgisprocess:::qgis_default_value(), intensity_scale = qgisprocess:::qgis_default_value(), percent = qgisprocess:::qgis_default_value(), pth = qgisprocess:::qgis_default_value(), trim = qgisprocess:::qgis_default_value(), resolution = qgisprocess:::qgis_default_value(), return_filter = qgisprocess:::qgis_default_value(), class_filter = qgisprocess:::qgis_default_value(), .e = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), .o = qgisprocess:::qgis_default_value(), .i = qgisprocess:::qgis_default_value(), .j = qgisprocess:::qgis_default_value(), .d = qgisprocess:::qgis_default_value(), .v = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.in.lidar")
 
@@ -58,6 +58,6 @@ grass7_r_in_lidar <- function(input = qgisprocess::qgis_default_value(), method 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

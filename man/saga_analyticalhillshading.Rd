@@ -5,12 +5,12 @@
 \title{QGIS algorithm Analytical hillshading}
 \usage{
 saga_analyticalhillshading(
-  ELEVATION = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  AZIMUTH = qgisprocess::qgis_default_value(),
-  DECLINATION = qgisprocess::qgis_default_value(),
-  EXAGGERATION = qgisprocess::qgis_default_value(),
-  SHADE = qgisprocess::qgis_default_value(),
+  ELEVATION = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  AZIMUTH = qgisprocess:::qgis_default_value(),
+  DECLINATION = qgisprocess:::qgis_default_value(),
+  EXAGGERATION = qgisprocess:::qgis_default_value(),
+  SHADE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

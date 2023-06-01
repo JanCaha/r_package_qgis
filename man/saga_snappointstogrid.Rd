@@ -5,13 +5,13 @@
 \title{QGIS algorithm Snap points to grid}
 \usage{
 saga_snappointstogrid(
-  INPUT = qgisprocess::qgis_default_value(),
-  GRID = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  MOVES = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  SHAPE = qgisprocess::qgis_default_value(),
-  EXTREME = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  MOVES = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  SHAPE = qgisprocess:::qgis_default_value(),
+  EXTREME = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

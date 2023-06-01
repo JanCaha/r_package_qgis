@@ -31,9 +31,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_i_landsat_toar <- function(rasters = qgisprocess::qgis_default_value(), metfile = qgisprocess::qgis_default_value(), sensor = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), date = qgisprocess::qgis_default_value(), sun_elevation = qgisprocess::qgis_default_value(), product_date = qgisprocess::qgis_default_value(), gain = qgisprocess::qgis_default_value(), percent = qgisprocess::qgis_default_value(), pixel = qgisprocess::qgis_default_value(), rayleigh = qgisprocess::qgis_default_value(), scale = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_i_landsat_toar <- function(rasters = qgisprocess:::qgis_default_value(), metfile = qgisprocess:::qgis_default_value(), sensor = qgisprocess:::qgis_default_value(), method = qgisprocess:::qgis_default_value(), date = qgisprocess:::qgis_default_value(), sun_elevation = qgisprocess:::qgis_default_value(), product_date = qgisprocess:::qgis_default_value(), gain = qgisprocess:::qgis_default_value(), percent = qgisprocess:::qgis_default_value(), pixel = qgisprocess:::qgis_default_value(), rayleigh = qgisprocess:::qgis_default_value(), scale = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.landsat.toar")
 
@@ -49,6 +49,6 @@ grass7_i_landsat_toar <- function(rasters = qgisprocess::qgis_default_value(), m
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

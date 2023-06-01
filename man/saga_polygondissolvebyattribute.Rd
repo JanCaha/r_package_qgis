@@ -5,12 +5,12 @@
 \title{QGIS algorithm Polygon dissolve (by attribute)}
 \usage{
 saga_polygondissolvebyattribute(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  FIELD_1 = qgisprocess::qgis_default_value(),
-  FIELD_2 = qgisprocess::qgis_default_value(),
-  FIELD_3 = qgisprocess::qgis_default_value(),
-  BND_KEEP = qgisprocess::qgis_default_value(),
-  DISSOLVED = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  FIELD_1 = qgisprocess:::qgis_default_value(),
+  FIELD_2 = qgisprocess:::qgis_default_value(),
+  FIELD_3 = qgisprocess:::qgis_default_value(),
+  BND_KEEP = qgisprocess:::qgis_default_value(),
+  DISSOLVED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

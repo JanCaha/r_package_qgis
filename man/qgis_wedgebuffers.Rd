@@ -5,12 +5,12 @@
 \title{QGIS algorithm Create wedge buffers}
 \usage{
 qgis_wedgebuffers(
-  INPUT = qgisprocess::qgis_default_value(),
-  AZIMUTH = qgisprocess::qgis_default_value(),
-  WIDTH = qgisprocess::qgis_default_value(),
-  OUTER_RADIUS = qgisprocess::qgis_default_value(),
-  INNER_RADIUS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  AZIMUTH = qgisprocess:::qgis_default_value(),
+  WIDTH = qgisprocess:::qgis_default_value(),
+  OUTER_RADIUS = qgisprocess:::qgis_default_value(),
+  INNER_RADIUS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

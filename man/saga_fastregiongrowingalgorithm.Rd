@@ -5,11 +5,11 @@
 \title{QGIS algorithm Fast region growing algorithm}
 \usage{
 saga_fastregiongrowingalgorithm(
-  INPUT = qgisprocess::qgis_default_value(),
-  START = qgisprocess::qgis_default_value(),
-  REP = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  MEAN = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  START = qgisprocess:::qgis_default_value(),
+  REP = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  MEAN = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

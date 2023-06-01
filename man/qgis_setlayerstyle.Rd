@@ -5,8 +5,8 @@
 \title{QGIS algorithm Set layer style}
 \usage{
 qgis_setlayerstyle(
-  INPUT = qgisprocess::qgis_default_value(),
-  STYLE = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  STYLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

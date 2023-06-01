@@ -5,9 +5,9 @@
 \title{QGIS algorithm Thiessen polygons}
 \usage{
 saga_thiessenpolygons(
-  POINTS = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  FRAME = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  FRAME = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

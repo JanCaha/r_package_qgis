@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_multiresolutionindexofvalleybottomflatnessmrvbf <- function(DEM = qgisprocess::qgis_default_value(), T_SLOPE = qgisprocess::qgis_default_value(), T_PCTL_V = qgisprocess::qgis_default_value(), T_PCTL_R = qgisprocess::qgis_default_value(), P_SLOPE = qgisprocess::qgis_default_value(), P_PCTL = qgisprocess::qgis_default_value(), MAX_RES = qgisprocess::qgis_default_value(), MRVBF = qgisprocess::qgis_default_value(), MRRTF = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_multiresolutionindexofvalleybottomflatnessmrvbf <- function(DEM = qgisprocess:::qgis_default_value(), T_SLOPE = qgisprocess:::qgis_default_value(), T_PCTL_V = qgisprocess:::qgis_default_value(), T_PCTL_R = qgisprocess:::qgis_default_value(), P_SLOPE = qgisprocess:::qgis_default_value(), P_PCTL = qgisprocess:::qgis_default_value(), MAX_RES = qgisprocess:::qgis_default_value(), MRVBF = qgisprocess:::qgis_default_value(), MRRTF = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:multiresolutionindexofvalleybottomflatnessmrvbf")
 
@@ -42,6 +42,6 @@ saga_multiresolutionindexofvalleybottomflatnessmrvbf <- function(DEM = qgisproce
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MRRTF")
+    qgisprocess::qgis_extract_output(output, "MRRTF")
   }
 }

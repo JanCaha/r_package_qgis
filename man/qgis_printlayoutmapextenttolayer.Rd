@@ -5,10 +5,10 @@
 \title{QGIS algorithm Print layout map extent to layer}
 \usage{
 qgis_printlayoutmapextenttolayer(
-  LAYOUT = qgisprocess::qgis_default_value(),
-  MAP = qgisprocess::qgis_default_value(),
-  CRS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  LAYOUT = qgisprocess:::qgis_default_value(),
+  MAP = qgisprocess:::qgis_default_value(),
+  CRS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

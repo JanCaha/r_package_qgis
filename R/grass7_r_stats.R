@@ -35,9 +35,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_stats <- function(input = qgisprocess::qgis_default_value(), separator = qgisprocess::qgis_default_value(), null_value = qgisprocess::qgis_default_value(), nsteps = qgisprocess::qgis_default_value(), sort = qgisprocess::qgis_default_value(), .arg_1 = qgisprocess::qgis_default_value(), .A = qgisprocess::qgis_default_value(), .a = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), .l = qgisprocess::qgis_default_value(), .g = qgisprocess::qgis_default_value(), .x = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .N = qgisprocess::qgis_default_value(), .C = qgisprocess::qgis_default_value(), .i = qgisprocess::qgis_default_value(), html = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_stats <- function(input = qgisprocess:::qgis_default_value(), separator = qgisprocess:::qgis_default_value(), null_value = qgisprocess:::qgis_default_value(), nsteps = qgisprocess:::qgis_default_value(), sort = qgisprocess:::qgis_default_value(), .arg_1 = qgisprocess:::qgis_default_value(), .A = qgisprocess:::qgis_default_value(), .a = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), .p = qgisprocess:::qgis_default_value(), .l = qgisprocess:::qgis_default_value(), .g = qgisprocess:::qgis_default_value(), .x = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), .N = qgisprocess:::qgis_default_value(), .C = qgisprocess:::qgis_default_value(), .i = qgisprocess:::qgis_default_value(), html = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.stats")
 
@@ -53,6 +53,6 @@ grass7_r_stats <- function(input = qgisprocess::qgis_default_value(), separator 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "html")
+    qgisprocess::qgis_extract_output(output, "html")
   }
 }

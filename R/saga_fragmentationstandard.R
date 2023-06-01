@@ -32,9 +32,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fragmentationstandard <- function(CLASSES = qgisprocess::qgis_default_value(), CLASS = qgisprocess::qgis_default_value(), NEIGHBORHOOD_MIN = qgisprocess::qgis_default_value(), NEIGHBORHOOD_MAX = qgisprocess::qgis_default_value(), AGGREGATION = qgisprocess::qgis_default_value(), BORDER = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), DENSITY_MIN = qgisprocess::qgis_default_value(), DENSITY_INT = qgisprocess::qgis_default_value(), CIRCULAR = qgisprocess::qgis_default_value(), DIAGONAL = qgisprocess::qgis_default_value(), DENSITY = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(), FRAGSTATS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fragmentationstandard <- function(CLASSES = qgisprocess:::qgis_default_value(), CLASS = qgisprocess:::qgis_default_value(), NEIGHBORHOOD_MIN = qgisprocess:::qgis_default_value(), NEIGHBORHOOD_MAX = qgisprocess:::qgis_default_value(), AGGREGATION = qgisprocess:::qgis_default_value(), BORDER = qgisprocess:::qgis_default_value(), WEIGHT = qgisprocess:::qgis_default_value(), DENSITY_MIN = qgisprocess:::qgis_default_value(), DENSITY_INT = qgisprocess:::qgis_default_value(), CIRCULAR = qgisprocess:::qgis_default_value(), DIAGONAL = qgisprocess:::qgis_default_value(), DENSITY = qgisprocess:::qgis_default_value(), CONNECTIVITY = qgisprocess:::qgis_default_value(), FRAGMENTATION = qgisprocess:::qgis_default_value(), FRAGSTATS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fragmentationstandard")
 
@@ -50,6 +50,6 @@ saga_fragmentationstandard <- function(CLASSES = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CONNECTIVITY")
+    qgisprocess::qgis_extract_output(output, "CONNECTIVITY")
   }
 }

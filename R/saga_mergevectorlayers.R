@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_mergevectorlayers <- function(INPUT = qgisprocess::qgis_default_value(), SRCINFO = qgisprocess::qgis_default_value(), MATCH = qgisprocess::qgis_default_value(), MERGED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_mergevectorlayers <- function(INPUT = qgisprocess:::qgis_default_value(), SRCINFO = qgisprocess:::qgis_default_value(), MATCH = qgisprocess:::qgis_default_value(), MERGED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:mergevectorlayers")
 
@@ -36,6 +36,6 @@ saga_mergevectorlayers <- function(INPUT = qgisprocess::qgis_default_value(), SR
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "MERGED")
+    qgisprocess::qgis_extract_output(output, "MERGED")
   }
 }

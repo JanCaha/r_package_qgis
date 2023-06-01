@@ -5,11 +5,11 @@
 \title{QGIS algorithm Variogram cloud}
 \usage{
 saga_variogramcloud(
-  POINTS = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  DISTMAX = qgisprocess::qgis_default_value(),
-  NSKIP = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  DISTMAX = qgisprocess:::qgis_default_value(),
+  NSKIP = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

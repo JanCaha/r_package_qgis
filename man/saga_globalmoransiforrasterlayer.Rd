@@ -5,9 +5,9 @@
 \title{QGIS algorithm Global moran's i for raster layer}
 \usage{
 saga_globalmoransiforrasterlayer(
-  GRID = qgisprocess::qgis_default_value(),
-  CONTIGUITY = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  CONTIGUITY = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

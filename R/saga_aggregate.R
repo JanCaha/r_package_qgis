@@ -1,6 +1,6 @@
 character(0)
 
-saga_aggregate <- function(INPUT = qgisprocess::qgis_default_value(), SIZE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_aggregate <- function(INPUT = qgisprocess:::qgis_default_value(), SIZE = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:aggregate")
 
@@ -16,6 +16,6 @@ saga_aggregate <- function(INPUT = qgisprocess::qgis_default_value(), SIZE = qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

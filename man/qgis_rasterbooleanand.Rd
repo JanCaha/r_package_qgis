@@ -5,12 +5,12 @@
 \title{QGIS algorithm Raster boolean AND}
 \usage{
 qgis_rasterbooleanand(
-  INPUT = qgisprocess::qgis_default_value(),
-  REF_LAYER = qgisprocess::qgis_default_value(),
-  NODATA_AS_FALSE = qgisprocess::qgis_default_value(),
-  NO_DATA = qgisprocess::qgis_default_value(),
-  DATA_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  REF_LAYER = qgisprocess:::qgis_default_value(),
+  NODATA_AS_FALSE = qgisprocess:::qgis_default_value(),
+  NO_DATA = qgisprocess:::qgis_default_value(),
+  DATA_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

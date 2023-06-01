@@ -5,11 +5,11 @@
 \title{QGIS algorithm Hypsometric curves}
 \usage{
 qgis_hypsometriccurves(
-  INPUT_DEM = qgisprocess::qgis_default_value(),
-  BOUNDARY_LAYER = qgisprocess::qgis_default_value(),
-  STEP = qgisprocess::qgis_default_value(),
-  USE_PERCENTAGE = qgisprocess::qgis_default_value(),
-  OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(),
+  INPUT_DEM = qgisprocess:::qgis_default_value(),
+  BOUNDARY_LAYER = qgisprocess:::qgis_default_value(),
+  STEP = qgisprocess:::qgis_default_value(),
+  USE_PERCENTAGE = qgisprocess:::qgis_default_value(),
+  OUTPUT_DIRECTORY = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_rivergridgeneration <- function(INPUT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), SX = qgisprocess::qgis_default_value(), SY = qgisprocess::qgis_default_value(), MX = qgisprocess::qgis_default_value(), MY = qgisprocess::qgis_default_value(), Owrite = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_rivergridgeneration <- function(INPUT = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), SX = qgisprocess:::qgis_default_value(), SY = qgisprocess:::qgis_default_value(), MX = qgisprocess:::qgis_default_value(), MY = qgisprocess:::qgis_default_value(), Owrite = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:rivergridgeneration")
 
@@ -39,6 +39,6 @@ saga_rivergridgeneration <- function(INPUT = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_surfacegradientandconcentration <- function(MASK = qgisprocess::qgis_default_value(), SURF = qgisprocess::qgis_default_value(), GRAD = qgisprocess::qgis_default_value(), CONC = qgisprocess::qgis_default_value(), SURF_E = qgisprocess::qgis_default_value(), CONC_IN = qgisprocess::qgis_default_value(), CONC_OUT = qgisprocess::qgis_default_value(), CONC_E = qgisprocess::qgis_default_value(), GRAD_MIN = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_surfacegradientandconcentration <- function(MASK = qgisprocess:::qgis_default_value(), SURF = qgisprocess:::qgis_default_value(), GRAD = qgisprocess:::qgis_default_value(), CONC = qgisprocess:::qgis_default_value(), SURF_E = qgisprocess:::qgis_default_value(), CONC_IN = qgisprocess:::qgis_default_value(), CONC_OUT = qgisprocess:::qgis_default_value(), CONC_E = qgisprocess:::qgis_default_value(), GRAD_MIN = qgisprocess:::qgis_default_value(), NEIGHBOURS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:surfacegradientandconcentration")
 
@@ -44,6 +44,6 @@ saga_surfacegradientandconcentration <- function(MASK = qgisprocess::qgis_defaul
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CONC")
+    qgisprocess::qgis_extract_output(output, "CONC")
   }
 }

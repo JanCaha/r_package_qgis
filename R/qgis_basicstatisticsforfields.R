@@ -37,9 +37,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_basicstatisticsforfields <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_basicstatisticsforfields <- function(INPUT_LAYER = qgisprocess:::qgis_default_value(), FIELD_NAME = qgisprocess:::qgis_default_value(), OUTPUT_HTML_FILE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("qgis:basicstatisticsforfields")
 
@@ -55,6 +55,6 @@ qgis_basicstatisticsforfields <- function(INPUT_LAYER = qgisprocess::qgis_defaul
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "COUNT")
+    qgisprocess::qgis_extract_output(output, "COUNT")
   }
 }

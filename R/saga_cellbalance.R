@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_cellbalance <- function(DEM = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), WEIGHTS_DEFAULT = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), BALANCE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_cellbalance <- function(DEM = qgisprocess:::qgis_default_value(), WEIGHTS = qgisprocess:::qgis_default_value(), WEIGHTS_DEFAULT = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), BALANCE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:cellbalance")
 
@@ -37,6 +37,6 @@ saga_cellbalance <- function(DEM = qgisprocess::qgis_default_value(), WEIGHTS = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BALANCE")
+    qgisprocess::qgis_extract_output(output, "BALANCE")
   }
 }

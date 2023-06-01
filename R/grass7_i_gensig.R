@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_i_gensig <- function(trainingmap = qgisprocess::qgis_default_value(), input = qgisprocess::qgis_default_value(), signaturefile = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_i_gensig <- function(trainingmap = qgisprocess:::qgis_default_value(), input = qgisprocess:::qgis_default_value(), signaturefile = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.gensig")
 
@@ -37,6 +37,6 @@ grass7_i_gensig <- function(trainingmap = qgisprocess::qgis_default_value(), inp
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "signaturefile")
+    qgisprocess::qgis_extract_output(output, "signaturefile")
   }
 }

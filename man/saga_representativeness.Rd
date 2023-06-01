@@ -5,10 +5,10 @@
 \title{QGIS algorithm Representativeness}
 \usage{
 saga_representativeness(
-  INPUT = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  EXPONENT = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  EXPONENT = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

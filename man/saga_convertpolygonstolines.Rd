@@ -5,8 +5,8 @@
 \title{QGIS algorithm Convert polygons to lines}
 \usage{
 saga_convertpolygonstolines(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  LINES = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

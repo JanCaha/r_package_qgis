@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_valleydepth <- function(ELEVATION = qgisprocess::qgis_default_value(), VALLEY_DEPTH = qgisprocess::qgis_default_value(), RIDGE_LEVEL = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), NOUNDERGROUND = qgisprocess::qgis_default_value(), ORDER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_valleydepth <- function(ELEVATION = qgisprocess:::qgis_default_value(), VALLEY_DEPTH = qgisprocess:::qgis_default_value(), RIDGE_LEVEL = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(), NOUNDERGROUND = qgisprocess:::qgis_default_value(), ORDER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:valleydepth")
 
@@ -39,6 +39,6 @@ saga_valleydepth <- function(ELEVATION = qgisprocess::qgis_default_value(), VALL
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RIDGE_LEVEL")
+    qgisprocess::qgis_extract_output(output, "RIDGE_LEVEL")
   }
 }

@@ -5,11 +5,11 @@
 \title{QGIS algorithm Dtm filter (slope-based)}
 \usage{
 saga_dtmfilterslopebased(
-  INPUT = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  TERRAINSLOPE = qgisprocess::qgis_default_value(),
-  GROUND = qgisprocess::qgis_default_value(),
-  NONGROUND = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  TERRAINSLOPE = qgisprocess:::qgis_default_value(),
+  GROUND = qgisprocess:::qgis_default_value(),
+  NONGROUND = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

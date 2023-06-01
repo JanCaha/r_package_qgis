@@ -5,10 +5,10 @@
 \title{QGIS algorithm Add indicator fields for categories}
 \usage{
 saga_addindicatorfieldsforcategories(
-  TABLE = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  OUT_TABLE = qgisprocess::qgis_default_value(),
-  OUT_SHAPES = qgisprocess::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  OUT_TABLE = qgisprocess:::qgis_default_value(),
+  OUT_SHAPES = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

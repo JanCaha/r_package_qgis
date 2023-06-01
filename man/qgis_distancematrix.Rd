@@ -5,13 +5,13 @@
 \title{QGIS algorithm Distance matrix}
 \usage{
 qgis_distancematrix(
-  INPUT = qgisprocess::qgis_default_value(),
-  INPUT_FIELD = qgisprocess::qgis_default_value(),
-  TARGET = qgisprocess::qgis_default_value(),
-  TARGET_FIELD = qgisprocess::qgis_default_value(),
-  MATRIX_TYPE = qgisprocess::qgis_default_value(),
-  NEAREST_POINTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  INPUT_FIELD = qgisprocess:::qgis_default_value(),
+  TARGET = qgisprocess:::qgis_default_value(),
+  TARGET_FIELD = qgisprocess:::qgis_default_value(),
+  MATRIX_TYPE = qgisprocess:::qgis_default_value(),
+  NEAREST_POINTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

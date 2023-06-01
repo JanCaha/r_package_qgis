@@ -1,6 +1,6 @@
 character(0)
 
-qgis_uploadgpsdata <- function(INPUT = qgisprocess::qgis_default_value(), DEVICE = qgisprocess::qgis_default_value(), PORT = qgisprocess::qgis_default_value(), FEATURE_TYPE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_uploadgpsdata <- function(INPUT = qgisprocess:::qgis_default_value(), DEVICE = qgisprocess:::qgis_default_value(), PORT = qgisprocess:::qgis_default_value(), FEATURE_TYPE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:uploadgpsdata")
 
@@ -16,6 +16,6 @@ qgis_uploadgpsdata <- function(INPUT = qgisprocess::qgis_default_value(), DEVICE
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

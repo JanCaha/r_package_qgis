@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_polartocartesiancoordinates <- function(POLAR = qgisprocess::qgis_default_value(), F_EXAGG = qgisprocess::qgis_default_value(), D_EXAGG = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), CARTES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_polartocartesiancoordinates <- function(POLAR = qgisprocess:::qgis_default_value(), F_EXAGG = qgisprocess:::qgis_default_value(), D_EXAGG = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), CARTES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:polartocartesiancoordinates")
 
@@ -37,6 +37,6 @@ saga_polartocartesiancoordinates <- function(POLAR = qgisprocess::qgis_default_v
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CARTES")
+    qgisprocess::qgis_extract_output(output, "CARTES")
   }
 }

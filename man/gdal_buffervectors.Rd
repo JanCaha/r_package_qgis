@@ -5,14 +5,14 @@
 \title{QGIS algorithm Buffer vectors}
 \usage{
 gdal_buffervectors(
-  INPUT = qgisprocess::qgis_default_value(),
-  GEOMETRY = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  DISSOLVE = qgisprocess::qgis_default_value(),
-  EXPLODE_COLLECTIONS = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  GEOMETRY = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  DISSOLVE = qgisprocess:::qgis_default_value(),
+  EXPLODE_COLLECTIONS = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

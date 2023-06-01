@@ -5,9 +5,9 @@
 \title{QGIS algorithm Diurnal anisotropic heating}
 \usage{
 saga_diurnalanisotropicheating(
-  DEM = qgisprocess::qgis_default_value(),
-  ALPHA_MAX = qgisprocess::qgis_default_value(),
-  DAH = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  ALPHA_MAX = qgisprocess:::qgis_default_value(),
+  DAH = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,12 +5,12 @@
 \title{QGIS algorithm TIN interpolation}
 \usage{
 qgis_tininterpolation(
-  INTERPOLATION_DATA = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  EXTENT = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  TRIANGULATION = qgisprocess::qgis_default_value(),
+  INTERPOLATION_DATA = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  TRIANGULATION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

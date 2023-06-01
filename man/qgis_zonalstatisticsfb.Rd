@@ -5,12 +5,12 @@
 \title{QGIS algorithm Zonal statistics}
 \usage{
 qgis_zonalstatisticsfb(
-  INPUT = qgisprocess::qgis_default_value(),
-  INPUT_RASTER = qgisprocess::qgis_default_value(),
-  RASTER_BAND = qgisprocess::qgis_default_value(),
-  COLUMN_PREFIX = qgisprocess::qgis_default_value(),
-  STATISTICS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  INPUT_RASTER = qgisprocess:::qgis_default_value(),
+  RASTER_BAND = qgisprocess:::qgis_default_value(),
+  COLUMN_PREFIX = qgisprocess:::qgis_default_value(),
+  STATISTICS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

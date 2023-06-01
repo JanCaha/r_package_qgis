@@ -5,8 +5,8 @@
 \title{QGIS algorithm Strahler order}
 \usage{
 saga_strahlerorder(
-  DEM = qgisprocess::qgis_default_value(),
-  STRAHLER = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  STRAHLER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

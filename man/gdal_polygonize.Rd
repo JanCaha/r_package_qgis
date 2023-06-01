@@ -5,12 +5,12 @@
 \title{QGIS algorithm Polygonize (raster to vector)}
 \usage{
 gdal_polygonize(
-  INPUT = qgisprocess::qgis_default_value(),
-  BAND = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  EIGHT_CONNECTEDNESS = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  BAND = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  EIGHT_CONNECTEDNESS = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

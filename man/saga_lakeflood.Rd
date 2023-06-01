@@ -5,10 +5,10 @@
 \title{QGIS algorithm Lake flood}
 \usage{
 saga_lakeflood(
-  ELEV = qgisprocess::qgis_default_value(),
-  SEEDS = qgisprocess::qgis_default_value(),
-  OUTDEPTH = qgisprocess::qgis_default_value(),
-  OUTLEVEL = qgisprocess::qgis_default_value(),
+  ELEV = qgisprocess:::qgis_default_value(),
+  SEEDS = qgisprocess:::qgis_default_value(),
+  OUTDEPTH = qgisprocess:::qgis_default_value(),
+  OUTLEVEL = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

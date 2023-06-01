@@ -5,10 +5,10 @@
 \title{QGIS algorithm Raster buffer}
 \usage{
 saga_rasterbuffer(
-  FEATURES = qgisprocess::qgis_default_value(),
-  DISTANCE = qgisprocess::qgis_default_value(),
-  TYPE = qgisprocess::qgis_default_value(),
-  BUFFER = qgisprocess::qgis_default_value(),
+  FEATURES = qgisprocess:::qgis_default_value(),
+  DISTANCE = qgisprocess:::qgis_default_value(),
+  TYPE = qgisprocess:::qgis_default_value(),
+  BUFFER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

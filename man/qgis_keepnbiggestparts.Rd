@@ -5,9 +5,9 @@
 \title{QGIS algorithm Keep N biggest parts}
 \usage{
 qgis_keepnbiggestparts(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  PARTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  PARTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

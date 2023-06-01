@@ -32,9 +32,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_vegetationindexslopebased <- function(NIR = qgisprocess::qgis_default_value(), RED = qgisprocess::qgis_default_value(), SOIL = qgisprocess::qgis_default_value(), DVI = qgisprocess::qgis_default_value(), NDVI = qgisprocess::qgis_default_value(), RVI = qgisprocess::qgis_default_value(), NRVI = qgisprocess::qgis_default_value(), TVI = qgisprocess::qgis_default_value(), CTVI = qgisprocess::qgis_default_value(), TTVI = qgisprocess::qgis_default_value(), SAVI = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_vegetationindexslopebased <- function(NIR = qgisprocess:::qgis_default_value(), RED = qgisprocess:::qgis_default_value(), SOIL = qgisprocess:::qgis_default_value(), DVI = qgisprocess:::qgis_default_value(), NDVI = qgisprocess:::qgis_default_value(), RVI = qgisprocess:::qgis_default_value(), NRVI = qgisprocess:::qgis_default_value(), TVI = qgisprocess:::qgis_default_value(), CTVI = qgisprocess:::qgis_default_value(), TTVI = qgisprocess:::qgis_default_value(), SAVI = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:vegetationindexslopebased")
 
@@ -50,6 +50,6 @@ saga_vegetationindexslopebased <- function(NIR = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CTVI")
+    qgisprocess::qgis_extract_output(output, "CTVI")
   }
 }

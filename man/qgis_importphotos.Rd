@@ -5,10 +5,10 @@
 \title{QGIS algorithm Import geotagged photos}
 \usage{
 qgis_importphotos(
-  FOLDER = qgisprocess::qgis_default_value(),
-  RECURSIVE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  INVALID = qgisprocess::qgis_default_value(),
+  FOLDER = qgisprocess:::qgis_default_value(),
+  RECURSIVE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  INVALID = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -46,9 +46,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_directionalstatisticsforrasterlayer <- function(GRID = qgisprocess::qgis_default_value(), POINTS = qgisprocess::qgis_default_value(), DIRECTION = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), MAXDISTANCE = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), DIFMEAN = qgisprocess::qgis_default_value(), MIN = qgisprocess::qgis_default_value(), MAX = qgisprocess::qgis_default_value(), RANGE = qgisprocess::qgis_default_value(), VAR = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), STDDEVLO = qgisprocess::qgis_default_value(), STDDEVHI = qgisprocess::qgis_default_value(), DEVMEAN = qgisprocess::qgis_default_value(), PERCENT = qgisprocess::qgis_default_value(), POINTS_OUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_directionalstatisticsforrasterlayer <- function(GRID = qgisprocess:::qgis_default_value(), POINTS = qgisprocess:::qgis_default_value(), DIRECTION = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), MAXDISTANCE = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_WEIGHTING = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_POWER = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_IDW_OFFSET = qgisprocess:::qgis_default_value(), DISTANCE_WEIGHTING_DW_BANDWIDTH = qgisprocess:::qgis_default_value(), MEAN = qgisprocess:::qgis_default_value(), DIFMEAN = qgisprocess:::qgis_default_value(), MIN = qgisprocess:::qgis_default_value(), MAX = qgisprocess:::qgis_default_value(), RANGE = qgisprocess:::qgis_default_value(), VAR = qgisprocess:::qgis_default_value(), STDDEV = qgisprocess:::qgis_default_value(), STDDEVLO = qgisprocess:::qgis_default_value(), STDDEVHI = qgisprocess:::qgis_default_value(), DEVMEAN = qgisprocess:::qgis_default_value(), PERCENT = qgisprocess:::qgis_default_value(), POINTS_OUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:directionalstatisticsforrasterlayer")
 
@@ -64,6 +64,6 @@ saga_directionalstatisticsforrasterlayer <- function(GRID = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DEVMEAN")
+    qgisprocess::qgis_extract_output(output, "DEVMEAN")
   }
 }

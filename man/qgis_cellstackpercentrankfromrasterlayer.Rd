@@ -5,14 +5,14 @@
 \title{QGIS algorithm Cell stack percentrank from raster layer}
 \usage{
 qgis_cellstackpercentrankfromrasterlayer(
-  INPUT = qgisprocess::qgis_default_value(),
-  INPUT_VALUE_RASTER = qgisprocess::qgis_default_value(),
-  VALUE_RASTER_BAND = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  IGNORE_NODATA = qgisprocess::qgis_default_value(),
-  REFERENCE_LAYER = qgisprocess::qgis_default_value(),
-  OUTPUT_NODATA_VALUE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  INPUT_VALUE_RASTER = qgisprocess:::qgis_default_value(),
+  VALUE_RASTER_BAND = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  IGNORE_NODATA = qgisprocess:::qgis_default_value(),
+  REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
+  OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

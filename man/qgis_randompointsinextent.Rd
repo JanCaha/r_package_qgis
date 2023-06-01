@@ -5,12 +5,12 @@
 \title{QGIS algorithm Random points in extent}
 \usage{
 qgis_randompointsinextent(
-  EXTENT = qgisprocess::qgis_default_value(),
-  POINTS_NUMBER = qgisprocess::qgis_default_value(),
-  MIN_DISTANCE = qgisprocess::qgis_default_value(),
-  TARGET_CRS = qgisprocess::qgis_default_value(),
-  MAX_ATTEMPTS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  POINTS_NUMBER = qgisprocess:::qgis_default_value(),
+  MIN_DISTANCE = qgisprocess:::qgis_default_value(),
+  TARGET_CRS = qgisprocess:::qgis_default_value(),
+  MAX_ATTEMPTS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

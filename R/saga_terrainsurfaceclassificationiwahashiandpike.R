@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_terrainsurfaceclassificationiwahashiandpike <- function(DEM = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), CONVEXITY = qgisprocess::qgis_default_value(), CONV_RECALC = qgisprocess::qgis_default_value(), TEXTURE = qgisprocess::qgis_default_value(), TEXT_RECALC = qgisprocess::qgis_default_value(), LANDFORMS = qgisprocess::qgis_default_value(), TYPE = qgisprocess::qgis_default_value(), CONV_SCALE = qgisprocess::qgis_default_value(), CONV_KERNEL = qgisprocess::qgis_default_value(), CONV_TYPE = qgisprocess::qgis_default_value(), CONV_EPSILON = qgisprocess::qgis_default_value(), TEXT_SCALE = qgisprocess::qgis_default_value(), TEXT_EPSILON = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_terrainsurfaceclassificationiwahashiandpike <- function(DEM = qgisprocess:::qgis_default_value(), SLOPE = qgisprocess:::qgis_default_value(), CONVEXITY = qgisprocess:::qgis_default_value(), CONV_RECALC = qgisprocess:::qgis_default_value(), TEXTURE = qgisprocess:::qgis_default_value(), TEXT_RECALC = qgisprocess:::qgis_default_value(), LANDFORMS = qgisprocess:::qgis_default_value(), TYPE = qgisprocess:::qgis_default_value(), CONV_SCALE = qgisprocess:::qgis_default_value(), CONV_KERNEL = qgisprocess:::qgis_default_value(), CONV_TYPE = qgisprocess:::qgis_default_value(), CONV_EPSILON = qgisprocess:::qgis_default_value(), TEXT_SCALE = qgisprocess:::qgis_default_value(), TEXT_EPSILON = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:terrainsurfaceclassificationiwahashiandpike")
 
@@ -46,6 +46,6 @@ saga_terrainsurfaceclassificationiwahashiandpike <- function(DEM = qgisprocess::
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "LANDFORMS")
+    qgisprocess::qgis_extract_output(output, "LANDFORMS")
   }
 }

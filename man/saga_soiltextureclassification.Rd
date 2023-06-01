@@ -5,11 +5,11 @@
 \title{QGIS algorithm Soil texture classification}
 \usage{
 saga_soiltextureclassification(
-  SAND = qgisprocess::qgis_default_value(),
-  SILT = qgisprocess::qgis_default_value(),
-  CLAY = qgisprocess::qgis_default_value(),
-  TEXTURE = qgisprocess::qgis_default_value(),
-  SUM = qgisprocess::qgis_default_value(),
+  SAND = qgisprocess:::qgis_default_value(),
+  SILT = qgisprocess:::qgis_default_value(),
+  CLAY = qgisprocess:::qgis_default_value(),
+  TEXTURE = qgisprocess:::qgis_default_value(),
+  SUM = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

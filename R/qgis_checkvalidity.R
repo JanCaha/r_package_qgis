@@ -25,9 +25,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_checkvalidity <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), IGNORE_RING_SELF_INTERSECTION = qgisprocess::qgis_default_value(), VALID_OUTPUT = qgisprocess::qgis_default_value(), INVALID_OUTPUT = qgisprocess::qgis_default_value(), ERROR_OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_checkvalidity <- function(INPUT_LAYER = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), IGNORE_RING_SELF_INTERSECTION = qgisprocess:::qgis_default_value(), VALID_OUTPUT = qgisprocess:::qgis_default_value(), INVALID_OUTPUT = qgisprocess:::qgis_default_value(), ERROR_OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("qgis:checkvalidity")
 
@@ -43,6 +43,6 @@ qgis_checkvalidity <- function(INPUT_LAYER = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ERROR_COUNT")
+    qgisprocess::qgis_extract_output(output, "ERROR_COUNT")
   }
 }

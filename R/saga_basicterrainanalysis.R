@@ -47,9 +47,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_basicterrainanalysis <- function(ELEVATION = qgisprocess::qgis_default_value(), SHADE = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT = qgisprocess::qgis_default_value(), HCURV = qgisprocess::qgis_default_value(), VCURV = qgisprocess::qgis_default_value(), CONVERGENCE = qgisprocess::qgis_default_value(), SINKS = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), WETNESS = qgisprocess::qgis_default_value(), LSFACTOR = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), BASINS = qgisprocess::qgis_default_value(), CHNL_BASE = qgisprocess::qgis_default_value(), CHNL_DIST = qgisprocess::qgis_default_value(), VALL_DEPTH = qgisprocess::qgis_default_value(), RSP = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_basicterrainanalysis <- function(ELEVATION = qgisprocess:::qgis_default_value(), SHADE = qgisprocess:::qgis_default_value(), SLOPE = qgisprocess:::qgis_default_value(), ASPECT = qgisprocess:::qgis_default_value(), HCURV = qgisprocess:::qgis_default_value(), VCURV = qgisprocess:::qgis_default_value(), CONVERGENCE = qgisprocess:::qgis_default_value(), SINKS = qgisprocess:::qgis_default_value(), FLOW = qgisprocess:::qgis_default_value(), WETNESS = qgisprocess:::qgis_default_value(), LSFACTOR = qgisprocess:::qgis_default_value(), CHANNELS = qgisprocess:::qgis_default_value(), BASINS = qgisprocess:::qgis_default_value(), CHNL_BASE = qgisprocess:::qgis_default_value(), CHNL_DIST = qgisprocess:::qgis_default_value(), VALL_DEPTH = qgisprocess:::qgis_default_value(), RSP = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:basicterrainanalysis")
 
@@ -65,6 +65,6 @@ saga_basicterrainanalysis <- function(ELEVATION = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ASPECT")
+    qgisprocess::qgis_extract_output(output, "ASPECT")
   }
 }

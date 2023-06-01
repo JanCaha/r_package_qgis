@@ -5,11 +5,11 @@
 \title{QGIS algorithm Sum line lengths}
 \usage{
 qgis_sumlinelengths(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  LINES = qgisprocess::qgis_default_value(),
-  LEN_FIELD = qgisprocess::qgis_default_value(),
-  COUNT_FIELD = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  LEN_FIELD = qgisprocess:::qgis_default_value(),
+  COUNT_FIELD = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

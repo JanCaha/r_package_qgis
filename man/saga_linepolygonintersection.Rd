@@ -5,10 +5,10 @@
 \title{QGIS algorithm Line-polygon intersection}
 \usage{
 saga_linepolygonintersection(
-  LINES = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  INTERSECT = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  INTERSECT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -29,9 +29,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_simulation <- function(DEM = qgisprocess::qgis_default_value(), FUEL = qgisprocess::qgis_default_value(), WINDSPD = qgisprocess::qgis_default_value(), WINDDIR = qgisprocess::qgis_default_value(), M1H = qgisprocess::qgis_default_value(), M10H = qgisprocess::qgis_default_value(), M100H = qgisprocess::qgis_default_value(), MHERB = qgisprocess::qgis_default_value(), MWOOD = qgisprocess::qgis_default_value(), IGNITION = qgisprocess::qgis_default_value(), TIME = qgisprocess::qgis_default_value(), FLAME = qgisprocess::qgis_default_value(), INTENSITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_simulation <- function(DEM = qgisprocess:::qgis_default_value(), FUEL = qgisprocess:::qgis_default_value(), WINDSPD = qgisprocess:::qgis_default_value(), WINDDIR = qgisprocess:::qgis_default_value(), M1H = qgisprocess:::qgis_default_value(), M10H = qgisprocess:::qgis_default_value(), M100H = qgisprocess:::qgis_default_value(), MHERB = qgisprocess:::qgis_default_value(), MWOOD = qgisprocess:::qgis_default_value(), IGNITION = qgisprocess:::qgis_default_value(), TIME = qgisprocess:::qgis_default_value(), FLAME = qgisprocess:::qgis_default_value(), INTENSITY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:simulation")
 
@@ -47,6 +47,6 @@ saga_simulation <- function(DEM = qgisprocess::qgis_default_value(), FUEL = qgis
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLAME")
+    qgisprocess::qgis_extract_output(output, "FLAME")
   }
 }

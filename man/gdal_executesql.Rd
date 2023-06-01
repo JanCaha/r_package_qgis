@@ -5,11 +5,11 @@
 \title{QGIS algorithm Execute SQL}
 \usage{
 gdal_executesql(
-  INPUT = qgisprocess::qgis_default_value(),
-  SQL = qgisprocess::qgis_default_value(),
-  DIALECT = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  SQL = qgisprocess:::qgis_default_value(),
+  DIALECT = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

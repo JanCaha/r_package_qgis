@@ -5,12 +5,12 @@
 \title{QGIS algorithm Pansharpening}
 \usage{
 gdal_pansharp(
-  SPECTRAL = qgisprocess::qgis_default_value(),
-  PANCHROMATIC = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  OPTIONS = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  SPECTRAL = qgisprocess:::qgis_default_value(),
+  PANCHROMATIC = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  OPTIONS = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

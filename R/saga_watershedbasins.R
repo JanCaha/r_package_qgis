@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_watershedbasins <- function(ELEVATION = qgisprocess::qgis_default_value(), CHANNELS = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), MINSIZE = qgisprocess::qgis_default_value(), BASINS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_watershedbasins <- function(ELEVATION = qgisprocess:::qgis_default_value(), CHANNELS = qgisprocess:::qgis_default_value(), SINKROUTE = qgisprocess:::qgis_default_value(), MINSIZE = qgisprocess:::qgis_default_value(), BASINS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:watershedbasins")
 
@@ -37,6 +37,6 @@ saga_watershedbasins <- function(ELEVATION = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BASINS")
+    qgisprocess::qgis_extract_output(output, "BASINS")
   }
 }

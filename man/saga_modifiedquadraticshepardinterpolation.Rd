@@ -5,15 +5,15 @@
 \title{QGIS algorithm Modified quadratic shepard interpolation}
 \usage{
 saga_modifiedquadraticshepardinterpolation(
-  SHAPES = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  QUADRATIC_NEIGHBORS = qgisprocess::qgis_default_value(),
-  WEIGHTING_NEIGHBORS = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  QUADRATIC_NEIGHBORS = qgisprocess:::qgis_default_value(),
+  WEIGHTING_NEIGHBORS = qgisprocess:::qgis_default_value(),
   TARGET_USER_XMIN_TARGET_USER_XMAX_TARGET_USER_YMIN_TARGET_USER_YMAX =
-    qgisprocess::qgis_default_value(),
-  TARGET_USER_SIZE = qgisprocess::qgis_default_value(),
-  TARGET_USER_FITS = qgisprocess::qgis_default_value(),
-  TARGET_OUT_GRID = qgisprocess::qgis_default_value(),
+    qgisprocess:::qgis_default_value(),
+  TARGET_USER_SIZE = qgisprocess:::qgis_default_value(),
+  TARGET_USER_FITS = qgisprocess:::qgis_default_value(),
+  TARGET_OUT_GRID = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

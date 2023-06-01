@@ -5,10 +5,10 @@
 \title{QGIS algorithm Convert layer to spatial bookmarks}
 \usage{
 qgis_layertobookmarks(
-  INPUT = qgisprocess::qgis_default_value(),
-  DESTINATION = qgisprocess::qgis_default_value(),
-  NAME_EXPRESSION = qgisprocess::qgis_default_value(),
-  GROUP_EXPRESSION = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  DESTINATION = qgisprocess:::qgis_default_value(),
+  NAME_EXPRESSION = qgisprocess:::qgis_default_value(),
+  GROUP_EXPRESSION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

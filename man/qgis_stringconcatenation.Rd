@@ -5,8 +5,8 @@
 \title{QGIS algorithm String concatenation}
 \usage{
 qgis_stringconcatenation(
-  INPUT_1 = qgisprocess::qgis_default_value(),
-  INPUT_2 = qgisprocess::qgis_default_value(),
+  INPUT_1 = qgisprocess:::qgis_default_value(),
+  INPUT_2 = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

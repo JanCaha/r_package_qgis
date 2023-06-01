@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_writevectortiles_xyz <- function(OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(), XYZ_TEMPLATE = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), MIN_ZOOM = qgisprocess::qgis_default_value(), MAX_ZOOM = qgisprocess::qgis_default_value(), EXTENT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_writevectortiles_xyz <- function(OUTPUT_DIRECTORY = qgisprocess:::qgis_default_value(), XYZ_TEMPLATE = qgisprocess:::qgis_default_value(), LAYERS = qgisprocess:::qgis_default_value(), MIN_ZOOM = qgisprocess:::qgis_default_value(), MAX_ZOOM = qgisprocess:::qgis_default_value(), EXTENT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:writevectortiles_xyz")
 
@@ -38,6 +38,6 @@ qgis_writevectortiles_xyz <- function(OUTPUT_DIRECTORY = qgisprocess::qgis_defau
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_DIRECTORY")
+    qgisprocess::qgis_extract_output(output, "OUTPUT_DIRECTORY")
   }
 }

@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_closegapswithstepwiseresampling <- function(INPUT = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), RESULT = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), GROW = qgisprocess::qgis_default_value(), PYRAMIDS = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), START_SIZE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_closegapswithstepwiseresampling <- function(INPUT = qgisprocess:::qgis_default_value(), MASK = qgisprocess:::qgis_default_value(), RESULT = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), GROW = qgisprocess:::qgis_default_value(), PYRAMIDS = qgisprocess:::qgis_default_value(), START = qgisprocess:::qgis_default_value(), START_SIZE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:closegapswithstepwiseresampling")
 
@@ -40,6 +40,6 @@ saga_closegapswithstepwiseresampling <- function(INPUT = qgisprocess::qgis_defau
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULT")
+    qgisprocess::qgis_extract_output(output, "RESULT")
   }
 }

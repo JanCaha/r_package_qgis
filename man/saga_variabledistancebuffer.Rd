@@ -5,12 +5,12 @@
 \title{QGIS algorithm Variable distance buffer}
 \usage{
 saga_variabledistancebuffer(
-  SHAPES = qgisprocess::qgis_default_value(),
-  DIST_FIELD = qgisprocess::qgis_default_value(),
-  DIST_SCALE = qgisprocess::qgis_default_value(),
-  NZONES = qgisprocess::qgis_default_value(),
-  DARC = qgisprocess::qgis_default_value(),
-  BUFFER = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  DIST_FIELD = qgisprocess:::qgis_default_value(),
+  DIST_SCALE = qgisprocess:::qgis_default_value(),
+  NZONES = qgisprocess:::qgis_default_value(),
+  DARC = qgisprocess:::qgis_default_value(),
+  BUFFER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

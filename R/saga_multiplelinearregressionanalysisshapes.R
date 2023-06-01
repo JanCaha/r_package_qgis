@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_multiplelinearregressionanalysisshapes <- function(TABLE = qgisprocess::qgis_default_value(), RESULTS = qgisprocess::qgis_default_value(), DEPENDENT = qgisprocess::qgis_default_value(), INFO_COEFF = qgisprocess::qgis_default_value(), INFO_MODEL = qgisprocess::qgis_default_value(), INFO_STEPS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), P_VALUE = qgisprocess::qgis_default_value(), CROSSVAL = qgisprocess::qgis_default_value(), CROSSVAL_K = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_multiplelinearregressionanalysisshapes <- function(TABLE = qgisprocess:::qgis_default_value(), RESULTS = qgisprocess:::qgis_default_value(), DEPENDENT = qgisprocess:::qgis_default_value(), INFO_COEFF = qgisprocess:::qgis_default_value(), INFO_MODEL = qgisprocess:::qgis_default_value(), INFO_STEPS = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), P_VALUE = qgisprocess:::qgis_default_value(), CROSSVAL = qgisprocess:::qgis_default_value(), CROSSVAL_K = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:multiplelinearregressionanalysisshapes")
 
@@ -42,6 +42,6 @@ saga_multiplelinearregressionanalysisshapes <- function(TABLE = qgisprocess::qgi
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULTS")
+    qgisprocess::qgis_extract_output(output, "RESULTS")
   }
 }

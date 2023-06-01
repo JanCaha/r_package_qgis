@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_rasterize_over_fixed_value <- function(INPUT = qgisprocess::qgis_default_value(), INPUT_RASTER = qgisprocess::qgis_default_value(), BURN = qgisprocess::qgis_default_value(), ADD = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_rasterize_over_fixed_value <- function(INPUT = qgisprocess:::qgis_default_value(), INPUT_RASTER = qgisprocess:::qgis_default_value(), BURN = qgisprocess:::qgis_default_value(), ADD = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:rasterize_over_fixed_value")
 
@@ -37,6 +37,6 @@ gdal_rasterize_over_fixed_value <- function(INPUT = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

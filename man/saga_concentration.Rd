@@ -5,14 +5,14 @@
 \title{QGIS algorithm Concentration}
 \usage{
 saga_concentration(
-  MASK = qgisprocess::qgis_default_value(),
-  GRAD = qgisprocess::qgis_default_value(),
-  CONC = qgisprocess::qgis_default_value(),
-  CONC_IN = qgisprocess::qgis_default_value(),
-  CONC_OUT = qgisprocess::qgis_default_value(),
-  CONC_E = qgisprocess::qgis_default_value(),
-  GRAD_MIN = qgisprocess::qgis_default_value(),
-  NEIGHBOURS = qgisprocess::qgis_default_value(),
+  MASK = qgisprocess:::qgis_default_value(),
+  GRAD = qgisprocess:::qgis_default_value(),
+  CONC = qgisprocess:::qgis_default_value(),
+  CONC_IN = qgisprocess:::qgis_default_value(),
+  CONC_OUT = qgisprocess:::qgis_default_value(),
+  CONC_E = qgisprocess:::qgis_default_value(),
+  GRAD_MIN = qgisprocess:::qgis_default_value(),
+  NEIGHBOURS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

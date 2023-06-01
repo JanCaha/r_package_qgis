@@ -5,11 +5,11 @@
 \title{QGIS algorithm Successive flow routing}
 \usage{
 saga_successiveflowrouting(
-  DEM = qgisprocess::qgis_default_value(),
-  ITERATIONS = qgisprocess::qgis_default_value(),
-  RUNOFF = qgisprocess::qgis_default_value(),
-  MANNING = qgisprocess::qgis_default_value(),
-  FLOW = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  ITERATIONS = qgisprocess:::qgis_default_value(),
+  RUNOFF = qgisprocess:::qgis_default_value(),
+  MANNING = qgisprocess:::qgis_default_value(),
+  FLOW = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

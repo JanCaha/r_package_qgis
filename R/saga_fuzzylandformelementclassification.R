@@ -61,9 +61,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fuzzylandformelementclassification <- function(SLOPE = qgisprocess::qgis_default_value(), MINCURV = qgisprocess::qgis_default_value(), MAXCURV = qgisprocess::qgis_default_value(), PCURV = qgisprocess::qgis_default_value(), TCURV = qgisprocess::qgis_default_value(), PLAIN = qgisprocess::qgis_default_value(), PIT = qgisprocess::qgis_default_value(), PEAK = qgisprocess::qgis_default_value(), RIDGE = qgisprocess::qgis_default_value(), CHANNEL = qgisprocess::qgis_default_value(), SADDLE = qgisprocess::qgis_default_value(), BSLOPE = qgisprocess::qgis_default_value(), FSLOPE = qgisprocess::qgis_default_value(), SSLOPE = qgisprocess::qgis_default_value(), HOLLOW = qgisprocess::qgis_default_value(), FHOLLOW = qgisprocess::qgis_default_value(), SHOLLOW = qgisprocess::qgis_default_value(), SPUR = qgisprocess::qgis_default_value(), FSPUR = qgisprocess::qgis_default_value(), SSPUR = qgisprocess::qgis_default_value(), FORM = qgisprocess::qgis_default_value(), MEM = qgisprocess::qgis_default_value(), ENTROPY = qgisprocess::qgis_default_value(), CI = qgisprocess::qgis_default_value(), SLOPETODEG = qgisprocess::qgis_default_value(), T_SLOPE_MIN = qgisprocess::qgis_default_value(), T_SLOPE_MAX = qgisprocess::qgis_default_value(), T_CURVE_MIN = qgisprocess::qgis_default_value(), T_CURVE_MAX = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fuzzylandformelementclassification <- function(SLOPE = qgisprocess:::qgis_default_value(), MINCURV = qgisprocess:::qgis_default_value(), MAXCURV = qgisprocess:::qgis_default_value(), PCURV = qgisprocess:::qgis_default_value(), TCURV = qgisprocess:::qgis_default_value(), PLAIN = qgisprocess:::qgis_default_value(), PIT = qgisprocess:::qgis_default_value(), PEAK = qgisprocess:::qgis_default_value(), RIDGE = qgisprocess:::qgis_default_value(), CHANNEL = qgisprocess:::qgis_default_value(), SADDLE = qgisprocess:::qgis_default_value(), BSLOPE = qgisprocess:::qgis_default_value(), FSLOPE = qgisprocess:::qgis_default_value(), SSLOPE = qgisprocess:::qgis_default_value(), HOLLOW = qgisprocess:::qgis_default_value(), FHOLLOW = qgisprocess:::qgis_default_value(), SHOLLOW = qgisprocess:::qgis_default_value(), SPUR = qgisprocess:::qgis_default_value(), FSPUR = qgisprocess:::qgis_default_value(), SSPUR = qgisprocess:::qgis_default_value(), FORM = qgisprocess:::qgis_default_value(), MEM = qgisprocess:::qgis_default_value(), ENTROPY = qgisprocess:::qgis_default_value(), CI = qgisprocess:::qgis_default_value(), SLOPETODEG = qgisprocess:::qgis_default_value(), T_SLOPE_MIN = qgisprocess:::qgis_default_value(), T_SLOPE_MAX = qgisprocess:::qgis_default_value(), T_CURVE_MIN = qgisprocess:::qgis_default_value(), T_CURVE_MAX = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fuzzylandformelementclassification")
 
@@ -79,6 +79,6 @@ saga_fuzzylandformelementclassification <- function(SLOPE = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BSLOPE")
+    qgisprocess::qgis_extract_output(output, "BSLOPE")
   }
 }

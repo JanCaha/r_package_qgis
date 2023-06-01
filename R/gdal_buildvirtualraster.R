@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_buildvirtualraster <- function(INPUT = qgisprocess::qgis_default_value(), RESOLUTION = qgisprocess::qgis_default_value(), SEPARATE = qgisprocess::qgis_default_value(), PROJ_DIFFERENCE = qgisprocess::qgis_default_value(), ADD_ALPHA = qgisprocess::qgis_default_value(), ASSIGN_CRS = qgisprocess::qgis_default_value(), RESAMPLING = qgisprocess::qgis_default_value(), SRC_NODATA = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_buildvirtualraster <- function(INPUT = qgisprocess:::qgis_default_value(), RESOLUTION = qgisprocess:::qgis_default_value(), SEPARATE = qgisprocess:::qgis_default_value(), PROJ_DIFFERENCE = qgisprocess:::qgis_default_value(), ADD_ALPHA = qgisprocess:::qgis_default_value(), ASSIGN_CRS = qgisprocess:::qgis_default_value(), RESAMPLING = qgisprocess:::qgis_default_value(), SRC_NODATA = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:buildvirtualraster")
 
@@ -42,6 +42,6 @@ gdal_buildvirtualraster <- function(INPUT = qgisprocess::qgis_default_value(), R
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

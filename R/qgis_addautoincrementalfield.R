@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_addautoincrementalfield <- function(INPUT = qgisprocess::qgis_default_value(), FIELD_NAME = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), MODULUS = qgisprocess::qgis_default_value(), GROUP_FIELDS = qgisprocess::qgis_default_value(), SORT_EXPRESSION = qgisprocess::qgis_default_value(), SORT_ASCENDING = qgisprocess::qgis_default_value(), SORT_NULLS_FIRST = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_addautoincrementalfield <- function(INPUT = qgisprocess:::qgis_default_value(), FIELD_NAME = qgisprocess:::qgis_default_value(), START = qgisprocess:::qgis_default_value(), MODULUS = qgisprocess:::qgis_default_value(), GROUP_FIELDS = qgisprocess:::qgis_default_value(), SORT_EXPRESSION = qgisprocess:::qgis_default_value(), SORT_ASCENDING = qgisprocess:::qgis_default_value(), SORT_NULLS_FIRST = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:addautoincrementalfield")
 
@@ -41,6 +41,6 @@ qgis_addautoincrementalfield <- function(INPUT = qgisprocess::qgis_default_value
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

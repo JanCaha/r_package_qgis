@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_overlandflowkinematicwaved8 <- function(DEM = qgisprocess::qgis_default_value(), GAUGES = qgisprocess::qgis_default_value(), TIME_SPAN = qgisprocess::qgis_default_value(), TIME_STEP = qgisprocess::qgis_default_value(), ROUGHNESS = qgisprocess::qgis_default_value(), NEWTON_MAXITER = qgisprocess::qgis_default_value(), NEWTON_EPSILON = qgisprocess::qgis_default_value(), PRECIP = qgisprocess::qgis_default_value(), THRESHOLD = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), GAUGES_FLOW = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_overlandflowkinematicwaved8 <- function(DEM = qgisprocess:::qgis_default_value(), GAUGES = qgisprocess:::qgis_default_value(), TIME_SPAN = qgisprocess:::qgis_default_value(), TIME_STEP = qgisprocess:::qgis_default_value(), ROUGHNESS = qgisprocess:::qgis_default_value(), NEWTON_MAXITER = qgisprocess:::qgis_default_value(), NEWTON_EPSILON = qgisprocess:::qgis_default_value(), PRECIP = qgisprocess:::qgis_default_value(), THRESHOLD = qgisprocess:::qgis_default_value(), FLOW = qgisprocess:::qgis_default_value(), GAUGES_FLOW = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:overlandflowkinematicwaved8")
 
@@ -44,6 +44,6 @@ saga_overlandflowkinematicwaved8 <- function(DEM = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLOW")
+    qgisprocess::qgis_extract_output(output, "FLOW")
   }
 }

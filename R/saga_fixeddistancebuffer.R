@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fixeddistancebuffer <- function(SHAPES = qgisprocess::qgis_default_value(), DIST_FIELD_DEFAULT = qgisprocess::qgis_default_value(), NZONES = qgisprocess::qgis_default_value(), DARC = qgisprocess::qgis_default_value(), DISSOLVE = qgisprocess::qgis_default_value(), POLY_INNER = qgisprocess::qgis_default_value(), BUFFER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fixeddistancebuffer <- function(SHAPES = qgisprocess:::qgis_default_value(), DIST_FIELD_DEFAULT = qgisprocess:::qgis_default_value(), NZONES = qgisprocess:::qgis_default_value(), DARC = qgisprocess:::qgis_default_value(), DISSOLVE = qgisprocess:::qgis_default_value(), POLY_INNER = qgisprocess:::qgis_default_value(), BUFFER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fixeddistancebuffer")
 
@@ -39,6 +39,6 @@ saga_fixeddistancebuffer <- function(SHAPES = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BUFFER")
+    qgisprocess::qgis_extract_output(output, "BUFFER")
   }
 }

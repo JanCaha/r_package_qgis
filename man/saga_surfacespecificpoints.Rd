@@ -5,10 +5,10 @@
 \title{QGIS algorithm Surface specific points}
 \usage{
 saga_surfacespecificpoints(
-  ELEVATION = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  ELEVATION = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

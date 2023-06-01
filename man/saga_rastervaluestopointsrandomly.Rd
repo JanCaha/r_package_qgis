@@ -5,9 +5,9 @@
 \title{QGIS algorithm Raster values to points (randomly)}
 \usage{
 saga_rastervaluestopointsrandomly(
-  GRID = qgisprocess::qgis_default_value(),
-  FREQ = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  FREQ = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

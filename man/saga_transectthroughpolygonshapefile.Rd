@@ -5,10 +5,10 @@
 \title{QGIS algorithm Transect through polygon shapefile}
 \usage{
 saga_transectthroughpolygonshapefile(
-  TRANSECT = qgisprocess::qgis_default_value(),
-  THEME = qgisprocess::qgis_default_value(),
-  THEME_FIELD = qgisprocess::qgis_default_value(),
-  TRANSECT_RESULT = qgisprocess::qgis_default_value(),
+  TRANSECT = qgisprocess:::qgis_default_value(),
+  THEME = qgisprocess:::qgis_default_value(),
+  THEME_FIELD = qgisprocess:::qgis_default_value(),
+  TRANSECT_RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -30,9 +30,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_viewshed <- function(input = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), observer_elevation = qgisprocess::qgis_default_value(), target_elevation = qgisprocess::qgis_default_value(), max_distance = qgisprocess::qgis_default_value(), refraction_coeff = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), .e = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_viewshed <- function(input = qgisprocess:::qgis_default_value(), coordinates = qgisprocess:::qgis_default_value(), observer_elevation = qgisprocess:::qgis_default_value(), target_elevation = qgisprocess:::qgis_default_value(), max_distance = qgisprocess:::qgis_default_value(), refraction_coeff = qgisprocess:::qgis_default_value(), memory = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), .b = qgisprocess:::qgis_default_value(), .e = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.viewshed")
 
@@ -48,6 +48,6 @@ grass7_r_viewshed <- function(input = qgisprocess::qgis_default_value(), coordin
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

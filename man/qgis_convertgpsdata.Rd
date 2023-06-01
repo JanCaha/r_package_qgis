@@ -5,10 +5,10 @@
 \title{QGIS algorithm Convert GPS data}
 \usage{
 qgis_convertgpsdata(
-  INPUT = qgisprocess::qgis_default_value(),
-  FORMAT = qgisprocess::qgis_default_value(),
-  FEATURE_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FORMAT = qgisprocess:::qgis_default_value(),
+  FEATURE_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

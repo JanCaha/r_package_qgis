@@ -5,9 +5,9 @@
 \title{QGIS algorithm Raster cell index}
 \usage{
 saga_rastercellindex(
-  GRID = qgisprocess::qgis_default_value(),
-  ORDER = qgisprocess::qgis_default_value(),
-  INDEX = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  ORDER = qgisprocess:::qgis_default_value(),
+  INDEX = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

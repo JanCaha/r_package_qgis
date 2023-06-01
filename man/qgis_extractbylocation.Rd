@@ -5,10 +5,10 @@
 \title{QGIS algorithm Extract by location}
 \usage{
 qgis_extractbylocation(
-  INPUT = qgisprocess::qgis_default_value(),
-  PREDICATE = qgisprocess::qgis_default_value(),
-  INTERSECT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  PREDICATE = qgisprocess:::qgis_default_value(),
+  INTERSECT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,14 +5,14 @@
 \title{QGIS algorithm r.spreadpath}
 \usage{
 grass7_r_spreadpath(
-  x_input = qgisprocess::qgis_default_value(),
-  y_input = qgisprocess::qgis_default_value(),
-  coordinates = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(),
-  GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),
+  x_input = qgisprocess:::qgis_default_value(),
+  y_input = qgisprocess:::qgis_default_value(),
+  coordinates = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(),
+  GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

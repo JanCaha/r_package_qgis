@@ -39,9 +39,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_catchmentarearecursive <- function(ELEVATION = qgisprocess::qgis_default_value(), FLOW_UNIT = qgisprocess::qgis_default_value(), SINKROUTE = qgisprocess::qgis_default_value(), WEIGHTS = qgisprocess::qgis_default_value(), ACCU_MATERIAL = qgisprocess::qgis_default_value(), VAL_INPUT = qgisprocess::qgis_default_value(), ACCU_TARGET = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(), TARGETS = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), CONVERGENCE = qgisprocess::qgis_default_value(), NO_NEGATIVES = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(), VAL_MEAN = qgisprocess::qgis_default_value(), ACCU_TOTAL = qgisprocess::qgis_default_value(), ACCU_LEFT = qgisprocess::qgis_default_value(), ACCU_RIGHT = qgisprocess::qgis_default_value(), FLOW_LENGTH = qgisprocess::qgis_default_value(), WEIGHT_LOSS = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_catchmentarearecursive <- function(ELEVATION = qgisprocess:::qgis_default_value(), FLOW_UNIT = qgisprocess:::qgis_default_value(), SINKROUTE = qgisprocess:::qgis_default_value(), WEIGHTS = qgisprocess:::qgis_default_value(), ACCU_MATERIAL = qgisprocess:::qgis_default_value(), VAL_INPUT = qgisprocess:::qgis_default_value(), ACCU_TARGET = qgisprocess:::qgis_default_value(), STEP = qgisprocess:::qgis_default_value(), TARGETS = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), CONVERGENCE = qgisprocess:::qgis_default_value(), NO_NEGATIVES = qgisprocess:::qgis_default_value(), FLOW = qgisprocess:::qgis_default_value(), VAL_MEAN = qgisprocess:::qgis_default_value(), ACCU_TOTAL = qgisprocess:::qgis_default_value(), ACCU_LEFT = qgisprocess:::qgis_default_value(), ACCU_RIGHT = qgisprocess:::qgis_default_value(), FLOW_LENGTH = qgisprocess:::qgis_default_value(), WEIGHT_LOSS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:catchmentarearecursive")
 
@@ -57,6 +57,6 @@ saga_catchmentarearecursive <- function(ELEVATION = qgisprocess::qgis_default_va
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ACCU_LEFT")
+    qgisprocess::qgis_extract_output(output, "ACCU_LEFT")
   }
 }

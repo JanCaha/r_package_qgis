@@ -5,9 +5,9 @@
 \title{QGIS algorithm Curvature classification}
 \usage{
 saga_curvatureclassification(
-  DEM = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  CLASS = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  CLASS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

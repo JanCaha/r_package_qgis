@@ -5,9 +5,9 @@
 \title{QGIS algorithm Histogram surface}
 \usage{
 saga_histogramsurface(
-  GRID = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  HIST = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  HIST = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

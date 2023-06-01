@@ -5,12 +5,12 @@
 \title{QGIS algorithm Topographic wetness index (twi)}
 \usage{
 saga_topographicwetnessindextwi(
-  SLOPE = qgisprocess::qgis_default_value(),
-  AREA = qgisprocess::qgis_default_value(),
-  TRANS = qgisprocess::qgis_default_value(),
-  CONV = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  TWI = qgisprocess::qgis_default_value(),
+  SLOPE = qgisprocess:::qgis_default_value(),
+  AREA = qgisprocess:::qgis_default_value(),
+  TRANS = qgisprocess:::qgis_default_value(),
+  CONV = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  TWI = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,13 +5,13 @@
 \title{QGIS algorithm Ls factor}
 \usage{
 saga_lsfactor(
-  SLOPE = qgisprocess::qgis_default_value(),
-  AREA = qgisprocess::qgis_default_value(),
-  CONV = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  EROSIVITY = qgisprocess::qgis_default_value(),
-  STABILITY = qgisprocess::qgis_default_value(),
-  LS = qgisprocess::qgis_default_value(),
+  SLOPE = qgisprocess:::qgis_default_value(),
+  AREA = qgisprocess:::qgis_default_value(),
+  CONV = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  EROSIVITY = qgisprocess:::qgis_default_value(),
+  STABILITY = qgisprocess:::qgis_default_value(),
+  LS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

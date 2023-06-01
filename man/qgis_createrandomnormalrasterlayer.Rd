@@ -5,13 +5,13 @@
 \title{QGIS algorithm Create random raster layer (normal distribution)}
 \usage{
 qgis_createrandomnormalrasterlayer(
-  EXTENT = qgisprocess::qgis_default_value(),
-  TARGET_CRS = qgisprocess::qgis_default_value(),
-  PIXEL_SIZE = qgisprocess::qgis_default_value(),
-  OUTPUT_TYPE = qgisprocess::qgis_default_value(),
-  MEAN = qgisprocess::qgis_default_value(),
-  STDDEV = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
+  TARGET_CRS = qgisprocess:::qgis_default_value(),
+  PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
+  MEAN = qgisprocess:::qgis_default_value(),
+  STDDEV = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

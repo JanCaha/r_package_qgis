@@ -43,9 +43,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_edit <- function(map = qgisprocess::qgis_default_value(), type = qgisprocess::qgis_default_value(), tool = qgisprocess::qgis_default_value(), input = qgisprocess::qgis_default_value(), move = qgisprocess::qgis_default_value(), threshold = qgisprocess::qgis_default_value(), ids = qgisprocess::qgis_default_value(), cats = qgisprocess::qgis_default_value(), coords = qgisprocess::qgis_default_value(), bbox = qgisprocess::qgis_default_value(), polygon = qgisprocess::qgis_default_value(), where = qgisprocess::qgis_default_value(), query = qgisprocess::qgis_default_value(), bgmap = qgisprocess::qgis_default_value(), snap = qgisprocess::qgis_default_value(), zbulk = qgisprocess::qgis_default_value(), .r = qgisprocess::qgis_default_value(), .c = qgisprocess::qgis_default_value(), .n = qgisprocess::qgis_default_value(), .b = qgisprocess::qgis_default_value(), .arg_1 = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_edit <- function(map = qgisprocess:::qgis_default_value(), type = qgisprocess:::qgis_default_value(), tool = qgisprocess:::qgis_default_value(), input = qgisprocess:::qgis_default_value(), move = qgisprocess:::qgis_default_value(), threshold = qgisprocess:::qgis_default_value(), ids = qgisprocess:::qgis_default_value(), cats = qgisprocess:::qgis_default_value(), coords = qgisprocess:::qgis_default_value(), bbox = qgisprocess:::qgis_default_value(), polygon = qgisprocess:::qgis_default_value(), where = qgisprocess:::qgis_default_value(), query = qgisprocess:::qgis_default_value(), bgmap = qgisprocess:::qgis_default_value(), snap = qgisprocess:::qgis_default_value(), zbulk = qgisprocess:::qgis_default_value(), .r = qgisprocess:::qgis_default_value(), .c = qgisprocess:::qgis_default_value(), .n = qgisprocess:::qgis_default_value(), .b = qgisprocess:::qgis_default_value(), .arg_1 = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.edit")
 
@@ -61,6 +61,6 @@ grass7_v_edit <- function(map = qgisprocess::qgis_default_value(), type = qgispr
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

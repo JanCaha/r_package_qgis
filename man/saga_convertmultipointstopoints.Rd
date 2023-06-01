@@ -5,8 +5,8 @@
 \title{QGIS algorithm Convert multipoints to points}
 \usage{
 saga_convertmultipointstopoints(
-  MULTIPOINTS = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
+  MULTIPOINTS = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

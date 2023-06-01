@@ -5,12 +5,12 @@
 \title{QGIS algorithm r.what.color}
 \usage{
 grass7_r_what_color(
-  input = qgisprocess::qgis_default_value(),
-  value = qgisprocess::qgis_default_value(),
-  format = qgisprocess::qgis_default_value(),
-  html = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  value = qgisprocess:::qgis_default_value(),
+  format = qgisprocess:::qgis_default_value(),
+  html = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

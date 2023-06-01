@@ -5,13 +5,13 @@
 \title{QGIS algorithm Field calculator}
 \usage{
 qgis_fieldcalculator(
-  INPUT = qgisprocess::qgis_default_value(),
-  FIELD_NAME = qgisprocess::qgis_default_value(),
-  FIELD_TYPE = qgisprocess::qgis_default_value(),
-  FIELD_LENGTH = qgisprocess::qgis_default_value(),
-  FIELD_PRECISION = qgisprocess::qgis_default_value(),
-  FORMULA = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FIELD_NAME = qgisprocess:::qgis_default_value(),
+  FIELD_TYPE = qgisprocess:::qgis_default_value(),
+  FIELD_LENGTH = qgisprocess:::qgis_default_value(),
+  FIELD_PRECISION = qgisprocess:::qgis_default_value(),
+  FORMULA = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

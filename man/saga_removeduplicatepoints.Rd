@@ -5,11 +5,11 @@
 \title{QGIS algorithm Remove duplicate points}
 \usage{
 saga_removeduplicatepoints(
-  POINTS = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  NUMERIC = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  NUMERIC = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

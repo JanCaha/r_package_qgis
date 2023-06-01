@@ -5,13 +5,13 @@
 \title{QGIS algorithm Topographic openness}
 \usage{
 saga_topographicopenness(
-  DEM = qgisprocess::qgis_default_value(),
-  POS = qgisprocess::qgis_default_value(),
-  NEG = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  DLEVEL = qgisprocess::qgis_default_value(),
-  NDIRS = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  POS = qgisprocess:::qgis_default_value(),
+  NEG = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  DLEVEL = qgisprocess:::qgis_default_value(),
+  NDIRS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

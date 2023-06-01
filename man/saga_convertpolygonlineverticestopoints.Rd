@@ -5,8 +5,8 @@
 \title{QGIS algorithm Convert polygon/line vertices to points}
 \usage{
 saga_convertpolygonlineverticestopoints(
-  SHAPES = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

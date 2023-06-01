@@ -5,10 +5,10 @@
 \title{QGIS algorithm Split lines with lines}
 \usage{
 saga_splitlineswithlines(
-  LINES = qgisprocess::qgis_default_value(),
-  SPLIT = qgisprocess::qgis_default_value(),
-  INTERSECT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  SPLIT = qgisprocess:::qgis_default_value(),
+  INTERSECT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

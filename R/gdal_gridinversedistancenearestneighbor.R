@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_gridinversedistancenearestneighbor <- function(INPUT = qgisprocess::qgis_default_value(), Z_FIELD = qgisprocess::qgis_default_value(), POWER = qgisprocess::qgis_default_value(), SMOOTHING = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), MAX_POINTS = qgisprocess::qgis_default_value(), MIN_POINTS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_gridinversedistancenearestneighbor <- function(INPUT = qgisprocess:::qgis_default_value(), Z_FIELD = qgisprocess:::qgis_default_value(), POWER = qgisprocess:::qgis_default_value(), SMOOTHING = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), MAX_POINTS = qgisprocess:::qgis_default_value(), MIN_POINTS = qgisprocess:::qgis_default_value(), NODATA = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), DATA_TYPE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:gridinversedistancenearestneighbor")
 
@@ -44,6 +44,6 @@ gdal_gridinversedistancenearestneighbor <- function(INPUT = qgisprocess::qgis_de
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

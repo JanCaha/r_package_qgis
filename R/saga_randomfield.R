@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_randomfield <- function(METHOD = qgisprocess::qgis_default_value(), RANGE_MIN = qgisprocess::qgis_default_value(), RANGE_MAX = qgisprocess::qgis_default_value(), MEAN = qgisprocess::qgis_default_value(), STDDEV = qgisprocess::qgis_default_value(), USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX = qgisprocess::qgis_default_value(), USER_SIZE = qgisprocess::qgis_default_value(), USER_FITS = qgisprocess::qgis_default_value(), OUT_GRID = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_randomfield <- function(METHOD = qgisprocess:::qgis_default_value(), RANGE_MIN = qgisprocess:::qgis_default_value(), RANGE_MAX = qgisprocess:::qgis_default_value(), MEAN = qgisprocess:::qgis_default_value(), STDDEV = qgisprocess:::qgis_default_value(), USER_XMIN_USER_XMAX_USER_YMIN_USER_YMAX = qgisprocess:::qgis_default_value(), USER_SIZE = qgisprocess:::qgis_default_value(), USER_FITS = qgisprocess:::qgis_default_value(), OUT_GRID = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:randomfield")
 
@@ -41,6 +41,6 @@ saga_randomfield <- function(METHOD = qgisprocess::qgis_default_value(), RANGE_M
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUT_GRID")
+    qgisprocess::qgis_extract_output(output, "OUT_GRID")
   }
 }

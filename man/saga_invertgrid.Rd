@@ -5,8 +5,8 @@
 \title{QGIS algorithm Invert grid}
 \usage{
 saga_invertgrid(
-  GRID = qgisprocess::qgis_default_value(),
-  INVERSE = qgisprocess::qgis_default_value(),
+  GRID = qgisprocess:::qgis_default_value(),
+  INVERSE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

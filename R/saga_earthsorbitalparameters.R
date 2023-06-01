@@ -1,6 +1,6 @@
 character(0)
 
-saga_earthsorbitalparameters <- function(ORBPAR = qgisprocess::qgis_default_value(), START = qgisprocess::qgis_default_value(), STOP = qgisprocess::qgis_default_value(), STEP = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_earthsorbitalparameters <- function(ORBPAR = qgisprocess:::qgis_default_value(), START = qgisprocess:::qgis_default_value(), STOP = qgisprocess:::qgis_default_value(), STEP = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:earthsorbitalparameters")
 
@@ -16,6 +16,6 @@ saga_earthsorbitalparameters <- function(ORBPAR = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

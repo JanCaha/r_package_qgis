@@ -5,13 +5,13 @@
 \title{QGIS algorithm Regression analysis (points and predictor grid)}
 \usage{
 saga_regressionanalysispointsandpredictorgrid(
-  PREDICTOR = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
-  ATTRIBUTE = qgisprocess::qgis_default_value(),
-  REGRESSION = qgisprocess::qgis_default_value(),
-  RESIDUAL = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
+  PREDICTOR = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  ATTRIBUTE = qgisprocess:::qgis_default_value(),
+  REGRESSION = qgisprocess:::qgis_default_value(),
+  RESIDUAL = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

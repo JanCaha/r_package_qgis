@@ -5,8 +5,8 @@
 \title{QGIS algorithm Save log to file}
 \usage{
 qgis_savelog(
-  OUTPUT = qgisprocess::qgis_default_value(),
-  USE_HTML = qgisprocess::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  USE_HTML = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

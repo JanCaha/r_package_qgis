@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fouriertransformvigra <- function(INPUT = qgisprocess::qgis_default_value(), REAL = qgisprocess::qgis_default_value(), IMAG = qgisprocess::qgis_default_value(), CENTER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fouriertransformvigra <- function(INPUT = qgisprocess:::qgis_default_value(), REAL = qgisprocess:::qgis_default_value(), IMAG = qgisprocess:::qgis_default_value(), CENTER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fouriertransformvigra")
 
@@ -37,6 +37,6 @@ saga_fouriertransformvigra <- function(INPUT = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "IMAG")
+    qgisprocess::qgis_extract_output(output, "IMAG")
   }
 }

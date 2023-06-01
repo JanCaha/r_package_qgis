@@ -5,7 +5,7 @@
 \title{QGIS algorithm Create directory}
 \usage{
 qgis_createdirectory(
-  PATH = qgisprocess::qgis_default_value(),
+  PATH = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

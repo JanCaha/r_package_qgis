@@ -33,9 +33,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_lsfactorfieldbased <- function(DEM = qgisprocess::qgis_default_value(), FIELDS = qgisprocess::qgis_default_value(), STATISTICS = qgisprocess::qgis_default_value(), UPSLOPE_AREA = qgisprocess::qgis_default_value(), UPSLOPE_LENGTH = qgisprocess::qgis_default_value(), UPSLOPE_SLOPE = qgisprocess::qgis_default_value(), LS_FACTOR = qgisprocess::qgis_default_value(), BALANCE = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), METHOD_SLOPE = qgisprocess::qgis_default_value(), METHOD_AREA = qgisprocess::qgis_default_value(), STOP_AT_EDGE = qgisprocess::qgis_default_value(), EROSIVITY = qgisprocess::qgis_default_value(), STABILITY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_lsfactorfieldbased <- function(DEM = qgisprocess:::qgis_default_value(), FIELDS = qgisprocess:::qgis_default_value(), STATISTICS = qgisprocess:::qgis_default_value(), UPSLOPE_AREA = qgisprocess:::qgis_default_value(), UPSLOPE_LENGTH = qgisprocess:::qgis_default_value(), UPSLOPE_SLOPE = qgisprocess:::qgis_default_value(), LS_FACTOR = qgisprocess:::qgis_default_value(), BALANCE = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), METHOD_SLOPE = qgisprocess:::qgis_default_value(), METHOD_AREA = qgisprocess:::qgis_default_value(), STOP_AT_EDGE = qgisprocess:::qgis_default_value(), EROSIVITY = qgisprocess:::qgis_default_value(), STABILITY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:lsfactorfieldbased")
 
@@ -51,6 +51,6 @@ saga_lsfactorfieldbased <- function(DEM = qgisprocess::qgis_default_value(), FIE
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "BALANCE")
+    qgisprocess::qgis_extract_output(output, "BALANCE")
   }
 }

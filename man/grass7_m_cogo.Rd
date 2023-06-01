@@ -5,14 +5,14 @@
 \title{QGIS algorithm m.cogo}
 \usage{
 grass7_m_cogo(
-  input = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  coordinates = qgisprocess::qgis_default_value(),
-  .l = qgisprocess::qgis_default_value(),
-  .q = qgisprocess::qgis_default_value(),
-  .r = qgisprocess::qgis_default_value(),
-  .c = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  coordinates = qgisprocess:::qgis_default_value(),
+  .l = qgisprocess:::qgis_default_value(),
+  .q = qgisprocess:::qgis_default_value(),
+  .r = qgisprocess:::qgis_default_value(),
+  .c = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

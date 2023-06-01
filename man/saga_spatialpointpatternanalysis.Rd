@@ -5,11 +5,11 @@
 \title{QGIS algorithm Spatial point pattern analysis}
 \usage{
 saga_spatialpointpatternanalysis(
-  POINTS = qgisprocess::qgis_default_value(),
-  STEP = qgisprocess::qgis_default_value(),
-  CENTRE = qgisprocess::qgis_default_value(),
-  STDDIST = qgisprocess::qgis_default_value(),
-  BBOX = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  STEP = qgisprocess:::qgis_default_value(),
+  CENTRE = qgisprocess:::qgis_default_value(),
+  STDDIST = qgisprocess:::qgis_default_value(),
+  BBOX = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

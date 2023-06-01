@@ -5,9 +5,9 @@
 \title{QGIS algorithm Polygon self-intersection}
 \usage{
 saga_polygonselfintersection(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  ID = qgisprocess::qgis_default_value(),
-  INTERSECT = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  ID = qgisprocess:::qgis_default_value(),
+  INTERSECT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

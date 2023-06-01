@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_crossclassificationandtabulation <- function(INPUT = qgisprocess::qgis_default_value(), INPUT2 = qgisprocess::qgis_default_value(), MAXNUMCLASS = qgisprocess::qgis_default_value(), RESULTGRID = qgisprocess::qgis_default_value(), RESULTTABLE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_crossclassificationandtabulation <- function(INPUT = qgisprocess:::qgis_default_value(), INPUT2 = qgisprocess:::qgis_default_value(), MAXNUMCLASS = qgisprocess:::qgis_default_value(), RESULTGRID = qgisprocess:::qgis_default_value(), RESULTTABLE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:crossclassificationandtabulation")
 
@@ -38,6 +38,6 @@ saga_crossclassificationandtabulation <- function(INPUT = qgisprocess::qgis_defa
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "RESULTGRID")
+    qgisprocess::qgis_extract_output(output, "RESULTGRID")
   }
 }

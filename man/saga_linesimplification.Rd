@@ -5,9 +5,9 @@
 \title{QGIS algorithm Line simplification}
 \usage{
 saga_linesimplification(
-  LINES = qgisprocess::qgis_default_value(),
-  TOLERANCE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  TOLERANCE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

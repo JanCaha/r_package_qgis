@@ -5,12 +5,12 @@
 \title{QGIS algorithm Generate shapes}
 \usage{
 saga_generateshapes(
-  INPUT = qgisprocess::qgis_default_value(),
-  FIELD_ID = qgisprocess::qgis_default_value(),
-  FIELD_X = qgisprocess::qgis_default_value(),
-  FIELD_Y = qgisprocess::qgis_default_value(),
-  SHAPE_TYPE = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  FIELD_ID = qgisprocess:::qgis_default_value(),
+  FIELD_X = qgisprocess:::qgis_default_value(),
+  FIELD_Y = qgisprocess:::qgis_default_value(),
+  SHAPE_TYPE = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

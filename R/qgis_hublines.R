@@ -24,9 +24,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_hublines <- function(HUBS = qgisprocess::qgis_default_value(), HUB_FIELD = qgisprocess::qgis_default_value(), HUB_FIELDS = qgisprocess::qgis_default_value(), SPOKES = qgisprocess::qgis_default_value(), SPOKE_FIELD = qgisprocess::qgis_default_value(), SPOKE_FIELDS = qgisprocess::qgis_default_value(), GEODESIC = qgisprocess::qgis_default_value(), GEODESIC_DISTANCE = qgisprocess::qgis_default_value(), ANTIMERIDIAN_SPLIT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_hublines <- function(HUBS = qgisprocess:::qgis_default_value(), HUB_FIELD = qgisprocess:::qgis_default_value(), HUB_FIELDS = qgisprocess:::qgis_default_value(), SPOKES = qgisprocess:::qgis_default_value(), SPOKE_FIELD = qgisprocess:::qgis_default_value(), SPOKE_FIELDS = qgisprocess:::qgis_default_value(), GEODESIC = qgisprocess:::qgis_default_value(), GEODESIC_DISTANCE = qgisprocess:::qgis_default_value(), ANTIMERIDIAN_SPLIT = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:hublines")
 
@@ -42,6 +42,6 @@ qgis_hublines <- function(HUBS = qgisprocess::qgis_default_value(), HUB_FIELD = 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

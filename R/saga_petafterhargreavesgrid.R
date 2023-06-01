@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_petafterhargreavesgrid <- function(T = qgisprocess::qgis_default_value(), T_MIN = qgisprocess::qgis_default_value(), T_MAX = qgisprocess::qgis_default_value(), PET = qgisprocess::qgis_default_value(), LAT = qgisprocess::qgis_default_value(), TIME = qgisprocess::qgis_default_value(), MONTH = qgisprocess::qgis_default_value(), DAY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_petafterhargreavesgrid <- function(T = qgisprocess:::qgis_default_value(), T_MIN = qgisprocess:::qgis_default_value(), T_MAX = qgisprocess:::qgis_default_value(), PET = qgisprocess:::qgis_default_value(), LAT = qgisprocess:::qgis_default_value(), TIME = qgisprocess:::qgis_default_value(), MONTH = qgisprocess:::qgis_default_value(), DAY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:petafterhargreavesgrid")
 
@@ -40,6 +40,6 @@ saga_petafterhargreavesgrid <- function(T = qgisprocess::qgis_default_value(), T
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PET")
+    qgisprocess::qgis_extract_output(output, "PET")
   }
 }

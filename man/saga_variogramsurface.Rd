@@ -5,13 +5,13 @@
 \title{QGIS algorithm Variogram surface}
 \usage{
 saga_variogramsurface(
-  POINTS = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  DISTCOUNT = qgisprocess::qgis_default_value(),
-  NSKIP = qgisprocess::qgis_default_value(),
-  COUNT = qgisprocess::qgis_default_value(),
-  VARIANCE = qgisprocess::qgis_default_value(),
-  COVARIANCE = qgisprocess::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  DISTCOUNT = qgisprocess:::qgis_default_value(),
+  NSKIP = qgisprocess:::qgis_default_value(),
+  COUNT = qgisprocess:::qgis_default_value(),
+  VARIANCE = qgisprocess:::qgis_default_value(),
+  COVARIANCE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -1,6 +1,6 @@
 character(0)
 
-qgis_importintopostgis <- function(INPUT = qgisprocess::qgis_default_value(), DATABASE = qgisprocess::qgis_default_value(), SCHEMA = qgisprocess::qgis_default_value(), TABLENAME = qgisprocess::qgis_default_value(), PRIMARY_KEY = qgisprocess::qgis_default_value(), GEOMETRY_COLUMN = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(), OVERWRITE = qgisprocess::qgis_default_value(), CREATEINDEX = qgisprocess::qgis_default_value(), LOWERCASE_NAMES = qgisprocess::qgis_default_value(), DROP_STRING_LENGTH = qgisprocess::qgis_default_value(), FORCE_SINGLEPART = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_importintopostgis <- function(INPUT = qgisprocess:::qgis_default_value(), DATABASE = qgisprocess:::qgis_default_value(), SCHEMA = qgisprocess:::qgis_default_value(), TABLENAME = qgisprocess:::qgis_default_value(), PRIMARY_KEY = qgisprocess:::qgis_default_value(), GEOMETRY_COLUMN = qgisprocess:::qgis_default_value(), ENCODING = qgisprocess:::qgis_default_value(), OVERWRITE = qgisprocess:::qgis_default_value(), CREATEINDEX = qgisprocess:::qgis_default_value(), LOWERCASE_NAMES = qgisprocess:::qgis_default_value(), DROP_STRING_LENGTH = qgisprocess:::qgis_default_value(), FORCE_SINGLEPART = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:importintopostgis")
 
@@ -16,6 +16,6 @@ qgis_importintopostgis <- function(INPUT = qgisprocess::qgis_default_value(), DA
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

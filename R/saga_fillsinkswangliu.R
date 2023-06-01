@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fillsinkswangliu <- function(ELEV = qgisprocess::qgis_default_value(), MINSLOPE = qgisprocess::qgis_default_value(), FILLED = qgisprocess::qgis_default_value(), FDIR = qgisprocess::qgis_default_value(), WSHED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fillsinkswangliu <- function(ELEV = qgisprocess:::qgis_default_value(), MINSLOPE = qgisprocess:::qgis_default_value(), FILLED = qgisprocess:::qgis_default_value(), FDIR = qgisprocess:::qgis_default_value(), WSHED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fillsinkswangliu")
 
@@ -39,6 +39,6 @@ saga_fillsinkswangliu <- function(ELEV = qgisprocess::qgis_default_value(), MINS
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FDIR")
+    qgisprocess::qgis_extract_output(output, "FDIR")
   }
 }

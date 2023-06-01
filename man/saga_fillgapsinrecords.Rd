@@ -5,10 +5,10 @@
 \title{QGIS algorithm Fill gaps in records}
 \usage{
 saga_fillgapsinrecords(
-  TABLE = qgisprocess::qgis_default_value(),
-  ORDER = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  NOGAPS = qgisprocess::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  ORDER = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  NOGAPS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

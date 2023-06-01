@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_gwrformultiplepredictors <- function(POINTS = qgisprocess::qgis_default_value(), DEPENDENT = qgisprocess::qgis_default_value(), PREDICTORS = qgisprocess::qgis_default_value(), REGRESSION = qgisprocess::qgis_default_value(), DW_WEIGHTING = qgisprocess::qgis_default_value(), DW_IDW_POWER = qgisprocess::qgis_default_value(), DW_IDW_OFFSET = qgisprocess::qgis_default_value(), DW_BANDWIDTH = qgisprocess::qgis_default_value(), SEARCH_RANGE = qgisprocess::qgis_default_value(), SEARCH_RADIUS = qgisprocess::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess::qgis_default_value(), SEARCH_DIRECTION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_gwrformultiplepredictors <- function(POINTS = qgisprocess:::qgis_default_value(), DEPENDENT = qgisprocess:::qgis_default_value(), PREDICTORS = qgisprocess:::qgis_default_value(), REGRESSION = qgisprocess:::qgis_default_value(), DW_WEIGHTING = qgisprocess:::qgis_default_value(), DW_IDW_POWER = qgisprocess:::qgis_default_value(), DW_IDW_OFFSET = qgisprocess:::qgis_default_value(), DW_BANDWIDTH = qgisprocess:::qgis_default_value(), SEARCH_RANGE = qgisprocess:::qgis_default_value(), SEARCH_RADIUS = qgisprocess:::qgis_default_value(), SEARCH_POINTS_ALL = qgisprocess:::qgis_default_value(), SEARCH_POINTS_MIN = qgisprocess:::qgis_default_value(), SEARCH_POINTS_MAX = qgisprocess:::qgis_default_value(), SEARCH_DIRECTION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:gwrformultiplepredictors")
 
@@ -46,6 +46,6 @@ saga_gwrformultiplepredictors <- function(POINTS = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "REGRESSION")
+    qgisprocess::qgis_extract_output(output, "REGRESSION")
   }
 }

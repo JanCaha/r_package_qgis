@@ -5,12 +5,12 @@
 \title{QGIS algorithm Write Vector Tiles (XYZ)}
 \usage{
 qgis_writevectortiles_xyz(
-  OUTPUT_DIRECTORY = qgisprocess::qgis_default_value(),
-  XYZ_TEMPLATE = qgisprocess::qgis_default_value(),
-  LAYERS = qgisprocess::qgis_default_value(),
-  MIN_ZOOM = qgisprocess::qgis_default_value(),
-  MAX_ZOOM = qgisprocess::qgis_default_value(),
-  EXTENT = qgisprocess::qgis_default_value(),
+  OUTPUT_DIRECTORY = qgisprocess:::qgis_default_value(),
+  XYZ_TEMPLATE = qgisprocess:::qgis_default_value(),
+  LAYERS = qgisprocess:::qgis_default_value(),
+  MIN_ZOOM = qgisprocess:::qgis_default_value(),
+  MAX_ZOOM = qgisprocess:::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

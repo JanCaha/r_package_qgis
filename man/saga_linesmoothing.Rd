@@ -5,13 +5,13 @@
 \title{QGIS algorithm Line smoothing}
 \usage{
 saga_linesmoothing(
-  LINES_IN = qgisprocess::qgis_default_value(),
-  LINES_OUT = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  SENSITIVITY = qgisprocess::qgis_default_value(),
-  ITERATIONS = qgisprocess::qgis_default_value(),
-  PRESERVATION = qgisprocess::qgis_default_value(),
-  SIGMA = qgisprocess::qgis_default_value(),
+  LINES_IN = qgisprocess:::qgis_default_value(),
+  LINES_OUT = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  SENSITIVITY = qgisprocess:::qgis_default_value(),
+  ITERATIONS = qgisprocess:::qgis_default_value(),
+  PRESERVATION = qgisprocess:::qgis_default_value(),
+  SIGMA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Flat detection}
 \usage{
 saga_flatdetection(
-  DEM = qgisprocess::qgis_default_value(),
-  FLAT_OUTPUT = qgisprocess::qgis_default_value(),
-  NOFLATS = qgisprocess::qgis_default_value(),
-  FLATS = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  FLAT_OUTPUT = qgisprocess:::qgis_default_value(),
+  NOFLATS = qgisprocess:::qgis_default_value(),
+  FLATS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

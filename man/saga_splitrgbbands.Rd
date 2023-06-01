@@ -5,10 +5,10 @@
 \title{QGIS algorithm Split RGB bands}
 \usage{
 saga_splitrgbbands(
-  INPUT = qgisprocess::qgis_default_value(),
-  R = qgisprocess::qgis_default_value(),
-  G = qgisprocess::qgis_default_value(),
-  B = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  R = qgisprocess:::qgis_default_value(),
+  G = qgisprocess:::qgis_default_value(),
+  B = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

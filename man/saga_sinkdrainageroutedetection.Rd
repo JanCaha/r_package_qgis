@@ -5,9 +5,9 @@
 \title{QGIS algorithm Sink drainage route detection}
 \usage{
 saga_sinkdrainageroutedetection(
-  ELEVATION = qgisprocess::qgis_default_value(),
-  THRSHEIGHT = qgisprocess::qgis_default_value(),
-  SINKROUTE = qgisprocess::qgis_default_value(),
+  ELEVATION = qgisprocess:::qgis_default_value(),
+  THRSHEIGHT = qgisprocess:::qgis_default_value(),
+  SINKROUTE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

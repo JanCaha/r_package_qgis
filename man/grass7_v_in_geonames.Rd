@@ -5,13 +5,13 @@
 \title{QGIS algorithm v.in.geonames}
 \usage{
 grass7_v_in_geonames(
-  input = qgisprocess::qgis_default_value(),
-  output = qgisprocess::qgis_default_value(),
-  GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(),
-  GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(),
-  GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(),
-  GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),
+  input = qgisprocess:::qgis_default_value(),
+  output = qgisprocess:::qgis_default_value(),
+  GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(),
+  GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(),
+  GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(),
+  GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -5,7 +5,7 @@
 \title{QGIS algorithm Extract Shapefile encoding}
 \usage{
 qgis_shpencodinginfo(
-  INPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

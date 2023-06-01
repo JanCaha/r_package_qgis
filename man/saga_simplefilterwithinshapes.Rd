@@ -5,12 +5,12 @@
 \title{QGIS algorithm Simple filter within shapes}
 \usage{
 saga_simplefilterwithinshapes(
-  INPUT = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
-  SHAPES = qgisprocess::qgis_default_value(),
-  MODE = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  MODE = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

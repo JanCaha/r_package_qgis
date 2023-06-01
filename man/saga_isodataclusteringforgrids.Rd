@@ -5,14 +5,14 @@
 \title{QGIS algorithm Isodata clustering for grids}
 \usage{
 saga_isodataclusteringforgrids(
-  FEATURES = qgisprocess::qgis_default_value(),
-  CLUSTER = qgisprocess::qgis_default_value(),
-  STATISTICS = qgisprocess::qgis_default_value(),
-  NORMALIZE = qgisprocess::qgis_default_value(),
-  ITERATIONS = qgisprocess::qgis_default_value(),
-  CLUSTER_INI = qgisprocess::qgis_default_value(),
-  CLUSTER_MAX = qgisprocess::qgis_default_value(),
-  SAMPLES_MIN = qgisprocess::qgis_default_value(),
+  FEATURES = qgisprocess:::qgis_default_value(),
+  CLUSTER = qgisprocess:::qgis_default_value(),
+  STATISTICS = qgisprocess:::qgis_default_value(),
+  NORMALIZE = qgisprocess:::qgis_default_value(),
+  ITERATIONS = qgisprocess:::qgis_default_value(),
+  CLUSTER_INI = qgisprocess:::qgis_default_value(),
+  CLUSTER_MAX = qgisprocess:::qgis_default_value(),
+  SAMPLES_MIN = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

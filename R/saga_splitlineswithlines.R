@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_splitlineswithlines <- function(LINES = qgisprocess::qgis_default_value(), SPLIT = qgisprocess::qgis_default_value(), INTERSECT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_splitlineswithlines <- function(LINES = qgisprocess:::qgis_default_value(), SPLIT = qgisprocess:::qgis_default_value(), INTERSECT = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:splitlineswithlines")
 
@@ -36,6 +36,6 @@ saga_splitlineswithlines <- function(LINES = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "INTERSECT")
+    qgisprocess::qgis_extract_output(output, "INTERSECT")
   }
 }

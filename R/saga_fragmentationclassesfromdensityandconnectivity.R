@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_fragmentationclassesfromdensityandconnectivity <- function(DENSITY = qgisprocess::qgis_default_value(), CONNECTIVITY = qgisprocess::qgis_default_value(), BORDER = qgisprocess::qgis_default_value(), WEIGHT = qgisprocess::qgis_default_value(), DENSITY_MIN = qgisprocess::qgis_default_value(), DENSITY_INT = qgisprocess::qgis_default_value(), FRAGMENTATION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_fragmentationclassesfromdensityandconnectivity <- function(DENSITY = qgisprocess:::qgis_default_value(), CONNECTIVITY = qgisprocess:::qgis_default_value(), BORDER = qgisprocess:::qgis_default_value(), WEIGHT = qgisprocess:::qgis_default_value(), DENSITY_MIN = qgisprocess:::qgis_default_value(), DENSITY_INT = qgisprocess:::qgis_default_value(), FRAGMENTATION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:fragmentationclassesfromdensityandconnectivity")
 
@@ -39,6 +39,6 @@ saga_fragmentationclassesfromdensityandconnectivity <- function(DENSITY = qgispr
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FRAGMENTATION")
+    qgisprocess::qgis_extract_output(output, "FRAGMENTATION")
   }
 }

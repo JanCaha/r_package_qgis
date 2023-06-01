@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_linedissolve <- function(LINES = qgisprocess::qgis_default_value(), FIELD_1 = qgisprocess::qgis_default_value(), FIELD_2 = qgisprocess::qgis_default_value(), FIELD_3 = qgisprocess::qgis_default_value(), ALL = qgisprocess::qgis_default_value(), DISSOLVED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_linedissolve <- function(LINES = qgisprocess:::qgis_default_value(), FIELD_1 = qgisprocess:::qgis_default_value(), FIELD_2 = qgisprocess:::qgis_default_value(), FIELD_3 = qgisprocess:::qgis_default_value(), ALL = qgisprocess:::qgis_default_value(), DISSOLVED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:linedissolve")
 
@@ -38,6 +38,6 @@ saga_linedissolve <- function(LINES = qgisprocess::qgis_default_value(), FIELD_1
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "DISSOLVED")
+    qgisprocess::qgis_extract_output(output, "DISSOLVED")
   }
 }

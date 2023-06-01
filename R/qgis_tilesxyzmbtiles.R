@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_tilesxyzmbtiles <- function(EXTENT = qgisprocess::qgis_default_value(), ZOOM_MIN = qgisprocess::qgis_default_value(), ZOOM_MAX = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), BACKGROUND_COLOR = qgisprocess::qgis_default_value(), TILE_FORMAT = qgisprocess::qgis_default_value(), QUALITY = qgisprocess::qgis_default_value(), METATILESIZE = qgisprocess::qgis_default_value(), OUTPUT_FILE = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_tilesxyzmbtiles <- function(EXTENT = qgisprocess:::qgis_default_value(), ZOOM_MIN = qgisprocess:::qgis_default_value(), ZOOM_MAX = qgisprocess:::qgis_default_value(), DPI = qgisprocess:::qgis_default_value(), BACKGROUND_COLOR = qgisprocess:::qgis_default_value(), TILE_FORMAT = qgisprocess:::qgis_default_value(), QUALITY = qgisprocess:::qgis_default_value(), METATILESIZE = qgisprocess:::qgis_default_value(), OUTPUT_FILE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("qgis:tilesxyzmbtiles")
 
@@ -41,6 +41,6 @@ qgis_tilesxyzmbtiles <- function(EXTENT = qgisprocess::qgis_default_value(), ZOO
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT_FILE")
+    qgisprocess::qgis_extract_output(output, "OUTPUT_FILE")
   }
 }

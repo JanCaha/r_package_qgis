@@ -5,10 +5,10 @@
 \title{QGIS algorithm Add raster values to points}
 \usage{
 saga_addrastervaluestopoints(
-  SHAPES = qgisprocess::qgis_default_value(),
-  GRIDS = qgisprocess::qgis_default_value(),
-  RESAMPLING = qgisprocess::qgis_default_value(),
-  RESULT = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  GRIDS = qgisprocess:::qgis_default_value(),
+  RESAMPLING = qgisprocess:::qgis_default_value(),
+  RESULT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

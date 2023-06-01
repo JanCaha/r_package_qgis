@@ -5,11 +5,11 @@
 \title{QGIS algorithm Snap geometries to layer}
 \usage{
 qgis_snapgeometries(
-  INPUT = qgisprocess::qgis_default_value(),
-  REFERENCE_LAYER = qgisprocess::qgis_default_value(),
-  TOLERANCE = qgisprocess::qgis_default_value(),
-  BEHAVIOR = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
+  TOLERANCE = qgisprocess:::qgis_default_value(),
+  BEHAVIOR = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

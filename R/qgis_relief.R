@@ -21,9 +21,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_relief <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qgisprocess::qgis_default_value(), AUTO_COLORS = qgisprocess::qgis_default_value(), COLORS = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), FREQUENCY_DISTRIBUTION = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_relief <- function(INPUT = qgisprocess:::qgis_default_value(), Z_FACTOR = qgisprocess:::qgis_default_value(), AUTO_COLORS = qgisprocess:::qgis_default_value(), COLORS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), FREQUENCY_DISTRIBUTION = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("qgis:relief")
 
@@ -39,6 +39,6 @@ qgis_relief <- function(INPUT = qgisprocess::qgis_default_value(), Z_FACTOR = qg
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FREQUENCY_DISTRIBUTION")
+    qgisprocess::qgis_extract_output(output, "FREQUENCY_DISTRIBUTION")
   }
 }

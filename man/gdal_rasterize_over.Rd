@@ -5,11 +5,11 @@
 \title{QGIS algorithm Rasterize (overwrite with attribute)}
 \usage{
 gdal_rasterize_over(
-  INPUT = qgisprocess::qgis_default_value(),
-  INPUT_RASTER = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  ADD = qgisprocess::qgis_default_value(),
-  EXTRA = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  INPUT_RASTER = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  ADD = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

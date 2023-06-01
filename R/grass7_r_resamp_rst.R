@@ -41,9 +41,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_r_resamp_rst <- function(input = qgisprocess::qgis_default_value(), smooth = qgisprocess::qgis_default_value(), maskmap = qgisprocess::qgis_default_value(), ew_res = qgisprocess::qgis_default_value(), ns_res = qgisprocess::qgis_default_value(), overlap = qgisprocess::qgis_default_value(), zscale = qgisprocess::qgis_default_value(), tension = qgisprocess::qgis_default_value(), theta = qgisprocess::qgis_default_value(), scalex = qgisprocess::qgis_default_value(), .t = qgisprocess::qgis_default_value(), .d = qgisprocess::qgis_default_value(), elevation = qgisprocess::qgis_default_value(), slope = qgisprocess::qgis_default_value(), aspect = qgisprocess::qgis_default_value(), pcurvature = qgisprocess::qgis_default_value(), tcurvature = qgisprocess::qgis_default_value(), mcurvature = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_r_resamp_rst <- function(input = qgisprocess:::qgis_default_value(), smooth = qgisprocess:::qgis_default_value(), maskmap = qgisprocess:::qgis_default_value(), ew_res = qgisprocess:::qgis_default_value(), ns_res = qgisprocess:::qgis_default_value(), overlap = qgisprocess:::qgis_default_value(), zscale = qgisprocess:::qgis_default_value(), tension = qgisprocess:::qgis_default_value(), theta = qgisprocess:::qgis_default_value(), scalex = qgisprocess:::qgis_default_value(), .t = qgisprocess:::qgis_default_value(), .d = qgisprocess:::qgis_default_value(), elevation = qgisprocess:::qgis_default_value(), slope = qgisprocess:::qgis_default_value(), aspect = qgisprocess:::qgis_default_value(), pcurvature = qgisprocess:::qgis_default_value(), tcurvature = qgisprocess:::qgis_default_value(), mcurvature = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:r.resamp.rst")
 
@@ -59,6 +59,6 @@ grass7_r_resamp_rst <- function(input = qgisprocess::qgis_default_value(), smoot
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "aspect")
+    qgisprocess::qgis_extract_output(output, "aspect")
   }
 }

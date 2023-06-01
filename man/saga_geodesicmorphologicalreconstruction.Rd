@@ -5,13 +5,13 @@
 \title{QGIS algorithm Geodesic morphological reconstruction}
 \usage{
 saga_geodesicmorphologicalreconstruction(
-  INPUT_GRID = qgisprocess::qgis_default_value(),
-  OBJECT_GRID = qgisprocess::qgis_default_value(),
-  DIFFERENCE_GRID = qgisprocess::qgis_default_value(),
-  SHIFT_VALUE = qgisprocess::qgis_default_value(),
-  BORDER_YES_NO = qgisprocess::qgis_default_value(),
-  BIN_YES_NO = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
+  INPUT_GRID = qgisprocess:::qgis_default_value(),
+  OBJECT_GRID = qgisprocess:::qgis_default_value(),
+  DIFFERENCE_GRID = qgisprocess:::qgis_default_value(),
+  SHIFT_VALUE = qgisprocess:::qgis_default_value(),
+  BORDER_YES_NO = qgisprocess:::qgis_default_value(),
+  BIN_YES_NO = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

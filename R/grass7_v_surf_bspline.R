@@ -38,9 +38,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_surf_bspline <- function(input = qgisprocess::qgis_default_value(), column = qgisprocess::qgis_default_value(), sparse_input = qgisprocess::qgis_default_value(), ew_step = qgisprocess::qgis_default_value(), ns_step = qgisprocess::qgis_default_value(), method = qgisprocess::qgis_default_value(), lambda_i = qgisprocess::qgis_default_value(), solver = qgisprocess::qgis_default_value(), maxit = qgisprocess::qgis_default_value(), error = qgisprocess::qgis_default_value(), memory = qgisprocess::qgis_default_value(), output = qgisprocess::qgis_default_value(), raster_output = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_surf_bspline <- function(input = qgisprocess:::qgis_default_value(), column = qgisprocess:::qgis_default_value(), sparse_input = qgisprocess:::qgis_default_value(), ew_step = qgisprocess:::qgis_default_value(), ns_step = qgisprocess:::qgis_default_value(), method = qgisprocess:::qgis_default_value(), lambda_i = qgisprocess:::qgis_default_value(), solver = qgisprocess:::qgis_default_value(), maxit = qgisprocess:::qgis_default_value(), error = qgisprocess:::qgis_default_value(), memory = qgisprocess:::qgis_default_value(), output = qgisprocess:::qgis_default_value(), raster_output = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_OPT = qgisprocess:::qgis_default_value(), GRASS_RASTER_FORMAT_META = qgisprocess:::qgis_default_value(), GRASS_SNAP_TOLERANCE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_MIN_AREA_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.surf.bspline")
 
@@ -56,6 +56,6 @@ grass7_v_surf_bspline <- function(input = qgisprocess::qgis_default_value(), col
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "output")
+    qgisprocess::qgis_extract_output(output, "output")
   }
 }

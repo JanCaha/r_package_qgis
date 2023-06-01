@@ -5,11 +5,11 @@
 \title{QGIS algorithm Cell balance}
 \usage{
 saga_cellbalance(
-  DEM = qgisprocess::qgis_default_value(),
-  WEIGHTS = qgisprocess::qgis_default_value(),
-  WEIGHTS_DEFAULT = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  BALANCE = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  WEIGHTS = qgisprocess:::qgis_default_value(),
+  WEIGHTS_DEFAULT = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  BALANCE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

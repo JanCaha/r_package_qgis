@@ -28,9 +28,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-grass7_v_mkgrid <- function(grid = qgisprocess::qgis_default_value(), position = qgisprocess::qgis_default_value(), coordinates = qgisprocess::qgis_default_value(), box = qgisprocess::qgis_default_value(), angle = qgisprocess::qgis_default_value(), breaks = qgisprocess::qgis_default_value(), .h = qgisprocess::qgis_default_value(), .p = qgisprocess::qgis_default_value(), map = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_v_mkgrid <- function(grid = qgisprocess:::qgis_default_value(), position = qgisprocess:::qgis_default_value(), coordinates = qgisprocess:::qgis_default_value(), box = qgisprocess:::qgis_default_value(), angle = qgisprocess:::qgis_default_value(), breaks = qgisprocess:::qgis_default_value(), .h = qgisprocess:::qgis_default_value(), .p = qgisprocess:::qgis_default_value(), map = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_VECTOR_DSCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_LCO = qgisprocess:::qgis_default_value(), GRASS_VECTOR_EXPORT_NOCAT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:v.mkgrid")
 
@@ -46,6 +46,6 @@ grass7_v_mkgrid <- function(grid = qgisprocess::qgis_default_value(), position =
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "map")
+    qgisprocess::qgis_extract_output(output, "map")
   }
 }

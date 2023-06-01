@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_dxfexport <- function(LAYERS = qgisprocess::qgis_default_value(), SYMBOLOGY_MODE = qgisprocess::qgis_default_value(), SYMBOLOGY_SCALE = qgisprocess::qgis_default_value(), ENCODING = qgisprocess::qgis_default_value(), CRS = qgisprocess::qgis_default_value(), USE_LAYER_TITLE = qgisprocess::qgis_default_value(), FORCE_2D = qgisprocess::qgis_default_value(), MTEXT = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_dxfexport <- function(LAYERS = qgisprocess:::qgis_default_value(), SYMBOLOGY_MODE = qgisprocess:::qgis_default_value(), SYMBOLOGY_SCALE = qgisprocess:::qgis_default_value(), ENCODING = qgisprocess:::qgis_default_value(), CRS = qgisprocess:::qgis_default_value(), USE_LAYER_TITLE = qgisprocess:::qgis_default_value(), FORCE_2D = qgisprocess:::qgis_default_value(), MTEXT = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:dxfexport")
 
@@ -41,6 +41,6 @@ qgis_dxfexport <- function(LAYERS = qgisprocess::qgis_default_value(), SYMBOLOGY
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

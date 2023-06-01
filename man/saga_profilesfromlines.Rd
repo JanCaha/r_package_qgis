@@ -5,11 +5,11 @@
 \title{QGIS algorithm Profiles from lines}
 \usage{
 saga_profilesfromlines(
-  DEM = qgisprocess::qgis_default_value(),
-  VALUES = qgisprocess::qgis_default_value(),
-  LINES = qgisprocess::qgis_default_value(),
-  NAME = qgisprocess::qgis_default_value(),
-  PROFILE = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  VALUES = qgisprocess:::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  NAME = qgisprocess:::qgis_default_value(),
+  PROFILE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

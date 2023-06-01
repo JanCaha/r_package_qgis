@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_cutvectorlayer <- function(SHAPES = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), POLYGONS_POLYGONS = qgisprocess::qgis_default_value(), CUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_cutvectorlayer <- function(SHAPES = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), POLYGONS_POLYGONS = qgisprocess:::qgis_default_value(), CUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:cutvectorlayer")
 
@@ -36,6 +36,6 @@ saga_cutvectorlayer <- function(SHAPES = qgisprocess::qgis_default_value(), METH
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CUT")
+    qgisprocess::qgis_extract_output(output, "CUT")
   }
 }

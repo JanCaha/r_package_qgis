@@ -5,11 +5,11 @@
 \title{QGIS algorithm Quadtree structure to polygons}
 \usage{
 saga_quadtreestructuretopolygons(
-  SHAPES = qgisprocess::qgis_default_value(),
-  ATTRIBUTE = qgisprocess::qgis_default_value(),
-  POLYGONS = qgisprocess::qgis_default_value(),
-  LINES = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  ATTRIBUTE = qgisprocess:::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  LINES = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

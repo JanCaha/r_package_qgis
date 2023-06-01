@@ -22,9 +22,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_landsurfacetemperature <- function(DEM = qgisprocess::qgis_default_value(), SWR = qgisprocess::qgis_default_value(), LAI = qgisprocess::qgis_default_value(), Z_REFERENCE = qgisprocess::qgis_default_value(), T_REFERENCE = qgisprocess::qgis_default_value(), T_GRADIENT = qgisprocess::qgis_default_value(), C_FACTOR = qgisprocess::qgis_default_value(), LST = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_landsurfacetemperature <- function(DEM = qgisprocess:::qgis_default_value(), SWR = qgisprocess:::qgis_default_value(), LAI = qgisprocess:::qgis_default_value(), Z_REFERENCE = qgisprocess:::qgis_default_value(), T_REFERENCE = qgisprocess:::qgis_default_value(), T_GRADIENT = qgisprocess:::qgis_default_value(), C_FACTOR = qgisprocess:::qgis_default_value(), LST = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:landsurfacetemperature")
 
@@ -40,6 +40,6 @@ saga_landsurfacetemperature <- function(DEM = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "LST")
+    qgisprocess::qgis_extract_output(output, "LST")
   }
 }

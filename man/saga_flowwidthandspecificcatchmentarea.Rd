@@ -5,11 +5,11 @@
 \title{QGIS algorithm Flow width and specific catchment area}
 \usage{
 saga_flowwidthandspecificcatchmentarea(
-  DEM = qgisprocess::qgis_default_value(),
-  TCA = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  WIDTH = qgisprocess::qgis_default_value(),
-  SCA = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  TCA = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  WIDTH = qgisprocess:::qgis_default_value(),
+  SCA = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

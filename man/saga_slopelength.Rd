@@ -5,8 +5,8 @@
 \title{QGIS algorithm Slope length}
 \usage{
 saga_slopelength(
-  DEM = qgisprocess::qgis_default_value(),
-  LENGTH = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  LENGTH = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

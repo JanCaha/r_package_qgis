@@ -5,9 +5,9 @@
 \title{QGIS algorithm Morphometric protection index}
 \usage{
 saga_morphometricprotectionindex(
-  DEM = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
-  PROTECTION = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
+  PROTECTION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

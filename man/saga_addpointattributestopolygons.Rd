@@ -5,11 +5,11 @@
 \title{QGIS algorithm Add point attributes to polygons}
 \usage{
 saga_addpointattributestopolygons(
-  INPUT = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
-  FIELDS = qgisprocess::qgis_default_value(),
-  ADD_LOCATION_INFO = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  FIELDS = qgisprocess:::qgis_default_value(),
+  ADD_LOCATION_INFO = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

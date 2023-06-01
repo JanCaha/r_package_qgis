@@ -5,11 +5,11 @@
 \title{QGIS algorithm Change time format}
 \usage{
 saga_changetimeformat(
-  TABLE = qgisprocess::qgis_default_value(),
-  FIELD = qgisprocess::qgis_default_value(),
-  FMT_IN = qgisprocess::qgis_default_value(),
-  FMT_OUT = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
+  TABLE = qgisprocess:::qgis_default_value(),
+  FIELD = qgisprocess:::qgis_default_value(),
+  FMT_IN = qgisprocess:::qgis_default_value(),
+  FMT_OUT = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

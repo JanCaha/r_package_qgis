@@ -31,9 +31,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_maximumentropypresenceprediction <- function(PRESENCE = qgisprocess::qgis_default_value(), FEATURES_NUM = qgisprocess::qgis_default_value(), FEATURES_CAT = qgisprocess::qgis_default_value(), PREDICTION = qgisprocess::qgis_default_value(), PROBABILITY = qgisprocess::qgis_default_value(), BACKGROUND = qgisprocess::qgis_default_value(), METHOD = qgisprocess::qgis_default_value(), YT_FILE_LOAD = qgisprocess::qgis_default_value(), YT_FILE_SAVE = qgisprocess::qgis_default_value(), YT_REGUL = qgisprocess::qgis_default_value(), YT_REGUL_VAL = qgisprocess::qgis_default_value(), YT_NUMASREAL = qgisprocess::qgis_default_value(), DL_ALPHA = qgisprocess::qgis_default_value(), DL_THRESHOLD = qgisprocess::qgis_default_value(), DL_ITERATIONS = qgisprocess::qgis_default_value(), NUM_CLASSES = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_maximumentropypresenceprediction <- function(PRESENCE = qgisprocess:::qgis_default_value(), FEATURES_NUM = qgisprocess:::qgis_default_value(), FEATURES_CAT = qgisprocess:::qgis_default_value(), PREDICTION = qgisprocess:::qgis_default_value(), PROBABILITY = qgisprocess:::qgis_default_value(), BACKGROUND = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), YT_FILE_LOAD = qgisprocess:::qgis_default_value(), YT_FILE_SAVE = qgisprocess:::qgis_default_value(), YT_REGUL = qgisprocess:::qgis_default_value(), YT_REGUL_VAL = qgisprocess:::qgis_default_value(), YT_NUMASREAL = qgisprocess:::qgis_default_value(), DL_ALPHA = qgisprocess:::qgis_default_value(), DL_THRESHOLD = qgisprocess:::qgis_default_value(), DL_ITERATIONS = qgisprocess:::qgis_default_value(), NUM_CLASSES = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:maximumentropypresenceprediction")
 
@@ -49,6 +49,6 @@ saga_maximumentropypresenceprediction <- function(PRESENCE = qgisprocess::qgis_d
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "PREDICTION")
+    qgisprocess::qgis_extract_output(output, "PREDICTION")
   }
 }

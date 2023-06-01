@@ -33,9 +33,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_confusionmatrixtwogrids <- function(ONE = qgisprocess::qgis_default_value(), ONE_LUT = qgisprocess::qgis_default_value(), ONE_LUT_MIN = qgisprocess::qgis_default_value(), ONE_LUT_MAX = qgisprocess::qgis_default_value(), ONE_LUT_NAM = qgisprocess::qgis_default_value(), TWO = qgisprocess::qgis_default_value(), TWO_LUT = qgisprocess::qgis_default_value(), TWO_LUT_MIN = qgisprocess::qgis_default_value(), TWO_LUT_MAX = qgisprocess::qgis_default_value(), TWO_LUT_NAM = qgisprocess::qgis_default_value(), COMBINED = qgisprocess::qgis_default_value(), NOCHANGE = qgisprocess::qgis_default_value(), CONFUSION = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(), CLASSES = qgisprocess::qgis_default_value(), SUMMARY = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_confusionmatrixtwogrids <- function(ONE = qgisprocess:::qgis_default_value(), ONE_LUT = qgisprocess:::qgis_default_value(), ONE_LUT_MIN = qgisprocess:::qgis_default_value(), ONE_LUT_MAX = qgisprocess:::qgis_default_value(), ONE_LUT_NAM = qgisprocess:::qgis_default_value(), TWO = qgisprocess:::qgis_default_value(), TWO_LUT = qgisprocess:::qgis_default_value(), TWO_LUT_MIN = qgisprocess:::qgis_default_value(), TWO_LUT_MAX = qgisprocess:::qgis_default_value(), TWO_LUT_NAM = qgisprocess:::qgis_default_value(), COMBINED = qgisprocess:::qgis_default_value(), NOCHANGE = qgisprocess:::qgis_default_value(), CONFUSION = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), CLASSES = qgisprocess:::qgis_default_value(), SUMMARY = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:confusionmatrixtwogrids")
 
@@ -51,6 +51,6 @@ saga_confusionmatrixtwogrids <- function(ONE = qgisprocess::qgis_default_value()
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLASSES")
+    qgisprocess::qgis_extract_output(output, "CLASSES")
   }
 }

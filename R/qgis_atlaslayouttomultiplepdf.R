@@ -1,6 +1,6 @@
 character(0)
 
-qgis_atlaslayouttomultiplepdf <- function(LAYOUT = qgisprocess::qgis_default_value(), COVERAGE_LAYER = qgisprocess::qgis_default_value(), FILTER_EXPRESSION = qgisprocess::qgis_default_value(), SORTBY_EXPRESSION = qgisprocess::qgis_default_value(), SORTBY_REVERSE = qgisprocess::qgis_default_value(), LAYERS = qgisprocess::qgis_default_value(), DPI = qgisprocess::qgis_default_value(), FORCE_VECTOR = qgisprocess::qgis_default_value(), GEOREFERENCE = qgisprocess::qgis_default_value(), INCLUDE_METADATA = qgisprocess::qgis_default_value(), DISABLE_TILED = qgisprocess::qgis_default_value(), SIMPLIFY = qgisprocess::qgis_default_value(), TEXT_FORMAT = qgisprocess::qgis_default_value(), OUTPUT_FILENAME = qgisprocess::qgis_default_value(), OUTPUT_FOLDER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_atlaslayouttomultiplepdf <- function(LAYOUT = qgisprocess:::qgis_default_value(), COVERAGE_LAYER = qgisprocess:::qgis_default_value(), FILTER_EXPRESSION = qgisprocess:::qgis_default_value(), SORTBY_EXPRESSION = qgisprocess:::qgis_default_value(), SORTBY_REVERSE = qgisprocess:::qgis_default_value(), LAYERS = qgisprocess:::qgis_default_value(), DPI = qgisprocess:::qgis_default_value(), FORCE_VECTOR = qgisprocess:::qgis_default_value(), GEOREFERENCE = qgisprocess:::qgis_default_value(), INCLUDE_METADATA = qgisprocess:::qgis_default_value(), DISABLE_TILED = qgisprocess:::qgis_default_value(), SIMPLIFY = qgisprocess:::qgis_default_value(), TEXT_FORMAT = qgisprocess:::qgis_default_value(), OUTPUT_FILENAME = qgisprocess:::qgis_default_value(), OUTPUT_FOLDER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:atlaslayouttomultiplepdf")
 
@@ -16,6 +16,6 @@ qgis_atlaslayouttomultiplepdf <- function(LAYOUT = qgisprocess::qgis_default_val
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "NA")
+    qgisprocess::qgis_extract_output(output, "NA")
   }
 }

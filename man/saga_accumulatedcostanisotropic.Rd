@@ -5,12 +5,12 @@
 \title{QGIS algorithm Accumulated cost (anisotropic)}
 \usage{
 saga_accumulatedcostanisotropic(
-  COST = qgisprocess::qgis_default_value(),
-  DIRECTION = qgisprocess::qgis_default_value(),
-  POINTS = qgisprocess::qgis_default_value(),
-  K = qgisprocess::qgis_default_value(),
-  THRESHOLD = qgisprocess::qgis_default_value(),
-  ACCCOST = qgisprocess::qgis_default_value(),
+  COST = qgisprocess:::qgis_default_value(),
+  DIRECTION = qgisprocess:::qgis_default_value(),
+  POINTS = qgisprocess:::qgis_default_value(),
+  K = qgisprocess:::qgis_default_value(),
+  THRESHOLD = qgisprocess:::qgis_default_value(),
+  ACCCOST = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

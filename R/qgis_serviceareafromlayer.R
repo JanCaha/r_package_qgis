@@ -30,9 +30,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_serviceareafromlayer <- function(INPUT = qgisprocess::qgis_default_value(), STRATEGY = qgisprocess::qgis_default_value(), DIRECTION_FIELD = qgisprocess::qgis_default_value(), VALUE_FORWARD = qgisprocess::qgis_default_value(), VALUE_BACKWARD = qgisprocess::qgis_default_value(), VALUE_BOTH = qgisprocess::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess::qgis_default_value(), SPEED_FIELD = qgisprocess::qgis_default_value(), DEFAULT_SPEED = qgisprocess::qgis_default_value(), TOLERANCE = qgisprocess::qgis_default_value(), START_POINTS = qgisprocess::qgis_default_value(), TRAVEL_COST2 = qgisprocess::qgis_default_value(), INCLUDE_BOUNDS = qgisprocess::qgis_default_value(), OUTPUT_LINES = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_serviceareafromlayer <- function(INPUT = qgisprocess:::qgis_default_value(), STRATEGY = qgisprocess:::qgis_default_value(), DIRECTION_FIELD = qgisprocess:::qgis_default_value(), VALUE_FORWARD = qgisprocess:::qgis_default_value(), VALUE_BACKWARD = qgisprocess:::qgis_default_value(), VALUE_BOTH = qgisprocess:::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess:::qgis_default_value(), SPEED_FIELD = qgisprocess:::qgis_default_value(), DEFAULT_SPEED = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), START_POINTS = qgisprocess:::qgis_default_value(), TRAVEL_COST2 = qgisprocess:::qgis_default_value(), INCLUDE_BOUNDS = qgisprocess:::qgis_default_value(), OUTPUT_LINES = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:serviceareafromlayer")
 
@@ -48,6 +48,6 @@ qgis_serviceareafromlayer <- function(INPUT = qgisprocess::qgis_default_value(),
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

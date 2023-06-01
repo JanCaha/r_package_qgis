@@ -5,8 +5,8 @@
 \title{QGIS algorithm Edge contamination}
 \usage{
 saga_edgecontamination(
-  DEM = qgisprocess::qgis_default_value(),
-  CONTAMINATION = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  CONTAMINATION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

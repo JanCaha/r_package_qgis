@@ -5,12 +5,12 @@
 \title{QGIS algorithm Burn stream network into dem}
 \usage{
 saga_burnstreamnetworkintodem(
-  DEM = qgisprocess::qgis_default_value(),
-  STREAM = qgisprocess::qgis_default_value(),
-  FLOWDIR = qgisprocess::qgis_default_value(),
-  METHOD = qgisprocess::qgis_default_value(),
-  EPSILON = qgisprocess::qgis_default_value(),
-  BURN = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  STREAM = qgisprocess:::qgis_default_value(),
+  FLOWDIR = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
+  EPSILON = qgisprocess:::qgis_default_value(),
+  BURN = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

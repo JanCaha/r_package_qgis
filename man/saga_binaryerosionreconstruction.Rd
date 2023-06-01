@@ -5,9 +5,9 @@
 \title{QGIS algorithm Binary erosion-reconstruction}
 \usage{
 saga_binaryerosionreconstruction(
-  INPUT_GRID = qgisprocess::qgis_default_value(),
-  OUTPUT_GRID = qgisprocess::qgis_default_value(),
-  RADIUS = qgisprocess::qgis_default_value(),
+  INPUT_GRID = qgisprocess:::qgis_default_value(),
+  OUTPUT_GRID = qgisprocess:::qgis_default_value(),
+  RADIUS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

@@ -16,9 +16,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_slopelength <- function(DEM = qgisprocess::qgis_default_value(), LENGTH = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_slopelength <- function(DEM = qgisprocess:::qgis_default_value(), LENGTH = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:slopelength")
 
@@ -34,6 +34,6 @@ saga_slopelength <- function(DEM = qgisprocess::qgis_default_value(), LENGTH = q
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "LENGTH")
+    qgisprocess::qgis_extract_output(output, "LENGTH")
   }
 }

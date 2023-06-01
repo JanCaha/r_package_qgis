@@ -26,9 +26,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-gdal_griddatametrics <- function(INPUT = qgisprocess::qgis_default_value(), Z_FIELD = qgisprocess::qgis_default_value(), METRIC = qgisprocess::qgis_default_value(), RADIUS_1 = qgisprocess::qgis_default_value(), RADIUS_2 = qgisprocess::qgis_default_value(), ANGLE = qgisprocess::qgis_default_value(), MIN_POINTS = qgisprocess::qgis_default_value(), NODATA = qgisprocess::qgis_default_value(), OPTIONS = qgisprocess::qgis_default_value(), EXTRA = qgisprocess::qgis_default_value(), DATA_TYPE = qgisprocess::qgis_default_value(), OUTPUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+gdal_griddatametrics <- function(INPUT = qgisprocess:::qgis_default_value(), Z_FIELD = qgisprocess:::qgis_default_value(), METRIC = qgisprocess:::qgis_default_value(), RADIUS_1 = qgisprocess:::qgis_default_value(), RADIUS_2 = qgisprocess:::qgis_default_value(), ANGLE = qgisprocess:::qgis_default_value(), MIN_POINTS = qgisprocess:::qgis_default_value(), NODATA = qgisprocess:::qgis_default_value(), OPTIONS = qgisprocess:::qgis_default_value(), EXTRA = qgisprocess:::qgis_default_value(), DATA_TYPE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("gdal:griddatametrics")
 
@@ -44,6 +44,6 @@ gdal_griddatametrics <- function(INPUT = qgisprocess::qgis_default_value(), Z_FI
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "OUTPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

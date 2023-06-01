@@ -23,9 +23,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_closegapswithspline <- function(GRID = qgisprocess::qgis_default_value(), MASK = qgisprocess::qgis_default_value(), MAXGAPCELLS = qgisprocess::qgis_default_value(), MAXPOINTS = qgisprocess::qgis_default_value(), LOCALPOINTS = qgisprocess::qgis_default_value(), NEIGHBOURS = qgisprocess::qgis_default_value(), RADIUS = qgisprocess::qgis_default_value(), RELAXATION = qgisprocess::qgis_default_value(), CLOSED = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_closegapswithspline <- function(GRID = qgisprocess:::qgis_default_value(), MASK = qgisprocess:::qgis_default_value(), MAXGAPCELLS = qgisprocess:::qgis_default_value(), MAXPOINTS = qgisprocess:::qgis_default_value(), LOCALPOINTS = qgisprocess:::qgis_default_value(), NEIGHBOURS = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), RELAXATION = qgisprocess:::qgis_default_value(), CLOSED = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:closegapswithspline")
 
@@ -41,6 +41,6 @@ saga_closegapswithspline <- function(GRID = qgisprocess::qgis_default_value(), M
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "CLOSED")
+    qgisprocess::qgis_extract_output(output, "CLOSED")
   }
 }

@@ -5,10 +5,10 @@
 \title{QGIS algorithm Merge vector layers}
 \usage{
 saga_mergevectorlayers(
-  INPUT = qgisprocess::qgis_default_value(),
-  SRCINFO = qgisprocess::qgis_default_value(),
-  MATCH = qgisprocess::qgis_default_value(),
-  MERGED = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  SRCINFO = qgisprocess:::qgis_default_value(),
+  MATCH = qgisprocess:::qgis_default_value(),
+  MERGED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

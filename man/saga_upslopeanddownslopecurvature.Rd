@@ -5,13 +5,13 @@
 \title{QGIS algorithm Upslope and downslope curvature}
 \usage{
 saga_upslopeanddownslopecurvature(
-  DEM = qgisprocess::qgis_default_value(),
-  C_LOCAL = qgisprocess::qgis_default_value(),
-  C_UP = qgisprocess::qgis_default_value(),
-  C_UP_LOCAL = qgisprocess::qgis_default_value(),
-  C_DOWN = qgisprocess::qgis_default_value(),
-  C_DOWN_LOCAL = qgisprocess::qgis_default_value(),
-  WEIGHTING = qgisprocess::qgis_default_value(),
+  DEM = qgisprocess:::qgis_default_value(),
+  C_LOCAL = qgisprocess:::qgis_default_value(),
+  C_UP = qgisprocess:::qgis_default_value(),
+  C_UP_LOCAL = qgisprocess:::qgis_default_value(),
+  C_DOWN = qgisprocess:::qgis_default_value(),
+  C_DOWN_LOCAL = qgisprocess:::qgis_default_value(),
+  WEIGHTING = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

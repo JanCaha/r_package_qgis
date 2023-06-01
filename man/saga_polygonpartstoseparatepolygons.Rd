@@ -5,8 +5,8 @@
 \title{QGIS algorithm Polygon parts to separate polygons}
 \usage{
 saga_polygonpartstoseparatepolygons(
-  POLYGONS = qgisprocess::qgis_default_value(),
-  PARTS = qgisprocess::qgis_default_value(),
+  POLYGONS = qgisprocess:::qgis_default_value(),
+  PARTS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

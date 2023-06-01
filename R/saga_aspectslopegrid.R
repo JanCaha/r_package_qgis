@@ -18,9 +18,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_aspectslopegrid <- function(ASPECT = qgisprocess::qgis_default_value(), SLOPE = qgisprocess::qgis_default_value(), ASPECT_SLOPE = qgisprocess::qgis_default_value(), LUT = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_aspectslopegrid <- function(ASPECT = qgisprocess:::qgis_default_value(), SLOPE = qgisprocess:::qgis_default_value(), ASPECT_SLOPE = qgisprocess:::qgis_default_value(), LUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:aspectslopegrid")
 
@@ -36,6 +36,6 @@ saga_aspectslopegrid <- function(ASPECT = qgisprocess::qgis_default_value(), SLO
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "ASPECT_SLOPE")
+    qgisprocess::qgis_extract_output(output, "ASPECT_SLOPE")
   }
 }

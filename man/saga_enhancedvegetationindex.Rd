@@ -5,14 +5,14 @@
 \title{QGIS algorithm Enhanced vegetation index}
 \usage{
 saga_enhancedvegetationindex(
-  BLUE = qgisprocess::qgis_default_value(),
-  RED = qgisprocess::qgis_default_value(),
-  NIR = qgisprocess::qgis_default_value(),
-  EVI = qgisprocess::qgis_default_value(),
-  GAIN = qgisprocess::qgis_default_value(),
-  L = qgisprocess::qgis_default_value(),
-  CBLUE = qgisprocess::qgis_default_value(),
-  CRED = qgisprocess::qgis_default_value(),
+  BLUE = qgisprocess:::qgis_default_value(),
+  RED = qgisprocess:::qgis_default_value(),
+  NIR = qgisprocess:::qgis_default_value(),
+  EVI = qgisprocess:::qgis_default_value(),
+  GAIN = qgisprocess:::qgis_default_value(),
+  L = qgisprocess:::qgis_default_value(),
+  CBLUE = qgisprocess:::qgis_default_value(),
+  CRED = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

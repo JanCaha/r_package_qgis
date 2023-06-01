@@ -5,10 +5,10 @@
 \title{QGIS algorithm Surface and gradient}
 \usage{
 saga_surfaceandgradient(
-  MASK = qgisprocess::qgis_default_value(),
-  SURF = qgisprocess::qgis_default_value(),
-  GRAD = qgisprocess::qgis_default_value(),
-  SURF_E = qgisprocess::qgis_default_value(),
+  MASK = qgisprocess:::qgis_default_value(),
+  SURF = qgisprocess:::qgis_default_value(),
+  GRAD = qgisprocess:::qgis_default_value(),
+  SURF_E = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

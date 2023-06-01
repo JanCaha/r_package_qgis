@@ -5,10 +5,10 @@
 \title{QGIS algorithm Split shapes layer randomly}
 \usage{
 saga_splitshapeslayerrandomly(
-  SHAPES = qgisprocess::qgis_default_value(),
-  PERCENT = qgisprocess::qgis_default_value(),
-  A = qgisprocess::qgis_default_value(),
-  B = qgisprocess::qgis_default_value(),
+  SHAPES = qgisprocess:::qgis_default_value(),
+  PERCENT = qgisprocess:::qgis_default_value(),
+  A = qgisprocess:::qgis_default_value(),
+  B = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),

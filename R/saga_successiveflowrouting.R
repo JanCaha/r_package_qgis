@@ -19,9 +19,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_successiveflowrouting <- function(DEM = qgisprocess::qgis_default_value(), ITERATIONS = qgisprocess::qgis_default_value(), RUNOFF = qgisprocess::qgis_default_value(), MANNING = qgisprocess::qgis_default_value(), FLOW = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_successiveflowrouting <- function(DEM = qgisprocess:::qgis_default_value(), ITERATIONS = qgisprocess:::qgis_default_value(), RUNOFF = qgisprocess:::qgis_default_value(), MANNING = qgisprocess:::qgis_default_value(), FLOW = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:successiveflowrouting")
 
@@ -37,6 +37,6 @@ saga_successiveflowrouting <- function(DEM = qgisprocess::qgis_default_value(), 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "FLOW")
+    qgisprocess::qgis_extract_output(output, "FLOW")
   }
 }

@@ -20,9 +20,9 @@
 ##'
 ##' @export
 ##' @md
-##' @importFrom qgisprocess qgis_run_algorithm qgis_default_value
+##' @importFrom qgisprocess qgis_run_algorithm
 
-saga_soiltextureclassification <- function(SAND = qgisprocess::qgis_default_value(), SILT = qgisprocess::qgis_default_value(), CLAY = qgisprocess::qgis_default_value(), TEXTURE = qgisprocess::qgis_default_value(), SUM = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+saga_soiltextureclassification <- function(SAND = qgisprocess:::qgis_default_value(), SILT = qgisprocess:::qgis_default_value(), CLAY = qgisprocess:::qgis_default_value(), TEXTURE = qgisprocess:::qgis_default_value(), SUM = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("saga:soiltextureclassification")
 
@@ -38,6 +38,6 @@ saga_soiltextureclassification <- function(SAND = qgisprocess::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "SUM")
+    qgisprocess::qgis_extract_output(output, "SUM")
   }
 }

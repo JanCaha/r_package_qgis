@@ -5,12 +5,12 @@
 \title{QGIS algorithm Relief}
 \usage{
 qgis_relief(
-  INPUT = qgisprocess::qgis_default_value(),
-  Z_FACTOR = qgisprocess::qgis_default_value(),
-  AUTO_COLORS = qgisprocess::qgis_default_value(),
-  COLORS = qgisprocess::qgis_default_value(),
-  OUTPUT = qgisprocess::qgis_default_value(),
-  FREQUENCY_DISTRIBUTION = qgisprocess::qgis_default_value(),
+  INPUT = qgisprocess:::qgis_default_value(),
+  Z_FACTOR = qgisprocess:::qgis_default_value(),
+  AUTO_COLORS = qgisprocess:::qgis_default_value(),
+  COLORS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
+  FREQUENCY_DISTRIBUTION = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
