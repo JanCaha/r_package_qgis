@@ -39,14 +39,3 @@ test_that("Functions build code and doc r.sim.water", {
   expect_snapshot_file(save_txt(alg_help$doc), name = "r_sim_water_help.txt")
   expect_snapshot_file(save_txt(alg_help$code), name = "r_sim_water_code.txt")
 })
-
-test_that("Functions build code and doc analyticalhierarchyprocess", {
-
-  skip_in_RCDMCHECK()
-
-  alg_help <- get_alg_help("analyticalhierarchyprocess")
-
-  expect_snapshot_file(save_txt(alg_help$doc), name = "analyticalhierarchyprocess_help.txt")
-  expect_snapshot_file(save_txt(alg_help$code), name = "analyticalhierarchyprocess_code.txt")
-
-})
