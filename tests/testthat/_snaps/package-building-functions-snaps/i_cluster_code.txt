@@ -1,4 +1,4 @@
-grass7_i_cluster <- function(input = qgisprocess::qgis_default_value(), classes = qgisprocess::qgis_default_value(), seed = qgisprocess::qgis_default_value(), sample = qgisprocess::qgis_default_value(), iterations = qgisprocess::qgis_default_value(), convergence = qgisprocess::qgis_default_value(), separation = qgisprocess::qgis_default_value(), min_size = qgisprocess::qgis_default_value(), signaturefile = qgisprocess::qgis_default_value(), reportfile = qgisprocess::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+grass7_i_cluster <- function(input = qgisprocess:::qgis_default_value(), classes = qgisprocess:::qgis_default_value(), seed = qgisprocess:::qgis_default_value(), sample = qgisprocess:::qgis_default_value(), iterations = qgisprocess:::qgis_default_value(), convergence = qgisprocess:::qgis_default_value(), separation = qgisprocess:::qgis_default_value(), min_size = qgisprocess:::qgis_default_value(), signaturefile = qgisprocess:::qgis_default_value(), reportfile = qgisprocess:::qgis_default_value(), GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(), GRASS_REGION_CELLSIZE_PARAMETER = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("grass7:i.cluster")
 
@@ -14,6 +14,6 @@ grass7_i_cluster <- function(input = qgisprocess::qgis_default_value(), classes 
     return(output)
   }
   else{
-    qgisprocess::qgis_output(output, "reportfile")
+    qgisprocess::qgis_extract_output(output, "reportfile")
   }
 }
