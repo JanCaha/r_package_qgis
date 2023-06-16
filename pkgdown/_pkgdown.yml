@@ -20,7 +20,7 @@ reference:
     - starts_with("gdal_")
 
   - title: GRASS
-    desc: Algorithms provided by GRASS version 7.x.x.
+    desc: Algorithms provided by GRASS GIS.
     contents:
     - starts_with("grass7_")
 
