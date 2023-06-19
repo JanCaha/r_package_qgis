@@ -29,6 +29,6 @@ Suggests:
 Config/testthat/edition: 3
 Remotes: 
     r-lib/testthat,
-    paleolimbot/qgisprocess
+    r-spatial/qgisprocess
 RoxygenNote: 7.2.3
 URL: https://jancaha.github.io/r_package_qgis/, https://github.com/JanCaha/r_package_qgis
