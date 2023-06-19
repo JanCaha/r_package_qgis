@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-**qgis** is automatically generated package which originates from [qgisprocess](https://github.com/paleolimbot/qgisprocess) and aims to provide calls and simple documentation for each [QGIS](https://qgis.org/en/site/) functions available in core and the most important algorithm providers ([GRASS GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)). The algorithms are automatically extracted from fresh install of latest **QGIS** version on **Ubuntu** with packages for **GRASS** and **SAGA** installed.
+**qgis** is automatically generated package which originates from [qgisprocess](https://github.com/r-spatial/qgisprocess) and aims to provide calls and simple documentation for each [QGIS](https://qgis.org/en/site/) functions available in core and the most important algorithm providers ([GRASS GIS](https://grass.osgeo.org/) and [Saga](http://www.saga-gis.org/)). The algorithms are automatically extracted from fresh install of latest **QGIS** version on **Ubuntu** with packages for **GRASS** and **SAGA** installed.
 
 The package is highly experimental and things are quite likely to change a lot in the future. The definition of individual functions can change if it changes in the QGIS.
 
