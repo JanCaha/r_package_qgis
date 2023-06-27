@@ -43,6 +43,7 @@ jobs:
           echo 'Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass
+          sudo apt-get install libicu-dev
 
       - name: whereis qgis_process
         run: whereis qgis_process
@@ -56,6 +57,7 @@ jobs:
           cache-version: 2
           extra-packages: |
             any::pkgdown
+            any::stringi
 
       - uses: r-lib/actions/setup-pandoc@v2
 
