@@ -35,6 +35,8 @@ build_fn_doc <- function(alg, arguments, outputs){
   title <- alg$algorithm_title[1]
   provider <- alg$provider_title[1]
   algorithm_id <- alg$algorithm[1]
+  text_description <- unname(qgisprocess::qgis_get_description(algorithm_id))
+  text_description <- stringr::str_replace_all(text_description, "\n", " ")
 
   description_arguments <- purrr::pmap(arguments,
                                        function(name, description, qgis_type, available_values, acceptable_values, ...) {

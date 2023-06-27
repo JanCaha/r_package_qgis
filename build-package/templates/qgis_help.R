@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by {provider} {title} ({algorithm_id})
+##' QGIS Algorithm provided by {provider} {title} ({algorithm_id}). {text_description}
 ##'
 ##' @title QGIS algorithm {title}
 ##'
