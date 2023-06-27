@@ -6,7 +6,7 @@ home:
   - text: QGIS
     href: https://qgis.org/en/site/
   - text: qgisprocess
-    href: https://github.com/paleolimbot/qgisprocess
+    href: https://github.com/r-spatial/qgisprocess
 
 reference:
   - title: QGIS

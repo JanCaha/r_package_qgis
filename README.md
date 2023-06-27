@@ -18,7 +18,7 @@ website](https://github.com/JanCaha/r_package_qgis/actions/workflows/make_web.ya
 <!-- badges: end -->
 
 **qgis** is automatically generated package which originates from
-[qgisprocess](https://github.com/paleolimbot/qgisprocess) and aims to
+[qgisprocess](https://github.com/r-spatial/qgisprocess) and aims to
 provide calls and simple documentation for each
 [QGIS](https://qgis.org/en/site/) functions available in core and the
 most important algorithm providers ([GRASS
