@@ -60,7 +60,7 @@ jobs:
         run: |
           print("Has QGIS:")
           print(qgisprocess::has_qgis())
-          cat(qgisprocess::qgis_run("plugins")$stdout)
+          # cat(qgisprocess::qgis_run("plugins")$stdout)
         shell: Rscript {0}
 
       - name: Delete all files in R
