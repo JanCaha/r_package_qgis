@@ -9,6 +9,9 @@ source(here::here("build-package", "build-functions", "function_runs_on_github_a
 # options(qgisprocess.use_json_output = FALSE)
 
 library(qgisprocess)
+
+qgisprocess::qgis_configure()
+
 library(dplyr)
 
 if (!qgisprocess::has_qgis()){
@@ -16,7 +19,7 @@ if (!qgisprocess::has_qgis()){
 }
 
 print_plugins()
-enable_plugins(c("processing", "grassprovider", "sagaprovider"))
+enable_plugins(c("processing", "grassprovider"))
 print_plugins()
 
 qgis_configure(use_cached_data = FALSE)
