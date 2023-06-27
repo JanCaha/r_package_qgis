@@ -15,7 +15,7 @@ jobs:
 
   build-package:
 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -38,7 +38,7 @@ jobs:
           sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
           sudo add-apt-repository "deb https://qgis.org/ubuntu `lsb_release -c -s` main"
           sudo apt-get update
-          sudo apt-get install -y qgis qgis-plugin-grass saga
+          sudo apt-get install -y qgis qgis-plugin-grass
 
       - uses: r-lib/actions/setup-pandoc@v2
 
