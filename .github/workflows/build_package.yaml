@@ -35,7 +35,12 @@ jobs:
       - name: Install QGIS
         run: |
           sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
-          sudo echo "deb [signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/ubuntu `lsb_release -c -s` main" > /etc/apt/sources.list.d/qgis.list
+          echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+          echo 'URIs: https://qgis.org/ubuntu' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+          echo 'Suites: '`lsb_release -c -s` | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+          echo 'Architectures: '$(dpkg --print-architecture) | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+          echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
+          echo 'Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass
 
