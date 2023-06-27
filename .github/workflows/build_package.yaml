@@ -67,6 +67,7 @@ jobs:
         run: |
           print("Has QGIS:")
           print(qgisprocess::has_qgis())
+          qgisprocess::qgis_configure()
           # cat(qgisprocess::qgis_run("plugins")$stdout)
         shell: Rscript {0}
 
