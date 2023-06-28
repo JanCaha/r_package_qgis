@@ -19,7 +19,7 @@ if (!qgisprocess::has_qgis()){
 }
 
 print_plugins()
-enable_plugins(c("processing", "grassprovider"))
+enable_plugins(c("processing", "grassprovider", "sagaprovider"))
 print_plugins()
 
 qgis_configure(use_cached_data = FALSE)

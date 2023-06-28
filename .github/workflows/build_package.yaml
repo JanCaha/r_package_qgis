@@ -25,6 +25,7 @@ jobs:
       QT_QPA_PLATFORM: "offscreen"
       XDG_RUNTIME_DIR: "/tmp"
       PYTHONPATH: "/usr/share/qgis/python/plugins:/usr/share/qgis/python"
+      SAGANGV: 0.0.7
 
     steps:
 
@@ -51,7 +52,9 @@ jobs:
       - name: Install QGIS
         run: |
           sudo apt-get update
-          sudo apt-get install -y qgis qgis-plugin-grass
+          sudo apt-get install -y qgis qgis-plugin-grass saga
+          wget -qO ../sagang_plugin.zip https://plugins.qgis.org/plugins/processing_saga_nextgen/version/$SAGANGV/download/
+          unzip -q ../sagang_plugin.zip -d ../extra_plugins
 
       - uses: r-lib/actions/setup-pandoc@v2
 
