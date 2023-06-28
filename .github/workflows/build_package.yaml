@@ -83,6 +83,7 @@ jobs:
           # Install missing package dependencies
           cat("::group::Install\n")
           pak::pkg_install(c("deps::.", "any::sessioninfo", "any::rcmdcheck"), upgrade = FALSE, dependencies = c("Config/Needs/check", "all"))
+          pak::pkg_install(c("remotes", "desc", "glue", "readr", "purrr", "stringr", "here", "fs", "knitr", "rmarkdown", "devtools", "pkgdown", "progress", "dplyr", "r-spatial/qgisprocess"))
           # This is based on the minimum needed version, not the hash of what is available at RSPM
           cat("::endgroup::\n")
           cat("::group::Session info\n")
