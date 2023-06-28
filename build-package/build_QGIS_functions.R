@@ -45,6 +45,10 @@ for (i in 1:nrow(algs)) {
 
   alg <- algs[i,]
 
+  if (Sys.getenv("GITHUB_PAT") != "") {
+    print(glue::glue("{i}/{nrow(algs)} - {alg$provider[1]}:{alg$algorithm_id}"))
+  }
+
   if (alg$provider[1] == "native") {
     file_name <- glue::glue("qgis_{fix_algorithm_id(alg$algorithm_id)}")
   } else {
