@@ -18,9 +18,11 @@ if (!qgisprocess::has_qgis()){
   stop("Cannot build package `qgis` because QGIS installation cannot be found. See help for `qgisprocess::qgis_configure()`!")
 }
 
-print_plugins()
-enable_plugins(c("processing", "grassprovider", "sagaprovider"))
-print_plugins()
+print("----------------")
+qgis_plugins()
+qgis_enable_plugins(c("processing", "grassprovider", "processing_saga_nextgen"))
+qgis_plugins()
+print("----------------")
 
 qgis_configure(use_cached_data = FALSE)
 
