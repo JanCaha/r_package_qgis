@@ -32,21 +32,26 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Prepare Ubuntu for installing QGIS (common code)
+        run: |
+          # Prepare Ubuntu for installing QGIS (common code)
+          echo "::group::Dynamically set QGIS_PLUGINPATH environment var (available to next steps)"
+          mkdir ../extra_plugins
+          echo "QGIS_PLUGINPATH=$(pwd)/../extra_plugins" >> $GITHUB_ENV
+          echo "::endgroup::"
+          echo "::group::Install the QGIS Signing Key"
+          sudo wget -qO /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
+          echo "::endgroup::"
+
+      - name: Add repo to install latest QGIS release for Ubuntu
+        run: |
+          # Add repo to install latest QGIS release for Ubuntu (using an often outdated GRASS release from Ubuntu repo)
+          sudo sh -c 'echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/qgis-archive-keyring.gpg] https://qgis.org/ubuntu `lsb_release -c -s` main" > /etc/apt/sources.list.d/qgis.list'
+
       - name: Install QGIS
         run: |
-          sudo wget -O /etc/apt/keyrings/qgis-archive-keyring.gpg https://download.qgis.org/downloads/qgis-archive-keyring.gpg
-          echo 'Types: deb deb-src' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'URIs: https://qgis.org/ubuntu' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Suites: '`lsb_release -c -s` | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Architectures: '$(dpkg --print-architecture) | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Components: main' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
-          echo 'Signed-By: /etc/apt/keyrings/qgis-archive-keyring.gpg' | sudo tee -a /etc/apt/sources.list.d/qgis.sources
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass
-          sudo apt-get install libicu-dev
-
-      - name: whereis qgis_process
-        run: whereis qgis_process
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -58,8 +63,6 @@ jobs:
           extra-packages: |
             any::pkgdown
             any::stringi
-
-      - uses: r-lib/actions/setup-pandoc@v2
 
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
