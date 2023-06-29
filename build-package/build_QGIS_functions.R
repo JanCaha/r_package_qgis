@@ -48,7 +48,7 @@ for (i in 1:nrow(algs)) {
   alg <- algs[i,]
 
   if (Sys.getenv("GITHUB_PAT") != "") {
-    print(glue::glue("{i}/{nrow(algs)} - {alg$provider[1]}:{alg$algorithm_id}"))
+    print(glue::glue("{i}/{nrow(algs)} - {alg$provider[1]}:{fix_algorithm_id(alg$algorithm_id)}"))
   }
 
   if (alg$provider[1] == "native") {
