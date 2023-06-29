@@ -62,7 +62,7 @@ jobs:
 
       - name: Install R library deps
         run: |
-          apt-get install -y \
+          sudo apt-get install -y \
             libudunits2-dev \
           	libgit2-dev \
           	libharfbuzz-dev \
