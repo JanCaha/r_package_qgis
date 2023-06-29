@@ -60,37 +60,23 @@ jobs:
 
       - uses: r-lib/actions/setup-r@v2
 
-      - name: Query R dependencies and report available versions
-        id: query
+      - name: Install R library deps
         run: |
-          # Query R dependencies and report available versions
-          cat("::group::Install pak\n")
-          install.packages("pak", repos = "https://r-lib.github.io/p/pak/stable/")
-          cat("::endgroup::\n")
-          cat("::group::Create minimal data frame with pkg deps and store them\n")
-          depends <- pak::pkg_deps(c("deps::.", "any::sessioninfo", "any::rcmdcheck"), dependencies = c("Config/Needs/check", "all"))[, c("ref", "version")]
-          depends <- depends[depends$ref != "deps::.", ]
-          saveRDS(depends, ".github/depends.Rds")
-          cat("::endgroup::\n")
-          cat("::group::Store R-version\n")
-          cat("r-version=", sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), "\n", file = Sys.getenv("GITHUB_OUTPUT"), sep = "", append = TRUE)
-          cat("::endgroup::\n")
-          cat("::group::Print results\n")
-          cat("R version:", sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), "\n")
-          print(as.data.frame(depends), row.names = FALSE)
-          cat("::endgroup::\n")
-        shell: Rscript {0}
+          apt-get install -y \
+            libudunits2-dev \
+          	libgit2-dev \
+          	libharfbuzz-dev \
+          	libfribidi-dev \
+          	libssh-dev \
+          	qpdf \
+            libfontconfig1-dev
 
       - name: Install missing package dependencies
         run: |
-          # Install missing package dependencies
-          cat("::group::Install\n")
-          pak::pkg_install(c("deps::.", "any::sessioninfo", "any::rcmdcheck", "gagolews/stringi", "remotes", "desc", "glue", "readr", "purrr", "stringr", "here", "fs", "knitr", "rmarkdown", "devtools", "pkgdown", "progress", "dplyr", "r-spatial/qgisprocess"), upgrade = TRUE, dependencies = TRUE)
-          # This is based on the minimum needed version, not the hash of what is available at RSPM
-          cat("::endgroup::\n")
-          cat("::group::Session info\n")
-          sessioninfo::session_info(pkgs = "installed", include_base = TRUE)
-          cat("::endgroup::\n")
+          install.packages(c('devtools', 'remotes'))
+          remotes::install_github('r-spatial/qgisprocess')
+          install.packages(c("sf", "raster", "terra", "stars", "desc", "glue", "readr", "purrr", "stringr", "here", "fs", "knitr", "rmarkdown", "pkgdown", "progress", "dplyr", "r-spatial/qgisprocess"))
+          devtools::install_deps(".")
         shell: Rscript {0}
 
       - name: Install remotes and package build dependencies
