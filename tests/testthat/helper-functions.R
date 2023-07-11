@@ -6,7 +6,7 @@ get_alg_help <- function(alg_name){
 
   source(here::here("build-package", "build-functions", "functions_fix_algorithm_id.R"))
   source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
-  source(here::here("build-package", "build-functions", "functions_build_code_and_doc.R"))
+  source(here::here("build-package", "build-functions", "fix_documentation_text.R"))
 
   algs <- qgisprocess::qgis_algorithms() %>%
     dplyr::select(!c(tags, supported_output_raster_extensions, supported_output_table_extensions, supported_output_vector_extensions))

@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by GRASS r.sim.water (grass7:r.sim.water)
+##' QGIS Algorithm provided by GRASS r.sim.water (grass7:r.sim.water). Overland flow hydrologic simulation using path sampling method (SIMWE).
 ##'
 ##' @title QGIS algorithm r.sim.water
 ##'
 ##' @param elevation `raster` - Name of the elevation raster map (m). Path to a raster layer.
-##' @param dx `raster` - Name of the x-derivatives raster map (m/m). Path to a raster layer.
-##' @param dy `raster` - Name of the y-derivatives raster map (m/m). Path to a raster layer.
-##' @param rain `raster` - Name of the rainfall excess rate (rain-infilt) raster map (mm/hr). Path to a raster layer.
-##' @param rain_value `number` - Rainfall excess rate unique value (mm/hr). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
-##' @param infil `raster` - Name of the runoff infiltration rate raster map (mm/hr). Path to a raster layer.
-##' @param infil_value `number` - Runoff infiltration rate unique value (mm/hr). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param dx `raster` - Name of the x-derivatives raster map (m\code{/}m). Path to a raster layer.
+##' @param dy `raster` - Name of the y-derivatives raster map (m\code{/}m). Path to a raster layer.
+##' @param rain `raster` - Name of the rainfall excess rate (rain-infilt) raster map (mm\code{/}hr). Path to a raster layer.
+##' @param rain_value `number` - Rainfall excess rate unique value (mm\code{/}hr). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param infil `raster` - Name of the runoff infiltration rate raster map (mm\code{/}hr). Path to a raster layer.
+##' @param infil_value `number` - Runoff infiltration rate unique value (mm\code{/}hr). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param man `raster` - Name of the Mannings n raster map. Path to a raster layer.
 ##' @param man_value `number` - Manning's n unique value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param flow_control `raster` - Name of the flow controls raster map (permeability ratio 0-1). Path to a raster layer.
@@ -22,7 +22,7 @@
 ##' @param hbeta `number` - Weighting factor for water flow velocity vector. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param .t `boolean` - Time-series output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.
 ##' @param depth `rasterDestination` - Water depth (m). Path for new raster layer.
-##' @param discharge `rasterDestination` - Water discharge (m3/s). Path for new raster layer.
+##' @param discharge `rasterDestination` - Water discharge (m3\code{/}s). Path for new raster layer.
 ##' @param error `rasterDestination` - Simulation error (m). Path for new raster layer.
 ##' @param walkers_output `vectorDestination` - Name of the output walkers vector points layer. Path for new vector layer.
 ##' @param logfile `fileDestination` - Name for sampling points output text file.. Path for new file.
@@ -44,7 +44,7 @@
 ##' @details
 ##' ## Outputs description
 ##' * depth - outputRaster - Water depth (m)
-##' * discharge - outputRaster - Water discharge (m3/s)
+##' * discharge - outputRaster - Water discharge (m3\code{/}s)
 ##' * error - outputRaster - Simulation error (m)
 ##' * logfile - outputFile - Name for sampling points output text file.
 ##' * walkers_output - outputVector - Name of the output walkers vector points layer

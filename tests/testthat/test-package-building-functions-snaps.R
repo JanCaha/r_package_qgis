@@ -1,4 +1,8 @@
 # Tests for code and help generation for specific selected QGIS functions
+source(here::here("build-package", "build-functions", "functions_fix_algorithm_id.R"))
+source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
+source(here::here("build-package", "build-functions", "fix_documentation_text.R"))
+source(here::here("build-package", "build-functions", "functions_build_code_and_doc.R"))
 
 test_that("Functions build code and doc tessellate", {
 

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by GRASS i.cluster (grass7:i.cluster)
+##' QGIS Algorithm provided by GRASS i.cluster (grass7:i.cluster). Generates spectral signatures for land cover types in an image using a clustering algorithm.
 ##'
 ##' @title QGIS algorithm i.cluster
 ##'
