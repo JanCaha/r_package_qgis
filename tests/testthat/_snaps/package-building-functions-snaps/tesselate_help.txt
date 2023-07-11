@@ -1,6 +1,6 @@
 ##' QGIS Algorithm provided by QGIS (3D) Tessellate (3d:tessellate). This algorithm tessellates a polygon geometry layer, dividing the geometries into triangular components.  The output layer consists of multipolygon geometries for each input feature, with each multipolygon consisting of multiple triangle component polygons.
 ##'
-##' @title QGIS algorithm Tessellate
+##' @title QGIS algorithm - Tessellate
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Tessellated. Path for new vector layer.

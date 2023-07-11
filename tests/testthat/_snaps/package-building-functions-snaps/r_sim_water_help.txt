@@ -1,6 +1,6 @@
 ##' QGIS Algorithm provided by GRASS r.sim.water (grass7:r.sim.water). Overland flow hydrologic simulation using path sampling method (SIMWE).
 ##'
-##' @title QGIS algorithm r.sim.water
+##' @title QGIS algorithm - r.sim.water
 ##'
 ##' @param elevation `raster` - Name of the elevation raster map (m). Path to a raster layer.
 ##' @param dx `raster` - Name of the x-derivatives raster map (m\code{/}m). Path to a raster layer.
