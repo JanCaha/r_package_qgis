@@ -4,6 +4,7 @@ source(here::here("build-package", "build-functions", "functions_build_code_and_
 source(here::here("build-package", "build-functions", "functions_plugins.R"))
 source(here::here("build-package", "build-functions", "function_file_text.R"))
 source(here::here("build-package", "build-functions", "function_runs_on_github_actions.R"))
+source(here::here("build-package", "build-functions", "fix_documentation_text.R"))
 
 # Sys.setenv(R_QGISPROCESS_USE_JSON_OUTPUT = FALSE)
 # options(qgisprocess.use_json_output = FALSE)
@@ -20,8 +21,7 @@ if (!qgisprocess::has_qgis()){
 
 print("----------------")
 qgis_plugins()
-# "processing_saga_nextgen"
-qgis_enable_plugins(c("processing", "grassprovider"))
+qgis_enable_plugins(c("processing", "grassprovider", "processing_saga_nextgen"))
 qgis_plugins()
 print("----------------")
 
@@ -48,7 +48,7 @@ for (i in 1:nrow(algs)) {
 
   alg <- algs[i,]
 
-  if (Sys.getenv("GITHUB_PAT") != "") {
+  if (runs_on_github_actions()) {
     print(glue::glue("{i}/{nrow(algs)} - {alg$provider[1]}:{fix_algorithm_id(alg$algorithm_id)}"))
   }
 
