@@ -36,7 +36,7 @@ build_fn_doc <- function(alg, arguments, outputs){
   provider <- alg$provider_title[1]
   algorithm_id <- alg$algorithm[1]
   text_description <- unname(qgisprocess::qgis_get_description(algorithm_id))
-  text_description <- stringr::str_replace_all(text_description, "\n", " ")
+  text_description <- remove_new_line(text_description) %>% remove_brackets()
 
   description_arguments <- purrr::pmap(arguments,
                                        function(name, description, qgis_type, available_values, acceptable_values, ...) {
@@ -59,7 +59,7 @@ build_fn_doc <- function(alg, arguments, outputs){
 
                                          # print(glue::glue("##' @param {convert_to_R_arg_names(name)} `{qgis_type}` {string_values}- {fix_description(description)}. {string_acceptable_values}.{original_param_name}"))
 
-                                         glue::glue("##' @param {convert_to_R_arg_names(name)} `{qgis_type}` {string_values}- {fix_description(description)}. {string_acceptable_values}.{original_param_name}")
+                                         glue::glue("##' @param {convert_to_R_arg_names(name)} `{qgis_type}` {remove_brackets(string_values)}- {fix_description(description)}. {string_acceptable_values}.{original_param_name}")
                                        }
   )
 
