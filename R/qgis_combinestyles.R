@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Combine style databases (native:combinestyles)
+##' QGIS Algorithm provided by QGIS (native c++) Combine style databases (native:combinestyles). Combines multiple style databases into a single database. This algorithm combines multiple QGIS style databases into a single style database. If any symbols exist with duplicate names between the different source databases these will be renamed to have unique names in the output combined database.
 ##'
-##' @title QGIS algorithm Combine style databases
+##' @title QGIS algorithm - Combine style databases
 ##'
 ##' @param INPUT `multilayer` - Input databases. .
 ##' @param OUTPUT `fileDestination` - Output style database. Path for new file.

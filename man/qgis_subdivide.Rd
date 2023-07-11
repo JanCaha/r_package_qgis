@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_subdivide.R
 \name{qgis_subdivide}
 \alias{qgis_subdivide}
-\title{QGIS algorithm Subdivide}
+\title{QGIS algorithm - Subdivide}
 \usage{
 qgis_subdivide(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_subdivide(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{MAX_NODES}{\code{number} - Maximum nodes in parts. A numeric value.}
+\item{MAX_NODES}{\code{number} - Maximum nodes in parts. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Subdivided. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_subdivide(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Subdivide (native:subdivide)
+QGIS Algorithm provided by QGIS (native c++) Subdivide (native:subdivide). Subdivides the geometry. The returned geometry will be a collection containing subdivided parts from the original geometry, where no part has more then the specified maximum number of nodes.  This is useful for dividing a complex geometry into less complex parts, which are better able to be spatially indexed and faster to perform further operations such as intersects on. The returned geometry parts may not be valid and may contain self-intersections.  Curved geometries will be segmentized before subdivision.
 }
 \details{
 \subsection{Outputs description}{

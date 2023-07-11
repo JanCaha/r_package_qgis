@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rasterlayerstatistics.R
 \name{qgis_rasterlayerstatistics}
 \alias{qgis_rasterlayerstatistics}
-\title{QGIS algorithm Raster layer statistics}
+\title{QGIS algorithm - Raster layer statistics}
 \usage{
 qgis_rasterlayerstatistics(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_rasterlayerstatistics(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster layer statistics (native:rasterlayerstatistics)
+QGIS Algorithm provided by QGIS (native c++) Raster layer statistics (native:rasterlayerstatistics). This algorithm computes basic statistics from the values in a given band of the raster layer.
 }
 \details{
 \subsection{Outputs description}{

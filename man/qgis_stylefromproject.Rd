@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_stylefromproject.R
 \name{qgis_stylefromproject}
 \alias{qgis_stylefromproject}
-\title{QGIS algorithm Create style database from project}
+\title{QGIS algorithm - Create style database from project}
 \usage{
 qgis_stylefromproject(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_stylefromproject(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create style database from project (native:stylefromproject)
+QGIS Algorithm provided by QGIS (native c++) Create style database from project (native:stylefromproject). Creates a style database by extracting all symbols, color ramps, text formats and label settings from a QGIS project. This algorithm extracts all style objects (including symbols, color ramps, text formats and label settings) from a QGIS project.  The extracted symbols are saved to a QGIS style database (XML format), which can be managed and imported via the Style Manager dialog.
 }
 \details{
 \subsection{Outputs description}{

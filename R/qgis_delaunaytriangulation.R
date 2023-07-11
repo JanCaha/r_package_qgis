@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Delaunay triangulation (qgis:delaunaytriangulation)
+##' QGIS Algorithm provided by QGIS Delaunay triangulation (qgis:delaunaytriangulation). This algorithm creates a polygon layer with the delaunay triangulation corresponding to a points layer.
 ##'
-##' @title QGIS algorithm Delaunay triangulation
+##' @title QGIS algorithm - Delaunay triangulation
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Delaunay triangulation. Path for new vector layer.

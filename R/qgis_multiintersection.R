@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection)
+##' QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection). This algorithm extracts the overlapping portions of features in the Input and all Overlay layers. Features in the output layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.
 ##'
-##' @title QGIS algorithm Intersection (multiple)
+##' @title QGIS algorithm - Intersection (multiple)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OVERLAYS `multilayer` - Overlay layers. .
-##' @param OVERLAY_FIELDS_PREFIX `string` - Overlay fields prefix. String value.
+##' @param OVERLAY_FIELDS_PREFIX `string` - Overlay fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Intersection. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_tileset.R
 \name{grass7_r_tileset}
 \alias{grass7_r_tileset}
-\title{QGIS algorithm r.tileset}
+\title{QGIS algorithm - r.tileset}
 \usage{
 grass7_r_tileset(
   sourceproj = qgisprocess:::qgis_default_value(),
@@ -26,23 +26,23 @@ grass7_r_tileset(
 \arguments{
 \item{sourceproj}{\code{crs} - Source projection. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{sourcescale}{\code{number} - Conversion factor from units to meters in source projection. A numeric value.}
+\item{sourcescale}{\code{number} - Conversion factor from units to meters in source projection. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{destproj}{\code{crs} - Destination projection. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{destscale}{\code{number} - Conversion factor from units to meters in destination projection. A numeric value.}
+\item{destscale}{\code{number} - Conversion factor from units to meters in destination projection. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{maxcols}{\code{number} - Maximum number of columns for a tile in the source projection. A numeric value.}
+\item{maxcols}{\code{number} - Maximum number of columns for a tile in the source projection. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{maxrows}{\code{number} - Maximum number of rows for a tile in the source projection. A numeric value.}
+\item{maxrows}{\code{number} - Maximum number of rows for a tile in the source projection. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{overlap}{\code{number} - Number of cells tiles should overlap in each direction. A numeric value.}
+\item{overlap}{\code{number} - Number of cells tiles should overlap in each direction. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{separator}{\code{string} - Output field separator. String value.}
+\item{separator}{\code{string} - Output field separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.g}{\code{boolean} - Produces shell script output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Produces shell script output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
-\item{.w}{\code{boolean} - Produces web map server query string output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
+\item{.w}{\code{boolean} - Produces web map server query string output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -w.}
 
 \item{html}{\code{fileDestination} - Tileset. Path for new file.}
 
@@ -57,7 +57,7 @@ grass7_r_tileset(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.tileset (grass7:r.tileset)
+QGIS Algorithm provided by GRASS r.tileset (grass7:r.tileset). Produces tilings of the source projection for use in the destination region and projection.
 }
 \details{
 \subsection{Outputs description}{

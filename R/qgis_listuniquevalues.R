@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS List unique values (qgis:listuniquevalues)
+##' QGIS Algorithm provided by QGIS List unique values (qgis:listuniquevalues). This algorithm generates a report with information about the unique values found in a given attribute (or attributes) of a vector layer.
 ##'
-##' @title QGIS algorithm List unique values
+##' @title QGIS algorithm - List unique values
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELDS `field` - Target field(s). The name of an existing field. ; delimited list of existing field names.

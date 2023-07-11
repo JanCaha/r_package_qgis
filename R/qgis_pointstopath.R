@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath)
+##' QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath). This algorithm takes a point layer and connects its features creating a new line layer.  An attribute or expression may be specified to define the order the points should be connected. If no order expression is specified, the feature ID is used.  A natural sort can be used when sorting by a string attribute or expression (ie. place 'a9' before 'a10').  An attribute or expression can be selected to group points having the same value into the same resulting line.
 ##'
-##' @title QGIS algorithm Points to path
+##' @title QGIS algorithm - Points to path
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param CLOSE_PATH `boolean` - Create closed paths. 1 for true/yes. 0 for false/no.
+##' @param CLOSE_PATH `boolean` - Create closed paths. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ORDER_EXPRESSION `expression` - Order expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.
-##' @param NATURAL_SORT `boolean` - Sort text containing numbers naturally. 1 for true/yes. 0 for false/no.
+##' @param NATURAL_SORT `boolean` - Sort text containing numbers naturally. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param GROUP_EXPRESSION `expression` - Path group expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.
 ##' @param OUTPUT `sink` - Paths. Path for new vector layer.
 ##' @param OUTPUT_TEXT_DIR `folderDestination` - Directory for text output. Path for an existing or new folder.

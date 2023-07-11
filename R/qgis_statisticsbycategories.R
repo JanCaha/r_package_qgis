@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Statistics by categories (qgis:statisticsbycategories)
+##' QGIS Algorithm provided by QGIS Statistics by categories (qgis:statisticsbycategories). This algorithm calculates statistics of fields depending on a parent class.
 ##'
-##' @title QGIS algorithm Statistics by categories
+##' @title QGIS algorithm - Statistics by categories
 ##'
 ##' @param INPUT `source` - Input vector layer. Path to a vector layer.
 ##' @param VALUES_FIELD_NAME `field` - Field to calculate statistics on (if empty, only count is calculated). The name of an existing field. ; delimited list of existing field names.

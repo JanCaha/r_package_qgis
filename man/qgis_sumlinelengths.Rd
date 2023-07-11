@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_sumlinelengths.R
 \name{qgis_sumlinelengths}
 \alias{qgis_sumlinelengths}
-\title{QGIS algorithm Sum line lengths}
+\title{QGIS algorithm - Sum line lengths}
 \usage{
 qgis_sumlinelengths(
   POLYGONS = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_sumlinelengths(
 
 \item{LINES}{\code{source} - Lines. Path to a vector layer.}
 
-\item{LEN_FIELD}{\code{string} - Lines length field name. String value.}
+\item{LEN_FIELD}{\code{string} - Lines length field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{COUNT_FIELD}{\code{string} - Lines count field name. String value.}
+\item{COUNT_FIELD}{\code{string} - Lines count field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Line length. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_sumlinelengths(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Sum line lengths (native:sumlinelengths)
+QGIS Algorithm provided by QGIS (native c++) Sum line lengths (native:sumlinelengths). This algorithm takes a polygon layer and a line layer and measures the total length of lines and the total number of them that cross each polygon.  The resulting layer has the same features as the input polygon layer, but with two additional attributes containing the length and count of the lines across each polygon. The names of these two fields can be configured in the algorithm parameters.
 }
 \details{
 \subsection{Outputs description}{

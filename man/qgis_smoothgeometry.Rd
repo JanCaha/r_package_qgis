@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_smoothgeometry.R
 \name{qgis_smoothgeometry}
 \alias{qgis_smoothgeometry}
-\title{QGIS algorithm Smooth}
+\title{QGIS algorithm - Smooth}
 \usage{
 qgis_smoothgeometry(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_smoothgeometry(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{ITERATIONS}{\code{number} - Iterations. A numeric value.}
+\item{ITERATIONS}{\code{number} - Iterations. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OFFSET}{\code{number} - Offset. A numeric value.}
+\item{OFFSET}{\code{number} - Offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAX_ANGLE}{\code{number} - Maximum node angle to smooth. A numeric value.}
+\item{MAX_ANGLE}{\code{number} - Maximum node angle to smooth. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Smoothed. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_smoothgeometry(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Smooth (native:smoothgeometry)
+QGIS Algorithm provided by QGIS (native c++) Smooth (native:smoothgeometry). This algorithm smooths the geometries in a line or polygon layer. It creates a new layer with the same features as the ones in the input layer, but with geometries containing a higher number of vertices and corners in the geometries smoothed out.  The iterations parameter dictates how many smoothing iterations will be applied to each geometry. A higher number of iterations results in smoother geometries with the cost of greater number of nodes in the geometries.  The offset parameter controls how "tightly" the smoothed geometries follow the original geometries. Smaller values results in a tighter fit, and larger values will create a looser fit.  The maximum angle parameter can be used to prevent smoothing of nodes with large angles. Any node where the angle of the segments to either side is larger than this will not be smoothed. For example, setting the maximum angle to 90 degrees or lower would preserve right angles in the geometry.  If input geometries contain Z or M values, these will also be smoothed and the output geometry will retain the same dimensionality as the input geometry.
 }
 \details{
 \subsection{Outputs description}{

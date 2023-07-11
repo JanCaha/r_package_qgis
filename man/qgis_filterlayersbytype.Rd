@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_filterlayersbytype.R
 \name{qgis_filterlayersbytype}
 \alias{qgis_filterlayersbytype}
-\title{QGIS algorithm Filter layers by type}
+\title{QGIS algorithm - Filter layers by type}
 \usage{
 qgis_filterlayersbytype(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_filterlayersbytype(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Filter layers by type (native:filterlayersbytype)
+QGIS Algorithm provided by QGIS (native c++) Filter layers by type (native:filterlayersbytype). Filters layers by type This algorithm filters layer by their type. Incoming layers will be directed to different outputs based on whether they are a vector or raster layer.
 }
 \details{
 \subsection{Outputs description}{

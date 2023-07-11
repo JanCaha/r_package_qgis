@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_minimumenclosingcircle.R
 \name{qgis_minimumenclosingcircle}
 \alias{qgis_minimumenclosingcircle}
-\title{QGIS algorithm Minimum enclosing circles}
+\title{QGIS algorithm - Minimum enclosing circles}
 \usage{
 qgis_minimumenclosingcircle(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_minimumenclosingcircle(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{SEGMENTS}{\code{number} - Number of segments in circles. A numeric value.}
+\item{SEGMENTS}{\code{number} - Number of segments in circles. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Minimum enclosing circles. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_minimumenclosingcircle(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Minimum enclosing circles (native:minimumenclosingcircle)
+QGIS Algorithm provided by QGIS (native c++) Minimum enclosing circles (native:minimumenclosingcircle). This algorithm calculates the minimum enclosing circle which covers each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a minimal enclosing circle calculation which covers the whole layer or grouped subsets of features.
 }
 \details{
 \subsection{Outputs description}{

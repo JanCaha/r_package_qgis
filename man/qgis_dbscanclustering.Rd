@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_dbscanclustering.R
 \name{qgis_dbscanclustering}
 \alias{qgis_dbscanclustering}
-\title{QGIS algorithm DBSCAN clustering}
+\title{QGIS algorithm - DBSCAN clustering}
 \usage{
 qgis_dbscanclustering(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,15 +21,15 @@ qgis_dbscanclustering(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{MIN_SIZE}{\code{number} - Minimum cluster size. A numeric value.}
+\item{MIN_SIZE}{\code{number} - Minimum cluster size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EPS}{\code{distance} - Maximum distance between clustered points. A numeric value.}
+\item{EPS}{\code{distance} - Maximum distance between clustered points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: DBSCAN*.}
+\item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: DBSCAN*.}
 
-\item{FIELD_NAME}{\code{string} - Cluster field name. String value.}
+\item{FIELD_NAME}{\code{string} - Cluster field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SIZE_FIELD_NAME}{\code{string} - Cluster size field name. String value.}
+\item{SIZE_FIELD_NAME}{\code{string} - Cluster size field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Clusters. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_dbscanclustering(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclustering)
+QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclustering). Clusters point features using a density based scan algorithm. Clusters point features based on a 2D implementation of Density-based spatial clustering of applications with noise (DBSCAN) algorithm.  The algorithm requires two parameters, a minimum cluster size (“minPts”), and the maximum distance allowed between clustered points (“eps”).
 }
 \details{
 \subsection{Outputs description}{

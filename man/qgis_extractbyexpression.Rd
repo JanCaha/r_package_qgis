@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractbyexpression.R
 \name{qgis_extractbyexpression}
 \alias{qgis_extractbyexpression}
-\title{QGIS algorithm Extract by expression}
+\title{QGIS algorithm - Extract by expression}
 \usage{
 qgis_extractbyexpression(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_extractbyexpression(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract by expression (native:extractbyexpression)
+QGIS Algorithm provided by QGIS (native c++) Extract by expression (native:extractbyexpression). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is based on a QGIS expression.  For help with QGIS expression functions, see the inbuilt help for specific functions which is available in the expression builder.
 }
 \details{
 \subsection{Outputs description}{

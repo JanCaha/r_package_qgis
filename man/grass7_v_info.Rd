@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_info.R
 \name{grass7_v_info}
 \alias{grass7_v_info}
-\title{QGIS algorithm v.info}
+\title{QGIS algorithm - v.info}
 \usage{
 grass7_v_info(
   map = qgisprocess:::qgis_default_value(),
@@ -23,21 +23,21 @@ grass7_v_info(
 \arguments{
 \item{map}{\code{source} - Name of input vector map. Path to a vector layer.}
 
-\item{.c}{\code{boolean} - Print types/names of table columns for specified layer instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Print types\code{/}names of table columns for specified layer instead of info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.g}{\code{boolean} - Print map region only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Print map region only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
-\item{.e}{\code{boolean} - Print extended metadata info in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
+\item{.e}{\code{boolean} - Print extended metadata info in shell script style. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.}
 
-\item{.t}{\code{boolean} - Print topology information only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Print topology information only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
 \item{html}{\code{fileDestination} - Information report. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_v_info(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.info (grass7:v.info)
+QGIS Algorithm provided by GRASS v.info (grass7:v.info). Outputs basic information about a user-specified vector map.
 }
 \details{
 \subsection{Outputs description}{

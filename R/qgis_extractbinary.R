@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract binary field (native:extractbinary)
+##' QGIS Algorithm provided by QGIS (native c++) Extract binary field (native:extractbinary). This algorithm extracts contents from a binary field, saving them to individual files. This algorithm extracts contents from a binary field, saving them to individual files.  Filenames can be generated using values taken from an attribute in the source table or based on a more complex expression.
 ##'
-##' @title QGIS algorithm Extract binary field
+##' @title QGIS algorithm - Extract binary field
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Binary field. The name of an existing field. ; delimited list of existing field names.

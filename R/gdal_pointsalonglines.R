@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by GDAL Points along lines (gdal:pointsalonglines)
+##' QGIS Algorithm provided by GDAL Points along lines (gdal:pointsalonglines). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer GEOMETRY: Geometry column name 	Default value:	geometry 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DISTANCE: Distance from line start represented as fraction of line length 	Default value:	0.5 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Points along lines 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 ##'
-##' @title QGIS algorithm Points along lines
+##' @title QGIS algorithm - Points along lines
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param GEOMETRY `string` - Geometry column name. String value.
-##' @param DISTANCE `number` - Distance from line start represented as fraction of line length. A numeric value.
-##' @param OPTIONS `string` - Additional creation options. String value.
+##' @param GEOMETRY `string` - Geometry column name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DISTANCE `number` - Distance from line start represented as fraction of line length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param OPTIONS `string` - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `vectorDestination` - Points along lines. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

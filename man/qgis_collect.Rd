@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_collect.R
 \name{qgis_collect}
 \alias{qgis_collect}
-\title{QGIS algorithm Collect geometries}
+\title{QGIS algorithm - Collect geometries}
 \usage{
 qgis_collect(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_collect(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Collect geometries (native:collect)
+QGIS Algorithm provided by QGIS (native c++) Collect geometries (native:collect). This algorithm takes a vector layer and collects its geometries into new multipart geometries. One or more attributes can be specified to collect only geometries belonging to the same class (having the same value for the specified attributes), alternatively all geometries can be collected.  All output geometries will be converted to multi geometries, even those with just a single part. This algorithm does not dissolve overlapping geometries - they will be collected together without modifying the shape of each geometry part.  See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_writevectortiles_mbtiles.R
 \name{qgis_writevectortiles_mbtiles}
 \alias{qgis_writevectortiles_mbtiles}
-\title{QGIS algorithm Write Vector Tiles (MBTiles)}
+\title{QGIS algorithm - Write Vector Tiles (MBTiles)}
 \usage{
 qgis_writevectortiles_mbtiles(
   OUTPUT = qgisprocess:::qgis_default_value(),
@@ -23,27 +23,27 @@ qgis_writevectortiles_mbtiles(
 )
 }
 \arguments{
-\item{OUTPUT}{\code{fileDestination} - Destination MBTiles. Path for new file.}
+\item{OUTPUT}{\code{vectorTileDestination} - Destination MBTiles. Path for new vector tile layer.}
 
 \item{LAYERS}{\code{vectortilewriterlayers} - Input layers. .}
 
-\item{MIN_ZOOM}{\code{number} - Minimum zoom level. A numeric value.}
+\item{MIN_ZOOM}{\code{number} - Minimum zoom level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAX_ZOOM}{\code{number} - Maximum zoom level. A numeric value.}
+\item{MAX_ZOOM}{\code{number} - Maximum zoom level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{META_NAME}{\code{string} - Metadata: Name. String value.}
+\item{META_NAME}{\code{string} - Metadata: Name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{META_DESCRIPTION}{\code{string} - Metadata: Description. String value.}
+\item{META_DESCRIPTION}{\code{string} - Metadata: Description. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{META_ATTRIBUTION}{\code{string} - Metadata: Attribution. String value.}
+\item{META_ATTRIBUTION}{\code{string} - Metadata: Attribution. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{META_VERSION}{\code{string} - Metadata: Version. String value.}
+\item{META_VERSION}{\code{string} - Metadata: Version. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{META_TYPE}{\code{string} - Metadata: Type. String value.}
+\item{META_TYPE}{\code{string} - Metadata: Type. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{META_CENTER}{\code{string} - Metadata: Center. String value.}
+\item{META_CENTER}{\code{string} - Metadata: Center. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,12 +54,12 @@ qgis_writevectortiles_mbtiles(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (MBTiles) (native:writevectortiles_mbtiles)
+QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (MBTiles) (native:writevectortiles_mbtiles). This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputFile - Destination MBTiles
+\item OUTPUT - outputVectorTile - Destination MBTiles
 }
 }
 }

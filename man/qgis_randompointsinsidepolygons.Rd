@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randompointsinsidepolygons.R
 \name{qgis_randompointsinsidepolygons}
 \alias{qgis_randompointsinsidepolygons}
-\title{QGIS algorithm Random points inside polygons}
+\title{QGIS algorithm - Random points inside polygons}
 \usage{
 qgis_randompointsinsidepolygons(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_randompointsinsidepolygons(
 
 \item{STRATEGY}{\code{enum}  of \verb{("Points count", "Points density")} - Sampling strategy. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{VALUE}{\code{number} - Point count or density. A numeric value.}
+\item{VALUE}{\code{number} - Point count or density. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value.}
+\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Random points. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_randompointsinsidepolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Random points inside polygons (qgis:randompointsinsidepolygons)
+QGIS Algorithm provided by QGIS Random points inside polygons (qgis:randompointsinsidepolygons). This algorithm creates a new point layer with random points inside the polygons of a given layer. The number of points in each polygon can be defined as a fixed count or as a density value. The count/density value could also be taken from an attribute or an expression specified using the "Data defined override" functionality, so it can be different for each polygon in the input layer. A minimum distance can be specified, to avoid points being too close to each other.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Join attributes by field value (native:joinattributestable)
+##' QGIS Algorithm provided by QGIS (native c++) Join attributes by field value (native:joinattributestable). This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer. An attribute is selected in each of them to define the join criteria.
 ##'
-##' @title QGIS algorithm Join attributes by field value
+##' @title QGIS algorithm - Join attributes by field value
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Table field. The name of an existing field. ; delimited list of existing field names.
@@ -8,8 +8,8 @@
 ##' @param FIELD_2 `field` - Table field 2. The name of an existing field. ; delimited list of existing field names.
 ##' @param FIELDS_TO_COPY `field` - Layer 2 fields to copy (leave empty to copy all fields). The name of an existing field. ; delimited list of existing field names.
 ##' @param METHOD `enum`  of `("Create separate feature for each matching feature (one-to-many)", "Take attributes of the first matching feature only (one-to-one)")` - Join type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param DISCARD_NONMATCHING `boolean` - Discard records which could not be joined. 1 for true/yes. 0 for false/no.
-##' @param PREFIX `string` - Joined field prefix. String value.
+##' @param DISCARD_NONMATCHING `boolean` - Discard records which could not be joined. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param PREFIX `string` - Joined field prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Joined layer. Path for new vector layer.
 ##' @param NON_MATCHING `sink` - Unjoinable features from first layer. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

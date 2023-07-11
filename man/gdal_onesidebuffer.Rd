@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_onesidebuffer.R
 \name{gdal_onesidebuffer}
 \alias{gdal_onesidebuffer}
-\title{QGIS algorithm One side buffer}
+\title{QGIS algorithm - One side buffer}
 \usage{
 gdal_onesidebuffer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,19 +23,19 @@ gdal_onesidebuffer(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{GEOMETRY}{\code{string} - Geometry column name. String value.}
+\item{GEOMETRY}{\code{string} - Geometry column name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISTANCE}{\code{distance} - Buffer distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Buffer distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{BUFFER_SIDE}{\code{enum}  of \verb{("Right", "Left")} - Buffer side. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{FIELD}{\code{field} - Dissolve by attribute. The name of an existing field. ; delimited list of existing field names.}
 
-\item{DISSOLVE}{\code{boolean} - Dissolve all results. 1 for true/yes. 0 for false/no.}
+\item{DISSOLVE}{\code{boolean} - Dissolve all results. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXPLODE_COLLECTIONS}{\code{boolean} - Produce one feature for each geometry in any kind of geometry collection in the source file. 1 for true/yes. 0 for false/no.}
+\item{EXPLODE_COLLECTIONS}{\code{boolean} - Produce one feature for each geometry in any kind of geometry collection in the source file. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - One-sided buffer. Path for new vector layer.}
 
@@ -48,7 +48,7 @@ gdal_onesidebuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL One side buffer (gdal:onesidebuffer)
+QGIS Algorithm provided by GDAL One side buffer (gdal:onesidebuffer). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer GEOMETRY: Geometry column name 	Default value:	geometry 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DISTANCE: Buffer distance 	Default value:	10 	Argument type:	distance 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression BUFFER_SIDE: Buffer side 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Right 		- 1: Left 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' FIELD: Dissolve by attribute (optional) 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names DISSOLVE: Dissolve all results 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXPLODE_COLLECTIONS: Produce one feature for each geometry in any kind of geometry collection in the source file 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: One-sided buffer 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

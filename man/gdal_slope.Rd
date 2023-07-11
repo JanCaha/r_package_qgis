@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_slope.R
 \name{gdal_slope}
 \alias{gdal_slope}
-\title{QGIS algorithm Slope}
+\title{QGIS algorithm - Slope}
 \usage{
 gdal_slope(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -25,17 +25,17 @@ gdal_slope(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{SCALE}{\code{number} - Ratio of vertical units to horizontal. A numeric value.}
+\item{SCALE}{\code{number} - Ratio of vertical units to horizontal. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{AS_PERCENT}{\code{boolean} - Slope expressed as percent instead of degrees. 1 for true/yes. 0 for false/no.}
+\item{AS_PERCENT}{\code{boolean} - Slope expressed as percent instead of degrees. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{COMPUTE_EDGES}{\code{boolean} - Compute edges. 1 for true/yes. 0 for false/no.}
+\item{COMPUTE_EDGES}{\code{boolean} - Compute edges. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ZEVENBERGEN}{\code{boolean} - Use Zevenbergen&Thorne formula instead of the Horn's one. 1 for true/yes. 0 for false/no.}
+\item{ZEVENBERGEN}{\code{boolean} - Use Zevenbergen&Thorne formula instead of the Horn's one. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Slope. Path for new raster layer.}
 
@@ -48,7 +48,7 @@ gdal_slope(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Slope (gdal:slope)
+QGIS Algorithm provided by GDAL Slope (gdal:slope). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number SCALE: Ratio of vertical units to horizontal 	Default value:	1 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression AS_PERCENT: Slope expressed as percent instead of degrees 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression COMPUTE_EDGES: Compute edges 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ZEVENBERGEN: Use Zevenbergen&Thorne formula instead of the Horn's one 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Slope 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by GDAL Vector information (gdal:ogrinfo)
+##' QGIS Algorithm provided by GDAL Vector information (gdal:ogrinfo). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	vector 	Acceptable values: 		- Path to a vector layer SUMMARY_ONLY: Summary output only 	Default value:	true 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NO_METADATA: Suppress metadata info 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Layer information 	Argument type:	fileDestination 	Acceptable values: 		- Path for new file
 ##'
-##' @title QGIS algorithm Vector information
+##' @title QGIS algorithm - Vector information
 ##'
 ##' @param INPUT `vector` - Input layer. Path to a vector layer.
-##' @param SUMMARY_ONLY `boolean` - Summary output only. 1 for true/yes. 0 for false/no.
-##' @param NO_METADATA `boolean` - Suppress metadata info. 1 for true/yes. 0 for false/no.
+##' @param SUMMARY_ONLY `boolean` - Summary output only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NO_METADATA `boolean` - Suppress metadata info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `fileDestination` - Layer information. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_surf_rst_cvdev.R
 \name{grass7_v_surf_rst_cvdev}
 \alias{grass7_v_surf_rst_cvdev}
-\title{QGIS algorithm v.surf.rst.cvdev}
+\title{QGIS algorithm - v.surf.rst.cvdev}
 \usage{
 grass7_v_surf_rst_cvdev(
   input = qgisprocess:::qgis_default_value(),
@@ -41,51 +41,51 @@ grass7_v_surf_rst_cvdev(
 
 \item{zcolumn}{\code{field} - Name of the attribute column with values to be used for approximation. The name of an existing field. ; delimited list of existing field names.}
 
-\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
+\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{mask}{\code{raster} - Name of the raster map used as mask. Path to a raster layer.}
 
-\item{tension}{\code{number} - Tension parameter. A numeric value.}
+\item{tension}{\code{number} - Tension parameter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{smooth}{\code{number} - Smoothing parameter. A numeric value.}
+\item{smooth}{\code{number} - Smoothing parameter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{smooth_column}{\code{field} - Name of the attribute column with smoothing parameters. The name of an existing field. ; delimited list of existing field names.}
 
-\item{segmax}{\code{number} - Maximum number of points in a segment. A numeric value.}
+\item{segmax}{\code{number} - Maximum number of points in a segment. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (segmax). A numeric value.}
+\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (segmax). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{dmin}{\code{number} - Minimum distance between points (to remove almost identical points). A numeric value.}
+\item{dmin}{\code{number} - Minimum distance between points (to remove almost identical points). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{dmax}{\code{number} - Maximum distance between points on isoline (to insert additional points). A numeric value.}
+\item{dmax}{\code{number} - Maximum distance between points on isoline (to insert additional points). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{zscale}{\code{number} - Conversion factor for values used for approximation. A numeric value.}
+\item{zscale}{\code{number} - Conversion factor for values used for approximation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{theta}{\code{number} - Anisotropy angle (in degrees counterclockwise from East). A numeric value.}
+\item{theta}{\code{number} - Anisotropy angle (in degrees counterclockwise from East). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{scalex}{\code{number} - Anisotropy scaling factor. A numeric value.}
+\item{scalex}{\code{number} - Anisotropy scaling factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.t}{\code{boolean} - Use scale dependent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Use scale dependent tension. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.c}{\code{boolean} - Perform cross-validation procedure without raster approximation (leave this option as True). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Perform cross-validation procedure without raster approximation (leave this option as True). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{cvdev}{\code{vectorDestination} - Cross Validation Errors. Path for new vector layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -96,7 +96,7 @@ grass7_v_surf_rst_cvdev(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.surf.rst.cvdev (grass7:v.surf.rst.cvdev)
+QGIS Algorithm provided by GRASS v.surf.rst.cvdev (grass7:v.surf.rst.cvdev). v.surf.rst.cvdev - Performs surface interpolation from vector points map by splines.
 }
 \details{
 \subsection{Outputs description}{

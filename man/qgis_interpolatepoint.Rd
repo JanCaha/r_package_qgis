@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_interpolatepoint.R
 \name{qgis_interpolatepoint}
 \alias{qgis_interpolatepoint}
-\title{QGIS algorithm Interpolate point on line}
+\title{QGIS algorithm - Interpolate point on line}
 \usage{
 qgis_interpolatepoint(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_interpolatepoint(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DISTANCE}{\code{distance} - Distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Interpolated points. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_interpolatepoint(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Interpolate point on line (native:interpolatepoint)
+QGIS Algorithm provided by QGIS (native c++) Interpolate point on line (native:interpolatepoint). Interpolates a point along lines at a set distance. This algorithm creates a point geometry interpolated at a set distance along line or curve geometries.  Z and M values are linearly interpolated from existing values.  If a multipart geometry is encountered, only the first part is considered when interpolating the point.  If the specified distance is greater than the curve's length, the resultant feature will have a null geometry.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_meshexporttimeseries.R
 \name{qgis_meshexporttimeseries}
 \alias{qgis_meshexporttimeseries}
-\title{QGIS algorithm Export time series values from points of a mesh dataset}
+\title{QGIS algorithm - Export time series values from points of a mesh dataset}
 \usage{
 qgis_meshexporttimeseries(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -29,13 +29,13 @@ qgis_meshexporttimeseries(
 
 \item{FINISHING_TIME}{\code{meshdatasettime} - Finishing time. .}
 
-\item{TIME_STEP}{\code{number} - Time step (hours). A numeric value.}
+\item{TIME_STEP}{\code{number} - Time step (hours). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{INPUT_POINTS}{\code{source} - Points for data export. Path to a vector layer.}
 
-\item{COORDINATES_DIGITS}{\code{number} - Digits count for coordinates. A numeric value.}
+\item{COORDINATES_DIGITS}{\code{number} - Digits count for coordinates. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATASET_DIGITS}{\code{number} - Digits count for dataset value. A numeric value.}
+\item{DATASET_DIGITS}{\code{number} - Digits count for dataset value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Exported data CSV file. Path for new file.}
 
@@ -48,7 +48,7 @@ qgis_meshexporttimeseries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries)
+QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries). Extracts a mesh dataset's time series values from points contained in a vector layer This algorithm extracts mesh's dataset time series values from points contained in a vector layer. If the time step is kept to its default value (0 hours), the time step used is the one of the two first datasets of the first selected dataset group.
 }
 \details{
 \subsection{Outputs description}{

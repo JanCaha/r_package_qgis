@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_scatter3dplot.R
 \name{qgis_scatter3dplot}
 \alias{qgis_scatter3dplot}
-\title{QGIS algorithm Vector layer scatterplot 3D}
+\title{QGIS algorithm - Vector layer scatterplot 3D}
 \usage{
 qgis_scatter3dplot(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -36,7 +36,7 @@ qgis_scatter3dplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Vector layer scatterplot 3D (qgis:scatter3dplot)
+QGIS Algorithm provided by QGIS Vector layer scatterplot 3D (qgis:scatter3dplot). This algorithm creates a 3D scatter plot for a vector layer.
 }
 \details{
 \subsection{Outputs description}{

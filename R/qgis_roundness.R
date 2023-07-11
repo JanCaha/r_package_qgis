@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Roundness (native:roundness)
+##' QGIS Algorithm provided by QGIS (native c++) Roundness (native:roundness). Calculates the roundness of polygon features. Calculates the roundness of each feature and stores it as a new field. The input vector layer must contain polygons.  The roundness of a polygon is defined as 4π × polygon area / perimeter². The roundness value varies between 0 and 1. A perfect circle has a roundness of 1, while a completely flat polygon has a roundness of 0.
 ##'
-##' @title QGIS algorithm Roundness
+##' @title QGIS algorithm - Roundness
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Roundness. Path for new vector layer.

@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster pixels to polygons (native:pixelstopolygons)
+##' QGIS Algorithm provided by QGIS (native c++) Raster pixels to polygons (native:pixelstopolygons). Creates a vector layer of polygons corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating polygon features for each individual pixel's extent in the raster layer.  Any nodata pixels are skipped in the output.
 ##'
-##' @title QGIS algorithm Raster pixels to polygons
+##' @title QGIS algorithm - Raster pixels to polygons
 ##'
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param RASTER_BAND `band` - Band number. Integer value representing an existing raster band number.
-##' @param FIELD_NAME `string` - Field name. String value.
+##' @param FIELD_NAME `string` - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Vector polygons. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

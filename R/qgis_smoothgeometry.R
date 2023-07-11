@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Smooth (native:smoothgeometry)
+##' QGIS Algorithm provided by QGIS (native c++) Smooth (native:smoothgeometry). This algorithm smooths the geometries in a line or polygon layer. It creates a new layer with the same features as the ones in the input layer, but with geometries containing a higher number of vertices and corners in the geometries smoothed out.  The iterations parameter dictates how many smoothing iterations will be applied to each geometry. A higher number of iterations results in smoother geometries with the cost of greater number of nodes in the geometries.  The offset parameter controls how "tightly" the smoothed geometries follow the original geometries. Smaller values results in a tighter fit, and larger values will create a looser fit.  The maximum angle parameter can be used to prevent smoothing of nodes with large angles. Any node where the angle of the segments to either side is larger than this will not be smoothed. For example, setting the maximum angle to 90 degrees or lower would preserve right angles in the geometry.  If input geometries contain Z or M values, these will also be smoothed and the output geometry will retain the same dimensionality as the input geometry.
 ##'
-##' @title QGIS algorithm Smooth
+##' @title QGIS algorithm - Smooth
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param ITERATIONS `number` - Iterations. A numeric value.
-##' @param OFFSET `number` - Offset. A numeric value.
-##' @param MAX_ANGLE `number` - Maximum node angle to smooth. A numeric value.
+##' @param ITERATIONS `number` - Iterations. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param OFFSET `number` - Offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MAX_ANGLE `number` - Maximum node angle to smooth. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Smoothed. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

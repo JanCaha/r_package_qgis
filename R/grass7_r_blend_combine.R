@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by GRASS r.blend.combine (grass7:r.blend.combine)
+##' QGIS Algorithm provided by GRASS r.blend.combine (grass7:r.blend.combine). r.blend.combine - Blends color components of two raster maps by a given ratio and export into a unique raster.
 ##'
-##' @title QGIS algorithm r.blend.combine
+##' @title QGIS algorithm - r.blend.combine
 ##'
 ##' @param first `raster` - Name of first raster map for blending. Path to a raster layer.
 ##' @param second `raster` - Name of second raster map for blending. Path to a raster layer.
-##' @param percent `number` - Percentage weight of first map for color blending. A numeric value.
+##' @param percent `number` - Percentage weight of first map for color blending. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param output `rasterDestination` - Blended. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

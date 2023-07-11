@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractwithindistance.R
 \name{qgis_extractwithindistance}
 \alias{qgis_extractwithindistance}
-\title{QGIS algorithm Extract within distance}
+\title{QGIS algorithm - Extract within distance}
 \usage{
 qgis_extractwithindistance(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_extractwithindistance(
 
 \item{REFERENCE}{\code{source} - By comparing to the features from. Path to a vector layer.}
 
-\item{DISTANCE}{\code{distance} - Where the features are within. A numeric value.}
+\item{DISTANCE}{\code{distance} - Where the features are within. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted (location). Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_extractwithindistance(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance)
+QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance). This algorithm creates a new vector layer that only contains matching features from an input layer. Features are copied wherever they are within the specified maximum distance from the features in an additional reference layer.
 }
 \details{
 \subsection{Outputs description}{

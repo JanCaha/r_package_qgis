@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_zonalhistogram.R
 \name{qgis_zonalhistogram}
 \alias{qgis_zonalhistogram}
-\title{QGIS algorithm Zonal histogram}
+\title{QGIS algorithm - Zonal histogram}
 \usage{
 qgis_zonalhistogram(
   INPUT_RASTER = qgisprocess:::qgis_default_value(),
@@ -23,7 +23,7 @@ qgis_zonalhistogram(
 
 \item{INPUT_VECTOR}{\code{source} - Vector layer containing zones. Path to a vector layer.}
 
-\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value.}
+\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Output zones. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_zonalhistogram(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram)
+QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram). This algorithm appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons.
 }
 \details{
 \subsection{Outputs description}{

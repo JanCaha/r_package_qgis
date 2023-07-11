@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues)
+##' QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues). This algorithm can remove any measure (M) or Z values from input geometries.
 ##'
-##' @title QGIS algorithm Drop M/Z values
+##' @title QGIS algorithm - Drop M/Z values
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param DROP_M_VALUES `boolean` - Drop M Values. 1 for true/yes. 0 for false/no.
-##' @param DROP_Z_VALUES `boolean` - Drop Z Values. 1 for true/yes. 0 for false/no.
-##' @param OUTPUT `sink` - Z/M Dropped. Path for new vector layer.
+##' @param DROP_M_VALUES `boolean` - Drop M Values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DROP_Z_VALUES `boolean` - Drop Z Values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param OUTPUT `sink` - Z\code{/}M Dropped. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -13,7 +13,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputVector - Z/M Dropped
+##' * OUTPUT - outputVector - Z\code{/}M Dropped
 ##'
 ##'
 ##' @export

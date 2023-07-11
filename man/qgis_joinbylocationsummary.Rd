@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_joinbylocationsummary.R
 \name{qgis_joinbylocationsummary}
 \alias{qgis_joinbylocationsummary}
-\title{QGIS algorithm Join attributes by location (summary)}
+\title{QGIS algorithm - Join attributes by location (summary)}
 \usage{
 qgis_joinbylocationsummary(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -29,7 +29,7 @@ qgis_joinbylocationsummary(
 
 \item{SUMMARIES}{\code{enum}  of \verb{("count", "unique", "min", "max", "range", "sum", "mean", "median", "stddev", "minority", "majority", "q1", "q3", "iqr", "empty", "filled", "min_length", "max_length", "mean_length")} - Summaries to calculate (leave empty to use all available). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{DISCARD_NONMATCHING}{\code{boolean} - Discard records which could not be joined. 1 for true/yes. 0 for false/no.}
+\item{DISCARD_NONMATCHING}{\code{boolean} - Discard records which could not be joined. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Joined layer. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_joinbylocationsummary(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Join attributes by location (summary) (qgis:joinbylocationsummary)
+QGIS Algorithm provided by QGIS Join attributes by location (summary) (qgis:joinbylocationsummary). This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table. The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one. The algorithm calculates a statistical summary for the values from matching features in the second layer (e.g. maximum value, mean value, etc).
 }
 \details{
 \subsection{Outputs description}{

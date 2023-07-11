@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Mean coordinate(s) (native:meancoordinates)
+##' QGIS Algorithm provided by QGIS (native c++) Mean coordinate(s) (native:meancoordinates). This algorithm computes a point layer with the center of mass of geometries in an input layer.  An attribute can be specified as containing weights to be applied to each feature when computing the center of mass.  If an attribute is selected in the Unique ID field parameter, features will be grouped according to values in this field. Instead of a single point with the center of mass of the whole layer, the output layer will contain a center of mass for the features in each category.
 ##'
-##' @title QGIS algorithm Mean coordinate(s)
+##' @title QGIS algorithm - Mean coordinate(s)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param WEIGHT `field` - Weight field. The name of an existing field. ; delimited list of existing field names.

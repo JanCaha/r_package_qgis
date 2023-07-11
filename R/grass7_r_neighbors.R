@@ -1,21 +1,21 @@
-##' QGIS Algorithm provided by GRASS r.neighbors (grass7:r.neighbors)
+##' QGIS Algorithm provided by GRASS r.neighbors (grass7:r.neighbors). Makes each cell category value a function of the category values assigned to the cells around it
 ##'
-##' @title QGIS algorithm r.neighbors
+##' @title QGIS algorithm - r.neighbors
 ##'
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param selection `raster` - Raster layer to select the cells which should be processed. Path to a raster layer.
 ##' @param method `enum`  of `("average", "median", "mode", "minimum", "maximum", "range", "stddev", "sum", "count", "variance", "diversity", "interspersion", "quart1", "quart3", "perc90", "quantile")` - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param size `number` - Neighborhood size (must be odd). A numeric value.
-##' @param gauss `number` - Sigma (in cells) for Gaussian filter. A numeric value.
-##' @param quantile `string` - Quantile to calculate for method=quantile. String value.
-##' @param .c `boolean` - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
-##' @param .a `boolean` - Do not align output with the input. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
+##' @param size `number` - Neighborhood size (must be odd). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param gauss `number` - Sigma (in cells) for Gaussian filter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param quantile `string` - Quantile to calculate for method=quantile. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .c `boolean` - Use circular neighborhood. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
+##' @param .a `boolean` - Do not align output with the input. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.
 ##' @param weight `file` - File containing weights. Path to a file.
 ##' @param output `rasterDestination` - Neighbors. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

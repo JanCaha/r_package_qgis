@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_createspatialindex.R
 \name{qgis_createspatialindex}
 \alias{qgis_createspatialindex}
-\title{QGIS algorithm Create spatial index}
+\title{QGIS algorithm - Create spatial index}
 \usage{
 qgis_createspatialindex(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,7 +24,7 @@ qgis_createspatialindex(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create spatial index (native:createspatialindex)
+QGIS Algorithm provided by QGIS (native c++) Create spatial index (native:createspatialindex). Creates an index to speed up access to the features in a layer based on their spatial location. Support for spatial index creation is dependent on the layer's data provider.
 }
 \details{
 \subsection{Outputs description}{

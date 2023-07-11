@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Bar plot (qgis:barplot)
+##' QGIS Algorithm provided by QGIS Bar plot (qgis:barplot). This algorithm creates a bar plot from a category and a layer field.
 ##'
-##' @title QGIS algorithm Bar plot
+##' @title QGIS algorithm - Bar plot
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param NAME_FIELD `field` - Category name field. The name of an existing field. ; delimited list of existing field names.

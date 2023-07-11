@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade)
+##' QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade). This algorithm calculates the hillshade of the Digital Terrain Model in input.  The shading of the layer is calculated according to the sun position (azimuth and elevation).
 ##'
-##' @title QGIS algorithm Hillshade
+##' @title QGIS algorithm - Hillshade
 ##'
 ##' @param INPUT `raster` - Elevation layer. Path to a raster layer.
-##' @param Z_FACTOR `number` - Z factor. A numeric value.
-##' @param AZIMUTH `number` - Azimuth (horizontal angle). A numeric value.
-##' @param V_ANGLE `number` - Vertical angle. A numeric value.
+##' @param Z_FACTOR `number` - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param AZIMUTH `number` - Azimuth (horizontal angle). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param V_ANGLE `number` - Vertical angle. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Hillshade. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

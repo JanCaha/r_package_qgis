@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_buildvirtualvector.R
 \name{gdal_buildvirtualvector}
 \alias{gdal_buildvirtualvector}
-\title{QGIS algorithm Build virtual vector}
+\title{QGIS algorithm - Build virtual vector}
 \usage{
 gdal_buildvirtualvector(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ gdal_buildvirtualvector(
 \arguments{
 \item{INPUT}{\code{multilayer} - Input datasources. .}
 
-\item{UNIONED}{\code{boolean} - Create "unioned" VRT. 1 for true/yes. 0 for false/no.}
+\item{UNIONED}{\code{boolean} - Create "unioned" VRT. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Virtual vector. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ gdal_buildvirtualvector(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Build virtual vector (gdal:buildvirtualvector)
+QGIS Algorithm provided by GDAL Build virtual vector (gdal:buildvirtualvector). This algorithm creates a virtual layer that contains a set of vector layers.  The output virtual layer will not be opened in the current project.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_setzvalue.R
 \name{qgis_setzvalue}
 \alias{qgis_setzvalue}
-\title{QGIS algorithm Set Z value}
+\title{QGIS algorithm - Set Z value}
 \usage{
 qgis_setzvalue(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_setzvalue(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{Z_VALUE}{\code{number} - Z Value. A numeric value.}
+\item{Z_VALUE}{\code{number} - Z Value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Z Added. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_setzvalue(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set Z value (native:setzvalue)
+QGIS Algorithm provided by QGIS (native c++) Set Z value (native:setzvalue). This algorithm sets the Z value for geometries in a layer.  If Z values already exist in the layer, they will be overwritten with the new value. If no Z values exist, the geometry will be upgraded to include Z values and the specified value used as the initial Z value for all geometries.
 }
 \details{
 \subsection{Outputs description}{

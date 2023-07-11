@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_boundary.R
 \name{qgis_boundary}
 \alias{qgis_boundary}
-\title{QGIS algorithm Boundary}
+\title{QGIS algorithm - Boundary}
 \usage{
 qgis_boundary(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_boundary(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Boundary (native:boundary)
+QGIS Algorithm provided by QGIS (native c++) Boundary (native:boundary). Returns the closure of the combinatorial boundary of the input geometries (ie the topological boundary of the geometry). For instance, a polygon geometry will have a boundary consisting of the linestrings for each ring in the polygon. Only valid for polygon or line layers.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,18 +1,18 @@
-##' QGIS Algorithm provided by GRASS r.proj (grass7:r.proj)
+##' QGIS Algorithm provided by GRASS r.proj (grass7:r.proj). Re-projects a raster layer to another coordinate reference system
 ##'
-##' @title QGIS algorithm r.proj
+##' @title QGIS algorithm - r.proj
 ##'
 ##' @param input `raster` - Input raster to reproject. Path to a raster layer.
 ##' @param crs `crs` - New coordinate reference system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param method `enum`  of `("nearest", "bilinear", "bicubic", "lanczos", "bilinear_f", "bicubic_f", "lanczos_f")` - Interpolation method to use. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param memory `number` - Maximum memory to be used (in MB). A numeric value.
-##' @param resolution `number` - Resolution of output raster map. A numeric value.
-##' @param .n `boolean` - Do not perform region cropping optimization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param memory `number` - Maximum memory to be used (in MB). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param resolution `number` - Resolution of output raster map. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .n `boolean` - Do not perform region cropping optimization. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
 ##' @param output `rasterDestination` - Reprojected raster. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

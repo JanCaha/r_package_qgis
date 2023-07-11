@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_fillnulls.R
 \name{grass7_r_fillnulls}
 \alias{grass7_r_fillnulls}
-\title{QGIS algorithm r.fillnulls}
+\title{QGIS algorithm - r.fillnulls}
 \usage{
 grass7_r_fillnulls(
   input = qgisprocess:::qgis_default_value(),
@@ -29,27 +29,27 @@ grass7_r_fillnulls(
 
 \item{method}{\code{enum}  of \verb{("bilinear", "bicubic", "rst")} - Interpolation method to use. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{tension}{\code{number} - Spline tension parameter. A numeric value.}
+\item{tension}{\code{number} - Spline tension parameter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{smooth}{\code{number} - Spline smoothing parameter. A numeric value.}
+\item{smooth}{\code{number} - Spline smoothing parameter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{edge}{\code{number} - Width of hole edge used for interpolation (in cells). A numeric value.}
+\item{edge}{\code{number} - Width of hole edge used for interpolation (in cells). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (segmax). A numeric value.}
+\item{npmin}{\code{number} - Minimum number of points for approximation in a segment (segmax). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{segmax}{\code{number} - Maximum number of points in a segment. A numeric value.}
+\item{segmax}{\code{number} - Maximum number of points in a segment. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{lambda}{\code{number} - Tykhonov regularization parameter (affects smoothing). A numeric value.}
+\item{lambda}{\code{number} - Tykhonov regularization parameter (affects smoothing). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Filled. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -60,7 +60,7 @@ grass7_r_fillnulls(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.fillnulls (grass7:r.fillnulls)
+QGIS Algorithm provided by GRASS r.fillnulls (grass7:r.fillnulls). Fills no-data areas in raster maps using spline interpolation.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,25 +1,25 @@
-##' QGIS Algorithm provided by GRASS r.walk.coords (grass7:r.walk.coords)
+##' QGIS Algorithm provided by GRASS r.walk.coords (grass7:r.walk.coords). r.walk.coords - Creates a raster map showing the anisotropic cumulative cost of moving between different geographic locations on an input raster map whose cell category values represent cost from a list of coordinates.
 ##'
-##' @title QGIS algorithm r.walk.coords
+##' @title QGIS algorithm - r.walk.coords
 ##'
 ##' @param elevation `raster` - Name of input elevation raster map. Path to a raster layer.
 ##' @param friction `raster` - Name of input raster map containing friction costs. Path to a raster layer.
-##' @param start_coordinates `string` - Coordinates of starting point(s) (a list of E,N). String value.
-##' @param stop_coordinates `string` - Coordinates of stopping point(s) (a list of E,N). String value.
-##' @param walk_coeff `string` - Coefficients for walking energy formula parameters a,b,c,d. String value.
-##' @param lambda `number` - Lambda coefficients for combining walking energy and friction cost. A numeric value.
-##' @param slope_factor `number` - Slope factor determines travel energy cost per height step. A numeric value.
-##' @param max_cost `number` - Maximum cumulative cost. A numeric value.
-##' @param null_cost `number` - Cost assigned to null cells. By default, null cells are excluded. A numeric value.
-##' @param memory `number` - Maximum memory to be used in MB. A numeric value.
-##' @param .k `boolean` - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.
-##' @param .n `boolean` - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param start_coordinates `string` - Coordinates of starting point(s) (a list of E,N). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param stop_coordinates `string` - Coordinates of stopping point(s) (a list of E,N). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param walk_coeff `string` - Coefficients for walking energy formula parameters a,b,c,d. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param lambda `number` - Lambda coefficients for combining walking energy and friction cost. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param slope_factor `number` - Slope factor determines travel energy cost per height step. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param max_cost `number` - Maximum cumulative cost. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param null_cost `number` - Cost assigned to null cells. By default, null cells are excluded. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param memory `number` - Maximum memory to be used in MB. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .k `boolean` - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -k.
+##' @param .n `boolean` - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
 ##' @param output `rasterDestination` - Cumulative cost. Path for new raster layer.
 ##' @param outdir `rasterDestination` - Movement Directions. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

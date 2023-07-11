@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclustering)
+##' QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclustering). Clusters point features using a density based scan algorithm. Clusters point features based on a 2D implementation of Density-based spatial clustering of applications with noise (DBSCAN) algorithm.  The algorithm requires two parameters, a minimum cluster size (“minPts”), and the maximum distance allowed between clustered points (“eps”).
 ##'
-##' @title QGIS algorithm DBSCAN clustering
+##' @title QGIS algorithm - DBSCAN clustering
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param MIN_SIZE `number` - Minimum cluster size. A numeric value.
-##' @param EPS `distance` - Maximum distance between clustered points. A numeric value.
-##' @param DBSCAN `boolean` - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: DBSCAN*.
-##' @param FIELD_NAME `string` - Cluster field name. String value.
-##' @param SIZE_FIELD_NAME `string` - Cluster size field name. String value.
+##' @param MIN_SIZE `number` - Minimum cluster size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param EPS `distance` - Maximum distance between clustered points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DBSCAN `boolean` - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: DBSCAN*.
+##' @param FIELD_NAME `string` - Cluster field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param SIZE_FIELD_NAME `string` - Cluster size field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Clusters. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

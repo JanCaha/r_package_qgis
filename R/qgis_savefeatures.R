@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures)
+##' QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures). This algorithm saves vector features to a specified file dataset.  For dataset formats supporting layers, an optional layer name parameter can be used to specify a custom string.  Optional GDAL-defined dataset and layer options can be specified. For more information on this, read the online GDAL documentation.
 ##'
-##' @title QGIS algorithm Save vector features to file
+##' @title QGIS algorithm - Save vector features to file
 ##'
 ##' @param INPUT `source` - Vector features. Path to a vector layer.
 ##' @param OUTPUT `fileDestination` - Saved features. Path for new file.
-##' @param LAYER_NAME `string` - Layer name. String value.
-##' @param DATASOURCE_OPTIONS `string` - GDAL dataset options (separate individual options with semicolons). String value.
-##' @param LAYER_OPTIONS `string` - GDAL layer options (separate individual options with semicolons). String value.
+##' @param LAYER_NAME `string` - Layer name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DATASOURCE_OPTIONS `string` - GDAL dataset options (separate individual options with semicolons). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param LAYER_OPTIONS `string` - GDAL layer options (separate individual options with semicolons). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_surf_area.R
 \name{grass7_r_surf_area}
 \alias{grass7_r_surf_area}
-\title{QGIS algorithm r.surf.area}
+\title{QGIS algorithm - r.surf.area}
 \usage{
 grass7_r_surf_area(
   map = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ grass7_r_surf_area(
 \arguments{
 \item{map}{\code{raster} - Input layer. Path to a raster layer.}
 
-\item{vscale}{\code{number} - Vertical scale. A numeric value.}
+\item{vscale}{\code{number} - Vertical scale. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{units}{\code{enum}  of \verb{("miles", "feet", "meters", "kilometers", "acres", "hectares")} - Units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -28,7 +28,7 @@ grass7_r_surf_area(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +39,7 @@ grass7_r_surf_area(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.surf.area (grass7:r.surf.area)
+QGIS Algorithm provided by GRASS r.surf.area (grass7:r.surf.area). Surface area estimation for rasters.
 }
 \details{
 \subsection{Outputs description}{

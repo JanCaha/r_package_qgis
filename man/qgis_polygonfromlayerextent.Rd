@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_polygonfromlayerextent.R
 \name{qgis_polygonfromlayerextent}
 \alias{qgis_polygonfromlayerextent}
-\title{QGIS algorithm Extract layer extent}
+\title{QGIS algorithm - Extract layer extent}
 \usage{
 qgis_polygonfromlayerextent(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_polygonfromlayerextent(
 \arguments{
 \item{INPUT}{\code{layer} - Input layer. Path to a vector, raster or mesh layer.}
 
-\item{ROUND_TO}{\code{distance} - Round values to. A numeric value.}
+\item{ROUND_TO}{\code{distance} - Round values to. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extent. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_polygonfromlayerextent(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent)
+QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent). This algorithm takes a map layer and generates a new vector layer with the minimum bounding box (rectangle polygon with N-S orientation) that covers the input layer. Optionally, the extent can be enlarged to a rounded value.
 }
 \details{
 \subsection{Outputs description}{

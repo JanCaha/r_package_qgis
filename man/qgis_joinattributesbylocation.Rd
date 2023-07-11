@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_joinattributesbylocation.R
 \name{qgis_joinattributesbylocation}
 \alias{qgis_joinattributesbylocation}
-\title{QGIS algorithm Join attributes by location}
+\title{QGIS algorithm - Join attributes by location}
 \usage{
 qgis_joinattributesbylocation(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -31,9 +31,9 @@ qgis_joinattributesbylocation(
 
 \item{METHOD}{\code{enum}  of \verb{("Create separate feature for each matching feature (one-to-many)", "Take attributes of the first matching feature only (one-to-one)", "Take attributes of the feature with largest overlap only (one-to-one)")} - Join type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{DISCARD_NONMATCHING}{\code{boolean} - Discard records which could not be joined. 1 for true/yes. 0 for false/no.}
+\item{DISCARD_NONMATCHING}{\code{boolean} - Discard records which could not be joined. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{PREFIX}{\code{string} - Joined field prefix. String value.}
+\item{PREFIX}{\code{string} - Joined field prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Joined layer. Path for new vector layer.}
 
@@ -48,7 +48,7 @@ qgis_joinattributesbylocation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Join attributes by location (native:joinattributesbylocation)
+QGIS Algorithm provided by QGIS (native c++) Join attributes by location (native:joinattributesbylocation). Join attributes from one vector layer to another by location. This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one.
 }
 \details{
 \subsection{Outputs description}{

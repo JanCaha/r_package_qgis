@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Densify by count (native:densifygeometries)
+##' QGIS Algorithm provided by QGIS (native c++) Densify by count (native:densifygeometries). Creates a densified version of geometries. This algorithm takes a polygon or line layer and generates a new one in which the geometries have a larger number of vertices than the original one.   If the geometries have z or m values present then these will be linearly interpolated at the added nodes.   The number of new vertices to add to each feature geometry is specified as an input parameter.
 ##'
-##' @title QGIS algorithm Densify by count
+##' @title QGIS algorithm - Densify by count
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param VERTICES `number` - Number of vertices to add. A numeric value.
+##' @param VERTICES `number` - Number of vertices to add. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Densified. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

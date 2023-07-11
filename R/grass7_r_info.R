@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by GRASS r.info (grass7:r.info)
+##' QGIS Algorithm provided by GRASS r.info (grass7:r.info). Output basic information about a raster layer.
 ##'
-##' @title QGIS algorithm r.info
+##' @title QGIS algorithm - r.info
 ##'
 ##' @param map `raster` - Raster layer. Path to a raster layer.
-##' @param .r `boolean` - Print range only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
-##' @param .g `boolean` - Print raster array information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
-##' @param .h `boolean` - Print raster history instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.
-##' @param .e `boolean` - Print extended metadata information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param .r `boolean` - Print range only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
+##' @param .g `boolean` - Print raster array information in shell script style. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.
+##' @param .h `boolean` - Print raster history instead of info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.
+##' @param .e `boolean` - Print extended metadata information in shell script style. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.
 ##' @param html `fileDestination` - Basic information. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

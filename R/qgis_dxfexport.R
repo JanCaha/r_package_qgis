@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport)
+##' QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport). Exports layers to DXF file. For each layer, you can choose a field whose values are used to split features in generated destination layers in the DXF output.
 ##'
-##' @title QGIS algorithm Export layers to DXF
+##' @title QGIS algorithm - Export layers to DXF
 ##'
 ##' @param LAYERS `dxflayers` - Input layers. .
 ##' @param SYMBOLOGY_MODE `enum`  of `("No Symbology", "Feature Symbology", "Symbol Layer Symbology")` - Symbology mode. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param SYMBOLOGY_SCALE `scale` - Symbology scale. A numeric value representing the scale denominator.
 ##' @param ENCODING `enum`  of `("ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "Shift_JIS", "Big5", "CP936", "GB2312", "ms949", "cp850", "cp866", "cp1250", "cp1251", "cp1252", "cp1253", "cp1254", "cp1255", "cp1256", "cp1257", "cp1258", "macroman")` - Encoding. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param CRS `crs` - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
-##' @param USE_LAYER_TITLE `boolean` - Use layer title as name. 1 for true/yes. 0 for false/no.
-##' @param FORCE_2D `boolean` - Force 2D output. 1 for true/yes. 0 for false/no.
-##' @param MTEXT `boolean` - Export labels as MTEXT elements. 1 for true/yes. 0 for false/no.
+##' @param USE_LAYER_TITLE `boolean` - Use layer title as name. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FORCE_2D `boolean` - Force 2D output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MTEXT `boolean` - Export labels as MTEXT elements. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `fileDestination` - DXF. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

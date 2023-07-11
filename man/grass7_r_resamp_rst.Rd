@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_resamp_rst.R
 \name{grass7_r_resamp_rst}
 \alias{grass7_r_resamp_rst}
-\title{QGIS algorithm r.resamp.rst}
+\title{QGIS algorithm - r.resamp.rst}
 \usage{
 grass7_r_resamp_rst(
   input = qgisprocess:::qgis_default_value(),
@@ -40,23 +40,23 @@ grass7_r_resamp_rst(
 
 \item{maskmap}{\code{raster} - Input raster map to be used as mask. Path to a raster layer.}
 
-\item{ew_res}{\code{number} - Desired east-west resolution. A numeric value.}
+\item{ew_res}{\code{number} - Desired east-west resolution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ns_res}{\code{number} - Desired north-south resolution. A numeric value.}
+\item{ns_res}{\code{number} - Desired north-south resolution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{overlap}{\code{number} - Rows/columns overlap for segmentation. A numeric value.}
+\item{overlap}{\code{number} - Rows\code{/}columns overlap for segmentation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{zscale}{\code{number} - Multiplier for z-values. A numeric value.}
+\item{zscale}{\code{number} - Multiplier for z-values. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{tension}{\code{number} - Spline tension value. A numeric value.}
+\item{tension}{\code{number} - Spline tension value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{theta}{\code{number} - Anisotropy angle (in degrees counterclockwise from East). A numeric value.}
+\item{theta}{\code{number} - Anisotropy angle (in degrees counterclockwise from East). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{scalex}{\code{number} - Anisotropy scaling factor. A numeric value.}
+\item{scalex}{\code{number} - Anisotropy scaling factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.t}{\code{boolean} - Use dnorm independent tension. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Use dnorm independent tension. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.d}{\code{boolean} - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Output partial derivatives instead of topographic parameters. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
 \item{elevation}{\code{rasterDestination} - Resampled RST. Path for new raster layer.}
 
@@ -72,11 +72,11 @@ grass7_r_resamp_rst(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -87,7 +87,7 @@ grass7_r_resamp_rst(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.resamp.rst (grass7:r.resamp.rst)
+QGIS Algorithm provided by GRASS r.resamp.rst (grass7:r.resamp.rst). Reinterpolates using regularized spline with tension and smoothing.
 }
 \details{
 \subsection{Outputs description}{

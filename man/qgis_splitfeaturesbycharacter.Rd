@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_splitfeaturesbycharacter.R
 \name{qgis_splitfeaturesbycharacter}
 \alias{qgis_splitfeaturesbycharacter}
-\title{QGIS algorithm Split features by character}
+\title{QGIS algorithm - Split features by character}
 \usage{
 qgis_splitfeaturesbycharacter(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_splitfeaturesbycharacter(
 
 \item{FIELD}{\code{field} - Split using values in field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{CHAR}{\code{string} - Split values using character. String value.}
+\item{CHAR}{\code{string} - Split values using character. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{REGEX}{\code{boolean} - Use regular expression separator. 1 for true/yes. 0 for false/no.}
+\item{REGEX}{\code{boolean} - Use regular expression separator. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Split. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_splitfeaturesbycharacter(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Split features by character (native:splitfeaturesbycharacter)
+QGIS Algorithm provided by QGIS (native c++) Split features by character (native:splitfeaturesbycharacter). Splits features into multiple output features by splitting a field by a character. This algorithm splits features into multiple output features by splitting a field's value with a specified character.  For instance, if a layer contains features with multiple comma separated values contained in a single field, this algorithm can be used to split these values up across multiple output features.  Geometries and other attributes remain unchanged in the output.  Optionally, the separator string can be a regular expression for added flexibility.
 }
 \details{
 \subsection{Outputs description}{

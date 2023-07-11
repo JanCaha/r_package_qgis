@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_circle.R
 \name{grass7_r_circle}
 \alias{grass7_r_circle}
-\title{QGIS algorithm r.circle}
+\title{QGIS algorithm - r.circle}
 \usage{
 grass7_r_circle(
   coordinates = qgisprocess:::qgis_default_value(),
@@ -24,23 +24,23 @@ grass7_r_circle(
 \arguments{
 \item{coordinates}{\code{point} - The coordinate of the center (east,north). Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{min}{\code{number} - Minimum radius for ring/circle map (in meters). A numeric value.}
+\item{min}{\code{number} - Minimum radius for ring\code{/}circle map (in meters). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{max}{\code{number} - Maximum radius for ring/circle map (in meters). A numeric value.}
+\item{max}{\code{number} - Maximum radius for ring\code{/}circle map (in meters). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{multiplier}{\code{number} - Data value multiplier. A numeric value.}
+\item{multiplier}{\code{number} - Data value multiplier. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.b}{\code{boolean} - Generate binary raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - Generate binary raster map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
 \item{output}{\code{rasterDestination} - Circles. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_circle(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.circle (grass7:r.circle)
+QGIS Algorithm provided by GRASS r.circle (grass7:r.circle). Creates a raster map containing concentric rings around a given point.
 }
 \details{
 \subsection{Outputs description}{

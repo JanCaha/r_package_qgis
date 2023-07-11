@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS Concave hull (k-nearest neighbor) (qgis:knearestconcavehull)
+##' QGIS Algorithm provided by QGIS Concave hull (k-nearest neighbor) (qgis:knearestconcavehull). Creates a concave hull using the k-nearest neighbor algorithm. This algorithm generates a concave hull polygon from a set of points. If the input layer is a line or polygon layer, it will use the nodes. The number of neighbours to consider determines the concaveness of the output polygon. A lower number will result in a concave hull that follows the points very closely, while a higher number will have a smoother shape. The minimum number of neighbour points to consider is 3. A value equal to or greater than the number of points will result in a convex hull. If a field is selected, the algorithm will group the features in the input layer using unique values in that field and generate individual polygons in the output layer for each group.
 ##'
-##' @title QGIS algorithm Concave hull (k-nearest neighbor)
+##' @title QGIS algorithm - Concave hull (k-nearest neighbor)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param KNEIGHBORS `number` - Number of neighboring points to consider (a lower number is more concave, a higher number is smoother). A numeric value.
+##' @param KNEIGHBORS `number` - Number of neighboring points to consider (a lower number is more concave, a higher number is smoother). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param FIELD `field` - Field (set if creating concave hulls by class). The name of an existing field. ; delimited list of existing field names.
 ##' @param OUTPUT `sink` - Concave hull. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

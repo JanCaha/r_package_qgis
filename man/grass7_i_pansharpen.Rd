@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_pansharpen.R
 \name{grass7_i_pansharpen}
 \alias{grass7_i_pansharpen}
-\title{QGIS algorithm i.pansharpen}
+\title{QGIS algorithm - i.pansharpen}
 \usage{
 grass7_i_pansharpen(
   red = qgisprocess:::qgis_default_value(),
@@ -36,9 +36,9 @@ grass7_i_pansharpen(
 
 \item{method}{\code{enum}  of \verb{("brovey", "ihs", "pca")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.l}{\code{boolean} - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
+\item{.l}{\code{boolean} - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.}
 
-\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
 \item{redoutput}{\code{rasterDestination} - Enhanced Red. Path for new raster layer.}
 
@@ -48,11 +48,11 @@ grass7_i_pansharpen(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -63,7 +63,7 @@ grass7_i_pansharpen(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.pansharpen (grass7:i.pansharpen)
+QGIS Algorithm provided by GRASS i.pansharpen (grass7:i.pansharpen). Image fusion algorithms to sharpen multispectral with high-res panchromatic channels
 }
 \details{
 \subsection{Outputs description}{

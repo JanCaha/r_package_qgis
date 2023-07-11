@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_wedgebuffers.R
 \name{qgis_wedgebuffers}
 \alias{qgis_wedgebuffers}
-\title{QGIS algorithm Create wedge buffers}
+\title{QGIS algorithm - Create wedge buffers}
 \usage{
 qgis_wedgebuffers(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,13 +20,13 @@ qgis_wedgebuffers(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{AZIMUTH}{\code{number} - Azimuth (degrees from North). A numeric value.}
+\item{AZIMUTH}{\code{number} - Azimuth (degrees from North). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{WIDTH}{\code{number} - Wedge width (in degrees). A numeric value.}
+\item{WIDTH}{\code{number} - Wedge width (in degrees). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OUTER_RADIUS}{\code{number} - Outer radius. A numeric value.}
+\item{OUTER_RADIUS}{\code{number} - Outer radius. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INNER_RADIUS}{\code{number} - Inner radius. A numeric value.}
+\item{INNER_RADIUS}{\code{number} - Inner radius. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Buffers. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_wedgebuffers(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create wedge buffers (native:wedgebuffers)
+QGIS Algorithm provided by QGIS (native c++) Create wedge buffers (native:wedgebuffers). This algorithm creates wedge shaped buffers from input points.  The azimuth parameter gives the angle (in degrees) for the middle of the wedge to point. The buffer width (in degrees) is specified by the width parameter. Note that the wedge will extend to half of the angular width either side of the azimuth direction.  The outer radius of the buffer is specified via outer radius, and optionally an inner radius can also be specified.  The native output from this algorithm are CurvePolygon geometries, but these may be automatically segmentized to Polygons depending on the output format.
 }
 \details{
 \subsection{Outputs description}{

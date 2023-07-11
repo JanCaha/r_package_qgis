@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_splitlinesbylength.R
 \name{qgis_splitlinesbylength}
 \alias{qgis_splitlinesbylength}
-\title{QGIS algorithm Split lines by maximum length}
+\title{QGIS algorithm - Split lines by maximum length}
 \usage{
 qgis_splitlinesbylength(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_splitlinesbylength(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{LENGTH}{\code{distance} - Maximum line length. A numeric value.}
+\item{LENGTH}{\code{distance} - Maximum line length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Split. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_splitlinesbylength(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Split lines by maximum length (native:splitlinesbylength)
+QGIS Algorithm provided by QGIS (native c++) Split lines by maximum length (native:splitlinesbylength). Splits lines into parts which are no longer than a specified length. This algorithm takes a line (or curve) layer and splits each feature into multiple parts, where each part is of a specified maximum length.  Z and M values at the start and end of the new line substrings are linearly interpolated from existing values.
 }
 \details{
 \subsection{Outputs description}{

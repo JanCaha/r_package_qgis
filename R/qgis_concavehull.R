@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS Concave hull (alpha shapes) (qgis:concavehull)
+##' QGIS Algorithm provided by QGIS Concave hull (alpha shapes) (qgis:concavehull). Creates a concave hull using the alpha shapes algorithm. This algorithm computes the concave hull of the features in an input layer.
 ##'
-##' @title QGIS algorithm Concave hull (alpha shapes)
+##' @title QGIS algorithm - Concave hull (alpha shapes)
 ##'
 ##' @param INPUT `source` - Input point layer. Path to a vector layer.
-##' @param ALPHA `number` - Threshold (0-1, where 1 is equivalent with Convex Hull). A numeric value.
-##' @param HOLES `boolean` - Allow holes. 1 for true/yes. 0 for false/no.
-##' @param NO_MULTIGEOMETRY `boolean` - Split multipart geometry into singleparts geometries. 1 for true/yes. 0 for false/no.
+##' @param ALPHA `number` - Threshold (0-1, where 1 is equivalent with Convex Hull). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param HOLES `boolean` - Allow holes. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NO_MULTIGEOMETRY `boolean` - Split multipart geometry into singleparts geometries. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Concave hull. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

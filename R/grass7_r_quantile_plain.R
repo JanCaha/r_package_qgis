@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by GRASS r.quantile.plain (grass7:r.quantile.plain)
+##' QGIS Algorithm provided by GRASS r.quantile.plain (grass7:r.quantile.plain). r.quantile.plain - Compute quantiles using two passes and save them as plain text.
 ##'
-##' @title QGIS algorithm r.quantile.plain
+##' @title QGIS algorithm - r.quantile.plain
 ##'
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
-##' @param quantiles `number` - Number of quantiles. A numeric value.
-##' @param percentiles `string` - List of percentiles. String value.
-##' @param bins `number` - Number of bins to use. A numeric value.
-##' @param .r `boolean` - Generate recode rules based on quantile-defined intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param quantiles `number` - Number of quantiles. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param percentiles `string` - List of percentiles. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param bins `number` - Number of bins to use. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .r `boolean` - Generate recode rules based on quantile-defined intervals. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
 ##' @param file `fileDestination` - Quantiles. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

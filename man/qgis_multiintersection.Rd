@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_multiintersection.R
 \name{qgis_multiintersection}
 \alias{qgis_multiintersection}
-\title{QGIS algorithm Intersection (multiple)}
+\title{QGIS algorithm - Intersection (multiple)}
 \usage{
 qgis_multiintersection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_multiintersection(
 
 \item{OVERLAYS}{\code{multilayer} - Overlay layers. .}
 
-\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value.}
+\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Intersection. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_multiintersection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection)
+QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection). This algorithm extracts the overlapping portions of features in the Input and all Overlay layers. Features in the output layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.
 }
 \details{
 \subsection{Outputs description}{

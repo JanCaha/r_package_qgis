@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_retainfields.R
 \name{qgis_retainfields}
 \alias{qgis_retainfields}
-\title{QGIS algorithm Retain fields}
+\title{QGIS algorithm - Retain fields}
 \usage{
 qgis_retainfields(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_retainfields(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Retain fields (native:retainfields)
+QGIS Algorithm provided by QGIS (native c++) Retain fields (native:retainfields). Retains selected fields from a vector layer. This algorithm takes a vector layer and generates a new one that retains only the selected fields. All other fields will be dropped.
 }
 \details{
 \subsection{Outputs description}{

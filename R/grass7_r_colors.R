@@ -1,21 +1,21 @@
-##' QGIS Algorithm provided by GRASS r.colors (grass7:r.colors)
+##' QGIS Algorithm provided by GRASS r.colors (grass7:r.colors). Creates/modifies the color table associated with a raster map.
 ##'
-##' @title QGIS algorithm r.colors
+##' @title QGIS algorithm - r.colors
 ##'
 ##' @param map `multilayer` - Name of raster maps(s). .
 ##' @param color `enum`  of `("not selected", "aspect", "aspectcolr", "bcyr", "bgyr", "blues", "byg", "byr", "celsius", "corine", "curvature", "differences", "elevation", "etopo2", "evi", "fahrenheit", "gdd", "greens", "grey", "grey.eq", "grey.log", "grey1.0", "grey255", "gyr", "haxby", "kelvin", "ndvi", "ndwi", "oranges", "population", "population_dens", "precipitation", "precipitation_daily", "precipitation_monthly", "rainbow", "ramp", "random", "reds", "rstcurv", "ryb", "ryg", "sepia", "slope", "srtm", "srtm_plus", "terrain", "wave")` - Name of color table. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param rules_txt `string` - Color rules. String value.
+##' @param rules_txt `string` - Color rules. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param rules `file` - Color rules file. Path to a file.
 ##' @param raster `raster` - Raster map from which to copy color table. Path to a raster layer.
-##' @param .r `boolean` - Remove existing color table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
-##' @param .w `boolean` - Only write new color table if it does not already exist. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.
-##' @param .n `boolean` - Invert colors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
-##' @param .g `boolean` - Logarithmic scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
-##' @param .a `boolean` - Logarithmic-absolute scaling. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
-##' @param .e `boolean` - Histogram equalization. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param .r `boolean` - Remove existing color table. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
+##' @param .w `boolean` - Only write new color table if it does not already exist. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -w.
+##' @param .n `boolean` - Invert colors. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
+##' @param .g `boolean` - Logarithmic scaling. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.
+##' @param .a `boolean` - Logarithmic-absolute scaling. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.
+##' @param .e `boolean` - Histogram equalization. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.
 ##' @param output_dir `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

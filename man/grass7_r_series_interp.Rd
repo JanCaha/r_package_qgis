@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_series_interp.R
 \name{grass7_r_series_interp}
 \alias{grass7_r_series_interp}
-\title{QGIS algorithm r.series.interp}
+\title{QGIS algorithm - r.series.interp}
 \usage{
 grass7_r_series_interp(
   input = qgisprocess:::qgis_default_value(),
@@ -24,13 +24,13 @@ grass7_r_series_interp(
 \arguments{
 \item{input}{\code{multilayer} - Input raster layer(s). .}
 
-\item{datapos}{\code{string} - Data point position for each input map. String value.}
+\item{datapos}{\code{string} - Data point position for each input map. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{infile}{\code{file} - Input file with one input raster map name and data point position per line, field separator between name and sample point is 'pipe'. Path to a file.}
 
-\item{output}{\code{string} - Name for output raster map (comma separated list if multiple). String value.}
+\item{output}{\code{string} - Name for output raster map (comma separated list if multiple). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{samplingpos}{\code{string} - Sampling point position for each output map (comma separated list). String value.}
+\item{samplingpos}{\code{string} - Sampling point position for each output map (comma separated list). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{outfile}{\code{file} - Input file with one output raster map name and sample point position per line, field separator between name and sample point is 'pipe'. Path to a file.}
 
@@ -40,7 +40,7 @@ grass7_r_series_interp(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_series_interp(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.series.interp (grass7:r.series.interp)
+QGIS Algorithm provided by GRASS r.series.interp (grass7:r.series.interp). Interpolates raster maps located (temporal or spatial) in between input raster maps at specific sampling positions.
 }
 \details{
 \subsection{Outputs description}{

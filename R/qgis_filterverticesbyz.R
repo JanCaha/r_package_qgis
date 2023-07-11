@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Filter vertices by Z value (native:filterverticesbyz)
+##' QGIS Algorithm provided by QGIS (native c++) Filter vertices by Z value (native:filterverticesbyz). Filters away vertices based on their z-value, returning geometries with only vertex points that have a z-value ≥ the specified minimum value and ≤ the maximum value.  If the minimum value is not specified then only the maximum value is tested, and similarly if the maximum value is not specified then only the minimum value is tested.  Depending on the input geometry attributes and the filters used, the resultant geometries created by this algorithm may no longer be valid.
 ##'
-##' @title QGIS algorithm Filter vertices by Z value
+##' @title QGIS algorithm - Filter vertices by Z value
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param MIN `number` - Minimum. A numeric value.
-##' @param MAX `number` - Maximum. A numeric value.
+##' @param MIN `number` - Minimum. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MAX `number` - Maximum. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Filtered. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

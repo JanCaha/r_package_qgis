@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_swapxy.R
 \name{qgis_swapxy}
 \alias{qgis_swapxy}
-\title{QGIS algorithm Swap X and Y coordinates}
+\title{QGIS algorithm - Swap X and Y coordinates}
 \usage{
 qgis_swapxy(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_swapxy(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Swap X and Y coordinates (native:swapxy)
+QGIS Algorithm provided by QGIS (native c++) Swap X and Y coordinates (native:swapxy). This algorithm swaps the X and Y coordinate values in input geometries. It can be used to repair geometries which have accidentally had their latitude and longitude values reversed.
 }
 \details{
 \subsection{Outputs description}{

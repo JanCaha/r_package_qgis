@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_in_lidar.R
 \name{grass7_r_in_lidar}
 \alias{grass7_r_in_lidar}
-\title{QGIS algorithm r.in.lidar}
+\title{QGIS algorithm - r.in.lidar}
 \usage{
 grass7_r_in_lidar(
   input = qgisprocess:::qgis_default_value(),
@@ -48,47 +48,47 @@ grass7_r_in_lidar(
 
 \item{zrange}{\code{range} - Filter range for z data (min, max). Two comma separated numeric values, e.g. '1,10'.}
 
-\item{zscale}{\code{number} - Scale to apply to z data. A numeric value.}
+\item{zscale}{\code{number} - Scale to apply to z data. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{intensity_range}{\code{range} - Filter range for intensity values (min, max). Two comma separated numeric values, e.g. '1,10'.}
 
-\item{intensity_scale}{\code{number} - Scale to apply to intensity values. A numeric value.}
+\item{intensity_scale}{\code{number} - Scale to apply to intensity values. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{percent}{\code{number} - Percent of map to keep in memory. A numeric value.}
+\item{percent}{\code{number} - Percent of map to keep in memory. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{pth}{\code{number} - pth percentile of the values (between 1 and 100). A numeric value.}
+\item{pth}{\code{number} - pth percentile of the values (between 1 and 100). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{trim}{\code{number} - Discard trim percent of the smallest and trim percent of the largest observations (0-50). A numeric value.}
+\item{trim}{\code{number} - Discard trim percent of the smallest and trim percent of the largest observations (0-50). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{resolution}{\code{number} - Output raster resolution. A numeric value.}
+\item{resolution}{\code{number} - Output raster resolution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{return_filter}{\code{string} - Only import points of selected return type Options: first, last, mid. String value.}
+\item{return_filter}{\code{string} - Only import points of selected return type Options: first, last, mid. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{class_filter}{\code{string} - Only import points of selected class(es) (comma separated integers). String value.}
+\item{class_filter}{\code{string} - Only import points of selected class(es) (comma separated integers). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.e}{\code{boolean} - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
+\item{.e}{\code{boolean} - Use the extent of the input for the raster extent. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.}
 
-\item{.n}{\code{boolean} - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Set computation region to match the new raster map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.o}{\code{boolean} - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
+\item{.o}{\code{boolean} - Override projection check (use current location's projection). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -o.}
 
-\item{.i}{\code{boolean} - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Use intensity values rather than Z values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
-\item{.j}{\code{boolean} - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -j.}
+\item{.j}{\code{boolean} - Use Z values for filtering, but intensity values for statistics. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -j.}
 
-\item{.d}{\code{boolean} - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Use base raster resolution instead of computational region. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
-\item{.v}{\code{boolean} - Use only valid points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
+\item{.v}{\code{boolean} - Use only valid points. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -v.}
 
 \item{output}{\code{rasterDestination} - Lidar Raster. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -99,7 +99,7 @@ grass7_r_in_lidar(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.in.lidar (grass7:r.in.lidar)
+QGIS Algorithm provided by GRASS r.in.lidar (grass7:r.in.lidar). Creates a raster map from LAS LiDAR points using univariate statistics.
 }
 \details{
 \subsection{Outputs description}{

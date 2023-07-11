@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_roundness.R
 \name{qgis_roundness}
 \alias{qgis_roundness}
-\title{QGIS algorithm Roundness}
+\title{QGIS algorithm - Roundness}
 \usage{
 qgis_roundness(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_roundness(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Roundness (native:roundness)
+QGIS Algorithm provided by QGIS (native c++) Roundness (native:roundness). Calculates the roundness of polygon features. Calculates the roundness of each feature and stores it as a new field. The input vector layer must contain polygons.  The roundness of a polygon is defined as 4π × polygon area / perimeter². The roundness value varies between 0 and 1. A perfect circle has a roundness of 1, while a completely flat polygon has a roundness of 0.
 }
 \details{
 \subsection{Outputs description}{

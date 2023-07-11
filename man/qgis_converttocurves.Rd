@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_converttocurves.R
 \name{qgis_converttocurves}
 \alias{qgis_converttocurves}
-\title{QGIS algorithm Convert to curved geometries}
+\title{QGIS algorithm - Convert to curved geometries}
 \usage{
 qgis_converttocurves(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_converttocurves(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DISTANCE}{\code{number} - Maximum distance tolerance. A numeric value.}
+\item{DISTANCE}{\code{number} - Maximum distance tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ANGLE}{\code{number} - Maximum angle tolerance. A numeric value.}
+\item{ANGLE}{\code{number} - Maximum angle tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Curves. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_converttocurves(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert to curved geometries (native:converttocurves)
+QGIS Algorithm provided by QGIS (native c++) Convert to curved geometries (native:converttocurves). This algorithm converts a geometry into its curved geometry equivalent.  Already curved geometries will be retained without change.
 }
 \details{
 \subsection{Outputs description}{

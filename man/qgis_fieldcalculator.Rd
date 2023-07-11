@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_fieldcalculator.R
 \name{qgis_fieldcalculator}
 \alias{qgis_fieldcalculator}
-\title{QGIS algorithm Field calculator}
+\title{QGIS algorithm - Field calculator}
 \usage{
 qgis_fieldcalculator(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,13 +21,13 @@ qgis_fieldcalculator(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{FIELD_NAME}{\code{string} - Field name. String value.}
+\item{FIELD_NAME}{\code{string} - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FIELD_TYPE}{\code{enum}  of \verb{("Decimal (double)", "Integer (32 bit)", "Text (string)", "Date", "Time", "Date & Time", "Boolean", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")} - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{FIELD_LENGTH}{\code{number} - Result field length. A numeric value.}
+\item{FIELD_LENGTH}{\code{number} - Result field length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FIELD_PRECISION}{\code{number} - Result field precision. A numeric value.}
+\item{FIELD_PRECISION}{\code{number} - Result field precision. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FORMULA}{\code{expression} - Formula. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
@@ -42,7 +42,7 @@ qgis_fieldcalculator(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator)
+QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator). This algorithm computes a new vector layer with the same features of the input layer, but either overwriting an existing attribute or adding an additional attribute. The values of this field are computed from each feature using an expression, based on the properties and attributes of the feature. Note that if "Field name" is an existing field in the layer then all the rest of the field settings are ignored.
 }
 \details{
 \subsection{Outputs description}{

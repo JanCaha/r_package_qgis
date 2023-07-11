@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract selected features (native:saveselectedfeatures)
+##' QGIS Algorithm provided by QGIS (native c++) Extract selected features (native:saveselectedfeatures). This algorithm creates a new layer with all the selected features in a given vector layer.  If the selected layer has no selected features, the newly created layer will be empty.
 ##'
-##' @title QGIS algorithm Extract selected features
+##' @title QGIS algorithm - Extract selected features
 ##'
 ##' @param INPUT `vector` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Selected features. Path for new vector layer.

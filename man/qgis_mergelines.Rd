@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_mergelines.R
 \name{qgis_mergelines}
 \alias{qgis_mergelines}
-\title{QGIS algorithm Merge lines}
+\title{QGIS algorithm - Merge lines}
 \usage{
 qgis_mergelines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_mergelines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Merge lines (native:mergelines)
+QGIS Algorithm provided by QGIS (native c++) Merge lines (native:mergelines). This algorithm joins all connected parts of MultiLineString geometries into single LineString geometries.  If any parts of the input MultiLineString geometries are not connected, the resultant geometry will be a MultiLineString containing any lines which could be merged and any non-connected line parts.
 }
 \details{
 \subsection{Outputs description}{

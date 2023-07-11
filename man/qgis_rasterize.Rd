@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rasterize.R
 \name{qgis_rasterize}
 \alias{qgis_rasterize}
-\title{QGIS algorithm Convert map to raster}
+\title{QGIS algorithm - Convert map to raster}
 \usage{
 qgis_rasterize(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -22,13 +22,13 @@ qgis_rasterize(
 \arguments{
 \item{EXTENT}{\code{extent} - Minimum extent to render. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{EXTENT_BUFFER}{\code{number} - Buffer around tiles in map units. A numeric value.}
+\item{EXTENT_BUFFER}{\code{number} - Buffer around tiles in map units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{TILE_SIZE}{\code{number} - Tile size. A numeric value.}
+\item{TILE_SIZE}{\code{number} - Tile size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAP_UNITS_PER_PIXEL}{\code{number} - Map units per pixel. A numeric value.}
+\item{MAP_UNITS_PER_PIXEL}{\code{number} - Map units per pixel. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAKE_BACKGROUND_TRANSPARENT}{\code{boolean} - Make background transparent. 1 for true/yes. 0 for false/no.}
+\item{MAKE_BACKGROUND_TRANSPARENT}{\code{boolean} - Make background transparent. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{MAP_THEME}{\code{maptheme} - Map theme to render. Name of an existing map theme.}
 
@@ -45,7 +45,7 @@ qgis_rasterize(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert map to raster (native:rasterize)
+QGIS Algorithm provided by QGIS (native c++) Convert map to raster (native:rasterize). Renders the map canvas to a raster file. This algorithm rasterizes map canvas content.  A map theme can be selected to render a predetermined set of layers with a defined style for each layer. Alternatively, a set of layers can be selected if no map theme is set. If neither map theme nor layer is set, all the visible layers in the set extent will be rendered.  The minimum extent entered will internally be extended to a multiple of the tile size.
 }
 \details{
 \subsection{Outputs description}{

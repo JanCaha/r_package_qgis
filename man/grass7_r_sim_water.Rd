@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_sim_water.R
 \name{grass7_r_sim_water}
 \alias{grass7_r_sim_water}
-\title{QGIS algorithm r.sim.water}
+\title{QGIS algorithm - r.sim.water}
 \usage{
 grass7_r_sim_water(
   elevation = qgisprocess:::qgis_default_value(),
@@ -48,45 +48,45 @@ grass7_r_sim_water(
 \arguments{
 \item{elevation}{\code{raster} - Name of the elevation raster map (m). Path to a raster layer.}
 
-\item{dx}{\code{raster} - Name of the x-derivatives raster map (m/m). Path to a raster layer.}
+\item{dx}{\code{raster} - Name of the x-derivatives raster map (m\code{/}m). Path to a raster layer.}
 
-\item{dy}{\code{raster} - Name of the y-derivatives raster map (m/m). Path to a raster layer.}
+\item{dy}{\code{raster} - Name of the y-derivatives raster map (m\code{/}m). Path to a raster layer.}
 
-\item{rain}{\code{raster} - Name of the rainfall excess rate (rain-infilt) raster map (mm/hr). Path to a raster layer.}
+\item{rain}{\code{raster} - Name of the rainfall excess rate (rain-infilt) raster map (mm\code{/}hr). Path to a raster layer.}
 
-\item{rain_value}{\code{number} - Rainfall excess rate unique value (mm/hr). A numeric value.}
+\item{rain_value}{\code{number} - Rainfall excess rate unique value (mm\code{/}hr). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{infil}{\code{raster} - Name of the runoff infiltration rate raster map (mm/hr). Path to a raster layer.}
+\item{infil}{\code{raster} - Name of the runoff infiltration rate raster map (mm\code{/}hr). Path to a raster layer.}
 
-\item{infil_value}{\code{number} - Runoff infiltration rate unique value (mm/hr). A numeric value.}
+\item{infil_value}{\code{number} - Runoff infiltration rate unique value (mm\code{/}hr). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{man}{\code{raster} - Name of the Mannings n raster map. Path to a raster layer.}
 
-\item{man_value}{\code{number} - Manning's n unique value. A numeric value.}
+\item{man_value}{\code{number} - Manning's n unique value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{flow_control}{\code{raster} - Name of the flow controls raster map (permeability ratio 0-1). Path to a raster layer.}
 
 \item{observation}{\code{source} - Sampling locations vector points. Path to a vector layer.}
 
-\item{nwalkers}{\code{number} - Number of walkers, default is twice the number of cells. A numeric value.}
+\item{nwalkers}{\code{number} - Number of walkers, default is twice the number of cells. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{niterations}{\code{number} - Time used for iterations (minutes). A numeric value.}
+\item{niterations}{\code{number} - Time used for iterations (minutes). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{output_step}{\code{number} - Time interval for creating output maps (minutes). A numeric value.}
+\item{output_step}{\code{number} - Time interval for creating output maps (minutes). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{diffusion_coeff}{\code{number} - Water diffusion constant. A numeric value.}
+\item{diffusion_coeff}{\code{number} - Water diffusion constant. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{hmax}{\code{number} - Threshold water depth (m). A numeric value.}
+\item{hmax}{\code{number} - Threshold water depth (m). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{halpha}{\code{number} - Diffusion increase constant. A numeric value.}
+\item{halpha}{\code{number} - Diffusion increase constant. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{hbeta}{\code{number} - Weighting factor for water flow velocity vector. A numeric value.}
+\item{hbeta}{\code{number} - Weighting factor for water flow velocity vector. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.t}{\code{boolean} - Time-series output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Time-series output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
 \item{depth}{\code{rasterDestination} - Water depth (m). Path for new raster layer.}
 
-\item{discharge}{\code{rasterDestination} - Water discharge (m3/s). Path for new raster layer.}
+\item{discharge}{\code{rasterDestination} - Water discharge (m3\code{/}s). Path for new raster layer.}
 
 \item{error}{\code{rasterDestination} - Simulation error (m). Path for new raster layer.}
 
@@ -96,23 +96,23 @@ grass7_r_sim_water(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -123,13 +123,13 @@ grass7_r_sim_water(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.sim.water (grass7:r.sim.water)
+QGIS Algorithm provided by GRASS r.sim.water (grass7:r.sim.water). Overland flow hydrologic simulation using path sampling method (SIMWE).
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
 \item depth - outputRaster - Water depth (m)
-\item discharge - outputRaster - Water discharge (m3/s)
+\item discharge - outputRaster - Water discharge (m3\code{/}s)
 \item error - outputRaster - Simulation error (m)
 \item logfile - outputFile - Name for sampling points output text file.
 \item walkers_output - outputVector - Name of the output walkers vector points layer

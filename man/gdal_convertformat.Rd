@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_convertformat.R
 \name{gdal_convertformat}
 \alias{gdal_convertformat}
-\title{QGIS algorithm Convert format}
+\title{QGIS algorithm - Convert format}
 \usage{
 gdal_convertformat(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ gdal_convertformat(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{CONVERT_ALL_LAYERS}{\code{boolean} - Convert all layers from dataset. 1 for true/yes. 0 for false/no.}
+\item{CONVERT_ALL_LAYERS}{\code{boolean} - Convert all layers from dataset. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Converted. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ gdal_convertformat(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Convert format (gdal:convertformat)
+QGIS Algorithm provided by GDAL Convert format (gdal:convertformat). The algorithm converts simple features data between file formats.  Use convert all layers to convert a whole dataset. Supported output formats for this option are: - GPKG - GML
 }
 \details{
 \subsection{Outputs description}{

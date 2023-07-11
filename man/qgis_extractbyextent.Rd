@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractbyextent.R
 \name{qgis_extractbyextent}
 \alias{qgis_extractbyextent}
-\title{QGIS algorithm Extract/clip by extent}
+\title{QGIS algorithm - Extract/clip by extent}
 \usage{
 qgis_extractbyextent(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_extractbyextent(
 
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{CLIP}{\code{boolean} - Clip features to extent. 1 for true/yes. 0 for false/no.}
+\item{CLIP}{\code{boolean} - Clip features to extent. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_extractbyextent(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract/clip by extent (native:extractbyextent)
+QGIS Algorithm provided by QGIS (native c++) Extract/clip by extent (native:extractbyextent). This algorithm creates a new vector layer that only contains features which fall within a specified extent. Any features which intersect the extent will be included.  Optionally, feature geometries can also be clipped to the extent. If this option is selected, then the output geometries will automatically be converted to multi geometries to ensure uniform output geometry types.
 }
 \details{
 \subsection{Outputs description}{

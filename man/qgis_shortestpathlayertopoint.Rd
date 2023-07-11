@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_shortestpathlayertopoint.R
 \name{qgis_shortestpathlayertopoint}
 \alias{qgis_shortestpathlayertopoint}
-\title{QGIS algorithm Shortest path (layer to point)}
+\title{QGIS algorithm - Shortest path (layer to point)}
 \usage{
 qgis_shortestpathlayertopoint(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -31,19 +31,19 @@ qgis_shortestpathlayertopoint(
 
 \item{DIRECTION_FIELD}{\code{field} - Direction field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{VALUE_FORWARD}{\code{string} - Value for forward direction. String value.}
+\item{VALUE_FORWARD}{\code{string} - Value for forward direction. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VALUE_BACKWARD}{\code{string} - Value for backward direction. String value.}
+\item{VALUE_BACKWARD}{\code{string} - Value for backward direction. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VALUE_BOTH}{\code{string} - Value for both directions. String value.}
+\item{VALUE_BOTH}{\code{string} - Value for both directions. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{DEFAULT_DIRECTION}{\code{enum}  of \verb{("Forward direction", "Backward direction", "Both directions")} - Default direction. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{SPEED_FIELD}{\code{field} - Speed field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{DEFAULT_SPEED}{\code{number} - Default speed (km/h). A numeric value.}
+\item{DEFAULT_SPEED}{\code{number} - Default speed (km\code{/}h). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{TOLERANCE}{\code{distance} - Topology tolerance. A numeric value.}
+\item{TOLERANCE}{\code{distance} - Topology tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{START_POINTS}{\code{source} - Vector layer with start points. Path to a vector layer.}
 
@@ -60,7 +60,7 @@ qgis_shortestpathlayertopoint(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (native:shortestpathlayertopoint)
+QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (native:shortestpathlayertopoint). This algorithm computes optimal (shortest or fastest) route from multiple start points defined by vector layer and given end point.
 }
 \details{
 \subsection{Outputs description}{

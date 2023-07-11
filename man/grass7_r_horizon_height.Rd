@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_horizon_height.R
 \name{grass7_r_horizon_height}
 \alias{grass7_r_horizon_height}
-\title{QGIS algorithm r.horizon.height}
+\title{QGIS algorithm - r.horizon.height}
 \usage{
 grass7_r_horizon_height(
   elevation = qgisprocess:::qgis_default_value(),
@@ -34,37 +34,37 @@ grass7_r_horizon_height(
 
 \item{coordinates}{\code{point} - Coordinate for which you want to calculate the horizon. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{direction}{\code{number} - Direction in which you want to know the horizon height. A numeric value.}
+\item{direction}{\code{number} - Direction in which you want to know the horizon height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{step}{\code{number} - Angle step size for multidirectional horizon. A numeric value.}
+\item{step}{\code{number} - Angle step size for multidirectional horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{start}{\code{number} - Start angle for multidirectional horizon. A numeric value.}
+\item{start}{\code{number} - Start angle for multidirectional horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{end}{\code{number} - End angle for multidirectional horizon. A numeric value.}
+\item{end}{\code{number} - End angle for multidirectional horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{bufferzone}{\code{number} - For horizon rasters, read from the DEM an extra buffer around the present region. A numeric value.}
+\item{bufferzone}{\code{number} - For horizon rasters, read from the DEM an extra buffer around the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{e_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer eastward the present region. A numeric value.}
+\item{e_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer eastward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{w_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer westward the present region. A numeric value.}
+\item{w_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer westward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{n_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer northward the present region. A numeric value.}
+\item{n_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer northward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{s_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer southward the present region. A numeric value.}
+\item{s_buff}{\code{number} - For horizon rasters, read from the DEM an extra buffer southward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{maxdistance}{\code{number} - The maximum distance to consider when finding the horizon height. A numeric value.}
+\item{maxdistance}{\code{number} - The maximum distance to consider when finding the horizon height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{distance}{\code{number} - Sampling distance step coefficient. A numeric value.}
+\item{distance}{\code{number} - Sampling distance step coefficient. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.d}{\code{boolean} - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
-\item{.c}{\code{boolean} - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{html}{\code{fileDestination} - Horizon. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -75,7 +75,7 @@ grass7_r_horizon_height(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.horizon.height (grass7:r.horizon.height)
+QGIS Algorithm provided by GRASS r.horizon.height (grass7:r.horizon.height). r.horizon.height - Horizon angle computation from a digital elevation model.
 }
 \details{
 \subsection{Outputs description}{

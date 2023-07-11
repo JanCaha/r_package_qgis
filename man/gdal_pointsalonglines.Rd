@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_pointsalonglines.R
 \name{gdal_pointsalonglines}
 \alias{gdal_pointsalonglines}
-\title{QGIS algorithm Points along lines}
+\title{QGIS algorithm - Points along lines}
 \usage{
 gdal_pointsalonglines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ gdal_pointsalonglines(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{GEOMETRY}{\code{string} - Geometry column name. String value.}
+\item{GEOMETRY}{\code{string} - Geometry column name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISTANCE}{\code{number} - Distance from line start represented as fraction of line length. A numeric value.}
+\item{DISTANCE}{\code{number} - Distance from line start represented as fraction of line length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Points along lines. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ gdal_pointsalonglines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Points along lines (gdal:pointsalonglines)
+QGIS Algorithm provided by GDAL Points along lines (gdal:pointsalonglines). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer GEOMETRY: Geometry column name 	Default value:	geometry 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DISTANCE: Distance from line start represented as fraction of line length 	Default value:	0.5 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Points along lines 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

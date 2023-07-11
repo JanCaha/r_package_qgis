@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Aspect (native:aspect)
+##' QGIS Algorithm provided by QGIS (native c++) Aspect (native:aspect). This algorithm calculates the aspect of the Digital Terrain Model in input.  The final aspect raster layer contains values from 0 to 360 that express the slope direction: starting from North (0°) and continuing clockwise.
 ##'
-##' @title QGIS algorithm Aspect
+##' @title QGIS algorithm - Aspect
 ##'
 ##' @param INPUT `raster` - Elevation layer. Path to a raster layer.
-##' @param Z_FACTOR `number` - Z factor. A numeric value.
+##' @param Z_FACTOR `number` - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Aspect. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

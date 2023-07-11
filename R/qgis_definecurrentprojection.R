@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Define Shapefile projection (qgis:definecurrentprojection)
+##' QGIS Algorithm provided by QGIS Define Shapefile projection (qgis:definecurrentprojection). Changes a Shapefile's projection to a new CRS without reprojecting features This algorithm sets an existing Shapefile's projection to the provided CRS. Contrary to the "Assign projection" algorithm, it will not output a new layer. The .prj and .qpj files associated with the Shapefile will be overwritten - or created if missing - to match the provided CRS.
 ##'
-##' @title QGIS algorithm Define Shapefile projection
+##' @title QGIS algorithm - Define Shapefile projection
 ##'
 ##' @param INPUT `vector` - Input Shapefile. Path to a vector layer.
 ##' @param CRS `crs` - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..

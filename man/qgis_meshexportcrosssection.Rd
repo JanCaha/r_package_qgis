@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_meshexportcrosssection.R
 \name{qgis_meshexportcrosssection}
 \alias{qgis_meshexportcrosssection}
-\title{QGIS algorithm Export cross section dataset values on lines from mesh}
+\title{QGIS algorithm - Export cross section dataset values on lines from mesh}
 \usage{
 qgis_meshexportcrosssection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -28,11 +28,11 @@ qgis_meshexportcrosssection(
 
 \item{INPUT_LINES}{\code{source} - Lines for data export. Path to a vector layer.}
 
-\item{RESOLUTION}{\code{distance} - Line segmentation resolution. A numeric value.}
+\item{RESOLUTION}{\code{distance} - Line segmentation resolution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{COORDINATES_DIGITS}{\code{number} - Digits count for coordinates. A numeric value.}
+\item{COORDINATES_DIGITS}{\code{number} - Digits count for coordinates. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATASET_DIGITS}{\code{number} - Digits count for dataset value. A numeric value.}
+\item{DATASET_DIGITS}{\code{number} - Digits count for dataset value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Exported data CSV file. Path for new file.}
 
@@ -45,7 +45,7 @@ qgis_meshexportcrosssection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection)
+QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection). Extracts a mesh dataset's values from lines contained in a vector layer This algorithm extracts mesh's dataset values from line contained in a vector layer. Each line is discretized with a resolution distance parameter for extraction of values on its vertices.
 }
 \details{
 \subsection{Outputs description}{

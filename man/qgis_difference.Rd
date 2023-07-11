@@ -2,12 +2,13 @@
 % Please edit documentation in R/qgis_difference.R
 \name{qgis_difference}
 \alias{qgis_difference}
-\title{QGIS algorithm Difference}
+\title{QGIS algorithm - Difference}
 \usage{
 qgis_difference(
   INPUT = qgisprocess:::qgis_default_value(),
   OVERLAY = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  GRID_SIZE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -21,6 +22,8 @@ qgis_difference(
 
 \item{OUTPUT}{\code{sink} - Difference. Path for new vector layer.}
 
+\item{GRID_SIZE}{\code{number} - Grid size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
 \item{.complete_output}{logical specifying if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
@@ -30,7 +33,7 @@ qgis_difference(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Difference (native:difference)
+QGIS Algorithm provided by QGIS (native c++) Difference (native:difference). This algorithm extracts features from the Input layer that fall outside, or partially overlap, features in the Overlay layer. Input layer features that partially overlap feature(s) in the Overlay layer are split along those features' boundary and only the portions outside the Overlay layer features are retained.  Attributes are not modified, although properties such as area or length of the features will be modified by the difference operation. If such properties are stored as attributes, those attributes will have to be manually updated.
 }
 \details{
 \subsection{Outputs description}{

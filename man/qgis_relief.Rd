@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_relief.R
 \name{qgis_relief}
 \alias{qgis_relief}
-\title{QGIS algorithm Relief}
+\title{QGIS algorithm - Relief}
 \usage{
 qgis_relief(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,9 +20,9 @@ qgis_relief(
 \arguments{
 \item{INPUT}{\code{raster} - Elevation layer. Path to a raster layer.}
 
-\item{Z_FACTOR}{\code{number} - Z factor. A numeric value.}
+\item{Z_FACTOR}{\code{number} - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{AUTO_COLORS}{\code{boolean} - Generate relief classes automatically. 1 for true/yes. 0 for false/no.}
+\item{AUTO_COLORS}{\code{boolean} - Generate relief classes automatically. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{COLORS}{\code{relief_colors} - Relief colors. .}
 
@@ -39,7 +39,7 @@ qgis_relief(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Relief (qgis:relief)
+QGIS Algorithm provided by QGIS Relief (qgis:relief). This algorithm creates a shaded relief layer from digital elevation data.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_fill_dir.R
 \name{grass7_r_fill_dir}
 \alias{grass7_r_fill_dir}
-\title{QGIS algorithm r.fill.dir}
+\title{QGIS algorithm - r.fill.dir}
 \usage{
 grass7_r_fill_dir(
   input = qgisprocess:::qgis_default_value(),
@@ -26,7 +26,7 @@ grass7_r_fill_dir(
 
 \item{format}{\code{enum}  of \verb{("grass", "agnps", "answers")} - Output aspect direction format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.f}{\code{boolean} - Find unresolved areas only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
+\item{.f}{\code{boolean} - Find unresolved areas only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Depressionless DEM. Path for new raster layer.}
 
@@ -36,11 +36,11 @@ grass7_r_fill_dir(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_fill_dir(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.fill.dir (grass7:r.fill.dir)
+QGIS Algorithm provided by GRASS r.fill.dir (grass7:r.fill.dir). Filters and generates a depressionless elevation layer and a flow direction layer from a given elevation raster layer.
 }
 \details{
 \subsection{Outputs description}{

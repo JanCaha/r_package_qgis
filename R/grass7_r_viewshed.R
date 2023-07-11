@@ -1,23 +1,23 @@
-##' QGIS Algorithm provided by GRASS r.viewshed (grass7:r.viewshed)
+##' QGIS Algorithm provided by GRASS r.viewshed (grass7:r.viewshed). Computes the viewshed of a point on an elevation raster map.
 ##'
-##' @title QGIS algorithm r.viewshed
+##' @title QGIS algorithm - r.viewshed
 ##'
 ##' @param input `raster` - Elevation. Path to a raster layer.
 ##' @param coordinates `point` - Coordinate identifying the viewing position. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
-##' @param observer_elevation `number` - Viewing elevation above the ground. A numeric value.
-##' @param target_elevation `number` - Offset for target elevation above the ground. A numeric value.
-##' @param max_distance `number` - Maximum visibility radius. By default infinity (-1). A numeric value.
-##' @param refraction_coeff `number` - Refraction coefficient. A numeric value.
-##' @param memory `number` - Amount of memory to use in MB. A numeric value.
-##' @param .c `boolean` - Consider earth curvature (current ellipsoid). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
-##' @param .r `boolean` - Consider the effect of atmospheric refraction. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
-##' @param .b `boolean` - Output format is invisible = 0, visible = 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
-##' @param .e `boolean` - Output format is invisible = NULL, else current elev - viewpoint_elev. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param observer_elevation `number` - Viewing elevation above the ground. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param target_elevation `number` - Offset for target elevation above the ground. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param max_distance `number` - Maximum visibility radius. By default infinity (-1). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param refraction_coeff `number` - Refraction coefficient. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param memory `number` - Amount of memory to use in MB. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .c `boolean` - Consider earth curvature (current ellipsoid). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
+##' @param .r `boolean` - Consider the effect of atmospheric refraction. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
+##' @param .b `boolean` - Output format is invisible = 0, visible = 1. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.
+##' @param .e `boolean` - Output format is invisible = NULL, else current elev - viewpoint_elev. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.
 ##' @param output `rasterDestination` - Intervisibility. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

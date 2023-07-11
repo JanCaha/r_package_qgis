@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_profile.R
 \name{grass7_r_profile}
 \alias{grass7_r_profile}
-\title{QGIS algorithm r.profile}
+\title{QGIS algorithm - r.profile}
 \usage{
 grass7_r_profile(
   input = qgisprocess:::qgis_default_value(),
@@ -24,23 +24,23 @@ grass7_r_profile(
 \arguments{
 \item{input}{\code{raster} - Input raster layer. Path to a raster layer.}
 
-\item{coordinates}{\code{string} - Profile coordinate pairs. String value.}
+\item{coordinates}{\code{string} - Profile coordinate pairs. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{resolution}{\code{number} - Resolution along profile. A numeric value.}
+\item{resolution}{\code{number} - Resolution along profile. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{null_value}{\code{string} - Character to represent no data cell. String value.}
+\item{null_value}{\code{string} - Character to represent no data cell. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{file}{\code{file} - Name of input file containing coordinate pairs. Path to a file.}
 
-\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
-\item{.c}{\code{boolean} - Output RRR:GGG:BBB color values for each profile point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Output RRR:GGG:BBB color values for each profile point. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Profile. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_profile(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.profile (grass7:r.profile)
+QGIS Algorithm provided by GRASS r.profile (grass7:r.profile). Outputs the raster layer values lying on user-defined line(s).
 }
 \details{
 \subsection{Outputs description}{

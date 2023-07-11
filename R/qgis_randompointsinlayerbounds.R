@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS Random points in layer bounds (qgis:randompointsinlayerbounds)
+##' QGIS Algorithm provided by QGIS Random points in layer bounds (qgis:randompointsinlayerbounds). This algorithm creates a new point layer with a given number of random points, all of them within the extent of a given layer. A distance factor can be specified, to avoid points being too close to each other.
 ##'
-##' @title QGIS algorithm Random points in layer bounds
+##' @title QGIS algorithm - Random points in layer bounds
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param POINTS_NUMBER `number` - Number of points. A numeric value.
-##' @param MIN_DISTANCE `distance` - Minimum distance between points. A numeric value.
+##' @param POINTS_NUMBER `number` - Number of points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MIN_DISTANCE `distance` - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Random points. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

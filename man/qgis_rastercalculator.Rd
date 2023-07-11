@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rastercalculator.R
 \name{qgis_rastercalculator}
 \alias{qgis_rastercalculator}
-\title{QGIS algorithm Raster calculator}
+\title{QGIS algorithm - Raster calculator}
 \usage{
 qgis_rastercalculator(
   EXPRESSION = qgisprocess:::qgis_default_value(),
@@ -22,7 +22,7 @@ qgis_rastercalculator(
 
 \item{LAYERS}{\code{multilayer} - Reference layer(s) (used for automated extent, cellsize, and CRS). .}
 
-\item{CELLSIZE}{\code{number} - Cell size (use 0 or empty to set it automatically). A numeric value.}
+\item{CELLSIZE}{\code{number} - Cell size (use 0 or empty to set it automatically). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{EXTENT}{\code{extent} - Output extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
@@ -39,7 +39,7 @@ qgis_rastercalculator(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Raster calculator (qgis:rastercalculator)
+QGIS Algorithm provided by QGIS Raster calculator (qgis:rastercalculator). This algorithm allows performing algebraic operations using raster layers. The resulting layer will have its values computed according to an expression. The expression can contain numerical values, operators and references to any of the layers in the current project. The following functions are also supported: - sin(), cos(), tan(), atan2(), ln(), log10() The extent, cell size, and output CRS can be defined by the user. If the extent is not specified, the minimum extent that covers selected reference layer(s) will be used. If the cell size is not specified, the minimum cell size of selected reference layer(s) will be used. If the output CRS is not specified, the CRS of the first reference layer will be used. The cell size is assumed to be the same in both X and Y axes. Layers are referred by their name as displayed in the layer list and the number of the band to use (based on 1), using the pattern 'layer_name@band number'. For instance, the first band from a layer named DEM will be referred as DEM@1. When using the calculator in the batch interface or from the console, the files to use have to be specified. The corresponding layers are referred using the base name of the file (without the full path). For instance, if using a layer at path/to/my/rasterfile.tif, the first band of that layer will be referred as rasterfile.tif@1.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_out_vtk.R
 \name{grass7_v_out_vtk}
 \alias{grass7_v_out_vtk}
-\title{QGIS algorithm v.out.vtk}
+\title{QGIS algorithm - v.out.vtk}
 \usage{
 grass7_v_out_vtk(
   input = qgisprocess:::qgis_default_value(),
@@ -26,21 +26,21 @@ grass7_v_out_vtk(
 
 \item{type}{\code{enum}  of \verb{("point", "kernel", "centroid", "line", "boundary", "area", "face")} - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{precision}{\code{number} - Number of significant digits (floating point only). A numeric value.}
+\item{precision}{\code{number} - Number of significant digits (floating point only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{zscale}{\code{number} - Scale factor for elevation. A numeric value.}
+\item{zscale}{\code{number} - Scale factor for elevation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.c}{\code{boolean} - Correct the coordinates to fit the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Correct the coordinates to fit the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.n}{\code{boolean} - Export numeric attribute table fields as VTK scalar variables. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Export numeric attribute table fields as VTK scalar variables. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
 \item{output}{\code{fileDestination} - VTK File. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_v_out_vtk(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.out.vtk (grass7:v.out.vtk)
+QGIS Algorithm provided by GRASS v.out.vtk (grass7:v.out.vtk). Converts a vector map to VTK ASCII output.
 }
 \details{
 \subsection{Outputs description}{

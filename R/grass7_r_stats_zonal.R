@@ -1,17 +1,17 @@
-##' QGIS Algorithm provided by GRASS r.stats.zonal (grass7:r.stats.zonal)
+##' QGIS Algorithm provided by GRASS r.stats.zonal (grass7:r.stats.zonal). Calculates category or object oriented statistics (accumulator-based statistics)
 ##'
-##' @title QGIS algorithm r.stats.zonal
+##' @title QGIS algorithm - r.stats.zonal
 ##'
 ##' @param base `raster` - Base raster. Path to a raster layer.
 ##' @param cover `raster` - Cover raster. Path to a raster layer.
 ##' @param method `enum`  of `("count", "sum", "min", "max", "range", "average", "avedev", "variance", "stddev", "skewness", "kurtosis", "variance2", "stddev2", "skewness2", "kurtosis2")` - Method of object-based statistic. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .c `boolean` - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
-##' @param .r `boolean` - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .c `boolean` - Cover values extracted from the category labels of the cover map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
+##' @param .r `boolean` - Create reclass map with statistics as category labels. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
 ##' @param output `rasterDestination` - Resultant raster. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

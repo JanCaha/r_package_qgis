@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_rasterize_over_fixed_value.R
 \name{gdal_rasterize_over_fixed_value}
 \alias{gdal_rasterize_over_fixed_value}
-\title{QGIS algorithm Rasterize (overwrite with fixed value)}
+\title{QGIS algorithm - Rasterize (overwrite with fixed value)}
 \usage{
 gdal_rasterize_over_fixed_value(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,11 +21,11 @@ gdal_rasterize_over_fixed_value(
 
 \item{INPUT_RASTER}{\code{raster} - Input raster layer. Path to a raster layer.}
 
-\item{BURN}{\code{number} - A fixed value to burn. A numeric value.}
+\item{BURN}{\code{number} - A fixed value to burn. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ADD}{\code{boolean} - Add burn in values to existing raster values. 1 for true/yes. 0 for false/no.}
+\item{ADD}{\code{boolean} - Add burn in values to existing raster values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -36,7 +36,7 @@ gdal_rasterize_over_fixed_value(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Rasterize (overwrite with fixed value) (gdal:rasterize_over_fixed_value)
+QGIS Algorithm provided by GDAL Rasterize (overwrite with fixed value) (gdal:rasterize_over_fixed_value). ---------------- Arguments ----------------  INPUT: Input vector layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer INPUT_RASTER: Input raster layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BURN: A fixed value to burn 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ADD: Add burn in values to existing raster values 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
 }
 \details{
 \subsection{Outputs description}{

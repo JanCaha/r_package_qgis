@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_shortestline.R
 \name{qgis_shortestline}
 \alias{qgis_shortestline}
-\title{QGIS algorithm Shortest line between features}
+\title{QGIS algorithm - Shortest line between features}
 \usage{
 qgis_shortestline(
   SOURCE = qgisprocess:::qgis_default_value(),
@@ -24,9 +24,9 @@ qgis_shortestline(
 
 \item{METHOD}{\code{enum}  of \verb{("Distance to Nearest Point on feature", "Distance to Feature Centroid")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NEIGHBORS}{\code{number} - Maximum number of neighbors. A numeric value.}
+\item{NEIGHBORS}{\code{number} - Maximum number of neighbors. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISTANCE}{\code{distance} - Maximum distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Maximum distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Shortest lines. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_shortestline(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Shortest line between features (native:shortestline)
+QGIS Algorithm provided by QGIS (native c++) Shortest line between features (native:shortestline). This algorithm creates a line layer as the shortest line between the source and the destination layer. By default only the first nearest feature of the destination layer is taken into account. The n-nearest neighboring features number can be specified.  If a maximum distance is specified, then only features which are closer than this distance will be considered.  The output features will contain all the source layer attributes, all the attributes from the n-nearest feature and the additional field of the distance.  This algorithm uses purely Cartesian calculations for distance, and does not consider geodetic or ellipsoid properties when determining feature proximity. The measurement and output coordinate system is based on the coordinate system of the source layer.
 }
 \details{
 \subsection{Outputs description}{

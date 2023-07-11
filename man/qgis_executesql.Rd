@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_executesql.R
 \name{qgis_executesql}
 \alias{qgis_executesql}
-\title{QGIS algorithm Execute SQL}
+\title{QGIS algorithm - Execute SQL}
 \usage{
 qgis_executesql(
   INPUT_DATASOURCES = qgisprocess:::qgis_default_value(),
@@ -23,9 +23,9 @@ qgis_executesql(
 
 \item{INPUT_QUERY}{\code{execute_sql} - SQL query. .}
 
-\item{INPUT_UID_FIELD}{\code{string} - Unique identifier field. String value.}
+\item{INPUT_UID_FIELD}{\code{string} - Unique identifier field. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INPUT_GEOMETRY_FIELD}{\code{string} - Geometry field. String value.}
+\item{INPUT_GEOMETRY_FIELD}{\code{string} - Geometry field. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{INPUT_GEOMETRY_TYPE}{\code{enum}  of \verb{("Autodetect", "No geometry", "Point", "LineString", "Polygon", "MultiPoint", "MultiLineString", "MultiPolygon")} - Geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -42,7 +42,7 @@ qgis_executesql(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql)
+QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql). Runs a simple or complex query with SQL syntax on the source layer. Input datasources are identified with input1, input2, ..., inputN and a simple query will look like: SELECT * FROM input1 The result of the query will be added as a new layer.
 }
 \details{
 \subsection{Outputs description}{

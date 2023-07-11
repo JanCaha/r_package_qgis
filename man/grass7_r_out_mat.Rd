@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_mat.R
 \name{grass7_r_out_mat}
 \alias{grass7_r_out_mat}
-\title{QGIS algorithm r.out.mat}
+\title{QGIS algorithm - r.out.mat}
 \usage{
 grass7_r_out_mat(
   input = qgisprocess:::qgis_default_value(),
@@ -22,7 +22,7 @@ grass7_r_out_mat(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -33,7 +33,7 @@ grass7_r_out_mat(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.mat (grass7:r.out.mat)
+QGIS Algorithm provided by GRASS r.out.mat (grass7:r.out.mat). Exports a GRASS raster to a binary MAT-File
 }
 \details{
 \subsection{Outputs description}{

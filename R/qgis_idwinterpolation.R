@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS IDW interpolation (qgis:idwinterpolation)
+##' QGIS Algorithm provided by QGIS IDW interpolation (qgis:idwinterpolation). Generates an Inverse Distance Weighted (IDW) interpolation of a point vector layer. Sample points are weighted during interpolation such that the influence of one point relative to another declines with distance from the unknown point you want to create.
 ##'
-##' @title QGIS algorithm IDW interpolation
+##' @title QGIS algorithm - IDW interpolation
 ##'
 ##' @param INTERPOLATION_DATA `idw_interpolation_data` - Input layer(s). .
-##' @param DISTANCE_COEFFICIENT `number` - Distance coefficient P. A numeric value.
+##' @param DISTANCE_COEFFICIENT `number` - Distance coefficient P. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param EXTENT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param PIXEL_SIZE `number` - Output raster size. A numeric value.
+##' @param PIXEL_SIZE `number` - Output raster size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Interpolated. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

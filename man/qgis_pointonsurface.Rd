@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pointonsurface.R
 \name{qgis_pointonsurface}
 \alias{qgis_pointonsurface}
-\title{QGIS algorithm Point on surface}
+\title{QGIS algorithm - Point on surface}
 \usage{
 qgis_pointonsurface(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_pointonsurface(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{ALL_PARTS}{\code{boolean} - Create point on surface for each part. 1 for true/yes. 0 for false/no.}
+\item{ALL_PARTS}{\code{boolean} - Create point on surface for each part. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Point. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_pointonsurface(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Point on surface (native:pointonsurface)
+QGIS Algorithm provided by QGIS (native c++) Point on surface (native:pointonsurface). Returns a point guaranteed to lie on the surface of a geometry.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,20 +1,20 @@
-##' QGIS Algorithm provided by GRASS i.evapo.mh (grass7:i.evapo.mh)
+##' QGIS Algorithm provided by GRASS i.evapo.mh (grass7:i.evapo.mh). Computes evapotranspiration calculation modified or original Hargreaves formulation, 2001.
 ##'
-##' @title QGIS algorithm i.evapo.mh
+##' @title QGIS algorithm - i.evapo.mh
 ##'
-##' @param netradiation_diurnal `raster` - Name of input diurnal net radiation raster map (W/m2/d). Path to a raster layer.
+##' @param netradiation_diurnal `raster` - Name of input diurnal net radiation raster map (W\code{/}m2\code{/}d). Path to a raster layer.
 ##' @param average_temperature `raster` - Name of input average air temperature raster map (C). Path to a raster layer.
 ##' @param minimum_temperature `raster` - Name of input minimum air temperature raster map (C). Path to a raster layer.
 ##' @param maximum_temperature `raster` - Name of input maximum air temperature raster map (C). Path to a raster layer.
-##' @param precipitation `raster` - Name of precipitation raster map (mm/month). Path to a raster layer.
-##' @param .z `boolean` - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
-##' @param .h `boolean` - Use original Hargreaves (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.
-##' @param .s `boolean` - Use Hargreaves-Samani (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param precipitation `raster` - Name of precipitation raster map (mm\code{/}month). Path to a raster layer.
+##' @param .z `boolean` - Set negative ETa to zero. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.
+##' @param .h `boolean` - Use original Hargreaves (1985). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.
+##' @param .s `boolean` - Use Hargreaves-Samani (1985). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.
 ##' @param output `rasterDestination` - Evapotranspiration. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

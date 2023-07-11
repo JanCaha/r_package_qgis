@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_topo_corr.R
 \name{grass7_i_topo_corr}
 \alias{grass7_i_topo_corr}
-\title{QGIS algorithm i.topo.corr}
+\title{QGIS algorithm - i.topo.corr}
 \usage{
 grass7_i_topo_corr(
   input = qgisprocess:::qgis_default_value(),
@@ -24,17 +24,17 @@ grass7_i_topo_corr(
 
 \item{basemap}{\code{raster} - Name of illumination input base raster map. Path to a raster layer.}
 
-\item{zenith}{\code{number} - Solar zenith in degrees. A numeric value.}
+\item{zenith}{\code{number} - Solar zenith in degrees. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{method}{\code{enum}  of \verb{("cosine", "minnaert", "c-factor", "percent")} - Topographic correction method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.s}{\code{boolean} - Scale output to input and copy color rules. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Scale output to input and copy color rules. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
 \item{output}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -45,7 +45,7 @@ grass7_i_topo_corr(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.topo.corr (grass7:i.topo.corr)
+QGIS Algorithm provided by GRASS i.topo.corr (grass7:i.topo.corr). Computes topographic correction of reflectance.
 }
 \details{
 \subsection{Outputs description}{

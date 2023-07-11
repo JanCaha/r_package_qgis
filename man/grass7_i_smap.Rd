@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_smap.R
 \name{grass7_i_smap}
 \alias{grass7_i_smap}
-\title{QGIS algorithm i.smap}
+\title{QGIS algorithm - i.smap}
 \usage{
 grass7_i_smap(
   input = qgisprocess:::qgis_default_value(),
@@ -26,9 +26,9 @@ grass7_i_smap(
 
 \item{signaturefile}{\code{file} - Name of input file containing signatures. Path to a file.}
 
-\item{blocksize}{\code{number} - Size of submatrix to process at one time. A numeric value.}
+\item{blocksize}{\code{number} - Size of submatrix to process at one time. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.m}{\code{boolean} - Use maximum likelihood estimation (instead of smap). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - Use maximum likelihood estimation (instead of smap). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
 \item{output}{\code{rasterDestination} - Classification. Path for new raster layer.}
 
@@ -36,11 +36,11 @@ grass7_i_smap(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_i_smap(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.smap (grass7:i.smap)
+QGIS Algorithm provided by GRASS i.smap (grass7:i.smap). Performs contextual image classification using sequential maximum a posteriori (SMAP) estimation.
 }
 \details{
 \subsection{Outputs description}{

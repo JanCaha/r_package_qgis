@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create spatial index (native:createspatialindex)
+##' QGIS Algorithm provided by QGIS (native c++) Create spatial index (native:createspatialindex). Creates an index to speed up access to the features in a layer based on their spatial location. Support for spatial index creation is dependent on the layer's data provider.
 ##'
-##' @title QGIS algorithm Create spatial index
+##' @title QGIS algorithm - Create spatial index
 ##'
 ##' @param INPUT `vector` - Input layer. Path to a vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

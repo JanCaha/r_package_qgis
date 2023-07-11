@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_fuzzifyrasterpowermembership.R
 \name{qgis_fuzzifyrasterpowermembership}
 \alias{qgis_fuzzifyrasterpowermembership}
-\title{QGIS algorithm Fuzzify raster (power membership)}
+\title{QGIS algorithm - Fuzzify raster (power membership)}
 \usage{
 qgis_fuzzifyrasterpowermembership(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,11 +22,11 @@ qgis_fuzzifyrasterpowermembership(
 
 \item{BAND}{\code{band} - Band Number. Integer value representing an existing raster band number.}
 
-\item{FUZZYLOWBOUND}{\code{number} - Low fuzzy membership bound. A numeric value.}
+\item{FUZZYLOWBOUND}{\code{number} - Low fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FUZZYHIGHBOUND}{\code{number} - High fuzzy membership bound. A numeric value.}
+\item{FUZZYHIGHBOUND}{\code{number} - High fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FUZZYEXPONENT}{\code{number} - Membership function exponent. A numeric value.}
+\item{FUZZYEXPONENT}{\code{number} - Membership function exponent. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified raster. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ qgis_fuzzifyrasterpowermembership(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (power membership) (native:fuzzifyrasterpowermembership)
+QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (power membership) (native:fuzzifyrasterpowermembership). The Fuzzify raster (power membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following a power function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows a power function.  The power function is constructed using three user-defined input raster values which set the point of full membership (high bound, results to 1), no membership (low bound, results to 0) and function exponent (only positive) respectively. The fuzzy set in between those the upper and lower bounds values is then defined as a power function.  Both increasing and decreasing fuzzy sets can be modeled by swapping the high and low bound parameters.
 }
 \details{
 \subsection{Outputs description}{

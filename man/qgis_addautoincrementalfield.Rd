@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_addautoincrementalfield.R
 \name{qgis_addautoincrementalfield}
 \alias{qgis_addautoincrementalfield}
-\title{QGIS algorithm Add autoincremental field}
+\title{QGIS algorithm - Add autoincremental field}
 \usage{
 qgis_addautoincrementalfield(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,19 +23,19 @@ qgis_addautoincrementalfield(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{FIELD_NAME}{\code{string} - Field name. String value.}
+\item{FIELD_NAME}{\code{string} - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{START}{\code{number} - Start values at. A numeric value.}
+\item{START}{\code{number} - Start values at. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MODULUS}{\code{number} - Modulus value. A numeric value.}
+\item{MODULUS}{\code{number} - Modulus value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GROUP_FIELDS}{\code{field} - Group values by. The name of an existing field. ; delimited list of existing field names.}
 
 \item{SORT_EXPRESSION}{\code{expression} - Sort expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
-\item{SORT_ASCENDING}{\code{boolean} - Sort ascending. 1 for true/yes. 0 for false/no.}
+\item{SORT_ASCENDING}{\code{boolean} - Sort ascending. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SORT_NULLS_FIRST}{\code{boolean} - Sort nulls first. 1 for true/yes. 0 for false/no.}
+\item{SORT_NULLS_FIRST}{\code{boolean} - Sort nulls first. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Incremented. Path for new vector layer.}
 
@@ -48,7 +48,7 @@ qgis_addautoincrementalfield(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add autoincremental field (native:addautoincrementalfield)
+QGIS Algorithm provided by QGIS (native c++) Add autoincremental field (native:addautoincrementalfield). This algorithm adds a new integer field to a vector layer, with a sequential value for each feature.  This field can be used as a unique ID for features in the layer. The new attribute is not added to the input layer but a new layer is generated instead.  The initial starting value for the incremental series can be specified.  Specifying an optional modulus value will restart the count to START whenever the field value reaches the modulus value.  Optionally, grouping fields can be specified. If group fields are present, then the field value will be reset for each combination of these group field values.  The sort order for features may be specified, if so, then the incremental field will respect this sort order.
 }
 \details{
 \subsection{Outputs description}{

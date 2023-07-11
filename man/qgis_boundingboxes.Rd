@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_boundingboxes.R
 \name{qgis_boundingboxes}
 \alias{qgis_boundingboxes}
-\title{QGIS algorithm Bounding boxes}
+\title{QGIS algorithm - Bounding boxes}
 \usage{
 qgis_boundingboxes(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_boundingboxes(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Bounding boxes (native:boundingboxes)
+QGIS Algorithm provided by QGIS (native c++) Bounding boxes (native:boundingboxes). This algorithm calculates the bounding box (envelope) for each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a bounding box calculation which covers the whole layer or grouped subsets of features.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_filterverticesbyz.R
 \name{qgis_filterverticesbyz}
 \alias{qgis_filterverticesbyz}
-\title{QGIS algorithm Filter vertices by Z value}
+\title{QGIS algorithm - Filter vertices by Z value}
 \usage{
 qgis_filterverticesbyz(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_filterverticesbyz(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{MIN}{\code{number} - Minimum. A numeric value.}
+\item{MIN}{\code{number} - Minimum. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAX}{\code{number} - Maximum. A numeric value.}
+\item{MAX}{\code{number} - Maximum. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Filtered. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_filterverticesbyz(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Filter vertices by Z value (native:filterverticesbyz)
+QGIS Algorithm provided by QGIS (native c++) Filter vertices by Z value (native:filterverticesbyz). Filters away vertices based on their z-value, returning geometries with only vertex points that have a z-value ≥ the specified minimum value and ≤ the maximum value.  If the minimum value is not specified then only the maximum value is tested, and similarly if the maximum value is not specified then only the minimum value is tested.  Depending on the input geometry attributes and the filters used, the resultant geometries created by this algorithm may no longer be valid.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_flow.R
 \name{grass7_r_flow}
 \alias{grass7_r_flow}
-\title{QGIS algorithm r.flow}
+\title{QGIS algorithm - r.flow}
 \usage{
 grass7_r_flow(
   elevation = qgisprocess:::qgis_default_value(),
@@ -37,15 +37,15 @@ grass7_r_flow(
 
 \item{barrier}{\code{raster} - Barrier. Path to a raster layer.}
 
-\item{skip}{\code{number} - Number of cells between flowlines. A numeric value.}
+\item{skip}{\code{number} - Number of cells between flowlines. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{bound}{\code{number} - Maximum number of segments per flowline. A numeric value.}
+\item{bound}{\code{number} - Maximum number of segments per flowline. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.u}{\code{boolean} - Compute upslope flowlines instead of default downhill flowlines. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -u.}
+\item{.u}{\code{boolean} - Compute upslope flowlines instead of default downhill flowlines. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -u.}
 
-\item{.arg_3}{\code{boolean} - 3-D lengths instead of 2-D. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -3.}
+\item{.arg_3}{\code{boolean} - 3-D lengths instead of 2-D. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -3.}
 
-\item{.m}{\code{boolean} - Use less memory, at a performance penalty. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - Use less memory, at a performance penalty. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
 \item{flowline}{\code{vectorDestination} - Flow line. Path for new vector layer.}
 
@@ -55,19 +55,19 @@ grass7_r_flow(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -78,7 +78,7 @@ grass7_r_flow(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.flow (grass7:r.flow)
+QGIS Algorithm provided by GRASS r.flow (grass7:r.flow). Construction of flowlines, flowpath lengths, and flowaccumulation (contributing areas) from a raster digital elevation model (DEM).
 }
 \details{
 \subsection{Outputs description}{

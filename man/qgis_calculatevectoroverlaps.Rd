@@ -2,12 +2,13 @@
 % Please edit documentation in R/qgis_calculatevectoroverlaps.R
 \name{qgis_calculatevectoroverlaps}
 \alias{qgis_calculatevectoroverlaps}
-\title{QGIS algorithm Overlap analysis}
+\title{QGIS algorithm - Overlap analysis}
 \usage{
 qgis_calculatevectoroverlaps(
   INPUT = qgisprocess:::qgis_default_value(),
   LAYERS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  GRID_SIZE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -21,6 +22,8 @@ qgis_calculatevectoroverlaps(
 
 \item{OUTPUT}{\code{sink} - Overlap. Path for new vector layer.}
 
+\item{GRID_SIZE}{\code{number} - Grid size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
 \item{.complete_output}{logical specifying if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
@@ -30,7 +33,7 @@ qgis_calculatevectoroverlaps(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Overlap analysis (native:calculatevectoroverlaps)
+QGIS Algorithm provided by QGIS (native c++) Overlap analysis (native:calculatevectoroverlaps). This algorithm calculates the area and percentage cover by which features from an input layer are overlapped by features from a selection of overlay layers.  New attributes are added to the output layer reporting the total area of overlap and percentage of the input feature overlapped by each of the selected overlay layers.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_concavehull.R
 \name{qgis_concavehull}
 \alias{qgis_concavehull}
-\title{QGIS algorithm Concave hull (alpha shapes)}
+\title{QGIS algorithm - Concave hull (alpha shapes)}
 \usage{
 qgis_concavehull(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_concavehull(
 \arguments{
 \item{INPUT}{\code{source} - Input point layer. Path to a vector layer.}
 
-\item{ALPHA}{\code{number} - Threshold (0-1, where 1 is equivalent with Convex Hull). A numeric value.}
+\item{ALPHA}{\code{number} - Threshold (0-1, where 1 is equivalent with Convex Hull). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{HOLES}{\code{boolean} - Allow holes. 1 for true/yes. 0 for false/no.}
+\item{HOLES}{\code{boolean} - Allow holes. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NO_MULTIGEOMETRY}{\code{boolean} - Split multipart geometry into singleparts geometries. 1 for true/yes. 0 for false/no.}
+\item{NO_MULTIGEOMETRY}{\code{boolean} - Split multipart geometry into singleparts geometries. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Concave hull. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_concavehull(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Concave hull (alpha shapes) (qgis:concavehull)
+QGIS Algorithm provided by QGIS Concave hull (alpha shapes) (qgis:concavehull). Creates a concave hull using the alpha shapes algorithm. This algorithm computes the concave hull of the features in an input layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Point on surface (native:pointonsurface)
+##' QGIS Algorithm provided by QGIS (native c++) Point on surface (native:pointonsurface). Returns a point guaranteed to lie on the surface of a geometry.
 ##'
-##' @title QGIS algorithm Point on surface
+##' @title QGIS algorithm - Point on surface
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param ALL_PARTS `boolean` - Create point on surface for each part. 1 for true/yes. 0 for false/no.
+##' @param ALL_PARTS `boolean` - Create point on surface for each part. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Point. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

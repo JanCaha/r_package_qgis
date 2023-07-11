@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_arraytranslatedfeatures.R
 \name{qgis_arraytranslatedfeatures}
 \alias{qgis_arraytranslatedfeatures}
-\title{QGIS algorithm Array of translated features}
+\title{QGIS algorithm - Array of translated features}
 \usage{
 qgis_arraytranslatedfeatures(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,15 +21,15 @@ qgis_arraytranslatedfeatures(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{COUNT}{\code{number} - Number of features to create. A numeric value.}
+\item{COUNT}{\code{number} - Number of features to create. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_X}{\code{distance} - Step distance (x-axis). A numeric value.}
+\item{DELTA_X}{\code{distance} - Step distance (x-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_Y}{\code{distance} - Step distance (y-axis). A numeric value.}
+\item{DELTA_Y}{\code{distance} - Step distance (y-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_Z}{\code{number} - Step distance (z-axis). A numeric value.}
+\item{DELTA_Z}{\code{number} - Step distance (z-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_M}{\code{number} - Step distance (m values). A numeric value.}
+\item{DELTA_M}{\code{number} - Step distance (m values). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Translated. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_arraytranslatedfeatures(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Array of translated features (native:arraytranslatedfeatures)
+QGIS Algorithm provided by QGIS (native c++) Array of translated features (native:arraytranslatedfeatures). Creates multiple translated copies of features in a layer. This algorithm creates copies of features in a layer, by creating multiple translated versions of each feature. Each copy is incrementally displaced by a preset amount in the x/y/z/m axis.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_regularpoints.R
 \name{qgis_regularpoints}
 \alias{qgis_regularpoints}
-\title{QGIS algorithm Regular points}
+\title{QGIS algorithm - Regular points}
 \usage{
 qgis_regularpoints(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -21,13 +21,13 @@ qgis_regularpoints(
 \arguments{
 \item{EXTENT}{\code{extent} - Input extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{SPACING}{\code{distance} - Point spacing/count. A numeric value.}
+\item{SPACING}{\code{distance} - Point spacing\code{/}count. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INSET}{\code{distance} - Initial inset from corner (LH side). A numeric value.}
+\item{INSET}{\code{distance} - Initial inset from corner (LH side). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{RANDOMIZE}{\code{boolean} - Apply random offset to point spacing. 1 for true/yes. 0 for false/no.}
+\item{RANDOMIZE}{\code{boolean} - Apply random offset to point spacing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{IS_SPACING}{\code{boolean} - Use point spacing. 1 for true/yes. 0 for false/no.}
+\item{IS_SPACING}{\code{boolean} - Use point spacing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{CRS}{\code{crs} - Output layer CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
@@ -42,7 +42,7 @@ qgis_regularpoints(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Regular points (qgis:regularpoints)
+QGIS Algorithm provided by QGIS Regular points (qgis:regularpoints). This algorithm creates a point layer with a given number of regular points, all of them within a given extent.
 }
 \details{
 \subsection{Outputs description}{

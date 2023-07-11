@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_meanandstandarddeviationplot.R
 \name{qgis_meanandstandarddeviationplot}
 \alias{qgis_meanandstandarddeviationplot}
-\title{QGIS algorithm Mean and standard deviation plot}
+\title{QGIS algorithm - Mean and standard deviation plot}
 \usage{
 qgis_meanandstandarddeviationplot(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_meanandstandarddeviationplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Mean and standard deviation plot (qgis:meanandstandarddeviationplot)
+QGIS Algorithm provided by QGIS Mean and standard deviation plot (qgis:meanandstandarddeviationplot). This algorithm creates a box plot with mean and standard deviation values.
 }
 \details{
 \subsection{Outputs description}{

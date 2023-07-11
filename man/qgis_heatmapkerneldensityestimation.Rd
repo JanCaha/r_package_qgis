@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_heatmapkerneldensityestimation.R
 \name{qgis_heatmapkerneldensityestimation}
 \alias{qgis_heatmapkerneldensityestimation}
-\title{QGIS algorithm Heatmap (Kernel Density Estimation)}
+\title{QGIS algorithm - Heatmap (Kernel Density Estimation)}
 \usage{
 qgis_heatmapkerneldensityestimation(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,17 +23,17 @@ qgis_heatmapkerneldensityestimation(
 \arguments{
 \item{INPUT}{\code{source} - Point layer. Path to a vector layer.}
 
-\item{RADIUS}{\code{distance} - Radius. A numeric value.}
+\item{RADIUS}{\code{distance} - Radius. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{RADIUS_FIELD}{\code{field} - Radius from field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{PIXEL_SIZE}{\code{number} - Output raster size. A numeric value.}
+\item{PIXEL_SIZE}{\code{number} - Output raster size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{WEIGHT_FIELD}{\code{field} - Weight from field. The name of an existing field. ; delimited list of existing field names.}
 
 \item{KERNEL}{\code{enum}  of \verb{("Quartic", "Triangular", "Uniform", "Triweight", "Epanechnikov")} - Kernel shape. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{DECAY}{\code{number} - Decay ratio (Triangular kernels only). A numeric value.}
+\item{DECAY}{\code{number} - Decay ratio (Triangular kernels only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_VALUE}{\code{enum}  of \verb{("Raw", "Scaled")} - Output value scaling. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -48,7 +48,7 @@ qgis_heatmapkerneldensityestimation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Heatmap (Kernel Density Estimation) (qgis:heatmapkerneldensityestimation)
+QGIS Algorithm provided by QGIS Heatmap (Kernel Density Estimation) (qgis:heatmapkerneldensityestimation). Creates a density (heatmap) raster of an input point vector layer using kernel density estimation. Heatmaps allow easy identification of hotspots and clustering of points. The density is calculated based on the number of points in a location, with larger numbers of clustered points resulting in larger values.
 }
 \details{
 \subsection{Outputs description}{

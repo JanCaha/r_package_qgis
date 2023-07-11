@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by GRASS i.pca (grass7:i.pca)
+##' QGIS Algorithm provided by GRASS i.pca (grass7:i.pca). Principal components analysis (PCA) for image processing.
 ##'
-##' @title QGIS algorithm i.pca
+##' @title QGIS algorithm - i.pca
 ##'
 ##' @param input `multilayer` - Name of two or more input raster maps. .
 ##' @param rescale `range` - Rescaling range for output maps. For no rescaling use 0,0. Two comma separated numeric values, e.g. '1,10'.
-##' @param percent `number` - Cumulative percent importance for filtering. A numeric value.
-##' @param .n `boolean` - Normalize (center and scale) input maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
-##' @param .f `boolean` - Output will be filtered input bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param percent `number` - Cumulative percent importance for filtering. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .n `boolean` - Normalize (center and scale) input maps. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
+##' @param .f `boolean` - Output will be filtered input bands. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.
 ##' @param output `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

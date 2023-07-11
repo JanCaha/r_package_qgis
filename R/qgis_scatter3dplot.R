@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Vector layer scatterplot 3D (qgis:scatter3dplot)
+##' QGIS Algorithm provided by QGIS Vector layer scatterplot 3D (qgis:scatter3dplot). This algorithm creates a 3D scatter plot for a vector layer.
 ##'
-##' @title QGIS algorithm Vector layer scatterplot 3D
+##' @title QGIS algorithm - Vector layer scatterplot 3D
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param XFIELD `field` - X attribute. The name of an existing field. ; delimited list of existing field names.

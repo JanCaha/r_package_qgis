@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum angle (native:segmentizebymaxangle)
+##' QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum angle (native:segmentizebymaxangle). This algorithm segmentizes a geometry by converting curved sections to linear sections.  The segmentization is performed by specifying the maximum allowed radius angle between vertices on the straightened geometry (e.g the angle of the arc created from the original arc center to consecutive output vertices on the linearized geometry).  Non-curved geometries will be retained without change.
 ##'
-##' @title QGIS algorithm Segmentize by maximum angle
+##' @title QGIS algorithm - Segmentize by maximum angle
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param ANGLE `number` - Maximum angle between vertices (degrees). A numeric value.
+##' @param ANGLE `number` - Maximum angle between vertices (degrees). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Segmentized. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

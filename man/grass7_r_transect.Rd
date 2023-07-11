@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_transect.R
 \name{grass7_r_transect}
 \alias{grass7_r_transect}
-\title{QGIS algorithm r.transect}
+\title{QGIS algorithm - r.transect}
 \usage{
 grass7_r_transect(
   map = qgisprocess:::qgis_default_value(),
@@ -21,17 +21,17 @@ grass7_r_transect(
 \arguments{
 \item{map}{\code{raster} - Raster map to be queried. Path to a raster layer.}
 
-\item{line}{\code{string} - Transect definition: east,north,azimuth,distance(,east,north,azimuth,distance,...). String value.}
+\item{line}{\code{string} - Transect definition: east,north,azimuth,distance(,east,north,azimuth,distance,...). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{null_value}{\code{string} - String representing NULL value. String value.}
+\item{null_value}{\code{string} - String representing NULL value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Output easting and northing in first two columns of four column output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
 \item{html}{\code{fileDestination} - Transect file. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -42,7 +42,7 @@ grass7_r_transect(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.transect (grass7:r.transect)
+QGIS Algorithm provided by GRASS r.transect (grass7:r.transect). Outputs raster map layer values lying along user defined transect line(s).
 }
 \details{
 \subsection{Outputs description}{

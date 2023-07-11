@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_extract.R
 \name{grass7_v_extract}
 \alias{grass7_v_extract}
-\title{QGIS algorithm v.extract}
+\title{QGIS algorithm - v.extract}
 \usage{
 grass7_v_extract(
   input = qgisprocess:::qgis_default_value(),
@@ -31,37 +31,37 @@ grass7_v_extract(
 \arguments{
 \item{input}{\code{source} - Vector layer. Path to a vector layer.}
 
-\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
+\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{type}{\code{enum}  of \verb{("point", "line", "boundary", "centroid", "area", "face")} - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{file}{\code{file} - Input text file with category numbers/number ranges to be extracted. Path to a file.}
+\item{file}{\code{file} - Input text file with category numbers\code{/}number ranges to be extracted. Path to a file.}
 
-\item{random}{\code{number} - Number of random categories matching vector objects to extract. A numeric value.}
+\item{random}{\code{number} - Number of random categories matching vector objects to extract. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{new}{\code{number} - Desired new category value (enter -1 to keep original categories). A numeric value.}
+\item{new}{\code{number} - Desired new category value (enter -1 to keep original categories). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.d}{\code{boolean} - Dissolve common boundaries. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Dissolve common boundaries. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
-\item{.t}{\code{boolean} - Do not copy attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Do not copy attributes. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
 \item{output}{\code{vectorDestination} - Selected. Path for new vector layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -72,7 +72,7 @@ grass7_v_extract(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.extract (grass7:v.extract)
+QGIS Algorithm provided by GRASS v.extract (grass7:v.extract). Selects vector objects from a vector layer and creates a new layer containing only the selected objects.
 }
 \details{
 \subsection{Outputs description}{

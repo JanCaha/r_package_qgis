@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_edit.R
 \name{grass7_v_edit}
 \alias{grass7_v_edit}
-\title{QGIS algorithm v.edit}
+\title{QGIS algorithm - v.edit}
 \usage{
 grass7_v_edit(
   map = qgisprocess:::qgis_default_value(),
@@ -49,21 +49,21 @@ grass7_v_edit(
 
 \item{input}{\code{file} - ASCII file for add tool. Path to a file.}
 
-\item{move}{\code{string} - Difference in x,y,z direction for moving feature or vertex. String value.}
+\item{move}{\code{string} - Difference in x,y,z direction for moving feature or vertex. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{threshold}{\code{string} - Threshold distance (coords,snap,query). String value.}
+\item{threshold}{\code{string} - Threshold distance (coords,snap,query). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ids}{\code{string} - Feature ids. String value.}
+\item{ids}{\code{string} - Feature ids. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{cats}{\code{string} - Category values. String value.}
+\item{cats}{\code{string} - Category values. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{coords}{\code{string} - List of point coordinates. String value.}
+\item{coords}{\code{string} - List of point coordinates. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{bbox}{\code{extent} - Bounding box for selecting features. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{polygon}{\code{string} - Polygon for selecting features. String value.}
+\item{polygon}{\code{string} - Polygon for selecting features. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
+\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{query}{\code{enum}  of \verb{("length", "dangle")} - Query tool. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -71,33 +71,33 @@ grass7_v_edit(
 
 \item{snap}{\code{enum}  of \verb{("no", "node", "vertex")} - Snap added or modified features in the given threshold to the nearest existing feature. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{zbulk}{\code{string} - Starting value and step for z bulk-labeling. Pair: value,step (e.g. 1100,10). String value.}
+\item{zbulk}{\code{string} - Starting value and step for z bulk-labeling. Pair: value,step (e.g. 1100,10). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Reverse selection. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.c}{\code{boolean} - Close added boundaries (using threshold distance). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Close added boundaries (using threshold distance). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.n}{\code{boolean} - Do not expect header of input data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Do not expect header of input data. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
-\item{.arg_1}{\code{boolean} - Modify only first found feature in bounding box. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.}
+\item{.arg_1}{\code{boolean} - Modify only first found feature in bounding box. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -1.}
 
 \item{output}{\code{vectorDestination} - Edited. Path for new vector layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -108,7 +108,7 @@ grass7_v_edit(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.edit (grass7:v.edit)
+QGIS Algorithm provided by GRASS v.edit (grass7:v.edit). Edits a vector map, allows adding, deleting and modifying selected vector features.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extenttolayer.R
 \name{qgis_extenttolayer}
 \alias{qgis_extenttolayer}
-\title{QGIS algorithm Create layer from extent}
+\title{QGIS algorithm - Create layer from extent}
 \usage{
 qgis_extenttolayer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_extenttolayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create layer from extent (native:extenttolayer)
+QGIS Algorithm provided by QGIS (native c++) Create layer from extent (native:extenttolayer). This algorithm creates a new vector layer that contains a single feature with geometry matching an extent parameter.  It can be used in models to convert an extent into a layer which can be used for other algorithms which require a layer based input.
 }
 \details{
 \subsection{Outputs description}{

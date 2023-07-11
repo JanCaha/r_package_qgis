@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Boundary (native:boundary)
+##' QGIS Algorithm provided by QGIS (native c++) Boundary (native:boundary). Returns the closure of the combinatorial boundary of the input geometries (ie the topological boundary of the geometry). For instance, a polygon geometry will have a boundary consisting of the linestrings for each ring in the polygon. Only valid for polygon or line layers.
 ##'
-##' @title QGIS algorithm Boundary
+##' @title QGIS algorithm - Boundary
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Boundary. Path for new vector layer.

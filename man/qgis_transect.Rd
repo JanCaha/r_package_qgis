@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_transect.R
 \name{qgis_transect}
 \alias{qgis_transect}
-\title{QGIS algorithm Transect}
+\title{QGIS algorithm - Transect}
 \usage{
 qgis_transect(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,9 +19,9 @@ qgis_transect(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{LENGTH}{\code{distance} - Length of the transect. A numeric value.}
+\item{LENGTH}{\code{distance} - Length of the transect. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ANGLE}{\code{number} - Angle in degrees from the original line at the vertices. A numeric value.}
+\item{ANGLE}{\code{number} - Angle in degrees from the original line at the vertices. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{SIDE}{\code{enum}  of \verb{("Left", "Right", "Both")} - Side to create the transects. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -36,7 +36,7 @@ qgis_transect(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Transect (native:transect)
+QGIS Algorithm provided by QGIS (native c++) Transect (native:transect). This algorithm creates transects on vertices for (multi)linestring. A transect is a line oriented from an angle (by default perpendicular) to the input polylines (at vertices).  Field(s) from feature(s) are returned in the transect with these new fields: - TR_FID: ID of the original feature - TR_ID: ID of the transect. Each transect have an unique ID - TR_SEGMENT: ID of the segment of the linestring - TR_ANGLE: Angle in degrees from the original line at the vertex - TR_LENGTH: Total length of the transect returned - TR_ORIENT: Side of the transect (only on the left or right of the line, or both side)
 }
 \details{
 \subsection{Outputs description}{

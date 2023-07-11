@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_affinetransform.R
 \name{qgis_affinetransform}
 \alias{qgis_affinetransform}
-\title{QGIS algorithm Affine transform}
+\title{QGIS algorithm - Affine transform}
 \usage{
 qgis_affinetransform(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -25,23 +25,23 @@ qgis_affinetransform(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DELTA_X}{\code{distance} - Translation (x-axis). A numeric value.}
+\item{DELTA_X}{\code{distance} - Translation (x-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_Y}{\code{distance} - Translation (y-axis). A numeric value.}
+\item{DELTA_Y}{\code{distance} - Translation (y-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_Z}{\code{number} - Translation (z-axis). A numeric value.}
+\item{DELTA_Z}{\code{number} - Translation (z-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_M}{\code{number} - Translation (m values). A numeric value.}
+\item{DELTA_M}{\code{number} - Translation (m values). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SCALE_X}{\code{number} - Scale factor (x-axis). A numeric value.}
+\item{SCALE_X}{\code{number} - Scale factor (x-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SCALE_Y}{\code{number} - Scale factor (y-axis). A numeric value.}
+\item{SCALE_Y}{\code{number} - Scale factor (y-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SCALE_Z}{\code{number} - Scale factor (z-axis). A numeric value.}
+\item{SCALE_Z}{\code{number} - Scale factor (z-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SCALE_M}{\code{number} - Scale factor (m values). A numeric value.}
+\item{SCALE_M}{\code{number} - Scale factor (m values). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ROTATION_Z}{\code{number} - Rotation around z-axis (degrees counter-clockwise). A numeric value.}
+\item{ROTATION_Z}{\code{number} - Rotation around z-axis (degrees counter-clockwise). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Transformed. Path for new vector layer.}
 
@@ -54,7 +54,7 @@ qgis_affinetransform(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Affine transform (native:affinetransform)
+QGIS Algorithm provided by QGIS (native c++) Affine transform (native:affinetransform). Applies an affine transformation to geometries. Applies an affine transformation to the geometries from a layer. Affine transformations can include translation, scaling and rotation. The operations are performed in a scale, rotation, translation order.  Z and M values present in the geometry can also be translated and scaled independently.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_aster_toar.R
 \name{grass7_i_aster_toar}
 \alias{grass7_i_aster_toar}
-\title{QGIS algorithm i.aster.toar}
+\title{QGIS algorithm - i.aster.toar}
 \usage{
 grass7_i_aster_toar(
   input = qgisprocess:::qgis_default_value(),
@@ -26,27 +26,27 @@ grass7_i_aster_toar(
 \arguments{
 \item{input}{\code{multilayer} - Names of ASTER DN layers (15 layers). .}
 
-\item{dayofyear}{\code{number} - Day of Year of satellite overpass (0-366). A numeric value.}
+\item{dayofyear}{\code{number} - Day of Year of satellite overpass (0-366). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{sun_elevation}{\code{number} - Sun elevation angle (degrees,  90.0). A numeric value.}
+\item{sun_elevation}{\code{number} - Sun elevation angle (degrees,  90.0). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.r}{\code{boolean} - Output is radiance (W/m2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Output is radiance (W\code{/}m2). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.a}{\code{boolean} - VNIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - VNIR is High Gain. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.b}{\code{boolean} - SWIR is High Gain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - SWIR is High Gain. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
-\item{.c}{\code{boolean} - VNIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - VNIR is Low Gain 1. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.d}{\code{boolean} - SWIR is Low Gain 1. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - SWIR is Low Gain 1. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
-\item{.e}{\code{boolean} - SWIR is Low Gain 2. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
+\item{.e}{\code{boolean} - SWIR is Low Gain 2. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.}
 
 \item{output}{\code{folderDestination} - Output Directory. Path for an existing or new folder.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -57,7 +57,7 @@ grass7_i_aster_toar(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.aster.toar (grass7:i.aster.toar)
+QGIS Algorithm provided by GRASS i.aster.toar (grass7:i.aster.toar). Calculates Top of Atmosphere Radiance/Reflectance/Brightness Temperature from ASTER DN.
 }
 \details{
 \subsection{Outputs description}{

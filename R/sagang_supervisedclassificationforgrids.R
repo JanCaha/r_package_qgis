@@ -1,0 +1,59 @@
+##' QGIS Algorithm provided by SAGA Next Gen Supervised classification for grids (sagang:supervisedclassificationforgrids). ---------------- Arguments ----------------  GRIDS: Features 	Argument type:	multilayer NORMALISE: Normalise 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression CLASSES: Classification 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer CLASSES_LUT: Look-up Table 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer QUALITY: Quality 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer TRAINING: Training Areas (optional) 	Argument type:	source 	Acceptable values: 		- Path to a vector layer TRAINING_CLASS: Class Identifier 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names FILE_LOAD: Load Statistics from File... 	Default value:	False 	Argument type:	file 	Acceptable values: 		- Path to a file FILE_SAVE: Save Statistics to File... 	Default value:	False 	Argument type:	file 	Acceptable values: 		- Path to a file METHOD: Method 	Default value:	2 	Argument type:	enum 	Available values: 		- 0: (0) Binary Encoding 		- 1: (1) Parallelepiped 		- 2: (2) Minimum Distance 		- 3: (3) Mahalanobis Distance 		- 4: (4) Maximum Likelihood 		- 5: (5) Spectral Angle Mapping 		- 6: (6) Winner Takes All 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' THRESHOLD_DIST: Distance Threshold 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression THRESHOLD_ANGLE: Spectral Angle Threshold (Degree) 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression THRESHOLD_PROB: Probability Threshold 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression RELATIVE_PROB: Probability Reference 	Default value:	1 	Argument type:	enum 	Available values: 		- 0: (0) absolute 		- 1: (1) relative 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' WTA_0: Binary Encoding 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression WTA_1: Parallelepiped 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression WTA_2: Minimum Distance 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression WTA_3: Mahalanobis Distance 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression WTA_4: Maximum Likelihood 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression WTA_5: Spectral Angle Mapping 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
+##'
+##' @title QGIS algorithm - Supervised classification for grids
+##'
+##' @param GRIDS `multilayer` - Features. .
+##' @param NORMALISE `boolean` - Normalise. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param CLASSES `rasterDestination` - Classification. Path for new raster layer.
+##' @param CLASSES_LUT `vectorDestination` - Look-up Table. Path for new vector layer.
+##' @param QUALITY `rasterDestination` - Quality. Path for new raster layer.
+##' @param TRAINING `source` - Training Areas. Path to a vector layer.
+##' @param TRAINING_CLASS `field` - Class Identifier. The name of an existing field. ; delimited list of existing field names.
+##' @param FILE_LOAD `file` - Load Statistics from File.... Path to a file.
+##' @param FILE_SAVE `file` - Save Statistics to File.... Path to a file.
+##' @param METHOD `enum`  of `("(0) Binary Encoding", "(1) Parallelepiped", "(2) Minimum Distance", "(3) Mahalanobis Distance", "(4) Maximum Likelihood", "(5) Spectral Angle Mapping", "(6) Winner Takes All")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param THRESHOLD_DIST `number` - Distance Threshold. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param THRESHOLD_ANGLE `number` - Spectral Angle Threshold (Degree). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param THRESHOLD_PROB `number` - Probability Threshold. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param RELATIVE_PROB `enum`  of `("(0) absolute", "(1) relative")` - Probability Reference. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param WTA_0 `boolean` - Binary Encoding. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param WTA_1 `boolean` - Parallelepiped. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param WTA_2 `boolean` - Minimum Distance. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param WTA_3 `boolean` - Mahalanobis Distance. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param WTA_4 `boolean` - Maximum Likelihood. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param WTA_5 `boolean` - Spectral Angle Mapping. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
+##'
+##' @details
+##' ## Outputs description
+##' * CLASSES - outputRaster - Classification
+##' * CLASSES_LUT - outputVector - Look-up Table
+##' * QUALITY - outputRaster - Quality
+##'
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm
+
+sagang_supervisedclassificationforgrids <- function(GRIDS = qgisprocess:::qgis_default_value(), NORMALISE = qgisprocess:::qgis_default_value(), CLASSES = qgisprocess:::qgis_default_value(), CLASSES_LUT = qgisprocess:::qgis_default_value(), QUALITY = qgisprocess:::qgis_default_value(), TRAINING = qgisprocess:::qgis_default_value(), TRAINING_CLASS = qgisprocess:::qgis_default_value(), FILE_LOAD = qgisprocess:::qgis_default_value(), FILE_SAVE = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), THRESHOLD_DIST = qgisprocess:::qgis_default_value(), THRESHOLD_ANGLE = qgisprocess:::qgis_default_value(), THRESHOLD_PROB = qgisprocess:::qgis_default_value(), RELATIVE_PROB = qgisprocess:::qgis_default_value(), WTA_0 = qgisprocess:::qgis_default_value(), WTA_1 = qgisprocess:::qgis_default_value(), WTA_2 = qgisprocess:::qgis_default_value(), WTA_3 = qgisprocess:::qgis_default_value(), WTA_4 = qgisprocess:::qgis_default_value(), WTA_5 = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+
+  check_algorithm_necessities("sagang:supervisedclassificationforgrids")
+
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("sagang:supervisedclassificationforgrids", `GRIDS` = GRIDS, `NORMALISE` = NORMALISE, `CLASSES` = CLASSES, `CLASSES_LUT` = CLASSES_LUT, `QUALITY` = QUALITY, `TRAINING` = TRAINING, `TRAINING_CLASS` = TRAINING_CLASS, `FILE_LOAD` = FILE_LOAD, `FILE_SAVE` = FILE_SAVE, `METHOD` = METHOD, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("sagang:supervisedclassificationforgrids", `GRIDS` = GRIDS, `NORMALISE` = NORMALISE, `CLASSES` = CLASSES, `CLASSES_LUT` = CLASSES_LUT, `QUALITY` = QUALITY, `TRAINING` = TRAINING, `TRAINING_CLASS` = TRAINING_CLASS, `FILE_LOAD` = FILE_LOAD, `FILE_SAVE` = FILE_SAVE, `METHOD` = METHOD, `THRESHOLD_DIST` = THRESHOLD_DIST, `THRESHOLD_ANGLE` = THRESHOLD_ANGLE, `THRESHOLD_PROB` = THRESHOLD_PROB, `RELATIVE_PROB` = RELATIVE_PROB, `WTA_0` = WTA_0, `WTA_1` = WTA_1, `WTA_2` = WTA_2, `WTA_3` = WTA_3, `WTA_4` = WTA_4, `WTA_5` = WTA_5,..., .quiet = .quiet)
+      )
+  }
+
+  if (.complete_output) {
+    return(output)
+  }
+  else{
+    qgisprocess::qgis_extract_output(output, "CLASSES")
+  }
+}

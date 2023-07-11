@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_distance.R
 \name{grass7_r_distance}
 \alias{grass7_r_distance}
-\title{QGIS algorithm r.distance}
+\title{QGIS algorithm - r.distance}
 \usage{
 grass7_r_distance(
   map = qgisprocess:::qgis_default_value(),
@@ -23,21 +23,21 @@ grass7_r_distance(
 \arguments{
 \item{map}{\code{multilayer} - Name of two input raster for computing inter-class distances. .}
 
-\item{separator}{\code{string} - Field separator (Special characters: pipe, comma, space, tab, newline). String value.}
+\item{separator}{\code{string} - Field separator (Special characters: pipe, comma, space, tab, newline). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{sort}{\code{enum}  of \verb{("asc", "desc")} - Sort output by distance. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.l}{\code{boolean} - Include category labels in the output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
+\item{.l}{\code{boolean} - Include category labels in the output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.}
 
-\item{.o}{\code{boolean} - Report zero distance if rasters are overlapping. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
+\item{.o}{\code{boolean} - Report zero distance if rasters are overlapping. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -o.}
 
-\item{.n}{\code{boolean} - Report null objects as *. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Report null objects as *. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
 \item{html}{\code{fileDestination} - Distance. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_r_distance(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.distance (grass7:r.distance)
+QGIS Algorithm provided by GRASS r.distance (grass7:r.distance). Locates the closest points between objects in two raster maps.
 }
 \details{
 \subsection{Outputs description}{

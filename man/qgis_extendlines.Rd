@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extendlines.R
 \name{qgis_extendlines}
 \alias{qgis_extendlines}
-\title{QGIS algorithm Extend lines}
+\title{QGIS algorithm - Extend lines}
 \usage{
 qgis_extendlines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_extendlines(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{START_DISTANCE}{\code{distance} - Start distance. A numeric value.}
+\item{START_DISTANCE}{\code{distance} - Start distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{END_DISTANCE}{\code{distance} - End distance. A numeric value.}
+\item{END_DISTANCE}{\code{distance} - End distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extended. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_extendlines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extend lines (native:extendlines)
+QGIS Algorithm provided by QGIS (native c++) Extend lines (native:extendlines). Extends LineString geometries by extrapolating the start and end segments. This algorithm extends line geometries by a specified amount at the start and end of the line. Lines are extended using the bearing of the first and last segment in the line.
 }
 \details{
 \subsection{Outputs description}{

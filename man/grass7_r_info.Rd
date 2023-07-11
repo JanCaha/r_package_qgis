@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_info.R
 \name{grass7_r_info}
 \alias{grass7_r_info}
-\title{QGIS algorithm r.info}
+\title{QGIS algorithm - r.info}
 \usage{
 grass7_r_info(
   map = qgisprocess:::qgis_default_value(),
@@ -22,19 +22,19 @@ grass7_r_info(
 \arguments{
 \item{map}{\code{raster} - Raster layer. Path to a raster layer.}
 
-\item{.r}{\code{boolean} - Print range only. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Print range only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.g}{\code{boolean} - Print raster array information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Print raster array information in shell script style. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
-\item{.h}{\code{boolean} - Print raster history instead of info. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
+\item{.h}{\code{boolean} - Print raster history instead of info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.}
 
-\item{.e}{\code{boolean} - Print extended metadata information in shell script style. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
+\item{.e}{\code{boolean} - Print extended metadata information in shell script style. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.}
 
 \item{html}{\code{fileDestination} - Basic information. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -45,7 +45,7 @@ grass7_r_info(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.info (grass7:r.info)
+QGIS Algorithm provided by GRASS r.info (grass7:r.info). Output basic information about a raster layer.
 }
 \details{
 \subsection{Outputs description}{

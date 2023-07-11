@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_exporttospreadsheet.R
 \name{qgis_exporttospreadsheet}
 \alias{qgis_exporttospreadsheet}
-\title{QGIS algorithm Export to spreadsheet}
+\title{QGIS algorithm - Export to spreadsheet}
 \usage{
 qgis_exporttospreadsheet(
   LAYERS = qgisprocess:::qgis_default_value(),
@@ -19,13 +19,13 @@ qgis_exporttospreadsheet(
 \arguments{
 \item{LAYERS}{\code{multilayer} - Input layers. .}
 
-\item{USE_ALIAS}{\code{boolean} - Use field aliases as column headings. 1 for true/yes. 0 for false/no.}
+\item{USE_ALIAS}{\code{boolean} - Use field aliases as column headings. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FORMATTED_VALUES}{\code{boolean} - Export formatted values instead of raw values. 1 for true/yes. 0 for false/no.}
+\item{FORMATTED_VALUES}{\code{boolean} - Export formatted values instead of raw values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Destination spreadsheet. Path for new file.}
 
-\item{OVERWRITE}{\code{boolean} - Overwrite existing spreadsheet. 1 for true/yes. 0 for false/no.}
+\item{OVERWRITE}{\code{boolean} - Overwrite existing spreadsheet. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -36,7 +36,7 @@ qgis_exporttospreadsheet(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export to spreadsheet (native:exporttospreadsheet)
+QGIS Algorithm provided by QGIS (native c++) Export to spreadsheet (native:exporttospreadsheet). This algorithm collects a number of existing layers and exports them into a spreadsheet document.  Optionally the layers can be appended to an existing spreadsheet as additional sheets.
 }
 \details{
 \subsection{Outputs description}{

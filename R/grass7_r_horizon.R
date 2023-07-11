@@ -1,24 +1,24 @@
-##' QGIS Algorithm provided by GRASS r.horizon (grass7:r.horizon)
+##' QGIS Algorithm provided by GRASS r.horizon (grass7:r.horizon). Horizon angle computation from a digital elevation model.
 ##'
-##' @title QGIS algorithm r.horizon
+##' @title QGIS algorithm - r.horizon
 ##'
 ##' @param elevation `raster` - Name of input elevation raster map. Path to a raster layer.
-##' @param direction `number` - Direction in which you want to know the horizon height. A numeric value.
-##' @param step `number` - Angle step size for multidirectional horizon. A numeric value.
-##' @param start `number` - Start angle for multidirectional horizon. A numeric value.
-##' @param end `number` - End angle for multidirectional horizon. A numeric value.
-##' @param bufferzone `number` - For horizon rasters, read from the DEM an extra buffer around the present region. A numeric value.
-##' @param e_buff `number` - For horizon rasters, read from the DEM an extra buffer eastward the present region. A numeric value.
-##' @param w_buff `number` - For horizon rasters, read from the DEM an extra buffer westward the present region. A numeric value.
-##' @param n_buff `number` - For horizon rasters, read from the DEM an extra buffer northward the present region. A numeric value.
-##' @param s_buff `number` - For horizon rasters, read from the DEM an extra buffer southward the present region. A numeric value.
-##' @param maxdistance `number` - The maximum distance to consider when finding the horizon height. A numeric value.
-##' @param distance `number` - Sampling distance step coefficient. A numeric value.
-##' @param .d `boolean` - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.
-##' @param .c `boolean` - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param direction `number` - Direction in which you want to know the horizon height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param step `number` - Angle step size for multidirectional horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param start `number` - Start angle for multidirectional horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param end `number` - End angle for multidirectional horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param bufferzone `number` - For horizon rasters, read from the DEM an extra buffer around the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param e_buff `number` - For horizon rasters, read from the DEM an extra buffer eastward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param w_buff `number` - For horizon rasters, read from the DEM an extra buffer westward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param n_buff `number` - For horizon rasters, read from the DEM an extra buffer northward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param s_buff `number` - For horizon rasters, read from the DEM an extra buffer southward the present region. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param maxdistance `number` - The maximum distance to consider when finding the horizon height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param distance `number` - Sampling distance step coefficient. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .d `boolean` - Write output in degrees (default is radians). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.
+##' @param .c `boolean` - Write output in compass orientation (default is CCW, East=0). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
 ##' @param output `folderDestination` - Folder to get horizon rasters. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

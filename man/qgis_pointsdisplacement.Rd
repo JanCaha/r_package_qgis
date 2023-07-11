@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pointsdisplacement.R
 \name{qgis_pointsdisplacement}
 \alias{qgis_pointsdisplacement}
-\title{QGIS algorithm Points displacement}
+\title{QGIS algorithm - Points displacement}
 \usage{
 qgis_pointsdisplacement(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_pointsdisplacement(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{PROXIMITY}{\code{distance} - Minimum distance to other points. A numeric value.}
+\item{PROXIMITY}{\code{distance} - Minimum distance to other points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISTANCE}{\code{distance} - Displacement distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Displacement distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{HORIZONTAL}{\code{boolean} - Horizontal distribution for two point case. 1 for true/yes. 0 for false/no.}
+\item{HORIZONTAL}{\code{boolean} - Horizontal distribution for two point case. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Displaced. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_pointsdisplacement(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Points displacement (qgis:pointsdisplacement)
+QGIS Algorithm provided by QGIS Points displacement (qgis:pointsdisplacement). Offsets nearby point features by moving nearby points by a preset amount to minimize overlapping features.
 }
 \details{
 \subsection{Outputs description}{

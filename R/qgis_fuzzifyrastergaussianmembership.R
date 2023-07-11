@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (gaussian membership) (native:fuzzifyrastergaussianmembership)
+##' QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (gaussian membership) (native:fuzzifyrastergaussianmembership). The Fuzzify raster (gaussian membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following a gaussian fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows a gaussian membership function.  The gaussian function is constructed using two user-defined input values which set the midpoint of the gaussian function (midpoint, results to 1) and a predefined function spread which controls the function spread.  This function is typically used when a certain range of raster values around a predefined function midpoint should become members of the fuzzy set.
 ##'
-##' @title QGIS algorithm Fuzzify raster (gaussian membership)
+##' @title QGIS algorithm - Fuzzify raster (gaussian membership)
 ##'
 ##' @param INPUT `raster` - Input Raster. Path to a raster layer.
 ##' @param BAND `band` - Band Number. Integer value representing an existing raster band number.
-##' @param FUZZYMIDPOINT `number` - Function midpoint. A numeric value.
-##' @param FUZZYSPREAD `number` - Function spread. A numeric value.
+##' @param FUZZYMIDPOINT `number` - Function midpoint. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FUZZYSPREAD `number` - Function spread. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Fuzzified raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randompointsalongline.R
 \name{qgis_randompointsalongline}
 \alias{qgis_randompointsalongline}
-\title{QGIS algorithm Random points along line}
+\title{QGIS algorithm - Random points along line}
 \usage{
 qgis_randompointsalongline(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_randompointsalongline(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{POINTS_NUMBER}{\code{number} - Number of points. A numeric value.}
+\item{POINTS_NUMBER}{\code{number} - Number of points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value.}
+\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Random points. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_randompointsalongline(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Random points along line (qgis:randompointsalongline)
+QGIS Algorithm provided by QGIS Random points along line (qgis:randompointsalongline). This algorithm creates a point layer with a given "Number of points" placed on the lines of the "Input layer". The location of each point is determined by randomly selecting a feature, then a segment of the line geometry of that feature, and finally a random position on that segment. A minimum distance between the points can be specified (Euclidean distance).
 }
 \details{
 \subsection{Outputs description}{

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert GPX feature type (native:convertgpxfeaturetype)
+##' QGIS Algorithm provided by QGIS (native c++) Convert GPX feature type (native:convertgpxfeaturetype). This algorithm uses the GPSBabel tool to convert GPX features from one type to another (e.g. converting all waypoint features to a route feature).
 ##'
-##' @title QGIS algorithm Convert GPX feature type
+##' @title QGIS algorithm - Convert GPX feature type
 ##'
 ##' @param INPUT `file` - Input file. Path to a file.
 ##' @param CONVERSION `enum`  of `("Waypoints from a Route", "Waypoints from a Track", "Route from Waypoints", "Track from Waypoints")` - Conversion. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

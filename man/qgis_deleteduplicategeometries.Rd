@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_deleteduplicategeometries.R
 \name{qgis_deleteduplicategeometries}
 \alias{qgis_deleteduplicategeometries}
-\title{QGIS algorithm Delete duplicate geometries}
+\title{QGIS algorithm - Delete duplicate geometries}
 \usage{
 qgis_deleteduplicategeometries(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_deleteduplicategeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Delete duplicate geometries (native:deleteduplicategeometries)
+QGIS Algorithm provided by QGIS (native c++) Delete duplicate geometries (native:deleteduplicategeometries). Finds duplicated geometries in a layer and removes them. This algorithm finds duplicated geometries and removes them.  Attributes are not checked, so in case two features have identical geometries but different attributes, only one of them will be added to the result layer.
 }
 \details{
 \subsection{Outputs description}{

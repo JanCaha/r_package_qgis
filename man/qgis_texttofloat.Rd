@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_texttofloat.R
 \name{qgis_texttofloat}
 \alias{qgis_texttofloat}
-\title{QGIS algorithm Text to float}
+\title{QGIS algorithm - Text to float}
 \usage{
 qgis_texttofloat(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_texttofloat(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Text to float (qgis:texttofloat)
+QGIS Algorithm provided by QGIS Text to float (qgis:texttofloat). This algorithm modifies the type of a given attribute in a vector layer, converting a text attribute containing numeric strings into a numeric attribute.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_deleteholes.R
 \name{qgis_deleteholes}
 \alias{qgis_deleteholes}
-\title{QGIS algorithm Delete holes}
+\title{QGIS algorithm - Delete holes}
 \usage{
 qgis_deleteholes(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_deleteholes(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{MIN_AREA}{\code{number} - Remove holes with area less than. A numeric value.}
+\item{MIN_AREA}{\code{number} - Remove holes with area less than. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Cleaned. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_deleteholes(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Delete holes (native:deleteholes)
+QGIS Algorithm provided by QGIS (native c++) Delete holes (native:deleteholes). This algorithm takes a polygon layer and removes holes in polygons. It creates a new vector layer in which polygons with holes have been replaced by polygons with only their external ring. Attributes are not modified.  An optional minimum area parameter allows removing only holes which are smaller than a specified area threshold. Leaving this parameter as 0.0 results in all holes being removed.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent)
+##' QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent). This algorithm takes a map layer and generates a new vector layer with the minimum bounding box (rectangle polygon with N-S orientation) that covers the input layer. Optionally, the extent can be enlarged to a rounded value.
 ##'
-##' @title QGIS algorithm Extract layer extent
+##' @title QGIS algorithm - Extract layer extent
 ##'
 ##' @param INPUT `layer` - Input layer. Path to a vector, raster or mesh layer.
-##' @param ROUND_TO `distance` - Round values to. A numeric value.
+##' @param ROUND_TO `distance` - Round values to. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Extent. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

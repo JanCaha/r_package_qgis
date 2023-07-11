@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_m_cogo.R
 \name{grass7_m_cogo}
 \alias{grass7_m_cogo}
-\title{QGIS algorithm m.cogo}
+\title{QGIS algorithm - m.cogo}
 \usage{
 grass7_m_cogo(
   input = qgisprocess:::qgis_default_value(),
@@ -26,13 +26,13 @@ grass7_m_cogo(
 
 \item{coordinates}{\code{point} - Starting coordinate pair. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{.l}{\code{boolean} - Lines are labelled. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
+\item{.l}{\code{boolean} - Lines are labelled. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.}
 
-\item{.q}{\code{boolean} - Suppress warnings. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -q.}
+\item{.q}{\code{boolean} - Suppress warnings. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -q.}
 
-\item{.r}{\code{boolean} - Convert from coordinates to bearing and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Convert from coordinates to bearing and distance. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.c}{\code{boolean} - Repeat the starting coordinate at the end to close a loop. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Repeat the starting coordinate at the end to close a loop. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
@@ -45,7 +45,7 @@ grass7_m_cogo(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS m.cogo (grass7:m.cogo)
+QGIS Algorithm provided by GRASS m.cogo (grass7:m.cogo). A simple utility for converting bearing and distance measurements to coordinates and vice versa. It assumes a Cartesian coordinate system
 }
 \details{
 \subsection{Outputs description}{

@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute)
+##' QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the values of an attribute from the input layer.
 ##'
-##' @title QGIS algorithm Extract by attribute
+##' @title QGIS algorithm - Extract by attribute
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Selection attribute. The name of an existing field. ; delimited list of existing field names.
-##' @param OPERATOR `enum`  of `("=", "≠", ">", "≥", "<", "≤", "begins with", "contains", "is null", "is not null", "does not contain")` - Operator. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param VALUE `string` - Value. String value.
+##' @param OPERATOR `enum`  of `("=", "≠", "", "≥", "", "≤", "begins with", "contains", "is null", "is not null", "does not contain")` - Operator. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param VALUE `string` - Value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Extracted (attribute). Path for new vector layer.
 ##' @param FAIL_OUTPUT `sink` - Extracted (non-matching). Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

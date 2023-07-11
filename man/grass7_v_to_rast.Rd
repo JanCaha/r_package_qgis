@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_to_rast.R
 \name{grass7_v_to_rast}
 \alias{grass7_v_to_rast}
-\title{QGIS algorithm v.to.rast}
+\title{QGIS algorithm - v.to.rast}
 \usage{
 grass7_v_to_rast(
   input = qgisprocess:::qgis_default_value(),
@@ -32,7 +32,7 @@ grass7_v_to_rast(
 
 \item{type}{\code{enum}  of \verb{("point", "line", "boundary", "area")} - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
+\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{use}{\code{enum}  of \verb{("attr", "cat", "val", "z", "dir")} - Source of raster values. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -42,23 +42,23 @@ grass7_v_to_rast(
 
 \item{label_column}{\code{field} - Name of column used as raster category labels. The name of an existing field. ; delimited list of existing field names.}
 
-\item{value}{\code{number} - Raster value (for use=val). A numeric value.}
+\item{value}{\code{number} - Raster value (for use=val). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{memory}{\code{number} - Maximum memory to be used (in MB). A numeric value.}
+\item{memory}{\code{number} - Maximum memory to be used (in MB). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Rasterized. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -69,7 +69,7 @@ grass7_v_to_rast(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.to.rast (grass7:v.to.rast)
+QGIS Algorithm provided by GRASS v.to.rast (grass7:v.to.rast). Converts (rasterize) a vector layer into a raster layer.
 }
 \details{
 \subsection{Outputs description}{

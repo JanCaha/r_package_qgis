@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_translategeometry.R
 \name{qgis_translategeometry}
 \alias{qgis_translategeometry}
-\title{QGIS algorithm Translate}
+\title{QGIS algorithm - Translate}
 \usage{
 qgis_translategeometry(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,13 +20,13 @@ qgis_translategeometry(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DELTA_X}{\code{distance} - Offset distance (x-axis). A numeric value.}
+\item{DELTA_X}{\code{distance} - Offset distance (x-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_Y}{\code{distance} - Offset distance (y-axis). A numeric value.}
+\item{DELTA_Y}{\code{distance} - Offset distance (y-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_Z}{\code{number} - Offset distance (z-axis). A numeric value.}
+\item{DELTA_Z}{\code{number} - Offset distance (z-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DELTA_M}{\code{number} - Offset distance (m values). A numeric value.}
+\item{DELTA_M}{\code{number} - Offset distance (m values). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Translated. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_translategeometry(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Translate (native:translategeometry)
+QGIS Algorithm provided by QGIS (native c++) Translate (native:translategeometry). This algorithm moves the geometries within a layer, by offsetting them with a specified x and y displacement.  Z and M values present in the geometry can also be translated.
 }
 \details{
 \subsection{Outputs description}{

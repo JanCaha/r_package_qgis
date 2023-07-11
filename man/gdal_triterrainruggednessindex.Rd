@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_triterrainruggednessindex.R
 \name{gdal_triterrainruggednessindex}
 \alias{gdal_triterrainruggednessindex}
-\title{QGIS algorithm Terrain Ruggedness Index (TRI)}
+\title{QGIS algorithm - Terrain Ruggedness Index (TRI)}
 \usage{
 gdal_triterrainruggednessindex(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ gdal_triterrainruggednessindex(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{COMPUTE_EDGES}{\code{boolean} - Compute edges. 1 for true/yes. 0 for false/no.}
+\item{COMPUTE_EDGES}{\code{boolean} - Compute edges. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Terrain Ruggedness Index. Path for new raster layer.}
 
@@ -36,7 +36,7 @@ gdal_triterrainruggednessindex(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Terrain Ruggedness Index (TRI) (gdal:triterrainruggednessindex)
+QGIS Algorithm provided by GDAL Terrain Ruggedness Index (TRI) (gdal:triterrainruggednessindex). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number COMPUTE_EDGES: Compute edges 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Terrain Ruggedness Index 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

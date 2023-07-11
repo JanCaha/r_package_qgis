@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures)
+##' QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures). This algorithm rotates feature geometries, by the specified angle clockwise  Optionally, the rotation can occur around a preset point. If not set the rotation occurs around each feature's centroid.
 ##'
-##' @title QGIS algorithm Rotate
+##' @title QGIS algorithm - Rotate
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param ANGLE `number` - Rotation (degrees clockwise). A numeric value.
+##' @param ANGLE `number` - Rotation (degrees clockwise). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ANCHOR `point` - Rotation anchor point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param OUTPUT `sink` - Rotated. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_solute_transport.R
 \name{grass7_r_solute_transport}
 \alias{grass7_r_solute_transport}
-\title{QGIS algorithm r.solute.transport}
+\title{QGIS algorithm - r.solute.transport}
 \usage{
 grass7_r_solute_transport(
   c = qgisprocess:::qgis_default_value(),
@@ -44,25 +44,25 @@ grass7_r_solute_transport(
 )
 }
 \arguments{
-\item{c}{\code{raster} - The initial concentration in (kg/m^3). Path to a raster layer.}
+\item{c}{\code{raster} - The initial concentration in (kg\code{/}m^3). Path to a raster layer.}
 
 \item{phead}{\code{raster} - The piezometric head in (m). Path to a raster layer.}
 
-\item{hc_x}{\code{raster} - The x-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.}
+\item{hc_x}{\code{raster} - The x-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.}
 
-\item{hc_y}{\code{raster} - The y-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.}
+\item{hc_y}{\code{raster} - The y-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.}
 
 \item{status}{\code{raster} - The status for each cell, = 0 - inactive cell, 1 - active cell, 2 - dirichlet- and 3 - transfer boundary condition. Path to a raster layer.}
 
-\item{diff_x}{\code{raster} - The x-part of the diffusion tensor in (m^2/s). Path to a raster layer.}
+\item{diff_x}{\code{raster} - The x-part of the diffusion tensor in (m^2\code{/}s). Path to a raster layer.}
 
-\item{diff_y}{\code{raster} - The y-part of the diffusion tensor in (m^2/s). Path to a raster layer.}
+\item{diff_y}{\code{raster} - The y-part of the diffusion tensor in (m^2\code{/}s). Path to a raster layer.}
 
-\item{q}{\code{raster} - Groundwater sources and sinks in (m^3/s). Path to a raster layer.}
+\item{q}{\code{raster} - Groundwater sources and sinks in (m^3\code{/}s). Path to a raster layer.}
 
-\item{cin}{\code{raster} - Concentration sources and sinks bounded to a water source or sink in (kg/s). Path to a raster layer.}
+\item{cin}{\code{raster} - Concentration sources and sinks bounded to a water source or sink in (kg\code{/}s). Path to a raster layer.}
 
-\item{cs}{\code{raster} - Concentration of inner sources and inner sinks in (kg/s) (i.e. a chemical reaction). Path to a raster layer.}
+\item{cs}{\code{raster} - Concentration of inner sources and inner sinks in (kg\code{/}s) (i.e. a chemical reaction). Path to a raster layer.}
 
 \item{rd}{\code{raster} - Retardation factor (-). Path to a raster layer.}
 
@@ -72,41 +72,41 @@ grass7_r_solute_transport(
 
 \item{bottom}{\code{raster} - Bottom surface of the aquifer in (m). Path to a raster layer.}
 
-\item{dtime}{\code{number} - Calculation time (in seconds). A numeric value.}
+\item{dtime}{\code{number} - Calculation time (in seconds). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{maxit}{\code{number} - Maximum number of iteration used to solve the linear equation system. A numeric value.}
+\item{maxit}{\code{number} - Maximum number of iteration used to solve the linear equation system. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{error}{\code{number} - Error break criteria for iterative solver. A numeric value.}
+\item{error}{\code{number} - Error break criteria for iterative solver. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{solver}{\code{enum}  of \verb{("gauss", "lu", "jacobi", "sor", "bicgstab")} - The type of solver which should solve the linear equation system. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{relax}{\code{number} - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. A numeric value.}
+\item{relax}{\code{number} - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{al}{\code{number} - The longitudinal dispersivity length. (m). A numeric value.}
+\item{al}{\code{number} - The longitudinal dispersivity length. (m). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{at}{\code{number} - The transversal dispersivity length. (m). A numeric value.}
+\item{at}{\code{number} - The transversal dispersivity length. (m). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{loops}{\code{number} - Use this number of time loops if the CFL flag is off. The timestep will become dt/loops.. A numeric value.}
+\item{loops}{\code{number} - Use this number of time loops if the CFL flag is off. The timestep will become dt\code{/}loops.. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{stab}{\code{enum}  of \verb{("full", "exp")} - Set the flow stabilizing scheme (full or exponential upwinding).. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.c}{\code{boolean} - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.f}{\code{boolean} - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
+\item{.f}{\code{boolean} - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Solute Transport. Path for new raster layer.}
 
-\item{vx}{\code{rasterDestination} - Calculate and store the groundwater filter velocity vector part in x direction (m/s). Path for new raster layer.}
+\item{vx}{\code{rasterDestination} - Calculate and store the groundwater filter velocity vector part in x direction (m\code{/}s). Path for new raster layer.}
 
-\item{vy}{\code{rasterDestination} - Calculate and store the groundwater filter velocity vector part in y direction (m/s). Path for new raster layer.}
+\item{vy}{\code{rasterDestination} - Calculate and store the groundwater filter velocity vector part in y direction (m\code{/}s). Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -117,14 +117,14 @@ grass7_r_solute_transport(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.solute.transport (grass7:r.solute.transport)
+QGIS Algorithm provided by GRASS r.solute.transport (grass7:r.solute.transport). Numerical calculation program for transient, confined and unconfined solute transport in two dimensions
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
 \item output - outputRaster - Solute Transport
-\item vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction (m/s)
-\item vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction (m/s)
+\item vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction (m\code{/}s)
+\item vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction (m\code{/}s)
 }
 }
 }

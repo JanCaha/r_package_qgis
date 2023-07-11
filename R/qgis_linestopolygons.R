@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Lines to polygons (qgis:linestopolygons)
+##' QGIS Algorithm provided by QGIS Lines to polygons (qgis:linestopolygons). This algorithm generates a polygon layer using as polygon rings the lines from an input line layer. The attribute table of the output layer is the same as the one from of the input line layer.
 ##'
-##' @title QGIS algorithm Lines to polygons
+##' @title QGIS algorithm - Lines to polygons
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Polygons. Path for new vector layer.

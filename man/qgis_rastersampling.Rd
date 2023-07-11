@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rastersampling.R
 \name{qgis_rastersampling}
 \alias{qgis_rastersampling}
-\title{QGIS algorithm Sample raster values}
+\title{QGIS algorithm - Sample raster values}
 \usage{
 qgis_rastersampling(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_rastersampling(
 
 \item{RASTERCOPY}{\code{raster} - Raster layer. Path to a raster layer.}
 
-\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value.}
+\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Sampled. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_rastersampling(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Sample raster values (native:rastersampling)
+QGIS Algorithm provided by QGIS (native c++) Sample raster values (native:rastersampling). Samples raster values under a set of points. This algorithm creates a new vector layer with the same attributes of the input layer and the raster values corresponding on the point location.  If the raster layer has more than one band, all the band values are sampled.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_adduniquevalueindexfield.R
 \name{qgis_adduniquevalueindexfield}
 \alias{qgis_adduniquevalueindexfield}
-\title{QGIS algorithm Add unique value index field}
+\title{QGIS algorithm - Add unique value index field}
 \usage{
 qgis_adduniquevalueindexfield(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,7 +21,7 @@ qgis_adduniquevalueindexfield(
 
 \item{FIELD}{\code{field} - Class field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{FIELD_NAME}{\code{string} - Output field name. String value.}
+\item{FIELD_NAME}{\code{string} - Output field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Layer with index field. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_adduniquevalueindexfield(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add unique value index field (native:adduniquevalueindexfield)
+QGIS Algorithm provided by QGIS (native c++) Add unique value index field (native:adduniquevalueindexfield). This algorithm takes a vector layer and an attribute and adds a new numeric field. Values in this field correspond to values in the specified attribute, so features with the same value for the attribute will have the same value in the new numeric field. This creates a numeric equivalent of the specified attribute, which defines the same classes.  The new attribute is not added to the input layer but a new layer is generated instead.  Optionally, a separate table can be output which contains a summary of the class field values mapped to the new unique numeric value.
 }
 \details{
 \subsection{Outputs description}{

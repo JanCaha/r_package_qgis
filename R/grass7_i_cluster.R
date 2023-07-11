@@ -1,19 +1,19 @@
-##' QGIS Algorithm provided by GRASS i.cluster (grass7:i.cluster)
+##' QGIS Algorithm provided by GRASS i.cluster (grass7:i.cluster). Generates spectral signatures for land cover types in an image using a clustering algorithm.
 ##'
-##' @title QGIS algorithm i.cluster
+##' @title QGIS algorithm - i.cluster
 ##'
 ##' @param input `multilayer` - Input rasters. .
-##' @param classes `number` - Initial number of classes (1-255). A numeric value.
+##' @param classes `number` - Initial number of classes (1-255). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param seed `file` - Name of file containing initial signatures. Path to a file.
-##' @param sample `string` - Sampling intervals (by row and col). String value.
-##' @param iterations `number` - Maximum number of iterations. A numeric value.
-##' @param convergence `number` - Percent convergence. A numeric value.
-##' @param separation `number` - Cluster separation. A numeric value.
-##' @param min_size `number` - Minimum number of pixels in a class. A numeric value.
+##' @param sample `string` - Sampling intervals (by row and col). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param iterations `number` - Maximum number of iterations. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param convergence `number` - Percent convergence. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param separation `number` - Cluster separation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param min_size `number` - Minimum number of pixels in a class. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param signaturefile `fileDestination` - Signature File. Path for new file.
 ##' @param reportfile `fileDestination` - Final Report File. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

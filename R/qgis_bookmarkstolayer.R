@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert spatial bookmarks to layer (native:bookmarkstolayer)
+##' QGIS Algorithm provided by QGIS (native c++) Convert spatial bookmarks to layer (native:bookmarkstolayer). Converts stored spatial bookmarks to a polygon layer. This algorithm creates a new layer containing polygon features for stored spatial bookmarks.  The export can be filtered to only bookmarks belonging to the current project, to all user bookmarks, or a combination of both.
 ##'
-##' @title QGIS algorithm Convert spatial bookmarks to layer
+##' @title QGIS algorithm - Convert spatial bookmarks to layer
 ##'
 ##' @param SOURCE `enum`  of `("Project bookmarks", "User bookmarks")` - Bookmark source. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param CRS `crs` - Output CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..

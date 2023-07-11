@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Generate points (pixel centroids) along line (qgis:generatepointspixelcentroidsalongline)
+##' QGIS Algorithm provided by QGIS Generate points (pixel centroids) along line (qgis:generatepointspixelcentroidsalongline). This algorithm generates a point vector layer from an input raster and line layer. The points correspond to the pixel centroids that intersect the line layer.
 ##'
-##' @title QGIS algorithm Generate points (pixel centroids) along line
+##' @title QGIS algorithm - Generate points (pixel centroids) along line
 ##'
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param INPUT_VECTOR `source` - Vector layer. Path to a vector layer.

@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extend lines (native:extendlines)
+##' QGIS Algorithm provided by QGIS (native c++) Extend lines (native:extendlines). Extends LineString geometries by extrapolating the start and end segments. This algorithm extends line geometries by a specified amount at the start and end of the line. Lines are extended using the bearing of the first and last segment in the line.
 ##'
-##' @title QGIS algorithm Extend lines
+##' @title QGIS algorithm - Extend lines
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param START_DISTANCE `distance` - Start distance. A numeric value.
-##' @param END_DISTANCE `distance` - End distance. A numeric value.
+##' @param START_DISTANCE `distance` - Start distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param END_DISTANCE `distance` - End distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Extended. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

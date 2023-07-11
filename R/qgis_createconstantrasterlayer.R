@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create constant raster layer (native:createconstantrasterlayer)
+##' QGIS Algorithm provided by QGIS (native c++) Create constant raster layer (native:createconstantrasterlayer). Generates raster layer for given extent and cell size filled with the specified value. Additionally an output data type can be specified. The algorithm will abort if a value has been entered that cannot be represented by the selected output raster data type.
 ##'
-##' @title QGIS algorithm Create constant raster layer
+##' @title QGIS algorithm - Create constant raster layer
 ##'
 ##' @param EXTENT `extent` - Desired extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param TARGET_CRS `crs` - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
-##' @param PIXEL_SIZE `number` - Pixel size. A numeric value.
-##' @param NUMBER `number` - Constant value. A numeric value.
+##' @param PIXEL_SIZE `number` - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NUMBER `number` - Constant value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT_TYPE `enum`  of `("Byte", "Integer16", "Unsigned Integer16", "Integer32", "Unsigned Integer32", "Float32", "Float64")` - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `rasterDestination` - Constant. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

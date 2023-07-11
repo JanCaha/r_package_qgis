@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by GRASS r.tile (grass7:r.tile)
+##' QGIS Algorithm provided by GRASS r.tile (grass7:r.tile). Splits a raster map into tiles
 ##'
-##' @title QGIS algorithm r.tile
+##' @title QGIS algorithm - r.tile
 ##'
 ##' @param input `raster` - Name of input raster map. Path to a raster layer.
-##' @param width `number` - Width of tiles (columns). A numeric value.
-##' @param height `number` - Height of tiles (rows). A numeric value.
-##' @param overlap `number` - Overlap of tiles. A numeric value.
+##' @param width `number` - Width of tiles (columns). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param height `number` - Height of tiles (rows). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param overlap `number` - Overlap of tiles. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param output `folderDestination` - Tiles Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

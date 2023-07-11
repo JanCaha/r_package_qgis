@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create style database from project (native:stylefromproject)
+##' QGIS Algorithm provided by QGIS (native c++) Create style database from project (native:stylefromproject). Creates a style database by extracting all symbols, color ramps, text formats and label settings from a QGIS project. This algorithm extracts all style objects (including symbols, color ramps, text formats and label settings) from a QGIS project.  The extracted symbols are saved to a QGIS style database (XML format), which can be managed and imported via the Style Manager dialog.
 ##'
-##' @title QGIS algorithm Create style database from project
+##' @title QGIS algorithm - Create style database from project
 ##'
 ##' @param INPUT `file` - Input project (leave blank to use current). Path to a file.
 ##' @param OUTPUT `fileDestination` - Output style database. Path for new file.

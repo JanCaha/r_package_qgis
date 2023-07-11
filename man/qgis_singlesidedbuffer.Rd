@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_singlesidedbuffer.R
 \name{qgis_singlesidedbuffer}
 \alias{qgis_singlesidedbuffer}
-\title{QGIS algorithm Single sided buffer}
+\title{QGIS algorithm - Single sided buffer}
 \usage{
 qgis_singlesidedbuffer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,15 +21,15 @@ qgis_singlesidedbuffer(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DISTANCE}{\code{distance} - Distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{SIDE}{\code{enum}  of \verb{("Left", "Right")} - Side. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{JOIN_STYLE}{\code{enum}  of \verb{("Round", "Miter", "Bevel")} - Join style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value.}
+\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Buffered. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_singlesidedbuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Single sided buffer (native:singlesidedbuffer)
+QGIS Algorithm provided by QGIS (native c++) Single sided buffer (native:singlesidedbuffer). This algorithm buffers lines by a specified distance on one side of the line only.  The segments parameter controls the number of line segments to use to approximate a quarter circle when creating rounded buffers. The join style parameter specifies whether round, miter or beveled joins should be used when buffering corners in a line. The miter limit parameter is only applicable for miter join styles, and controls the maximum distance from the buffer to use when creating a mitered join.
 }
 \details{
 \subsection{Outputs description}{

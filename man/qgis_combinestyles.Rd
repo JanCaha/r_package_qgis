@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_combinestyles.R
 \name{qgis_combinestyles}
 \alias{qgis_combinestyles}
-\title{QGIS algorithm Combine style databases}
+\title{QGIS algorithm - Combine style databases}
 \usage{
 qgis_combinestyles(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_combinestyles(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Combine style databases (native:combinestyles)
+QGIS Algorithm provided by QGIS (native c++) Combine style databases (native:combinestyles). Combines multiple style databases into a single database. This algorithm combines multiple QGIS style databases into a single style database. If any symbols exist with duplicate names between the different source databases these will be renamed to have unique names in the output combined database.
 }
 \details{
 \subsection{Outputs description}{

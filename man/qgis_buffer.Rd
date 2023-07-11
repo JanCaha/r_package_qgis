@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_buffer.R
 \name{qgis_buffer}
 \alias{qgis_buffer}
-\title{QGIS algorithm Buffer}
+\title{QGIS algorithm - Buffer}
 \usage{
 qgis_buffer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -12,6 +12,7 @@ qgis_buffer(
   JOIN_STYLE = qgisprocess:::qgis_default_value(),
   MITER_LIMIT = qgisprocess:::qgis_default_value(),
   DISSOLVE = qgisprocess:::qgis_default_value(),
+  SEPARATE_DISJOINT = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -22,17 +23,19 @@ qgis_buffer(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DISTANCE}{\code{distance} - Distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{END_CAP_STYLE}{\code{enum}  of \verb{("Round", "Flat", "Square")} - End cap style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{JOIN_STYLE}{\code{enum}  of \verb{("Round", "Miter", "Bevel")} - Join style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value.}
+\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISSOLVE}{\code{boolean} - Dissolve result. 1 for true/yes. 0 for false/no.}
+\item{DISSOLVE}{\code{boolean} - Dissolve result. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{SEPARATE_DISJOINT}{\code{boolean} - Keep disjoint results separate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Buffered. Path for new vector layer.}
 
@@ -45,7 +48,7 @@ qgis_buffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Buffer (native:buffer)
+QGIS Algorithm provided by QGIS (native c++) Buffer (native:buffer). This algorithm computes a buffer area for all the features in an input layer, using a fixed or dynamic distance.  The segments parameter controls the number of line segments to use to approximate a quarter circle when creating rounded offsets.  The end cap style parameter controls how line endings are handled in the buffer.  The join style parameter specifies whether round, miter or beveled joins should be used when offsetting corners in a line.  The miter limit parameter is only applicable for miter join styles, and controls the maximum distance from the offset curve to use when creating a mitered join.
 }
 \details{
 \subsection{Outputs description}{

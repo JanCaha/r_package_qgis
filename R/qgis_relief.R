@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS Relief (qgis:relief)
+##' QGIS Algorithm provided by QGIS Relief (qgis:relief). This algorithm creates a shaded relief layer from digital elevation data.
 ##'
-##' @title QGIS algorithm Relief
+##' @title QGIS algorithm - Relief
 ##'
 ##' @param INPUT `raster` - Elevation layer. Path to a raster layer.
-##' @param Z_FACTOR `number` - Z factor. A numeric value.
-##' @param AUTO_COLORS `boolean` - Generate relief classes automatically. 1 for true/yes. 0 for false/no.
+##' @param Z_FACTOR `number` - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param AUTO_COLORS `boolean` - Generate relief classes automatically. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param COLORS `relief_colors` - Relief colors. .
 ##' @param OUTPUT `rasterDestination` - Relief. Path for new raster layer.
 ##' @param FREQUENCY_DISTRIBUTION `fileDestination` - Frequency distribution. Path for new file.

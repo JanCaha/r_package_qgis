@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_report.R
 \name{grass7_r_report}
 \alias{grass7_r_report}
-\title{QGIS algorithm r.report}
+\title{QGIS algorithm - r.report}
 \usage{
 grass7_r_report(
   map = qgisprocess:::qgis_default_value(),
@@ -33,35 +33,35 @@ grass7_r_report(
 
 \item{units}{\code{enum}  of \verb{("mi", "me", "k", "a", "h", "c", "p")} - Units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{null_value}{\code{string} - Character representing no data cell value. String value.}
+\item{null_value}{\code{string} - Character representing no data cell value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{page_length}{\code{number} - Page length. A numeric value.}
+\item{page_length}{\code{number} - Page length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{page_width}{\code{number} - Page width. A numeric value.}
+\item{page_width}{\code{number} - Page width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{nsteps}{\code{number} - Number of fp subranges to collect stats from. A numeric value.}
+\item{nsteps}{\code{number} - Number of fp subranges to collect stats from. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{sort}{\code{enum}  of \verb{("asc", "desc")} - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.h}{\code{boolean} - Suppress page headers. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
+\item{.h}{\code{boolean} - Suppress page headers. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.}
 
-\item{.f}{\code{boolean} - Use formfeeds between pages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
+\item{.f}{\code{boolean} - Use formfeeds between pages. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.}
 
-\item{.e}{\code{boolean} - Scientific format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
+\item{.e}{\code{boolean} - Scientific format. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.}
 
-\item{.n}{\code{boolean} - Do not report no data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Do not report no data cells. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.a}{\code{boolean} - Do not report cells where all maps have no data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - Do not report cells where all maps have no data. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Report for cats floating-point ranges (floating-point maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Report for cats floating-point ranges (floating-point maps only). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.i}{\code{boolean} - Read floating-point map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Read floating-point map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
 \item{output}{\code{fileDestination} - Name for output file to hold the report. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -72,7 +72,7 @@ grass7_r_report(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.report (grass7:r.report)
+QGIS Algorithm provided by GRASS r.report (grass7:r.report). Reports statistics for raster layers.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by GDAL Polygonize (raster to vector) (gdal:polygonize)
+##' QGIS Algorithm provided by GDAL Polygonize (raster to vector) (gdal:polygonize). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number FIELD: Name of the field to create 	Default value:	DN 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EIGHT_CONNECTEDNESS: Use 8-connectedness 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Vectorized 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 ##'
-##' @title QGIS algorithm Polygonize (raster to vector)
+##' @title QGIS algorithm - Polygonize (raster to vector)
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.
-##' @param FIELD `string` - Name of the field to create. String value.
-##' @param EIGHT_CONNECTEDNESS `boolean` - Use 8-connectedness. 1 for true/yes. 0 for false/no.
-##' @param EXTRA `string` - Additional command-line parameters. String value.
+##' @param FIELD `string` - Name of the field to create. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param EIGHT_CONNECTEDNESS `boolean` - Use 8-connectedness. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param EXTRA `string` - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `vectorDestination` - Vectorized. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

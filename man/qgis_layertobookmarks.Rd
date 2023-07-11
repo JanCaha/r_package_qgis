@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_layertobookmarks.R
 \name{qgis_layertobookmarks}
 \alias{qgis_layertobookmarks}
-\title{QGIS algorithm Convert layer to spatial bookmarks}
+\title{QGIS algorithm - Convert layer to spatial bookmarks}
 \usage{
 qgis_layertobookmarks(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_layertobookmarks(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert layer to spatial bookmarks (native:layertobookmarks)
+QGIS Algorithm provided by QGIS (native c++) Convert layer to spatial bookmarks (native:layertobookmarks). Converts feature extents to stored spatial bookmarks. This algorithm creates spatial bookmarks corresponding to the extent of features contained in a layer.
 }
 \details{
 \subsection{Outputs description}{

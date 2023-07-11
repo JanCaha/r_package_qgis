@@ -1,24 +1,24 @@
-##' QGIS Algorithm provided by GRASS r.report (grass7:r.report)
+##' QGIS Algorithm provided by GRASS r.report (grass7:r.report). Reports statistics for raster layers.
 ##'
-##' @title QGIS algorithm r.report
+##' @title QGIS algorithm - r.report
 ##'
 ##' @param map `multilayer` - Raster layer(s) to report on. .
 ##' @param units `enum`  of `("mi", "me", "k", "a", "h", "c", "p")` - Units. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param null_value `string` - Character representing no data cell value. String value.
-##' @param page_length `number` - Page length. A numeric value.
-##' @param page_width `number` - Page width. A numeric value.
-##' @param nsteps `number` - Number of fp subranges to collect stats from. A numeric value.
+##' @param null_value `string` - Character representing no data cell value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param page_length `number` - Page length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param page_width `number` - Page width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param nsteps `number` - Number of fp subranges to collect stats from. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param sort `enum`  of `("asc", "desc")` - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .h `boolean` - Suppress page headers. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.
-##' @param .f `boolean` - Use formfeeds between pages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
-##' @param .e `boolean` - Scientific format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
-##' @param .n `boolean` - Do not report no data cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
-##' @param .a `boolean` - Do not report cells where all maps have no data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
-##' @param .c `boolean` - Report for cats floating-point ranges (floating-point maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
-##' @param .i `boolean` - Read floating-point map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param .h `boolean` - Suppress page headers. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.
+##' @param .f `boolean` - Use formfeeds between pages. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.
+##' @param .e `boolean` - Scientific format. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.
+##' @param .n `boolean` - Do not report no data cells. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
+##' @param .a `boolean` - Do not report cells where all maps have no data. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.
+##' @param .c `boolean` - Report for cats floating-point ranges (floating-point maps only). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
+##' @param .i `boolean` - Read floating-point map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.
 ##' @param output `fileDestination` - Name for output file to hold the report. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

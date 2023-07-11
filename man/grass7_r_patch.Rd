@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_patch.R
 \name{grass7_r_patch}
 \alias{grass7_r_patch}
-\title{QGIS algorithm r.patch}
+\title{QGIS algorithm - r.patch}
 \usage{
 grass7_r_patch(
   input = qgisprocess:::qgis_default_value(),
@@ -21,17 +21,17 @@ grass7_r_patch(
 \arguments{
 \item{input}{\code{multilayer} - Raster layers to be patched together. .}
 
-\item{.z}{\code{boolean} - Use zero (0) for transparency instead of NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
+\item{.z}{\code{boolean} - Use zero (0) for transparency instead of NULL. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.}
 
 \item{output}{\code{rasterDestination} - Patched. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -42,7 +42,7 @@ grass7_r_patch(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.patch (grass7:r.patch)
+QGIS Algorithm provided by GRASS r.patch (grass7:r.patch). Creates a composite raster layer by using one (or more) layer(s) to fill in areas of "no data" in another map layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_zonalstatisticsfb.R
 \name{qgis_zonalstatisticsfb}
 \alias{qgis_zonalstatisticsfb}
-\title{QGIS algorithm Zonal statistics}
+\title{QGIS algorithm - Zonal statistics}
 \usage{
 qgis_zonalstatisticsfb(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,7 +24,7 @@ qgis_zonalstatisticsfb(
 
 \item{RASTER_BAND}{\code{band} - Raster band. Integer value representing an existing raster band number.}
 
-\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value.}
+\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{STATISTICS}{\code{enum}  of \verb{("Count", "Sum", "Mean", "Median", "St dev", "Minimum", "Maximum", "Range", "Minority", "Majority", "Variety", "Variance")} - Statistics to calculate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -39,7 +39,7 @@ qgis_zonalstatisticsfb(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb)
+QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb). This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer.
 }
 \details{
 \subsection{Outputs description}{

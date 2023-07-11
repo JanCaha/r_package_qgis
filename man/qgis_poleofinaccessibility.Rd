@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_poleofinaccessibility.R
 \name{qgis_poleofinaccessibility}
 \alias{qgis_poleofinaccessibility}
-\title{QGIS algorithm Pole of inaccessibility}
+\title{QGIS algorithm - Pole of inaccessibility}
 \usage{
 qgis_poleofinaccessibility(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_poleofinaccessibility(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value.}
+\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Point. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_poleofinaccessibility(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Pole of inaccessibility (native:poleofinaccessibility)
+QGIS Algorithm provided by QGIS (native c++) Pole of inaccessibility (native:poleofinaccessibility). This algorithm calculates the pole of inaccessibility for a polygon layer, which is the most distant internal point from the boundary of the surface. This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin, 2016), which is an iterative approach guaranteed to find the true pole of inaccessibility within a specified tolerance (in layer units). More precise tolerances require more iterations and will take longer to calculate.  The distance from the calculated pole to the polygon boundary will be stored as a new attribute in the output layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Refactor fields (native:refactorfields)
+##' QGIS Algorithm provided by QGIS (native c++) Refactor fields (native:refactorfields). This algorithm allows editing the structure of the attributes table of a vector layer. Fields can be modified in their type and name, using a fields mapping.  The original layer is not modified. A new layer is generated, which contains a modified attribute table, according to the provided fields mapping.  Rows in orange have constraints in the template layer from which these fields were loaded. Treat this information as a hint during configuration. No constraints will be added on an output layer nor will they be checked or enforced by the algorithm.
 ##'
-##' @title QGIS algorithm Refactor fields
+##' @title QGIS algorithm - Refactor fields
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELDS_MAPPING `fields_mapping` - Fields mapping. .

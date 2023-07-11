@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_tilesxyzmbtiles.R
 \name{qgis_tilesxyzmbtiles}
 \alias{qgis_tilesxyzmbtiles}
-\title{QGIS algorithm Generate XYZ tiles (MBTiles)}
+\title{QGIS algorithm - Generate XYZ tiles (MBTiles)}
 \usage{
 qgis_tilesxyzmbtiles(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -23,19 +23,19 @@ qgis_tilesxyzmbtiles(
 \arguments{
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{ZOOM_MIN}{\code{number} - Minimum zoom. A numeric value.}
+\item{ZOOM_MIN}{\code{number} - Minimum zoom. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ZOOM_MAX}{\code{number} - Maximum zoom. A numeric value.}
+\item{ZOOM_MAX}{\code{number} - Maximum zoom. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DPI}{\code{number} - DPI. A numeric value.}
+\item{DPI}{\code{number} - DPI. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{BACKGROUND_COLOR}{\code{color} - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8).}
+\item{BACKGROUND_COLOR}{\code{color} - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8). field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{TILE_FORMAT}{\code{enum}  of \verb{("PNG", "JPG")} - Tile format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{QUALITY}{\code{number} - Quality (JPG only). A numeric value.}
+\item{QUALITY}{\code{number} - Quality (JPG only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{METATILESIZE}{\code{number} - Metatile size. A numeric value.}
+\item{METATILESIZE}{\code{number} - Metatile size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_FILE}{\code{fileDestination} - Output file (for MBTiles). Path for new file.}
 
@@ -48,7 +48,7 @@ qgis_tilesxyzmbtiles(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Generate XYZ tiles (MBTiles) (qgis:tilesxyzmbtiles)
+QGIS Algorithm provided by QGIS Generate XYZ tiles (MBTiles) (qgis:tilesxyzmbtiles). This algorithm generates raster XYZ tiles of map canvas content. Tile images are saved as a single file in the “MBTiles” format.
 }
 \details{
 \subsection{Outputs description}{

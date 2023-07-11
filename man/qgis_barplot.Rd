@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_barplot.R
 \name{qgis_barplot}
 \alias{qgis_barplot}
-\title{QGIS algorithm Bar plot}
+\title{QGIS algorithm - Bar plot}
 \usage{
 qgis_barplot(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_barplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Bar plot (qgis:barplot)
+QGIS Algorithm provided by QGIS Bar plot (qgis:barplot). This algorithm creates a bar plot from a category and a layer field.
 }
 \details{
 \subsection{Outputs description}{

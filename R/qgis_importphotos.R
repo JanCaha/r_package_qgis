@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:importphotos)
+##' QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:importphotos). Creates a point layer corresponding to the geotagged locations from JPEG or HEIF/HEIC images from a source folder. Optionally the folder can be recursively scanned.  The point layer will contain a single PointZ feature per input file from which the geotags could be read. Any altitude information from the geotags will be used to set the point's Z value.  Optionally, a table of unreadable or non-geotagged photos can also be created.
 ##'
-##' @title QGIS algorithm Import geotagged photos
+##' @title QGIS algorithm - Import geotagged photos
 ##'
 ##' @param FOLDER `file` - Input folder. Path to a file.
-##' @param RECURSIVE `boolean` - Scan recursively. 1 for true/yes. 0 for false/no.
+##' @param RECURSIVE `boolean` - Scan recursively. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Photos. Path for new vector layer.
 ##' @param INVALID `sink` - Invalid photos table. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

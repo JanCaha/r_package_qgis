@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries)
+##' QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries). Extracts a mesh dataset's time series values from points contained in a vector layer This algorithm extracts mesh's dataset time series values from points contained in a vector layer. If the time step is kept to its default value (0 hours), the time step used is the one of the two first datasets of the first selected dataset group.
 ##'
-##' @title QGIS algorithm Export time series values from points of a mesh dataset
+##' @title QGIS algorithm - Export time series values from points of a mesh dataset
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param STARTING_TIME `meshdatasettime` - Starting time. .
 ##' @param FINISHING_TIME `meshdatasettime` - Finishing time. .
-##' @param TIME_STEP `number` - Time step (hours). A numeric value.
+##' @param TIME_STEP `number` - Time step (hours). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param INPUT_POINTS `source` - Points for data export. Path to a vector layer.
-##' @param COORDINATES_DIGITS `number` - Digits count for coordinates. A numeric value.
-##' @param DATASET_DIGITS `number` - Digits count for dataset value. A numeric value.
+##' @param COORDINATES_DIGITS `number` - Digits count for coordinates. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DATASET_DIGITS `number` - Digits count for dataset value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `fileDestination` - Exported data CSV file. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

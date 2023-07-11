@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_dissolve.R
 \name{qgis_dissolve}
 \alias{qgis_dissolve}
-\title{QGIS algorithm Dissolve}
+\title{QGIS algorithm - Dissolve}
 \usage{
 qgis_dissolve(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_dissolve(
 
 \item{FIELD}{\code{field} - Dissolve field(s). The name of an existing field. ; delimited list of existing field names.}
 
-\item{SEPARATE_DISJOINT}{\code{boolean} - Keep disjoint features separate. 1 for true/yes. 0 for false/no.}
+\item{SEPARATE_DISJOINT}{\code{boolean} - Keep disjoint features separate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Dissolved. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_dissolve(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Dissolve (native:dissolve)
+QGIS Algorithm provided by QGIS (native c++) Dissolve (native:dissolve). This algorithm takes a vector layer and combines their features into new features. One or more attributes can be specified to dissolve features belonging to the same class (having the same value for the specified attributes), alternatively all features can be dissolved in a single one.  All output geometries will be converted to multi geometries. In case the input is a polygon layer, common boundaries of adjacent polygons being dissolved will get erased.  If enabled, the optional "Keep disjoint features separate" setting will cause features and parts that do not overlap or touch to be exported as separate features (instead of parts of a single multipart feature).
 }
 \details{
 \subsection{Outputs description}{

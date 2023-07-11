@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Convert geometry type (qgis:convertgeometrytype)
+##' QGIS Algorithm provided by QGIS Convert geometry type (qgis:convertgeometrytype). This algorithm generates a new layer based on an existing one, with a different type of geometry. Not all conversions are possible. For instance, a line layer can be converted to a point layer, but a point layer cannot be converted to a line layer. See the "Polygonize" or "Lines to polygons" algorithm for alternative options.
 ##'
-##' @title QGIS algorithm Convert geometry type
+##' @title QGIS algorithm - Convert geometry type
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param TYPE `enum`  of `("Centroids", "Nodes", "Linestrings", "Multilinestrings", "Polygons")` - New geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

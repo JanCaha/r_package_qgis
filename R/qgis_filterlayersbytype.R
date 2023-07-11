@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Filter layers by type (native:filterlayersbytype)
+##' QGIS Algorithm provided by QGIS (native c++) Filter layers by type (native:filterlayersbytype). Filters layers by type This algorithm filters layer by their type. Incoming layers will be directed to different outputs based on whether they are a vector or raster layer.
 ##'
-##' @title QGIS algorithm Filter layers by type
+##' @title QGIS algorithm - Filter layers by type
 ##'
 ##' @param INPUT `layer` - Input layer. Path to a vector, raster or mesh layer.
 ##' @param VECTOR `vectorDestination` - Vector features. Path for new vector layer.

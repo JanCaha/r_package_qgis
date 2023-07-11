@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Dissolve (native:dissolve)
+##' QGIS Algorithm provided by QGIS (native c++) Dissolve (native:dissolve). This algorithm takes a vector layer and combines their features into new features. One or more attributes can be specified to dissolve features belonging to the same class (having the same value for the specified attributes), alternatively all features can be dissolved in a single one.  All output geometries will be converted to multi geometries. In case the input is a polygon layer, common boundaries of adjacent polygons being dissolved will get erased.  If enabled, the optional "Keep disjoint features separate" setting will cause features and parts that do not overlap or touch to be exported as separate features (instead of parts of a single multipart feature).
 ##'
-##' @title QGIS algorithm Dissolve
+##' @title QGIS algorithm - Dissolve
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Dissolve field(s). The name of an existing field. ; delimited list of existing field names.
-##' @param SEPARATE_DISJOINT `boolean` - Keep disjoint features separate. 1 for true/yes. 0 for false/no.
+##' @param SEPARATE_DISJOINT `boolean` - Keep disjoint features separate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Dissolved. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

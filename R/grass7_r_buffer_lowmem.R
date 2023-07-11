@@ -1,16 +1,16 @@
-##' QGIS Algorithm provided by GRASS r.buffer.lowmem (grass7:r.buffer.lowmem)
+##' QGIS Algorithm provided by GRASS r.buffer.lowmem (grass7:r.buffer.lowmem). Creates a raster map layer showing buffer zones surrounding cells that contain non-NULL category values (low-memory alternative).
 ##'
-##' @title QGIS algorithm r.buffer.lowmem
+##' @title QGIS algorithm - r.buffer.lowmem
 ##'
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
-##' @param distances `string` - Distance zone(s) (e.g. 100,200,300). String value.
+##' @param distances `string` - Distance zone(s) (e.g. 100,200,300). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param units `enum`  of `("meters", "kilometers", "feet", "miles", "nautmiles")` - Units of distance. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .z `boolean` - Ignore zero (0) data cells instead of NULL cells. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
+##' @param .z `boolean` - Ignore zero (0) data cells instead of NULL cells. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.
 ##' @param output `rasterDestination` - Buffer. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

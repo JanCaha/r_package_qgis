@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Minimum enclosing circles (native:minimumenclosingcircle)
+##' QGIS Algorithm provided by QGIS (native c++) Minimum enclosing circles (native:minimumenclosingcircle). This algorithm calculates the minimum enclosing circle which covers each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a minimal enclosing circle calculation which covers the whole layer or grouped subsets of features.
 ##'
-##' @title QGIS algorithm Minimum enclosing circles
+##' @title QGIS algorithm - Minimum enclosing circles
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param SEGMENTS `number` - Number of segments in circles. A numeric value.
+##' @param SEGMENTS `number` - Number of segments in circles. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Minimum enclosing circles. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

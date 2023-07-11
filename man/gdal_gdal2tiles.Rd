@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_gdal2tiles.R
 \name{gdal_gdal2tiles}
 \alias{gdal_gdal2tiles}
-\title{QGIS algorithm gdal2tiles}
+\title{QGIS algorithm - gdal2tiles}
 \usage{
 gdal_gdal2tiles(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -32,31 +32,31 @@ gdal_gdal2tiles(
 
 \item{PROFILE}{\code{enum}  of \verb{("Mercator", "Geodetic", "Raster")} - Tile cutting profile. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{ZOOM}{\code{string} - Zoom levels to render. String value.}
+\item{ZOOM}{\code{string} - Zoom levels to render. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{VIEWER}{\code{enum}  of \verb{("All", "GoogleMaps", "OpenLayers", "Leaflet", "None")} - Web viewer to generate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{TITLE}{\code{string} - Title of the map. String value.}
+\item{TITLE}{\code{string} - Title of the map. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{COPYRIGHT}{\code{string} - Copyright of the map. String value.}
+\item{COPYRIGHT}{\code{string} - Copyright of the map. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{RESAMPLING}{\code{enum}  of \verb{("Average", "Nearest neighbour", "Bilinear", "Cubic", "Cubic spline", "Lanczos windowed sinc", "Antialias")} - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{SOURCE_CRS}{\code{crs} - The spatial reference system used for the source input data. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{NODATA}{\code{number} - Transparency value to assign to the input data. A numeric value.}
+\item{NODATA}{\code{number} - Transparency value to assign to the input data. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{URL}{\code{string} - URL address where the generated tiles are going to be published. String value.}
+\item{URL}{\code{string} - URL address where the generated tiles are going to be published. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GOOGLE_KEY}{\code{string} - Google Maps API key (http://code.google.com/apis/maps/signup.html). String value.}
+\item{GOOGLE_KEY}{\code{string} - Google Maps API key (http:\code{/}\code{/}code.google.com\code{/}apis\code{/}maps\code{/}signup.html). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{BING_KEY}{\code{string} - Bing Maps API key (https://www.bingmapsportal.com/). String value.}
+\item{BING_KEY}{\code{string} - Bing Maps API key (https:\code{/}\code{/}www.bingmapsportal.com\code{/}). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{RESUME}{\code{boolean} - Generate only missing files. 1 for true/yes. 0 for false/no.}
+\item{RESUME}{\code{boolean} - Generate only missing files. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{KML}{\code{boolean} - Generate KML for Google Earth. 1 for true/yes. 0 for false/no.}
+\item{KML}{\code{boolean} - Generate KML for Google Earth. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NO_KML}{\code{boolean} - Avoid automatic generation of KML files for EPSG:4326. 1 for true/yes. 0 for false/no.}
+\item{NO_KML}{\code{boolean} - Avoid automatic generation of KML files for EPSG:4326. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{folderDestination} - Output directory. Path for an existing or new folder.}
 
@@ -69,7 +69,7 @@ gdal_gdal2tiles(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL gdal2tiles (gdal:gdal2tiles)
+QGIS Algorithm provided by GDAL gdal2tiles (gdal:gdal2tiles). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer PROFILE: Tile cutting profile 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Mercator 		- 1: Geodetic 		- 2: Raster 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' ZOOM: Zoom levels to render (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression VIEWER: Web viewer to generate 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: All 		- 1: GoogleMaps 		- 2: OpenLayers 		- 3: Leaflet 		- 4: None 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' TITLE: Title of the map (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression COPYRIGHT: Copyright of the map (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression RESAMPLING: Resampling method 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Average 		- 1: Nearest neighbour 		- 2: Bilinear 		- 3: Cubic 		- 4: Cubic spline 		- 5: Lanczos windowed sinc 		- 6: Antialias 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' SOURCE_CRS: The spatial reference system used for the source input data (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. NODATA: Transparency value to assign to the input data (optional) 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression URL: URL address where the generated tiles are going to be published (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression GOOGLE_KEY: Google Maps API key (http://code.google.com/apis/maps/signup.html) (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression BING_KEY: Bing Maps API key (https://www.bingmapsportal.com/) (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression RESUME: Generate only missing files 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression KML: Generate KML for Google Earth 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NO_KML: Avoid automatic generation of KML files for EPSG:4326 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Output directory 	Argument type:	folderDestination 	Acceptable values: 		- Path for an existing or new folder
 }
 \details{
 \subsection{Outputs description}{

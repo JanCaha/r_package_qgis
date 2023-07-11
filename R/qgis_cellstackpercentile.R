@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS (native c++) Cell stack percentile (native:cellstackpercentile)
+##' QGIS Algorithm provided by QGIS (native c++) Cell stack percentile (native:cellstackpercentile). The Cell stack percentile algorithm returns the cell-wise percentile value of a stack of rasters and writes the results to an output raster. The percentile to return is determined by the percentile input value (ranges between 0 and 1). At each cell location, the specified percentile is obtained using the respective value from the stack of all overlaid and sorted cell values of the input rasters.  There are three methods for percentile calculation:ul    liNearest rank/li   liInclusive linear interpolation (PERCENTILE.INC)/li   liExclusive linear interpolation (PERCENTILE.EXC)/li/ul While the output value can stay the same for the nearest rank method (obtains the value that is nearest to the specified percentile), the linear interpolation method return unique values for different percentiles. Both interpolation methods follow their counterpart methods implemented by LibreOffice or Microsoft Excel.   The output raster's extent and resolution is defined by a reference raster. If the input raster layers that do not match the cell size of the reference raster layer will be resampled using nearest neighbor resampling. NoData values in any of the input layers will result in a NoData cell output if the Ignore NoData parameter is not set. The output raster data type will be set to the most complex data type present in the input datasets.
 ##'
-##' @title QGIS algorithm Cell stack percentile
+##' @title QGIS algorithm - Cell stack percentile
 ##'
 ##' @param INPUT `multilayer` - Input layers. .
 ##' @param METHOD `enum`  of `("Nearest rank", "Inclusive linear interpolation (PERCENTILE.INC)", "Exclusive linear interpolation (PERCENTILE.EXC)")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param PERCENTILE `number` - Percentile. A numeric value.
-##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no.
+##' @param PERCENTILE `number` - Percentile. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param REFERENCE_LAYER `raster` - Reference layer. Path to a raster layer.
-##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value.
+##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

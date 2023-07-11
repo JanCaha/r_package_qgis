@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_walk_rast.R
 \name{grass7_r_walk_rast}
 \alias{grass7_r_walk_rast}
-\title{QGIS algorithm r.walk.rast}
+\title{QGIS algorithm - r.walk.rast}
 \usage{
 grass7_r_walk_rast(
   elevation = qgisprocess:::qgis_default_value(),
@@ -35,21 +35,21 @@ grass7_r_walk_rast(
 
 \item{start_raster}{\code{raster} - Name of starting raster points map (all non-NULL cells are starting points). Path to a raster layer.}
 
-\item{walk_coeff}{\code{string} - Coefficients for walking energy formula parameters a,b,c,d. String value.}
+\item{walk_coeff}{\code{string} - Coefficients for walking energy formula parameters a,b,c,d. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{lambda}{\code{number} - Lambda coefficients for combining walking energy and friction cost. A numeric value.}
+\item{lambda}{\code{number} - Lambda coefficients for combining walking energy and friction cost. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{slope_factor}{\code{number} - Slope factor determines travel energy cost per height step. A numeric value.}
+\item{slope_factor}{\code{number} - Slope factor determines travel energy cost per height step. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{max_cost}{\code{number} - Maximum cumulative cost. A numeric value.}
+\item{max_cost}{\code{number} - Maximum cumulative cost. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{null_cost}{\code{number} - Cost assigned to null cells. By default, null cells are excluded. A numeric value.}
+\item{null_cost}{\code{number} - Cost assigned to null cells. By default, null cells are excluded. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{memory}{\code{number} - Maximum memory to be used in MB. A numeric value.}
+\item{memory}{\code{number} - Maximum memory to be used in MB. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.k}{\code{boolean} - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -k.}
+\item{.k}{\code{boolean} - Use the 'Knight's move'; slower, but more accurate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -k.}
 
-\item{.n}{\code{boolean} - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Keep null values in output raster layer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Cumulative cost. Path for new raster layer.}
 
@@ -57,11 +57,11 @@ grass7_r_walk_rast(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -72,7 +72,7 @@ grass7_r_walk_rast(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.walk.rast (grass7:r.walk.rast)
+QGIS Algorithm provided by GRASS r.walk.rast (grass7:r.walk.rast). r.walk.rast - Creates a raster map showing the anisotropic cumulative cost of moving between different geographic locations on an input raster map whose cell category values represent cost from a raster.
 }
 \details{
 \subsection{Outputs description}{

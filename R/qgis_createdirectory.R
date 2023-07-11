@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create directory (native:createdirectory)
+##' QGIS Algorithm provided by QGIS (native c++) Create directory (native:createdirectory). Creates a new directory on a file system. This algorithm creates a new directory on a file system. Directories will be created recursively, creating all required parent directories in order to construct the full specified directory path.  No errors will be raised if the directory already exists.
 ##'
-##' @title QGIS algorithm Create directory
+##' @title QGIS algorithm - Create directory
 ##'
 ##' @param PATH `layer` - Directory path. Path to a vector, raster or mesh layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

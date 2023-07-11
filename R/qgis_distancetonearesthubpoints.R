@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Distance to nearest hub (points) (qgis:distancetonearesthubpoints)
+##' QGIS Algorithm provided by QGIS Distance to nearest hub (points) (qgis:distancetonearesthubpoints). Given an origin and a destination layers, this algorithm computes the distance between origin features and their closest destination one. Distance calculations are based on the features center. The resulting layer contains origin features center point with an additional field indicating the identifier of the nearest destination feature and the distance to it.
 ##'
-##' @title QGIS algorithm Distance to nearest hub (points)
+##' @title QGIS algorithm - Distance to nearest hub (points)
 ##'
 ##' @param INPUT `source` - Source points layer. Path to a vector layer.
 ##' @param HUBS `source` - Destination hubs layer. Path to a vector layer.

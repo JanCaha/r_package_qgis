@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS Regular points (qgis:regularpoints)
+##' QGIS Algorithm provided by QGIS Regular points (qgis:regularpoints). This algorithm creates a point layer with a given number of regular points, all of them within a given extent.
 ##'
-##' @title QGIS algorithm Regular points
+##' @title QGIS algorithm - Regular points
 ##'
 ##' @param EXTENT `extent` - Input extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param SPACING `distance` - Point spacing/count. A numeric value.
-##' @param INSET `distance` - Initial inset from corner (LH side). A numeric value.
-##' @param RANDOMIZE `boolean` - Apply random offset to point spacing. 1 for true/yes. 0 for false/no.
-##' @param IS_SPACING `boolean` - Use point spacing. 1 for true/yes. 0 for false/no.
+##' @param SPACING `distance` - Point spacing\code{/}count. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param INSET `distance` - Initial inset from corner (LH side). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param RANDOMIZE `boolean` - Apply random offset to point spacing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param IS_SPACING `boolean` - Use point spacing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param CRS `crs` - Output layer CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param OUTPUT `sink` - Regular points. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

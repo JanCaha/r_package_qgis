@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_watershed.R
 \name{grass7_r_watershed}
 \alias{grass7_r_watershed}
-\title{QGIS algorithm r.watershed}
+\title{QGIS algorithm - r.watershed}
 \usage{
 grass7_r_watershed(
   elevation = qgisprocess:::qgis_default_value(),
@@ -49,23 +49,23 @@ grass7_r_watershed(
 
 \item{blocking}{\code{raster} - Terrain blocking overland surface flow, for USLE. Path to a raster layer.}
 
-\item{threshold}{\code{number} - Minimum size of exterior watershed basin. A numeric value.}
+\item{threshold}{\code{number} - Minimum size of exterior watershed basin. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{max_slope_length}{\code{number} - Maximum length of surface flow, for USLE. A numeric value.}
+\item{max_slope_length}{\code{number} - Maximum length of surface flow, for USLE. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{convergence}{\code{number} - Convergence factor for MFD (1-10). A numeric value.}
+\item{convergence}{\code{number} - Convergence factor for MFD (1-10). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{memory}{\code{number} - Maximum memory to be used with -m flag (in MB). A numeric value.}
+\item{memory}{\code{number} - Maximum memory to be used with -m flag (in MB). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.s}{\code{boolean} - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
-\item{.m}{\code{boolean} - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
-\item{.arg_4}{\code{boolean} - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -4.}
+\item{.arg_4}{\code{boolean} - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -4.}
 
-\item{.a}{\code{boolean} - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.b}{\code{boolean} - Beautify flat areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - Beautify flat areas. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
 \item{accumulation}{\code{rasterDestination} - Number of cells that drain through each cell. Path for new raster layer.}
 
@@ -81,17 +81,17 @@ grass7_r_watershed(
 
 \item{slope_steepness}{\code{rasterDestination} - Slope steepness (S) factor for USLE. Path for new raster layer.}
 
-\item{tci}{\code{rasterDestination} - Topographic index ln(a / tan(b)). Path for new raster layer.}
+\item{tci}{\code{rasterDestination} - Topographic index ln(a \code{/} tan(b)). Path for new raster layer.}
 
 \item{spi}{\code{rasterDestination} - Stream power index a * tan(b). Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -102,7 +102,7 @@ grass7_r_watershed(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.watershed (grass7:r.watershed)
+QGIS Algorithm provided by GRASS r.watershed (grass7:r.watershed). Watershed basin analysis program.
 }
 \details{
 \subsection{Outputs description}{
@@ -115,7 +115,7 @@ QGIS Algorithm provided by GRASS r.watershed (grass7:r.watershed)
 \item slope_steepness - outputRaster - Slope steepness (S) factor for USLE
 \item spi - outputRaster - Stream power index a * tan(b)
 \item stream - outputRaster - Stream segments
-\item tci - outputRaster - Topographic index ln(a / tan(b))
+\item tci - outputRaster - Topographic index ln(a \code{/} tan(b))
 }
 }
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_assignprojection.R
 \name{qgis_assignprojection}
 \alias{qgis_assignprojection}
-\title{QGIS algorithm Assign projection}
+\title{QGIS algorithm - Assign projection}
 \usage{
 qgis_assignprojection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_assignprojection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Assign projection (native:assignprojection)
+QGIS Algorithm provided by QGIS (native c++) Assign projection (native:assignprojection). This algorithm assigns a new projection to a vector layer. It creates a new layer with the exact same features and geometries as the input one, but assigned to a new CRS. E.g. the geometries are not reprojected, they are just assigned to a different CRS. This algorithm can be used to repair layers which have been assigned an incorrect projection.  Attributes are not modified by this algorithm.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,15 +1,15 @@
-##' QGIS Algorithm provided by QGIS Generate XYZ tiles (MBTiles) (qgis:tilesxyzmbtiles)
+##' QGIS Algorithm provided by QGIS Generate XYZ tiles (MBTiles) (qgis:tilesxyzmbtiles). This algorithm generates raster XYZ tiles of map canvas content. Tile images are saved as a single file in the “MBTiles” format.
 ##'
-##' @title QGIS algorithm Generate XYZ tiles (MBTiles)
+##' @title QGIS algorithm - Generate XYZ tiles (MBTiles)
 ##'
 ##' @param EXTENT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param ZOOM_MIN `number` - Minimum zoom. A numeric value.
-##' @param ZOOM_MAX `number` - Maximum zoom. A numeric value.
-##' @param DPI `number` - DPI. A numeric value.
-##' @param BACKGROUND_COLOR `color` - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8).
+##' @param ZOOM_MIN `number` - Minimum zoom. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ZOOM_MAX `number` - Maximum zoom. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DPI `number` - DPI. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param BACKGROUND_COLOR `color` - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8). field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param TILE_FORMAT `enum`  of `("PNG", "JPG")` - Tile format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param QUALITY `number` - Quality (JPG only). A numeric value.
-##' @param METATILESIZE `number` - Metatile size. A numeric value.
+##' @param QUALITY `number` - Quality (JPG only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param METATILESIZE `number` - Metatile size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT_FILE `fileDestination` - Output file (for MBTiles). Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

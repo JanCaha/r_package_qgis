@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_to_vect.R
 \name{grass7_r_to_vect}
 \alias{grass7_r_to_vect}
-\title{QGIS algorithm r.to.vect}
+\title{QGIS algorithm - r.to.vect}
 \usage{
 grass7_r_to_vect(
   input = qgisprocess:::qgis_default_value(),
@@ -31,31 +31,31 @@ grass7_r_to_vect(
 
 \item{type}{\code{enum}  of \verb{("line", "point", "area")} - Feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{column}{\code{string} - Name of attribute column to store value. String value.}
+\item{column}{\code{string} - Name of attribute column to store value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.s}{\code{boolean} - Smooth corners of area features. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Smooth corners of area features. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
-\item{.v}{\code{boolean} - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
+\item{.v}{\code{boolean} - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -v.}
 
-\item{.z}{\code{boolean} - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
+\item{.z}{\code{boolean} - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.}
 
-\item{.b}{\code{boolean} - Do not build vector topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - Do not build vector topology. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
 \item{output}{\code{vectorDestination} - Vectorized. Path for new vector layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -66,7 +66,7 @@ grass7_r_to_vect(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.to.vect (grass7:r.to.vect)
+QGIS Algorithm provided by GRASS r.to.vect (grass7:r.to.vect). Converts a raster into a vector layer.
 }
 \details{
 \subsection{Outputs description}{

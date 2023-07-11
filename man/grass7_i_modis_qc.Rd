@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_modis_qc.R
 \name{grass7_i_modis_qc}
 \alias{grass7_i_modis_qc}
-\title{QGIS algorithm i.modis.qc}
+\title{QGIS algorithm - i.modis.qc}
 \usage{
 grass7_i_modis_qc(
   input = qgisprocess:::qgis_default_value(),
@@ -27,17 +27,17 @@ grass7_i_modis_qc(
 
 \item{qcname}{\code{enum}  of \verb{("adjcorr", "atcorr", "cloud", "data_quality", "diff_orbit_from_500m", "modland_qa", "mandatory_qa_11A1", "data_quality_flag_11A1", "emis_error_11A1", "lst_error_11A1", "data_quality_flag_11A2", "emis_error_11A2", "mandatory_qa_11A2", "lst_error_11A2", "aerosol_quantity", "brdf_correction_performed", "cirrus_detected", "cloud_shadow", "cloud_state", "internal_cloud_algorithm", "internal_fire_algorithm", "internal_snow_mask", "land_water", "mod35_snow_ice", "pixel_adjacent_to_cloud", "icm_cloudy", "icm_clear", "icm_high_clouds", "icm_low_clouds", "icm_snow", "icm_fire", "icm_sun_glint", "icm_dust", "icm_cloud_shadow", "icm_pixel_is_adjacent_to_cloud", "icm_cirrus", "icm_pan_flag", "icm_criteria_for_aerosol_retrieval", "icm_aot_has_clim_val", "modland_qa", "vi_usefulness", "aerosol_quantity", "pixel_adjacent_to_cloud", "brdf_correction_performed", "mixed_clouds", "land_water", "possible_snow_ice", "possible_shadow", "platform", "land_water", "sun_z_angle_at_local_noon", "brdf_correction_performed")} - Name of QC type to extract. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{band}{\code{enum}  of \verb{("1", "2", "3", "4", "5", "6", "7")} - Band number of MODIS product (mod09Q1=(1,2),mod09A1=(1-7),m(o/y)d09CMG=(1-7), mcd43B2q=(1-7)). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{band}{\code{enum}  of \verb{("1", "2", "3", "4", "5", "6", "7")} - Band number of MODIS product (mod09Q1=(1,2),mod09A1=(1-7),m(o\code{/}y)d09CMG=(1-7), mcd43B2q=(1-7)). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{output}{\code{rasterDestination} - QC Classification. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_i_modis_qc(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.modis.qc (grass7:i.modis.qc)
+QGIS Algorithm provided by GRASS i.modis.qc (grass7:i.modis.qc). Extracts quality control parameters from MODIS QC layers.
 }
 \details{
 \subsection{Outputs description}{

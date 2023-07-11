@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pixelstopolygons.R
 \name{qgis_pixelstopolygons}
 \alias{qgis_pixelstopolygons}
-\title{QGIS algorithm Raster pixels to polygons}
+\title{QGIS algorithm - Raster pixels to polygons}
 \usage{
 qgis_pixelstopolygons(
   INPUT_RASTER = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_pixelstopolygons(
 
 \item{RASTER_BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{FIELD_NAME}{\code{string} - Field name. String value.}
+\item{FIELD_NAME}{\code{string} - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Vector polygons. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_pixelstopolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster pixels to polygons (native:pixelstopolygons)
+QGIS Algorithm provided by QGIS (native c++) Raster pixels to polygons (native:pixelstopolygons). Creates a vector layer of polygons corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating polygon features for each individual pixel's extent in the raster layer.  Any nodata pixels are skipped in the output.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract by expression (native:extractbyexpression)
+##' QGIS Algorithm provided by QGIS (native c++) Extract by expression (native:extractbyexpression). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is based on a QGIS expression.  For help with QGIS expression functions, see the inbuilt help for specific functions which is available in the expression builder.
 ##'
-##' @title QGIS algorithm Extract by expression
+##' @title QGIS algorithm - Extract by expression
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param EXPRESSION `expression` - Expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.

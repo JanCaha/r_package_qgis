@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS Rectangles, ovals, diamonds (variable) (qgis:rectanglesovalsdiamondsvariable)
+##' QGIS Algorithm provided by QGIS Rectangles, ovals, diamonds (variable) (qgis:rectanglesovalsdiamondsvariable). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer SHAPE: Buffer shape 	Argument type:	enum 	Available values: 		- 0: Rectangles 		- 1: Diamonds 		- 2: Ovals 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' WIDTH: Width field 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names HEIGHT: Height field 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names ROTATION: Rotation field (optional) 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names SEGMENTS: Number of segments 	Default value:	36 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Output 	Argument type:	sink 	Acceptable values: 		- Path for new vector layer
 ##'
-##' @title QGIS algorithm Rectangles, ovals, diamonds (variable)
+##' @title QGIS algorithm - Rectangles, ovals, diamonds (variable)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param SHAPE `enum`  of `("Rectangles", "Diamonds", "Ovals")` - Buffer shape. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param WIDTH `field` - Width field. The name of an existing field. ; delimited list of existing field names.
 ##' @param HEIGHT `field` - Height field. The name of an existing field. ; delimited list of existing field names.
 ##' @param ROTATION `field` - Rotation field. The name of an existing field. ; delimited list of existing field names.
-##' @param SEGMENTS `number` - Number of segments. A numeric value.
+##' @param SEGMENTS `number` - Number of segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Output. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

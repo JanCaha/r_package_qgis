@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_shpencodinginfo.R
 \name{qgis_shpencodinginfo}
 \alias{qgis_shpencodinginfo}
-\title{QGIS algorithm Extract Shapefile encoding}
+\title{QGIS algorithm - Extract Shapefile encoding}
 \usage{
 qgis_shpencodinginfo(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,7 +24,7 @@ qgis_shpencodinginfo(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract Shapefile encoding (native:shpencodinginfo)
+QGIS Algorithm provided by QGIS (native c++) Extract Shapefile encoding (native:shpencodinginfo). Extracts the attribute encoding information embedded in a Shapefile. This algorithm extracts the attribute encoding information embedded in a Shapefile.  Both the encoding specified by an optional .cpg file and any encoding details present in the .dbf LDID header block are considered.
 }
 \details{
 \subsection{Outputs description}{

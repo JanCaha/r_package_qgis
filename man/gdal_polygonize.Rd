@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_polygonize.R
 \name{gdal_polygonize}
 \alias{gdal_polygonize}
-\title{QGIS algorithm Polygonize (raster to vector)}
+\title{QGIS algorithm - Polygonize (raster to vector)}
 \usage{
 gdal_polygonize(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,11 +22,11 @@ gdal_polygonize(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{FIELD}{\code{string} - Name of the field to create. String value.}
+\item{FIELD}{\code{string} - Name of the field to create. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EIGHT_CONNECTEDNESS}{\code{boolean} - Use 8-connectedness. 1 for true/yes. 0 for false/no.}
+\item{EIGHT_CONNECTEDNESS}{\code{boolean} - Use 8-connectedness. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Vectorized. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ gdal_polygonize(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Polygonize (raster to vector) (gdal:polygonize)
+QGIS Algorithm provided by GDAL Polygonize (raster to vector) (gdal:polygonize). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number FIELD: Name of the field to create 	Default value:	DN 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EIGHT_CONNECTEDNESS: Use 8-connectedness 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Vectorized 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

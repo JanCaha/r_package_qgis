@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by GDAL Rasterize (overwrite with fixed value) (gdal:rasterize_over_fixed_value)
+##' QGIS Algorithm provided by GDAL Rasterize (overwrite with fixed value) (gdal:rasterize_over_fixed_value). ---------------- Arguments ----------------  INPUT: Input vector layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer INPUT_RASTER: Input raster layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BURN: A fixed value to burn 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ADD: Add burn in values to existing raster values 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
 ##'
-##' @title QGIS algorithm Rasterize (overwrite with fixed value)
+##' @title QGIS algorithm - Rasterize (overwrite with fixed value)
 ##'
 ##' @param INPUT `source` - Input vector layer. Path to a vector layer.
 ##' @param INPUT_RASTER `raster` - Input raster layer. Path to a raster layer.
-##' @param BURN `number` - A fixed value to burn. A numeric value.
-##' @param ADD `boolean` - Add burn in values to existing raster values. 1 for true/yes. 0 for false/no.
-##' @param EXTRA `string` - Additional command-line parameters. String value.
+##' @param BURN `number` - A fixed value to burn. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ADD `boolean` - Add burn in values to existing raster values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param EXTRA `string` - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

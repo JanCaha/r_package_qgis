@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_splitwithlines.R
 \name{qgis_splitwithlines}
 \alias{qgis_splitwithlines}
-\title{QGIS algorithm Split with lines}
+\title{QGIS algorithm - Split with lines}
 \usage{
 qgis_splitwithlines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_splitwithlines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Split with lines (native:splitwithlines)
+QGIS Algorithm provided by QGIS (native c++) Split with lines (native:splitwithlines). This algorithm splits the lines or polygons in one layer using the lines or polygon rings in another layer to define the breaking points. Intersection between geometries in both layers are considered as split points.
 }
 \details{
 \subsection{Outputs description}{

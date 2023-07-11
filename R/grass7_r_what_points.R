@@ -1,22 +1,22 @@
-##' QGIS Algorithm provided by GRASS r.what.points (grass7:r.what.points)
+##' QGIS Algorithm provided by GRASS r.what.points (grass7:r.what.points). r.what.points - Queries raster maps on their category values and category labels on a layer of points.
 ##'
-##' @title QGIS algorithm r.what.points
+##' @title QGIS algorithm - r.what.points
 ##'
 ##' @param map `raster` - Name of raster map. Path to a raster layer.
 ##' @param points `source` - Name of vector points layer for query. Path to a vector layer.
-##' @param null_value `string` - String representing NULL value. String value.
-##' @param separator `string` - Field separator. Special characters: pipe, comma, space, tab, newline. String value.
-##' @param cache `number` - Size of point cache. A numeric value.
-##' @param .n `boolean` - Output header row. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
-##' @param .f `boolean` - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
-##' @param .r `boolean` - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
-##' @param .i `boolean` - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
-##' @param .c `boolean` - Turn on cache reporting. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param null_value `string` - String representing NULL value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param separator `string` - Field separator. Special characters: pipe, comma, space, tab, newline. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param cache `number` - Size of point cache. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .n `boolean` - Output header row. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
+##' @param .f `boolean` - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.
+##' @param .r `boolean` - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
+##' @param .i `boolean` - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.
+##' @param .c `boolean` - Turn on cache reporting. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
 ##' @param output `fileDestination` - Raster Values File. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.
-##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Centroids (native:centroids)
+##' QGIS Algorithm provided by QGIS (native c++) Centroids (native:centroids). This algorithm creates a new point layer, with points representing the centroid of the geometries in an input layer.  The attributes associated to each point in the output layer are the same ones associated to the original features.
 ##'
-##' @title QGIS algorithm Centroids
+##' @title QGIS algorithm - Centroids
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param ALL_PARTS `boolean` - Create centroid for each part. 1 for true/yes. 0 for false/no.
+##' @param ALL_PARTS `boolean` - Create centroid for each part. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Centroids. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields)
+##' QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields). Adds X and Y (or latitude/longitude) fields to a point layer. Adds X and Y (or latitude/longitude) fields to a point layer. The X/Y fields can be calculated in a different CRS to the layer (e.g. creating latitude/longitude fields for a layer in a project CRS).
 ##'
-##' @title QGIS algorithm Add X/Y fields to layer
+##' @title QGIS algorithm - Add X/Y fields to layer
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param CRS `crs` - Coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
-##' @param PREFIX `string` - Field prefix. String value.
+##' @param PREFIX `string` - Field prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Added fields. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

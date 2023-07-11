@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS (native c++) Array of translated features (native:arraytranslatedfeatures)
+##' QGIS Algorithm provided by QGIS (native c++) Array of translated features (native:arraytranslatedfeatures). Creates multiple translated copies of features in a layer. This algorithm creates copies of features in a layer, by creating multiple translated versions of each feature. Each copy is incrementally displaced by a preset amount in the x/y/z/m axis.
 ##'
-##' @title QGIS algorithm Array of translated features
+##' @title QGIS algorithm - Array of translated features
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param COUNT `number` - Number of features to create. A numeric value.
-##' @param DELTA_X `distance` - Step distance (x-axis). A numeric value.
-##' @param DELTA_Y `distance` - Step distance (y-axis). A numeric value.
-##' @param DELTA_Z `number` - Step distance (z-axis). A numeric value.
-##' @param DELTA_M `number` - Step distance (m values). A numeric value.
+##' @param COUNT `number` - Number of features to create. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_X `distance` - Step distance (x-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_Y `distance` - Step distance (y-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_Z `number` - Step distance (z-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_M `number` - Step distance (m values). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Translated. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

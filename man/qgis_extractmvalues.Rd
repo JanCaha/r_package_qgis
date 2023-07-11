@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractmvalues.R
 \name{qgis_extractmvalues}
 \alias{qgis_extractmvalues}
-\title{QGIS algorithm Extract M values}
+\title{QGIS algorithm - Extract M values}
 \usage{
 qgis_extractmvalues(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_extractmvalues(
 
 \item{SUMMARIES}{\code{enum}  of \verb{("First", "Last", "Count", "Sum", "Mean", "Median", "St dev (pop)", "Minimum", "Maximum", "Range", "Minority", "Majority", "Variety", "Q1", "Q3", "IQR")} - Summaries to calculate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value.}
+\item{COLUMN_PREFIX}{\code{string} - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_extractmvalues(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract M values (native:extractmvalues)
+QGIS Algorithm provided by QGIS (native c++) Extract M values (native:extractmvalues). Extracts m values (or m value statistics) from geometries into feature attributes. Extracts m values from geometries into feature attributes.  By default only the m value from the first vertex of each feature is extracted, however the algorithm can optionally calculate statistics on all of the geometry's m values, including sums, means, and minimums and maximums
 }
 \details{
 \subsection{Outputs description}{

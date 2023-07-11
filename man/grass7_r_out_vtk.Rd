@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_vtk.R
 \name{grass7_r_out_vtk}
 \alias{grass7_r_out_vtk}
-\title{QGIS algorithm r.out.vtk}
+\title{QGIS algorithm - r.out.vtk}
 \usage{
 grass7_r_out_vtk(
   input = qgisprocess:::qgis_default_value(),
@@ -33,35 +33,35 @@ grass7_r_out_vtk(
 
 \item{elevation}{\code{raster} - Input elevation raster map. Path to a raster layer.}
 
-\item{null}{\code{number} - Value to represent no data cell. A numeric value.}
+\item{null}{\code{number} - Value to represent no data cell. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{z}{\code{number} - Constant elevation (if no elevation map is specified). A numeric value.}
+\item{z}{\code{number} - Constant elevation (if no elevation map is specified). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{rgbmaps}{\code{multilayer} - Three (r,g,b) raster maps to create RGB values. .}
 
 \item{vectormaps}{\code{multilayer} - Three (x,y,z) raster maps to create vector values. .}
 
-\item{zscale}{\code{number} - Scale factor for elevation. A numeric value.}
+\item{zscale}{\code{number} - Scale factor for elevation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{precision}{\code{number} - Number of significant digits. A numeric value.}
+\item{precision}{\code{number} - Number of significant digits. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.p}{\code{boolean} - Create VTK point data instead of VTK cell data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
+\item{.p}{\code{boolean} - Create VTK point data instead of VTK cell data. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -p.}
 
-\item{.s}{\code{boolean} - Use structured grid for elevation (not recommended). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Use structured grid for elevation (not recommended). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
-\item{.t}{\code{boolean} - Use polydata-trianglestrips for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Use polydata-trianglestrips for elevation grid creation. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.v}{\code{boolean} - Use polydata-vertices for elevation grid creation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
+\item{.v}{\code{boolean} - Use polydata-vertices for elevation grid creation. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -v.}
 
-\item{.o}{\code{boolean} - Scale factor affects the origin (if no elevation map is given). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
+\item{.o}{\code{boolean} - Scale factor affects the origin (if no elevation map is given). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -o.}
 
-\item{.c}{\code{boolean} - Correct the coordinates to match the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Correct the coordinates to match the VTK-OpenGL precision. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - VTK File. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -72,7 +72,7 @@ grass7_r_out_vtk(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.vtk (grass7:r.out.vtk)
+QGIS Algorithm provided by GRASS r.out.vtk (grass7:r.out.vtk). Converts raster maps into the VTK-ASCII format
 }
 \details{
 \subsection{Outputs description}{

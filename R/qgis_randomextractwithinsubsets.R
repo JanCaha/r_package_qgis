@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS Random extract within subsets (qgis:randomextractwithinsubsets)
+##' QGIS Algorithm provided by QGIS Random extract within subsets (qgis:randomextractwithinsubsets). This algorithm takes a vector layer and generates a new one that contains only a subset of the features in the input layer. The subset is defined randomly, using a percentage or count value to define the total number of features in the subset. The percentage/count value is not applied to the whole layer, but instead to each category. Categories are defined according to a given attribute, which is also specified as an input parameter for the algorithm.
 ##'
-##' @title QGIS algorithm Random extract within subsets
+##' @title QGIS algorithm - Random extract within subsets
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - ID field. The name of an existing field. ; delimited list of existing field names.
 ##' @param METHOD `enum`  of `("Number of selected features", "Percentage of selected features")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param NUMBER `number` - Number/percentage of selected features. A numeric value.
+##' @param NUMBER `number` - Number\code{/}percentage of selected features. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Extracted (random stratified). Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -1,22 +1,22 @@
-##' QGIS Algorithm provided by GRASS r.to.vect (grass7:r.to.vect)
+##' QGIS Algorithm provided by GRASS r.to.vect (grass7:r.to.vect). Converts a raster into a vector layer.
 ##'
-##' @title QGIS algorithm r.to.vect
+##' @title QGIS algorithm - r.to.vect
 ##'
 ##' @param input `raster` - Input raster layer. Path to a raster layer.
 ##' @param type `enum`  of `("line", "point", "area")` - Feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param column `string` - Name of attribute column to store value. String value.
-##' @param .s `boolean` - Smooth corners of area features. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
-##' @param .v `boolean` - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.
-##' @param .z `boolean` - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
-##' @param .b `boolean` - Do not build vector topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
+##' @param column `string` - Name of attribute column to store value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .s `boolean` - Smooth corners of area features. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.
+##' @param .v `boolean` - Use raster values as categories instead of unique sequence. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -v.
+##' @param .z `boolean` - Write raster values as z coordinate. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.
+##' @param .b `boolean` - Do not build vector topology. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.
 ##' @param output `vectorDestination` - Vectorized. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value.
-##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value.
-##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.
+##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

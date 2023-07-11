@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_flattenrelationships.R
 \name{qgis_flattenrelationships}
 \alias{qgis_flattenrelationships}
-\title{QGIS algorithm Flatten relationship}
+\title{QGIS algorithm - Flatten relationship}
 \usage{
 qgis_flattenrelationships(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_flattenrelationships(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Flatten relationship (native:flattenrelationships)
+QGIS Algorithm provided by QGIS (native c++) Flatten relationship (native:flattenrelationships). Flatten a relationship for a vector layer. This algorithm flattens a relationship for a vector layer, exporting a single layer containing one master feature per related feature. This master feature contains all the attributes for the related features.
 }
 \details{
 \subsection{Outputs description}{

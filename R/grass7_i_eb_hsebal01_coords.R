@@ -1,24 +1,24 @@
-##' QGIS Algorithm provided by GRASS i.eb.hsebal01.coords (grass7:i.eb.hsebal01.coords)
+##' QGIS Algorithm provided by GRASS i.eb.hsebal01.coords (grass7:i.eb.hsebal01.coords). i.eb.hsebal01.coords - Computes sensible heat flux iteration SEBAL 01. Inline coordinates
 ##'
-##' @title QGIS algorithm i.eb.hsebal01.coords
+##' @title QGIS algorithm - i.eb.hsebal01.coords
 ##'
-##' @param netradiation `raster` - Name of instantaneous net radiation raster map (W/m2). Path to a raster layer.
-##' @param soilheatflux `raster` - Name of instantaneous soil heat flux raster map (W/m2). Path to a raster layer.
-##' @param aerodynresistance `raster` - Name of aerodynamic resistance to heat momentum raster map (s/m). Path to a raster layer.
+##' @param netradiation `raster` - Name of instantaneous net radiation raster map (W\code{/}m2). Path to a raster layer.
+##' @param soilheatflux `raster` - Name of instantaneous soil heat flux raster map (W\code{/}m2). Path to a raster layer.
+##' @param aerodynresistance `raster` - Name of aerodynamic resistance to heat momentum raster map (s\code{/}m). Path to a raster layer.
 ##' @param temperaturemeansealevel `raster` - Name of altitude corrected surface temperature raster map (K). Path to a raster layer.
-##' @param frictionvelocitystar `number` - Value of the height independent friction velocity (u*) (m/s). A numeric value.
+##' @param frictionvelocitystar `number` - Value of the height independent friction velocity (u*) (m\code{/}s). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param vapourpressureactual `raster` - Name of the actual vapour pressure (e_act) map (KPa). Path to a raster layer.
-##' @param row_wet_pixel `number` - Row value of the wet pixel. A numeric value.
-##' @param column_wet_pixel `number` - Column value of the wet pixel. A numeric value.
-##' @param row_dry_pixel `number` - Row value of the dry pixel. A numeric value.
-##' @param column_dry_pixel `number` - Column value of the dry pixel. A numeric value.
-##' @param .a `boolean` - Automatic wet/dry pixel (careful!). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
-##' @param .c `boolean` - Dry/Wet pixels coordinates are in image projection, not row/col. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
+##' @param row_wet_pixel `number` - Row value of the wet pixel. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param column_wet_pixel `number` - Column value of the wet pixel. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param row_dry_pixel `number` - Row value of the dry pixel. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param column_dry_pixel `number` - Column value of the dry pixel. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .a `boolean` - Automatic wet\code{/}dry pixel (careful!). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.
+##' @param .c `boolean` - Dry\code{/}Wet pixels coordinates are in image projection, not row\code{/}col. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
 ##' @param output `rasterDestination` - Sensible Heat Flux. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Truncate table (native:truncatetable)
+##' QGIS Algorithm provided by QGIS (native c++) Truncate table (native:truncatetable). This algorithm truncates a layer, by deleting all features from within the layer.  Warning — this algorithm modifies the layer in place, and deleted features cannot be restored!
 ##'
-##' @title QGIS algorithm Truncate table
+##' @title QGIS algorithm - Truncate table
 ##'
 ##' @param INPUT `vector` - Input layer. Path to a vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata)
+##' QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata). This algorithm uses the GPSBabel tool to download data from a GPS device into the GPX standard format.
 ##'
-##' @title QGIS algorithm Download GPS data from device
+##' @title QGIS algorithm - Download GPS data from device
 ##'
-##' @param DEVICE `string` - Device. String value.
-##' @param PORT `string` - Port. String value.
+##' @param DEVICE `string` - Device. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param PORT `string` - Port. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param FEATURE_TYPE `enum`  of `("Waypoints", "Routes", "Tracks")` - Feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `fileDestination` - Output. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

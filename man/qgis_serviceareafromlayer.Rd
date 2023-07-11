@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_serviceareafromlayer.R
 \name{qgis_serviceareafromlayer}
 \alias{qgis_serviceareafromlayer}
-\title{QGIS algorithm Service area (from layer)}
+\title{QGIS algorithm - Service area (from layer)}
 \usage{
 qgis_serviceareafromlayer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,25 +33,25 @@ qgis_serviceareafromlayer(
 
 \item{DIRECTION_FIELD}{\code{field} - Direction field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{VALUE_FORWARD}{\code{string} - Value for forward direction. String value.}
+\item{VALUE_FORWARD}{\code{string} - Value for forward direction. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VALUE_BACKWARD}{\code{string} - Value for backward direction. String value.}
+\item{VALUE_BACKWARD}{\code{string} - Value for backward direction. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VALUE_BOTH}{\code{string} - Value for both directions. String value.}
+\item{VALUE_BOTH}{\code{string} - Value for both directions. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{DEFAULT_DIRECTION}{\code{enum}  of \verb{("Forward direction", "Backward direction", "Both directions")} - Default direction. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{SPEED_FIELD}{\code{field} - Speed field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{DEFAULT_SPEED}{\code{number} - Default speed (km/h). A numeric value.}
+\item{DEFAULT_SPEED}{\code{number} - Default speed (km\code{/}h). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{TOLERANCE}{\code{distance} - Topology tolerance. A numeric value.}
+\item{TOLERANCE}{\code{distance} - Topology tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{START_POINTS}{\code{source} - Vector layer with start points. Path to a vector layer.}
 
-\item{TRAVEL_COST2}{\code{number} - Travel cost (distance for 'Shortest', time for 'Fastest'). A numeric value.}
+\item{TRAVEL_COST2}{\code{number} - Travel cost (distance for 'Shortest', time for 'Fastest'). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INCLUDE_BOUNDS}{\code{boolean} - Include upper/lower bound points. 1 for true/yes. 0 for false/no.}
+\item{INCLUDE_BOUNDS}{\code{boolean} - Include upper\code{/}lower bound points. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_LINES}{\code{sink} - Service area (lines). Path for new vector layer.}
 
@@ -66,7 +66,7 @@ qgis_serviceareafromlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Service area (from layer) (native:serviceareafromlayer)
+QGIS Algorithm provided by QGIS (native c++) Service area (from layer) (native:serviceareafromlayer). This algorithm creates a new vector with all the edges or parts of edges of a network line layer that can be reached within a distance or a time, starting from features of a point layer. The distance and the time (both referred to as "travel cost") must be specified respectively in the network layer units or in hours.
 }
 \details{
 \subsection{Outputs description}{

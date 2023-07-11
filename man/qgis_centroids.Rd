@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_centroids.R
 \name{qgis_centroids}
 \alias{qgis_centroids}
-\title{QGIS algorithm Centroids}
+\title{QGIS algorithm - Centroids}
 \usage{
 qgis_centroids(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_centroids(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{ALL_PARTS}{\code{boolean} - Create centroid for each part. 1 for true/yes. 0 for false/no.}
+\item{ALL_PARTS}{\code{boolean} - Create centroid for each part. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Centroids. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_centroids(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Centroids (native:centroids)
+QGIS Algorithm provided by QGIS (native c++) Centroids (native:centroids). This algorithm creates a new point layer, with points representing the centroid of the geometries in an input layer.  The attributes associated to each point in the output layer are the same ones associated to the original features.
 }
 \details{
 \subsection{Outputs description}{

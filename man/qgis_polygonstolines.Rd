@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_polygonstolines.R
 \name{qgis_polygonstolines}
 \alias{qgis_polygonstolines}
-\title{QGIS algorithm Polygons to lines}
+\title{QGIS algorithm - Polygons to lines}
 \usage{
 qgis_polygonstolines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_polygonstolines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Polygons to lines (native:polygonstolines)
+QGIS Algorithm provided by QGIS (native c++) Polygons to lines (native:polygonstolines). Converts polygons to lines. Converts polygons to lines
 }
 \details{
 \subsection{Outputs description}{

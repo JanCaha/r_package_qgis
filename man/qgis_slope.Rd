@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_slope.R
 \name{qgis_slope}
 \alias{qgis_slope}
-\title{QGIS algorithm Slope}
+\title{QGIS algorithm - Slope}
 \usage{
 qgis_slope(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_slope(
 \arguments{
 \item{INPUT}{\code{raster} - Elevation layer. Path to a raster layer.}
 
-\item{Z_FACTOR}{\code{number} - Z factor. A numeric value.}
+\item{Z_FACTOR}{\code{number} - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Slope. Path for new raster layer.}
 
@@ -30,7 +30,7 @@ qgis_slope(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Slope (native:slope)
+QGIS Algorithm provided by QGIS (native c++) Slope (native:slope). This algorithm calculates the angle of inclination of the terrain from an input raster layer. The slope is expressed in degrees.
 }
 \details{
 \subsection{Outputs description}{

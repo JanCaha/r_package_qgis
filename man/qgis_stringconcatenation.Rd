@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_stringconcatenation.R
 \name{qgis_stringconcatenation}
 \alias{qgis_stringconcatenation}
-\title{QGIS algorithm String concatenation}
+\title{QGIS algorithm - String concatenation}
 \usage{
 qgis_stringconcatenation(
   INPUT_1 = qgisprocess:::qgis_default_value(),
@@ -14,9 +14,9 @@ qgis_stringconcatenation(
 )
 }
 \arguments{
-\item{INPUT_1}{\code{string} - Input 1. String value.}
+\item{INPUT_1}{\code{string} - Input 1. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INPUT_2}{\code{string} - Input 2. String value.}
+\item{INPUT_2}{\code{string} - Input 2. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -27,7 +27,7 @@ qgis_stringconcatenation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) String concatenation (native:stringconcatenation)
+QGIS Algorithm provided by QGIS (native c++) String concatenation (native:stringconcatenation). This algorithm concatenates two strings together.
 }
 \details{
 \subsection{Outputs description}{

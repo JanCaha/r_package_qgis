@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection)
+##' QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection). Extracts a mesh dataset's values from lines contained in a vector layer This algorithm extracts mesh's dataset values from line contained in a vector layer. Each line is discretized with a resolution distance parameter for extraction of values on its vertices.
 ##'
-##' @title QGIS algorithm Export cross section dataset values on lines from mesh
+##' @title QGIS algorithm - Export cross section dataset values on lines from mesh
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
 ##' @param INPUT_LINES `source` - Lines for data export. Path to a vector layer.
-##' @param RESOLUTION `distance` - Line segmentation resolution. A numeric value.
-##' @param COORDINATES_DIGITS `number` - Digits count for coordinates. A numeric value.
-##' @param DATASET_DIGITS `number` - Digits count for dataset value. A numeric value.
+##' @param RESOLUTION `distance` - Line segmentation resolution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param COORDINATES_DIGITS `number` - Digits count for coordinates. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DATASET_DIGITS `number` - Digits count for dataset value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `fileDestination` - Exported data CSV file. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

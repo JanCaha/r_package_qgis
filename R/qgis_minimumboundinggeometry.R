@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Minimum bounding geometry (qgis:minimumboundinggeometry)
+##' QGIS Algorithm provided by QGIS Minimum bounding geometry (qgis:minimumboundinggeometry). This algorithm creates geometries which enclose the features from an input layer. Numerous enclosing geometry types are supported, including bounding boxes (envelopes), oriented rectangles, circles and convex hulls. Optionally, the features can be grouped by a field. If set, this causes the output layer to contain one feature per grouped value with a minimal geometry covering just the features with matching values.
 ##'
-##' @title QGIS algorithm Minimum bounding geometry
+##' @title QGIS algorithm - Minimum bounding geometry
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Field (optional, set if features should be grouped by class). The name of an existing field. ; delimited list of existing field names.

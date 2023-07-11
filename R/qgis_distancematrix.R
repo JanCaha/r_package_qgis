@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS Distance matrix (qgis:distancematrix)
+##' QGIS Algorithm provided by QGIS Distance matrix (qgis:distancematrix). This algorithm creates a table containing a distance matrix, with distances between all the points in a points layer.
 ##'
-##' @title QGIS algorithm Distance matrix
+##' @title QGIS algorithm - Distance matrix
 ##'
 ##' @param INPUT `source` - Input point layer. Path to a vector layer.
 ##' @param INPUT_FIELD `field` - Input unique ID field. The name of an existing field. ; delimited list of existing field names.
 ##' @param TARGET `source` - Target point layer. Path to a vector layer.
 ##' @param TARGET_FIELD `field` - Target unique ID field. The name of an existing field. ; delimited list of existing field names.
 ##' @param MATRIX_TYPE `enum`  of `("Linear (N*k x 3) distance matrix", "Standard (N x T) distance matrix", "Summary distance matrix (mean, std. dev., min, max)")` - Output matrix type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param NEAREST_POINTS `number` - Use only the nearest (k) target points. A numeric value.
+##' @param NEAREST_POINTS `number` - Use only the nearest (k) target points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Distance matrix. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

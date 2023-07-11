@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Project points (Cartesian) (native:projectpointcartesian)
+##' QGIS Algorithm provided by QGIS (native c++) Project points (Cartesian) (native:projectpointcartesian). This algorithm projects point geometries by a specified distance and bearing (azimuth), creating a new point layer with the projected points.  The distance is specified in layer units, and the bearing in degrees clockwise from North.
 ##'
-##' @title QGIS algorithm Project points (Cartesian)
+##' @title QGIS algorithm - Project points (Cartesian)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param BEARING `number` - Bearing (degrees from North). A numeric value.
-##' @param DISTANCE `distance` - Distance. A numeric value.
+##' @param BEARING `number` - Bearing (degrees from North). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DISTANCE `distance` - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Projected. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

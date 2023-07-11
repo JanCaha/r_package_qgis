@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_fuzzifyrastersmallmembership.R
 \name{qgis_fuzzifyrastersmallmembership}
 \alias{qgis_fuzzifyrastersmallmembership}
-\title{QGIS algorithm Fuzzify raster (small membership)}
+\title{QGIS algorithm - Fuzzify raster (small membership)}
 \usage{
 qgis_fuzzifyrastersmallmembership(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_fuzzifyrastersmallmembership(
 
 \item{BAND}{\code{band} - Band Number. Integer value representing an existing raster band number.}
 
-\item{FUZZYMIDPOINT}{\code{number} - Function midpoint. A numeric value.}
+\item{FUZZYMIDPOINT}{\code{number} - Function midpoint. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FUZZYSPREAD}{\code{number} - Function spread. A numeric value.}
+\item{FUZZYSPREAD}{\code{number} - Function spread. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified raster. Path for new raster layer.}
 
@@ -36,7 +36,7 @@ qgis_fuzzifyrastersmallmembership(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (small membership) (native:fuzzifyrastersmallmembership)
+QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (small membership) (native:fuzzifyrastersmallmembership). The Fuzzify raster (small membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following the 'small' fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows the 'small' membership function.  The 'small' function is constructed using two user-defined input raster values which set the point of half membership (midpoint, results to 0.5) and a predefined function spread which controls the function uptake.  This function is typically used when smaller input raster values should become members of the fuzzy set more easily than higher values.
 }
 \details{
 \subsection{Outputs description}{

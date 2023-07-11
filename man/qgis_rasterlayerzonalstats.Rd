@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rasterlayerzonalstats.R
 \name{qgis_rasterlayerzonalstats}
 \alias{qgis_rasterlayerzonalstats}
-\title{QGIS algorithm Raster layer zonal statistics}
+\title{QGIS algorithm - Raster layer zonal statistics}
 \usage{
 qgis_rasterlayerzonalstats(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -39,7 +39,7 @@ qgis_rasterlayerzonalstats(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster layer zonal statistics (native:rasterlayerzonalstats)
+QGIS Algorithm provided by QGIS (native c++) Raster layer zonal statistics (native:rasterlayerzonalstats). Calculates statistics for a raster layer's values, categorized by zones defined in another raster layer. This algorithm calculates statistics for a raster layer's values, categorized by zones defined in another raster layer.  If the reference layer parameter is set to "Input layer", then zones are determined by sampling the zone raster layer value at the centroid of each pixel from the source raster layer.  If the reference layer parameter is set to "Zones layer", then the input raster layer will be sampled at the centroid of each pixel from the zones raster layer.  If either the source raster layer or the zone raster layer value is NODATA for a pixel, that pixel's value will be skipped and not including in the calculated statistics.
 }
 \details{
 \subsection{Outputs description}{

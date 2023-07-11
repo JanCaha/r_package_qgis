@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Text to float (qgis:texttofloat)
+##' QGIS Algorithm provided by QGIS Text to float (qgis:texttofloat). This algorithm modifies the type of a given attribute in a vector layer, converting a text attribute containing numeric strings into a numeric attribute.
 ##'
-##' @title QGIS algorithm Text to float
+##' @title QGIS algorithm - Text to float
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Text attribute to convert to float. The name of an existing field. ; delimited list of existing field names.

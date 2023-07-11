@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS Advanced Python field calculator (qgis:advancedpythonfieldcalculator)
+##' QGIS Algorithm provided by QGIS Advanced Python field calculator (qgis:advancedpythonfieldcalculator). This algorithm adds a new attribute to a vector layer, with values resulting from applying an expression to each feature. The expression is defined as a Python function.
 ##'
-##' @title QGIS algorithm Advanced Python field calculator
+##' @title QGIS algorithm - Advanced Python field calculator
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param FIELD_NAME `string` - Result field name. String value.
+##' @param FIELD_NAME `string` - Result field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param FIELD_TYPE `enum`  of `("Integer (32 bit)", "Decimal (double)", "Text (string)", "Boolean", "Date", "Time", "Date & Time", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")` - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param FIELD_LENGTH `number` - Field length. A numeric value.
-##' @param FIELD_PRECISION `number` - Field precision. A numeric value.
-##' @param GLOBAL `string` - Global expression. String value.
-##' @param FORMULA `string` - Formula. String value.
+##' @param FIELD_LENGTH `number` - Field length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FIELD_PRECISION `number` - Field precision. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GLOBAL `string` - Global expression. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FORMULA `string` - Formula. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Calculated. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

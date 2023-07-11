@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_rasterize_over.R
 \name{gdal_rasterize_over}
 \alias{gdal_rasterize_over}
-\title{QGIS algorithm Rasterize (overwrite with attribute)}
+\title{QGIS algorithm - Rasterize (overwrite with attribute)}
 \usage{
 gdal_rasterize_over(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,9 +23,9 @@ gdal_rasterize_over(
 
 \item{FIELD}{\code{field} - Field to use for burn in value. The name of an existing field. ; delimited list of existing field names.}
 
-\item{ADD}{\code{boolean} - Add burn in values to existing raster values. 1 for true/yes. 0 for false/no.}
+\item{ADD}{\code{boolean} - Add burn in values to existing raster values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -36,7 +36,7 @@ gdal_rasterize_over(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Rasterize (overwrite with attribute) (gdal:rasterize_over)
+QGIS Algorithm provided by GDAL Rasterize (overwrite with attribute) (gdal:rasterize_over). ---------------- Arguments ----------------  INPUT: Input vector layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer INPUT_RASTER: Input raster layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer FIELD: Field to use for burn in value 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names ADD: Add burn in values to existing raster values 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
 }
 \details{
 \subsection{Outputs description}{

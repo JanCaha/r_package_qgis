@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_net_salesman.R
 \name{grass7_v_net_salesman}
 \alias{grass7_v_net_salesman}
-\title{QGIS algorithm v.net.salesman}
+\title{QGIS algorithm - v.net.salesman}
 \usage{
 grass7_v_net_salesman(
   input = qgisprocess:::qgis_default_value(),
@@ -33,17 +33,17 @@ grass7_v_net_salesman(
 
 \item{points}{\code{source} - Centers point layer (nodes). Path to a vector layer.}
 
-\item{threshold}{\code{number} - Threshold for connecting centers to the network (in map unit). A numeric value.}
+\item{threshold}{\code{number} - Threshold for connecting centers to the network (in map unit). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{arc_type}{\code{enum}  of \verb{("line", "boundary")} - Arc type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{center_cats}{\code{string} - Category values. String value.}
+\item{center_cats}{\code{string} - Category values. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{arc_column}{\code{field} - Arc forward/both direction(s) cost column (number). The name of an existing field. ; delimited list of existing field names.}
+\item{arc_column}{\code{field} - Arc forward\code{/}both direction(s) cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
 \item{arc_backward_column}{\code{field} - Arc backward direction cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
-\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
 \item{output}{\code{vectorDestination} - Network_Salesman. Path for new vector layer.}
 
@@ -51,17 +51,17 @@ grass7_v_net_salesman(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -72,7 +72,7 @@ grass7_v_net_salesman(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.net.salesman (grass7:v.net.salesman)
+QGIS Algorithm provided by GRASS v.net.salesman (grass7:v.net.salesman). Creates a cycle connecting given nodes (Traveling salesman problem)
 }
 \details{
 \subsection{Outputs description}{

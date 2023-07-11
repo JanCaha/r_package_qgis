@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by GDAL Rearrange bands (gdal:rearrange_bands)
+##' QGIS Algorithm provided by GDAL Rearrange bands (gdal:rearrange_bands). This algorithm creates a new raster using selected band(s) from a given raster layer.  The algorithm also makes it possible to reorder the bands for the newly-created raster.
 ##'
-##' @title QGIS algorithm Rearrange bands
+##' @title QGIS algorithm - Rearrange bands
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param BANDS `band` - Selected band(s). Integer value representing an existing raster band number.
-##' @param OPTIONS `string` - Additional creation options. String value.
-##' @param DATA_TYPE `enum`  of `("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param OPTIONS `string` - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DATA_TYPE `enum`  of `("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `rasterDestination` - Converted. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_distancematrix.R
 \name{qgis_distancematrix}
 \alias{qgis_distancematrix}
-\title{QGIS algorithm Distance matrix}
+\title{QGIS algorithm - Distance matrix}
 \usage{
 qgis_distancematrix(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -29,7 +29,7 @@ qgis_distancematrix(
 
 \item{MATRIX_TYPE}{\code{enum}  of \verb{("Linear (N*k x 3) distance matrix", "Standard (N x T) distance matrix", "Summary distance matrix (mean, std. dev., min, max)")} - Output matrix type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NEAREST_POINTS}{\code{number} - Use only the nearest (k) target points. A numeric value.}
+\item{NEAREST_POINTS}{\code{number} - Use only the nearest (k) target points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Distance matrix. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_distancematrix(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Distance matrix (qgis:distancematrix)
+QGIS Algorithm provided by QGIS Distance matrix (qgis:distancematrix). This algorithm creates a table containing a distance matrix, with distances between all the points in a points layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_hypsometriccurves.R
 \name{qgis_hypsometriccurves}
 \alias{qgis_hypsometriccurves}
-\title{QGIS algorithm Hypsometric curves}
+\title{QGIS algorithm - Hypsometric curves}
 \usage{
 qgis_hypsometriccurves(
   INPUT_DEM = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_hypsometriccurves(
 
 \item{BOUNDARY_LAYER}{\code{source} - Boundary layer. Path to a vector layer.}
 
-\item{STEP}{\code{number} - Step. A numeric value.}
+\item{STEP}{\code{number} - Step. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{USE_PERCENTAGE}{\code{boolean} - Use \% of area instead of absolute value. 1 for true/yes. 0 for false/no.}
+\item{USE_PERCENTAGE}{\code{boolean} - Use \% of area instead of absolute value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_DIRECTORY}{\code{folderDestination} - Hypsometric curves. Path for an existing or new folder.}
 
@@ -36,7 +36,7 @@ qgis_hypsometriccurves(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Hypsometric curves (qgis:hypsometriccurves)
+QGIS Algorithm provided by QGIS Hypsometric curves (qgis:hypsometriccurves). This algorithm computes hypsometric curves  for an input Digital Elevation Model. Curves are produced as table files in an output folder specified by the user.
 }
 \details{
 \subsection{Outputs description}{

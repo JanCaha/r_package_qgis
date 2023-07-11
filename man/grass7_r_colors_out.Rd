@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_colors_out.R
 \name{grass7_r_colors_out}
 \alias{grass7_r_colors_out}
-\title{QGIS algorithm r.colors.out}
+\title{QGIS algorithm - r.colors.out}
 \usage{
 grass7_r_colors_out(
   map = qgisprocess:::qgis_default_value(),
@@ -19,13 +19,13 @@ grass7_r_colors_out(
 \arguments{
 \item{map}{\code{raster} - Name of raster map. Path to a raster layer.}
 
-\item{.p}{\code{boolean} - Output values as percentages. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
+\item{.p}{\code{boolean} - Output values as percentages. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -p.}
 
 \item{rules}{\code{fileDestination} - Color Table. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -36,7 +36,7 @@ grass7_r_colors_out(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.colors.out (grass7:r.colors.out)
+QGIS Algorithm provided by GRASS r.colors.out (grass7:r.colors.out). Exports the color table associated with a raster map.
 }
 \details{
 \subsection{Outputs description}{

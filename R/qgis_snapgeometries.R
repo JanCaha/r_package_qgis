@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Snap geometries to layer (native:snapgeometries)
+##' QGIS Algorithm provided by QGIS (native c++) Snap geometries to layer (native:snapgeometries). Snaps the geometries in a layer. Snapping can be done either to the geometries from another layer, or to geometries within the same layer.  A tolerance is specified in layer units to control how close vertices need to be to the reference layer geometries before they are snapped.  Snapping occurs to both nodes and edges. Depending on the snapping behavior, either nodes or edges will be preferred.  Vertices will be inserted or removed as required to make the geometries match the reference geometries.
 ##'
-##' @title QGIS algorithm Snap geometries to layer
+##' @title QGIS algorithm - Snap geometries to layer
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param REFERENCE_LAYER `source` - Reference layer. Path to a vector layer.
-##' @param TOLERANCE `distance` - Tolerance. A numeric value.
+##' @param TOLERANCE `distance` - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param BEHAVIOR `enum`  of `("Prefer aligning nodes, insert extra vertices where required", "Prefer closest point, insert extra vertices where required", "Prefer aligning nodes, don't insert new vertices", "Prefer closest point, don't insert new vertices", "Move end points only, prefer aligning nodes", "Move end points only, prefer closest point", "Snap end points to end points only", "Snap to anchor nodes (single layer only)")` - Behavior. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `sink` - Snapped geometry. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

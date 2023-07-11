@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by GRASS r.in.lidar.info (grass7:r.in.lidar.info)
+##' QGIS Algorithm provided by GRASS r.in.lidar.info (grass7:r.in.lidar.info). r.in.lidar.info - Extract information from LAS file
 ##'
-##' @title QGIS algorithm r.in.lidar.info
+##' @title QGIS algorithm - r.in.lidar.info
 ##'
 ##' @param input `file` - LAS input file. Path to a file.
 ##' @param html `fileDestination` - LAS information. Path for new file.

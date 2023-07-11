@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_snappointstogrid.R
 \name{qgis_snappointstogrid}
 \alias{qgis_snappointstogrid}
-\title{QGIS algorithm Snap points to grid}
+\title{QGIS algorithm - Snap points to grid}
 \usage{
 qgis_snappointstogrid(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,13 +20,13 @@ qgis_snappointstogrid(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{HSPACING}{\code{distance} - X Grid Spacing. A numeric value.}
+\item{HSPACING}{\code{distance} - X Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VSPACING}{\code{distance} - Y Grid Spacing. A numeric value.}
+\item{VSPACING}{\code{distance} - Y Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ZSPACING}{\code{number} - Z Grid Spacing. A numeric value.}
+\item{ZSPACING}{\code{number} - Z Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MSPACING}{\code{number} - M Grid Spacing. A numeric value.}
+\item{MSPACING}{\code{number} - M Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Snapped. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_snappointstogrid(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Snap points to grid (native:snappointstogrid)
+QGIS Algorithm provided by QGIS (native c++) Snap points to grid (native:snappointstogrid). This algorithm modifies the coordinates of geometries in a vector layer, so that all points or vertices are snapped to the closest point of the grid.  If the snapped geometry cannot be calculated (or is totally collapsed) the feature's geometry will be cleared.  Note that snapping to grid may generate an invalid geometry in some corner cases.  Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any axis will disable snapping for that axis.
 }
 \details{
 \subsection{Outputs description}{

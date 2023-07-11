@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_savefeatures.R
 \name{qgis_savefeatures}
 \alias{qgis_savefeatures}
-\title{QGIS algorithm Save vector features to file}
+\title{QGIS algorithm - Save vector features to file}
 \usage{
 qgis_savefeatures(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,11 +21,11 @@ qgis_savefeatures(
 
 \item{OUTPUT}{\code{fileDestination} - Saved features. Path for new file.}
 
-\item{LAYER_NAME}{\code{string} - Layer name. String value.}
+\item{LAYER_NAME}{\code{string} - Layer name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATASOURCE_OPTIONS}{\code{string} - GDAL dataset options (separate individual options with semicolons). String value.}
+\item{DATASOURCE_OPTIONS}{\code{string} - GDAL dataset options (separate individual options with semicolons). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{LAYER_OPTIONS}{\code{string} - GDAL layer options (separate individual options with semicolons). String value.}
+\item{LAYER_OPTIONS}{\code{string} - GDAL layer options (separate individual options with semicolons). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -36,7 +36,7 @@ qgis_savefeatures(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures)
+QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures). This algorithm saves vector features to a specified file dataset.  For dataset formats supporting layers, an optional layer name parameter can be used to specify a custom string.  Optional GDAL-defined dataset and layer options can be specified. For more information on this, read the online GDAL documentation.
 }
 \details{
 \subsection{Outputs description}{

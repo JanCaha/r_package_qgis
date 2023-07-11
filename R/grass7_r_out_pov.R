@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by GRASS r.out.pov (grass7:r.out.pov)
+##' QGIS Algorithm provided by GRASS r.out.pov (grass7:r.out.pov). Converts a raster map layer into a height-field file for POV-Ray
 ##'
-##' @title QGIS algorithm r.out.pov
+##' @title QGIS algorithm - r.out.pov
 ##'
 ##' @param input `raster` - Input raster. Path to a raster layer.
-##' @param hftype `number` - Height-field type (0=actual heights 1=normalized). A numeric value.
-##' @param bias `number` - Elevation bias. A numeric value.
-##' @param scale `number` - Vertical scaling factor. A numeric value.
+##' @param hftype `number` - Height-field type (0=actual heights 1=normalized). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param bias `number` - Elevation bias. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param scale `number` - Vertical scaling factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param output `fileDestination` - Name of output povray file (TGA height field file). Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

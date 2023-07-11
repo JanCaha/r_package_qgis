@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractlabels.R
 \name{qgis_extractlabels}
 \alias{qgis_extractlabels}
-\title{QGIS algorithm Extract labels}
+\title{QGIS algorithm - Extract labels}
 \usage{
 qgis_extractlabels(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -24,9 +24,9 @@ qgis_extractlabels(
 
 \item{MAP_THEME}{\code{maptheme} - Map theme. Name of an existing map theme.}
 
-\item{INCLUDE_UNPLACED}{\code{boolean} - Include unplaced labels. 1 for true/yes. 0 for false/no.}
+\item{INCLUDE_UNPLACED}{\code{boolean} - Include unplaced labels. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DPI}{\code{number} - Map resolution (in DPI). A numeric value.}
+\item{DPI}{\code{number} - Map resolution (in DPI). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted labels. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_extractlabels(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract labels (native:extractlabels)
+QGIS Algorithm provided by QGIS (native c++) Extract labels (native:extractlabels). Converts map labels to a point layer with relevant details saved as attributes. This algorithm extracts label information from a rendered map at a given extent and scale.  If a map theme is provided, the rendered map will match the visibility and symbology of that theme. If left blank, all visible layers from the project will be used.  Extracted label information include: position (served as point geometries), the associated layer name and feature ID, label text, rotation (in degree, clockwise), multiline alignment, and font details.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer)
+##' QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer). This algorithm renames a layer.
 ##'
-##' @title QGIS algorithm Rename layer
+##' @title QGIS algorithm - Rename layer
 ##'
 ##' @param INPUT `layer` - Layer. Path to a vector, raster or mesh layer.
-##' @param NAME `string` - New name. String value.
+##' @param NAME `string` - New name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

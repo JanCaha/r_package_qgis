@@ -3,7 +3,7 @@
 %   R/qgis_generatepointspixelcentroidsinsidepolygons.R
 \name{qgis_generatepointspixelcentroidsinsidepolygons}
 \alias{qgis_generatepointspixelcentroidsinsidepolygons}
-\title{QGIS algorithm Generate points (pixel centroids) inside polygons}
+\title{QGIS algorithm - Generate points (pixel centroids) inside polygons}
 \usage{
 qgis_generatepointspixelcentroidsinsidepolygons(
   INPUT_RASTER = qgisprocess:::qgis_default_value(),
@@ -31,7 +31,7 @@ qgis_generatepointspixelcentroidsinsidepolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Generate points (pixel centroids) inside polygons (native:generatepointspixelcentroidsinsidepolygons)
+QGIS Algorithm provided by QGIS (native c++) Generate points (pixel centroids) inside polygons (native:generatepointspixelcentroidsinsidepolygons). Generates pixel centroids for the raster area falling inside polygons. Used to generate points for further raster sampling.
 }
 \details{
 \subsection{Outputs description}{

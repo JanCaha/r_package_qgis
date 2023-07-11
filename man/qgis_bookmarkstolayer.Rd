@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_bookmarkstolayer.R
 \name{qgis_bookmarkstolayer}
 \alias{qgis_bookmarkstolayer}
-\title{QGIS algorithm Convert spatial bookmarks to layer}
+\title{QGIS algorithm - Convert spatial bookmarks to layer}
 \usage{
 qgis_bookmarkstolayer(
   SOURCE = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_bookmarkstolayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert spatial bookmarks to layer (native:bookmarkstolayer)
+QGIS Algorithm provided by QGIS (native c++) Convert spatial bookmarks to layer (native:bookmarkstolayer). Converts stored spatial bookmarks to a polygon layer. This algorithm creates a new layer containing polygon features for stored spatial bookmarks.  The export can be filtered to only bookmarks belonging to the current project, to all user bookmarks, or a combination of both.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (power membership) (native:fuzzifyrasterpowermembership)
+##' QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (power membership) (native:fuzzifyrasterpowermembership). The Fuzzify raster (power membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following a power function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows a power function.  The power function is constructed using three user-defined input raster values which set the point of full membership (high bound, results to 1), no membership (low bound, results to 0) and function exponent (only positive) respectively. The fuzzy set in between those the upper and lower bounds values is then defined as a power function.  Both increasing and decreasing fuzzy sets can be modeled by swapping the high and low bound parameters.
 ##'
-##' @title QGIS algorithm Fuzzify raster (power membership)
+##' @title QGIS algorithm - Fuzzify raster (power membership)
 ##'
 ##' @param INPUT `raster` - Input Raster. Path to a raster layer.
 ##' @param BAND `band` - Band Number. Integer value representing an existing raster band number.
-##' @param FUZZYLOWBOUND `number` - Low fuzzy membership bound. A numeric value.
-##' @param FUZZYHIGHBOUND `number` - High fuzzy membership bound. A numeric value.
-##' @param FUZZYEXPONENT `number` - Membership function exponent. A numeric value.
+##' @param FUZZYLOWBOUND `number` - Low fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FUZZYHIGHBOUND `number` - High fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FUZZYEXPONENT `number` - Membership function exponent. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Fuzzified raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

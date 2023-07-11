@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_createpointslayerfromtable.R
 \name{qgis_createpointslayerfromtable}
 \alias{qgis_createpointslayerfromtable}
-\title{QGIS algorithm Create points layer from table}
+\title{QGIS algorithm - Create points layer from table}
 \usage{
 qgis_createpointslayerfromtable(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -42,7 +42,7 @@ qgis_createpointslayerfromtable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create points layer from table (native:createpointslayerfromtable)
+QGIS Algorithm provided by QGIS (native c++) Create points layer from table (native:createpointslayerfromtable). This algorithm generates a points layer based on the values from an input table.  The table must contain a field with the X coordinate of each point and another one with the Y coordinate, as well as optional fields with Z and M values. A CRS for the output layer has to be specified, and the coordinates in the table are assumed to be expressed in the units used by that CRS. The attributes table of the resulting layer will be the input table.
 }
 \details{
 \subsection{Outputs description}{

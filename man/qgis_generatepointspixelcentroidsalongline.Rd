@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_generatepointspixelcentroidsalongline.R
 \name{qgis_generatepointspixelcentroidsalongline}
 \alias{qgis_generatepointspixelcentroidsalongline}
-\title{QGIS algorithm Generate points (pixel centroids) along line}
+\title{QGIS algorithm - Generate points (pixel centroids) along line}
 \usage{
 qgis_generatepointspixelcentroidsalongline(
   INPUT_RASTER = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_generatepointspixelcentroidsalongline(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Generate points (pixel centroids) along line (qgis:generatepointspixelcentroidsalongline)
+QGIS Algorithm provided by QGIS Generate points (pixel centroids) along line (qgis:generatepointspixelcentroidsalongline). This algorithm generates a point vector layer from an input raster and line layer. The points correspond to the pixel centroids that intersect the line layer.
 }
 \details{
 \subsection{Outputs description}{

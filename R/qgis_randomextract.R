@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Random extract (native:randomextract)
+##' QGIS Algorithm provided by QGIS (native c++) Random extract (native:randomextract). This algorithm takes a vector layer and generates a new one that contains only a subset of the features in the input layer.  The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.
 ##'
-##' @title QGIS algorithm Random extract
+##' @title QGIS algorithm - Random extract
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param METHOD `enum`  of `("Number of features", "Percentage of features")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param NUMBER `number` - Number/percentage of features. A numeric value.
+##' @param NUMBER `number` - Number\code{/}percentage of features. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Extracted (random). Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

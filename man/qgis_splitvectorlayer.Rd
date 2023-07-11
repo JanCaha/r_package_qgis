@@ -2,11 +2,12 @@
 % Please edit documentation in R/qgis_splitvectorlayer.R
 \name{qgis_splitvectorlayer}
 \alias{qgis_splitvectorlayer}
-\title{QGIS algorithm Split vector layer}
+\title{QGIS algorithm - Split vector layer}
 \usage{
 qgis_splitvectorlayer(
   INPUT = qgisprocess:::qgis_default_value(),
   FIELD = qgisprocess:::qgis_default_value(),
+  PREFIX_FIELD = qgisprocess:::qgis_default_value(),
   FILE_TYPE = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
@@ -20,7 +21,9 @@ qgis_splitvectorlayer(
 
 \item{FIELD}{\code{field} - Unique ID field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{FILE_TYPE}{\code{enum}  of \verb{("gpkg", "shp", "000", "bna", "csv", "dgn", "dxf", "geojson", "geojsonl", "geojsons", "gml", "gpx", "gxt", "ili", "itf", "json", "kml", "ods", "sql", "sqlite", "tab", "txt", "xlsx", "xml", "xtf")} - Output file type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{PREFIX_FIELD}{\code{boolean} - Add field prefix to file names. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{FILE_TYPE}{\code{enum}  of \verb{("gpkg", "shp", "000", "csv", "dgn", "dxf", "fgb", "geojson", "geojsonl", "geojsons", "gml", "gpx", "gxt", "ili", "itf", "json", "kml", "ods", "sql", "sqlite", "tab", "txt", "xlsx", "xml", "xtf")} - Output file type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{OUTPUT}{\code{folderDestination} - Output directory. Path for an existing or new folder.}
 
@@ -33,7 +36,7 @@ qgis_splitvectorlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Split vector layer (native:splitvectorlayer)
+QGIS Algorithm provided by QGIS (native c++) Split vector layer (native:splitvectorlayer). Splits input vector layer into multiple layers by specified unique ID field.  Each of the layers created in the output folder contains all features from the input layer with the same value for the specified attribute. The number of files generated is equal to the number of different values found for the specified attribute.
 }
 \details{
 \subsection{Outputs description}{

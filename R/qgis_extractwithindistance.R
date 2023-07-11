@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance)
+##' QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance). This algorithm creates a new vector layer that only contains matching features from an input layer. Features are copied wherever they are within the specified maximum distance from the features in an additional reference layer.
 ##'
-##' @title QGIS algorithm Extract within distance
+##' @title QGIS algorithm - Extract within distance
 ##'
 ##' @param INPUT `source` - Extract features from. Path to a vector layer.
 ##' @param REFERENCE `source` - By comparing to the features from. Path to a vector layer.
-##' @param DISTANCE `distance` - Where the features are within. A numeric value.
+##' @param DISTANCE `distance` - Where the features are within. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Extracted (location). Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

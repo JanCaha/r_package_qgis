@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Densify by interval (native:densifygeometriesgivenaninterval)
+##' QGIS Algorithm provided by QGIS (native c++) Densify by interval (native:densifygeometriesgivenaninterval). Creates a densified version of geometries. Geometries are densified by adding additional vertices on edges that have a maximum distance of the interval parameter in map units.
 ##'
-##' @title QGIS algorithm Densify by interval
+##' @title QGIS algorithm - Densify by interval
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param INTERVAL `distance` - Interval between vertices to add. A numeric value.
+##' @param INTERVAL `distance` - Interval between vertices to add. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Densified. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

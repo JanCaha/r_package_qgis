@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Explode HStore Field (native:explodehstorefield)
+##' QGIS Algorithm provided by QGIS (native c++) Explode HStore Field (native:explodehstorefield). This algorithm creates a copy of the input layer and adds a new field for every unique key in the HStore field. The expected field list is an optional comma separated list. By default, all unique keys are added. If this list is specified, only these fields are added and the HStore field is updated.
 ##'
-##' @title QGIS algorithm Explode HStore Field
+##' @title QGIS algorithm - Explode HStore Field
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - HStore field. The name of an existing field. ; delimited list of existing field names.
-##' @param EXPECTED_FIELDS `string` - Expected list of fields separated by a comma. String value.
+##' @param EXPECTED_FIELDS `string` - Expected list of fields separated by a comma. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Exploded. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

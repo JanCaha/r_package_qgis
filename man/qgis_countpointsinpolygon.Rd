@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_countpointsinpolygon.R
 \name{qgis_countpointsinpolygon}
 \alias{qgis_countpointsinpolygon}
-\title{QGIS algorithm Count points in polygon}
+\title{QGIS algorithm - Count points in polygon}
 \usage{
 qgis_countpointsinpolygon(
   POLYGONS = qgisprocess:::qgis_default_value(),
@@ -26,7 +26,7 @@ qgis_countpointsinpolygon(
 
 \item{CLASSFIELD}{\code{field} - Class field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{FIELD}{\code{string} - Count field name. String value.}
+\item{FIELD}{\code{string} - Count field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Count. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_countpointsinpolygon(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Count points in polygon (native:countpointsinpolygon)
+QGIS Algorithm provided by QGIS (native c++) Count points in polygon (native:countpointsinpolygon). Counts point features located within polygon features. This algorithm takes a points layer and a polygon layer and counts the number of points from the first one in each polygons of the second one.  A new polygons layer is generated, with the exact same content as the input polygons layer, but containing an additional field with the points count corresponding to each polygon.  An optional weight field can be used to assign weights to each point. If set, the count generated will be the sum of the weight field for each point contained by the polygon.  Alternatively, a unique class field can be specified. If set, points are classified based on the selected attribute, and if several points with the same attribute value are within the polygon, only one of them is counted. The final count of the point in a polygon is, therefore, the count of different classes that are found in it.  Both the weight field and unique class field cannot be specified. If they are, the weight field will take precedence and the unique class field will be ignored.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_greaterthanfrequency.R
 \name{qgis_greaterthanfrequency}
 \alias{qgis_greaterthanfrequency}
-\title{QGIS algorithm Greater than frequency}
+\title{QGIS algorithm - Greater than frequency}
 \usage{
 qgis_greaterthanfrequency(
   INPUT_VALUE_RASTER = qgisprocess:::qgis_default_value(),
@@ -24,9 +24,9 @@ qgis_greaterthanfrequency(
 
 \item{INPUT_RASTERS}{\code{multilayer} - Input raster layers. .}
 
-\item{IGNORE_NODATA}{\code{boolean} - Ignore NoData values. 1 for true/yes. 0 for false/no.}
+\item{IGNORE_NODATA}{\code{boolean} - Ignore NoData values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OUTPUT_NODATA_VALUE}{\code{number} - Output NoData value. A numeric value.}
+\item{OUTPUT_NODATA_VALUE}{\code{number} - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output layer. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ qgis_greaterthanfrequency(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Greater than frequency (native:greaterthanfrequency)
+QGIS Algorithm provided by QGIS (native c++) Greater than frequency (native:greaterthanfrequency). The Greater than frequency algorithm evaluates on a cell-by-cell basis the frequency (number of times) the values of an input stack of rasters are greater than the value of a value raster.   If multiband rasters are used in the data raster stack, the algorithm will always perform the analysis on the first band of the rasters - use GDAL to use other bands in the analysis. The input value layer serves as reference layer for the sample layers. Any NoData cells in the value raster or the data layer stack will result in a NoData cell in the output raster if the ignore NoData parameter is not checked. The output NoData value can be set manually. The output rasters extent and resolution is defined by the input raster layer and is always of int32 type.
 }
 \details{
 \subsection{Outputs description}{

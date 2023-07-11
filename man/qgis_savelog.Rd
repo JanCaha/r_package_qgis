@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_savelog.R
 \name{qgis_savelog}
 \alias{qgis_savelog}
-\title{QGIS algorithm Save log to file}
+\title{QGIS algorithm - Save log to file}
 \usage{
 qgis_savelog(
   OUTPUT = qgisprocess:::qgis_default_value(),
@@ -16,7 +16,7 @@ qgis_savelog(
 \arguments{
 \item{OUTPUT}{\code{fileDestination} - Log file. Path for new file.}
 
-\item{USE_HTML}{\code{boolean} - Use HTML formatting. 1 for true/yes. 0 for false/no.}
+\item{USE_HTML}{\code{boolean} - Use HTML formatting. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -27,7 +27,7 @@ qgis_savelog(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Save log to file (native:savelog)
+QGIS Algorithm provided by QGIS (native c++) Save log to file (native:savelog). Saves the model's log contents to a file. This algorithm saves the model's execution log to a file. Optionally, the log can be saved in a HTML formatted version.
 }
 \details{
 \subsection{Outputs description}{

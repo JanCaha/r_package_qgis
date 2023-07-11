@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export mesh edges (native:exportmeshedges)
+##' QGIS Algorithm provided by QGIS (native c++) Export mesh edges (native:exportmeshedges). Exports mesh edges to a line vector layer This algorithm exports a mesh layer's edges to a line vector layer, with the dataset values on edges as attribute values.
 ##'
-##' @title QGIS algorithm Export mesh edges
+##' @title QGIS algorithm - Export mesh edges
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .

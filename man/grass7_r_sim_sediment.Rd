@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_sim_sediment.R
 \name{grass7_r_sim_sediment}
 \alias{grass7_r_sim_sediment}
-\title{QGIS algorithm r.sim.sediment}
+\title{QGIS algorithm - r.sim.sediment}
 \usage{
 grass7_r_sim_sediment(
   elevation = qgisprocess:::qgis_default_value(),
@@ -47,11 +47,11 @@ grass7_r_sim_sediment(
 
 \item{water_depth}{\code{raster} - Name of the water depth raster map (m). Path to a raster layer.}
 
-\item{dx}{\code{raster} - Name of the x-derivatives raster map (m/m). Path to a raster layer.}
+\item{dx}{\code{raster} - Name of the x-derivatives raster map (m\code{/}m). Path to a raster layer.}
 
-\item{dy}{\code{raster} - Name of the y-derivatives raster map (m/m). Path to a raster layer.}
+\item{dy}{\code{raster} - Name of the y-derivatives raster map (m\code{/}m). Path to a raster layer.}
 
-\item{detachment_coeff}{\code{raster} - Name of the detachment capacity coefficient raster map (s/m). Path to a raster layer.}
+\item{detachment_coeff}{\code{raster} - Name of the detachment capacity coefficient raster map (s\code{/}m). Path to a raster layer.}
 
 \item{transport_coeff}{\code{raster} - Name of the transport capacity coefficient raster map (s). Path to a raster layer.}
 
@@ -59,27 +59,27 @@ grass7_r_sim_sediment(
 
 \item{man}{\code{raster} - Name of the Mannings n raster map. Path to a raster layer.}
 
-\item{man_value}{\code{number} - Name of the Mannings n value. A numeric value.}
+\item{man_value}{\code{number} - Name of the Mannings n value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{observation}{\code{source} - Sampling locations vector points. Path to a vector layer.}
 
-\item{nwalkers}{\code{number} - Number of walkers. A numeric value.}
+\item{nwalkers}{\code{number} - Number of walkers. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{niterations}{\code{number} - Time used for iterations (minutes). A numeric value.}
+\item{niterations}{\code{number} - Time used for iterations (minutes). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{output_step}{\code{number} - Time interval for creating output maps (minutes). A numeric value.}
+\item{output_step}{\code{number} - Time interval for creating output maps (minutes). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{diffusion_coeff}{\code{number} - Water diffusion constant. A numeric value.}
+\item{diffusion_coeff}{\code{number} - Water diffusion constant. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{transport_capacity}{\code{rasterDestination} - Transport capacity (kg/ms). Path for new raster layer.}
+\item{transport_capacity}{\code{rasterDestination} - Transport capacity (kg\code{/}ms). Path for new raster layer.}
 
-\item{tlimit_erosion_deposition}{\code{rasterDestination} - Transport limited erosion-deposition (kg/m2s). Path for new raster layer.}
+\item{tlimit_erosion_deposition}{\code{rasterDestination} - Transport limited erosion-deposition (kg\code{/}m2s). Path for new raster layer.}
 
-\item{sediment_concentration}{\code{rasterDestination} - Sediment concentration (particle/m3). Path for new raster layer.}
+\item{sediment_concentration}{\code{rasterDestination} - Sediment concentration (particle\code{/}m3). Path for new raster layer.}
 
-\item{sediment_flux}{\code{rasterDestination} - Sediment flux (kg/ms). Path for new raster layer.}
+\item{sediment_flux}{\code{rasterDestination} - Sediment flux (kg\code{/}ms). Path for new raster layer.}
 
-\item{erosion_deposition}{\code{rasterDestination} - Erosion-deposition (kg/m2s). Path for new raster layer.}
+\item{erosion_deposition}{\code{rasterDestination} - Erosion-deposition (kg\code{/}m2s). Path for new raster layer.}
 
 \item{walkers_output}{\code{vectorDestination} - Name of the output walkers vector points layer. Path for new vector layer.}
 
@@ -87,23 +87,23 @@ grass7_r_sim_sediment(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -114,17 +114,17 @@ grass7_r_sim_sediment(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.sim.sediment (grass7:r.sim.sediment)
+QGIS Algorithm provided by GRASS r.sim.sediment (grass7:r.sim.sediment). Sediment transport and erosion/deposition simulation using path sampling method (SIMWE).
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item erosion_deposition - outputRaster - Erosion-deposition (kg/m2s)
+\item erosion_deposition - outputRaster - Erosion-deposition (kg\code{/}m2s)
 \item logfile - outputFile - Name for sampling points output text file.
-\item sediment_concentration - outputRaster - Sediment concentration (particle/m3)
-\item sediment_flux - outputRaster - Sediment flux (kg/ms)
-\item tlimit_erosion_deposition - outputRaster - Transport limited erosion-deposition (kg/m2s)
-\item transport_capacity - outputRaster - Transport capacity (kg/ms)
+\item sediment_concentration - outputRaster - Sediment concentration (particle\code{/}m3)
+\item sediment_flux - outputRaster - Sediment flux (kg\code{/}ms)
+\item tlimit_erosion_deposition - outputRaster - Transport limited erosion-deposition (kg\code{/}m2s)
+\item transport_capacity - outputRaster - Transport capacity (kg\code{/}ms)
 \item walkers_output - outputVector - Name of the output walkers vector points layer
 }
 }

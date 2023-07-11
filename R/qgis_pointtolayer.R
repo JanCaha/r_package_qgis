@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create layer from point (native:pointtolayer)
+##' QGIS Algorithm provided by QGIS (native c++) Create layer from point (native:pointtolayer). This algorithm creates a new vector layer that contains a single feature with geometry matching a point parameter.  It can be used in models to convert a point into a layer which can be used for other algorithms which require a layer based input.
 ##'
-##' @title QGIS algorithm Create layer from point
+##' @title QGIS algorithm - Create layer from point
 ##'
 ##' @param INPUT `point` - Point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param OUTPUT `sink` - Point. Path for new vector layer.

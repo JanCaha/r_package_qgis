@@ -1,29 +1,29 @@
-##' QGIS Algorithm provided by GRASS v.in.ascii (grass7:v.in.ascii)
+##' QGIS Algorithm provided by GRASS v.in.ascii (grass7:v.in.ascii). Creates a vector map from an ASCII points file or ASCII vector file.
 ##'
-##' @title QGIS algorithm v.in.ascii
+##' @title QGIS algorithm - v.in.ascii
 ##'
 ##' @param input `file` - ASCII file to be imported. Path to a file.
 ##' @param format `enum`  of `("point", "standard")` - Input file format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param separator `string` - Field separator. String value.
-##' @param text `string` - Text delimiter. String value.
-##' @param skip `number` - Number of header lines to skip at top of input file. A numeric value.
-##' @param columns `string` - Column definition in SQL style (example: 'x double precision, y double precision, cat int, name varchar(10)'). String value.
-##' @param x `number` - Number of column used as x coordinate. A numeric value.
-##' @param y `number` - Number of column used as y coordinate. A numeric value.
-##' @param z `number` - Number of column used as z coordinate. A numeric value.
-##' @param cat `number` - Number of column used as category. A numeric value.
-##' @param .z `boolean` - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.
-##' @param .n `boolean` - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
-##' @param .t `boolean` - Do not create table in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
-##' @param .b `boolean` - Do not build topology in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
-##' @param .r `boolean` - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
-##' @param .i `boolean` - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param separator `string` - Field separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param text `string` - Text delimiter. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param skip `number` - Number of header lines to skip at top of input file. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param columns `string` - Column definition in SQL style (example: 'x double precision, y double precision, cat int, name varchar(10)'). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param x `number` - Number of column used as x coordinate. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param y `number` - Number of column used as y coordinate. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param z `number` - Number of column used as z coordinate. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param cat `number` - Number of column used as category. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .z `boolean` - Create 3D vector map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.
+##' @param .n `boolean` - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
+##' @param .t `boolean` - Do not create table in points mode. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.
+##' @param .b `boolean` - Do not build topology in points mode. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.
+##' @param .r `boolean` - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
+##' @param .i `boolean` - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.
 ##' @param output `vectorDestination` - ASCII. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value.
-##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value.
-##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.
+##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

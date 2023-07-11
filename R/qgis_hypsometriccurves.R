@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS Hypsometric curves (qgis:hypsometriccurves)
+##' QGIS Algorithm provided by QGIS Hypsometric curves (qgis:hypsometriccurves). This algorithm computes hypsometric curves  for an input Digital Elevation Model. Curves are produced as table files in an output folder specified by the user.
 ##'
-##' @title QGIS algorithm Hypsometric curves
+##' @title QGIS algorithm - Hypsometric curves
 ##'
 ##' @param INPUT_DEM `raster` - DEM to analyze. Path to a raster layer.
 ##' @param BOUNDARY_LAYER `source` - Boundary layer. Path to a vector layer.
-##' @param STEP `number` - Step. A numeric value.
-##' @param USE_PERCENTAGE `boolean` - Use % of area instead of absolute value. 1 for true/yes. 0 for false/no.
+##' @param STEP `number` - Step. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param USE_PERCENTAGE `boolean` - Use % of area instead of absolute value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT_DIRECTORY `folderDestination` - Hypsometric curves. Path for an existing or new folder.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

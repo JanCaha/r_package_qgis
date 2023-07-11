@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_translate.R
 \name{gdal_translate}
 \alias{gdal_translate}
-\title{QGIS algorithm Translate (convert format)}
+\title{QGIS algorithm - Translate (convert format)}
 \usage{
 gdal_translate(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,15 +24,15 @@ gdal_translate(
 
 \item{TARGET_CRS}{\code{crs} - Override the projection for the output file. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{NODATA}{\code{number} - Assign a specified nodata value to output bands. A numeric value.}
+\item{NODATA}{\code{number} - Assign a specified nodata value to output bands. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{COPY_SUBDATASETS}{\code{boolean} - Copy all subdatasets of this file to individual output files. 1 for true/yes. 0 for false/no.}
+\item{COPY_SUBDATASETS}{\code{boolean} - Copy all subdatasets of this file to individual output files. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{OUTPUT}{\code{rasterDestination} - Converted. Path for new raster layer.}
 
@@ -45,7 +45,7 @@ gdal_translate(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Translate (convert format) (gdal:translate)
+QGIS Algorithm provided by GDAL Translate (convert format) (gdal:translate). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer TARGET_CRS: Override the projection for the output file (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. NODATA: Assign a specified nodata value to output bands (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression COPY_SUBDATASETS: Copy all subdatasets of this file to individual output files 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DATA_TYPE: Output data type 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Use Input Layer Data Type 		- 1: Byte 		- 2: Int16 		- 3: UInt16 		- 4: UInt32 		- 5: Int32 		- 6: Float32 		- 7: Float64 		- 8: CInt16 		- 9: CInt32 		- 10: CFloat32 		- 11: CFloat64 		- 12: Int8 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' OUTPUT: Converted 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

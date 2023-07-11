@@ -1,39 +1,39 @@
-##' QGIS Algorithm provided by GRASS r.solute.transport (grass7:r.solute.transport)
+##' QGIS Algorithm provided by GRASS r.solute.transport (grass7:r.solute.transport). Numerical calculation program for transient, confined and unconfined solute transport in two dimensions
 ##'
-##' @title QGIS algorithm r.solute.transport
+##' @title QGIS algorithm - r.solute.transport
 ##'
-##' @param c `raster` - The initial concentration in (kg/m^3). Path to a raster layer.
+##' @param c `raster` - The initial concentration in (kg\code{/}m^3). Path to a raster layer.
 ##' @param phead `raster` - The piezometric head in (m). Path to a raster layer.
-##' @param hc_x `raster` - The x-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.
-##' @param hc_y `raster` - The y-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.
+##' @param hc_x `raster` - The x-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.
+##' @param hc_y `raster` - The y-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.
 ##' @param status `raster` - The status for each cell, = 0 - inactive cell, 1 - active cell, 2 - dirichlet- and 3 - transfer boundary condition. Path to a raster layer.
-##' @param diff_x `raster` - The x-part of the diffusion tensor in (m^2/s). Path to a raster layer.
-##' @param diff_y `raster` - The y-part of the diffusion tensor in (m^2/s). Path to a raster layer.
-##' @param q `raster` - Groundwater sources and sinks in (m^3/s). Path to a raster layer.
-##' @param cin `raster` - Concentration sources and sinks bounded to a water source or sink in (kg/s). Path to a raster layer.
-##' @param cs `raster` - Concentration of inner sources and inner sinks in (kg/s) (i.e. a chemical reaction). Path to a raster layer.
+##' @param diff_x `raster` - The x-part of the diffusion tensor in (m^2\code{/}s). Path to a raster layer.
+##' @param diff_y `raster` - The y-part of the diffusion tensor in (m^2\code{/}s). Path to a raster layer.
+##' @param q `raster` - Groundwater sources and sinks in (m^3\code{/}s). Path to a raster layer.
+##' @param cin `raster` - Concentration sources and sinks bounded to a water source or sink in (kg\code{/}s). Path to a raster layer.
+##' @param cs `raster` - Concentration of inner sources and inner sinks in (kg\code{/}s) (i.e. a chemical reaction). Path to a raster layer.
 ##' @param rd `raster` - Retardation factor (-). Path to a raster layer.
 ##' @param nf `raster` - Effective porosity (-). Path to a raster layer.
 ##' @param top `raster` - Top surface of the aquifer in (m). Path to a raster layer.
 ##' @param bottom `raster` - Bottom surface of the aquifer in (m). Path to a raster layer.
-##' @param dtime `number` - Calculation time (in seconds). A numeric value.
-##' @param maxit `number` - Maximum number of iteration used to solve the linear equation system. A numeric value.
-##' @param error `number` - Error break criteria for iterative solver. A numeric value.
+##' @param dtime `number` - Calculation time (in seconds). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param maxit `number` - Maximum number of iteration used to solve the linear equation system. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param error `number` - Error break criteria for iterative solver. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param solver `enum`  of `("gauss", "lu", "jacobi", "sor", "bicgstab")` - The type of solver which should solve the linear equation system. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param relax `number` - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. A numeric value.
-##' @param al `number` - The longitudinal dispersivity length. (m). A numeric value.
-##' @param at `number` - The transversal dispersivity length. (m). A numeric value.
-##' @param loops `number` - Use this number of time loops if the CFL flag is off. The timestep will become dt/loops.. A numeric value.
+##' @param relax `number` - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param al `number` - The longitudinal dispersivity length. (m). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param at `number` - The transversal dispersivity length. (m). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param loops `number` - Use this number of time loops if the CFL flag is off. The timestep will become dt\code{/}loops.. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param stab `enum`  of `("full", "exp")` - Set the flow stabilizing scheme (full or exponential upwinding).. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .c `boolean` - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
-##' @param .f `boolean` - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param .c `boolean` - Use the Courant-Friedrichs-Lewy criteria for time step calculation. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
+##' @param .f `boolean` - Use a full filled quadratic linear equation system, default is a sparse linear equation system.. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.
 ##' @param output `rasterDestination` - Solute Transport. Path for new raster layer.
-##' @param vx `rasterDestination` - Calculate and store the groundwater filter velocity vector part in x direction (m/s). Path for new raster layer.
-##' @param vy `rasterDestination` - Calculate and store the groundwater filter velocity vector part in y direction (m/s). Path for new raster layer.
+##' @param vx `rasterDestination` - Calculate and store the groundwater filter velocity vector part in x direction (m\code{/}s). Path for new raster layer.
+##' @param vy `rasterDestination` - Calculate and store the groundwater filter velocity vector part in y direction (m\code{/}s). Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -42,8 +42,8 @@
 ##' @details
 ##' ## Outputs description
 ##' * output - outputRaster - Solute Transport
-##' * vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction (m/s)
-##' * vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction (m/s)
+##' * vx - outputRaster - Calculate and store the groundwater filter velocity vector part in x direction (m\code{/}s)
+##' * vy - outputRaster - Calculate and store the groundwater filter velocity vector part in y direction (m\code{/}s)
 ##'
 ##'
 ##' @export

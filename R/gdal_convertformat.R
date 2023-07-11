@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by GDAL Convert format (gdal:convertformat)
+##' QGIS Algorithm provided by GDAL Convert format (gdal:convertformat). The algorithm converts simple features data between file formats.  Use convert all layers to convert a whole dataset. Supported output formats for this option are: - GPKG - GML
 ##'
-##' @title QGIS algorithm Convert format
+##' @title QGIS algorithm - Convert format
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param CONVERT_ALL_LAYERS `boolean` - Convert all layers from dataset. 1 for true/yes. 0 for false/no.
-##' @param OPTIONS `string` - Additional creation options. String value.
+##' @param CONVERT_ALL_LAYERS `boolean` - Convert all layers from dataset. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param OPTIONS `string` - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `vectorDestination` - Converted. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

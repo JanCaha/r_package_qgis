@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_hublines.R
 \name{qgis_hublines}
 \alias{qgis_hublines}
-\title{QGIS algorithm Join by lines (hub lines)}
+\title{QGIS algorithm - Join by lines (hub lines)}
 \usage{
 qgis_hublines(
   HUBS = qgisprocess:::qgis_default_value(),
@@ -34,11 +34,11 @@ qgis_hublines(
 
 \item{SPOKE_FIELDS}{\code{field} - Spoke layer fields to copy (leave empty to copy all fields). The name of an existing field. ; delimited list of existing field names.}
 
-\item{GEODESIC}{\code{boolean} - Create geodesic lines. 1 for true/yes. 0 for false/no.}
+\item{GEODESIC}{\code{boolean} - Create geodesic lines. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GEODESIC_DISTANCE}{\code{distance} - Distance between vertices (geodesic lines only). A numeric value.}
+\item{GEODESIC_DISTANCE}{\code{distance} - Distance between vertices (geodesic lines only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ANTIMERIDIAN_SPLIT}{\code{boolean} - Split lines at antimeridian (±180 degrees longitude). 1 for true/yes. 0 for false/no.}
+\item{ANTIMERIDIAN_SPLIT}{\code{boolean} - Split lines at antimeridian (±180 degrees longitude). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Hub lines. Path for new vector layer.}
 
@@ -51,7 +51,7 @@ qgis_hublines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Join by lines (hub lines) (native:hublines)
+QGIS Algorithm provided by QGIS (native c++) Join by lines (hub lines) (native:hublines). Creates lines joining two point layers, based on a common attribute value. This algorithm creates hub and spoke diagrams by connecting lines from points on the Spoke layer to matching points in the Hub layer.  Determination of which hub goes with each point is based on a match between the Hub ID field on the hub points and the Spoke ID field on the spoke points.  If input layers are not point layers, a point on the surface of the geometries will be taken as the connecting location.  Optionally, geodesic lines can be created, which represent the shortest path on the surface of an ellipsoid. When geodesic mode is used, it is possible to split the created lines at the antimeridian (±180 degrees longitude), which can improve rendering of the lines. Additionally, the distance between vertices can be specified. A smaller distance results in a denser, more accurate line.
 }
 \details{
 \subsection{Outputs description}{

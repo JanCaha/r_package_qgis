@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_fillnodata.R
 \name{qgis_fillnodata}
 \alias{qgis_fillnodata}
-\title{QGIS algorithm Fill NoData cells}
+\title{QGIS algorithm - Fill NoData cells}
 \usage{
 qgis_fillnodata(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_fillnodata(
 
 \item{BAND}{\code{band} - Band Number. Integer value representing an existing raster band number.}
 
-\item{FILL_VALUE}{\code{number} - Fill value. A numeric value.}
+\item{FILL_VALUE}{\code{number} - Fill value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 
@@ -33,7 +33,7 @@ qgis_fillnodata(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fill NoData cells (native:fillnodata)
+QGIS Algorithm provided by QGIS (native c++) Fill NoData cells (native:fillnodata). This algorithm resets the NoData values in the input raster to a chosen value, resulting in a raster dataset with no NoData pixels. This value can be set by the user using the Fill value parameter. The algorithm respects the input raster data type (eg. a floating point fill value will be truncated when applied to an integer raster).
 }
 \details{
 \subsection{Outputs description}{

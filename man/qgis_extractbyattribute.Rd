@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractbyattribute.R
 \name{qgis_extractbyattribute}
 \alias{qgis_extractbyattribute}
-\title{QGIS algorithm Extract by attribute}
+\title{QGIS algorithm - Extract by attribute}
 \usage{
 qgis_extractbyattribute(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,9 +22,9 @@ qgis_extractbyattribute(
 
 \item{FIELD}{\code{field} - Selection attribute. The name of an existing field. ; delimited list of existing field names.}
 
-\item{OPERATOR}{\code{enum}  of \verb{("=", "≠", ">", "≥", "<", "≤", "begins with", "contains", "is null", "is not null", "does not contain")} - Operator. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{OPERATOR}{\code{enum}  of \verb{("=", "≠", "", "≥", "", "≤", "begins with", "contains", "is null", "is not null", "does not contain")} - Operator. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{VALUE}{\code{string} - Value. String value.}
+\item{VALUE}{\code{string} - Value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted (attribute). Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_extractbyattribute(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute)
+QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the values of an attribute from the input layer.
 }
 \details{
 \subsection{Outputs description}{

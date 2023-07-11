@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_forcerhr.R
 \name{qgis_forcerhr}
 \alias{qgis_forcerhr}
-\title{QGIS algorithm Force right-hand-rule}
+\title{QGIS algorithm - Force right-hand-rule}
 \usage{
 qgis_forcerhr(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_forcerhr(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Force right-hand-rule (native:forcerhr)
+QGIS Algorithm provided by QGIS (native c++) Force right-hand-rule (native:forcerhr). Forces polygon geometries to respect the Right-Hand-Rule. This algorithm forces polygon geometries to respect the Right-Hand-Rule, in which the area that is bounded by a polygon is to the right of the boundary. In particular, the exterior ring is oriented in a clockwise direction and the interior rings in a counter-clockwise direction.
 }
 \details{
 \subsection{Outputs description}{

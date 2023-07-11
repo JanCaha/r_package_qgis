@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_kernel_rast.R
 \name{grass7_v_kernel_rast}
 \alias{grass7_v_kernel_rast}
-\title{QGIS algorithm v.kernel.rast}
+\title{QGIS algorithm - v.kernel.rast}
 \usage{
 grass7_v_kernel_rast(
   input = qgisprocess:::qgis_default_value(),
@@ -30,35 +30,35 @@ grass7_v_kernel_rast(
 \arguments{
 \item{input}{\code{source} - Name of input vector map with training points. Path to a vector layer.}
 
-\item{radius}{\code{number} - Kernel radius in map units. A numeric value.}
+\item{radius}{\code{number} - Kernel radius in map units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{dsize}{\code{number} - Discretization error in map units. A numeric value.}
+\item{dsize}{\code{number} - Discretization error in map units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{segmax}{\code{number} - Maximum length of segment on network. A numeric value.}
+\item{segmax}{\code{number} - Maximum length of segment on network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{distmax}{\code{number} - Maximum distance from point to network. A numeric value.}
+\item{distmax}{\code{number} - Maximum distance from point to network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{multiplier}{\code{number} - Multiply the density result by this number. A numeric value.}
+\item{multiplier}{\code{number} - Multiply the density result by this number. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{node}{\code{enum}  of \verb{("none", "split")} - Node method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{kernel}{\code{enum}  of \verb{("uniform", "triangular", "epanechnikov", "quartic", "triweight", "gaussian", "cosine")} - Kernel function. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
+\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -o.}
 
 \item{output}{\code{rasterDestination} - Kernel. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -69,7 +69,7 @@ grass7_v_kernel_rast(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.kernel.rast (grass7:v.kernel.rast)
+QGIS Algorithm provided by GRASS v.kernel.rast (grass7:v.kernel.rast). v.kernel.rast - Generates a raster density map from vector points map.
 }
 \details{
 \subsection{Outputs description}{

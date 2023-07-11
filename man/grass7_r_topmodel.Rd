@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_topmodel.R
 \name{grass7_r_topmodel}
 \alias{grass7_r_topmodel}
-\title{QGIS algorithm r.topmodel}
+\title{QGIS algorithm - r.topmodel}
 \usage{
 grass7_r_topmodel(
   parameters = qgisprocess:::qgis_default_value(),
@@ -25,9 +25,9 @@ grass7_r_topmodel(
 
 \item{input}{\code{file} - Name of rainfall and potential evapotranspiration data file. Path to a file.}
 
-\item{timestep}{\code{number} - Time step. Generate output for this time step. A numeric value.}
+\item{timestep}{\code{number} - Time step. Generate output for this time step. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{topidxclass}{\code{number} - Topographic index class. Generate output for this topographic index class. A numeric value.}
+\item{topidxclass}{\code{number} - Topographic index class. Generate output for this topographic index class. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{fileDestination} - TOPMODEL output. Path for new file.}
 
@@ -42,7 +42,7 @@ grass7_r_topmodel(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.topmodel (grass7:r.topmodel)
+QGIS Algorithm provided by GRASS r.topmodel (grass7:r.topmodel). Simulates TOPMODEL which is a physically based hydrologic model.
 }
 \details{
 \subsection{Outputs description}{

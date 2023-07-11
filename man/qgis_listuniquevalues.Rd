@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_listuniquevalues.R
 \name{qgis_listuniquevalues}
 \alias{qgis_listuniquevalues}
-\title{QGIS algorithm List unique values}
+\title{QGIS algorithm - List unique values}
 \usage{
 qgis_listuniquevalues(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_listuniquevalues(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS List unique values (qgis:listuniquevalues)
+QGIS Algorithm provided by QGIS List unique values (qgis:listuniquevalues). This algorithm generates a report with information about the unique values found in a given attribute (or attributes) of a vector layer.
 }
 \details{
 \subsection{Outputs description}{

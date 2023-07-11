@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randomextractwithinsubsets.R
 \name{qgis_randomextractwithinsubsets}
 \alias{qgis_randomextractwithinsubsets}
-\title{QGIS algorithm Random extract within subsets}
+\title{QGIS algorithm - Random extract within subsets}
 \usage{
 qgis_randomextractwithinsubsets(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,7 +23,7 @@ qgis_randomextractwithinsubsets(
 
 \item{METHOD}{\code{enum}  of \verb{("Number of selected features", "Percentage of selected features")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NUMBER}{\code{number} - Number/percentage of selected features. A numeric value.}
+\item{NUMBER}{\code{number} - Number\code{/}percentage of selected features. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted (random stratified). Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_randomextractwithinsubsets(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Random extract within subsets (qgis:randomextractwithinsubsets)
+QGIS Algorithm provided by QGIS Random extract within subsets (qgis:randomextractwithinsubsets). This algorithm takes a vector layer and generates a new one that contains only a subset of the features in the input layer. The subset is defined randomly, using a percentage or count value to define the total number of features in the subset. The percentage/count value is not applied to the whole layer, but instead to each category. Categories are defined according to a given attribute, which is also specified as an input parameter for the algorithm.
 }
 \details{
 \subsection{Outputs description}{

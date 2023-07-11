@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Batch Nominatim geocoder (native:batchnominatimgeocoder)
+##' QGIS Algorithm provided by QGIS (native c++) Batch Nominatim geocoder (native:batchnominatimgeocoder). This algorithm performs batch geocoding using the a href="#"Nominatim/a service against an input layer string field.  The output layer will have a point geometry reflecting the geocoded location as well as a number of attributes associated to the geocoded location.
 ##'
-##' @title QGIS algorithm Batch Nominatim geocoder
+##' @title QGIS algorithm - Batch Nominatim geocoder
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Address field. The name of an existing field. ; delimited list of existing field names.

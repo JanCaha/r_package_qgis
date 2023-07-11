@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_gdalinfo.R
 \name{gdal_gdalinfo}
 \alias{gdal_gdalinfo}
-\title{QGIS algorithm Raster information}
+\title{QGIS algorithm - Raster information}
 \usage{
 gdal_gdalinfo(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,15 +21,15 @@ gdal_gdalinfo(
 \arguments{
 \item{INPUT}{\code{raster} - Input layer. Path to a raster layer.}
 
-\item{MIN_MAX}{\code{boolean} - Force computation of the actual min/max values for each band. 1 for true/yes. 0 for false/no.}
+\item{MIN_MAX}{\code{boolean} - Force computation of the actual min\code{/}max values for each band. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{STATS}{\code{boolean} - Read and display image statistics (force computation if necessary). 1 for true/yes. 0 for false/no.}
+\item{STATS}{\code{boolean} - Read and display image statistics (force computation if necessary). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NOGCP}{\code{boolean} - Suppress GCP info. 1 for true/yes. 0 for false/no.}
+\item{NOGCP}{\code{boolean} - Suppress GCP info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NO_METADATA}{\code{boolean} - Suppress metadata info. 1 for true/yes. 0 for false/no.}
+\item{NO_METADATA}{\code{boolean} - Suppress metadata info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Layer information. Path for new file.}
 
@@ -42,7 +42,7 @@ gdal_gdalinfo(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Raster information (gdal:gdalinfo)
+QGIS Algorithm provided by GDAL Raster information (gdal:gdalinfo). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer MIN_MAX: Force computation of the actual min/max values for each band 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression STATS: Read and display image statistics (force computation if necessary) 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NOGCP: Suppress GCP info 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NO_METADATA: Suppress metadata info 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Layer information 	Argument type:	fileDestination 	Acceptable values: 		- Path for new file
 }
 \details{
 \subsection{Outputs description}{

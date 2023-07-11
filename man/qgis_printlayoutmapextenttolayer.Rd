@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_printlayoutmapextenttolayer.R
 \name{qgis_printlayoutmapextenttolayer}
 \alias{qgis_printlayoutmapextenttolayer}
-\title{QGIS algorithm Print layout map extent to layer}
+\title{QGIS algorithm - Print layout map extent to layer}
 \usage{
 qgis_printlayoutmapextenttolayer(
   LAYOUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_printlayoutmapextenttolayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Print layout map extent to layer (native:printlayoutmapextenttolayer)
+QGIS Algorithm provided by QGIS (native c++) Print layout map extent to layer (native:printlayoutmapextenttolayer). Creates a polygon layer containing the extent of a print layout map item. This algorithm creates a polygon layer containing the extent of a print layout map item (or items), with attributes specifying the map size (in layout units), scale and rotation.  If the map item parameter is specified, then only the matching map extent will be exported. If it is not specified, all map extents from the layout will be exported.  Optionally, a specific output CRS can be specified. If it is not specified, the original map item CRS will be used.
 }
 \details{
 \subsection{Outputs description}{

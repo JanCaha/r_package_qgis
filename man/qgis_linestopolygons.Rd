@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_linestopolygons.R
 \name{qgis_linestopolygons}
 \alias{qgis_linestopolygons}
-\title{QGIS algorithm Lines to polygons}
+\title{QGIS algorithm - Lines to polygons}
 \usage{
 qgis_linestopolygons(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_linestopolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Lines to polygons (qgis:linestopolygons)
+QGIS Algorithm provided by QGIS Lines to polygons (qgis:linestopolygons). This algorithm generates a polygon layer using as polygon rings the lines from an input line layer. The attribute table of the output layer is the same as the one from of the input line layer.
 }
 \details{
 \subsection{Outputs description}{

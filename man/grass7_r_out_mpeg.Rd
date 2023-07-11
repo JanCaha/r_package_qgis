@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_mpeg.R
 \name{grass7_r_out_mpeg}
 \alias{grass7_r_out_mpeg}
-\title{QGIS algorithm r.out.mpeg}
+\title{QGIS algorithm - r.out.mpeg}
 \usage{
 grass7_r_out_mpeg(
   view1 = qgisprocess:::qgis_default_value(),
@@ -28,13 +28,13 @@ grass7_r_out_mpeg(
 
 \item{view4}{\code{multilayer} - Name of input raster map(s) for view no.4. .}
 
-\item{quality}{\code{number} - Quality factor (1 = highest quality, lowest compression). A numeric value.}
+\item{quality}{\code{number} - Quality factor (1 = highest quality, lowest compression). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{fileDestination} - MPEG file. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -45,7 +45,7 @@ grass7_r_out_mpeg(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.mpeg (grass7:r.out.mpeg)
+QGIS Algorithm provided by GRASS r.out.mpeg (grass7:r.out.mpeg). Converts raster map series to MPEG movie
 }
 \details{
 \subsection{Outputs description}{

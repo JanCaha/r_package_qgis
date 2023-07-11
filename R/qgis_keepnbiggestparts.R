@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS Keep N biggest parts (qgis:keepnbiggestparts)
+##' QGIS Algorithm provided by QGIS Keep N biggest parts (qgis:keepnbiggestparts). This algorithm takes a polygon layer and creates a new polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts.
 ##'
-##' @title QGIS algorithm Keep N biggest parts
+##' @title QGIS algorithm - Keep N biggest parts
 ##'
 ##' @param POLYGONS `source` - Polygons. Path to a vector layer.
-##' @param PARTS `number` - Parts to keep. A numeric value.
+##' @param PARTS `number` - Parts to keep. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Parts. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

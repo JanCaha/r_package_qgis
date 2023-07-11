@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_arrayoffsetlines.R
 \name{qgis_arrayoffsetlines}
 \alias{qgis_arrayoffsetlines}
-\title{QGIS algorithm Array of offset (parallel) lines}
+\title{QGIS algorithm - Array of offset (parallel) lines}
 \usage{
 qgis_arrayoffsetlines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,15 +21,15 @@ qgis_arrayoffsetlines(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{COUNT}{\code{number} - Number of features to create. A numeric value.}
+\item{COUNT}{\code{number} - Number of features to create. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OFFSET}{\code{distance} - Offset step distance. A numeric value.}
+\item{OFFSET}{\code{distance} - Offset step distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{JOIN_STYLE}{\code{enum}  of \verb{("Round", "Miter", "Bevel")} - Join style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value.}
+\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Offset lines. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_arrayoffsetlines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Array of offset (parallel) lines (native:arrayoffsetlines)
+QGIS Algorithm provided by QGIS (native c++) Array of offset (parallel) lines (native:arrayoffsetlines). Creates multiple offset copies of lines from a layer. This algorithm creates copies of line features in a layer, by creating multiple offset versions of each feature. Each copy is offset by a preset distance.
 }
 \details{
 \subsection{Outputs description}{

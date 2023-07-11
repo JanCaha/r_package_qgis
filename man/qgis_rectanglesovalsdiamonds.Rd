@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rectanglesovalsdiamonds.R
 \name{qgis_rectanglesovalsdiamonds}
 \alias{qgis_rectanglesovalsdiamonds}
-\title{QGIS algorithm Rectangles, ovals, diamonds}
+\title{QGIS algorithm - Rectangles, ovals, diamonds}
 \usage{
 qgis_rectanglesovalsdiamonds(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,13 +23,13 @@ qgis_rectanglesovalsdiamonds(
 
 \item{SHAPE}{\code{enum}  of \verb{("Rectangle", "Diamond", "Oval")} - Shape. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{WIDTH}{\code{distance} - Width. A numeric value.}
+\item{WIDTH}{\code{distance} - Width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{HEIGHT}{\code{distance} - Height. A numeric value.}
+\item{HEIGHT}{\code{distance} - Height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ROTATION}{\code{number} - Rotation. A numeric value.}
+\item{ROTATION}{\code{number} - Rotation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Polygon. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_rectanglesovalsdiamonds(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds)
+QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds). Creates rectangle, oval or diamond-shaped polygons from the input point layer using specified width, height and (optional) rotation values. Multipart inputs should be promoted to singleparts first.
 }
 \details{
 \subsection{Outputs description}{

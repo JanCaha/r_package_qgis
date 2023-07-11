@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_neighbors.R
 \name{grass7_r_neighbors}
 \alias{grass7_r_neighbors}
-\title{QGIS algorithm r.neighbors}
+\title{QGIS algorithm - r.neighbors}
 \usage{
 grass7_r_neighbors(
   input = qgisprocess:::qgis_default_value(),
@@ -32,15 +32,15 @@ grass7_r_neighbors(
 
 \item{method}{\code{enum}  of \verb{("average", "median", "mode", "minimum", "maximum", "range", "stddev", "sum", "count", "variance", "diversity", "interspersion", "quart1", "quart3", "perc90", "quantile")} - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{size}{\code{number} - Neighborhood size (must be odd). A numeric value.}
+\item{size}{\code{number} - Neighborhood size (must be odd). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{gauss}{\code{number} - Sigma (in cells) for Gaussian filter. A numeric value.}
+\item{gauss}{\code{number} - Sigma (in cells) for Gaussian filter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{quantile}{\code{string} - Quantile to calculate for method=quantile. String value.}
+\item{quantile}{\code{string} - Quantile to calculate for method=quantile. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.c}{\code{boolean} - Use circular neighborhood. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Use circular neighborhood. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.a}{\code{boolean} - Do not align output with the input. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - Do not align output with the input. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
 \item{weight}{\code{file} - File containing weights. Path to a file.}
 
@@ -48,11 +48,11 @@ grass7_r_neighbors(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -63,7 +63,7 @@ grass7_r_neighbors(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.neighbors (grass7:r.neighbors)
+QGIS Algorithm provided by GRASS r.neighbors (grass7:r.neighbors). Makes each cell category value a function of the category values assigned to the cells around it
 }
 \details{
 \subsection{Outputs description}{

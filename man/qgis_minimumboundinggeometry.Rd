@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_minimumboundinggeometry.R
 \name{qgis_minimumboundinggeometry}
 \alias{qgis_minimumboundinggeometry}
-\title{QGIS algorithm Minimum bounding geometry}
+\title{QGIS algorithm - Minimum bounding geometry}
 \usage{
 qgis_minimumboundinggeometry(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_minimumboundinggeometry(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Minimum bounding geometry (qgis:minimumboundinggeometry)
+QGIS Algorithm provided by QGIS Minimum bounding geometry (qgis:minimumboundinggeometry). This algorithm creates geometries which enclose the features from an input layer. Numerous enclosing geometry types are supported, including bounding boxes (envelopes), oriented rectangles, circles and convex hulls. Optionally, the features can be grouped by a field. If set, this causes the output layer to contain one feature per grouped value with a minimal geometry covering just the features with matching values.
 }
 \details{
 \subsection{Outputs description}{

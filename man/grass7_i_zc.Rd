@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_zc.R
 \name{grass7_i_zc}
 \alias{grass7_i_zc}
-\title{QGIS algorithm i.zc}
+\title{QGIS algorithm - i.zc}
 \usage{
 grass7_i_zc(
   input = qgisprocess:::qgis_default_value(),
@@ -23,21 +23,21 @@ grass7_i_zc(
 \arguments{
 \item{input}{\code{raster} - Name of input raster map. Path to a raster layer.}
 
-\item{width}{\code{number} - x-y extent of the Gaussian filter. A numeric value.}
+\item{width}{\code{number} - x-y extent of the Gaussian filter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{threshold}{\code{number} - Sensitivity of Gaussian filter. A numeric value.}
+\item{threshold}{\code{number} - Sensitivity of Gaussian filter. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{orientations}{\code{number} - Number of azimuth directions categorized. A numeric value.}
+\item{orientations}{\code{number} - Number of azimuth directions categorized. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Zero crossing. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_i_zc(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.zc (grass7:i.zc)
+QGIS Algorithm provided by GRASS i.zc (grass7:i.zc). Zero-crossing "edge detection" raster function for image processing.
 }
 \details{
 \subsection{Outputs description}{

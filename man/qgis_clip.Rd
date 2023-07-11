@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_clip.R
 \name{qgis_clip}
 \alias{qgis_clip}
-\title{QGIS algorithm Clip}
+\title{QGIS algorithm - Clip}
 \usage{
 qgis_clip(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_clip(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Clip (native:clip)
+QGIS Algorithm provided by QGIS (native c++) Clip (native:clip). This algorithm clips a vector layer using the features of an additional polygon layer. Only the parts of the features in the Input layer that fall within the polygons of the Overlay layer will be added to the resulting layer.  The attributes of the features are not modified, although properties such as area or length of the features will be modified by the clipping operation. If such properties are stored as attributes, those attributes will have to be manually updated.
 }
 \details{
 \subsection{Outputs description}{

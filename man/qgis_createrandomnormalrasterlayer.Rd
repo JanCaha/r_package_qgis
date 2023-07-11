@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_createrandomnormalrasterlayer.R
 \name{qgis_createrandomnormalrasterlayer}
 \alias{qgis_createrandomnormalrasterlayer}
-\title{QGIS algorithm Create random raster layer (normal distribution)}
+\title{QGIS algorithm - Create random raster layer (normal distribution)}
 \usage{
 qgis_createrandomnormalrasterlayer(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -23,13 +23,13 @@ qgis_createrandomnormalrasterlayer(
 
 \item{TARGET_CRS}{\code{crs} - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{PIXEL_SIZE}{\code{number} - Pixel size. A numeric value.}
+\item{PIXEL_SIZE}{\code{number} - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_TYPE}{\code{enum}  of \verb{("Float32", "Float64")} - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{MEAN}{\code{number} - Mean of normal distribution. A numeric value.}
+\item{MEAN}{\code{number} - Mean of normal distribution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{STDDEV}{\code{number} - Standard deviation of normal distribution. A numeric value.}
+\item{STDDEV}{\code{number} - Standard deviation of normal distribution. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 
@@ -42,7 +42,7 @@ qgis_createrandomnormalrasterlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create random raster layer (normal distribution) (native:createrandomnormalrasterlayer)
+QGIS Algorithm provided by QGIS (native c++) Create random raster layer (normal distribution) (native:createrandomnormalrasterlayer). Generates a raster layer for given extent and cell size filled with normally distributed random values. By default, the values will be chosen given a mean of 0.0 and a standard deviation of 1.0. This can be overridden by using the advanced parameters for mean and standard deviation value. The raster data type is set to Float32 by default as the normal distribution random values are floating point numbers.
 }
 \details{
 \subsection{Outputs description}{

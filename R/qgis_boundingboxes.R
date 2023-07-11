@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Bounding boxes (native:boundingboxes)
+##' QGIS Algorithm provided by QGIS (native c++) Bounding boxes (native:boundingboxes). This algorithm calculates the bounding box (envelope) for each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a bounding box calculation which covers the whole layer or grouped subsets of features.
 ##'
-##' @title QGIS algorithm Bounding boxes
+##' @title QGIS algorithm - Bounding boxes
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Bounds. Path for new vector layer.

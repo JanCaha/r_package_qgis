@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_spread.R
 \name{grass7_r_spread}
 \alias{grass7_r_spread}
-\title{QGIS algorithm r.spread}
+\title{QGIS algorithm - r.spread}
 \usage{
 grass7_r_spread(
   base_ros = qgisprocess:::qgis_default_value(),
@@ -33,9 +33,9 @@ grass7_r_spread(
 )
 }
 \arguments{
-\item{base_ros}{\code{raster} - Raster map containing base ROS (cm/min). Path to a raster layer.}
+\item{base_ros}{\code{raster} - Raster map containing base ROS (cm\code{/}min). Path to a raster layer.}
 
-\item{max_ros}{\code{raster} - Raster map containing maximal ROS (cm/min). Path to a raster layer.}
+\item{max_ros}{\code{raster} - Raster map containing maximal ROS (cm\code{/}min). Path to a raster layer.}
 
 \item{direction_ros}{\code{raster} - Raster map containing directions of maximal ROS (degree). Path to a raster layer.}
 
@@ -43,7 +43,7 @@ grass7_r_spread(
 
 \item{spotting_distance}{\code{raster} - Raster map containing maximal spotting distance (m, required with -s). Path to a raster layer.}
 
-\item{wind_speed}{\code{raster} - Raster map containing midflame wind speed (ft/min, required with -s). Path to a raster layer.}
+\item{wind_speed}{\code{raster} - Raster map containing midflame wind speed (ft\code{/}min, required with -s). Path to a raster layer.}
 
 \item{fuel_moisture}{\code{raster} - Raster map containing fine fuel moisture of the cell receiving a spotting firebrand (\%, required with -s). Path to a raster layer.}
 
@@ -51,15 +51,15 @@ grass7_r_spread(
 
 \item{least_size}{\code{enum}  of \verb{("3", "5", "7", "9", "11", "13", "15")} - Basic sampling window size needed to meet certain accuracy (3). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{comp_dens}{\code{number} - Sampling density for additional computing (range: 0.0 - 1.0 (0.5)). A numeric value.}
+\item{comp_dens}{\code{number} - Sampling density for additional computing (range: 0.0 - 1.0 (0.5)). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{init_time}{\code{number} - Initial time for current simulation (0) (min). A numeric value.}
+\item{init_time}{\code{number} - Initial time for current simulation (0) (min). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{lag}{\code{number} - Simulating time duration LAG (fill the region) (min). A numeric value.}
+\item{lag}{\code{number} - Simulating time duration LAG (fill the region) (min). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.s}{\code{boolean} - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
-\item{.i}{\code{boolean} - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
 \item{output}{\code{rasterDestination} - Spread Time. Path for new raster layer.}
 
@@ -69,11 +69,11 @@ grass7_r_spread(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -84,7 +84,7 @@ grass7_r_spread(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.spread (grass7:r.spread)
+QGIS Algorithm provided by GRASS r.spread (grass7:r.spread). Simulates elliptically anisotropic spread.
 }
 \details{
 \subsection{Outputs description}{

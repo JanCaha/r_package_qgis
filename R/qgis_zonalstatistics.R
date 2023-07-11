@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Zonal statistics (in place) (native:zonalstatistics)
+##' QGIS Algorithm provided by QGIS (native c++) Zonal statistics (in place) (native:zonalstatistics). Calculates statistics for a raster layer's values for each feature of an overlapping polygon vector layer. This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer. The results will be written in place.
 ##'
-##' @title QGIS algorithm Zonal statistics (in place)
+##' @title QGIS algorithm - Zonal statistics (in place)
 ##'
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param RASTER_BAND `band` - Raster band. Integer value representing an existing raster band number.
 ##' @param INPUT_VECTOR `vector` - Vector layer containing zones. Path to a vector layer.
-##' @param COLUMN_PREFIX `string` - Output column prefix. String value.
+##' @param COLUMN_PREFIX `string` - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param STATISTICS `enum`  of `("Count", "Sum", "Mean", "Median", "St dev", "Minimum", "Maximum", "Range", "Minority", "Majority", "Variety", "Variance")` - Statistics to calculate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

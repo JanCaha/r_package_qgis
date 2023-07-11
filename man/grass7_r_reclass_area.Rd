@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_reclass_area.R
 \name{grass7_r_reclass_area}
 \alias{grass7_r_reclass_area}
-\title{QGIS algorithm r.reclass.area}
+\title{QGIS algorithm - r.reclass.area}
 \usage{
 grass7_r_reclass_area(
   input = qgisprocess:::qgis_default_value(),
@@ -25,25 +25,25 @@ grass7_r_reclass_area(
 \arguments{
 \item{input}{\code{raster} - Input raster layer. Path to a raster layer.}
 
-\item{value}{\code{number} - Value option that sets the area size limit (hectares). A numeric value.}
+\item{value}{\code{number} - Value option that sets the area size limit (hectares). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{mode}{\code{enum}  of \verb{("lesser", "greater")} - Lesser or greater than specified value. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{method}{\code{enum}  of \verb{("reclass", "rmarea")} - Method used for reclassification. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.c}{\code{boolean} - Input map is clumped. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Input map is clumped. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.d}{\code{boolean} - Clumps including diagonal neighbors. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Clumps including diagonal neighbors. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
 \item{output}{\code{rasterDestination} - Reclassified. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,7 +54,7 @@ grass7_r_reclass_area(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.reclass.area (grass7:r.reclass.area)
+QGIS Algorithm provided by GRASS r.reclass.area (grass7:r.reclass.area). Reclassifies a raster layer, greater or less than user specified area size (in hectares)
 }
 \details{
 \subsection{Outputs description}{

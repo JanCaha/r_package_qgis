@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Less than frequency (native:lessthanfrequency)
+##' QGIS Algorithm provided by QGIS (native c++) Less than frequency (native:lessthanfrequency). The Less than frequency algorithm evaluates on a cell-by-cell basis the frequency (number of times) the values of an input stack of rasters are less than the value of a value raster.   If multiband rasters are used in the data raster stack, the algorithm will always perform the analysis on the first band of the rasters - use GDAL to use other bands in the analysis. The input value layer serves as reference layer for the sample layers. Any NoData cells in the value raster or the data layer stack will result in a NoData cell in the output raster if the ignore NoData parameter is not checked. The output NoData value can be set manually. The output rasters extent and resolution is defined by the input raster layer and is always of int32 type.
 ##'
-##' @title QGIS algorithm Less than frequency
+##' @title QGIS algorithm - Less than frequency
 ##'
 ##' @param INPUT_VALUE_RASTER `raster` - Input value raster. Path to a raster layer.
 ##' @param INPUT_VALUE_RASTER_BAND `band` - Value raster band. Integer value representing an existing raster band number.
 ##' @param INPUT_RASTERS `multilayer` - Input raster layers. .
-##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no.
-##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value.
+##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

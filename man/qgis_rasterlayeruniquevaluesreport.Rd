@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rasterlayeruniquevaluesreport.R
 \name{qgis_rasterlayeruniquevaluesreport}
 \alias{qgis_rasterlayeruniquevaluesreport}
-\title{QGIS algorithm Raster layer unique values report}
+\title{QGIS algorithm - Raster layer unique values report}
 \usage{
 qgis_rasterlayeruniquevaluesreport(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_rasterlayeruniquevaluesreport(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (native:rasterlayeruniquevaluesreport)
+QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (native:rasterlayeruniquevaluesreport). This algorithm returns the count and area of each unique value in a given raster layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,11 +2,12 @@
 % Please edit documentation in R/qgis_reprojectlayer.R
 \name{qgis_reprojectlayer}
 \alias{qgis_reprojectlayer}
-\title{QGIS algorithm Reproject layer}
+\title{QGIS algorithm - Reproject layer}
 \usage{
 qgis_reprojectlayer(
   INPUT = qgisprocess:::qgis_default_value(),
   TARGET_CRS = qgisprocess:::qgis_default_value(),
+  CONVERT_CURVED_GEOMETRIES = qgisprocess:::qgis_default_value(),
   OPERATION = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
@@ -19,6 +20,8 @@ qgis_reprojectlayer(
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
 \item{TARGET_CRS}{\code{crs} - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
+
+\item{CONVERT_CURVED_GEOMETRIES}{\code{boolean} - Convert curved geometries to straight segments. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OPERATION}{\code{coordinateoperation} - Coordinate operation. String representation of Proj coordinate operation.}
 
@@ -33,7 +36,7 @@ qgis_reprojectlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Reproject layer (native:reprojectlayer)
+QGIS Algorithm provided by QGIS (native c++) Reproject layer (native:reprojectlayer). This algorithm reprojects a vector layer. It creates a new layer with the same features as the input one, but with geometries reprojected to a new CRS.  Attributes are not modified by this algorithm.
 }
 \details{
 \subsection{Outputs description}{

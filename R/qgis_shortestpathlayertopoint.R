@@ -1,17 +1,17 @@
-##' QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (native:shortestpathlayertopoint)
+##' QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (native:shortestpathlayertopoint). This algorithm computes optimal (shortest or fastest) route from multiple start points defined by vector layer and given end point.
 ##'
-##' @title QGIS algorithm Shortest path (layer to point)
+##' @title QGIS algorithm - Shortest path (layer to point)
 ##'
 ##' @param INPUT `source` - Vector layer representing network. Path to a vector layer.
 ##' @param STRATEGY `enum`  of `("Shortest", "Fastest")` - Path type to calculate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param DIRECTION_FIELD `field` - Direction field. The name of an existing field. ; delimited list of existing field names.
-##' @param VALUE_FORWARD `string` - Value for forward direction. String value.
-##' @param VALUE_BACKWARD `string` - Value for backward direction. String value.
-##' @param VALUE_BOTH `string` - Value for both directions. String value.
+##' @param VALUE_FORWARD `string` - Value for forward direction. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param VALUE_BACKWARD `string` - Value for backward direction. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param VALUE_BOTH `string` - Value for both directions. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param DEFAULT_DIRECTION `enum`  of `("Forward direction", "Backward direction", "Both directions")` - Default direction. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param SPEED_FIELD `field` - Speed field. The name of an existing field. ; delimited list of existing field names.
-##' @param DEFAULT_SPEED `number` - Default speed (km/h). A numeric value.
-##' @param TOLERANCE `distance` - Topology tolerance. A numeric value.
+##' @param DEFAULT_SPEED `number` - Default speed (km\code{/}h). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param TOLERANCE `distance` - Topology tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param START_POINTS `source` - Vector layer with start points. Path to a vector layer.
 ##' @param END_POINT `point` - End point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param OUTPUT `sink` - Shortest path. Path for new vector layer.

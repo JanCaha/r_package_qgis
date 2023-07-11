@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractspecificvertices.R
 \name{qgis_extractspecificvertices}
 \alias{qgis_extractspecificvertices}
-\title{QGIS algorithm Extract specific vertices}
+\title{QGIS algorithm - Extract specific vertices}
 \usage{
 qgis_extractspecificvertices(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_extractspecificvertices(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{VERTICES}{\code{string} - Vertex indices. String value.}
+\item{VERTICES}{\code{string} - Vertex indices. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Vertices. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_extractspecificvertices(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract specific vertices (native:extractspecificvertices)
+QGIS Algorithm provided by QGIS (native c++) Extract specific vertices (native:extractspecificvertices). This algorithm takes a line or polygon layer and generates a point layer with points representing specific vertices in the input lines or polygons. For instance, this algorithm can be used to extract the first or last vertices in the geometry. The attributes associated to each point are the same ones associated to the line or polygon that the point belongs to.  The vertex indices parameter accepts a comma separated string specifying the indices of the vertices to extract. The first vertex corresponds to an index of 0, the second vertex has an index of 1, etc. Negative indices can be used to find vertices at the end of the geometry, e.g., an index of -1 corresponds to the last vertex, -2 corresponds to the second last vertex, etc.  Additional fields are added to the points indicating the specific vertex position (e.g., 0, -1, etc), the original vertex index, the vertex’s part and its index within the part (as well as its ring for polygons), distance along the original geometry and bisector angle of vertex for the original geometry.
 }
 \details{
 \subsection{Outputs description}{

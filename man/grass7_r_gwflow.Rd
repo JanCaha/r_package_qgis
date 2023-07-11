@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_gwflow.R
 \name{grass7_r_gwflow}
 \alias{grass7_r_gwflow}
-\title{QGIS algorithm r.gwflow}
+\title{QGIS algorithm - r.gwflow}
 \usage{
 grass7_r_gwflow(
   phead = qgisprocess:::qgis_default_value(),
@@ -45,15 +45,15 @@ grass7_r_gwflow(
 
 \item{status}{\code{raster} - Boundary condition status, 0-inactive, 1-active, 2-dirichlet. Path to a raster layer.}
 
-\item{hc_x}{\code{raster} - X-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.}
+\item{hc_x}{\code{raster} - X-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.}
 
-\item{hc_y}{\code{raster} - Y-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.}
+\item{hc_y}{\code{raster} - Y-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.}
 
-\item{q}{\code{raster} - Water sources and sinks in (m^3/s). Path to a raster layer.}
+\item{q}{\code{raster} - Water sources and sinks in (m^3\code{/}s). Path to a raster layer.}
 
-\item{s}{\code{raster} - Specific yield in (1/m). Path to a raster layer.}
+\item{s}{\code{raster} - Specific yield in (1\code{/}m). Path to a raster layer.}
 
-\item{recharge}{\code{raster} - Recharge map e.g: 6\emph{10^-9 per cell in (m^3/s}m^2). Path to a raster layer.}
+\item{recharge}{\code{raster} - Recharge map e.g: 6\emph{10^-9 per cell in (m^3\code{/}s}m^2). Path to a raster layer.}
 
 \item{top}{\code{raster} - Top surface of the aquifer in (m). Path to a raster layer.}
 
@@ -65,39 +65,39 @@ grass7_r_gwflow(
 
 \item{river_head}{\code{raster} - Water level (head) of the river with leakage connection in (m). Path to a raster layer.}
 
-\item{river_leak}{\code{raster} - The leakage coefficient of the river bed in (1/s). Path to a raster layer.}
+\item{river_leak}{\code{raster} - The leakage coefficient of the river bed in (1\code{/}s). Path to a raster layer.}
 
 \item{drain_bed}{\code{raster} - The height of the drainage bed in (m). Path to a raster layer.}
 
-\item{drain_leak}{\code{raster} - The leakage coefficient of the drainage bed in (1/s). Path to a raster layer.}
+\item{drain_leak}{\code{raster} - The leakage coefficient of the drainage bed in (1\code{/}s). Path to a raster layer.}
 
-\item{dtime}{\code{number} - The calculation time in seconds. A numeric value.}
+\item{dtime}{\code{number} - The calculation time in seconds. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{maxit}{\code{number} - Maximum number of iteration used to solver the linear equation system. A numeric value.}
+\item{maxit}{\code{number} - Maximum number of iteration used to solver the linear equation system. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{error}{\code{number} - Error break criteria for iterative solvers (jacobi, sor, cg or bicgstab). A numeric value.}
+\item{error}{\code{number} - Error break criteria for iterative solvers (jacobi, sor, cg or bicgstab). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{solver}{\code{enum}  of \verb{("cg", "pcg", "cholesky")} - The type of solver which should solve the symmetric linear equation system. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{relax}{\code{string} - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. String value.}
+\item{relax}{\code{string} - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.f}{\code{boolean} - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
+\item{.f}{\code{boolean} - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Groundwater flow. Path for new raster layer.}
 
-\item{vx}{\code{rasterDestination} - Groundwater filter velocity vector part in x direction (m/s). Path for new raster layer.}
+\item{vx}{\code{rasterDestination} - Groundwater filter velocity vector part in x direction (m\code{/}s). Path for new raster layer.}
 
-\item{vy}{\code{rasterDestination} - Groundwater filter velocity vector part in y direction (m/s). Path for new raster layer.}
+\item{vy}{\code{rasterDestination} - Groundwater filter velocity vector part in y direction (m\code{/}s). Path for new raster layer.}
 
-\item{budget}{\code{rasterDestination} - Groundwater budget for each cell (m^3/s). Path for new raster layer.}
+\item{budget}{\code{rasterDestination} - Groundwater budget for each cell (m^3\code{/}s). Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -108,15 +108,15 @@ grass7_r_gwflow(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.gwflow (grass7:r.gwflow)
+QGIS Algorithm provided by GRASS r.gwflow (grass7:r.gwflow). Numerical calculation program for transient, confined and unconfined groundwater flow in two dimensions.
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item budget - outputRaster - Groundwater budget for each cell (m^3/s)
+\item budget - outputRaster - Groundwater budget for each cell (m^3\code{/}s)
 \item output - outputRaster - Groundwater flow
-\item vx - outputRaster - Groundwater filter velocity vector part in x direction (m/s)
-\item vy - outputRaster - Groundwater filter velocity vector part in y direction (m/s)
+\item vx - outputRaster - Groundwater filter velocity vector part in x direction (m\code{/}s)
+\item vy - outputRaster - Groundwater filter velocity vector part in y direction (m\code{/}s)
 }
 }
 }

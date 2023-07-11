@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_boxplot.R
 \name{qgis_boxplot}
 \alias{qgis_boxplot}
-\title{QGIS algorithm Box plot}
+\title{QGIS algorithm - Box plot}
 \usage{
 qgis_boxplot(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -36,7 +36,7 @@ qgis_boxplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Box plot (qgis:boxplot)
+QGIS Algorithm provided by QGIS Box plot (qgis:boxplot). This algorithm creates a box plot from a category and a layer field.
 }
 \details{
 \subsection{Outputs description}{

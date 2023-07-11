@@ -1,24 +1,24 @@
-##' QGIS Algorithm provided by GRASS v.lidar.edgedetection (grass7:v.lidar.edgedetection)
+##' QGIS Algorithm provided by GRASS v.lidar.edgedetection (grass7:v.lidar.edgedetection). Detects the object's edges from a LIDAR data set.
 ##'
-##' @title QGIS algorithm v.lidar.edgedetection
+##' @title QGIS algorithm - v.lidar.edgedetection
 ##'
 ##' @param input `source` - Input vector layer. Path to a vector layer.
-##' @param ew_step `number` - Length of each spline step in the east-west direction. A numeric value.
-##' @param ns_step `number` - Length of each spline step in the north-south direction. A numeric value.
-##' @param lambda_g `number` - Regularization weight in gradient evaluation. A numeric value.
-##' @param tgh `number` - High gradient threshold for edge classification. A numeric value.
-##' @param tgl `number` - Low gradient threshold for edge classification. A numeric value.
-##' @param theta_g `number` - Angle range for same direction detection. A numeric value.
-##' @param lambda_r `number` - Regularization weight in residual evaluation. A numeric value.
-##' @param .e `boolean` - Estimate point density and distance. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.
+##' @param ew_step `number` - Length of each spline step in the east-west direction. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ns_step `number` - Length of each spline step in the north-south direction. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param lambda_g `number` - Regularization weight in gradient evaluation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param tgh `number` - High gradient threshold for edge classification. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param tgl `number` - Low gradient threshold for edge classification. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param theta_g `number` - Angle range for same direction detection. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param lambda_r `number` - Regularization weight in residual evaluation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .e `boolean` - Estimate point density and distance. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.
 ##' @param output `vectorDestination` - Edges. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.
-##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value.
+##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value.
-##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value.
-##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.
+##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

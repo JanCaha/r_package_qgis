@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Set layer style (native:setlayerstyle)
+##' QGIS Algorithm provided by QGIS (native c++) Set layer style (native:setlayerstyle). Applies the style to a layer. The style must be defined as QML file.
 ##'
-##' @title QGIS algorithm Set layer style
+##' @title QGIS algorithm - Set layer style
 ##'
 ##' @param INPUT `layer` - Layer. Path to a vector, raster or mesh layer.
 ##' @param STYLE `file` - Style file. Path to a file.

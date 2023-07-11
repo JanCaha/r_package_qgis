@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_distancetonearesthublinetohub.R
 \name{qgis_distancetonearesthublinetohub}
 \alias{qgis_distancetonearesthublinetohub}
-\title{QGIS algorithm Distance to nearest hub (line to hub)}
+\title{QGIS algorithm - Distance to nearest hub (line to hub)}
 \usage{
 qgis_distancetonearesthublinetohub(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -36,7 +36,7 @@ qgis_distancetonearesthublinetohub(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Distance to nearest hub (line to hub) (qgis:distancetonearesthublinetohub)
+QGIS Algorithm provided by QGIS Distance to nearest hub (line to hub) (qgis:distancetonearesthublinetohub). Given an origin and a destination layers, this algorithm computes the distance between origin features and their closest destination one. Distance calculations are based on the features center. The resulting layer contains lines linking each origin point with its nearest destination feature.
 }
 \details{
 \subsection{Outputs description}{

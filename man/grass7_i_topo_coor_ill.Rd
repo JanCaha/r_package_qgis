@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_topo_coor_ill.R
 \name{grass7_i_topo_coor_ill}
 \alias{grass7_i_topo_coor_ill}
-\title{QGIS algorithm i.topo.coor.ill}
+\title{QGIS algorithm - i.topo.coor.ill}
 \usage{
 grass7_i_topo_coor_ill(
   basemap = qgisprocess:::qgis_default_value(),
@@ -22,19 +22,19 @@ grass7_i_topo_coor_ill(
 \arguments{
 \item{basemap}{\code{raster} - Name of elevation raster map. Path to a raster layer.}
 
-\item{zenith}{\code{number} - Solar zenith in degrees. A numeric value.}
+\item{zenith}{\code{number} - Solar zenith in degrees. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{azimuth}{\code{number} - Solar azimuth in degrees. A numeric value.}
+\item{azimuth}{\code{number} - Solar azimuth in degrees. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Illumination Model. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -45,7 +45,7 @@ grass7_i_topo_coor_ill(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.topo.coor.ill (grass7:i.topo.coor.ill)
+QGIS Algorithm provided by GRASS i.topo.coor.ill (grass7:i.topo.coor.ill). i.topo.coor.ill - Creates illumination model for topographic correction of reflectance.
 }
 \details{
 \subsection{Outputs description}{

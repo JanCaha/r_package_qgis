@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_li_padrange_ascii.R
 \name{grass7_r_li_padrange_ascii}
 \alias{grass7_r_li_padrange_ascii}
-\title{QGIS algorithm r.li.padrange.ascii}
+\title{QGIS algorithm - r.li.padrange.ascii}
 \usage{
 grass7_r_li_padrange_ascii(
   input = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ grass7_r_li_padrange_ascii(
 \arguments{
 \item{input}{\code{raster} - Name of input raster map. Path to a raster layer.}
 
-\item{config_txt}{\code{string} - Landscape structure configuration. String value.}
+\item{config_txt}{\code{string} - Landscape structure configuration. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{config}{\code{file} - Landscape structure configuration file. Path to a file.}
 
@@ -28,7 +28,7 @@ grass7_r_li_padrange_ascii(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +39,7 @@ grass7_r_li_padrange_ascii(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.li.padrange.ascii (grass7:r.li.padrange.ascii)
+QGIS Algorithm provided by GRASS r.li.padrange.ascii (grass7:r.li.padrange.ascii). r.li.padrange.ascii - Calculates range of patch area size on a raster map
 }
 \details{
 \subsection{Outputs description}{

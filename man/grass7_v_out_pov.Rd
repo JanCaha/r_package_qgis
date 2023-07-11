@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_out_pov.R
 \name{grass7_v_out_pov}
 \alias{grass7_v_out_pov}
-\title{QGIS algorithm v.out.pov}
+\title{QGIS algorithm - v.out.pov}
 \usage{
 grass7_v_out_pov(
   input = qgisprocess:::qgis_default_value(),
@@ -25,19 +25,19 @@ grass7_v_out_pov(
 
 \item{type}{\code{enum}  of \verb{("point", "line", "boundary", "centroid", "area", "face", "kernel")} - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{size}{\code{number} - Radius of sphere for points and tube for lines. A numeric value.}
+\item{size}{\code{number} - Radius of sphere for points and tube for lines. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{zmod}{\code{string} - Modifier for z coordinates, this string is appended to each z coordinate. String value.}
+\item{zmod}{\code{string} - Modifier for z coordinates, this string is appended to each z coordinate. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{objmod}{\code{string} - Object modifier (OBJECT_MODIFIER in POV-Ray documentation). String value.}
+\item{objmod}{\code{string} - Object modifier (OBJECT_MODIFIER in POV-Ray documentation). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{fileDestination} - POV vector. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_v_out_pov(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.out.pov (grass7:v.out.pov)
+QGIS Algorithm provided by GRASS v.out.pov (grass7:v.out.pov). Converts to POV-Ray format, GRASS x,y,z - POV-Ray x,z,y
 }
 \details{
 \subsection{Outputs description}{

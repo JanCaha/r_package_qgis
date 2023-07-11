@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_transferannotationsfrommain.R
 \name{qgis_transferannotationsfrommain}
 \alias{qgis_transferannotationsfrommain}
-\title{QGIS algorithm Transfer annotations from main layer}
+\title{QGIS algorithm - Transfer annotations from main layer}
 \usage{
 qgis_transferannotationsfrommain(
   LAYER_NAME = qgisprocess:::qgis_default_value(),
@@ -13,7 +13,7 @@ qgis_transferannotationsfrommain(
 )
 }
 \arguments{
-\item{LAYER_NAME}{\code{string} - New layer name. String value.}
+\item{LAYER_NAME}{\code{string} - New layer name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -24,7 +24,7 @@ qgis_transferannotationsfrommain(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Transfer annotations from main layer (native:transferannotationsfrommain)
+QGIS Algorithm provided by QGIS (native c++) Transfer annotations from main layer (native:transferannotationsfrommain). Transfer all annotations from the main annotation layer in a project to a new annotation layer.
 }
 \details{
 \subsection{Outputs description}{

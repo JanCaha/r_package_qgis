@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pointsalonglines.R
 \name{qgis_pointsalonglines}
 \alias{qgis_pointsalonglines}
-\title{QGIS algorithm Points along geometry}
+\title{QGIS algorithm - Points along geometry}
 \usage{
 qgis_pointsalonglines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_pointsalonglines(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DISTANCE}{\code{distance} - Distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{START_OFFSET}{\code{distance} - Start offset. A numeric value.}
+\item{START_OFFSET}{\code{distance} - Start offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{END_OFFSET}{\code{distance} - End offset. A numeric value.}
+\item{END_OFFSET}{\code{distance} - End offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Interpolated points. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_pointsalonglines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Points along geometry (native:pointsalonglines)
+QGIS Algorithm provided by QGIS (native c++) Points along geometry (native:pointsalonglines). Creates regularly spaced points along line features. This algorithm creates a points layer, with points distributed along the lines of an input vector layer. The distance between points (measured along the line) is defined as a parameter.  Start and end offset distances can be defined, so the first and last point will not fall exactly on the line's first and last nodes. These start and end offsets are defined as distances, measured along the line from the first and last nodes of the lines.
 }
 \details{
 \subsection{Outputs description}{

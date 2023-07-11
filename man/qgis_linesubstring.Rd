@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_linesubstring.R
 \name{qgis_linesubstring}
 \alias{qgis_linesubstring}
-\title{QGIS algorithm Line substring}
+\title{QGIS algorithm - Line substring}
 \usage{
 qgis_linesubstring(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_linesubstring(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{START_DISTANCE}{\code{distance} - Start distance. A numeric value.}
+\item{START_DISTANCE}{\code{distance} - Start distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{END_DISTANCE}{\code{distance} - End distance. A numeric value.}
+\item{END_DISTANCE}{\code{distance} - End distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Substring. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_linesubstring(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Line substring (native:linesubstring)
+QGIS Algorithm provided by QGIS (native c++) Line substring (native:linesubstring). Returns the substring of lines which fall between start and end distances. This algorithm returns the portion of a line (or curve) which falls between the specified start and end distances (measured from the beginning of the line).  Z and M values are linearly interpolated from existing values.  If a multipart geometry is encountered, only the first part is considered when calculating the substring.
 }
 \details{
 \subsection{Outputs description}{

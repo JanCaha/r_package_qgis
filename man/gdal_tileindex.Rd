@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_tileindex.R
 \name{gdal_tileindex}
 \alias{gdal_tileindex}
-\title{QGIS algorithm Tile index}
+\title{QGIS algorithm - Tile index}
 \usage{
 gdal_tileindex(
   LAYERS = qgisprocess:::qgis_default_value(),
@@ -22,15 +22,15 @@ gdal_tileindex(
 \arguments{
 \item{LAYERS}{\code{multilayer} - Input files. .}
 
-\item{PATH_FIELD_NAME}{\code{string} - Field name to hold the file path to the indexed rasters. String value.}
+\item{PATH_FIELD_NAME}{\code{string} - Field name to hold the file path to the indexed rasters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ABSOLUTE_PATH}{\code{boolean} - Store absolute path to the indexed rasters. 1 for true/yes. 0 for false/no.}
+\item{ABSOLUTE_PATH}{\code{boolean} - Store absolute path to the indexed rasters. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{PROJ_DIFFERENCE}{\code{boolean} - Skip files with different projection reference. 1 for true/yes. 0 for false/no.}
+\item{PROJ_DIFFERENCE}{\code{boolean} - Skip files with different projection reference. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{TARGET_CRS}{\code{crs} - Transform geometries to the given CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{CRS_FIELD_NAME}{\code{string} - The name of the field to store the SRS of each tile. String value.}
+\item{CRS_FIELD_NAME}{\code{string} - The name of the field to store the SRS of each tile. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{CRS_FORMAT}{\code{enum}  of \verb{("Auto", "Well-known text (WKT)", "EPSG", "Proj.4")} - The format in which the CRS of each tile must be written. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -45,7 +45,7 @@ gdal_tileindex(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Tile index (gdal:tileindex)
+QGIS Algorithm provided by GDAL Tile index (gdal:tileindex). ---------------- Arguments ----------------  LAYERS: Input files 	Argument type:	multilayer PATH_FIELD_NAME: Field name to hold the file path to the indexed rasters 	Default value:	location 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ABSOLUTE_PATH: Store absolute path to the indexed rasters 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression PROJ_DIFFERENCE: Skip files with different projection reference 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression TARGET_CRS: Transform geometries to the given CRS (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. CRS_FIELD_NAME: The name of the field to store the SRS of each tile (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression CRS_FORMAT: The format in which the CRS of each tile must be written 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Auto 		- 1: Well-known text (WKT) 		- 2: EPSG 		- 3: Proj.4 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' OUTPUT: Tile index 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

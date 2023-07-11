@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_sun_insoltime.R
 \name{grass7_r_sun_insoltime}
 \alias{grass7_r_sun_insoltime}
-\title{QGIS algorithm r.sun.insoltime}
+\title{QGIS algorithm - r.sun.insoltime}
 \usage{
 grass7_r_sun_insoltime(
   elevation = qgisprocess:::qgis_default_value(),
@@ -47,17 +47,17 @@ grass7_r_sun_insoltime(
 
 \item{aspect}{\code{raster} - Aspect layer (decimal degrees). Path to a raster layer.}
 
-\item{aspect_value}{\code{number} - A single value of the orientation (aspect), 270 is south. A numeric value.}
+\item{aspect_value}{\code{number} - A single value of the orientation (aspect), 270 is south. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{slope}{\code{raster} - Name of the input slope raster map (terrain slope or solar panel inclination) (decimal degrees). Path to a raster layer.}
 
-\item{slope_value}{\code{number} - A single value of inclination (slope). A numeric value.}
+\item{slope_value}{\code{number} - A single value of inclination (slope). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{linke}{\code{raster} - Name of the Linke atmospheric turbidity coefficient input raster map. Path to a raster layer.}
 
 \item{albedo}{\code{raster} - Name of the ground albedo coefficient input raster map. Path to a raster layer.}
 
-\item{albedo_value}{\code{number} - A single value of the ground albedo coefficient. A numeric value.}
+\item{albedo_value}{\code{number} - A single value of the ground albedo coefficient. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{lat}{\code{raster} - Name of input raster map containing latitudes (decimal degrees). Path to a raster layer.}
 
@@ -69,23 +69,23 @@ grass7_r_sun_insoltime(
 
 \item{horizon_basemap}{\code{raster} - The horizon information input map basename. Path to a raster layer.}
 
-\item{horizon_step}{\code{number} - Angle step size for multidirectional horizon (degrees). A numeric value.}
+\item{horizon_step}{\code{number} - Angle step size for multidirectional horizon (degrees). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{day}{\code{number} - No. of day of the year (1-365). A numeric value.}
+\item{day}{\code{number} - No. of day of the year (1-365). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{step}{\code{number} - Time step when computing all-day radiation sums (decimal hours). A numeric value.}
+\item{step}{\code{number} - Time step when computing all-day radiation sums (decimal hours). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{declination}{\code{number} - Declination value (overriding the internally computed value) (radians). A numeric value.}
+\item{declination}{\code{number} - Declination value (overriding the internally computed value) (radians). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{distance_step}{\code{number} - Sampling distance step coefficient (0.5-1.5). A numeric value.}
+\item{distance_step}{\code{number} - Sampling distance step coefficient (0.5-1.5). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{npartitions}{\code{number} - Read the input files in this number of chunks. A numeric value.}
+\item{npartitions}{\code{number} - Read the input files in this number of chunks. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{civil_time}{\code{number} - Civil time zone value, if none, the time will be local solar time. A numeric value.}
+\item{civil_time}{\code{number} - Civil time zone value, if none, the time will be local solar time. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.p}{\code{boolean} - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
+\item{.p}{\code{boolean} - Do not incorporate the shadowing effect of terrain. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -p.}
 
-\item{.m}{\code{boolean} - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - Use the low-memory version of the program. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
 \item{insol_time}{\code{rasterDestination} - Insolation time (h) . Path for new raster layer.}
 
@@ -95,15 +95,15 @@ grass7_r_sun_insoltime(
 
 \item{refl_rad}{\code{rasterDestination} - Irradiation raster map (Wh.m-2.day-1). Path for new raster layer.}
 
-\item{glob_rad}{\code{rasterDestination} - Irradiance/irradiation raster map (Wh.m-2.day-1). Path for new raster layer.}
+\item{glob_rad}{\code{rasterDestination} - Irradiance\code{/}irradiation raster map (Wh.m-2.day-1). Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -114,14 +114,14 @@ grass7_r_sun_insoltime(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.sun.insoltime (grass7:r.sun.insoltime)
+QGIS Algorithm provided by GRASS r.sun.insoltime (grass7:r.sun.insoltime). r.sun.insoltime - Solar irradiance and irradiation model (daily sums).
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
 \item beam_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
 \item diff_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
-\item glob_rad - outputRaster - Irradiance/irradiation raster map (Wh.m-2.day-1)
+\item glob_rad - outputRaster - Irradiance\code{/}irradiation raster map (Wh.m-2.day-1)
 \item insol_time - outputRaster - Insolation time (h)
 \item refl_rad - outputRaster - Irradiation raster map (Wh.m-2.day-1)
 }

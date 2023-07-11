@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_ruggednessindex.R
 \name{qgis_ruggednessindex}
 \alias{qgis_ruggednessindex}
-\title{QGIS algorithm Ruggedness index}
+\title{QGIS algorithm - Ruggedness index}
 \usage{
 qgis_ruggednessindex(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_ruggednessindex(
 \arguments{
 \item{INPUT}{\code{raster} - Elevation layer. Path to a raster layer.}
 
-\item{Z_FACTOR}{\code{number} - Z factor. A numeric value.}
+\item{Z_FACTOR}{\code{number} - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Ruggedness. Path for new raster layer.}
 
@@ -30,7 +30,7 @@ qgis_ruggednessindex(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Ruggedness index (native:ruggednessindex)
+QGIS Algorithm provided by QGIS (native c++) Ruggedness index (native:ruggednessindex). This algorithm calculates the quantitative measurement of terrain heterogeneity described by Riley et al. (1999).  It is calculated for every location, by summarizing the change in elevation within the 3x3 pixel grid. Each pixel contains the difference in elevation from a center cell and the 8 cells surrounding it.
 }
 \details{
 \subsection{Outputs description}{

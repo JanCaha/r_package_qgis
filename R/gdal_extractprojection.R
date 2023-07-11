@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by GDAL Extract projection (gdal:extractprojection)
+##' QGIS Algorithm provided by GDAL Extract projection (gdal:extractprojection). ---------------- Arguments ----------------  INPUT: Input file 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer PRJ_FILE_CREATE: Create also .prj file 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
 ##'
-##' @title QGIS algorithm Extract projection
+##' @title QGIS algorithm - Extract projection
 ##'
 ##' @param INPUT `raster` - Input file. Path to a raster layer.
-##' @param PRJ_FILE_CREATE `boolean` - Create also .prj file. 1 for true/yes. 0 for false/no.
+##' @param PRJ_FILE_CREATE `boolean` - Create also .prj file. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

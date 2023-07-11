@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_projectpointcartesian.R
 \name{qgis_projectpointcartesian}
 \alias{qgis_projectpointcartesian}
-\title{QGIS algorithm Project points (Cartesian)}
+\title{QGIS algorithm - Project points (Cartesian)}
 \usage{
 qgis_projectpointcartesian(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_projectpointcartesian(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{BEARING}{\code{number} - Bearing (degrees from North). A numeric value.}
+\item{BEARING}{\code{number} - Bearing (degrees from North). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISTANCE}{\code{distance} - Distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Projected. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_projectpointcartesian(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Project points (Cartesian) (native:projectpointcartesian)
+QGIS Algorithm provided by QGIS (native c++) Project points (Cartesian) (native:projectpointcartesian). This algorithm projects point geometries by a specified distance and bearing (azimuth), creating a new point layer with the projected points.  The distance is specified in layer units, and the bearing in degrees clockwise from North.
 }
 \details{
 \subsection{Outputs description}{

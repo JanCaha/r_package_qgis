@@ -2,18 +2,20 @@
 % Please edit documentation in R/qgis_printlayouttopdf.R
 \name{qgis_printlayouttopdf}
 \alias{qgis_printlayouttopdf}
-\title{QGIS algorithm Export print layout as PDF}
+\title{QGIS algorithm - Export print layout as PDF}
 \usage{
 qgis_printlayouttopdf(
   LAYOUT = qgisprocess:::qgis_default_value(),
   LAYERS = qgisprocess:::qgis_default_value(),
   DPI = qgisprocess:::qgis_default_value(),
   FORCE_VECTOR = qgisprocess:::qgis_default_value(),
+  FORCE_RASTER = qgisprocess:::qgis_default_value(),
   GEOREFERENCE = qgisprocess:::qgis_default_value(),
   INCLUDE_METADATA = qgisprocess:::qgis_default_value(),
   DISABLE_TILED = qgisprocess:::qgis_default_value(),
   SIMPLIFY = qgisprocess:::qgis_default_value(),
   TEXT_FORMAT = qgisprocess:::qgis_default_value(),
+  IMAGE_COMPRESSION = qgisprocess:::qgis_default_value(),
   SEPARATE_LAYERS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
@@ -27,21 +29,25 @@ qgis_printlayouttopdf(
 
 \item{LAYERS}{\code{multilayer} - Map layers to assign to unlocked map item(s). .}
 
-\item{DPI}{\code{number} - DPI (leave blank for default layout DPI). A numeric value.}
+\item{DPI}{\code{number} - DPI (leave blank for default layout DPI). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FORCE_VECTOR}{\code{boolean} - Always export as vectors. 1 for true/yes. 0 for false/no.}
+\item{FORCE_VECTOR}{\code{boolean} - Always export as vectors. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GEOREFERENCE}{\code{boolean} - Append georeference information. 1 for true/yes. 0 for false/no.}
+\item{FORCE_RASTER}{\code{boolean} - Always export as raster. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INCLUDE_METADATA}{\code{boolean} - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no.}
+\item{GEOREFERENCE}{\code{boolean} - Append georeference information. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISABLE_TILED}{\code{boolean} - Disable tiled raster layer exports. 1 for true/yes. 0 for false/no.}
+\item{INCLUDE_METADATA}{\code{boolean} - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SIMPLIFY}{\code{boolean} - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no.}
+\item{DISABLE_TILED}{\code{boolean} - Disable tiled raster layer exports. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{SIMPLIFY}{\code{boolean} - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{TEXT_FORMAT}{\code{enum}  of \verb{("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects")} - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{SEPARATE_LAYERS}{\code{boolean} - Export layers as separate PDF files. 1 for true/yes. 0 for false/no.}
+\item{IMAGE_COMPRESSION}{\code{enum}  of \verb{("Lossy (JPEG)", "Lossless")} - Image compression. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+
+\item{SEPARATE_LAYERS}{\code{boolean} - Export layers as separate PDF files. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - PDF file. Path for new file.}
 
@@ -54,7 +60,7 @@ qgis_printlayouttopdf(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export print layout as PDF (native:printlayouttopdf)
+QGIS Algorithm provided by QGIS (native c++) Export print layout as PDF (native:printlayouttopdf). Exports a print layout as a PDF. This algorithm outputs a print layout as a PDF file.
 }
 \details{
 \subsection{Outputs description}{

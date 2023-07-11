@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Aggregate (native:aggregate)
+##' QGIS Algorithm provided by QGIS (native c++) Aggregate (native:aggregate). This algorithm take a vector or table layer and aggregate features based on a group by expression. Features for which group by expression return the same value are grouped together.  It is possible to group all source features together using constant value in group by parameter, example: NULL.  It is also possible to group features using multiple fields using Array function, example: Array("Field1", "Field2").  Geometries (if present) are combined into one multipart geometry for each group.  Output attributes are computed depending on each given aggregate definition.
 ##'
-##' @title QGIS algorithm Aggregate
+##' @title QGIS algorithm - Aggregate
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param GROUP_BY `expression` - Group by expression (NULL to group all features). A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.

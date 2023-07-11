@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_creategrid.R
 \name{qgis_creategrid}
 \alias{qgis_creategrid}
-\title{QGIS algorithm Create grid}
+\title{QGIS algorithm - Create grid}
 \usage{
 qgis_creategrid(
   TYPE = qgisprocess:::qgis_default_value(),
@@ -24,13 +24,13 @@ qgis_creategrid(
 
 \item{EXTENT}{\code{extent} - Grid extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{HSPACING}{\code{distance} - Horizontal spacing. A numeric value.}
+\item{HSPACING}{\code{distance} - Horizontal spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VSPACING}{\code{distance} - Vertical spacing. A numeric value.}
+\item{VSPACING}{\code{distance} - Vertical spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{HOVERLAY}{\code{distance} - Horizontal overlay. A numeric value.}
+\item{HOVERLAY}{\code{distance} - Horizontal overlay. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{VOVERLAY}{\code{distance} - Vertical overlay. A numeric value.}
+\item{VOVERLAY}{\code{distance} - Vertical overlay. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{CRS}{\code{crs} - Grid CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
@@ -45,7 +45,7 @@ qgis_creategrid(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create grid (native:creategrid)
+QGIS Algorithm provided by QGIS (native c++) Create grid (native:creategrid). This algorithm creates a vector layer with a grid covering a given extent. Elements in the grid can be points, lines or polygons. The size and/or placement of each element in the grid is defined using a horizontal and vertical spacing. The CRS of the output layer must be defined. The grid extent and the spacing values must be expressed in the coordinates and units of this CRS. The top-left point (minX, maxY) is used as the reference point. That means that, at that point, an element is guaranteed to be placed. Unless the width and height of the selected extent is a multiple of the selected spacing, that is not true for the other points that define that extent.
 }
 \details{
 \subsection{Outputs description}{

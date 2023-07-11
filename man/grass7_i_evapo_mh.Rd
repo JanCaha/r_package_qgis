@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_evapo_mh.R
 \name{grass7_i_evapo_mh}
 \alias{grass7_i_evapo_mh}
-\title{QGIS algorithm i.evapo.mh}
+\title{QGIS algorithm - i.evapo.mh}
 \usage{
 grass7_i_evapo_mh(
   netradiation_diurnal = qgisprocess:::qgis_default_value(),
@@ -25,7 +25,7 @@ grass7_i_evapo_mh(
 )
 }
 \arguments{
-\item{netradiation_diurnal}{\code{raster} - Name of input diurnal net radiation raster map (W/m2/d). Path to a raster layer.}
+\item{netradiation_diurnal}{\code{raster} - Name of input diurnal net radiation raster map (W\code{/}m2\code{/}d). Path to a raster layer.}
 
 \item{average_temperature}{\code{raster} - Name of input average air temperature raster map (C). Path to a raster layer.}
 
@@ -33,23 +33,23 @@ grass7_i_evapo_mh(
 
 \item{maximum_temperature}{\code{raster} - Name of input maximum air temperature raster map (C). Path to a raster layer.}
 
-\item{precipitation}{\code{raster} - Name of precipitation raster map (mm/month). Path to a raster layer.}
+\item{precipitation}{\code{raster} - Name of precipitation raster map (mm\code{/}month). Path to a raster layer.}
 
-\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
+\item{.z}{\code{boolean} - Set negative ETa to zero. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.}
 
-\item{.h}{\code{boolean} - Use original Hargreaves (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -h.}
+\item{.h}{\code{boolean} - Use original Hargreaves (1985). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.}
 
-\item{.s}{\code{boolean} - Use Hargreaves-Samani (1985). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Use Hargreaves-Samani (1985). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
 \item{output}{\code{rasterDestination} - Evapotranspiration. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -60,7 +60,7 @@ grass7_i_evapo_mh(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.evapo.mh (grass7:i.evapo.mh)
+QGIS Algorithm provided by GRASS i.evapo.mh (grass7:i.evapo.mh). Computes evapotranspiration calculation modified or original Hargreaves formulation, 2001.
 }
 \details{
 \subsection{Outputs description}{

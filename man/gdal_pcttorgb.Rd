@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_pcttorgb.R
 \name{gdal_pcttorgb}
 \alias{gdal_pcttorgb}
-\title{QGIS algorithm PCT to RGB}
+\title{QGIS algorithm - PCT to RGB}
 \usage{
 gdal_pcttorgb(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ gdal_pcttorgb(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{RGBA}{\code{boolean} - Generate a RGBA file. 1 for true/yes. 0 for false/no.}
+\item{RGBA}{\code{boolean} - Generate a RGBA file. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - PCT to RGB. Path for new raster layer.}
 
@@ -33,7 +33,7 @@ gdal_pcttorgb(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL PCT to RGB (gdal:pcttorgb)
+QGIS Algorithm provided by GDAL PCT to RGB (gdal:pcttorgb). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number RGBA: Generate a RGBA file 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: PCT to RGB 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

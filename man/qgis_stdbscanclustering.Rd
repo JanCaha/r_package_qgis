@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_stdbscanclustering.R
 \name{qgis_stdbscanclustering}
 \alias{qgis_stdbscanclustering}
-\title{QGIS algorithm ST-DBSCAN clustering}
+\title{QGIS algorithm - ST-DBSCAN clustering}
 \usage{
 qgis_stdbscanclustering(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -23,19 +23,19 @@ qgis_stdbscanclustering(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DATETIME_FIELD}{\code{field} - Date/time field. The name of an existing field. ; delimited list of existing field names.}
+\item{DATETIME_FIELD}{\code{field} - Date\code{/}time field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{MIN_SIZE}{\code{number} - Minimum cluster size. A numeric value.}
+\item{MIN_SIZE}{\code{number} - Minimum cluster size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EPS}{\code{distance} - Maximum distance between clustered points. A numeric value.}
+\item{EPS}{\code{distance} - Maximum distance between clustered points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EPS2}{\code{duration} - Maximum time duration between clustered points. A numeric value (unit type set by algorithms).}
+\item{EPS2}{\code{duration} - Maximum time duration between clustered points. A numeric value (unit type set by algorithms). field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. Original algorithm parameter name: DBSCAN*.}
+\item{DBSCAN}{\code{boolean} - Treat border points as noise (DBSCAN*). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: DBSCAN*.}
 
-\item{FIELD_NAME}{\code{string} - Cluster field name. String value.}
+\item{FIELD_NAME}{\code{string} - Cluster field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SIZE_FIELD_NAME}{\code{string} - Cluster size field name. String value.}
+\item{SIZE_FIELD_NAME}{\code{string} - Cluster size field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Clusters. Path for new vector layer.}
 
@@ -48,7 +48,7 @@ qgis_stdbscanclustering(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) ST-DBSCAN clustering (native:stdbscanclustering)
+QGIS Algorithm provided by QGIS (native c++) ST-DBSCAN clustering (native:stdbscanclustering). Clusters spatiotemporal point features using a time and density based scan algorithm. Clusters point features based on a 2D implementation of spatiotemporal density-based clustering of applications with noise (ST-DBSCAN) algorithm.  For more details, please see the following papers: * Ester, M., H. P. Kriegel, J. Sander, and X. Xu, "A Density-Based Algorithm for Discovering Clusters in Large Spatial Databases with Noise". In: Proceedings of the 2nd International Conference on Knowledge Discovery and Data Mining, Portland, OR, AAAI Press, pp. 226-231. 1996 * Birant, Derya, and Alp Kut. "ST-DBSCAN: An algorithm for clustering spatial–temporal data." Data & Knowledge Engineering 60.1 (2007): 208-221. * Peca, I., Fuchs, G., Vrotsou, K., Andrienko, N. V., & Andrienko, G. L. (2012). Scalable Cluster Analysis of Spatial Events. In EuroVA@ EuroVis.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_variabledistancebuffer.R
 \name{qgis_variabledistancebuffer}
 \alias{qgis_variabledistancebuffer}
-\title{QGIS algorithm Variable distance buffer}
+\title{QGIS algorithm - Variable distance buffer}
 \usage{
 qgis_variabledistancebuffer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,15 +24,15 @@ qgis_variabledistancebuffer(
 
 \item{FIELD}{\code{field} - Distance field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISSOLVE}{\code{boolean} - Dissolve result. 1 for true/yes. 0 for false/no.}
+\item{DISSOLVE}{\code{boolean} - Dissolve result. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{END_CAP_STYLE}{\code{enum}  of \verb{("Round", "Flat", "Square")} - End cap style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{JOIN_STYLE}{\code{enum}  of \verb{("Round", "Miter", "Bevel")} - Join style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value.}
+\item{MITER_LIMIT}{\code{number} - Miter limit. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Buffer. Path for new vector layer.}
 
@@ -45,7 +45,7 @@ qgis_variabledistancebuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Variable distance buffer (qgis:variabledistancebuffer)
+QGIS Algorithm provided by QGIS Variable distance buffer (qgis:variabledistancebuffer). This algorithm computes a buffer area for all the features in an input layer. The size of the buffer for a given feature is defined by an attribute, so it allows different features to have different buffer sizes.
 }
 \details{
 \subsection{Outputs description}{

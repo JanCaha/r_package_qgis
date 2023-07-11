@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Simplify (native:simplifygeometries)
+##' QGIS Algorithm provided by QGIS (native c++) Simplify (native:simplifygeometries). This algorithm simplifies the geometries in a line or polygon layer. It creates a new layer with the same features as the ones in the input layer, but with geometries containing a lower number of vertices.  The algorithm gives a choice of simplification methods, including distance based (the "Douglas-Peucker" algorithm), area based ("Visvalingam" algorithm) and snapping geometries to a grid.
 ##'
-##' @title QGIS algorithm Simplify
+##' @title QGIS algorithm - Simplify
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param METHOD `enum`  of `("Distance (Douglas-Peucker)", "Snap to grid", "Area (Visvalingam)")` - Simplification method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param TOLERANCE `distance` - Tolerance. A numeric value.
+##' @param TOLERANCE `distance` - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Simplified. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

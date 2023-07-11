@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Translate (native:translategeometry)
+##' QGIS Algorithm provided by QGIS (native c++) Translate (native:translategeometry). This algorithm moves the geometries within a layer, by offsetting them with a specified x and y displacement.  Z and M values present in the geometry can also be translated.
 ##'
-##' @title QGIS algorithm Translate
+##' @title QGIS algorithm - Translate
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param DELTA_X `distance` - Offset distance (x-axis). A numeric value.
-##' @param DELTA_Y `distance` - Offset distance (y-axis). A numeric value.
-##' @param DELTA_Z `number` - Offset distance (z-axis). A numeric value.
-##' @param DELTA_M `number` - Offset distance (m values). A numeric value.
+##' @param DELTA_X `distance` - Offset distance (x-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_Y `distance` - Offset distance (y-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_Z `number` - Offset distance (z-axis). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DELTA_M `number` - Offset distance (m values). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Translated. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

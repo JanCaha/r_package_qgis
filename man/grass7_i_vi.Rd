@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_vi.R
 \name{grass7_i_vi}
 \alias{grass7_i_vi}
-\title{QGIS algorithm i.vi}
+\title{QGIS algorithm - i.vi}
 \usage{
 grass7_i_vi(
   red = qgisprocess:::qgis_default_value(),
@@ -42,11 +42,11 @@ grass7_i_vi(
 
 \item{band7}{\code{raster} - Name of input 7th channel surface reflectance map (0.0-1.0). Path to a raster layer.}
 
-\item{soil_line_slope}{\code{number} - Value of the slope of the soil line (MSAVI2 only). A numeric value.}
+\item{soil_line_slope}{\code{number} - Value of the slope of the soil line (MSAVI2 only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{soil_line_intercept}{\code{number} - Value of the factor of reduction of soil noise (MSAVI2 only). A numeric value.}
+\item{soil_line_intercept}{\code{number} - Value of the factor of reduction of soil noise (MSAVI2 only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{soil_noise_reduction}{\code{number} - Value of the slope of the soil line (MSAVI2 only). A numeric value.}
+\item{soil_noise_reduction}{\code{number} - Value of the slope of the soil line (MSAVI2 only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{storage_bit}{\code{enum}  of \verb{("7", "8", "9", "10", "16")} - Maximum bits for digital numbers. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -54,11 +54,11 @@ grass7_i_vi(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -69,7 +69,7 @@ grass7_i_vi(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.vi (grass7:i.vi)
+QGIS Algorithm provided by GRASS i.vi (grass7:i.vi). Calculates different types of vegetation indices.
 }
 \details{
 \subsection{Outputs description}{

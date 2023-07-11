@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Difference (multiple) (native:multidifference)
+##' QGIS Algorithm provided by QGIS (native c++) Difference (multiple) (native:multidifference). This algorithm extracts features from the Input layer that fall completely outside or only partially overlap the features from any of the Overlay layer(s). For each overlay layer the difference is calculated between the result of all previous difference operations and this overlay layer. Input layer features that partially overlap feature(s) in the Overlay layers are split along those features' boundary and only the portions outside the Overlay layer features are retained.  Attributes are not modified, although properties such as area or length of the features will be modified by the difference operation. If such properties are stored as attributes, those attributes will have to be manually updated.
 ##'
-##' @title QGIS algorithm Difference (multiple)
+##' @title QGIS algorithm - Difference (multiple)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OVERLAYS `multilayer` - Overlay layers. .

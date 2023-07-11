@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pointstopath.R
 \name{qgis_pointstopath}
 \alias{qgis_pointstopath}
-\title{QGIS algorithm Points to path}
+\title{QGIS algorithm - Points to path}
 \usage{
 qgis_pointstopath(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,11 +21,11 @@ qgis_pointstopath(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{CLOSE_PATH}{\code{boolean} - Create closed paths. 1 for true/yes. 0 for false/no.}
+\item{CLOSE_PATH}{\code{boolean} - Create closed paths. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{ORDER_EXPRESSION}{\code{expression} - Order expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
-\item{NATURAL_SORT}{\code{boolean} - Sort text containing numbers naturally. 1 for true/yes. 0 for false/no.}
+\item{NATURAL_SORT}{\code{boolean} - Sort text containing numbers naturally. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GROUP_EXPRESSION}{\code{expression} - Path group expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
@@ -42,7 +42,7 @@ qgis_pointstopath(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath)
+QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath). This algorithm takes a point layer and connects its features creating a new line layer.  An attribute or expression may be specified to define the order the points should be connected. If no order expression is specified, the feature ID is used.  A natural sort can be used when sorting by a string attribute or expression (ie. place 'a9' before 'a10').  An attribute or expression can be selected to group points having the same value into the same resulting line.
 }
 \details{
 \subsection{Outputs description}{

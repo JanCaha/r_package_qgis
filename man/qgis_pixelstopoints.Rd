@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pixelstopoints.R
 \name{qgis_pixelstopoints}
 \alias{qgis_pixelstopoints}
-\title{QGIS algorithm Raster pixels to points}
+\title{QGIS algorithm - Raster pixels to points}
 \usage{
 qgis_pixelstopoints(
   INPUT_RASTER = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_pixelstopoints(
 
 \item{RASTER_BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{FIELD_NAME}{\code{string} - Field name. String value.}
+\item{FIELD_NAME}{\code{string} - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Vector points. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_pixelstopoints(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints)
+QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints). Creates a vector layer of points corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating point features for each individual pixel's center in the raster layer.  Any nodata pixels are skipped in the output.
 }
 \details{
 \subsection{Outputs description}{

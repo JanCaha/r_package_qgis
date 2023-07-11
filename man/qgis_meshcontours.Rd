@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_meshcontours.R
 \name{qgis_meshcontours}
 \alias{qgis_meshcontours}
-\title{QGIS algorithm Export contours}
+\title{QGIS algorithm - Export contours}
 \usage{
 qgis_meshcontours(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -28,13 +28,13 @@ qgis_meshcontours(
 
 \item{DATASET_TIME}{\code{meshdatasettime} - Dataset time. .}
 
-\item{INCREMENT}{\code{number} - Increment between contour levels. A numeric value.}
+\item{INCREMENT}{\code{number} - Increment between contour levels. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MINIMUM}{\code{number} - Minimum contour level. A numeric value.}
+\item{MINIMUM}{\code{number} - Minimum contour level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAXIMUM}{\code{number} - Maximum contour level. A numeric value.}
+\item{MAXIMUM}{\code{number} - Maximum contour level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CONTOUR_LEVEL_LIST}{\code{string} - List of contours level. String value.}
+\item{CONTOUR_LEVEL_LIST}{\code{string} - List of contours level. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{CRS_OUTPUT}{\code{crs} - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
@@ -51,7 +51,7 @@ qgis_meshcontours(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontours)
+QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontours). Creates contours as vector layer from mesh scalar dataset This algorithm creates contours as a vector layer from a mesh scalar dataset.
 }
 \details{
 \subsection{Outputs description}{

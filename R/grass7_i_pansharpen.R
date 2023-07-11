@@ -1,21 +1,21 @@
-##' QGIS Algorithm provided by GRASS i.pansharpen (grass7:i.pansharpen)
+##' QGIS Algorithm provided by GRASS i.pansharpen (grass7:i.pansharpen). Image fusion algorithms to sharpen multispectral with high-res panchromatic channels
 ##'
-##' @title QGIS algorithm i.pansharpen
+##' @title QGIS algorithm - i.pansharpen
 ##'
 ##' @param red `raster` - Name of red channel. Path to a raster layer.
 ##' @param green `raster` - Name of green channel. Path to a raster layer.
 ##' @param blue `raster` - Name of blue channel. Path to a raster layer.
 ##' @param pan `raster` - Name of raster map to be used for high resolution panchromatic channel. Path to a raster layer.
 ##' @param method `enum`  of `("brovey", "ihs", "pca")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param .l `boolean` - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.
-##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
+##' @param .l `boolean` - Rebalance blue channel for LANDSAT. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.
+##' @param .s `boolean` - Process bands serially (default: run in parallel). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.
 ##' @param redoutput `rasterDestination` - Enhanced Red. Path for new raster layer.
 ##' @param greenoutput `rasterDestination` - Enhanced Green. Path for new raster layer.
 ##' @param blueoutput `rasterDestination` - Enhanced Blue. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_assignprojection.R
 \name{gdal_assignprojection}
 \alias{gdal_assignprojection}
-\title{QGIS algorithm Assign projection}
+\title{QGIS algorithm - Assign projection}
 \usage{
 gdal_assignprojection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ gdal_assignprojection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Assign projection (gdal:assignprojection)
+QGIS Algorithm provided by GDAL Assign projection (gdal:assignprojection). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer CRS: Desired CRS 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used.
 }
 \details{
 \subsection{Outputs description}{

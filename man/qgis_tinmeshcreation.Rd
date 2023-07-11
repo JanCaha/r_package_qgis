@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_tinmeshcreation.R
 \name{qgis_tinmeshcreation}
 \alias{qgis_tinmeshcreation}
-\title{QGIS algorithm TIN Mesh Creation}
+\title{QGIS algorithm - TIN Mesh Creation}
 \usage{
 qgis_tinmeshcreation(
   SOURCE_DATA = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_tinmeshcreation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) TIN Mesh Creation (native:tinmeshcreation)
+QGIS Algorithm provided by QGIS (native c++) TIN Mesh Creation (native:tinmeshcreation). Creates a TIN mesh layer from vector layers This algorithm creates a TIN mesh layer from vector layers.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_importphotos.R
 \name{qgis_importphotos}
 \alias{qgis_importphotos}
-\title{QGIS algorithm Import geotagged photos}
+\title{QGIS algorithm - Import geotagged photos}
 \usage{
 qgis_importphotos(
   FOLDER = qgisprocess:::qgis_default_value(),
@@ -18,7 +18,7 @@ qgis_importphotos(
 \arguments{
 \item{FOLDER}{\code{file} - Input folder. Path to a file.}
 
-\item{RECURSIVE}{\code{boolean} - Scan recursively. 1 for true/yes. 0 for false/no.}
+\item{RECURSIVE}{\code{boolean} - Scan recursively. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Photos. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_importphotos(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:importphotos)
+QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:importphotos). Creates a point layer corresponding to the geotagged locations from JPEG or HEIF/HEIC images from a source folder. Optionally the folder can be recursively scanned.  The point layer will contain a single PointZ feature per input file from which the geotags could be read. Any altitude information from the geotags will be used to set the point's Z value.  Optionally, a table of unreadable or non-geotagged photos can also be created.
 }
 \details{
 \subsection{Outputs description}{

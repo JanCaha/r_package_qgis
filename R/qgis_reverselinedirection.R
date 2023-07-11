@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Reverse line direction (native:reverselinedirection)
+##' QGIS Algorithm provided by QGIS (native c++) Reverse line direction (native:reverselinedirection). Reverses the direction of curve or LineString geometries. This algorithm reverses the direction of curve or LineString geometries.
 ##'
-##' @title QGIS algorithm Reverse line direction
+##' @title QGIS algorithm - Reverse line direction
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Reversed. Path for new vector layer.

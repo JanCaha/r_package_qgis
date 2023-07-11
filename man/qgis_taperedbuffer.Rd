@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_taperedbuffer.R
 \name{qgis_taperedbuffer}
 \alias{qgis_taperedbuffer}
-\title{QGIS algorithm Tapered buffers}
+\title{QGIS algorithm - Tapered buffers}
 \usage{
 qgis_taperedbuffer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_taperedbuffer(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{START_WIDTH}{\code{number} - Start width. A numeric value.}
+\item{START_WIDTH}{\code{number} - Start width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{END_WIDTH}{\code{number} - End width. A numeric value.}
+\item{END_WIDTH}{\code{number} - End width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Buffered. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ qgis_taperedbuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Tapered buffers (native:taperedbuffer)
+QGIS Algorithm provided by QGIS (native c++) Tapered buffers (native:taperedbuffer). This algorithm creates tapered buffers along line geometries, using a specified start and end buffer diameter corresponding to the buffer diameter at the start and end of the linestrings.
 }
 \details{
 \subsection{Outputs description}{

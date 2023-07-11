@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS (native c++) Join attributes by location (native:joinattributesbylocation)
+##' QGIS Algorithm provided by QGIS (native c++) Join attributes by location (native:joinattributesbylocation). Join attributes from one vector layer to another by location. This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one.
 ##'
-##' @title QGIS algorithm Join attributes by location
+##' @title QGIS algorithm - Join attributes by location
 ##'
 ##' @param INPUT `source` - Join to features in. Path to a vector layer.
 ##' @param PREDICATE `enum`  of `("intersect", "contain", "equal", "touch", "overlap", "are within", "cross")` - Features they (geometric predicate). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param JOIN `source` - By comparing to. Path to a vector layer.
 ##' @param JOIN_FIELDS `field` - Fields to add (leave empty to use all fields). The name of an existing field. ; delimited list of existing field names.
 ##' @param METHOD `enum`  of `("Create separate feature for each matching feature (one-to-many)", "Take attributes of the first matching feature only (one-to-one)", "Take attributes of the feature with largest overlap only (one-to-one)")` - Join type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param DISCARD_NONMATCHING `boolean` - Discard records which could not be joined. 1 for true/yes. 0 for false/no.
-##' @param PREFIX `string` - Joined field prefix. String value.
+##' @param DISCARD_NONMATCHING `boolean` - Discard records which could not be joined. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param PREFIX `string` - Joined field prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Joined layer. Path for new vector layer.
 ##' @param NON_MATCHING `sink` - Unjoinable features from first layer. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

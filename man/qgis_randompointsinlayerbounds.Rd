@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randompointsinlayerbounds.R
 \name{qgis_randompointsinlayerbounds}
 \alias{qgis_randompointsinlayerbounds}
-\title{QGIS algorithm Random points in layer bounds}
+\title{QGIS algorithm - Random points in layer bounds}
 \usage{
 qgis_randompointsinlayerbounds(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_randompointsinlayerbounds(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{POINTS_NUMBER}{\code{number} - Number of points. A numeric value.}
+\item{POINTS_NUMBER}{\code{number} - Number of points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value.}
+\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Random points. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_randompointsinlayerbounds(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Random points in layer bounds (qgis:randompointsinlayerbounds)
+QGIS Algorithm provided by QGIS Random points in layer bounds (qgis:randompointsinlayerbounds). This algorithm creates a new point layer with a given number of random points, all of them within the extent of a given layer. A distance factor can be specified, to avoid points being too close to each other.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_multiringconstantbuffer.R
 \name{qgis_multiringconstantbuffer}
 \alias{qgis_multiringconstantbuffer}
-\title{QGIS algorithm Multi-ring buffer (constant distance)}
+\title{QGIS algorithm - Multi-ring buffer (constant distance)}
 \usage{
 qgis_multiringconstantbuffer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_multiringconstantbuffer(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{RINGS}{\code{number} - Number of rings. A numeric value.}
+\item{RINGS}{\code{number} - Number of rings. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISTANCE}{\code{distance} - Distance between rings. A numeric value.}
+\item{DISTANCE}{\code{distance} - Distance between rings. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Multi-ring buffer (constant distance). Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_multiringconstantbuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distance) (native:multiringconstantbuffer)
+QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distance) (native:multiringconstantbuffer). This algorithm computes multi-ring ('donuts') buffer for all the features in an input layer, using a fixed or dynamic distance and rings number.
 }
 \details{
 \subsection{Outputs description}{

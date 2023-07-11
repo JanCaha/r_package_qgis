@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_checkvalidity.R
 \name{qgis_checkvalidity}
 \alias{qgis_checkvalidity}
-\title{QGIS algorithm Check validity}
+\title{QGIS algorithm - Check validity}
 \usage{
 qgis_checkvalidity(
   INPUT_LAYER = qgisprocess:::qgis_default_value(),
@@ -22,7 +22,7 @@ qgis_checkvalidity(
 
 \item{METHOD}{\code{enum}  of \verb{("The one selected in digitizing settings", "QGIS", "GEOS")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{IGNORE_RING_SELF_INTERSECTION}{\code{boolean} - Ignore ring self intersections. 1 for true/yes. 0 for false/no.}
+\item{IGNORE_RING_SELF_INTERSECTION}{\code{boolean} - Ignore ring self intersections. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{VALID_OUTPUT}{\code{sink} - Valid output. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_checkvalidity(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Check validity (qgis:checkvalidity)
+QGIS Algorithm provided by QGIS Check validity (qgis:checkvalidity). This algorithm performs a validity check on the geometries of a vector layer. The geometries are classified in three groups (valid, invalid and error), and a vector layer is generated with the features in each of these categories. By default the algorithm uses the strict OGC definition of polygon validity, where a polygon is marked as invalid if a self-intersecting ring causes an interior hole. If the "Ignore ring self intersections" option is checked, then this rule will be ignored and a more lenient validity check will be performed. The GEOS method is faster and performs better on larger geometries, but is limited to only returning the first error encountered in a geometry. The QGIS method will be slower but reports all errors encountered in the geometry, not just the first.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_addfieldtoattributestable.R
 \name{qgis_addfieldtoattributestable}
 \alias{qgis_addfieldtoattributestable}
-\title{QGIS algorithm Add field to attributes table}
+\title{QGIS algorithm - Add field to attributes table}
 \usage{
 qgis_addfieldtoattributestable(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -10,6 +10,8 @@ qgis_addfieldtoattributestable(
   FIELD_TYPE = qgisprocess:::qgis_default_value(),
   FIELD_LENGTH = qgisprocess:::qgis_default_value(),
   FIELD_PRECISION = qgisprocess:::qgis_default_value(),
+  FIELD_ALIAS = qgisprocess:::qgis_default_value(),
+  FIELD_COMMENT = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -20,13 +22,17 @@ qgis_addfieldtoattributestable(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{FIELD_NAME}{\code{string} - Field name. String value.}
+\item{FIELD_NAME}{\code{string} - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FIELD_TYPE}{\code{enum}  of \verb{("Integer (32 bit)", "Decimal (double)", "Text (string)", "Boolean", "Date", "Time", "Date & Time", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")} - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{FIELD_LENGTH}{\code{number} - Field length. A numeric value.}
+\item{FIELD_LENGTH}{\code{number} - Field length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FIELD_PRECISION}{\code{number} - Field precision. A numeric value.}
+\item{FIELD_PRECISION}{\code{number} - Field precision. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{FIELD_ALIAS}{\code{string} - Field alias. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{FIELD_COMMENT}{\code{string} - Field comment. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Added. Path for new vector layer.}
 
@@ -39,7 +45,7 @@ qgis_addfieldtoattributestable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add field to attributes table (native:addfieldtoattributestable)
+QGIS Algorithm provided by QGIS (native c++) Add field to attributes table (native:addfieldtoattributestable). This algorithm adds a new attribute to a vector layer.  The name and characteristics of the attribute are defined as parameters. The new attribute is not added to the input layer but a new layer is generated instead.
 }
 \details{
 \subsection{Outputs description}{

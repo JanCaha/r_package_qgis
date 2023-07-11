@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rastersurfacevolume.R
 \name{qgis_rastersurfacevolume}
 \alias{qgis_rastersurfacevolume}
-\title{QGIS algorithm Raster surface volume}
+\title{QGIS algorithm - Raster surface volume}
 \usage{
 qgis_rastersurfacevolume(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,7 +22,7 @@ qgis_rastersurfacevolume(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{LEVEL}{\code{number} - Base level. A numeric value.}
+\item{LEVEL}{\code{number} - Base level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{METHOD}{\code{enum}  of \verb{("Count Only Above Base Level", "Count Only Below Base Level", "Subtract Volumes Below Base Level", "Add Volumes Below Base Level")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -39,7 +39,7 @@ qgis_rastersurfacevolume(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster surface volume (native:rastersurfacevolume)
+QGIS Algorithm provided by QGIS (native c++) Raster surface volume (native:rastersurfacevolume). Calculates the volume under a raster grid's surface. This algorithm calculates the volume under a raster grid's surface.  Several methods of volume calculation are available, which control whether only values above or below the specified base level are considered, or whether volumes below the base level should be added or subtracted from the total volume.  The algorithm outputs the calculated volume, the total area, and the total number of pixels analysed. If the 'Count Only Above Base Level' or 'Count Only Below Base Level' methods are used, then the calculated area and pixel count only includes pixels which are above or below the specified base level respectively.  Units of the calculated volume are dependent on the coordinate reference system of the input raster file. For a CRS in meters, with a DEM height in meters, the calculated value will be in meters³. If instead the input raster is in a geographic coordinate system (e.g. latitude/longitude values), then the result will be in degrees² × meters, and an appropriate scaling factor will need to be applied in order to convert to meters³.
 }
 \details{
 \subsection{Outputs description}{

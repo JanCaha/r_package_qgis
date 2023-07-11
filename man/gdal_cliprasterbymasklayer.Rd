@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_cliprasterbymasklayer.R
 \name{gdal_cliprasterbymasklayer}
 \alias{gdal_cliprasterbymasklayer}
-\title{QGIS algorithm Clip raster by mask layer}
+\title{QGIS algorithm - Clip raster by mask layer}
 \usage{
 gdal_cliprasterbymasklayer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -39,27 +39,27 @@ gdal_cliprasterbymasklayer(
 
 \item{TARGET_EXTENT}{\code{extent} - Target extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{NODATA}{\code{number} - Assign a specified nodata value to output bands. A numeric value.}
+\item{NODATA}{\code{number} - Assign a specified nodata value to output bands. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ALPHA_BAND}{\code{boolean} - Create an output alpha band. 1 for true/yes. 0 for false/no.}
+\item{ALPHA_BAND}{\code{boolean} - Create an output alpha band. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CROP_TO_CUTLINE}{\code{boolean} - Match the extent of the clipped raster to the extent of the mask layer. 1 for true/yes. 0 for false/no.}
+\item{CROP_TO_CUTLINE}{\code{boolean} - Match the extent of the clipped raster to the extent of the mask layer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{KEEP_RESOLUTION}{\code{boolean} - Keep resolution of input raster. 1 for true/yes. 0 for false/no.}
+\item{KEEP_RESOLUTION}{\code{boolean} - Keep resolution of input raster. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SET_RESOLUTION}{\code{boolean} - Set output file resolution. 1 for true/yes. 0 for false/no.}
+\item{SET_RESOLUTION}{\code{boolean} - Set output file resolution. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{X_RESOLUTION}{\code{number} - X Resolution to output bands. A numeric value.}
+\item{X_RESOLUTION}{\code{number} - X Resolution to output bands. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{Y_RESOLUTION}{\code{number} - Y Resolution to output bands. A numeric value.}
+\item{Y_RESOLUTION}{\code{number} - Y Resolution to output bands. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MULTITHREADING}{\code{boolean} - Use multithreaded warping implementation. 1 for true/yes. 0 for false/no.}
+\item{MULTITHREADING}{\code{boolean} - Use multithreaded warping implementation. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Clipped (mask). Path for new raster layer.}
 
@@ -72,7 +72,7 @@ gdal_cliprasterbymasklayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Clip raster by mask layer (gdal:cliprasterbymasklayer)
+QGIS Algorithm provided by GDAL Clip raster by mask layer (gdal:cliprasterbymasklayer). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer MASK: Mask layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer SOURCE_CRS: Source CRS (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. TARGET_CRS: Target CRS (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. TARGET_EXTENT: Target extent (optional) 	Argument type:	extent 	Acceptable values: 		- A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105' 		- Path to a layer. The extent of the layer is used. NODATA: Assign a specified nodata value to output bands (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ALPHA_BAND: Create an output alpha band 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression CROP_TO_CUTLINE: Match the extent of the clipped raster to the extent of the mask layer 	Default value:	true 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression KEEP_RESOLUTION: Keep resolution of input raster 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression SET_RESOLUTION: Set output file resolution 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression X_RESOLUTION: X Resolution to output bands (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression Y_RESOLUTION: Y Resolution to output bands (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression MULTITHREADING: Use multithreaded warping implementation 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DATA_TYPE: Output data type 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Use Input Layer Data Type 		- 1: Byte 		- 2: Int16 		- 3: UInt16 		- 4: UInt32 		- 5: Int32 		- 6: Float32 		- 7: Float64 		- 8: CInt16 		- 9: CInt32 		- 10: CFloat32 		- 11: CFloat64 		- 12: Int8 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Clipped (mask) 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

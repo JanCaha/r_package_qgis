@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_downloadgpsdata.R
 \name{qgis_downloadgpsdata}
 \alias{qgis_downloadgpsdata}
-\title{QGIS algorithm Download GPS data from device}
+\title{QGIS algorithm - Download GPS data from device}
 \usage{
 qgis_downloadgpsdata(
   DEVICE = qgisprocess:::qgis_default_value(),
@@ -16,9 +16,9 @@ qgis_downloadgpsdata(
 )
 }
 \arguments{
-\item{DEVICE}{\code{string} - Device. String value.}
+\item{DEVICE}{\code{string} - Device. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{PORT}{\code{string} - Port. String value.}
+\item{PORT}{\code{string} - Port. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FEATURE_TYPE}{\code{enum}  of \verb{("Waypoints", "Routes", "Tracks")} - Feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -33,7 +33,7 @@ qgis_downloadgpsdata(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata)
+QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata). This algorithm uses the GPSBabel tool to download data from a GPS device into the GPX standard format.
 }
 \details{
 \subsection{Outputs description}{

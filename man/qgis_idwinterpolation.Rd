@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_idwinterpolation.R
 \name{qgis_idwinterpolation}
 \alias{qgis_idwinterpolation}
-\title{QGIS algorithm IDW interpolation}
+\title{QGIS algorithm - IDW interpolation}
 \usage{
 qgis_idwinterpolation(
   INTERPOLATION_DATA = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_idwinterpolation(
 \arguments{
 \item{INTERPOLATION_DATA}{\code{idw_interpolation_data} - Input layer(s). .}
 
-\item{DISTANCE_COEFFICIENT}{\code{number} - Distance coefficient P. A numeric value.}
+\item{DISTANCE_COEFFICIENT}{\code{number} - Distance coefficient P. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{PIXEL_SIZE}{\code{number} - Output raster size. A numeric value.}
+\item{PIXEL_SIZE}{\code{number} - Output raster size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Interpolated. Path for new raster layer.}
 
@@ -36,7 +36,7 @@ qgis_idwinterpolation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS IDW interpolation (qgis:idwinterpolation)
+QGIS Algorithm provided by QGIS IDW interpolation (qgis:idwinterpolation). Generates an Inverse Distance Weighted (IDW) interpolation of a point vector layer. Sample points are weighted during interpolation such that the influence of one point relative to another declines with distance from the unknown point you want to create.
 }
 \details{
 \subsection{Outputs description}{

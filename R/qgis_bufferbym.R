@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Variable width buffer (by M value) (native:bufferbym)
+##' QGIS Algorithm provided by QGIS (native c++) Variable width buffer (by M value) (native:bufferbym). This algorithm creates variable width buffers along lines, using the M value of the line geometries as the diameter of the buffer at each vertex.
 ##'
-##' @title QGIS algorithm Variable width buffer (by M value)
+##' @title QGIS algorithm - Variable width buffer (by M value)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param SEGMENTS `number` - Segments. A numeric value.
+##' @param SEGMENTS `number` - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Buffered. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

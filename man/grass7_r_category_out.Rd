@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_category_out.R
 \name{grass7_r_category_out}
 \alias{grass7_r_category_out}
-\title{QGIS algorithm r.category.out}
+\title{QGIS algorithm - r.category.out}
 \usage{
 grass7_r_category_out(
   map = qgisprocess:::qgis_default_value(),
@@ -21,17 +21,17 @@ grass7_r_category_out(
 \arguments{
 \item{map}{\code{raster} - Name of raster map. Path to a raster layer.}
 
-\item{cats}{\code{string} - Category values (for Integer rasters). Example: 1,3,7-9,13. String value.}
+\item{cats}{\code{string} - Category values (for Integer rasters). Example: 1,3,7-9,13. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{values}{\code{string} - Comma separated value list (for float rasters). Example: 1.4,3.8,13. String value.}
+\item{values}{\code{string} - Comma separated value list (for float rasters). Example: 1.4,3.8,13. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{separator}{\code{string} - Field separator (Special characters: pipe, comma, space, tab, newline). String value.}
+\item{separator}{\code{string} - Field separator (Special characters: pipe, comma, space, tab, newline). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{html}{\code{fileDestination} - Category. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -42,7 +42,7 @@ grass7_r_category_out(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.category.out (grass7:r.category.out)
+QGIS Algorithm provided by GRASS r.category.out (grass7:r.category.out). r.category.out - Exports category values and labels associated with user-specified raster map layers.
 }
 \details{
 \subsection{Outputs description}{

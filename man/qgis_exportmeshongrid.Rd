@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_exportmeshongrid.R
 \name{qgis_exportmeshongrid}
 \alias{qgis_exportmeshongrid}
-\title{QGIS algorithm Export mesh on grid}
+\title{QGIS algorithm - Export mesh on grid}
 \usage{
 qgis_exportmeshongrid(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -28,7 +28,7 @@ qgis_exportmeshongrid(
 
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRID_SPACING}{\code{distance} - Grid spacing. A numeric value.}
+\item{GRID_SPACING}{\code{distance} - Grid spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{CRS_OUTPUT}{\code{crs} - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
@@ -45,7 +45,7 @@ qgis_exportmeshongrid(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportmeshongrid)
+QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportmeshongrid). Exports mesh dataset values to a gridded point vector layer This algorithm exports a mesh layer's dataset values to a gridded point vector layer, with the dataset values on each point as attribute values. For data on volume (3D stacked dataset values), the exported dataset values are averaged on faces using the method defined in the mesh layer properties (default is Multi level averaging method). 1D meshes are not supported.
 }
 \details{
 \subsection{Outputs description}{

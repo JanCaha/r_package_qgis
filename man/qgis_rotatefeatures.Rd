@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rotatefeatures.R
 \name{qgis_rotatefeatures}
 \alias{qgis_rotatefeatures}
-\title{QGIS algorithm Rotate}
+\title{QGIS algorithm - Rotate}
 \usage{
 qgis_rotatefeatures(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,7 +18,7 @@ qgis_rotatefeatures(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{ANGLE}{\code{number} - Rotation (degrees clockwise). A numeric value.}
+\item{ANGLE}{\code{number} - Rotation (degrees clockwise). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{ANCHOR}{\code{point} - Rotation anchor point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
@@ -33,7 +33,7 @@ qgis_rotatefeatures(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures)
+QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures). This algorithm rotates feature geometries, by the specified angle clockwise  Optionally, the rotation can occur around a preset point. If not set the rotation occurs around each feature's centroid.
 }
 \details{
 \subsection{Outputs description}{

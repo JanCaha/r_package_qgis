@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Force right-hand-rule (native:forcerhr)
+##' QGIS Algorithm provided by QGIS (native c++) Force right-hand-rule (native:forcerhr). Forces polygon geometries to respect the Right-Hand-Rule. This algorithm forces polygon geometries to respect the Right-Hand-Rule, in which the area that is bounded by a polygon is to the right of the boundary. In particular, the exterior ring is oriented in a clockwise direction and the interior rings in a counter-clockwise direction.
 ##'
-##' @title QGIS algorithm Force right-hand-rule
+##' @title QGIS algorithm - Force right-hand-rule
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Reoriented. Path for new vector layer.

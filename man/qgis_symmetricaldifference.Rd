@@ -2,13 +2,14 @@
 % Please edit documentation in R/qgis_symmetricaldifference.R
 \name{qgis_symmetricaldifference}
 \alias{qgis_symmetricaldifference}
-\title{QGIS algorithm Symmetrical difference}
+\title{QGIS algorithm - Symmetrical difference}
 \usage{
 qgis_symmetricaldifference(
   INPUT = qgisprocess:::qgis_default_value(),
   OVERLAY = qgisprocess:::qgis_default_value(),
   OVERLAY_FIELDS_PREFIX = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  GRID_SIZE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -20,9 +21,11 @@ qgis_symmetricaldifference(
 
 \item{OVERLAY}{\code{source} - Overlay layer. Path to a vector layer.}
 
-\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value.}
+\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Symmetrical difference. Path for new vector layer.}
+
+\item{GRID_SIZE}{\code{number} - Grid size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -33,7 +36,7 @@ qgis_symmetricaldifference(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Symmetrical difference (native:symmetricaldifference)
+QGIS Algorithm provided by QGIS (native c++) Symmetrical difference (native:symmetricaldifference). This algorithm extracts the portions of features from both the Input and Overlay layers that do not overlap. Overlapping areas between the two layers are removed. The attribute table of the Symmetrical Difference layer contains original attributes from both the Input and Difference layers.
 }
 \details{
 \subsection{Outputs description}{

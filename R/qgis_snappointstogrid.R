@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Snap points to grid (native:snappointstogrid)
+##' QGIS Algorithm provided by QGIS (native c++) Snap points to grid (native:snappointstogrid). This algorithm modifies the coordinates of geometries in a vector layer, so that all points or vertices are snapped to the closest point of the grid.  If the snapped geometry cannot be calculated (or is totally collapsed) the feature's geometry will be cleared.  Note that snapping to grid may generate an invalid geometry in some corner cases.  Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any axis will disable snapping for that axis.
 ##'
-##' @title QGIS algorithm Snap points to grid
+##' @title QGIS algorithm - Snap points to grid
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param HSPACING `distance` - X Grid Spacing. A numeric value.
-##' @param VSPACING `distance` - Y Grid Spacing. A numeric value.
-##' @param ZSPACING `number` - Z Grid Spacing. A numeric value.
-##' @param MSPACING `number` - M Grid Spacing. A numeric value.
+##' @param HSPACING `distance` - X Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param VSPACING `distance` - Y Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ZSPACING `number` - Z Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MSPACING `number` - M Grid Spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Snapped. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

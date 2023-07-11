@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Vector layer scatterplot (qgis:vectorlayerscatterplot)
+##' QGIS Algorithm provided by QGIS Vector layer scatterplot (qgis:vectorlayerscatterplot). This algorithm creates a simple X - Y scatter plot for a vector layer.
 ##'
-##' @title QGIS algorithm Vector layer scatterplot
+##' @title QGIS algorithm - Vector layer scatterplot
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param XFIELD `field` - X attribute. The name of an existing field. ; delimited list of existing field names.

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract Shapefile encoding (native:shpencodinginfo)
+##' QGIS Algorithm provided by QGIS (native c++) Extract Shapefile encoding (native:shpencodinginfo). Extracts the attribute encoding information embedded in a Shapefile. This algorithm extracts the attribute encoding information embedded in a Shapefile.  Both the encoding specified by an optional .cpg file and any encoding details present in the .dbf LDID header block are considered.
 ##'
-##' @title QGIS algorithm Extract Shapefile encoding
+##' @title QGIS algorithm - Extract Shapefile encoding
 ##'
 ##' @param INPUT `file` - Input layer. Path to a file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

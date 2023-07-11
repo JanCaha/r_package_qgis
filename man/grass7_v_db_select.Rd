@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_db_select.R
 \name{grass7_v_db_select}
 \alias{grass7_v_db_select}
-\title{QGIS algorithm v.db.select}
+\title{QGIS algorithm - v.db.select}
 \usage{
 grass7_v_db_select(
   map = qgisprocess:::qgis_default_value(),
@@ -29,33 +29,33 @@ grass7_v_db_select(
 \arguments{
 \item{map}{\code{source} - Input vector map . Path to a vector layer.}
 
-\item{layer}{\code{number} - Layer Number. A numeric value.}
+\item{layer}{\code{number} - Layer Number. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{columns}{\code{string} - Name of attribute column(s), comma separated. String value.}
+\item{columns}{\code{string} - Name of attribute column(s), comma separated. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.c}{\code{boolean} - Do not include column names in output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Do not include column names in output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{separator}{\code{string} - Output field separator. String value.}
+\item{separator}{\code{string} - Output field separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
+\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{group}{\code{string} - GROUP BY conditions of SQL statement without 'group by' keyword. String value.}
+\item{group}{\code{string} - GROUP BY conditions of SQL statement without 'group by' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{vertical_separator}{\code{string} - Output vertical record separator. String value.}
+\item{vertical_separator}{\code{string} - Output vertical record separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{null_value}{\code{string} - Null value indicator. String value.}
+\item{null_value}{\code{string} - Null value indicator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.v}{\code{boolean} - Vertical output (instead of horizontal). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -v.}
+\item{.v}{\code{boolean} - Vertical output (instead of horizontal). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -v.}
 
-\item{.r}{\code{boolean} - Print minimal region extent of selected vector features instead of attributes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Print minimal region extent of selected vector features instead of attributes. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
 \item{file}{\code{fileDestination} - Attributes. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -66,7 +66,7 @@ grass7_v_db_select(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.db.select (grass7:v.db.select)
+QGIS Algorithm provided by GRASS v.db.select (grass7:v.db.select). Prints vector map attributes
 }
 \details{
 \subsection{Outputs description}{

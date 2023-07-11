@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_retile.R
 \name{gdal_retile}
 \alias{gdal_retile}
-\title{QGIS algorithm Retile}
+\title{QGIS algorithm - Retile}
 \usage{
 gdal_retile(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -29,29 +29,29 @@ gdal_retile(
 \arguments{
 \item{INPUT}{\code{multilayer} - Input files. .}
 
-\item{TILE_SIZE_X}{\code{number} - Tile width. A numeric value.}
+\item{TILE_SIZE_X}{\code{number} - Tile width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{TILE_SIZE_Y}{\code{number} - Tile height. A numeric value.}
+\item{TILE_SIZE_Y}{\code{number} - Tile height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OVERLAP}{\code{number} - Overlap in pixels between consecutive tiles. A numeric value.}
+\item{OVERLAP}{\code{number} - Overlap in pixels between consecutive tiles. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{LEVELS}{\code{number} - Number of pyramids levels to build. A numeric value.}
+\item{LEVELS}{\code{number} - Number of pyramids levels to build. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{SOURCE_CRS}{\code{crs} - Source coordinate reference system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
 \item{RESAMPLING}{\code{enum}  of \verb{("Nearest Neighbour", "Bilinear", "Cubic", "Cubic Spline", "Lanczos Windowed Sinc")} - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{DELIMITER}{\code{string} - Column delimiter used in the CSV file. String value.}
+\item{DELIMITER}{\code{string} - Column delimiter used in the CSV file. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{ONLY_PYRAMIDS}{\code{boolean} - Build only the pyramids. 1 for true/yes. 0 for false/no.}
+\item{ONLY_PYRAMIDS}{\code{boolean} - Build only the pyramids. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DIR_FOR_ROW}{\code{boolean} - Use separate directory for each tiles row. 1 for true/yes. 0 for false/no.}
+\item{DIR_FOR_ROW}{\code{boolean} - Use separate directory for each tiles row. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{folderDestination} - Output directory. Path for an existing or new folder.}
 
@@ -66,7 +66,7 @@ gdal_retile(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Retile (gdal:retile)
+QGIS Algorithm provided by GDAL Retile (gdal:retile). ---------------- Arguments ----------------  INPUT: Input files 	Argument type:	multilayer TILE_SIZE_X: Tile width 	Default value:	256 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression TILE_SIZE_Y: Tile height 	Default value:	256 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OVERLAP: Overlap in pixels between consecutive tiles 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression LEVELS: Number of pyramids levels to build 	Default value:	1 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression SOURCE_CRS: Source coordinate reference system (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. RESAMPLING: Resampling method 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Nearest Neighbour 		- 1: Bilinear 		- 2: Cubic 		- 3: Cubic Spline 		- 4: Lanczos Windowed Sinc 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' DELIMITER: Column delimiter used in the CSV file (optional) 	Default value:	; 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DATA_TYPE: Output data type 	Default value:	5 	Argument type:	enum 	Available values: 		- 0: Byte 		- 1: Int16 		- 2: UInt16 		- 3: UInt32 		- 4: Int32 		- 5: Float32 		- 6: Float64 		- 7: CInt16 		- 8: CInt32 		- 9: CFloat32 		- 10: CFloat64 		- 11: Int8 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' ONLY_PYRAMIDS: Build only the pyramids 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DIR_FOR_ROW: Use separate directory for each tiles row 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Output directory 	Argument type:	folderDestination 	Acceptable values: 		- Path for an existing or new folder OUTPUT_CSV: CSV file containing the tile(s) georeferencing information (optional) 	Argument type:	fileDestination 	Acceptable values: 		- Path for new file
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_describe.R
 \name{grass7_r_describe}
 \alias{grass7_r_describe}
-\title{QGIS algorithm r.describe}
+\title{QGIS algorithm - r.describe}
 \usage{
 grass7_r_describe(
   map = qgisprocess:::qgis_default_value(),
@@ -24,23 +24,23 @@ grass7_r_describe(
 \arguments{
 \item{map}{\code{raster} - input raster layer. Path to a raster layer.}
 
-\item{null_value}{\code{string} - String representing NULL value. String value.}
+\item{null_value}{\code{string} - String representing NULL value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{nsteps}{\code{number} - Number of quantization steps. A numeric value.}
+\item{nsteps}{\code{number} - Number of quantization steps. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.r}{\code{boolean} - Only print the range of the data. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Only print the range of the data. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.d}{\code{boolean} - Use the current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Use the current region. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
-\item{.i}{\code{boolean} - Read floating-point map as integer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Read floating-point map as integer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
 \item{html}{\code{fileDestination} - Categories. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_describe(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.describe (grass7:r.describe)
+QGIS Algorithm provided by GRASS r.describe (grass7:r.describe). Prints terse list of category values found in a raster layer.
 }
 \details{
 \subsection{Outputs description}{

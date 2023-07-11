@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_dxfexport.R
 \name{qgis_dxfexport}
 \alias{qgis_dxfexport}
-\title{QGIS algorithm Export layers to DXF}
+\title{QGIS algorithm - Export layers to DXF}
 \usage{
 qgis_dxfexport(
   LAYERS = qgisprocess:::qgis_default_value(),
@@ -31,11 +31,11 @@ qgis_dxfexport(
 
 \item{CRS}{\code{crs} - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{USE_LAYER_TITLE}{\code{boolean} - Use layer title as name. 1 for true/yes. 0 for false/no.}
+\item{USE_LAYER_TITLE}{\code{boolean} - Use layer title as name. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FORCE_2D}{\code{boolean} - Force 2D output. 1 for true/yes. 0 for false/no.}
+\item{FORCE_2D}{\code{boolean} - Force 2D output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MTEXT}{\code{boolean} - Export labels as MTEXT elements. 1 for true/yes. 0 for false/no.}
+\item{MTEXT}{\code{boolean} - Export labels as MTEXT elements. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - DXF. Path for new file.}
 
@@ -48,7 +48,7 @@ qgis_dxfexport(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport)
+QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport). Exports layers to DXF file. For each layer, you can choose a field whose values are used to split features in generated destination layers in the DXF output.
 }
 \details{
 \subsection{Outputs description}{

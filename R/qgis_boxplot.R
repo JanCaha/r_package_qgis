@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Box plot (qgis:boxplot)
+##' QGIS Algorithm provided by QGIS Box plot (qgis:boxplot). This algorithm creates a box plot from a category and a layer field.
 ##'
-##' @title QGIS algorithm Box plot
+##' @title QGIS algorithm - Box plot
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param NAME_FIELD `field` - Category name field. The name of an existing field. ; delimited list of existing field names.

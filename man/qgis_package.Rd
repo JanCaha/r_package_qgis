@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_package.R
 \name{qgis_package}
 \alias{qgis_package}
-\title{QGIS algorithm Package layers}
+\title{QGIS algorithm - Package layers}
 \usage{
 qgis_package(
   LAYERS = qgisprocess:::qgis_default_value(),
@@ -11,6 +11,7 @@ qgis_package(
   SAVE_STYLES = qgisprocess:::qgis_default_value(),
   SAVE_METADATA = qgisprocess:::qgis_default_value(),
   SELECTED_FEATURES_ONLY = qgisprocess:::qgis_default_value(),
+  EXPORT_RELATED_LAYERS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -22,13 +23,15 @@ qgis_package(
 
 \item{OUTPUT}{\code{fileDestination} - Destination GeoPackage. Path for new file.}
 
-\item{OVERWRITE}{\code{boolean} - Overwrite existing GeoPackage. 1 for true/yes. 0 for false/no.}
+\item{OVERWRITE}{\code{boolean} - Overwrite existing GeoPackage. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SAVE_STYLES}{\code{boolean} - Save layer styles into GeoPackage. 1 for true/yes. 0 for false/no.}
+\item{SAVE_STYLES}{\code{boolean} - Save layer styles into GeoPackage. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SAVE_METADATA}{\code{boolean} - Save layer metadata into GeoPackage. 1 for true/yes. 0 for false/no.}
+\item{SAVE_METADATA}{\code{boolean} - Save layer metadata into GeoPackage. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SELECTED_FEATURES_ONLY}{\code{boolean} - Save only selected features. 1 for true/yes. 0 for false/no.}
+\item{SELECTED_FEATURES_ONLY}{\code{boolean} - Save only selected features. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{EXPORT_RELATED_LAYERS}{\code{boolean} - Export related layers following relations defined in the project. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +42,7 @@ qgis_package(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Package layers (native:package)
+QGIS Algorithm provided by QGIS (native c++) Package layers (native:package). This algorithm collects a number of existing layers and packages them together into a single GeoPackage database.
 }
 \details{
 \subsection{Outputs description}{

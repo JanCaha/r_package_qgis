@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Tapered buffers (native:taperedbuffer)
+##' QGIS Algorithm provided by QGIS (native c++) Tapered buffers (native:taperedbuffer). This algorithm creates tapered buffers along line geometries, using a specified start and end buffer diameter corresponding to the buffer diameter at the start and end of the linestrings.
 ##'
-##' @title QGIS algorithm Tapered buffers
+##' @title QGIS algorithm - Tapered buffers
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param START_WIDTH `number` - Start width. A numeric value.
-##' @param END_WIDTH `number` - End width. A numeric value.
-##' @param SEGMENTS `number` - Segments. A numeric value.
+##' @param START_WIDTH `number` - Start width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param END_WIDTH `number` - End width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param SEGMENTS `number` - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Buffered. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

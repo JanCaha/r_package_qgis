@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_snapgeometries.R
 \name{qgis_snapgeometries}
 \alias{qgis_snapgeometries}
-\title{QGIS algorithm Snap geometries to layer}
+\title{QGIS algorithm - Snap geometries to layer}
 \usage{
 qgis_snapgeometries(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,7 +21,7 @@ qgis_snapgeometries(
 
 \item{REFERENCE_LAYER}{\code{source} - Reference layer. Path to a vector layer.}
 
-\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value.}
+\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{BEHAVIOR}{\code{enum}  of \verb{("Prefer aligning nodes, insert extra vertices where required", "Prefer closest point, insert extra vertices where required", "Prefer aligning nodes, don't insert new vertices", "Prefer closest point, don't insert new vertices", "Move end points only, prefer aligning nodes", "Move end points only, prefer closest point", "Snap end points to end points only", "Snap to anchor nodes (single layer only)")} - Behavior. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -36,7 +36,7 @@ qgis_snapgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Snap geometries to layer (native:snapgeometries)
+QGIS Algorithm provided by QGIS (native c++) Snap geometries to layer (native:snapgeometries). Snaps the geometries in a layer. Snapping can be done either to the geometries from another layer, or to geometries within the same layer.  A tolerance is specified in layer units to control how close vertices need to be to the reference layer geometries before they are snapped.  Snapping occurs to both nodes and edges. Depending on the snapping behavior, either nodes or edges will be preferred.  Vertices will be inserted or removed as required to make the geometries match the reference geometries.
 }
 \details{
 \subsection{Outputs description}{

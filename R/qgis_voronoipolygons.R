@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS Voronoi polygons (qgis:voronoipolygons)
+##' QGIS Algorithm provided by QGIS Voronoi polygons (qgis:voronoipolygons). This algorithm takes a points layer and generates a polygon layer containing the voronoi polygons corresponding to those input points.
 ##'
-##' @title QGIS algorithm Voronoi polygons
+##' @title QGIS algorithm - Voronoi polygons
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param BUFFER `number` - Buffer region (% of extent). A numeric value.
+##' @param BUFFER `number` - Buffer region (% of extent). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Voronoi polygons. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

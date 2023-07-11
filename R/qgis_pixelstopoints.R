@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints)
+##' QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints). Creates a vector layer of points corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating point features for each individual pixel's center in the raster layer.  Any nodata pixels are skipped in the output.
 ##'
-##' @title QGIS algorithm Raster pixels to points
+##' @title QGIS algorithm - Raster pixels to points
 ##'
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param RASTER_BAND `band` - Band number. Integer value representing an existing raster band number.
-##' @param FIELD_NAME `string` - Field name. String value.
+##' @param FIELD_NAME `string` - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Vector points. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

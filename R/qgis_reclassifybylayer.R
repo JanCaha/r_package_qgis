@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Reclassify by layer (native:reclassifybylayer)
+##' QGIS Algorithm provided by QGIS (native c++) Reclassify by layer (native:reclassifybylayer). This algorithm reclassifies a raster band by assigning new class values based on the ranges specified in a vector table.
 ##'
-##' @title QGIS algorithm Reclassify by layer
+##' @title QGIS algorithm - Reclassify by layer
 ##'
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param RASTER_BAND `band` - Band number. Integer value representing an existing raster band number.
@@ -8,10 +8,10 @@
 ##' @param MIN_FIELD `field` - Minimum class value field. The name of an existing field. ; delimited list of existing field names.
 ##' @param MAX_FIELD `field` - Maximum class value field. The name of an existing field. ; delimited list of existing field names.
 ##' @param VALUE_FIELD `field` - Output value field. The name of an existing field. ; delimited list of existing field names.
-##' @param NO_DATA `number` - Output no data value. A numeric value.
-##' @param RANGE_BOUNDARIES `enum`  of `("min < value <= max", "min <= value < max", "min <= value <= max", "min < value < max")` - Range boundaries. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param NODATA_FOR_MISSING `boolean` - Use no data when no range matches value. 1 for true/yes. 0 for false/no.
-##' @param DATA_TYPE `enum`  of `("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param NO_DATA `number` - Output no data value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param RANGE_BOUNDARIES `enum`  of `("min  value = max", "min = value  max", "min = value = max", "min  value  max")` - Range boundaries. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param NODATA_FOR_MISSING `boolean` - Use no data when no range matches value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DATA_TYPE `enum`  of `("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `rasterDestination` - Reclassified raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

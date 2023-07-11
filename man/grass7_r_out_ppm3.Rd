@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_ppm3.R
 \name{grass7_r_out_ppm3}
 \alias{grass7_r_out_ppm3}
-\title{QGIS algorithm r.out.ppm3}
+\title{QGIS algorithm - r.out.ppm3}
 \usage{
 grass7_r_out_ppm3(
   red = qgisprocess:::qgis_default_value(),
@@ -25,13 +25,13 @@ grass7_r_out_ppm3(
 
 \item{blue}{\code{raster} - Name of raster map to be used for blue. Path to a raster layer.}
 
-\item{.c}{\code{boolean} - Add comments to describe the region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Add comments to describe the region. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Name for new PPM file. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -42,7 +42,7 @@ grass7_r_out_ppm3(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.ppm3 (grass7:r.out.ppm3)
+QGIS Algorithm provided by GRASS r.out.ppm3 (grass7:r.out.ppm3). Converts 3 GRASS raster layers (R,G,B) to a PPM image file
 }
 \details{
 \subsection{Outputs description}{

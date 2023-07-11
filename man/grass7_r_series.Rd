@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_series.R
 \name{grass7_r_series}
 \alias{grass7_r_series}
-\title{QGIS algorithm r.series}
+\title{QGIS algorithm - r.series}
 \usage{
 grass7_r_series(
   input = qgisprocess:::qgis_default_value(),
@@ -25,13 +25,13 @@ grass7_r_series(
 \arguments{
 \item{input}{\code{multilayer} - Input raster layer(s). .}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{method}{\code{enum}  of \verb{("average", "count", "median", "mode", "minimum", "min_raster", "maximum", "max_raster", "stddev", "range", "sum", "variance", "diversity", "slope", "offset", "detcoeff", "quart1", "quart3", "perc90", "skewness", "kurtosis", "quantile")} - Aggregate operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{method}{\code{enum}  of \verb{("average", "count", "median", "mode", "minimum", "min_raster", "maximum", "max_raster", "stddev", "range", "sum", "variance", "diversity", "slope", "offset", "detcoeff", "quart1", "quart3", "perc90", "skewness", "kurtosis", "quantile", "tvalue")} - Aggregate operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{quantile}{\code{string} - Quantile to calculate for method=quantile. String value.}
+\item{quantile}{\code{string} - Quantile to calculate for method=quantile. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{weights}{\code{string} - Weighting factor for each input map, default value is 1.0. String value.}
+\item{weights}{\code{string} - Weighting factor for each input map, default value is 1.0. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{range}{\code{range} - Ignore values outside this range (lo,hi). Two comma separated numeric values, e.g. '1,10'.}
 
@@ -39,11 +39,11 @@ grass7_r_series(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,7 +54,7 @@ grass7_r_series(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.series (grass7:r.series)
+QGIS Algorithm provided by GRASS r.series (grass7:r.series). Makes each output cell value a function of the values assigned to the corresponding cells in the input raster layers. Input rasters layers/bands must be separated in different data sources.
 }
 \details{
 \subsection{Outputs description}{

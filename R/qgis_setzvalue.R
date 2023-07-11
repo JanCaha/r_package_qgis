@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Set Z value (native:setzvalue)
+##' QGIS Algorithm provided by QGIS (native c++) Set Z value (native:setzvalue). This algorithm sets the Z value for geometries in a layer.  If Z values already exist in the layer, they will be overwritten with the new value. If no Z values exist, the geometry will be upgraded to include Z values and the specified value used as the initial Z value for all geometries.
 ##'
-##' @title QGIS algorithm Set Z value
+##' @title QGIS algorithm - Set Z value
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param Z_VALUE `number` - Z Value. A numeric value.
+##' @param Z_VALUE `number` - Z Value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Z Added. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

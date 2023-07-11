@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_series_accumulate.R
 \name{grass7_r_series_accumulate}
 \alias{grass7_r_series_accumulate}
-\title{QGIS algorithm r.series.accumulate}
+\title{QGIS algorithm - r.series.accumulate}
 \usage{
 grass7_r_series_accumulate(
   input = qgisprocess:::qgis_default_value(),
@@ -35,27 +35,27 @@ grass7_r_series_accumulate(
 
 \item{method}{\code{enum}  of \verb{("gdd", "bedd", "huglin", "mean")} - This method will be applied to compute the accumulative values from the input maps. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{scale}{\code{number} - Scale factor for input. A numeric value.}
+\item{scale}{\code{number} - Scale factor for input. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{shift}{\code{number} - Shift factor for input. A numeric value.}
+\item{shift}{\code{number} - Shift factor for input. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{range}{\code{range} - Ignore values outside this range (min,max). Two comma separated numeric values, e.g. '1,10'.}
 
 \item{limits}{\code{range} - Lower and upper accumulation limits (lower,upper). Two comma separated numeric values, e.g. '1,10'.}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.f}{\code{boolean} - Create a FCELL map (floating point single precision) as output. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
+\item{.f}{\code{boolean} - Create a FCELL map (floating point single precision) as output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.}
 
 \item{output}{\code{rasterDestination} - Accumulated. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -66,7 +66,7 @@ grass7_r_series_accumulate(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.series.accumulate (grass7:r.series.accumulate)
+QGIS Algorithm provided by GRASS r.series.accumulate (grass7:r.series.accumulate). Makes each output cell value an accumulation function of the values assigned to the corresponding cells in the input raster map layers.
 }
 \details{
 \subsection{Outputs description}{

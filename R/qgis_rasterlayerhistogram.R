@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS Raster layer histogram (qgis:rasterlayerhistogram)
+##' QGIS Algorithm provided by QGIS Raster layer histogram (qgis:rasterlayerhistogram). This algorithm generates a histogram with the values of a raster layer. The raster layer must have a single band.
 ##'
-##' @title QGIS algorithm Raster layer histogram
+##' @title QGIS algorithm - Raster layer histogram
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.
-##' @param BINS `number` - number of bins. A numeric value.
+##' @param BINS `number` - number of bins. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `fileDestination` - Histogram. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

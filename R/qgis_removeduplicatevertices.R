@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Remove duplicate vertices (native:removeduplicatevertices)
+##' QGIS Algorithm provided by QGIS (native c++) Remove duplicate vertices (native:removeduplicatevertices). This algorithm removes duplicate vertices from features, wherever removing the vertices does not result in a degenerate geometry.  The tolerance parameter specifies the tolerance for coordinates when determining whether vertices are identical.  By default, z values are not considered when detecting duplicate vertices. E.g. two vertices with the same x and y coordinate but different z values will still be considered duplicate and one will be removed. If the Use Z Value parameter is true, then the z values are also tested and vertices with the same x and y but different z will be maintained.  Note that duplicate vertices are not tested between different parts of a multipart geometry. E.g. a multipoint geometry with overlapping points will not be changed by this method.
 ##'
-##' @title QGIS algorithm Remove duplicate vertices
+##' @title QGIS algorithm - Remove duplicate vertices
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param TOLERANCE `distance` - Tolerance. A numeric value.
-##' @param USE_Z_VALUE `boolean` - Use Z Value. 1 for true/yes. 0 for false/no.
+##' @param TOLERANCE `distance` - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param USE_Z_VALUE `boolean` - Use Z Value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Cleaned. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

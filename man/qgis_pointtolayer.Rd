@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_pointtolayer.R
 \name{qgis_pointtolayer}
 \alias{qgis_pointtolayer}
-\title{QGIS algorithm Create layer from point}
+\title{QGIS algorithm - Create layer from point}
 \usage{
 qgis_pointtolayer(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_pointtolayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create layer from point (native:pointtolayer)
+QGIS Algorithm provided by QGIS (native c++) Create layer from point (native:pointtolayer). This algorithm creates a new vector layer that contains a single feature with geometry matching a point parameter.  It can be used in models to convert a point into a layer which can be used for other algorithms which require a layer based input.
 }
 \details{
 \subsection{Outputs description}{

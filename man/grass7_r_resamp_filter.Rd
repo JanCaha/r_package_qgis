@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_resamp_filter.R
 \name{grass7_r_resamp_filter}
 \alias{grass7_r_resamp_filter}
-\title{QGIS algorithm r.resamp.filter}
+\title{QGIS algorithm - r.resamp.filter}
 \usage{
 grass7_r_resamp_filter(
   input = qgisprocess:::qgis_default_value(),
@@ -27,23 +27,23 @@ grass7_r_resamp_filter(
 
 \item{filter}{\code{enum}  of \verb{("box", "bartlett", "gauss", "normal", "hermite", "sinc", "lanczos1", "lanczos2", "lanczos3", "hann", "hamming", "blackman")} - Filter kernel(s). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{radius}{\code{string} - Filter radius for each filter (comma separated list of float if multiple). String value.}
+\item{radius}{\code{string} - Filter radius for each filter (comma separated list of float if multiple). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{x_radius}{\code{string} - Filter radius (horizontal) for each filter (comma separated list of float if multiple). String value.}
+\item{x_radius}{\code{string} - Filter radius (horizontal) for each filter (comma separated list of float if multiple). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{y_radius}{\code{string} - Filter radius (vertical) for each filter (comma separated list of float if multiple). String value.}
+\item{y_radius}{\code{string} - Filter radius (vertical) for each filter (comma separated list of float if multiple). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Propagate NULLs. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
 \item{output}{\code{rasterDestination} - Resampled Filter. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,7 +54,7 @@ grass7_r_resamp_filter(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.resamp.filter (grass7:r.resamp.filter)
+QGIS Algorithm provided by GRASS r.resamp.filter (grass7:r.resamp.filter). Resamples raster map layers using an analytic kernel.
 }
 \details{
 \subsection{Outputs description}{

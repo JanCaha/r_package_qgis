@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by GDAL Pansharpening (gdal:pansharp)
+##' QGIS Algorithm provided by GDAL Pansharpening (gdal:pansharp). ---------------- Arguments ----------------  SPECTRAL: Spectral dataset 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer PANCHROMATIC: Panchromatic dataset 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer RESAMPLING: Resampling algorithm 	Default value:	2 	Argument type:	enum 	Available values: 		- 0: Nearest Neighbour 		- 1: Bilinear 		- 2: Cubic 		- 3: Cubic Spline 		- 4: Lanczos Windowed Sinc 		- 5: Average 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Output 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 ##'
-##' @title QGIS algorithm Pansharpening
+##' @title QGIS algorithm - Pansharpening
 ##'
 ##' @param SPECTRAL `raster` - Spectral dataset. Path to a raster layer.
 ##' @param PANCHROMATIC `raster` - Panchromatic dataset. Path to a raster layer.
 ##' @param RESAMPLING `enum`  of `("Nearest Neighbour", "Bilinear", "Cubic", "Cubic Spline", "Lanczos Windowed Sinc", "Average")` - Resampling algorithm. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param OPTIONS `string` - Additional creation options. String value.
-##' @param EXTRA `string` - Additional command-line parameters. String value.
+##' @param OPTIONS `string` - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param EXTRA `string` - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

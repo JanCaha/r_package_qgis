@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_vrml.R
 \name{grass7_r_out_vrml}
 \alias{grass7_r_out_vrml}
-\title{QGIS algorithm r.out.vrml}
+\title{QGIS algorithm - r.out.vrml}
 \usage{
 grass7_r_out_vrml(
   elevation = qgisprocess:::qgis_default_value(),
@@ -22,13 +22,13 @@ grass7_r_out_vrml(
 
 \item{color}{\code{raster} - Color layer. Path to a raster layer.}
 
-\item{exaggeration}{\code{number} - Vertical exaggeration. A numeric value.}
+\item{exaggeration}{\code{number} - Vertical exaggeration. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{fileDestination} - VRML. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +39,7 @@ grass7_r_out_vrml(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.vrml (grass7:r.out.vrml)
+QGIS Algorithm provided by GRASS r.out.vrml (grass7:r.out.vrml). Export a raster layer to the Virtual Reality Modeling Language (VRML)
 }
 \details{
 \subsection{Outputs description}{

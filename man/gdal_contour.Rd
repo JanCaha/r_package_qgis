@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_contour.R
 \name{gdal_contour}
 \alias{gdal_contour}
-\title{QGIS algorithm Contour}
+\title{QGIS algorithm - Contour}
 \usage{
 gdal_contour(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -26,19 +26,19 @@ gdal_contour(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{INTERVAL}{\code{number} - Interval between contour lines. A numeric value.}
+\item{INTERVAL}{\code{number} - Interval between contour lines. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FIELD_NAME}{\code{string} - Attribute name (if not set, no elevation attribute is attached). String value.}
+\item{FIELD_NAME}{\code{string} - Attribute name (if not set, no elevation attribute is attached). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_3D}{\code{boolean} - Produce 3D vector. 1 for true/yes. 0 for false/no.}
+\item{CREATE_3D}{\code{boolean} - Produce 3D vector. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{IGNORE_NODATA}{\code{boolean} - Treat all raster values as valid. 1 for true/yes. 0 for false/no.}
+\item{IGNORE_NODATA}{\code{boolean} - Treat all raster values as valid. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NODATA}{\code{number} - Input pixel value to treat as "nodata". A numeric value.}
+\item{NODATA}{\code{number} - Input pixel value to treat as "nodata". A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OFFSET}{\code{number} - Offset from zero relative to which to interpret intervals. A numeric value.}
+\item{OFFSET}{\code{number} - Offset from zero relative to which to interpret intervals. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Contours. Path for new vector layer.}
 
@@ -51,7 +51,7 @@ gdal_contour(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Contour (gdal:contour)
+QGIS Algorithm provided by GDAL Contour (gdal:contour). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number INTERVAL: Interval between contour lines 	Default value:	10 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression FIELD_NAME: Attribute name (if not set, no elevation attribute is attached) (optional) 	Default value:	ELEV 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression CREATE_3D: Produce 3D vector 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression IGNORE_NODATA: Treat all raster values as valid 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NODATA: Input pixel value to treat as "nodata" (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OFFSET: Offset from zero relative to which to interpret intervals (optional) 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Contours 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

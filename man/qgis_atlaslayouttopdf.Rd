@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_atlaslayouttopdf.R
 \name{qgis_atlaslayouttopdf}
 \alias{qgis_atlaslayouttopdf}
-\title{QGIS algorithm Export atlas layout as PDF (single file)}
+\title{QGIS algorithm - Export atlas layout as PDF (single file)}
 \usage{
 qgis_atlaslayouttopdf(
   LAYOUT = qgisprocess:::qgis_default_value(),
@@ -13,11 +13,13 @@ qgis_atlaslayouttopdf(
   LAYERS = qgisprocess:::qgis_default_value(),
   DPI = qgisprocess:::qgis_default_value(),
   FORCE_VECTOR = qgisprocess:::qgis_default_value(),
+  FORCE_RASTER = qgisprocess:::qgis_default_value(),
   GEOREFERENCE = qgisprocess:::qgis_default_value(),
   INCLUDE_METADATA = qgisprocess:::qgis_default_value(),
   DISABLE_TILED = qgisprocess:::qgis_default_value(),
   SIMPLIFY = qgisprocess:::qgis_default_value(),
   TEXT_FORMAT = qgisprocess:::qgis_default_value(),
+  IMAGE_COMPRESSION = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -34,23 +36,27 @@ qgis_atlaslayouttopdf(
 
 \item{SORTBY_EXPRESSION}{\code{expression} - Sort expression. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
 
-\item{SORTBY_REVERSE}{\code{boolean} - Reverse sort order (used when a sort expression is provided). 1 for true/yes. 0 for false/no.}
+\item{SORTBY_REVERSE}{\code{boolean} - Reverse sort order (used when a sort expression is provided). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{LAYERS}{\code{multilayer} - Map layers to assign to unlocked map item(s). .}
 
-\item{DPI}{\code{number} - DPI (leave blank for default layout DPI). A numeric value.}
+\item{DPI}{\code{number} - DPI (leave blank for default layout DPI). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FORCE_VECTOR}{\code{boolean} - Always export as vectors. 1 for true/yes. 0 for false/no.}
+\item{FORCE_VECTOR}{\code{boolean} - Always export as vectors. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GEOREFERENCE}{\code{boolean} - Append georeference information. 1 for true/yes. 0 for false/no.}
+\item{FORCE_RASTER}{\code{boolean} - Always export as raster. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INCLUDE_METADATA}{\code{boolean} - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no.}
+\item{GEOREFERENCE}{\code{boolean} - Append georeference information. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DISABLE_TILED}{\code{boolean} - Disable tiled raster layer exports. 1 for true/yes. 0 for false/no.}
+\item{INCLUDE_METADATA}{\code{boolean} - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SIMPLIFY}{\code{boolean} - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no.}
+\item{DISABLE_TILED}{\code{boolean} - Disable tiled raster layer exports. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{SIMPLIFY}{\code{boolean} - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{TEXT_FORMAT}{\code{enum}  of \verb{("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects")} - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+
+\item{IMAGE_COMPRESSION}{\code{enum}  of \verb{("Lossy (JPEG)", "Lossless")} - Image compression. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{OUTPUT}{\code{fileDestination} - PDF file. Path for new file.}
 
@@ -63,7 +69,7 @@ qgis_atlaslayouttopdf(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export atlas layout as PDF (single file) (native:atlaslayouttopdf)
+QGIS Algorithm provided by QGIS (native c++) Export atlas layout as PDF (single file) (native:atlaslayouttopdf). Exports an atlas layout as a single PDF file. This algorithm outputs an atlas layout as a single PDF file.  If a coverage layer is set, the selected layout's atlas settings exposed in this algorithm will be overwritten. In this case, an empty filter or sort by expression will turn those settings off.
 }
 \details{
 \subsection{Outputs description}{

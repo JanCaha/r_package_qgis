@@ -1,0 +1,80 @@
+##' QGIS Algorithm provided by SAGA Next Gen Phenips (grids, annual) (sagang:phenipsgridsannual). ---------------- Arguments ----------------  ATmean: Mean Temperature 	Argument type:	multilayer ATmax: Maximum Temperature 	Argument type:	multilayer SIrel: Solar Irradiation 	Argument type:	multilayer GENERATIONS: Potential Number of Generations 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET: Onset Day of Infestation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET_FILIAL_1: Onset Day, 1. Filial Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET_SISTER_1: Onset Day, 1. Sister Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET_FILIAL_2: Onset Day, 2. Filial Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET_SISTER_2: Onset Day, 2. Sister Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET_FILIAL_3: Onset Day, 3. Filial Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer ONSET_SISTER_3: Onset Day, 3. Sister Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer BTSUM_FILIAL_1: State, 1. Filial Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer BTSUM_SISTER_1: State, 1. Sister Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer BTSUM_FILIAL_2: State, 2. Filial Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer BTSUM_SISTER_2: State, 2. Sister Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer BTSUM_FILIAL_3: State, 3. Filial Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer BTSUM_SISTER_3: State, 3. Sister Generation 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer LAT_GRID: Latitude (optional) 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer LAT_CONST: Latitude 	Default value:	50 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DToptimum: Developmental Optimum Temperature 	Default value:	30.4 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DTminimum: Developmental Minimum Temperature 	Default value:	8.3 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression FAminimum: Minimum Temperature for Flight Activity 	Default value:	16.5 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DayLength: Minimum Day Length for Flight Activity 	Default value:	14.5 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DDminimum: Minimum Thermal Sum for Infestation 	Default value:	140 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DDtotal: Thermal Sum for Total Development 	Default value:	557 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression Risk_DayMax: Day of Maximum Risk after Onset 	Default value:	5 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression Risk_Decay: Decay of Risk after Maximum 	Default value:	10 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression YD_Begin: Begin of Parental Development 	Default value:	2021-04-01 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression YD_End_Onset: End of Breeding 	Default value:	2021-08-31 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression YD_End: End of Development 	Default value:	2021-10-31 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
+##'
+##' @title QGIS algorithm - Phenips (grids, annual)
+##'
+##' @param ATmean `multilayer` - Mean Temperature. .
+##' @param ATmax `multilayer` - Maximum Temperature. .
+##' @param SIrel `multilayer` - Solar Irradiation. .
+##' @param GENERATIONS `rasterDestination` - Potential Number of Generations. Path for new raster layer.
+##' @param ONSET `rasterDestination` - Onset Day of Infestation. Path for new raster layer.
+##' @param ONSET_FILIAL_1 `rasterDestination` - Onset Day, 1. Filial Generation. Path for new raster layer.
+##' @param ONSET_SISTER_1 `rasterDestination` - Onset Day, 1. Sister Generation. Path for new raster layer.
+##' @param ONSET_FILIAL_2 `rasterDestination` - Onset Day, 2. Filial Generation. Path for new raster layer.
+##' @param ONSET_SISTER_2 `rasterDestination` - Onset Day, 2. Sister Generation. Path for new raster layer.
+##' @param ONSET_FILIAL_3 `rasterDestination` - Onset Day, 3. Filial Generation. Path for new raster layer.
+##' @param ONSET_SISTER_3 `rasterDestination` - Onset Day, 3. Sister Generation. Path for new raster layer.
+##' @param BTSUM_FILIAL_1 `rasterDestination` - State, 1. Filial Generation. Path for new raster layer.
+##' @param BTSUM_SISTER_1 `rasterDestination` - State, 1. Sister Generation. Path for new raster layer.
+##' @param BTSUM_FILIAL_2 `rasterDestination` - State, 2. Filial Generation. Path for new raster layer.
+##' @param BTSUM_SISTER_2 `rasterDestination` - State, 2. Sister Generation. Path for new raster layer.
+##' @param BTSUM_FILIAL_3 `rasterDestination` - State, 3. Filial Generation. Path for new raster layer.
+##' @param BTSUM_SISTER_3 `rasterDestination` - State, 3. Sister Generation. Path for new raster layer.
+##' @param LAT_GRID `raster` - Latitude. Path to a raster layer.
+##' @param LAT_CONST `number` - Latitude. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DToptimum `number` - Developmental Optimum Temperature. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DTminimum `number` - Developmental Minimum Temperature. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FAminimum `number` - Minimum Temperature for Flight Activity. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DayLength `number` - Minimum Day Length for Flight Activity. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DDminimum `number` - Minimum Thermal Sum for Infestation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DDtotal `number` - Thermal Sum for Total Development. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param Risk_DayMax `number` - Day of Maximum Risk after Onset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param Risk_Decay `number` - Decay of Risk after Maximum. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param YD_Begin `string` - Begin of Parental Development. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param YD_End_Onset `string` - End of Breeding. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param YD_End `string` - End of Development. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
+##'
+##' @details
+##' ## Outputs description
+##' * BTSUM_FILIAL_1 - outputRaster - State, 1. Filial Generation
+##' * BTSUM_FILIAL_2 - outputRaster - State, 2. Filial Generation
+##' * BTSUM_FILIAL_3 - outputRaster - State, 3. Filial Generation
+##' * BTSUM_SISTER_1 - outputRaster - State, 1. Sister Generation
+##' * BTSUM_SISTER_2 - outputRaster - State, 2. Sister Generation
+##' * BTSUM_SISTER_3 - outputRaster - State, 3. Sister Generation
+##' * GENERATIONS - outputRaster - Potential Number of Generations
+##' * ONSET - outputRaster - Onset Day of Infestation
+##' * ONSET_FILIAL_1 - outputRaster - Onset Day, 1. Filial Generation
+##' * ONSET_FILIAL_2 - outputRaster - Onset Day, 2. Filial Generation
+##' * ONSET_FILIAL_3 - outputRaster - Onset Day, 3. Filial Generation
+##' * ONSET_SISTER_1 - outputRaster - Onset Day, 1. Sister Generation
+##' * ONSET_SISTER_2 - outputRaster - Onset Day, 2. Sister Generation
+##' * ONSET_SISTER_3 - outputRaster - Onset Day, 3. Sister Generation
+##'
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm
+
+sagang_phenipsgridsannual <- function(ATmean = qgisprocess:::qgis_default_value(), ATmax = qgisprocess:::qgis_default_value(), SIrel = qgisprocess:::qgis_default_value(), GENERATIONS = qgisprocess:::qgis_default_value(), ONSET = qgisprocess:::qgis_default_value(), ONSET_FILIAL_1 = qgisprocess:::qgis_default_value(), ONSET_SISTER_1 = qgisprocess:::qgis_default_value(), ONSET_FILIAL_2 = qgisprocess:::qgis_default_value(), ONSET_SISTER_2 = qgisprocess:::qgis_default_value(), ONSET_FILIAL_3 = qgisprocess:::qgis_default_value(), ONSET_SISTER_3 = qgisprocess:::qgis_default_value(), BTSUM_FILIAL_1 = qgisprocess:::qgis_default_value(), BTSUM_SISTER_1 = qgisprocess:::qgis_default_value(), BTSUM_FILIAL_2 = qgisprocess:::qgis_default_value(), BTSUM_SISTER_2 = qgisprocess:::qgis_default_value(), BTSUM_FILIAL_3 = qgisprocess:::qgis_default_value(), BTSUM_SISTER_3 = qgisprocess:::qgis_default_value(), LAT_GRID = qgisprocess:::qgis_default_value(), LAT_CONST = qgisprocess:::qgis_default_value(), DToptimum = qgisprocess:::qgis_default_value(), DTminimum = qgisprocess:::qgis_default_value(), FAminimum = qgisprocess:::qgis_default_value(), DayLength = qgisprocess:::qgis_default_value(), DDminimum = qgisprocess:::qgis_default_value(), DDtotal = qgisprocess:::qgis_default_value(), Risk_DayMax = qgisprocess:::qgis_default_value(), Risk_Decay = qgisprocess:::qgis_default_value(), YD_Begin = qgisprocess:::qgis_default_value(), YD_End_Onset = qgisprocess:::qgis_default_value(), YD_End = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+
+  check_algorithm_necessities("sagang:phenipsgridsannual")
+
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("sagang:phenipsgridsannual", `ATmean` = ATmean, `ATmax` = ATmax, `SIrel` = SIrel, `GENERATIONS` = GENERATIONS, `ONSET` = ONSET, `ONSET_FILIAL_1` = ONSET_FILIAL_1, `ONSET_SISTER_1` = ONSET_SISTER_1, `ONSET_FILIAL_2` = ONSET_FILIAL_2, `ONSET_SISTER_2` = ONSET_SISTER_2, `ONSET_FILIAL_3` = ONSET_FILIAL_3, `ONSET_SISTER_3` = ONSET_SISTER_3, `BTSUM_FILIAL_1` = BTSUM_FILIAL_1, `BTSUM_SISTER_1` = BTSUM_SISTER_1, `BTSUM_FILIAL_2` = BTSUM_FILIAL_2, `BTSUM_SISTER_2` = BTSUM_SISTER_2, `BTSUM_FILIAL_3` = BTSUM_FILIAL_3, `BTSUM_SISTER_3` = BTSUM_SISTER_3, `LAT_GRID` = LAT_GRID, `LAT_CONST` = LAT_CONST, `DToptimum` = DToptimum, `DTminimum` = DTminimum, `FAminimum` = FAminimum, `DayLength` = DayLength, `DDminimum` = DDminimum, `DDtotal` = DDtotal, `Risk_DayMax` = Risk_DayMax, `Risk_Decay` = Risk_Decay, `YD_Begin` = YD_Begin, `YD_End_Onset` = YD_End_Onset, `YD_End` = YD_End,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("sagang:phenipsgridsannual", `ATmean` = ATmean, `ATmax` = ATmax, `SIrel` = SIrel, `GENERATIONS` = GENERATIONS, `ONSET` = ONSET, `ONSET_FILIAL_1` = ONSET_FILIAL_1, `ONSET_SISTER_1` = ONSET_SISTER_1, `ONSET_FILIAL_2` = ONSET_FILIAL_2, `ONSET_SISTER_2` = ONSET_SISTER_2, `ONSET_FILIAL_3` = ONSET_FILIAL_3, `ONSET_SISTER_3` = ONSET_SISTER_3, `BTSUM_FILIAL_1` = BTSUM_FILIAL_1, `BTSUM_SISTER_1` = BTSUM_SISTER_1, `BTSUM_FILIAL_2` = BTSUM_FILIAL_2, `BTSUM_SISTER_2` = BTSUM_SISTER_2, `BTSUM_FILIAL_3` = BTSUM_FILIAL_3, `BTSUM_SISTER_3` = BTSUM_SISTER_3, `LAT_GRID` = LAT_GRID, `LAT_CONST` = LAT_CONST, `DToptimum` = DToptimum, `DTminimum` = DTminimum, `FAminimum` = FAminimum, `DayLength` = DayLength, `DDminimum` = DDminimum, `DDtotal` = DDtotal, `Risk_DayMax` = Risk_DayMax, `Risk_Decay` = Risk_Decay, `YD_Begin` = YD_Begin, `YD_End_Onset` = YD_End_Onset, `YD_End` = YD_End,..., .quiet = .quiet)
+      )
+  }
+
+  if (.complete_output) {
+    return(output)
+  }
+  else{
+    qgisprocess::qgis_extract_output(output, "BTSUM_FILIAL_1")
+  }
+}

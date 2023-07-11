@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) K-means clustering (native:kmeansclustering)
+##' QGIS Algorithm provided by QGIS (native c++) K-means clustering (native:kmeansclustering). Calculates the 2D distance based k-means cluster number for each input feature.  If input geometries are lines or polygons, the clustering is based on the centroid of the feature.
 ##'
-##' @title QGIS algorithm K-means clustering
+##' @title QGIS algorithm - K-means clustering
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param CLUSTERS `number` - Number of clusters. A numeric value.
-##' @param FIELD_NAME `string` - Cluster field name. String value.
-##' @param SIZE_FIELD_NAME `string` - Cluster size field name. String value.
+##' @param CLUSTERS `number` - Number of clusters. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FIELD_NAME `string` - Cluster field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param SIZE_FIELD_NAME `string` - Cluster size field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Clusters. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

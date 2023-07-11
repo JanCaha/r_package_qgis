@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_bufferbym.R
 \name{qgis_bufferbym}
 \alias{qgis_bufferbym}
-\title{QGIS algorithm Variable width buffer (by M value)}
+\title{QGIS algorithm - Variable width buffer (by M value)}
 \usage{
 qgis_bufferbym(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_bufferbym(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{SEGMENTS}{\code{number} - Segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Buffered. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_bufferbym(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Variable width buffer (by M value) (native:bufferbym)
+QGIS Algorithm provided by QGIS (native c++) Variable width buffer (by M value) (native:bufferbym). This algorithm creates variable width buffers along lines, using the M value of the line geometries as the diameter of the buffer at each vertex.
 }
 \details{
 \subsection{Outputs description}{

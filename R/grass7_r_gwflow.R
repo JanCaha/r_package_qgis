@@ -1,36 +1,36 @@
-##' QGIS Algorithm provided by GRASS r.gwflow (grass7:r.gwflow)
+##' QGIS Algorithm provided by GRASS r.gwflow (grass7:r.gwflow). Numerical calculation program for transient, confined and unconfined groundwater flow in two dimensions.
 ##'
-##' @title QGIS algorithm r.gwflow
+##' @title QGIS algorithm - r.gwflow
 ##'
 ##' @param phead `raster` - The initial piezometric head in (m). Path to a raster layer.
 ##' @param status `raster` - Boundary condition status, 0-inactive, 1-active, 2-dirichlet. Path to a raster layer.
-##' @param hc_x `raster` - X-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.
-##' @param hc_y `raster` - Y-part of the hydraulic conductivity tensor in (m/s). Path to a raster layer.
-##' @param q `raster` - Water sources and sinks in (m^3/s). Path to a raster layer.
-##' @param s `raster` - Specific yield in (1/m). Path to a raster layer.
-##' @param recharge `raster` - Recharge map e.g: 6*10^-9 per cell in (m^3/s*m^2). Path to a raster layer.
+##' @param hc_x `raster` - X-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.
+##' @param hc_y `raster` - Y-part of the hydraulic conductivity tensor in (m\code{/}s). Path to a raster layer.
+##' @param q `raster` - Water sources and sinks in (m^3\code{/}s). Path to a raster layer.
+##' @param s `raster` - Specific yield in (1\code{/}m). Path to a raster layer.
+##' @param recharge `raster` - Recharge map e.g: 6*10^-9 per cell in (m^3\code{/}s*m^2). Path to a raster layer.
 ##' @param top `raster` - Top surface of the aquifer in (m). Path to a raster layer.
 ##' @param bottom `raster` - Bottom surface of the aquifer in (m). Path to a raster layer.
 ##' @param type `enum`  of `("confined", "unconfined")` - The type of groundwater flow. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param river_bed `raster` - The height of the river bed in (m). Path to a raster layer.
 ##' @param river_head `raster` - Water level (head) of the river with leakage connection in (m). Path to a raster layer.
-##' @param river_leak `raster` - The leakage coefficient of the river bed in (1/s). Path to a raster layer.
+##' @param river_leak `raster` - The leakage coefficient of the river bed in (1\code{/}s). Path to a raster layer.
 ##' @param drain_bed `raster` - The height of the drainage bed in (m). Path to a raster layer.
-##' @param drain_leak `raster` - The leakage coefficient of the drainage bed in (1/s). Path to a raster layer.
-##' @param dtime `number` - The calculation time in seconds. A numeric value.
-##' @param maxit `number` - Maximum number of iteration used to solver the linear equation system. A numeric value.
-##' @param error `number` - Error break criteria for iterative solvers (jacobi, sor, cg or bicgstab). A numeric value.
+##' @param drain_leak `raster` - The leakage coefficient of the drainage bed in (1\code{/}s). Path to a raster layer.
+##' @param dtime `number` - The calculation time in seconds. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param maxit `number` - Maximum number of iteration used to solver the linear equation system. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param error `number` - Error break criteria for iterative solvers (jacobi, sor, cg or bicgstab). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param solver `enum`  of `("cg", "pcg", "cholesky")` - The type of solver which should solve the symmetric linear equation system. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param relax `string` - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. String value.
-##' @param .f `boolean` - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.
+##' @param relax `string` - The relaxation parameter used by the jacobi and sor solver for speedup or stabilizing. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .f `boolean` - Allocate a full quadratic linear equation system, default is a sparse linear equation system. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.
 ##' @param output `rasterDestination` - Groundwater flow. Path for new raster layer.
-##' @param vx `rasterDestination` - Groundwater filter velocity vector part in x direction (m/s). Path for new raster layer.
-##' @param vy `rasterDestination` - Groundwater filter velocity vector part in y direction (m/s). Path for new raster layer.
-##' @param budget `rasterDestination` - Groundwater budget for each cell (m^3/s). Path for new raster layer.
+##' @param vx `rasterDestination` - Groundwater filter velocity vector part in x direction (m\code{/}s). Path for new raster layer.
+##' @param vy `rasterDestination` - Groundwater filter velocity vector part in y direction (m\code{/}s). Path for new raster layer.
+##' @param budget `rasterDestination` - Groundwater budget for each cell (m^3\code{/}s). Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -38,10 +38,10 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * budget - outputRaster - Groundwater budget for each cell (m^3/s)
+##' * budget - outputRaster - Groundwater budget for each cell (m^3\code{/}s)
 ##' * output - outputRaster - Groundwater flow
-##' * vx - outputRaster - Groundwater filter velocity vector part in x direction (m/s)
-##' * vy - outputRaster - Groundwater filter velocity vector part in y direction (m/s)
+##' * vx - outputRaster - Groundwater filter velocity vector part in x direction (m\code{/}s)
+##' * vy - outputRaster - Groundwater filter velocity vector part in y direction (m\code{/}s)
 ##'
 ##'
 ##' @export

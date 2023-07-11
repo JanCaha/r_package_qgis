@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_angletonearest.R
 \name{qgis_angletonearest}
 \alias{qgis_angletonearest}
-\title{QGIS algorithm Align points to features}
+\title{QGIS algorithm - Align points to features}
 \usage{
 qgis_angletonearest(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,11 +22,11 @@ qgis_angletonearest(
 
 \item{REFERENCE_LAYER}{\code{source} - Reference layer. Path to a vector layer.}
 
-\item{MAX_DISTANCE}{\code{distance} - Maximum distance to consider. A numeric value.}
+\item{MAX_DISTANCE}{\code{distance} - Maximum distance to consider. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FIELD_NAME}{\code{string} - Angle field name. String value.}
+\item{FIELD_NAME}{\code{string} - Angle field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{APPLY_SYMBOLOGY}{\code{boolean} - Automatically apply symbology. 1 for true/yes. 0 for false/no.}
+\item{APPLY_SYMBOLOGY}{\code{boolean} - Automatically apply symbology. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Aligned layer. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_angletonearest(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Align points to features (native:angletonearest)
+QGIS Algorithm provided by QGIS (native c++) Align points to features (native:angletonearest). Rotates point features to align them to nearby features. This algorithm calculates the rotation required to align point features with their nearest feature from another reference layer. A new field is added to the output layer which is filled with the angle (in degrees, clockwise) to the nearest reference feature.  Optionally, the output layer's symbology can be set to automatically use the calculated rotation field to rotate marker symbols.  If desired, a maximum distance to use when aligning points can be set, to avoid aligning isolated points to distant features.
 }
 \details{
 \subsection{Outputs description}{

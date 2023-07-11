@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_linedensity.R
 \name{qgis_linedensity}
 \alias{qgis_linedensity}
-\title{QGIS algorithm Line density}
+\title{QGIS algorithm - Line density}
 \usage{
 qgis_linedensity(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_linedensity(
 
 \item{WEIGHT}{\code{field} - Weight field . The name of an existing field. ; delimited list of existing field names.}
 
-\item{RADIUS}{\code{distance} - Search radius. A numeric value.}
+\item{RADIUS}{\code{distance} - Search radius. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{PIXEL_SIZE}{\code{distance} - Pixel size. A numeric value.}
+\item{PIXEL_SIZE}{\code{distance} - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Line density raster. Path for new raster layer.}
 
@@ -36,7 +36,7 @@ qgis_linedensity(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Line density (native:linedensity)
+QGIS Algorithm provided by QGIS (native c++) Line density (native:linedensity). The line density interpolation algorithm calculates a density measure of linear features which is obtained in a circular neighborhood within each raster cell. First, the length of the segment of each line that is intersected by the circular neighborhood is multiplied with the lines weight factor. In a second step, all length values are summed and divided by the area of the circular neighborhood. This process is repeated for all raster cells.
 }
 \details{
 \subsection{Outputs description}{

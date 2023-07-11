@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Points along geometry (native:pointsalonglines)
+##' QGIS Algorithm provided by QGIS (native c++) Points along geometry (native:pointsalonglines). Creates regularly spaced points along line features. This algorithm creates a points layer, with points distributed along the lines of an input vector layer. The distance between points (measured along the line) is defined as a parameter.  Start and end offset distances can be defined, so the first and last point will not fall exactly on the line's first and last nodes. These start and end offsets are defined as distances, measured along the line from the first and last nodes of the lines.
 ##'
-##' @title QGIS algorithm Points along geometry
+##' @title QGIS algorithm - Points along geometry
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param DISTANCE `distance` - Distance. A numeric value.
-##' @param START_OFFSET `distance` - Start offset. A numeric value.
-##' @param END_OFFSET `distance` - End offset. A numeric value.
+##' @param DISTANCE `distance` - Distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param START_OFFSET `distance` - Start offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param END_OFFSET `distance` - End offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Interpolated points. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

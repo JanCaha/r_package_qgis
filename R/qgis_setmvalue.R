@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Set M value (native:setmvalue)
+##' QGIS Algorithm provided by QGIS (native c++) Set M value (native:setmvalue). This algorithm sets the M value for geometries in a layer.  If M values already exist in the layer, they will be overwritten with the new value. If no M values exist, the geometry will be upgraded to include M values and the specified value used as the initial M value for all geometries.
 ##'
-##' @title QGIS algorithm Set M value
+##' @title QGIS algorithm - Set M value
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param M_VALUE `number` - M Value. A numeric value.
+##' @param M_VALUE `number` - M Value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - M Added. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

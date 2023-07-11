@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Distance to nearest hub (line to hub) (qgis:distancetonearesthublinetohub)
+##' QGIS Algorithm provided by QGIS Distance to nearest hub (line to hub) (qgis:distancetonearesthublinetohub). Given an origin and a destination layers, this algorithm computes the distance between origin features and their closest destination one. Distance calculations are based on the features center. The resulting layer contains lines linking each origin point with its nearest destination feature.
 ##'
-##' @title QGIS algorithm Distance to nearest hub (line to hub)
+##' @title QGIS algorithm - Distance to nearest hub (line to hub)
 ##'
 ##' @param INPUT `source` - Source points layer. Path to a vector layer.
 ##' @param HUBS `source` - Destination hubs layer. Path to a vector layer.

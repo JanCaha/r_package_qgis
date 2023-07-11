@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_extractprojection.R
 \name{gdal_extractprojection}
 \alias{gdal_extractprojection}
-\title{QGIS algorithm Extract projection}
+\title{QGIS algorithm - Extract projection}
 \usage{
 gdal_extractprojection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -16,7 +16,7 @@ gdal_extractprojection(
 \arguments{
 \item{INPUT}{\code{raster} - Input file. Path to a raster layer.}
 
-\item{PRJ_FILE_CREATE}{\code{boolean} - Create also .prj file. 1 for true/yes. 0 for false/no.}
+\item{PRJ_FILE_CREATE}{\code{boolean} - Create also .prj file. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -27,7 +27,7 @@ gdal_extractprojection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Extract projection (gdal:extractprojection)
+QGIS Algorithm provided by GDAL Extract projection (gdal:extractprojection). ---------------- Arguments ----------------  INPUT: Input file 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer PRJ_FILE_CREATE: Create also .prj file 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
 }
 \details{
 \subsection{Outputs description}{

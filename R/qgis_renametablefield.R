@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rename field (native:renametablefield)
+##' QGIS Algorithm provided by QGIS (native c++) Rename field (native:renametablefield). Renames an existing field from a vector layer. This algorithm renames an existing field from a vector layer.
 ##'
-##' @title QGIS algorithm Rename field
+##' @title QGIS algorithm - Rename field
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Field to rename. The name of an existing field. ; delimited list of existing field names.
-##' @param NEW_NAME `string` - New field name. String value.
+##' @param NEW_NAME `string` - New field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Renamed. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

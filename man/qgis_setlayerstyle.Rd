@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_setlayerstyle.R
 \name{qgis_setlayerstyle}
 \alias{qgis_setlayerstyle}
-\title{QGIS algorithm Set layer style}
+\title{QGIS algorithm - Set layer style}
 \usage{
 qgis_setlayerstyle(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_setlayerstyle(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set layer style (native:setlayerstyle)
+QGIS Algorithm provided by QGIS (native c++) Set layer style (native:setlayerstyle). Applies the style to a layer. The style must be defined as QML file.
 }
 \details{
 \subsection{Outputs description}{

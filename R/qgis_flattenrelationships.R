@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Flatten relationship (native:flattenrelationships)
+##' QGIS Algorithm provided by QGIS (native c++) Flatten relationship (native:flattenrelationships). Flatten a relationship for a vector layer. This algorithm flattens a relationship for a vector layer, exporting a single layer containing one master feature per related feature. This master feature contains all the attributes for the related features.
 ##'
-##' @title QGIS algorithm Flatten relationship
+##' @title QGIS algorithm - Flatten relationship
 ##'
 ##' @param INPUT `vector` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Flattened layer. Path for new vector layer.

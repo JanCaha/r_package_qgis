@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_category.R
 \name{grass7_r_category}
 \alias{grass7_r_category}
-\title{QGIS algorithm r.category}
+\title{QGIS algorithm - r.category}
 \usage{
 grass7_r_category(
   map = qgisprocess:::qgis_default_value(),
@@ -26,27 +26,27 @@ grass7_r_category(
 \arguments{
 \item{map}{\code{raster} - Name of raster map. Path to a raster layer.}
 
-\item{separator}{\code{string} - Field separator (Special characters: pipe, comma, space, tab, newline). String value.}
+\item{separator}{\code{string} - Field separator (Special characters: pipe, comma, space, tab, newline). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{rules}{\code{file} - File containing category label rules. Path to a file.}
 
-\item{txtrules}{\code{string} - Inline category label rules. String value.}
+\item{txtrules}{\code{string} - Inline category label rules. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{raster}{\code{raster} - Raster map from which to copy category table. Path to a raster layer.}
 
-\item{format}{\code{string} - Default label or format string for dynamic labeling. Used when no explicit label exists for the category. String value.}
+\item{format}{\code{string} - Default label or format string for dynamic labeling. Used when no explicit label exists for the category. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{coefficients}{\code{string} - Dynamic label coefficients. Two pairs of category multiplier and offsets, for $1 and $2. String value.}
+\item{coefficients}{\code{string} - Dynamic label coefficients. Two pairs of category multiplier and offsets, for $1 and $2. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Category. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -57,7 +57,7 @@ grass7_r_category(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.category (grass7:r.category)
+QGIS Algorithm provided by GRASS r.category (grass7:r.category). Manages category values and labels associated with user-specified raster map layers.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/3d_tessellate.R
 \name{qgis_3d_tessellate}
 \alias{qgis_3d_tessellate}
-\title{QGIS algorithm Tessellate}
+\title{QGIS algorithm - Tessellate}
 \usage{
 qgis_3d_tessellate(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_3d_tessellate(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (3D) Tessellate (3d:tessellate)
+QGIS Algorithm provided by QGIS (3D) Tessellate (3d:tessellate). This algorithm tessellates a polygon geometry layer, dividing the geometries into triangular components.  The output layer consists of multipolygon geometries for each input feature, with each multipolygon consisting of multiple triangle component polygons.
 }
 \details{
 \subsection{Outputs description}{

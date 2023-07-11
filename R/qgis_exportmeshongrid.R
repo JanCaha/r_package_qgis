@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportmeshongrid)
+##' QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportmeshongrid). Exports mesh dataset values to a gridded point vector layer This algorithm exports a mesh layer's dataset values to a gridded point vector layer, with the dataset values on each point as attribute values. For data on volume (3D stacked dataset values), the exported dataset values are averaged on faces using the method defined in the mesh layer properties (default is Multi level averaging method). 1D meshes are not supported.
 ##'
-##' @title QGIS algorithm Export mesh on grid
+##' @title QGIS algorithm - Export mesh on grid
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
 ##' @param EXTENT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRID_SPACING `distance` - Grid spacing. A numeric value.
+##' @param GRID_SPACING `distance` - Grid spacing. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param CRS_OUTPUT `crs` - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param VECTOR_OPTION `enum`  of `("Cartesian (x,y)", "Polar (magnitude,degree)", "Cartesian and Polar")` - Export vector option. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `sink` - Output vector layer. Path for new vector layer.

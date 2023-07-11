@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Polar plot (qgis:polarplot)
+##' QGIS Algorithm provided by QGIS Polar plot (qgis:polarplot). This algorithm generates a polar plot based on the value of an input vector layer. Two fields must be entered as parameters: one that define the category (to group features) and another one with the variable to plot (this has to be a numeric one)
 ##'
-##' @title QGIS algorithm Polar plot
+##' @title QGIS algorithm - Polar plot
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param NAME_FIELD `field` - Category name field. The name of an existing field. ; delimited list of existing field names.

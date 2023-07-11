@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_dropmzvalues.R
 \name{qgis_dropmzvalues}
 \alias{qgis_dropmzvalues}
-\title{QGIS algorithm Drop M/Z values}
+\title{QGIS algorithm - Drop M/Z values}
 \usage{
 qgis_dropmzvalues(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,11 +18,11 @@ qgis_dropmzvalues(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DROP_M_VALUES}{\code{boolean} - Drop M Values. 1 for true/yes. 0 for false/no.}
+\item{DROP_M_VALUES}{\code{boolean} - Drop M Values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DROP_Z_VALUES}{\code{boolean} - Drop Z Values. 1 for true/yes. 0 for false/no.}
+\item{DROP_Z_VALUES}{\code{boolean} - Drop Z Values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OUTPUT}{\code{sink} - Z/M Dropped. Path for new vector layer.}
+\item{OUTPUT}{\code{sink} - Z\code{/}M Dropped. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -33,12 +33,12 @@ qgis_dropmzvalues(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues)
+QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues). This algorithm can remove any measure (M) or Z values from input geometries.
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Z/M Dropped
+\item OUTPUT - outputVector - Z\code{/}M Dropped
 }
 }
 }

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Repair Shapefile (native:repairshapefile)
+##' QGIS Algorithm provided by QGIS (native c++) Repair Shapefile (native:repairshapefile). Repairs broken Shapefiles by recreating SHX files. Repairs a broken Shapefile by recreating missing or broken SHX files.
 ##'
-##' @title QGIS algorithm Repair Shapefile
+##' @title QGIS algorithm - Repair Shapefile
 ##'
 ##' @param INPUT `file` - Input Shapefile. Path to a file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

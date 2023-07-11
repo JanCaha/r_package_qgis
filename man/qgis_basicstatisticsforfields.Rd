@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_basicstatisticsforfields.R
 \name{qgis_basicstatisticsforfields}
 \alias{qgis_basicstatisticsforfields}
-\title{QGIS algorithm Basic statistics for fields}
+\title{QGIS algorithm - Basic statistics for fields}
 \usage{
 qgis_basicstatisticsforfields(
   INPUT_LAYER = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_basicstatisticsforfields(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatisticsforfields)
+QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatisticsforfields). This algorithm generates basic statistics from the analysis of a values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type. Statistics are generated as an HTML file.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS Check validity (qgis:checkvalidity)
+##' QGIS Algorithm provided by QGIS Check validity (qgis:checkvalidity). This algorithm performs a validity check on the geometries of a vector layer. The geometries are classified in three groups (valid, invalid and error), and a vector layer is generated with the features in each of these categories. By default the algorithm uses the strict OGC definition of polygon validity, where a polygon is marked as invalid if a self-intersecting ring causes an interior hole. If the "Ignore ring self intersections" option is checked, then this rule will be ignored and a more lenient validity check will be performed. The GEOS method is faster and performs better on larger geometries, but is limited to only returning the first error encountered in a geometry. The QGIS method will be slower but reports all errors encountered in the geometry, not just the first.
 ##'
-##' @title QGIS algorithm Check validity
+##' @title QGIS algorithm - Check validity
 ##'
 ##' @param INPUT_LAYER `source` - Input layer. Path to a vector layer.
 ##' @param METHOD `enum`  of `("The one selected in digitizing settings", "QGIS", "GEOS")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param IGNORE_RING_SELF_INTERSECTION `boolean` - Ignore ring self intersections. 1 for true/yes. 0 for false/no.
+##' @param IGNORE_RING_SELF_INTERSECTION `boolean` - Ignore ring self intersections. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param VALID_OUTPUT `sink` - Valid output. Path for new vector layer.
 ##' @param INVALID_OUTPUT `sink` - Invalid output. Path for new vector layer.
 ##' @param ERROR_OUTPUT `sink` - Error output. Path for new vector layer.

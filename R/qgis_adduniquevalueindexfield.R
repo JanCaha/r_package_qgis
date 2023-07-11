@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Add unique value index field (native:adduniquevalueindexfield)
+##' QGIS Algorithm provided by QGIS (native c++) Add unique value index field (native:adduniquevalueindexfield). This algorithm takes a vector layer and an attribute and adds a new numeric field. Values in this field correspond to values in the specified attribute, so features with the same value for the attribute will have the same value in the new numeric field. This creates a numeric equivalent of the specified attribute, which defines the same classes.  The new attribute is not added to the input layer but a new layer is generated instead.  Optionally, a separate table can be output which contains a summary of the class field values mapped to the new unique numeric value.
 ##'
-##' @title QGIS algorithm Add unique value index field
+##' @title QGIS algorithm - Add unique value index field
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Class field. The name of an existing field. ; delimited list of existing field names.
-##' @param FIELD_NAME `string` - Output field name. String value.
+##' @param FIELD_NAME `string` - Output field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Layer with index field. Path for new vector layer.
 ##' @param SUMMARY_OUTPUT `sink` - Class summary. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

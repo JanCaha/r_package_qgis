@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS Variable distance buffer (qgis:variabledistancebuffer)
+##' QGIS Algorithm provided by QGIS Variable distance buffer (qgis:variabledistancebuffer). This algorithm computes a buffer area for all the features in an input layer. The size of the buffer for a given feature is defined by an attribute, so it allows different features to have different buffer sizes.
 ##'
-##' @title QGIS algorithm Variable distance buffer
+##' @title QGIS algorithm - Variable distance buffer
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Distance field. The name of an existing field. ; delimited list of existing field names.
-##' @param SEGMENTS `number` - Segments. A numeric value.
-##' @param DISSOLVE `boolean` - Dissolve result. 1 for true/yes. 0 for false/no.
+##' @param SEGMENTS `number` - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DISSOLVE `boolean` - Dissolve result. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param END_CAP_STYLE `enum`  of `("Round", "Flat", "Square")` - End cap style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param JOIN_STYLE `enum`  of `("Round", "Miter", "Bevel")` - Join style. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param MITER_LIMIT `number` - Miter limit. A numeric value.
+##' @param MITER_LIMIT `number` - Miter limit. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Buffer. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

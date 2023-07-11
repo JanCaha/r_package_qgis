@@ -2,11 +2,14 @@
 % Please edit documentation in R/gdal_gdal2xyz.R
 \name{gdal_gdal2xyz}
 \alias{gdal_gdal2xyz}
-\title{QGIS algorithm gdal2xyz}
+\title{QGIS algorithm - gdal2xyz}
 \usage{
 gdal_gdal2xyz(
   INPUT = qgisprocess:::qgis_default_value(),
   BAND = qgisprocess:::qgis_default_value(),
+  NODATA_INPUT = qgisprocess:::qgis_default_value(),
+  NODATA_OUTPUT = qgisprocess:::qgis_default_value(),
+  SKIP_NODATA = qgisprocess:::qgis_default_value(),
   CSV = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
@@ -20,7 +23,13 @@ gdal_gdal2xyz(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{CSV}{\code{boolean} - Output comma-separated values. 1 for true/yes. 0 for false/no.}
+\item{NODATA_INPUT}{\code{number} - Input pixel value to treat as "nodata". A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{NODATA_OUTPUT}{\code{number} - Assign specified "nodata" value to output. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{SKIP_NODATA}{\code{boolean} - Do not output nodata values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CSV}{\code{boolean} - Output comma-separated values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - XYZ ASCII file. Path for new file.}
 
@@ -33,7 +42,7 @@ gdal_gdal2xyz(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL gdal2xyz (gdal:gdal2xyz)
+QGIS Algorithm provided by GDAL gdal2xyz (gdal:gdal2xyz). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer BAND: Band number 	Default value:	1 	Argument type:	band 	Acceptable values: 		- Integer value representing an existing raster band number NODATA_INPUT: Input pixel value to treat as "nodata" (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NODATA_OUTPUT: Assign specified "nodata" value to output (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression SKIP_NODATA: Do not output nodata values 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression CSV: Output comma-separated values 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: XYZ ASCII file 	Argument type:	fileDestination 	Acceptable values: 		- Path for new file
 }
 \details{
 \subsection{Outputs description}{

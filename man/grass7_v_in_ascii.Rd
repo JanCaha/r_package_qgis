@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_in_ascii.R
 \name{grass7_v_in_ascii}
 \alias{grass7_v_in_ascii}
-\title{QGIS algorithm v.in.ascii}
+\title{QGIS algorithm - v.in.ascii}
 \usage{
 grass7_v_in_ascii(
   input = qgisprocess:::qgis_default_value(),
@@ -38,33 +38,33 @@ grass7_v_in_ascii(
 
 \item{format}{\code{enum}  of \verb{("point", "standard")} - Input file format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{separator}{\code{string} - Field separator. String value.}
+\item{separator}{\code{string} - Field separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{text}{\code{string} - Text delimiter. String value.}
+\item{text}{\code{string} - Text delimiter. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{skip}{\code{number} - Number of header lines to skip at top of input file. A numeric value.}
+\item{skip}{\code{number} - Number of header lines to skip at top of input file. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{columns}{\code{string} - Column definition in SQL style (example: 'x double precision, y double precision, cat int, name varchar(10)'). String value.}
+\item{columns}{\code{string} - Column definition in SQL style (example: 'x double precision, y double precision, cat int, name varchar(10)'). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{x}{\code{number} - Number of column used as x coordinate. A numeric value.}
+\item{x}{\code{number} - Number of column used as x coordinate. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{y}{\code{number} - Number of column used as y coordinate. A numeric value.}
+\item{y}{\code{number} - Number of column used as y coordinate. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{z}{\code{number} - Number of column used as z coordinate. A numeric value.}
+\item{z}{\code{number} - Number of column used as z coordinate. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{cat}{\code{number} - Number of column used as category. A numeric value.}
+\item{cat}{\code{number} - Number of column used as category. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -z.}
+\item{.z}{\code{boolean} - Create 3D vector map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -z.}
 
-\item{.n}{\code{boolean} - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Do not expect a header when reading in standard format. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.t}{\code{boolean} - Do not create table in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Do not create table in points mode. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.b}{\code{boolean} - Do not build topology in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - Do not build topology in points mode. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
-\item{.r}{\code{boolean} - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Only import points falling within current region (points mode). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.i}{\code{boolean} - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Ignore broken line(s) in points mode. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
 \item{output}{\code{vectorDestination} - ASCII. Path for new vector layer.}
 
@@ -72,11 +72,11 @@ grass7_v_in_ascii(
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -87,7 +87,7 @@ grass7_v_in_ascii(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.in.ascii (grass7:v.in.ascii)
+QGIS Algorithm provided by GRASS v.in.ascii (grass7:v.in.ascii). Creates a vector map from an ASCII points file or ASCII vector file.
 }
 \details{
 \subsection{Outputs description}{

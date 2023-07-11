@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS (native c++) Cell stack percentrank from raster layer (native:cellstackpercentrankfromrasterlayer)
+##' QGIS Algorithm provided by QGIS (native c++) Cell stack percentrank from raster layer (native:cellstackpercentrankfromrasterlayer). The Cell stack percentrank from raster layer algorithm calculates the cell-wise percentrank value of a stack of rasters based on an input value raster and writes them to an output raster.  At each cell location, the current value of the value raster is used ranked among the respective values in the stack of all overlaid and sorted cell values of the input rasters. For values outside of the the stack value distribution, the algorithm returns NoData because the value cannot be ranked among the cell values.  There are two methods for percentile calculation:ul    liInclusive linearly interpolated percent rank (PERCENTRANK.INC)/li   liExclusive linearly interpolated percent rank (PERCENTRANK.EXC)/li/ul The linear interpolation method return the unique percent rank for different values. Both interpolation methods follow their counterpart methods implemented by LibreOffice or Microsoft Excel.   The output raster's extent and resolution is defined by a reference raster. If the input raster layers that do not match the cell size of the reference raster layer will be resampled using nearest neighbor resampling.  NoData values in any of the input layers will result in a NoData cell output if the Ignore NoData parameter is not set. The output raster data type will always be Float32.
 ##'
-##' @title QGIS algorithm Cell stack percentrank from raster layer
+##' @title QGIS algorithm - Cell stack percentrank from raster layer
 ##'
 ##' @param INPUT `multilayer` - Input layers. .
 ##' @param INPUT_VALUE_RASTER `raster` - Value raster layer. Path to a raster layer.
 ##' @param VALUE_RASTER_BAND `band` - Value raster band. Integer value representing an existing raster band number.
 ##' @param METHOD `enum`  of `("Inclusive linear interpolation (PERCENTRANK.INC)", "Exclusive linear interpolation (PERCENTRANK.EXC)")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no.
+##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param REFERENCE_LAYER `raster` - Reference layer. Path to a raster layer.
-##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value.
+##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

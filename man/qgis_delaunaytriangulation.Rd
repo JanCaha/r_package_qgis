@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_delaunaytriangulation.R
 \name{qgis_delaunaytriangulation}
 \alias{qgis_delaunaytriangulation}
-\title{QGIS algorithm Delaunay triangulation}
+\title{QGIS algorithm - Delaunay triangulation}
 \usage{
 qgis_delaunaytriangulation(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_delaunaytriangulation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Delaunay triangulation (qgis:delaunaytriangulation)
+QGIS Algorithm provided by QGIS Delaunay triangulation (qgis:delaunaytriangulation). This algorithm creates a polygon layer with the delaunay triangulation corresponding to a points layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster layer zonal statistics (native:rasterlayerzonalstats)
+##' QGIS Algorithm provided by QGIS (native c++) Raster layer zonal statistics (native:rasterlayerzonalstats). Calculates statistics for a raster layer's values, categorized by zones defined in another raster layer. This algorithm calculates statistics for a raster layer's values, categorized by zones defined in another raster layer.  If the reference layer parameter is set to "Input layer", then zones are determined by sampling the zone raster layer value at the centroid of each pixel from the source raster layer.  If the reference layer parameter is set to "Zones layer", then the input raster layer will be sampled at the centroid of each pixel from the zones raster layer.  If either the source raster layer or the zone raster layer value is NODATA for a pixel, that pixel's value will be skipped and not including in the calculated statistics.
 ##'
-##' @title QGIS algorithm Raster layer zonal statistics
+##' @title QGIS algorithm - Raster layer zonal statistics
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.

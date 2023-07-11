@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Line substring (native:linesubstring)
+##' QGIS Algorithm provided by QGIS (native c++) Line substring (native:linesubstring). Returns the substring of lines which fall between start and end distances. This algorithm returns the portion of a line (or curve) which falls between the specified start and end distances (measured from the beginning of the line).  Z and M values are linearly interpolated from existing values.  If a multipart geometry is encountered, only the first part is considered when calculating the substring.
 ##'
-##' @title QGIS algorithm Line substring
+##' @title QGIS algorithm - Line substring
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param START_DISTANCE `distance` - Start distance. A numeric value.
-##' @param END_DISTANCE `distance` - End distance. A numeric value.
+##' @param START_DISTANCE `distance` - Start distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param END_DISTANCE `distance` - End distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Substring. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

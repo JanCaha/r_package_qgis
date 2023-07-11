@@ -1,25 +1,25 @@
-##' QGIS Algorithm provided by GRASS v.in.lidar (grass7:v.in.lidar)
+##' QGIS Algorithm provided by GRASS v.in.lidar (grass7:v.in.lidar). Converts LAS LiDAR point clouds to a GRASS vector map with libLAS.
 ##'
-##' @title QGIS algorithm v.in.lidar
+##' @title QGIS algorithm - v.in.lidar
 ##'
 ##' @param input `file` - LiDAR input files in LAS format (*.las or *.laz). Path to a file.
 ##' @param spatial `extent` - Import subregion only. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param zrange `range` - Filter range for z data. Two comma separated numeric values, e.g. '1,10'.
 ##' @param return_filter `enum`  of `("first", "last", "mid")` - Only import points of selected return type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param class_filter `string` - Only import points of selected class(es) (comma separated integers). String value.
-##' @param skip `number` - Do not import every n-th point. A numeric value.
-##' @param preserve `number` - Import only every n-th point. A numeric value.
-##' @param offset `number` - Skip first n points. A numeric value.
-##' @param limit `number` - Import only n points. A numeric value.
-##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.
-##' @param .c `boolean` - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.
-##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param class_filter `string` - Only import points of selected class(es) (comma separated integers). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param skip `number` - Do not import every n-th point. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param preserve `number` - Import only every n-th point. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param offset `number` - Skip first n points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param limit `number` - Import only n points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .t `boolean` - Do not create attribute table. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.
+##' @param .c `boolean` - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.
+##' @param .b `boolean` - Do not build topology. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.
 ##' @param output `vectorDestination` - Lidar. Path for new vector layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param GRASS_OUTPUT_TYPE_PARAMETER `enum`  of `("auto", "point", "line", "area")` - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value.
-##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value.
-##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.
+##' @param GRASS_VECTOR_DSCO `string` - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_LCO `string` - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_VECTOR_EXPORT_NOCAT `boolean` - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

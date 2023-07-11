@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rasterize mesh dataset (native:meshrasterize)
+##' QGIS Algorithm provided by QGIS (native c++) Rasterize mesh dataset (native:meshrasterize). Creates a raster layer from a mesh dataset This algorithm creates a raster layer from a mesh dataset. For data on volume (3D stacked dataset values), the exported dataset values are averaged on faces using the method defined in the mesh layer properties (default is Multi level averaging method). 1D meshes are not supported.
 ##'
-##' @title QGIS algorithm Rasterize mesh dataset
+##' @title QGIS algorithm - Rasterize mesh dataset
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
 ##' @param EXTENT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param PIXEL_SIZE `distance` - Pixel size. A numeric value.
+##' @param PIXEL_SIZE `distance` - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param CRS_OUTPUT `crs` - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param OUTPUT `rasterDestination` - Output raster layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

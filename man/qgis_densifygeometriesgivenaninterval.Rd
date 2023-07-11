@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_densifygeometriesgivenaninterval.R
 \name{qgis_densifygeometriesgivenaninterval}
 \alias{qgis_densifygeometriesgivenaninterval}
-\title{QGIS algorithm Densify by interval}
+\title{QGIS algorithm - Densify by interval}
 \usage{
 qgis_densifygeometriesgivenaninterval(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_densifygeometriesgivenaninterval(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{INTERVAL}{\code{distance} - Interval between vertices to add. A numeric value.}
+\item{INTERVAL}{\code{distance} - Interval between vertices to add. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Densified. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_densifygeometriesgivenaninterval(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Densify by interval (native:densifygeometriesgivenaninterval)
+QGIS Algorithm provided by QGIS (native c++) Densify by interval (native:densifygeometriesgivenaninterval). Creates a densified version of geometries. Geometries are densified by adding additional vertices on edges that have a maximum distance of the interval parameter in map units.
 }
 \details{
 \subsection{Outputs description}{

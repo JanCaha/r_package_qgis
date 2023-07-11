@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Explode lines (native:explodelines)
+##' QGIS Algorithm provided by QGIS (native c++) Explode lines (native:explodelines). This algorithm takes a lines layer and creates a new one in which each line is replaced by a set of lines representing the segments in the original line. Each line in the resulting layer contains only a start and an end point, with no intermediate nodes between them.  If the input layer consists of CircularStrings or CompoundCurves, the output layer will be of the same type and contain only single curve segments.
 ##'
-##' @title QGIS algorithm Explode lines
+##' @title QGIS algorithm - Explode lines
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Exploded. Path for new vector layer.

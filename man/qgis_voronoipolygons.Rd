@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_voronoipolygons.R
 \name{qgis_voronoipolygons}
 \alias{qgis_voronoipolygons}
-\title{QGIS algorithm Voronoi polygons}
+\title{QGIS algorithm - Voronoi polygons}
 \usage{
 qgis_voronoipolygons(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_voronoipolygons(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{BUFFER}{\code{number} - Buffer region (\% of extent). A numeric value.}
+\item{BUFFER}{\code{number} - Buffer region (\% of extent). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Voronoi polygons. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_voronoipolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Voronoi polygons (qgis:voronoipolygons)
+QGIS Algorithm provided by QGIS Voronoi polygons (qgis:voronoipolygons). This algorithm takes a points layer and generates a polygon layer containing the voronoi polygons corresponding to those input points.
 }
 \details{
 \subsection{Outputs description}{

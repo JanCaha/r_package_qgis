@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by GDAL RGB to PCT (gdal:rgbtopct)
+##' QGIS Algorithm provided by GDAL RGB to PCT (gdal:rgbtopct). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer NCOLORS: Number of colors 	Default value:	2 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: RGB to PCT 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 ##'
-##' @title QGIS algorithm RGB to PCT
+##' @title QGIS algorithm - RGB to PCT
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
-##' @param NCOLORS `number` - Number of colors. A numeric value.
+##' @param NCOLORS `number` - Number of colors. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - RGB to PCT. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

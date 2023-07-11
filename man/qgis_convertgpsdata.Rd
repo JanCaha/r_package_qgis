@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_convertgpsdata.R
 \name{qgis_convertgpsdata}
 \alias{qgis_convertgpsdata}
-\title{QGIS algorithm Convert GPS data}
+\title{QGIS algorithm - Convert GPS data}
 \usage{
 qgis_convertgpsdata(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,7 +18,7 @@ qgis_convertgpsdata(
 \arguments{
 \item{INPUT}{\code{file} - Input file. Path to a file.}
 
-\item{FORMAT}{\code{string} - Format. String value.}
+\item{FORMAT}{\code{string} - Format. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FEATURE_TYPE}{\code{enum}  of \verb{("Waypoints", "Routes", "Tracks")} - Feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -33,7 +33,7 @@ qgis_convertgpsdata(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert GPS data (native:convertgpsdata)
+QGIS Algorithm provided by QGIS (native c++) Convert GPS data (native:convertgpsdata). This algorithm uses the GPSBabel tool to convert a GPS data file from a range of formats to the GPX standard format.
 }
 \details{
 \subsection{Outputs description}{

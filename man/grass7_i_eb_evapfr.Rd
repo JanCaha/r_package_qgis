@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_eb_evapfr.R
 \name{grass7_i_eb_evapfr}
 \alias{grass7_i_eb_evapfr}
-\title{QGIS algorithm i.eb.evapfr}
+\title{QGIS algorithm - i.eb.evapfr}
 \usage{
 grass7_i_eb_evapfr(
   netradiation = qgisprocess:::qgis_default_value(),
@@ -21,11 +21,11 @@ grass7_i_eb_evapfr(
 )
 }
 \arguments{
-\item{netradiation}{\code{raster} - Name of Net Radiation raster map (W/m2). Path to a raster layer.}
+\item{netradiation}{\code{raster} - Name of Net Radiation raster map (W\code{/}m2). Path to a raster layer.}
 
-\item{soilheatflux}{\code{raster} - Name of soil heat flux raster map (W/m2). Path to a raster layer.}
+\item{soilheatflux}{\code{raster} - Name of soil heat flux raster map (W\code{/}m2). Path to a raster layer.}
 
-\item{sensibleheatflux}{\code{raster} - Name of sensible heat flux raster map (W/m2). Path to a raster layer.}
+\item{sensibleheatflux}{\code{raster} - Name of sensible heat flux raster map (W\code{/}m2). Path to a raster layer.}
 
 \item{evaporativefraction}{\code{rasterDestination} - Evaporative Fraction. Path for new raster layer.}
 
@@ -33,11 +33,11 @@ grass7_i_eb_evapfr(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_i_eb_evapfr(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.eb.evapfr (grass7:i.eb.evapfr)
+QGIS Algorithm provided by GRASS i.eb.evapfr (grass7:i.eb.evapfr). Computes evaporative fraction (Bastiaanssen, 1995) and root zone soil moisture (Makin, Molden and Bastiaanssen, 2001).
 }
 \details{
 \subsection{Outputs description}{

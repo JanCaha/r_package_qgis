@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_clipvectorbyextent.R
 \name{gdal_clipvectorbyextent}
 \alias{gdal_clipvectorbyextent}
-\title{QGIS algorithm Clip vector by extent}
+\title{QGIS algorithm - Clip vector by extent}
 \usage{
 gdal_clipvectorbyextent(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ gdal_clipvectorbyextent(
 
 \item{EXTENT}{\code{extent} - Clipping extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Clipped (extent). Path for new vector layer.}
 
@@ -33,7 +33,7 @@ gdal_clipvectorbyextent(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Clip vector by extent (gdal:clipvectorbyextent)
+QGIS Algorithm provided by GDAL Clip vector by extent (gdal:clipvectorbyextent). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer EXTENT: Clipping extent 	Argument type:	extent 	Acceptable values: 		- A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105' 		- Path to a layer. The extent of the layer is used. OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Clipped (extent) 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

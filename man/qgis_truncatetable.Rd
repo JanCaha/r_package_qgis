@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_truncatetable.R
 \name{qgis_truncatetable}
 \alias{qgis_truncatetable}
-\title{QGIS algorithm Truncate table}
+\title{QGIS algorithm - Truncate table}
 \usage{
 qgis_truncatetable(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,7 +24,7 @@ qgis_truncatetable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Truncate table (native:truncatetable)
+QGIS Algorithm provided by QGIS (native c++) Truncate table (native:truncatetable). This algorithm truncates a layer, by deleting all features from within the layer.  Warning — this algorithm modifies the layer in place, and deleted features cannot be restored!
 }
 \details{
 \subsection{Outputs description}{

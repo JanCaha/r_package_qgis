@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_setmvalue.R
 \name{qgis_setmvalue}
 \alias{qgis_setmvalue}
-\title{QGIS algorithm Set M value}
+\title{QGIS algorithm - Set M value}
 \usage{
 qgis_setmvalue(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_setmvalue(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{M_VALUE}{\code{number} - M Value. A numeric value.}
+\item{M_VALUE}{\code{number} - M Value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - M Added. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_setmvalue(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set M value (native:setmvalue)
+QGIS Algorithm provided by QGIS (native c++) Set M value (native:setmvalue). This algorithm sets the M value for geometries in a layer.  If M values already exist in the layer, they will be overwritten with the new value. If no M values exist, the geometry will be upgraded to include M values and the specified value used as the initial M value for all geometries.
 }
 \details{
 \subsection{Outputs description}{

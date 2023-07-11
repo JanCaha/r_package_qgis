@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_setmfromraster.R
 \name{qgis_setmfromraster}
 \alias{qgis_setmfromraster}
-\title{QGIS algorithm Set M value from raster}
+\title{QGIS algorithm - Set M value from raster}
 \usage{
 qgis_setmfromraster(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -10,6 +10,7 @@ qgis_setmfromraster(
   BAND = qgisprocess:::qgis_default_value(),
   NODATA = qgisprocess:::qgis_default_value(),
   SCALE = qgisprocess:::qgis_default_value(),
+  OFFSET = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -24,9 +25,11 @@ qgis_setmfromraster(
 
 \item{BAND}{\code{band} - Band number. Integer value representing an existing raster band number.}
 
-\item{NODATA}{\code{number} - Value for nodata or non-intersecting vertices. A numeric value.}
+\item{NODATA}{\code{number} - Value for nodata or non-intersecting vertices. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SCALE}{\code{number} - Scale factor. A numeric value.}
+\item{SCALE}{\code{number} - Scale factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{OFFSET}{\code{number} - Offset. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Draped. Path for new vector layer.}
 
@@ -39,7 +42,7 @@ qgis_setmfromraster(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set M value from raster (native:setmfromraster)
+QGIS Algorithm provided by QGIS (native c++) Set M value from raster (native:setmfromraster). Sets the M value for vertices to values sampled from a raster layer. This algorithm sets the M value for every vertex in the feature geometry to a value sampled from a band within a raster layer.  The raster values can optionally be scaled by a preset amount and an offset can be algebraically added.
 }
 \details{
 \subsection{Outputs description}{

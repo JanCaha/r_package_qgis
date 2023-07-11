@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Delete duplicate geometries (native:deleteduplicategeometries)
+##' QGIS Algorithm provided by QGIS (native c++) Delete duplicate geometries (native:deleteduplicategeometries). Finds duplicated geometries in a layer and removes them. This algorithm finds duplicated geometries and removes them.  Attributes are not checked, so in case two features have identical geometries but different attributes, only one of them will be added to the result layer.
 ##'
-##' @title QGIS algorithm Delete duplicate geometries
+##' @title QGIS algorithm - Delete duplicate geometries
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Cleaned. Path for new vector layer.

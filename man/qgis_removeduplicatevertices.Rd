@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_removeduplicatevertices.R
 \name{qgis_removeduplicatevertices}
 \alias{qgis_removeduplicatevertices}
-\title{QGIS algorithm Remove duplicate vertices}
+\title{QGIS algorithm - Remove duplicate vertices}
 \usage{
 qgis_removeduplicatevertices(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -18,9 +18,9 @@ qgis_removeduplicatevertices(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value.}
+\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{USE_Z_VALUE}{\code{boolean} - Use Z Value. 1 for true/yes. 0 for false/no.}
+\item{USE_Z_VALUE}{\code{boolean} - Use Z Value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Cleaned. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_removeduplicatevertices(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Remove duplicate vertices (native:removeduplicatevertices)
+QGIS Algorithm provided by QGIS (native c++) Remove duplicate vertices (native:removeduplicatevertices). This algorithm removes duplicate vertices from features, wherever removing the vertices does not result in a degenerate geometry.  The tolerance parameter specifies the tolerance for coordinates when determining whether vertices are identical.  By default, z values are not considered when detecting duplicate vertices. E.g. two vertices with the same x and y coordinate but different z values will still be considered duplicate and one will be removed. If the Use Z Value parameter is true, then the z values are also tested and vertices with the same x and y but different z will be maintained.  Note that duplicate vertices are not tested between different parts of a multipart geometry. E.g. a multipoint geometry with overlapping points will not be changed by this method.
 }
 \details{
 \subsection{Outputs description}{

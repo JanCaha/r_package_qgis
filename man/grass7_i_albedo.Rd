@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_albedo.R
 \name{grass7_i_albedo}
 \alias{grass7_i_albedo}
-\title{QGIS algorithm i.albedo}
+\title{QGIS algorithm - i.albedo}
 \usage{
 grass7_i_albedo(
   input = qgisprocess:::qgis_default_value(),
@@ -27,29 +27,29 @@ grass7_i_albedo(
 \arguments{
 \item{input}{\code{multilayer} - Name of input raster maps. .}
 
-\item{.m}{\code{boolean} - MODIS (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - MODIS (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
-\item{.n}{\code{boolean} - NOAA AVHRR (2 input bands:1,2). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - NOAA AVHRR (2 input bands:1,2). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.l}{\code{boolean} - Landsat 5+7 (6 input bands:1,2,3,4,5,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
+\item{.l}{\code{boolean} - Landsat 5+7 (6 input bands:1,2,3,4,5,7). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.}
 
-\item{.arg_8}{\code{boolean} - Landsat 8 (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -8.}
+\item{.arg_8}{\code{boolean} - Landsat 8 (7 input bands:1,2,3,4,5,6,7). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -8.}
 
-\item{.a}{\code{boolean} - ASTER (6 input bands:1,3,5,6,8,9). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - ASTER (6 input bands:1,3,5,6,8,9). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Aggressive mode (Landsat). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Aggressive mode (Landsat). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.d}{\code{boolean} - Soft mode (MODIS). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Soft mode (MODIS). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
 \item{output}{\code{rasterDestination} - Albedo. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -60,7 +60,7 @@ grass7_i_albedo(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.albedo (grass7:i.albedo)
+QGIS Algorithm provided by GRASS i.albedo (grass7:i.albedo). Computes broad band albedo from surface reflectance.
 }
 \details{
 \subsection{Outputs description}{

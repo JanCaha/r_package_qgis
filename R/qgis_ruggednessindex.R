@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Ruggedness index (native:ruggednessindex)
+##' QGIS Algorithm provided by QGIS (native c++) Ruggedness index (native:ruggednessindex). This algorithm calculates the quantitative measurement of terrain heterogeneity described by Riley et al. (1999).  It is calculated for every location, by summarizing the change in elevation within the 3x3 pixel grid. Each pixel contains the difference in elevation from a center cell and the 8 cells surrounding it.
 ##'
-##' @title QGIS algorithm Ruggedness index
+##' @title QGIS algorithm - Ruggedness index
 ##'
 ##' @param INPUT `raster` - Elevation layer. Path to a raster layer.
-##' @param Z_FACTOR `number` - Z factor. A numeric value.
+##' @param Z_FACTOR `number` - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Ruggedness. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

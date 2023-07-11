@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatisticsforfields)
+##' QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatisticsforfields). This algorithm generates basic statistics from the analysis of a values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type. Statistics are generated as an HTML file.
 ##'
-##' @title QGIS algorithm Basic statistics for fields
+##' @title QGIS algorithm - Basic statistics for fields
 ##'
 ##' @param INPUT_LAYER `source` - Input layer. Path to a vector layer.
 ##' @param FIELD_NAME `field` - Field to calculate statistics on. The name of an existing field. ; delimited list of existing field names.

@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Sum line lengths (native:sumlinelengths)
+##' QGIS Algorithm provided by QGIS (native c++) Sum line lengths (native:sumlinelengths). This algorithm takes a polygon layer and a line layer and measures the total length of lines and the total number of them that cross each polygon.  The resulting layer has the same features as the input polygon layer, but with two additional attributes containing the length and count of the lines across each polygon. The names of these two fields can be configured in the algorithm parameters.
 ##'
-##' @title QGIS algorithm Sum line lengths
+##' @title QGIS algorithm - Sum line lengths
 ##'
 ##' @param POLYGONS `source` - Polygons. Path to a vector layer.
 ##' @param LINES `source` - Lines. Path to a vector layer.
-##' @param LEN_FIELD `string` - Lines length field name. String value.
-##' @param COUNT_FIELD `string` - Lines count field name. String value.
+##' @param LEN_FIELD `string` - Lines length field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param COUNT_FIELD `string` - Lines count field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Line length. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

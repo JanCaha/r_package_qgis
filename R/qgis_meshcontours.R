@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontours)
+##' QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontours). Creates contours as vector layer from mesh scalar dataset This algorithm creates contours as a vector layer from a mesh scalar dataset.
 ##'
-##' @title QGIS algorithm Export contours
+##' @title QGIS algorithm - Export contours
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .
 ##' @param DATASET_TIME `meshdatasettime` - Dataset time. .
-##' @param INCREMENT `number` - Increment between contour levels. A numeric value.
-##' @param MINIMUM `number` - Minimum contour level. A numeric value.
-##' @param MAXIMUM `number` - Maximum contour level. A numeric value.
-##' @param CONTOUR_LEVEL_LIST `string` - List of contours level. String value.
+##' @param INCREMENT `number` - Increment between contour levels. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MINIMUM `number` - Minimum contour level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MAXIMUM `number` - Maximum contour level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param CONTOUR_LEVEL_LIST `string` - List of contours level. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param CRS_OUTPUT `crs` - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param OUTPUT_LINES `sink` - Exported contour lines. Path for new vector layer.
 ##' @param OUTPUT_POLYGONS `sink` - Exported contour polygons. Path for new vector layer.

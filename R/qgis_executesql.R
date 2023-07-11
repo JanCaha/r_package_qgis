@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql)
+##' QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql). Runs a simple or complex query with SQL syntax on the source layer. Input datasources are identified with input1, input2, ..., inputN and a simple query will look like: SELECT * FROM input1 The result of the query will be added as a new layer.
 ##'
-##' @title QGIS algorithm Execute SQL
+##' @title QGIS algorithm - Execute SQL
 ##'
 ##' @param INPUT_DATASOURCES `multilayer` - Additional input datasources (called input1, .., inputN in the query). .
 ##' @param INPUT_QUERY `execute_sql` - SQL query. .
-##' @param INPUT_UID_FIELD `string` - Unique identifier field. String value.
-##' @param INPUT_GEOMETRY_FIELD `string` - Geometry field. String value.
+##' @param INPUT_UID_FIELD `string` - Unique identifier field. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param INPUT_GEOMETRY_FIELD `string` - Geometry field. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param INPUT_GEOMETRY_TYPE `enum`  of `("Autodetect", "No geometry", "Point", "LineString", "Polygon", "MultiPoint", "MultiLineString", "MultiPolygon")` - Geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param INPUT_GEOMETRY_CRS `crs` - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param OUTPUT `sink` - SQL Output. Path for new vector layer.

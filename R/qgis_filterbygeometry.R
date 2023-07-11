@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Filter by geometry type (native:filterbygeometry)
+##' QGIS Algorithm provided by QGIS (native c++) Filter by geometry type (native:filterbygeometry). Filters features by geometry type This algorithm filters features by their geometry type. Incoming features will be directed to different outputs based on whether they have a point, line or polygon geometry.
 ##'
-##' @title QGIS algorithm Filter by geometry type
+##' @title QGIS algorithm - Filter by geometry type
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param POINTS `sink` - Point features. Path for new vector layer.

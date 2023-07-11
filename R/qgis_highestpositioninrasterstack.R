@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Highest position in raster stack (native:highestpositioninrasterstack)
+##' QGIS Algorithm provided by QGIS (native c++) Highest position in raster stack (native:highestpositioninrasterstack). The highest position algorithm evaluates on a cell-by-cell basis the position of the raster with the highest value in a stack of rasters. Position counts start with 1 and range to the total number of input rasters. The order of the input rasters is relevant for the algorithm. If multiple rasters feature the highest value, the first raster will be used for the position value.  If multiband rasters are used in the data raster stack, the algorithm will always perform the analysis on the first band of the rasters - use GDAL to use other bands in the analysis. Any NoData cells in the raster layer stack will result in a NoData cell in the output raster unless the "ignore NoData" parameter is checked. The output NoData value can be set manually. The output rasters extent and resolution is defined by a reference raster layer and is always of int32 type.
 ##'
-##' @title QGIS algorithm Highest position in raster stack
+##' @title QGIS algorithm - Highest position in raster stack
 ##'
 ##' @param INPUT_RASTERS `multilayer` - Input raster layers. .
 ##' @param REFERENCE_LAYER `raster` - Reference layer. Path to a raster layer.
-##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no.
-##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value.
+##' @param IGNORE_NODATA `boolean` - Ignore NoData values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param OUTPUT_NODATA_VALUE `number` - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

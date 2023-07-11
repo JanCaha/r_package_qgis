@@ -1,23 +1,23 @@
-##' QGIS Algorithm provided by GRASS v.to.rast (grass7:v.to.rast)
+##' QGIS Algorithm provided by GRASS v.to.rast (grass7:v.to.rast). Converts (rasterize) a vector layer into a raster layer.
 ##'
-##' @title QGIS algorithm v.to.rast
+##' @title QGIS algorithm - v.to.rast
 ##'
 ##' @param input `source` - Input vector layer. Path to a vector layer.
 ##' @param type `enum`  of `("point", "line", "boundary", "area")` - Input feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value.
+##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param use `enum`  of `("attr", "cat", "val", "z", "dir")` - Source of raster values. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param attribute_column `field` - Name of column for 'attr' parameter (data type must be numeric). The name of an existing field. ; delimited list of existing field names.
 ##' @param rgb_column `field` - Name of color definition column (with RRR:GGG:BBB entries). The name of an existing field. ; delimited list of existing field names.
 ##' @param label_column `field` - Name of column used as raster category labels. The name of an existing field. ; delimited list of existing field names.
-##' @param value `number` - Raster value (for use=val). A numeric value.
-##' @param memory `number` - Maximum memory to be used (in MB). A numeric value.
+##' @param value `number` - Raster value (for use=val). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param memory `number` - Maximum memory to be used (in MB). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param output `rasterDestination` - Rasterized. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
-##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.
-##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

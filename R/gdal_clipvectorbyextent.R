@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by GDAL Clip vector by extent (gdal:clipvectorbyextent)
+##' QGIS Algorithm provided by GDAL Clip vector by extent (gdal:clipvectorbyextent). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer EXTENT: Clipping extent 	Argument type:	extent 	Acceptable values: 		- A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105' 		- Path to a layer. The extent of the layer is used. OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Clipped (extent) 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 ##'
-##' @title QGIS algorithm Clip vector by extent
+##' @title QGIS algorithm - Clip vector by extent
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param EXTENT `extent` - Clipping extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param OPTIONS `string` - Additional creation options. String value.
+##' @param OPTIONS `string` - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `vectorDestination` - Clipped (extent). Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_evapo_time.R
 \name{grass7_i_evapo_time}
 \alias{grass7_i_evapo_time}
-\title{QGIS algorithm i.evapo.time}
+\title{QGIS algorithm - i.evapo.time}
 \usage{
 grass7_i_evapo_time(
   eta = qgisprocess:::qgis_default_value(),
@@ -23,27 +23,27 @@ grass7_i_evapo_time(
 )
 }
 \arguments{
-\item{eta}{\code{multilayer} - Names of satellite ETa raster maps (mm/d or cm/d). .}
+\item{eta}{\code{multilayer} - Names of satellite ETa raster maps (mm\code{/}d or cm\code{/}d). .}
 
 \item{eta_doy}{\code{multilayer} - Names of satellite ETa Day of Year (DOY) raster maps (0-400) (-). .}
 
-\item{eto}{\code{multilayer} - Names of meteorological station ETo raster maps (0-400) (mm/d or cm/d). .}
+\item{eto}{\code{multilayer} - Names of meteorological station ETo raster maps (0-400) (mm\code{/}d or cm\code{/}d). .}
 
-\item{eto_doy_min}{\code{number} - Value of DOY for ETo first day. A numeric value.}
+\item{eto_doy_min}{\code{number} - Value of DOY for ETo first day. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{start_period}{\code{number} - Value of DOY for the first day of the period studied. A numeric value.}
+\item{start_period}{\code{number} - Value of DOY for the first day of the period studied. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{end_period}{\code{number} - Value of DOY for the last day of the period studied. A numeric value.}
+\item{end_period}{\code{number} - Value of DOY for the last day of the period studied. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Temporal integration. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,7 +54,7 @@ grass7_i_evapo_time(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.evapo.time (grass7:i.evapo.time)
+QGIS Algorithm provided by GRASS i.evapo.time (grass7:i.evapo.time). Computes temporal integration of satellite ET actual (ETa) following the daily ET reference (ETo) from meteorological station(s).
 }
 \details{
 \subsection{Outputs description}{

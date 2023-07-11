@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_keepnbiggestparts.R
 \name{qgis_keepnbiggestparts}
 \alias{qgis_keepnbiggestparts}
-\title{QGIS algorithm Keep N biggest parts}
+\title{QGIS algorithm - Keep N biggest parts}
 \usage{
 qgis_keepnbiggestparts(
   POLYGONS = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_keepnbiggestparts(
 \arguments{
 \item{POLYGONS}{\code{source} - Polygons. Path to a vector layer.}
 
-\item{PARTS}{\code{number} - Parts to keep. A numeric value.}
+\item{PARTS}{\code{number} - Parts to keep. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Parts. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_keepnbiggestparts(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Keep N biggest parts (qgis:keepnbiggestparts)
+QGIS Algorithm provided by QGIS Keep N biggest parts (qgis:keepnbiggestparts). This algorithm takes a polygon layer and creates a new polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts.
 }
 \details{
 \subsection{Outputs description}{

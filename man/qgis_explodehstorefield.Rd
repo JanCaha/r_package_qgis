@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_explodehstorefield.R
 \name{qgis_explodehstorefield}
 \alias{qgis_explodehstorefield}
-\title{QGIS algorithm Explode HStore Field}
+\title{QGIS algorithm - Explode HStore Field}
 \usage{
 qgis_explodehstorefield(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_explodehstorefield(
 
 \item{FIELD}{\code{field} - HStore field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{EXPECTED_FIELDS}{\code{string} - Expected list of fields separated by a comma. String value.}
+\item{EXPECTED_FIELDS}{\code{string} - Expected list of fields separated by a comma. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Exploded. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_explodehstorefield(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Explode HStore Field (native:explodehstorefield)
+QGIS Algorithm provided by QGIS (native c++) Explode HStore Field (native:explodehstorefield). This algorithm creates a copy of the input layer and adds a new field for every unique key in the HStore field. The expected field list is an optional comma separated list. By default, all unique keys are added. If this list is specified, only these fields are added and the HStore field is updated.
 }
 \details{
 \subsection{Outputs description}{

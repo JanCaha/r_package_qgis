@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_explodelines.R
 \name{qgis_explodelines}
 \alias{qgis_explodelines}
-\title{QGIS algorithm Explode lines}
+\title{QGIS algorithm - Explode lines}
 \usage{
 qgis_explodelines(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_explodelines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Explode lines (native:explodelines)
+QGIS Algorithm provided by QGIS (native c++) Explode lines (native:explodelines). This algorithm takes a lines layer and creates a new one in which each line is replaced by a set of lines representing the segments in the original line. Each line in the resulting layer contains only a start and an end point, with no intermediate nodes between them.  If the input layer consists of CircularStrings or CompoundCurves, the output layer will be of the same type and contain only single curve segments.
 }
 \details{
 \subsection{Outputs description}{

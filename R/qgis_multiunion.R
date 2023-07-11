@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Union (multiple) (native:multiunion)
+##' QGIS Algorithm provided by QGIS (native c++) Union (multiple) (native:multiunion). This algorithm checks overlaps between features within the Input layer and creates separate features for overlapping and non-overlapping parts. The area of overlap will create as many identical overlapping features as there are features that participate in that overlap.  Multiple Overlay layers can also be used, in which case features from each layer are split at their overlap with features from all other layers, creating a layer containing all the portions from both Input and Overlay layers. The attribute table of the Union layer is filled with attribute values from the respective original layer for non-overlapping features, and attribute values from both layers for overlapping features.
 ##'
-##' @title QGIS algorithm Union (multiple)
+##' @title QGIS algorithm - Union (multiple)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OVERLAYS `multilayer` - Overlay layers. .
-##' @param OVERLAY_FIELDS_PREFIX `string` - Overlay fields prefix. String value.
+##' @param OVERLAY_FIELDS_PREFIX `string` - Overlay fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Union. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

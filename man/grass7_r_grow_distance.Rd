@@ -2,13 +2,13 @@
 % Please edit documentation in R/grass7_r_grow_distance.R
 \name{grass7_r_grow_distance}
 \alias{grass7_r_grow_distance}
-\title{QGIS algorithm r.grow.distance}
+\title{QGIS algorithm - r.grow.distance}
 \usage{
 grass7_r_grow_distance(
   input = qgisprocess:::qgis_default_value(),
   metric = qgisprocess:::qgis_default_value(),
   .m = qgisprocess:::qgis_default_value(),
-  . = qgisprocess:::qgis_default_value(),
+  .n = qgisprocess:::qgis_default_value(),
   distance = qgisprocess:::qgis_default_value(),
   value = qgisprocess:::qgis_default_value(),
   GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
@@ -26,9 +26,9 @@ grass7_r_grow_distance(
 
 \item{metric}{\code{enum}  of \verb{("euclidean", "squared", "maximum", "manhattan", "geodesic")} - Metric. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.m}{\code{boolean} - Output distances in meters instead of map units. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - Output distances in meters instead of map units. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
-\item{.}{\code{boolean} - Calculate distance to nearest NULL cell. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -.}
+\item{.n}{\code{boolean} - Calculate distance to nearest NULL cell. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
 \item{distance}{\code{rasterDestination} - Distance. Path for new raster layer.}
 
@@ -36,11 +36,11 @@ grass7_r_grow_distance(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_grow_distance(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.grow.distance (grass7:r.grow.distance)
+QGIS Algorithm provided by GRASS r.grow.distance (grass7:r.grow.distance). Generates a raster layer of distance to features in input layer.
 }
 \details{
 \subsection{Outputs description}{

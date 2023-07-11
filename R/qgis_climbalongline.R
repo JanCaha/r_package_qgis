@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Climb along line (qgis:climbalongline)
+##' QGIS Algorithm provided by QGIS Climb along line (qgis:climbalongline). This algorithm calculates the total climb and descent along line geometries. Input layers must have Z values present. If Z values are not available, the "Drape" (set Z value from raster) algorithm may be used to add Z values from a DEM layer. The output layer is a copy of the input layer with additional fields that contain the total climb, total descent, the minimum elevation and the maximum elevation for each line geometry. If the input layer contains fields with the same names as these added fields, they will be renamed (field names will be altered to "name_2", "name_3", etc, finding the first non-duplicate name).
 ##'
-##' @title QGIS algorithm Climb along line
+##' @title QGIS algorithm - Climb along line
 ##'
 ##' @param INPUT `source` - Line layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Climb layer. Path for new vector layer.

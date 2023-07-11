@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_rectanglesovalsdiamondsvariable.R
 \name{qgis_rectanglesovalsdiamondsvariable}
 \alias{qgis_rectanglesovalsdiamondsvariable}
-\title{QGIS algorithm Rectangles, ovals, diamonds (variable)}
+\title{QGIS algorithm - Rectangles, ovals, diamonds (variable)}
 \usage{
 qgis_rectanglesovalsdiamondsvariable(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -29,7 +29,7 @@ qgis_rectanglesovalsdiamondsvariable(
 
 \item{ROTATION}{\code{field} - Rotation field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{SEGMENTS}{\code{number} - Number of segments. A numeric value.}
+\item{SEGMENTS}{\code{number} - Number of segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Output. Path for new vector layer.}
 
@@ -42,7 +42,7 @@ qgis_rectanglesovalsdiamondsvariable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Rectangles, ovals, diamonds (variable) (qgis:rectanglesovalsdiamondsvariable)
+QGIS Algorithm provided by QGIS Rectangles, ovals, diamonds (variable) (qgis:rectanglesovalsdiamondsvariable). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer SHAPE: Buffer shape 	Argument type:	enum 	Available values: 		- 0: Rectangles 		- 1: Diamonds 		- 2: Ovals 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' WIDTH: Width field 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names HEIGHT: Height field 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names ROTATION: Rotation field (optional) 	Argument type:	field 	Acceptable values: 		- The name of an existing field 		- ; delimited list of existing field names SEGMENTS: Number of segments 	Default value:	36 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Output 	Argument type:	sink 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

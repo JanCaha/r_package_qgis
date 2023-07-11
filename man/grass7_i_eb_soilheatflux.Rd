@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_eb_soilheatflux.R
 \name{grass7_i_eb_soilheatflux}
 \alias{grass7_i_eb_soilheatflux}
-\title{QGIS algorithm i.eb.soilheatflux}
+\title{QGIS algorithm - i.eb.soilheatflux}
 \usage{
 grass7_i_eb_soilheatflux(
   albedo = qgisprocess:::qgis_default_value(),
@@ -29,21 +29,21 @@ grass7_i_eb_soilheatflux(
 
 \item{temperature}{\code{raster} - Name of Surface temperature raster map (K). Path to a raster layer.}
 
-\item{netradiation}{\code{raster} - Name of Net Radiation raster map (W/m2). Path to a raster layer.}
+\item{netradiation}{\code{raster} - Name of Net Radiation raster map (W\code{/}m2). Path to a raster layer.}
 
 \item{localutctime}{\code{raster} - Name of time of satellite overpass raster map (local time in UTC). Path to a raster layer.}
 
-\item{.r}{\code{boolean} - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
 \item{output}{\code{rasterDestination} - Soil Heat Flux. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,7 +54,7 @@ grass7_i_eb_soilheatflux(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.eb.soilheatflux (grass7:i.eb.soilheatflux)
+QGIS Algorithm provided by GRASS i.eb.soilheatflux (grass7:i.eb.soilheatflux). Soil heat flux approximation (Bastiaanssen, 1995).
 }
 \details{
 \subsection{Outputs description}{

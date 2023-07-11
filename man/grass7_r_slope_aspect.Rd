@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_slope_aspect.R
 \name{grass7_r_slope_aspect}
 \alias{grass7_r_slope_aspect}
-\title{QGIS algorithm r.slope.aspect}
+\title{QGIS algorithm - r.slope.aspect}
 \usage{
 grass7_r_slope_aspect(
   elevation = qgisprocess:::qgis_default_value(),
@@ -39,15 +39,15 @@ grass7_r_slope_aspect(
 
 \item{precision}{\code{enum}  of \verb{("FCELL", "CELL", "DCELL")} - Type of output aspect and slope layer. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.a}{\code{boolean} - Do not align the current region to the elevation layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - Do not align the current region to the elevation layer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.e}{\code{boolean} - Compute output at edges and near NULL values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -e.}
+\item{.e}{\code{boolean} - Compute output at edges and near NULL values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -e.}
 
-\item{.n}{\code{boolean} - Create aspect as degrees clockwise from North (azimuth), with flat = -9999. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Create aspect as degrees clockwise from North (azimuth), with flat = -9999. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{zscale}{\code{number} - Multiplicative factor to convert elevation units to meters. A numeric value.}
+\item{zscale}{\code{number} - Multiplicative factor to convert elevation units to meters. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{min_slope}{\code{number} - Minimum slope val. (in percent) for which aspect is computed. A numeric value.}
+\item{min_slope}{\code{number} - Minimum slope val. (in percent) for which aspect is computed. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{slope}{\code{rasterDestination} - Slope. Path for new raster layer.}
 
@@ -69,11 +69,11 @@ grass7_r_slope_aspect(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -84,7 +84,7 @@ grass7_r_slope_aspect(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.slope.aspect (grass7:r.slope.aspect)
+QGIS Algorithm provided by GRASS r.slope.aspect (grass7:r.slope.aspect). Generates raster layers of slope, aspect, curvatures and partial derivatives from a elevation raster layer.
 }
 \details{
 \subsection{Outputs description}{

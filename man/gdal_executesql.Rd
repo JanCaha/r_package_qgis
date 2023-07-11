@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_executesql.R
 \name{gdal_executesql}
 \alias{gdal_executesql}
-\title{QGIS algorithm Execute SQL}
+\title{QGIS algorithm - Execute SQL}
 \usage{
 gdal_executesql(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ gdal_executesql(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{SQL}{\code{string} - SQL expression. String value.}
+\item{SQL}{\code{string} - SQL expression. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{DIALECT}{\code{enum}  of \verb{("None", "OGR SQL", "SQLite")} - SQL dialect. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - SQL result. Path for new vector layer.}
 
@@ -36,7 +36,7 @@ gdal_executesql(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Execute SQL (gdal:executesql)
+QGIS Algorithm provided by GDAL Execute SQL (gdal:executesql). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer SQL: SQL expression 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DIALECT: SQL dialect 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: None 		- 1: OGR SQL 		- 2: SQLite 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: SQL result 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

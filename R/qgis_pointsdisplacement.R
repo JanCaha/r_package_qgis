@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS Points displacement (qgis:pointsdisplacement)
+##' QGIS Algorithm provided by QGIS Points displacement (qgis:pointsdisplacement). Offsets nearby point features by moving nearby points by a preset amount to minimize overlapping features.
 ##'
-##' @title QGIS algorithm Points displacement
+##' @title QGIS algorithm - Points displacement
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param PROXIMITY `distance` - Minimum distance to other points. A numeric value.
-##' @param DISTANCE `distance` - Displacement distance. A numeric value.
-##' @param HORIZONTAL `boolean` - Horizontal distribution for two point case. 1 for true/yes. 0 for false/no.
+##' @param PROXIMITY `distance` - Minimum distance to other points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DISTANCE `distance` - Displacement distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param HORIZONTAL `boolean` - Horizontal distribution for two point case. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Displaced. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

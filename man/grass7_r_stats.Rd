@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_stats.R
 \name{grass7_r_stats}
 \alias{grass7_r_stats}
-\title{QGIS algorithm r.stats}
+\title{QGIS algorithm - r.stats}
 \usage{
 grass7_r_stats(
   input = qgisprocess:::qgis_default_value(),
@@ -35,45 +35,45 @@ grass7_r_stats(
 \arguments{
 \item{input}{\code{multilayer} - Name of input raster map. .}
 
-\item{separator}{\code{string} - Output field separator. String value.}
+\item{separator}{\code{string} - Output field separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{null_value}{\code{string} - String representing no data cell value. String value.}
+\item{null_value}{\code{string} - String representing no data cell value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{nsteps}{\code{number} - Number of floating-point subranges to collect stats from. A numeric value.}
+\item{nsteps}{\code{number} - Number of floating-point subranges to collect stats from. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{sort}{\code{enum}  of \verb{("asc", "desc")} - Sort output statistics by cell counts. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.arg_1}{\code{boolean} - One cell (range) per line. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -1.}
+\item{.arg_1}{\code{boolean} - One cell (range) per line. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -1.}
 
-\item{.A}{\code{boolean} - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -A.}
+\item{.A}{\code{boolean} - Print averaged values instead of intervals. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -A.}
 
-\item{.a}{\code{boolean} - Print area totals. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - Print area totals. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.c}{\code{boolean} - Print cell counts. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Print cell counts. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.p}{\code{boolean} - Print APPROXIMATE percents (total percent may not be 100\%). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -p.}
+\item{.p}{\code{boolean} - Print APPROXIMATE percents (total percent may not be 100\%). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -p.}
 
-\item{.l}{\code{boolean} - Print category labels. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
+\item{.l}{\code{boolean} - Print category labels. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.}
 
-\item{.g}{\code{boolean} - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Print grid coordinates (east and north). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
-\item{.x}{\code{boolean} - Print x and y (column and row). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -x.}
+\item{.x}{\code{boolean} - Print x and y (column and row). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -x.}
 
-\item{.r}{\code{boolean} - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Print raw indexes of fp ranges (fp maps only). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Suppress reporting of any NULLs. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.N}{\code{boolean} - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -N.}
+\item{.N}{\code{boolean} - Suppress reporting of NULLs when all values are NULL. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -N.}
 
-\item{.C}{\code{boolean} - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -C.}
+\item{.C}{\code{boolean} - Report for cats fp ranges (fp maps only). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -C.}
 
-\item{.i}{\code{boolean} - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Read fp map as integer (use map's quant rules). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
 \item{html}{\code{fileDestination} - Statistics. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -84,7 +84,7 @@ grass7_r_stats(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.stats (grass7:r.stats)
+QGIS Algorithm provided by GRASS r.stats (grass7:r.stats). Generates area statistics for raster layers.
 }
 \details{
 \subsection{Outputs description}{

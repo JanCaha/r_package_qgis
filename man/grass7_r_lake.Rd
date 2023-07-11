@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_lake.R
 \name{grass7_r_lake}
 \alias{grass7_r_lake}
-\title{QGIS algorithm r.lake}
+\title{QGIS algorithm - r.lake}
 \usage{
 grass7_r_lake(
   elevation = qgisprocess:::qgis_default_value(),
@@ -24,23 +24,23 @@ grass7_r_lake(
 \arguments{
 \item{elevation}{\code{raster} - Elevation. Path to a raster layer.}
 
-\item{water_level}{\code{number} - Water level. A numeric value.}
+\item{water_level}{\code{number} - Water level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{coordinates}{\code{point} - Seed point coordinates. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
 \item{seed}{\code{raster} - Raster layer with starting point(s) (at least 1 cell  0). Path to a raster layer.}
 
-\item{.n}{\code{boolean} - Use negative depth values for lake raster layer. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Use negative depth values for lake raster layer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
 \item{lake}{\code{rasterDestination} - Lake. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_lake(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.lake (grass7:r.lake)
+QGIS Algorithm provided by GRASS r.lake (grass7:r.lake). Fills lake at given point to given level.
 }
 \details{
 \subsection{Outputs description}{

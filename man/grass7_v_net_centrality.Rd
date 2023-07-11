@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_net_centrality.R
 \name{grass7_v_net_centrality}
 \alias{grass7_v_net_centrality}
-\title{QGIS algorithm v.net.centrality}
+\title{QGIS algorithm - v.net.centrality}
 \usage{
 grass7_v_net_centrality(
   input = qgisprocess:::qgis_default_value(),
@@ -36,47 +36,47 @@ grass7_v_net_centrality(
 \arguments{
 \item{input}{\code{source} - Input vector line layer (network). Path to a vector layer.}
 
-\item{degree}{\code{string} - Name of output degree centrality column. String value.}
+\item{degree}{\code{string} - Name of output degree centrality column. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{closeness}{\code{string} - Name of output closeness centrality column. String value.}
+\item{closeness}{\code{string} - Name of output closeness centrality column. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{betweenness}{\code{string} - Name of output betweenness centrality column. String value.}
+\item{betweenness}{\code{string} - Name of output betweenness centrality column. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{eigenvector}{\code{string} - Name of output eigenvector centrality column. String value.}
+\item{eigenvector}{\code{string} - Name of output eigenvector centrality column. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{iterations}{\code{number} - Maximum number of iterations to compute eigenvector centrality. A numeric value.}
+\item{iterations}{\code{number} - Maximum number of iterations to compute eigenvector centrality. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{error}{\code{number} - Cumulative error tolerance for eigenvector centrality. A numeric value.}
+\item{error}{\code{number} - Cumulative error tolerance for eigenvector centrality. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{cats}{\code{string} - Category values. String value.}
+\item{cats}{\code{string} - Category values. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value.}
+\item{where}{\code{string} - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{arc_column}{\code{field} - Arc forward/both direction(s) cost column (number). The name of an existing field. ; delimited list of existing field names.}
+\item{arc_column}{\code{field} - Arc forward\code{/}both direction(s) cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
 \item{arc_backward_column}{\code{field} - Arc backward direction cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
 \item{node_column}{\code{field} - Node cost column (number). The name of an existing field. ; delimited list of existing field names.}
 
-\item{.a}{\code{boolean} - Add points on nodes. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.}
+\item{.a}{\code{boolean} - Add points on nodes. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
-\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.}
+\item{.g}{\code{boolean} - Use geodesic calculation for longitude-latitude locations. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.}
 
 \item{output}{\code{vectorDestination} - Network Centrality. Path for new vector layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -87,7 +87,7 @@ grass7_v_net_centrality(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.net.centrality (grass7:v.net.centrality)
+QGIS Algorithm provided by GRASS v.net.centrality (grass7:v.net.centrality). Computes degree, centrality, betweenness, closeness and eigenvector centrality measures in the network.
 }
 \details{
 \subsection{Outputs description}{

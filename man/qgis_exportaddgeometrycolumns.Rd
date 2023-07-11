@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_exportaddgeometrycolumns.R
 \name{qgis_exportaddgeometrycolumns}
 \alias{qgis_exportaddgeometrycolumns}
-\title{QGIS algorithm Add geometry attributes}
+\title{QGIS algorithm - Add geometry attributes}
 \usage{
 qgis_exportaddgeometrycolumns(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_exportaddgeometrycolumns(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Add geometry attributes (qgis:exportaddgeometrycolumns)
+QGIS Algorithm provided by QGIS Add geometry attributes (qgis:exportaddgeometrycolumns). This algorithm computes geometric properties of the features in a vector layer. It generates a new vector layer with the same content as the input one, but with additional attributes in its attributes table, containing geometric measurements. Depending on the geometry type of the vector layer, the attributes added to the table will be different.
 }
 \details{
 \subsection{Outputs description}{

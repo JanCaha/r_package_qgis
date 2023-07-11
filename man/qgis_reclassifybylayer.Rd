@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_reclassifybylayer.R
 \name{qgis_reclassifybylayer}
 \alias{qgis_reclassifybylayer}
-\title{QGIS algorithm Reclassify by layer}
+\title{QGIS algorithm - Reclassify by layer}
 \usage{
 qgis_reclassifybylayer(
   INPUT_RASTER = qgisprocess:::qgis_default_value(),
@@ -35,13 +35,13 @@ qgis_reclassifybylayer(
 
 \item{VALUE_FIELD}{\code{field} - Output value field. The name of an existing field. ; delimited list of existing field names.}
 
-\item{NO_DATA}{\code{number} - Output no data value. A numeric value.}
+\item{NO_DATA}{\code{number} - Output no data value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{RANGE_BOUNDARIES}{\code{enum}  of \verb{("min < value <= max", "min <= value < max", "min <= value <= max", "min < value < max")} - Range boundaries. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{RANGE_BOUNDARIES}{\code{enum}  of \verb{("min  value = max", "min = value  max", "min = value = max", "min  value  max")} - Range boundaries. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NODATA_FOR_MISSING}{\code{boolean} - Use no data when no range matches value. 1 for true/yes. 0 for false/no.}
+\item{NODATA_FOR_MISSING}{\code{boolean} - Use no data when no range matches value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{OUTPUT}{\code{rasterDestination} - Reclassified raster. Path for new raster layer.}
 
@@ -54,7 +54,7 @@ qgis_reclassifybylayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Reclassify by layer (native:reclassifybylayer)
+QGIS Algorithm provided by QGIS (native c++) Reclassify by layer (native:reclassifybylayer). This algorithm reclassifies a raster band by assigning new class values based on the ranges specified in a vector table.
 }
 \details{
 \subsection{Outputs description}{

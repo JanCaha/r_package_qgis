@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram)
+##' QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram). This algorithm appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons.
 ##'
-##' @title QGIS algorithm Zonal histogram
+##' @title QGIS algorithm - Zonal histogram
 ##'
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param RASTER_BAND `band` - Band number. Integer value representing an existing raster band number.
 ##' @param INPUT_VECTOR `source` - Vector layer containing zones. Path to a vector layer.
-##' @param COLUMN_PREFIX `string` - Output column prefix. String value.
+##' @param COLUMN_PREFIX `string` - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Output zones. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

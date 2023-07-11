@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_blend_rgb.R
 \name{grass7_r_blend_rgb}
 \alias{grass7_r_blend_rgb}
-\title{QGIS algorithm r.blend.rgb}
+\title{QGIS algorithm - r.blend.rgb}
 \usage{
 grass7_r_blend_rgb(
   first = qgisprocess:::qgis_default_value(),
@@ -26,7 +26,7 @@ grass7_r_blend_rgb(
 
 \item{second}{\code{raster} - Name of second raster map for blending. Path to a raster layer.}
 
-\item{percent}{\code{number} - Percentage weight of first map for color blending. A numeric value.}
+\item{percent}{\code{number} - Percentage weight of first map for color blending. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output_red}{\code{rasterDestination} - Blended Red. Path for new raster layer.}
 
@@ -36,11 +36,11 @@ grass7_r_blend_rgb(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +51,7 @@ grass7_r_blend_rgb(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.blend.rgb (grass7:r.blend.rgb)
+QGIS Algorithm provided by GRASS r.blend.rgb (grass7:r.blend.rgb). r.blend.rgb - Blends color components of two raster maps by a given ratio and exports into three rasters.
 }
 \details{
 \subsection{Outputs description}{

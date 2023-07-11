@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_segment.R
 \name{grass7_i_segment}
 \alias{grass7_i_segment}
-\title{QGIS algorithm i.segment}
+\title{QGIS algorithm - i.segment}
 \usage{
 grass7_i_segment(
   input = qgisprocess:::qgis_default_value(),
@@ -31,25 +31,25 @@ grass7_i_segment(
 \arguments{
 \item{input}{\code{multilayer} - Input rasters. .}
 
-\item{threshold}{\code{number} - Difference threshold between 0 and 1. A numeric value.}
+\item{threshold}{\code{number} - Difference threshold between 0 and 1. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{method}{\code{enum}  of \code{("region_growing")} - Segmentation method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{similarity}{\code{enum}  of \verb{("euclidean", "manhattan")} - Similarity calculation method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{minsize}{\code{number} - Minimum number of cells in a segment. A numeric value.}
+\item{minsize}{\code{number} - Minimum number of cells in a segment. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{memory}{\code{number} - Amount of memory to use in MB. A numeric value.}
+\item{memory}{\code{number} - Amount of memory to use in MB. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{iterations}{\code{number} - Maximum number of iterations. A numeric value.}
+\item{iterations}{\code{number} - Maximum number of iterations. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{seeds}{\code{raster} - Name for input raster map with starting seeds. Path to a raster layer.}
 
-\item{bounds}{\code{raster} - Name of input bounding/constraining raster map. Path to a raster layer.}
+\item{bounds}{\code{raster} - Name of input bounding\code{/}constraining raster map. Path to a raster layer.}
 
-\item{.d}{\code{boolean} - Use 8 neighbors (3x3 neighborhood) instead of the default 4 neighbors for each pixel. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -d.}
+\item{.d}{\code{boolean} - Use 8 neighbors (3x3 neighborhood) instead of the default 4 neighbors for each pixel. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -d.}
 
-\item{.w}{\code{boolean} - Weighted input, do not perform the default scaling of input raster maps. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -w.}
+\item{.w}{\code{boolean} - Weighted input, do not perform the default scaling of input raster maps. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -w.}
 
 \item{output}{\code{rasterDestination} - Segmented Raster. Path for new raster layer.}
 
@@ -57,11 +57,11 @@ grass7_i_segment(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -72,7 +72,7 @@ grass7_i_segment(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.segment (grass7:i.segment)
+QGIS Algorithm provided by GRASS i.segment (grass7:i.segment). Identifies segments (objects) from imagery data.
 }
 \details{
 \subsection{Outputs description}{

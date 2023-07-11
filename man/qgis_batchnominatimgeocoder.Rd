@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_batchnominatimgeocoder.R
 \name{qgis_batchnominatimgeocoder}
 \alias{qgis_batchnominatimgeocoder}
-\title{QGIS algorithm Batch Nominatim geocoder}
+\title{QGIS algorithm - Batch Nominatim geocoder}
 \usage{
 qgis_batchnominatimgeocoder(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_batchnominatimgeocoder(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Batch Nominatim geocoder (native:batchnominatimgeocoder)
+QGIS Algorithm provided by QGIS (native c++) Batch Nominatim geocoder (native:batchnominatimgeocoder). This algorithm performs batch geocoding using the a href="#"Nominatim/a service against an input layer string field.  The output layer will have a point geometry reflecting the geocoded location as well as a number of attributes associated to the geocoded location.
 }
 \details{
 \subsection{Outputs description}{

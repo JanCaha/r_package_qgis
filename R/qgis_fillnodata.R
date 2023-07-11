@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Fill NoData cells (native:fillnodata)
+##' QGIS Algorithm provided by QGIS (native c++) Fill NoData cells (native:fillnodata). This algorithm resets the NoData values in the input raster to a chosen value, resulting in a raster dataset with no NoData pixels. This value can be set by the user using the Fill value parameter. The algorithm respects the input raster data type (eg. a floating point fill value will be truncated when applied to an integer raster).
 ##'
-##' @title QGIS algorithm Fill NoData cells
+##' @title QGIS algorithm - Fill NoData cells
 ##'
 ##' @param INPUT `raster` - Raster input. Path to a raster layer.
 ##' @param BAND `band` - Band Number. Integer value representing an existing raster band number.
-##' @param FILL_VALUE `number` - Fill value. A numeric value.
+##' @param FILL_VALUE `number` - Fill value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

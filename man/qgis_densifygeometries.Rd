@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_densifygeometries.R
 \name{qgis_densifygeometries}
 \alias{qgis_densifygeometries}
-\title{QGIS algorithm Densify by count}
+\title{QGIS algorithm - Densify by count}
 \usage{
 qgis_densifygeometries(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_densifygeometries(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{VERTICES}{\code{number} - Number of vertices to add. A numeric value.}
+\item{VERTICES}{\code{number} - Number of vertices to add. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Densified. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_densifygeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Densify by count (native:densifygeometries)
+QGIS Algorithm provided by QGIS (native c++) Densify by count (native:densifygeometries). Creates a densified version of geometries. This algorithm takes a polygon or line layer and generates a new one in which the geometries have a larger number of vertices than the original one.   If the geometries have z or m values present then these will be linearly interpolated at the added nodes.   The number of new vertices to add to each feature geometry is specified as an input parameter.
 }
 \details{
 \subsection{Outputs description}{

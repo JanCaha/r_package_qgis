@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (native:rasterlayeruniquevaluesreport)
+##' QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (native:rasterlayeruniquevaluesreport). This algorithm returns the count and area of each unique value in a given raster layer.
 ##'
-##' @title QGIS algorithm Raster layer unique values report
+##' @title QGIS algorithm - Raster layer unique values report
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.

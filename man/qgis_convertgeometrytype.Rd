@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_convertgeometrytype.R
 \name{qgis_convertgeometrytype}
 \alias{qgis_convertgeometrytype}
-\title{QGIS algorithm Convert geometry type}
+\title{QGIS algorithm - Convert geometry type}
 \usage{
 qgis_convertgeometrytype(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_convertgeometrytype(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Convert geometry type (qgis:convertgeometrytype)
+QGIS Algorithm provided by QGIS Convert geometry type (qgis:convertgeometrytype). This algorithm generates a new layer based on an existing one, with a different type of geometry. Not all conversions are possible. For instance, a line layer can be converted to a point layer, but a point layer cannot be converted to a line layer. See the "Polygonize" or "Lines to polygons" algorithm for alternative options.
 }
 \details{
 \subsection{Outputs description}{

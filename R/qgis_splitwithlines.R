@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Split with lines (native:splitwithlines)
+##' QGIS Algorithm provided by QGIS (native c++) Split with lines (native:splitwithlines). This algorithm splits the lines or polygons in one layer using the lines or polygon rings in another layer to define the breaking points. Intersection between geometries in both layers are considered as split points.
 ##'
-##' @title QGIS algorithm Split with lines
+##' @title QGIS algorithm - Split with lines
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param LINES `source` - Split layer. Path to a vector layer.

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by GDAL Assign projection (gdal:assignprojection)
+##' QGIS Algorithm provided by GDAL Assign projection (gdal:assignprojection). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer CRS: Desired CRS 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used.
 ##'
-##' @title QGIS algorithm Assign projection
+##' @title QGIS algorithm - Assign projection
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param CRS `crs` - Desired CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..

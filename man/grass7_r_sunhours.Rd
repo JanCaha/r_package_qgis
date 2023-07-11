@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_sunhours.R
 \name{grass7_r_sunhours}
 \alias{grass7_r_sunhours}
-\title{QGIS algorithm r.sunhours}
+\title{QGIS algorithm - r.sunhours}
 \usage{
 grass7_r_sunhours(
   year = qgisprocess:::qgis_default_value(),
@@ -27,21 +27,21 @@ grass7_r_sunhours(
 )
 }
 \arguments{
-\item{year}{\code{number} - Year. A numeric value.}
+\item{year}{\code{number} - Year. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{month}{\code{number} - Month. A numeric value.}
+\item{month}{\code{number} - Month. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{day}{\code{number} - Day. A numeric value.}
+\item{day}{\code{number} - Day. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{hour}{\code{number} - Hour. A numeric value.}
+\item{hour}{\code{number} - Hour. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{minute}{\code{number} - Minutes. A numeric value.}
+\item{minute}{\code{number} - Minutes. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{second}{\code{number} - Seconds. A numeric value.}
+\item{second}{\code{number} - Seconds. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.t}{\code{boolean} - Time is local sidereal time, not Greenwich standard time. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Time is local sidereal time, not Greenwich standard time. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.s}{\code{boolean} - Do not use SOLPOS algorithm of NREL. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.}
+\item{.s}{\code{boolean} - Do not use SOLPOS algorithm of NREL. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.}
 
 \item{elevation}{\code{rasterDestination} - Solar Elevation Angle. Path for new raster layer.}
 
@@ -51,11 +51,11 @@ grass7_r_sunhours(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -66,7 +66,7 @@ grass7_r_sunhours(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.sunhours (grass7:r.sunhours)
+QGIS Algorithm provided by GRASS r.sunhours (grass7:r.sunhours). Calculates solar elevation, solar azimuth, and sun hours.
 }
 \details{
 \subsection{Outputs description}{

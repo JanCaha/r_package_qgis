@@ -1,18 +1,18 @@
-##' QGIS Algorithm provided by GRASS i.eb.soilheatflux (grass7:i.eb.soilheatflux)
+##' QGIS Algorithm provided by GRASS i.eb.soilheatflux (grass7:i.eb.soilheatflux). Soil heat flux approximation (Bastiaanssen, 1995).
 ##'
-##' @title QGIS algorithm i.eb.soilheatflux
+##' @title QGIS algorithm - i.eb.soilheatflux
 ##'
 ##' @param albedo `raster` - Name of albedo raster map (0.0;1.0). Path to a raster layer.
 ##' @param ndvi `raster` - Name of NDVI raster map (-1.0;+1.0). Path to a raster layer.
 ##' @param temperature `raster` - Name of Surface temperature raster map (K). Path to a raster layer.
-##' @param netradiation `raster` - Name of Net Radiation raster map (W/m2). Path to a raster layer.
+##' @param netradiation `raster` - Name of Net Radiation raster map (W\code{/}m2). Path to a raster layer.
 ##' @param localutctime `raster` - Name of time of satellite overpass raster map (local time in UTC). Path to a raster layer.
-##' @param .r `boolean` - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
+##' @param .r `boolean` - HAPEX-Sahel empirical correction (Roerink, 1995). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
 ##' @param output `rasterDestination` - Soil Heat Flux. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

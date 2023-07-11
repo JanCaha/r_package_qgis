@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_relief_scaling.R
 \name{grass7_r_relief_scaling}
 \alias{grass7_r_relief_scaling}
-\title{QGIS algorithm r.relief.scaling}
+\title{QGIS algorithm - r.relief.scaling}
 \usage{
 grass7_r_relief_scaling(
   input = qgisprocess:::qgis_default_value(),
@@ -25,13 +25,13 @@ grass7_r_relief_scaling(
 \arguments{
 \item{input}{\code{raster} - Input elevation layer. Path to a raster layer.}
 
-\item{altitude}{\code{number} - Altitude of the sun in degrees above the horizon. A numeric value.}
+\item{altitude}{\code{number} - Altitude of the sun in degrees above the horizon. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{azimuth}{\code{number} - Azimuth of the sun in degrees to the east of north. A numeric value.}
+\item{azimuth}{\code{number} - Azimuth of the sun in degrees to the east of north. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{zscale}{\code{number} - Factor for exaggerating relief. A numeric value.}
+\item{zscale}{\code{number} - Factor for exaggerating relief. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{scale}{\code{number} - Scale factor for converting horizontal units to elevation units. A numeric value.}
+\item{scale}{\code{number} - Scale factor for converting horizontal units to elevation units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{units}{\code{enum}  of \verb{("intl", "survey")} - Elevation units (overrides scale factor). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -39,11 +39,11 @@ grass7_r_relief_scaling(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -54,7 +54,7 @@ grass7_r_relief_scaling(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.relief.scaling (grass7:r.relief.scaling)
+QGIS Algorithm provided by GRASS r.relief.scaling (grass7:r.relief.scaling). r.relief.scaling - Creates shaded relief from an elevation layer (DEM).
 }
 \details{
 \subsection{Outputs description}{

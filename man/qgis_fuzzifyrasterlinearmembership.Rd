@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_fuzzifyrasterlinearmembership.R
 \name{qgis_fuzzifyrasterlinearmembership}
 \alias{qgis_fuzzifyrasterlinearmembership}
-\title{QGIS algorithm Fuzzify raster (linear membership)}
+\title{QGIS algorithm - Fuzzify raster (linear membership)}
 \usage{
 qgis_fuzzifyrasterlinearmembership(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,9 +21,9 @@ qgis_fuzzifyrasterlinearmembership(
 
 \item{BAND}{\code{band} - Band Number. Integer value representing an existing raster band number.}
 
-\item{FUZZYLOWBOUND}{\code{number} - Low fuzzy membership bound. A numeric value.}
+\item{FUZZYLOWBOUND}{\code{number} - Low fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FUZZYHIGHBOUND}{\code{number} - High fuzzy membership bound. A numeric value.}
+\item{FUZZYHIGHBOUND}{\code{number} - High fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified raster. Path for new raster layer.}
 
@@ -36,7 +36,7 @@ qgis_fuzzifyrasterlinearmembership(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (linear membership) (native:fuzzifyrasterlinearmembership)
+QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (linear membership) (native:fuzzifyrasterlinearmembership). The Fuzzify raster (linear membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following a linear fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows a linear membership function.  The linear function is constructed using two user-defined input raster values which set the point of full membership (high bound, results to 1) and no membership (low bound, results to 0) respectively. The fuzzy set in between those values is defined as a linear function.  Both increasing and decreasing fuzzy sets can be modeled by swapping the high and low bound parameters.
 }
 \details{
 \subsection{Outputs description}{

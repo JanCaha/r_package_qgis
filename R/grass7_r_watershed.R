@@ -1,21 +1,21 @@
-##' QGIS Algorithm provided by GRASS r.watershed (grass7:r.watershed)
+##' QGIS Algorithm provided by GRASS r.watershed (grass7:r.watershed). Watershed basin analysis program.
 ##'
-##' @title QGIS algorithm r.watershed
+##' @title QGIS algorithm - r.watershed
 ##'
 ##' @param elevation `raster` - Elevation. Path to a raster layer.
 ##' @param depression `raster` - Locations of real depressions. Path to a raster layer.
 ##' @param flow `raster` - Amount of overland flow per cell. Path to a raster layer.
 ##' @param disturbed_land `raster` - Percent of disturbed land, for USLE. Path to a raster layer.
 ##' @param blocking `raster` - Terrain blocking overland surface flow, for USLE. Path to a raster layer.
-##' @param threshold `number` - Minimum size of exterior watershed basin. A numeric value.
-##' @param max_slope_length `number` - Maximum length of surface flow, for USLE. A numeric value.
-##' @param convergence `number` - Convergence factor for MFD (1-10). A numeric value.
-##' @param memory `number` - Maximum memory to be used with -m flag (in MB). A numeric value.
-##' @param .s `boolean` - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
-##' @param .m `boolean` - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.
-##' @param .arg_4 `boolean` - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -4.
-##' @param .a `boolean` - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -a.
-##' @param .b `boolean` - Beautify flat areas. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.
+##' @param threshold `number` - Minimum size of exterior watershed basin. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param max_slope_length `number` - Maximum length of surface flow, for USLE. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param convergence `number` - Convergence factor for MFD (1-10). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param memory `number` - Maximum memory to be used with -m flag (in MB). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .s `boolean` - Enable Single Flow Direction (D8) flow (default is Multiple Flow Direction). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.
+##' @param .m `boolean` - Enable disk swap memory option (-m): Operation is slow. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.
+##' @param .arg_4 `boolean` - Allow only horizontal and vertical flow of water. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -4.
+##' @param .a `boolean` - Use positive flow accumulation even for likely underestimates. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.
+##' @param .b `boolean` - Beautify flat areas. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.
 ##' @param accumulation `rasterDestination` - Number of cells that drain through each cell. Path for new raster layer.
 ##' @param drainage `rasterDestination` - Drainage direction. Path for new raster layer.
 ##' @param basin `rasterDestination` - Unique label for each watershed basin. Path for new raster layer.
@@ -23,12 +23,12 @@
 ##' @param half_basin `rasterDestination` - Half-basins. Path for new raster layer.
 ##' @param length_slope `rasterDestination` - Slope length and steepness (LS) factor for USLE. Path for new raster layer.
 ##' @param slope_steepness `rasterDestination` - Slope steepness (S) factor for USLE. Path for new raster layer.
-##' @param tci `rasterDestination` - Topographic index ln(a / tan(b)). Path for new raster layer.
+##' @param tci `rasterDestination` - Topographic index ln(a \code{/} tan(b)). Path for new raster layer.
 ##' @param spi `rasterDestination` - Stream power index a * tan(b). Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -44,7 +44,7 @@
 ##' * slope_steepness - outputRaster - Slope steepness (S) factor for USLE
 ##' * spi - outputRaster - Stream power index a * tan(b)
 ##' * stream - outputRaster - Stream segments
-##' * tci - outputRaster - Topographic index ln(a / tan(b))
+##' * tci - outputRaster - Topographic index ln(a \code{/} tan(b))
 ##'
 ##'
 ##' @export

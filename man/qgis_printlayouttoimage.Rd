@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_printlayouttoimage.R
 \name{qgis_printlayouttoimage}
 \alias{qgis_printlayouttoimage}
-\title{QGIS algorithm Export print layout as image}
+\title{QGIS algorithm - Export print layout as image}
 \usage{
 qgis_printlayouttoimage(
   LAYOUT = qgisprocess:::qgis_default_value(),
@@ -23,13 +23,13 @@ qgis_printlayouttoimage(
 
 \item{LAYERS}{\code{multilayer} - Map layers to assign to unlocked map item(s). .}
 
-\item{DPI}{\code{number} - DPI (leave blank for default layout DPI). A numeric value.}
+\item{DPI}{\code{number} - DPI (leave blank for default layout DPI). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GEOREFERENCE}{\code{boolean} - Generate world file. 1 for true/yes. 0 for false/no.}
+\item{GEOREFERENCE}{\code{boolean} - Generate world file. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INCLUDE_METADATA}{\code{boolean} - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no.}
+\item{INCLUDE_METADATA}{\code{boolean} - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ANTIALIAS}{\code{boolean} - Enable antialiasing. 1 for true/yes. 0 for false/no.}
+\item{ANTIALIAS}{\code{boolean} - Enable antialiasing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Image file. Path for new file.}
 
@@ -42,7 +42,7 @@ qgis_printlayouttoimage(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export print layout as image (native:printlayouttoimage)
+QGIS Algorithm provided by QGIS (native c++) Export print layout as image (native:printlayouttoimage). Exports a print layout as an image. This algorithm outputs a print layout as an image file (e.g. PNG or JPEG images).
 }
 \details{
 \subsection{Outputs description}{

@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rescale raster (native:rescaleraster)
+##' QGIS Algorithm provided by QGIS (native c++) Rescale raster (native:rescaleraster). Rescales raster layer to a new value range, while preserving the shape (distribution) of the raster's histogram (pixel values). Input values are mapped using a linear interpolation from the source raster's minimum and maximum pixel values to the destination minimum and maximum pixel range.  By default the algorithm preserves original the NODATA value, but there is an option to override it.
 ##'
-##' @title QGIS algorithm Rescale raster
+##' @title QGIS algorithm - Rescale raster
 ##'
 ##' @param INPUT `raster` - Input raster. Path to a raster layer.
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.
-##' @param MINIMUM `number` - New minimum value. A numeric value.
-##' @param MAXIMUM `number` - New maximum value. A numeric value.
-##' @param NODATA `number` - New NODATA value. A numeric value.
+##' @param MINIMUM `number` - New minimum value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MAXIMUM `number` - New maximum value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NODATA `number` - New NODATA value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Rescaled. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

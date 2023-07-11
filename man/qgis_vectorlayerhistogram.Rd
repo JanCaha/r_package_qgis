@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_vectorlayerhistogram.R
 \name{qgis_vectorlayerhistogram}
 \alias{qgis_vectorlayerhistogram}
-\title{QGIS algorithm Vector layer histogram}
+\title{QGIS algorithm - Vector layer histogram}
 \usage{
 qgis_vectorlayerhistogram(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_vectorlayerhistogram(
 
 \item{FIELD}{\code{field} - Attribute. The name of an existing field. ; delimited list of existing field names.}
 
-\item{BINS}{\code{number} - number of bins. A numeric value.}
+\item{BINS}{\code{number} - number of bins. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Histogram. Path for new file.}
 
@@ -33,7 +33,7 @@ qgis_vectorlayerhistogram(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Vector layer histogram (qgis:vectorlayerhistogram)
+QGIS Algorithm provided by QGIS Vector layer histogram (qgis:vectorlayerhistogram). This algorithm generates a histogram with the values of the attribute of a vector layer. The attribute to use for computing the histogram must be a numeric attribute.
 }
 \details{
 \subsection{Outputs description}{

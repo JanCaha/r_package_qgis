@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_dropgeometries.R
 \name{qgis_dropgeometries}
 \alias{qgis_dropgeometries}
-\title{QGIS algorithm Drop geometries}
+\title{QGIS algorithm - Drop geometries}
 \usage{
 qgis_dropgeometries(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_dropgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Drop geometries (native:dropgeometries)
+QGIS Algorithm provided by QGIS (native c++) Drop geometries (native:dropgeometries). This algorithm removes any geometries from an input layer and returns a layer containing only the feature attributes.
 }
 \details{
 \subsection{Outputs description}{

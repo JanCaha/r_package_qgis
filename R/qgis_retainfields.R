@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Retain fields (native:retainfields)
+##' QGIS Algorithm provided by QGIS (native c++) Retain fields (native:retainfields). Retains selected fields from a vector layer. This algorithm takes a vector layer and generates a new one that retains only the selected fields. All other fields will be dropped.
 ##'
-##' @title QGIS algorithm Retain fields
+##' @title QGIS algorithm - Retain fields
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELDS `field` - Fields to retain. The name of an existing field. ; delimited list of existing field names.

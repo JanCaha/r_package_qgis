@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:rasterlayerproperties)
+##' QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:rasterlayerproperties). This algorithm returns basic properties of the given raster layer, including the extent, size in pixels and dimensions of pixels (in map units).  If an optional band number is specified then the nodata value for the selected band will also be returned.
 ##'
-##' @title QGIS algorithm Raster layer properties
+##' @title QGIS algorithm - Raster layer properties
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
 ##' @param BAND `band` - Band number. Integer value representing an existing raster band number.

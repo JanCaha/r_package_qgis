@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create random raster layer (negative binomial distribution) (native:createrandomnegativebinomialrasterlayer)
+##' QGIS Algorithm provided by QGIS (native c++) Create random raster layer (negative binomial distribution) (native:createrandomnegativebinomialrasterlayer). Generates a raster layer for given extent and cell size filled with negative binomially distributed random values. By default, the values will be chosen given a distribution parameter k of 10.0 and a probability of 0.5. This can be overridden by using the advanced parameters for k and probability. The raster data type is set to Integer types (Integer 16 by default). The negative binomial distribution random values are defined as positive integer numbers. A floating point raster will represent a cast of integer values to floating point.
 ##'
-##' @title QGIS algorithm Create random raster layer (negative binomial distribution)
+##' @title QGIS algorithm - Create random raster layer (negative binomial distribution)
 ##'
 ##' @param EXTENT `extent` - Desired extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param TARGET_CRS `crs` - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
-##' @param PIXEL_SIZE `number` - Pixel size. A numeric value.
+##' @param PIXEL_SIZE `number` - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT_TYPE `enum`  of `("Integer16", "Unsigned Integer16", "Integer32", "Unsigned Integer32", "Float32", "Float64")` - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param K_PARAMETER `number` - Distribution parameter k. A numeric value.
-##' @param PROBABILITY `number` - Probability. A numeric value.
+##' @param K_PARAMETER `number` - Distribution parameter k. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param PROBABILITY `number` - Probability. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_repairshapefile.R
 \name{qgis_repairshapefile}
 \alias{qgis_repairshapefile}
-\title{QGIS algorithm Repair Shapefile}
+\title{QGIS algorithm - Repair Shapefile}
 \usage{
 qgis_repairshapefile(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -24,7 +24,7 @@ qgis_repairshapefile(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Repair Shapefile (native:repairshapefile)
+QGIS Algorithm provided by QGIS (native c++) Repair Shapefile (native:repairshapefile). Repairs broken Shapefiles by recreating SHX files. Repairs a broken Shapefile by recreating missing or broken SHX files.
 }
 \details{
 \subsection{Outputs description}{

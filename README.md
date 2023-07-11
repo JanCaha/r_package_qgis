@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.26.3.9009** is build against QGIS version
-**3.26.3-Buenos**.
+Latest package version **3.32.0.9000** is build against QGIS version
+**3.32.0-Lima**.
 
 ## Installation
 
@@ -62,8 +62,8 @@ The names of the functions follow general pattern of
 `algorithm-provider_algorithm-id` with only the native **QGIS**
 algorithms using `qgis` algorithm provider instead of `native`.
 
-The available providers are: 3d, gdal, grass7, native, qgis, saga. The
-overall number of available algorithms is 1018.
+The available providers are: 3d, gdal, grass7, native, qgis, sagang. The
+overall number of available algorithms is 1165.
 
 ## Functions parameters
 
@@ -103,7 +103,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
 **R**.
 
     library(sf)
-    #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE
+    #> Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE
 
     nc <- st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
 

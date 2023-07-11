@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_orientedminimumboundingbox.R
 \name{qgis_orientedminimumboundingbox}
 \alias{qgis_orientedminimumboundingbox}
-\title{QGIS algorithm Oriented minimum bounding box}
+\title{QGIS algorithm - Oriented minimum bounding box}
 \usage{
 qgis_orientedminimumboundingbox(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_orientedminimumboundingbox(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Oriented minimum bounding box (native:orientedminimumboundingbox)
+QGIS Algorithm provided by QGIS (native c++) Oriented minimum bounding box (native:orientedminimumboundingbox). This algorithm calculates the minimum area rotated rectangle which covers each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a oriented bounding box calculation which covers the whole layer or grouped subsets of features.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_createdirectory.R
 \name{qgis_createdirectory}
 \alias{qgis_createdirectory}
-\title{QGIS algorithm Create directory}
+\title{QGIS algorithm - Create directory}
 \usage{
 qgis_createdirectory(
   PATH = qgisprocess:::qgis_default_value(),
@@ -24,7 +24,7 @@ qgis_createdirectory(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create directory (native:createdirectory)
+QGIS Algorithm provided by QGIS (native c++) Create directory (native:createdirectory). Creates a new directory on a file system. This algorithm creates a new directory on a file system. Directories will be created recursively, creating all required parent directories in order to construct the full specified directory path.  No errors will be raised if the directory already exists.
 }
 \details{
 \subsection{Outputs description}{

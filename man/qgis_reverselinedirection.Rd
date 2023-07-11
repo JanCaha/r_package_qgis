@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_reverselinedirection.R
 \name{qgis_reverselinedirection}
 \alias{qgis_reverselinedirection}
-\title{QGIS algorithm Reverse line direction}
+\title{QGIS algorithm - Reverse line direction}
 \usage{
 qgis_reverselinedirection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_reverselinedirection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Reverse line direction (native:reverselinedirection)
+QGIS Algorithm provided by QGIS (native c++) Reverse line direction (native:reverselinedirection). Reverses the direction of curve or LineString geometries. This algorithm reverses the direction of curve or LineString geometries.
 }
 \details{
 \subsection{Outputs description}{

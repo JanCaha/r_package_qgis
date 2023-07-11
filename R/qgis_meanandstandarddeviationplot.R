@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Mean and standard deviation plot (qgis:meanandstandarddeviationplot)
+##' QGIS Algorithm provided by QGIS Mean and standard deviation plot (qgis:meanandstandarddeviationplot). This algorithm creates a box plot with mean and standard deviation values.
 ##'
-##' @title QGIS algorithm Mean and standard deviation plot
+##' @title QGIS algorithm - Mean and standard deviation plot
 ##'
 ##' @param INPUT `source` - Input table. Path to a vector layer.
 ##' @param NAME_FIELD `field` - Category name field. The name of an existing field. ; delimited list of existing field names.

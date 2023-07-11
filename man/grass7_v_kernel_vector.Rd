@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_kernel_vector.R
 \name{grass7_v_kernel_vector}
 \alias{grass7_v_kernel_vector}
-\title{QGIS algorithm v.kernel.vector}
+\title{QGIS algorithm - v.kernel.vector}
 \usage{
 grass7_v_kernel_vector(
   input = qgisprocess:::qgis_default_value(),
@@ -36,41 +36,41 @@ grass7_v_kernel_vector(
 
 \item{net}{\code{source} - Name of input network vector map. Path to a vector layer.}
 
-\item{radius}{\code{number} - Kernel radius in map units. A numeric value.}
+\item{radius}{\code{number} - Kernel radius in map units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{dsize}{\code{number} - Discretization error in map units. A numeric value.}
+\item{dsize}{\code{number} - Discretization error in map units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{segmax}{\code{number} - Maximum length of segment on network. A numeric value.}
+\item{segmax}{\code{number} - Maximum length of segment on network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{distmax}{\code{number} - Maximum distance from point to network. A numeric value.}
+\item{distmax}{\code{number} - Maximum distance from point to network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{multiplier}{\code{number} - Multiply the density result by this number. A numeric value.}
+\item{multiplier}{\code{number} - Multiply the density result by this number. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{node}{\code{enum}  of \verb{("none", "split")} - Node method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{kernel}{\code{enum}  of \verb{("uniform", "triangular", "epanechnikov", "quartic", "triweight", "gaussian", "cosine")} - Kernel function. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -o.}
+\item{.o}{\code{boolean} - Try to calculate an optimal radius with given 'radius' taken as maximum (experimental). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -o.}
 
-\item{.n}{\code{boolean} - Normalize values by sum of density multiplied by length of each segment.. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Normalize values by sum of density multiplied by length of each segment.. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.m}{\code{boolean} - Multiply the result by number of input points. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -m.}
+\item{.m}{\code{boolean} - Multiply the result by number of input points. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -m.}
 
 \item{output}{\code{vectorDestination} - Kernel. Path for new vector layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -81,7 +81,7 @@ grass7_v_kernel_vector(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.kernel.vector (grass7:v.kernel.vector)
+QGIS Algorithm provided by GRASS v.kernel.vector (grass7:v.kernel.vector). v.kernel.vector - Generates a vector density map from vector points on a vector network.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,24 +1,24 @@
-##' QGIS Algorithm provided by GRASS i.landsat.toar (grass7:i.landsat.toar)
+##' QGIS Algorithm provided by GRASS i.landsat.toar (grass7:i.landsat.toar). Calculates top-of-atmosphere radiance or reflectance and temperature for Landsat MSS/TM/ETM+/OLI
 ##'
-##' @title QGIS algorithm i.landsat.toar
+##' @title QGIS algorithm - i.landsat.toar
 ##'
 ##' @param rasters `multilayer` - Landsat input rasters. .
 ##' @param metfile `file` - Name of Landsat metadata file (.met or MTL.txt). Path to a file.
 ##' @param sensor `enum`  of `("mss1", "mss2", "mss3", "mss4", "mss5", "tm4", "tm5", "tm7", "oli8")` - Spacecraft sensor. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param method `enum`  of `("uncorrected", "dos1", "dos2", "dos2b", "dos3", "dos4")` - Atmospheric correction method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param date `string` - Image acquisition date (yyyy-mm-dd). String value.
-##' @param sun_elevation `number` - Sun elevation in degrees. A numeric value.
-##' @param product_date `string` - Image creation date (yyyy-mm-dd). String value.
-##' @param gain `string` - Gain (H/L) of all Landsat ETM+ bands (1-5,61,62,7,8). String value.
-##' @param percent `number` - Percent of solar radiance in path radiance. A numeric value.
-##' @param pixel `number` - Minimum pixels to consider digital number as dark object. A numeric value.
-##' @param rayleigh `number` - Rayleigh atmosphere (diffuse sky irradiance). A numeric value.
-##' @param scale `number` - Scale factor for output. A numeric value.
-##' @param .r `boolean` - Output at-sensor radiance instead of reflectance for all bands. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.
-##' @param .n `boolean` - Input raster maps use as extension the number of the band instead the code. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.
+##' @param date `string` - Image acquisition date (yyyy-mm-dd). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param sun_elevation `number` - Sun elevation in degrees. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param product_date `string` - Image creation date (yyyy-mm-dd). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param gain `string` - Gain (H\code{/}L) of all Landsat ETM+ bands (1-5,61,62,7,8). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param percent `number` - Percent of solar radiance in path radiance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param pixel `number` - Minimum pixels to consider digital number as dark object. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param rayleigh `number` - Rayleigh atmosphere (diffuse sky irradiance). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param scale `number` - Scale factor for output. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .r `boolean` - Output at-sensor radiance instead of reflectance for all bands. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.
+##' @param .n `boolean` - Input raster maps use as extension the number of the band instead the code. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.
 ##' @param output `folderDestination` - Output Directory. Path for an existing or new folder.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

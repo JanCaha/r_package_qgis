@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_warpreproject.R
 \name{gdal_warpreproject}
 \alias{gdal_warpreproject}
-\title{QGIS algorithm Warp (reproject)}
+\title{QGIS algorithm - Warp (reproject)}
 \usage{
 gdal_warpreproject(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,21 +33,21 @@ gdal_warpreproject(
 
 \item{RESAMPLING}{\code{enum}  of \verb{("Nearest Neighbour", "Bilinear", "Cubic", "Cubic Spline", "Lanczos Windowed Sinc", "Average", "Mode", "Maximum", "Minimum", "Median", "First Quartile", "Third Quartile")} - Resampling method to use. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NODATA}{\code{number} - Nodata value for output bands. A numeric value.}
+\item{NODATA}{\code{number} - Nodata value for output bands. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{TARGET_RESOLUTION}{\code{number} - Output file resolution in target georeferenced units. A numeric value.}
+\item{TARGET_RESOLUTION}{\code{number} - Output file resolution in target georeferenced units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{TARGET_EXTENT}{\code{extent} - Georeferenced extents of output file to be created. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
 \item{TARGET_EXTENT_CRS}{\code{crs} - CRS of the target raster extent. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{MULTITHREADING}{\code{boolean} - Use multithreaded warping implementation. 1 for true/yes. 0 for false/no.}
+\item{MULTITHREADING}{\code{boolean} - Use multithreaded warping implementation. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Reprojected. Path for new raster layer.}
 
@@ -60,7 +60,7 @@ gdal_warpreproject(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Warp (reproject) (gdal:warpreproject)
+QGIS Algorithm provided by GDAL Warp (reproject) (gdal:warpreproject). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer SOURCE_CRS: Source CRS (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. TARGET_CRS: Target CRS (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. RESAMPLING: Resampling method to use 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Nearest Neighbour 		- 1: Bilinear 		- 2: Cubic 		- 3: Cubic Spline 		- 4: Lanczos Windowed Sinc 		- 5: Average 		- 6: Mode 		- 7: Maximum 		- 8: Minimum 		- 9: Median 		- 10: First Quartile 		- 11: Third Quartile 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' NODATA: Nodata value for output bands (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression TARGET_RESOLUTION: Output file resolution in target georeferenced units (optional) 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression DATA_TYPE: Output data type 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Use Input Layer Data Type 		- 1: Byte 		- 2: Int16 		- 3: UInt16 		- 4: UInt32 		- 5: Int32 		- 6: Float32 		- 7: Float64 		- 8: CInt16 		- 9: CInt32 		- 10: CFloat32 		- 11: CFloat64 		- 12: Int8 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' TARGET_EXTENT: Georeferenced extents of output file to be created (optional) 	Argument type:	extent 	Acceptable values: 		- A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105' 		- Path to a layer. The extent of the layer is used. TARGET_EXTENT_CRS: CRS of the target raster extent (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. MULTITHREADING: Use multithreaded warping implementation 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Reprojected 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

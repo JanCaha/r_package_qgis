@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_deletecolumn.R
 \name{qgis_deletecolumn}
 \alias{qgis_deletecolumn}
-\title{QGIS algorithm Drop field(s)}
+\title{QGIS algorithm - Drop field(s)}
 \usage{
 qgis_deletecolumn(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_deletecolumn(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Drop field(s) (native:deletecolumn)
+QGIS Algorithm provided by QGIS (native c++) Drop field(s) (native:deletecolumn). Deletes fields from a vector layer. This algorithm takes a vector layer and generates a new one that has the exact same content but without the selected columns.
 }
 \details{
 \subsection{Outputs description}{

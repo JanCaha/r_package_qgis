@@ -1,18 +1,18 @@
-##' QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (MBTiles) (native:writevectortiles_mbtiles)
+##' QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (MBTiles) (native:writevectortiles_mbtiles). This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
 ##'
-##' @title QGIS algorithm Write Vector Tiles (MBTiles)
+##' @title QGIS algorithm - Write Vector Tiles (MBTiles)
 ##'
-##' @param OUTPUT `fileDestination` - Destination MBTiles. Path for new file.
+##' @param OUTPUT `vectorTileDestination` - Destination MBTiles. Path for new vector tile layer.
 ##' @param LAYERS `vectortilewriterlayers` - Input layers. .
-##' @param MIN_ZOOM `number` - Minimum zoom level. A numeric value.
-##' @param MAX_ZOOM `number` - Maximum zoom level. A numeric value.
+##' @param MIN_ZOOM `number` - Minimum zoom level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MAX_ZOOM `number` - Maximum zoom level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param EXTENT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param META_NAME `string` - Metadata: Name. String value.
-##' @param META_DESCRIPTION `string` - Metadata: Description. String value.
-##' @param META_ATTRIBUTION `string` - Metadata: Attribution. String value.
-##' @param META_VERSION `string` - Metadata: Version. String value.
-##' @param META_TYPE `string` - Metadata: Type. String value.
-##' @param META_CENTER `string` - Metadata: Center. String value.
+##' @param META_NAME `string` - Metadata: Name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param META_DESCRIPTION `string` - Metadata: Description. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param META_ATTRIBUTION `string` - Metadata: Attribution. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param META_VERSION `string` - Metadata: Version. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param META_TYPE `string` - Metadata: Type. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param META_CENTER `string` - Metadata: Center. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -20,7 +20,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * OUTPUT - outputFile - Destination MBTiles
+##' * OUTPUT - outputVectorTile - Destination MBTiles
 ##'
 ##'
 ##' @export

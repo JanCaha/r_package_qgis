@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_intersection.R
 \name{qgis_intersection}
 \alias{qgis_intersection}
-\title{QGIS algorithm Intersection}
+\title{QGIS algorithm - Intersection}
 \usage{
 qgis_intersection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -11,6 +11,7 @@ qgis_intersection(
   OVERLAY_FIELDS = qgisprocess:::qgis_default_value(),
   OVERLAY_FIELDS_PREFIX = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  GRID_SIZE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -26,9 +27,11 @@ qgis_intersection(
 
 \item{OVERLAY_FIELDS}{\code{field} - Overlay fields to keep (leave empty to keep all fields). The name of an existing field. ; delimited list of existing field names.}
 
-\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value.}
+\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Intersection. Path for new vector layer.}
+
+\item{GRID_SIZE}{\code{number} - Grid size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +42,7 @@ qgis_intersection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Intersection (native:intersection)
+QGIS Algorithm provided by QGIS (native c++) Intersection (native:intersection). This algorithm extracts the overlapping portions of features in the Input and Overlay layers. Features in the output Intersection layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.
 }
 \details{
 \subsection{Outputs description}{

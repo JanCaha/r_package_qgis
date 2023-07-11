@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS Random points inside polygons (qgis:randompointsinsidepolygons)
+##' QGIS Algorithm provided by QGIS Random points inside polygons (qgis:randompointsinsidepolygons). This algorithm creates a new point layer with random points inside the polygons of a given layer. The number of points in each polygon can be defined as a fixed count or as a density value. The count/density value could also be taken from an attribute or an expression specified using the "Data defined override" functionality, so it can be different for each polygon in the input layer. A minimum distance can be specified, to avoid points being too close to each other.
 ##'
-##' @title QGIS algorithm Random points inside polygons
+##' @title QGIS algorithm - Random points inside polygons
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param STRATEGY `enum`  of `("Points count", "Points density")` - Sampling strategy. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param VALUE `number` - Point count or density. A numeric value.
-##' @param MIN_DISTANCE `distance` - Minimum distance between points. A numeric value.
+##' @param VALUE `number` - Point count or density. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MIN_DISTANCE `distance` - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Random points. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_polygonize.R
 \name{qgis_polygonize}
 \alias{qgis_polygonize}
-\title{QGIS algorithm Polygonize}
+\title{QGIS algorithm - Polygonize}
 \usage{
 qgis_polygonize(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_polygonize(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{KEEP_FIELDS}{\code{boolean} - Keep table structure of line layer. 1 for true/yes. 0 for false/no.}
+\item{KEEP_FIELDS}{\code{boolean} - Keep table structure of line layer. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Polygons. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_polygonize(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize)
+QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize). Creates a polygon layer from the input lines layer.
 }
 \details{
 \subsection{Outputs description}{

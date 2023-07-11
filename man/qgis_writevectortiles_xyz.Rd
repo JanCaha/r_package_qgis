@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_writevectortiles_xyz.R
 \name{qgis_writevectortiles_xyz}
 \alias{qgis_writevectortiles_xyz}
-\title{QGIS algorithm Write Vector Tiles (XYZ)}
+\title{QGIS algorithm - Write Vector Tiles (XYZ)}
 \usage{
 qgis_writevectortiles_xyz(
   OUTPUT_DIRECTORY = qgisprocess:::qgis_default_value(),
@@ -20,13 +20,13 @@ qgis_writevectortiles_xyz(
 \arguments{
 \item{OUTPUT_DIRECTORY}{\code{folderDestination} - Output directory. Path for an existing or new folder.}
 
-\item{XYZ_TEMPLATE}{\code{string} - File template. String value.}
+\item{XYZ_TEMPLATE}{\code{string} - File template. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{LAYERS}{\code{vectortilewriterlayers} - Input layers. .}
 
-\item{MIN_ZOOM}{\code{number} - Minimum zoom level. A numeric value.}
+\item{MIN_ZOOM}{\code{number} - Minimum zoom level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAX_ZOOM}{\code{number} - Maximum zoom level. A numeric value.}
+\item{MAX_ZOOM}{\code{number} - Maximum zoom level. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
@@ -39,7 +39,7 @@ qgis_writevectortiles_xyz(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (XYZ) (native:writevectortiles_xyz)
+QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (XYZ) (native:writevectortiles_xyz). This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
 }
 \details{
 \subsection{Outputs description}{

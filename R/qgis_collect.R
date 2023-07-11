@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Collect geometries (native:collect)
+##' QGIS Algorithm provided by QGIS (native c++) Collect geometries (native:collect). This algorithm takes a vector layer and collects its geometries into new multipart geometries. One or more attributes can be specified to collect only geometries belonging to the same class (having the same value for the specified attributes), alternatively all geometries can be collected.  All output geometries will be converted to multi geometries, even those with just a single part. This algorithm does not dissolve overlapping geometries - they will be collected together without modifying the shape of each geometry part.  See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options.
 ##'
-##' @title QGIS algorithm Collect geometries
+##' @title QGIS algorithm - Collect geometries
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param FIELD `field` - Unique ID fields. The name of an existing field. ; delimited list of existing field names.

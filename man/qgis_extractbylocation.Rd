@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_extractbylocation.R
 \name{qgis_extractbylocation}
 \alias{qgis_extractbylocation}
-\title{QGIS algorithm Extract by location}
+\title{QGIS algorithm - Extract by location}
 \usage{
 qgis_extractbylocation(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_extractbylocation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extractbylocation)
+QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extractbylocation). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the spatial relationship between each feature and the features in an additional layer.
 }
 \details{
 \subsection{Outputs description}{

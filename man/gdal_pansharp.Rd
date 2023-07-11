@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_pansharp.R
 \name{gdal_pansharp}
 \alias{gdal_pansharp}
-\title{QGIS algorithm Pansharpening}
+\title{QGIS algorithm - Pansharpening}
 \usage{
 gdal_pansharp(
   SPECTRAL = qgisprocess:::qgis_default_value(),
@@ -24,9 +24,9 @@ gdal_pansharp(
 
 \item{RESAMPLING}{\code{enum}  of \verb{("Nearest Neighbour", "Bilinear", "Cubic", "Cubic Spline", "Lanczos Windowed Sinc", "Average")} - Resampling algorithm. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ gdal_pansharp(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Pansharpening (gdal:pansharp)
+QGIS Algorithm provided by GDAL Pansharpening (gdal:pansharp). ---------------- Arguments ----------------  SPECTRAL: Spectral dataset 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer PANCHROMATIC: Panchromatic dataset 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer RESAMPLING: Resampling algorithm 	Default value:	2 	Argument type:	enum 	Available values: 		- 0: Nearest Neighbour 		- 1: Bilinear 		- 2: Cubic 		- 3: Cubic Spline 		- 4: Lanczos Windowed Sinc 		- 5: Average 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Output 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

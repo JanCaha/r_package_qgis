@@ -1,0 +1,43 @@
+##' QGIS Algorithm provided by SAGA Next Gen 01: a simple litter system (sagang:01:asimplelittersystem). ---------------- Arguments ----------------  TABLE: Results 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer TIME_SPAN: Time Span 	Default value:	100 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression TIME_STEP: Time Interval (a) 	Default value:	0.1 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression C_INIT: Initial Litter Storage (g/m_) 	Default value:	0 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression C_INPUT: Litterfall Rate (g/m_/a) 	Default value:	240 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression C_OUTPUT: Rate Constant for Litter Loss (1/a) 	Default value:	0.4 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression
+##'
+##' @title QGIS algorithm - 01: a simple litter system
+##'
+##' @param TABLE `vectorDestination` - Results. Path for new vector layer.
+##' @param TIME_SPAN `number` - Time Span. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param TIME_STEP `number` - Time Interval (a). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param C_INIT `number` - Initial Litter Storage (g\code{/}m_). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param C_INPUT `number` - Litterfall Rate (g\code{/}m_\code{/}a). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param C_OUTPUT `number` - Rate Constant for Litter Loss (1\code{/}a). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
+##'
+##' @details
+##' ## Outputs description
+##' * TABLE - outputVector - Results
+##'
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm
+
+sagang_01_asimplelittersystem <- function(TABLE = qgisprocess:::qgis_default_value(), TIME_SPAN = qgisprocess:::qgis_default_value(), TIME_STEP = qgisprocess:::qgis_default_value(), C_INIT = qgisprocess:::qgis_default_value(), C_INPUT = qgisprocess:::qgis_default_value(), C_OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+
+  check_algorithm_necessities("sagang:01:asimplelittersystem")
+
+  if (.messages){
+    output <- qgisprocess::qgis_run_algorithm("sagang:01:asimplelittersystem", `TABLE` = TABLE, `TIME_SPAN` = TIME_SPAN, `TIME_STEP` = TIME_STEP, `C_INIT` = C_INIT, `C_INPUT` = C_INPUT, `C_OUTPUT` = C_OUTPUT,..., .quiet = .quiet)
+  } else {
+    suppressMessages(
+      output <- qgisprocess::qgis_run_algorithm("sagang:01:asimplelittersystem", `TABLE` = TABLE, `TIME_SPAN` = TIME_SPAN, `TIME_STEP` = TIME_STEP, `C_INIT` = C_INIT, `C_INPUT` = C_INPUT, `C_OUTPUT` = C_OUTPUT,..., .quiet = .quiet)
+      )
+  }
+
+  if (.complete_output) {
+    return(output)
+  }
+  else{
+    qgisprocess::qgis_extract_output(output, "TABLE")
+  }
+}

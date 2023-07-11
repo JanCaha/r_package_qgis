@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_statisticsbycategories.R
 \name{qgis_statisticsbycategories}
 \alias{qgis_statisticsbycategories}
-\title{QGIS algorithm Statistics by categories}
+\title{QGIS algorithm - Statistics by categories}
 \usage{
 qgis_statisticsbycategories(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_statisticsbycategories(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Statistics by categories (qgis:statisticsbycategories)
+QGIS Algorithm provided by QGIS Statistics by categories (qgis:statisticsbycategories). This algorithm calculates statistics of fields depending on a parent class.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,10 +2,11 @@
 % Please edit documentation in R/qgis_fixgeometries.R
 \name{qgis_fixgeometries}
 \alias{qgis_fixgeometries}
-\title{QGIS algorithm Fix geometries}
+\title{QGIS algorithm - Fix geometries}
 \usage{
 qgis_fixgeometries(
   INPUT = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -15,6 +16,8 @@ qgis_fixgeometries(
 }
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
+
+\item{METHOD}{\code{enum}  of \verb{("Linework", "Structure")} - Repair method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{OUTPUT}{\code{sink} - Fixed geometries. Path for new vector layer.}
 
@@ -27,7 +30,7 @@ qgis_fixgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fix geometries (native:fixgeometries)
+QGIS Algorithm provided by QGIS (native c++) Fix geometries (native:fixgeometries). This algorithm attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. Already-valid geometries are returned without further intervention. Always outputs multi-geometry layer.  NOTE: M values will be dropped from the output.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_multidifference.R
 \name{qgis_multidifference}
 \alias{qgis_multidifference}
-\title{QGIS algorithm Difference (multiple)}
+\title{QGIS algorithm - Difference (multiple)}
 \usage{
 qgis_multidifference(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_multidifference(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Difference (multiple) (native:multidifference)
+QGIS Algorithm provided by QGIS (native c++) Difference (multiple) (native:multidifference). This algorithm extracts features from the Input layer that fall completely outside or only partially overlap the features from any of the Overlay layer(s). For each overlay layer the difference is calculated between the result of all previous difference operations and this overlay layer. Input layer features that partially overlap feature(s) in the Overlay layers are split along those features' boundary and only the portions outside the Overlay layer features are retained.  Attributes are not modified, although properties such as area or length of the features will be modified by the difference operation. If such properties are stored as attributes, those attributes will have to be manually updated.
 }
 \details{
 \subsection{Outputs description}{

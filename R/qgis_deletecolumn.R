@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Drop field(s) (native:deletecolumn)
+##' QGIS Algorithm provided by QGIS (native c++) Drop field(s) (native:deletecolumn). Deletes fields from a vector layer. This algorithm takes a vector layer and generates a new one that has the exact same content but without the selected columns.
 ##'
-##' @title QGIS algorithm Drop field(s)
+##' @title QGIS algorithm - Drop field(s)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param COLUMN `field` - Fields to drop. The name of an existing field. ; delimited list of existing field names.

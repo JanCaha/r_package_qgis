@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_pov.R
 \name{grass7_r_out_pov}
 \alias{grass7_r_out_pov}
-\title{QGIS algorithm r.out.pov}
+\title{QGIS algorithm - r.out.pov}
 \usage{
 grass7_r_out_pov(
   input = qgisprocess:::qgis_default_value(),
@@ -21,17 +21,17 @@ grass7_r_out_pov(
 \arguments{
 \item{input}{\code{raster} - Input raster. Path to a raster layer.}
 
-\item{hftype}{\code{number} - Height-field type (0=actual heights 1=normalized). A numeric value.}
+\item{hftype}{\code{number} - Height-field type (0=actual heights 1=normalized). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{bias}{\code{number} - Elevation bias. A numeric value.}
+\item{bias}{\code{number} - Elevation bias. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{scale}{\code{number} - Vertical scaling factor. A numeric value.}
+\item{scale}{\code{number} - Vertical scaling factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{fileDestination} - Name of output povray file (TGA height field file). Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -42,7 +42,7 @@ grass7_r_out_pov(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.pov (grass7:r.out.pov)
+QGIS Algorithm provided by GRASS r.out.pov (grass7:r.out.pov). Converts a raster map layer into a height-field file for POV-Ray
 }
 \details{
 \subsection{Outputs description}{

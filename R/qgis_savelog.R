@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Save log to file (native:savelog)
+##' QGIS Algorithm provided by QGIS (native c++) Save log to file (native:savelog). Saves the model's log contents to a file. This algorithm saves the model's execution log to a file. Optionally, the log can be saved in a HTML formatted version.
 ##'
-##' @title QGIS algorithm Save log to file
+##' @title QGIS algorithm - Save log to file
 ##'
 ##' @param OUTPUT `fileDestination` - Log file. Path for new file.
-##' @param USE_HTML `boolean` - Use HTML formatting. 1 for true/yes. 0 for false/no.
+##' @param USE_HTML `boolean` - Use HTML formatting. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export layer(s) information (native:exportlayersinformation)
+##' QGIS Algorithm provided by QGIS (native c++) Export layer(s) information (native:exportlayersinformation). Creates a polygon layer with features corresponding to the extent of selected layer(s).  Additional layer details - CRS, provider name, file path, layer name, subset filter, abstract and attribution - are attached as attributes to each feature.
 ##'
-##' @title QGIS algorithm Export layer(s) information
+##' @title QGIS algorithm - Export layer(s) information
 ##'
 ##' @param LAYERS `multilayer` - Input layer(s). .
 ##' @param OUTPUT `sink` - Output. Path for new vector layer.

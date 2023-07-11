@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Add geometry attributes (qgis:exportaddgeometrycolumns)
+##' QGIS Algorithm provided by QGIS Add geometry attributes (qgis:exportaddgeometrycolumns). This algorithm computes geometric properties of the features in a vector layer. It generates a new vector layer with the same content as the input one, but with additional attributes in its attributes table, containing geometric measurements. Depending on the geometry type of the vector layer, the attributes added to the table will be different.
 ##'
-##' @title QGIS algorithm Add geometry attributes
+##' @title QGIS algorithm - Add geometry attributes
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param CALC_METHOD `enum`  of `("Layer CRS", "Project CRS", "Ellipsoidal")` - Calculate using. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

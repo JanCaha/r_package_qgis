@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_rgbtopct.R
 \name{gdal_rgbtopct}
 \alias{gdal_rgbtopct}
-\title{QGIS algorithm RGB to PCT}
+\title{QGIS algorithm - RGB to PCT}
 \usage{
 gdal_rgbtopct(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ gdal_rgbtopct(
 \arguments{
 \item{INPUT}{\code{raster} - Input layer. Path to a raster layer.}
 
-\item{NCOLORS}{\code{number} - Number of colors. A numeric value.}
+\item{NCOLORS}{\code{number} - Number of colors. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - RGB to PCT. Path for new raster layer.}
 
@@ -30,7 +30,7 @@ gdal_rgbtopct(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL RGB to PCT (gdal:rgbtopct)
+QGIS Algorithm provided by GDAL RGB to PCT (gdal:rgbtopct). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer NCOLORS: Number of colors 	Default value:	2 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: RGB to PCT 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

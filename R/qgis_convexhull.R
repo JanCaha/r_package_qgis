@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convex hull (native:convexhull)
+##' QGIS Algorithm provided by QGIS (native c++) Convex hull (native:convexhull). This algorithm calculates the convex hull for each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a convex hull calculation which covers the whole layer or grouped subsets of features.
 ##'
-##' @title QGIS algorithm Convex hull
+##' @title QGIS algorithm - Convex hull
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Convex hulls. Path for new vector layer.

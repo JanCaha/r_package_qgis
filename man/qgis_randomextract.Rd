@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randomextract.R
 \name{qgis_randomextract}
 \alias{qgis_randomextract}
-\title{QGIS algorithm Random extract}
+\title{QGIS algorithm - Random extract}
 \usage{
 qgis_randomextract(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_randomextract(
 
 \item{METHOD}{\code{enum}  of \verb{("Number of features", "Percentage of features")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{NUMBER}{\code{number} - Number/percentage of features. A numeric value.}
+\item{NUMBER}{\code{number} - Number\code{/}percentage of features. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Extracted (random). Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_randomextract(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Random extract (native:randomextract)
+QGIS Algorithm provided by QGIS (native c++) Random extract (native:randomextract). This algorithm takes a vector layer and generates a new one that contains only a subset of the features in the input layer.  The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.
 }
 \details{
 \subsection{Outputs description}{

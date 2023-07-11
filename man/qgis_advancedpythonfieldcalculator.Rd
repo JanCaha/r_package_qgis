@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_advancedpythonfieldcalculator.R
 \name{qgis_advancedpythonfieldcalculator}
 \alias{qgis_advancedpythonfieldcalculator}
-\title{QGIS algorithm Advanced Python field calculator}
+\title{QGIS algorithm - Advanced Python field calculator}
 \usage{
 qgis_advancedpythonfieldcalculator(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,17 +22,17 @@ qgis_advancedpythonfieldcalculator(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{FIELD_NAME}{\code{string} - Result field name. String value.}
+\item{FIELD_NAME}{\code{string} - Result field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FIELD_TYPE}{\code{enum}  of \verb{("Integer (32 bit)", "Decimal (double)", "Text (string)", "Boolean", "Date", "Time", "Date & Time", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")} - Field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{FIELD_LENGTH}{\code{number} - Field length. A numeric value.}
+\item{FIELD_LENGTH}{\code{number} - Field length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FIELD_PRECISION}{\code{number} - Field precision. A numeric value.}
+\item{FIELD_PRECISION}{\code{number} - Field precision. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GLOBAL}{\code{string} - Global expression. String value.}
+\item{GLOBAL}{\code{string} - Global expression. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{FORMULA}{\code{string} - Formula. String value.}
+\item{FORMULA}{\code{string} - Formula. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Calculated. Path for new vector layer.}
 
@@ -45,7 +45,7 @@ qgis_advancedpythonfieldcalculator(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Advanced Python field calculator (qgis:advancedpythonfieldcalculator)
+QGIS Algorithm provided by QGIS Advanced Python field calculator (qgis:advancedpythonfieldcalculator). This algorithm adds a new attribute to a vector layer, with values resulting from applying an expression to each feature. The expression is defined as a Python function.
 }
 \details{
 \subsection{Outputs description}{

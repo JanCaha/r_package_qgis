@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_in_lidar_info.R
 \name{grass7_r_in_lidar_info}
 \alias{grass7_r_in_lidar_info}
-\title{QGIS algorithm r.in.lidar.info}
+\title{QGIS algorithm - r.in.lidar.info}
 \usage{
 grass7_r_in_lidar_info(
   input = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ grass7_r_in_lidar_info(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.in.lidar.info (grass7:r.in.lidar.info)
+QGIS Algorithm provided by GRASS r.in.lidar.info (grass7:r.in.lidar.info). r.in.lidar.info - Extract information from LAS file
 }
 \details{
 \subsection{Outputs description}{

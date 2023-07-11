@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_what_color.R
 \name{grass7_r_what_color}
 \alias{grass7_r_what_color}
-\title{QGIS algorithm r.what.color}
+\title{QGIS algorithm - r.what.color}
 \usage{
 grass7_r_what_color(
   input = qgisprocess:::qgis_default_value(),
@@ -20,15 +20,15 @@ grass7_r_what_color(
 \arguments{
 \item{input}{\code{raster} - Raster map to query colors. Path to a raster layer.}
 
-\item{value}{\code{string} - Values to query colors for (comma separated list). String value.}
+\item{value}{\code{string} - Values to query colors for (comma separated list). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{format}{\code{string} - Output format (printf-style). String value.}
+\item{format}{\code{string} - Output format (printf-style). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{html}{\code{fileDestination} - Colors file. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +39,7 @@ grass7_r_what_color(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.what.color (grass7:r.what.color)
+QGIS Algorithm provided by GRASS r.what.color (grass7:r.what.color). Queries colors for a raster map layer.
 }
 \details{
 \subsection{Outputs description}{

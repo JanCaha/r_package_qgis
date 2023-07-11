@@ -1,10 +1,10 @@
-##' QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distance) (native:multiringconstantbuffer)
+##' QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distance) (native:multiringconstantbuffer). This algorithm computes multi-ring ('donuts') buffer for all the features in an input layer, using a fixed or dynamic distance and rings number.
 ##'
-##' @title QGIS algorithm Multi-ring buffer (constant distance)
+##' @title QGIS algorithm - Multi-ring buffer (constant distance)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param RINGS `number` - Number of rings. A numeric value.
-##' @param DISTANCE `distance` - Distance between rings. A numeric value.
+##' @param RINGS `number` - Number of rings. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DISTANCE `distance` - Distance between rings. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Multi-ring buffer (constant distance). Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

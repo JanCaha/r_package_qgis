@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_out_xyz.R
 \name{grass7_r_out_xyz}
 \alias{grass7_r_out_xyz}
-\title{QGIS algorithm r.out.xyz}
+\title{QGIS algorithm - r.out.xyz}
 \usage{
 grass7_r_out_xyz(
   input = qgisprocess:::qgis_default_value(),
@@ -20,15 +20,15 @@ grass7_r_out_xyz(
 \arguments{
 \item{input}{\code{multilayer} - Input raster(s). .}
 
-\item{separator}{\code{string} - Field separator. String value.}
+\item{separator}{\code{string} - Field separator. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.i}{\code{boolean} - Include no data values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Include no data values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
 \item{output}{\code{fileDestination} - XYZ File. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -39,7 +39,7 @@ grass7_r_out_xyz(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.out.xyz (grass7:r.out.xyz)
+QGIS Algorithm provided by GRASS r.out.xyz (grass7:r.out.xyz). Exports a raster map to a text file as x,y,z values based on cell centers
 }
 \details{
 \subsection{Outputs description}{

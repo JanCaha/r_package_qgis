@@ -1,17 +1,17 @@
-##' QGIS Algorithm provided by GRASS v.class (grass7:v.class)
+##' QGIS Algorithm provided by GRASS v.class (grass7:v.class). Classifies attribute data, e.g. for thematic mapping.
 ##'
-##' @title QGIS algorithm v.class
+##' @title QGIS algorithm - v.class
 ##'
 ##' @param map `source` - Input vector layer. Path to a vector layer.
 ##' @param column `field` - Column name or expression. The name of an existing field. ; delimited list of existing field names.
-##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value.
+##' @param where `string` - WHERE conditions of SQL statement without 'where' keyword. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param algorithm `enum`  of `("int", "std", "qua", "equ")` - Algorithm to use for classification. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param nbclasses `number` - Number of classes to define. A numeric value.
-##' @param .g `boolean` - Print only class breaks (without min and max). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -g.
+##' @param nbclasses `number` - Number of classes to define. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .g `boolean` - Print only class breaks (without min and max). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -g.
 ##' @param html `fileDestination` - Classification. Path for new file.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value.
-##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value.
+##' @param GRASS_SNAP_TOLERANCE_PARAMETER `number` - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_MIN_AREA_PARAMETER `number` - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

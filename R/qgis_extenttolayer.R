@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create layer from extent (native:extenttolayer)
+##' QGIS Algorithm provided by QGIS (native c++) Create layer from extent (native:extenttolayer). This algorithm creates a new vector layer that contains a single feature with geometry matching an extent parameter.  It can be used in models to convert an extent into a layer which can be used for other algorithms which require a layer based input.
 ##'
-##' @title QGIS algorithm Create layer from extent
+##' @title QGIS algorithm - Create layer from extent
 ##'
 ##' @param INPUT `extent` - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
 ##' @param OUTPUT `sink` - Extent. Path for new vector layer.

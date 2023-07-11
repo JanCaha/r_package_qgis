@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_lineintersections.R
 \name{qgis_lineintersections}
 \alias{qgis_lineintersections}
-\title{QGIS algorithm Line intersections}
+\title{QGIS algorithm - Line intersections}
 \usage{
 qgis_lineintersections(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -26,7 +26,7 @@ qgis_lineintersections(
 
 \item{INTERSECT_FIELDS}{\code{field} - Intersect fields to keep (leave empty to keep all fields). The name of an existing field. ; delimited list of existing field names.}
 
-\item{INTERSECT_FIELDS_PREFIX}{\code{string} - Intersect fields prefix. String value.}
+\item{INTERSECT_FIELDS_PREFIX}{\code{string} - Intersect fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Intersections. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_lineintersections(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Line intersections (native:lineintersections)
+QGIS Algorithm provided by QGIS (native c++) Line intersections (native:lineintersections). This algorithm creates point features where the lines in the Intersect layer intersect the lines in the Input layer.
 }
 \details{
 \subsection{Outputs description}{

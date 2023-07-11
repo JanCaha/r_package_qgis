@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_createrandomexponentialrasterlayer.R
 \name{qgis_createrandomexponentialrasterlayer}
 \alias{qgis_createrandomexponentialrasterlayer}
-\title{QGIS algorithm Create random raster layer (exponential distribution)}
+\title{QGIS algorithm - Create random raster layer (exponential distribution)}
 \usage{
 qgis_createrandomexponentialrasterlayer(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -22,11 +22,11 @@ qgis_createrandomexponentialrasterlayer(
 
 \item{TARGET_CRS}{\code{crs} - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{PIXEL_SIZE}{\code{number} - Pixel size. A numeric value.}
+\item{PIXEL_SIZE}{\code{number} - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_TYPE}{\code{enum}  of \verb{("Float32", "Float64")} - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{LAMBDA}{\code{number} - Lambda. A numeric value.}
+\item{LAMBDA}{\code{number} - Lambda. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ qgis_createrandomexponentialrasterlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create random raster layer (exponential distribution) (native:createrandomexponentialrasterlayer)
+QGIS Algorithm provided by QGIS (native c++) Create random raster layer (exponential distribution) (native:createrandomexponentialrasterlayer). Generates a raster layer for given extent and cell size filled with exponentially distributed random values. By default, the values will be chosen given a lambda of 1.0. This can be overridden by using the advanced parameter for lambda. The raster data type is set to Float32 by default as the exponential distribution random values are floating point numbers.
 }
 \details{
 \subsection{Outputs description}{

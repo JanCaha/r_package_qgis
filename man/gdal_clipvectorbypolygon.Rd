@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_clipvectorbypolygon.R
 \name{gdal_clipvectorbypolygon}
 \alias{gdal_clipvectorbypolygon}
-\title{QGIS algorithm Clip vector by mask layer}
+\title{QGIS algorithm - Clip vector by mask layer}
 \usage{
 gdal_clipvectorbypolygon(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ gdal_clipvectorbypolygon(
 
 \item{MASK}{\code{source} - Mask layer. Path to a vector layer.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value.}
+\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{vectorDestination} - Clipped (mask). Path for new vector layer.}
 
@@ -33,7 +33,7 @@ gdal_clipvectorbypolygon(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Clip vector by mask layer (gdal:clipvectorbypolygon)
+QGIS Algorithm provided by GDAL Clip vector by mask layer (gdal:clipvectorbypolygon). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer MASK: Mask layer 	Argument type:	source 	Acceptable values: 		- Path to a vector layer OPTIONS: Additional creation options (optional) 	Default value:	 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Clipped (mask) 	Argument type:	vectorDestination 	Acceptable values: 		- Path for new vector layer
 }
 \details{
 \subsection{Outputs description}{

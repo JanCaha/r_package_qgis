@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_sieve.R
 \name{gdal_sieve}
 \alias{gdal_sieve}
-\title{QGIS algorithm Sieve}
+\title{QGIS algorithm - Sieve}
 \usage{
 gdal_sieve(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -21,15 +21,15 @@ gdal_sieve(
 \arguments{
 \item{INPUT}{\code{raster} - Input layer. Path to a raster layer.}
 
-\item{THRESHOLD}{\code{number} - Threshold. A numeric value.}
+\item{THRESHOLD}{\code{number} - Threshold. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EIGHT_CONNECTEDNESS}{\code{boolean} - Use 8-connectedness. 1 for true/yes. 0 for false/no.}
+\item{EIGHT_CONNECTEDNESS}{\code{boolean} - Use 8-connectedness. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NO_MASK}{\code{boolean} - Do not use the default validity mask for the input band. 1 for true/yes. 0 for false/no.}
+\item{NO_MASK}{\code{boolean} - Do not use the default validity mask for the input band. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{MASK_LAYER}{\code{raster} - Validity mask. Path to a raster layer.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Sieved. Path for new raster layer.}
 
@@ -42,7 +42,7 @@ gdal_sieve(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Sieve (gdal:sieve)
+QGIS Algorithm provided by GDAL Sieve (gdal:sieve). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer THRESHOLD: Threshold 	Default value:	10 	Argument type:	number 	Acceptable values: 		- A numeric value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EIGHT_CONNECTEDNESS: Use 8-connectedness 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NO_MASK: Do not use the default validity mask for the input band 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression MASK_LAYER: Validity mask (optional) 	Argument type:	raster 	Acceptable values: 		- Path to a raster layer EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Sieved 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

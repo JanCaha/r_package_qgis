@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb)
+##' QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb). This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer.
 ##'
-##' @title QGIS algorithm Zonal statistics
+##' @title QGIS algorithm - Zonal statistics
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param INPUT_RASTER `raster` - Raster layer. Path to a raster layer.
 ##' @param RASTER_BAND `band` - Raster band. Integer value representing an existing raster band number.
-##' @param COLUMN_PREFIX `string` - Output column prefix. String value.
+##' @param COLUMN_PREFIX `string` - Output column prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param STATISTICS `enum`  of `("Count", "Sum", "Mean", "Median", "St dev", "Minimum", "Maximum", "Range", "Minority", "Majority", "Variety", "Variance")` - Statistics to calculate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `sink` - Zonal Statistics. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert layer to spatial bookmarks (native:layertobookmarks)
+##' QGIS Algorithm provided by QGIS (native c++) Convert layer to spatial bookmarks (native:layertobookmarks). Converts feature extents to stored spatial bookmarks. This algorithm creates spatial bookmarks corresponding to the extent of features contained in a layer.
 ##'
-##' @title QGIS algorithm Convert layer to spatial bookmarks
+##' @title QGIS algorithm - Convert layer to spatial bookmarks
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param DESTINATION `enum`  of `("Project bookmarks", "User bookmarks")` - Bookmark destination. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_normal.R
 \name{grass7_v_normal}
 \alias{grass7_v_normal}
-\title{QGIS algorithm v.normal}
+\title{QGIS algorithm - v.normal}
 \usage{
 grass7_v_normal(
   map = qgisprocess:::qgis_default_value(),
@@ -23,21 +23,21 @@ grass7_v_normal(
 \arguments{
 \item{map}{\code{source} - point vector defining sample points. Path to a vector layer.}
 
-\item{tests}{\code{string} - Lists of tests (1-15): e.g. 1,3-8,13. String value.}
+\item{tests}{\code{string} - Lists of tests (1-15): e.g. 1,3-8,13. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{column}{\code{field} - Attribute column. The name of an existing field. ; delimited list of existing field names.}
 
-\item{.r}{\code{boolean} - Use only points in current region. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Use only points in current region. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.l}{\code{boolean} - lognormal. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -l.}
+\item{.l}{\code{boolean} - lognormal. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -l.}
 
 \item{html}{\code{fileDestination} - Normality. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,7 +48,7 @@ grass7_v_normal(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.normal (grass7:v.normal)
+QGIS Algorithm provided by GRASS v.normal (grass7:v.normal). Tests for normality for points.
 }
 \details{
 \subsection{Outputs description}{

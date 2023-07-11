@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randompointsinpolygons.R
 \name{qgis_randompointsinpolygons}
 \alias{qgis_randompointsinpolygons}
-\title{QGIS algorithm Random points in polygons}
+\title{QGIS algorithm - Random points in polygons}
 \usage{
 qgis_randompointsinpolygons(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -22,17 +22,17 @@ qgis_randompointsinpolygons(
 \arguments{
 \item{INPUT}{\code{source} - Input polygon layer. Path to a vector layer.}
 
-\item{POINTS_NUMBER}{\code{number} - Number of points for each feature. A numeric value.}
+\item{POINTS_NUMBER}{\code{number} - Number of points for each feature. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value.}
+\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MIN_DISTANCE_GLOBAL}{\code{distance} - Global minimum distance between points. A numeric value.}
+\item{MIN_DISTANCE_GLOBAL}{\code{distance} - Global minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MAX_TRIES_PER_POINT}{\code{number} - Maximum number of search attempts (for Min. dist.  0). A numeric value.}
+\item{MAX_TRIES_PER_POINT}{\code{number} - Maximum number of search attempts (for Min. dist.  0). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{SEED}{\code{number} - Random seed. A numeric value.}
+\item{SEED}{\code{number} - Random seed. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{INCLUDE_POLYGON_ATTRIBUTES}{\code{boolean} - Include polygon attributes. 1 for true/yes. 0 for false/no.}
+\item{INCLUDE_POLYGON_ATTRIBUTES}{\code{boolean} - Include polygon attributes. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Random points in polygons. Path for new vector layer.}
 
@@ -45,7 +45,7 @@ qgis_randompointsinpolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Random points in polygons (native:randompointsinpolygons)
+QGIS Algorithm provided by QGIS (native c++) Random points in polygons (native:randompointsinpolygons). pThis algorithm creates a point layer, with points placed randomly in the polygons of the ibInput polygon layer/b/i./p ulliFor each feature in the ibInput polygon layer/b/i, the algorithm attempts to add the specified ibNumber of points for each feature/b/i to the output layer./li liA ibMinimum distance between points/b/i and a ibGlobal minimum distance between points/b/i can be specified.br A point will not be added if there is an already generated point within this (Euclidean) distance from the generated location. With iMinimum distance between points/i, only points in the same polygon feature are considered, while for iGlobal minimum distance between points/i all previously generated points are considered. If the iGlobal minimum distance between points/i is set equal to or larger than the (local) iMinimum distance between points/i, the latter has no effect.br If the iMinimum distance between points/i is too large, it may not be possible to generate the specified iNumber of points for each feature/i, but all the generated points are returned./li liThe ibMaximum number of attempts per point/b/i can be specified./li liThe seed for the random generator can be provided (biRandom seed/i/b - integer, greater than 0)./li liThe user can choose not to ibInclude polygon feature attributes/b/i in the attributes of the generated point features./li /ul The total number of points will bebr b'number of input features'/b * ibNumber of points for each feature/b/ibr if there are no misses. The iNumber of points for each feature/i, iMinimum distance between points/i and iMaximum number of attempts per point/i can be data defined. pOutput from the algorithm:/p ul li The number of features with an empty or no geometry (codeFEATURES_WITH_EMPTY_OR_NO_GEOMETRY/code)./li li A point layer containing the random points (codeOUTPUT/code)./li li The number of generated features (codeOUTPUT_POINTS/code)./li li The number of missed points (codePOINTS_MISSED/code)./li li The number of features with non-empty geometry and missing points (codePOLYGONS_WITH_MISSED_POINTS/code)./li /ul
 }
 \details{
 \subsection{Outputs description}{

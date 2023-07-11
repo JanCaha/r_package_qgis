@@ -2,13 +2,14 @@
 % Please edit documentation in R/qgis_union.R
 \name{qgis_union}
 \alias{qgis_union}
-\title{QGIS algorithm Union}
+\title{QGIS algorithm - Union}
 \usage{
 qgis_union(
   INPUT = qgisprocess:::qgis_default_value(),
   OVERLAY = qgisprocess:::qgis_default_value(),
   OVERLAY_FIELDS_PREFIX = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  GRID_SIZE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -20,9 +21,11 @@ qgis_union(
 
 \item{OVERLAY}{\code{source} - Overlay layer. Path to a vector layer.}
 
-\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value.}
+\item{OVERLAY_FIELDS_PREFIX}{\code{string} - Overlay fields prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Union. Path for new vector layer.}
+
+\item{GRID_SIZE}{\code{number} - Grid size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -33,7 +36,7 @@ qgis_union(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Union (native:union)
+QGIS Algorithm provided by QGIS (native c++) Union (native:union). This algorithm checks overlaps between features within the Input layer and creates separate features for overlapping and non-overlapping parts. The area of overlap will create as many identical overlapping features as there are features that participate in that overlap.  An Overlay layer can also be used, in which case features from each layer are split at their overlap with features from the other one, creating a layer containing all the portions from both Input and Overlay layers. The attribute table of the Union layer is filled with attribute values from the respective original layer for non-overlapping features, and attribute values from both layers for overlapping features.
 }
 \details{
 \subsection{Outputs description}{

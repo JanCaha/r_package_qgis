@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Swap X and Y coordinates (native:swapxy)
+##' QGIS Algorithm provided by QGIS (native c++) Swap X and Y coordinates (native:swapxy). This algorithm swaps the X and Y coordinate values in input geometries. It can be used to repair geometries which have accidentally had their latitude and longitude values reversed.
 ##'
-##' @title QGIS algorithm Swap X and Y coordinates
+##' @title QGIS algorithm - Swap X and Y coordinates
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Swapped. Path for new vector layer.

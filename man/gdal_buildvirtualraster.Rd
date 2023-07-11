@@ -2,7 +2,7 @@
 % Please edit documentation in R/gdal_buildvirtualraster.R
 \name{gdal_buildvirtualraster}
 \alias{gdal_buildvirtualraster}
-\title{QGIS algorithm Build virtual raster}
+\title{QGIS algorithm - Build virtual raster}
 \usage{
 gdal_buildvirtualraster(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -26,19 +26,19 @@ gdal_buildvirtualraster(
 
 \item{RESOLUTION}{\code{enum}  of \verb{("Average", "Highest", "Lowest")} - Resolution. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{SEPARATE}{\code{boolean} - Place each input file into a separate band. 1 for true/yes. 0 for false/no.}
+\item{SEPARATE}{\code{boolean} - Place each input file into a separate band. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{PROJ_DIFFERENCE}{\code{boolean} - Allow projection difference. 1 for true/yes. 0 for false/no.}
+\item{PROJ_DIFFERENCE}{\code{boolean} - Allow projection difference. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{ADD_ALPHA}{\code{boolean} - Add alpha mask band to VRT when source raster has none. 1 for true/yes. 0 for false/no.}
+\item{ADD_ALPHA}{\code{boolean} - Add alpha mask band to VRT when source raster has none. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{ASSIGN_CRS}{\code{crs} - Override projection for the output file. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
 \item{RESAMPLING}{\code{enum}  of \verb{("Nearest Neighbour", "Bilinear", "Cubic Convolution", "B-Spline Convolution", "Lanczos Windowed Sinc", "Average", "Mode")} - Resampling algorithm. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{SRC_NODATA}{\code{string} - Nodata value(s) for input bands (space separated). String value.}
+\item{SRC_NODATA}{\code{string} - Nodata value(s) for input bands (space separated). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{EXTRA}{\code{string} - Additional command-line parameters. String value.}
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Virtual. Path for new raster layer.}
 
@@ -51,7 +51,7 @@ gdal_buildvirtualraster(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Build virtual raster (gdal:buildvirtualraster)
+QGIS Algorithm provided by GDAL Build virtual raster (gdal:buildvirtualraster). ---------------- Arguments ----------------  INPUT: Input layers 	Argument type:	multilayer RESOLUTION: Resolution 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Average 		- 1: Highest 		- 2: Lowest 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' SEPARATE: Place each input file into a separate band 	Default value:	true 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression PROJ_DIFFERENCE: Allow projection difference 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ADD_ALPHA: Add alpha mask band to VRT when source raster has none 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression ASSIGN_CRS: Override projection for the output file (optional) 	Argument type:	crs 	Acceptable values: 		- CRS as an auth ID (e.g. 'EPSG:3111') 		- CRS as a PROJ4 string (e.g. 'PROJ4:…') 		- CRS as a WKT string (e.g. 'WKT:…') 		- Path to a layer. The CRS of the layer is used. RESAMPLING: Resampling algorithm 	Default value:	0 	Argument type:	enum 	Available values: 		- 0: Nearest Neighbour 		- 1: Bilinear 		- 2: Cubic Convolution 		- 3: B-Spline Convolution 		- 4: Lanczos Windowed Sinc 		- 5: Average 		- 6: Mode 	Acceptable values: 		- Number of selected option, e.g. '1' 		- Comma separated list of options, e.g. '1,3' SRC_NODATA: Nodata value(s) for input bands (space separated) (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Virtual 	Argument type:	rasterDestination 	Acceptable values: 		- Path for new raster layer
 }
 \details{
 \subsection{Outputs description}{

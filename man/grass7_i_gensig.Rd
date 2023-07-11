@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_i_gensig.R
 \name{grass7_i_gensig}
 \alias{grass7_i_gensig}
-\title{QGIS algorithm i.gensig}
+\title{QGIS algorithm - i.gensig}
 \usage{
 grass7_i_gensig(
   trainingmap = qgisprocess:::qgis_default_value(),
@@ -25,7 +25,7 @@ grass7_i_gensig(
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -36,7 +36,7 @@ grass7_i_gensig(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS i.gensig (grass7:i.gensig)
+QGIS Algorithm provided by GRASS i.gensig (grass7:i.gensig). Generates statistics for i.maxlik from raster map.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_v_in_lidar.R
 \name{grass7_v_in_lidar}
 \alias{grass7_v_in_lidar}
-\title{QGIS algorithm v.in.lidar}
+\title{QGIS algorithm - v.in.lidar}
 \usage{
 grass7_v_in_lidar(
   input = qgisprocess:::qgis_default_value(),
@@ -38,21 +38,21 @@ grass7_v_in_lidar(
 
 \item{return_filter}{\code{enum}  of \verb{("first", "last", "mid")} - Only import points of selected return type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{class_filter}{\code{string} - Only import points of selected class(es) (comma separated integers). String value.}
+\item{class_filter}{\code{string} - Only import points of selected class(es) (comma separated integers). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{skip}{\code{number} - Do not import every n-th point. A numeric value.}
+\item{skip}{\code{number} - Do not import every n-th point. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{preserve}{\code{number} - Import only every n-th point. A numeric value.}
+\item{preserve}{\code{number} - Import only every n-th point. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{offset}{\code{number} - Skip first n points. A numeric value.}
+\item{offset}{\code{number} - Skip first n points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{limit}{\code{number} - Import only n points. A numeric value.}
+\item{limit}{\code{number} - Import only n points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -t.}
+\item{.t}{\code{boolean} - Do not create attribute table. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -t.}
 
-\item{.c}{\code{boolean} - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Do not automatically add unique ID as category to each point. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
-\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -b.}
+\item{.b}{\code{boolean} - Do not build topology. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -b.}
 
 \item{output}{\code{vectorDestination} - Lidar. Path for new vector layer.}
 
@@ -60,11 +60,11 @@ grass7_v_in_lidar(
 
 \item{GRASS_OUTPUT_TYPE_PARAMETER}{\code{enum}  of \verb{("auto", "point", "line", "area")} - v.out.ogr output type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value.}
+\item{GRASS_VECTOR_DSCO}{\code{string} - v.out.ogr output data source options (dsco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value.}
+\item{GRASS_VECTOR_LCO}{\code{string} - v.out.ogr output layer options (lco). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no.}
+\item{GRASS_VECTOR_EXPORT_NOCAT}{\code{boolean} - Also export features without category (not labeled). Otherwise only features with category are exported. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -75,7 +75,7 @@ grass7_v_in_lidar(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.in.lidar (grass7:v.in.lidar)
+QGIS Algorithm provided by GRASS v.in.lidar (grass7:v.in.lidar). Converts LAS LiDAR point clouds to a GRASS vector map with libLAS.
 }
 \details{
 \subsection{Outputs description}{

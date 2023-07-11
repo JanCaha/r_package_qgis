@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export print layout as image (native:printlayouttoimage)
+##' QGIS Algorithm provided by QGIS (native c++) Export print layout as image (native:printlayouttoimage). Exports a print layout as an image. This algorithm outputs a print layout as an image file (e.g. PNG or JPEG images).
 ##'
-##' @title QGIS algorithm Export print layout as image
+##' @title QGIS algorithm - Export print layout as image
 ##'
 ##' @param LAYOUT `layout` - Print layout. Name of print layout in current project.
 ##' @param LAYERS `multilayer` - Map layers to assign to unlocked map item(s). .
-##' @param DPI `number` - DPI (leave blank for default layout DPI). A numeric value.
-##' @param GEOREFERENCE `boolean` - Generate world file. 1 for true/yes. 0 for false/no.
-##' @param INCLUDE_METADATA `boolean` - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no.
-##' @param ANTIALIAS `boolean` - Enable antialiasing. 1 for true/yes. 0 for false/no.
+##' @param DPI `number` - DPI (leave blank for default layout DPI). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GEOREFERENCE `boolean` - Generate world file. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param INCLUDE_METADATA `boolean` - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ANTIALIAS `boolean` - Enable antialiasing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `fileDestination` - Image file. Path for new file.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

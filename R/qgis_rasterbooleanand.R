@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster boolean AND (native:rasterbooleanand)
+##' QGIS Algorithm provided by QGIS (native c++) Raster boolean AND (native:rasterbooleanand). Calculates the boolean AND for a set of input raster layers This algorithm calculates the boolean AND for a set of input rasters. If all of the input rasters have a non-zero value for a pixel, that pixel will be set to 1 in the output raster. If any of the input rasters have 0 values for the pixel it will be set to 0 in the output raster.  The reference layer parameter specifies an existing raster layer to use as a reference when creating the output raster. The output raster will have the same extent, CRS, and pixel dimensions as this layer.  By default, a nodata pixel in ANY of the input layers will result in a nodata pixel in the output raster. If the 'Treat nodata values as false' option is checked, then nodata inputs will be treated the same as a 0 input value.
 ##'
-##' @title QGIS algorithm Raster boolean AND
+##' @title QGIS algorithm - Raster boolean AND
 ##'
 ##' @param INPUT `multilayer` - Input layers. .
 ##' @param REF_LAYER `raster` - Reference layer. Path to a raster layer.
-##' @param NODATA_AS_FALSE `boolean` - Treat nodata values as false. 1 for true/yes. 0 for false/no.
-##' @param NO_DATA `number` - Output no data value. A numeric value.
-##' @param DATA_TYPE `enum`  of `("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param NODATA_AS_FALSE `boolean` - Treat nodata values as false. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NO_DATA `number` - Output no data value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param DATA_TYPE `enum`  of `("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `rasterDestination` - Output layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

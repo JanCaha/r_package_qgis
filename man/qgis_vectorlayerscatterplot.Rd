@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_vectorlayerscatterplot.R
 \name{qgis_vectorlayerscatterplot}
 \alias{qgis_vectorlayerscatterplot}
-\title{QGIS algorithm Vector layer scatterplot}
+\title{QGIS algorithm - Vector layer scatterplot}
 \usage{
 qgis_vectorlayerscatterplot(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_vectorlayerscatterplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Vector layer scatterplot (qgis:vectorlayerscatterplot)
+QGIS Algorithm provided by QGIS Vector layer scatterplot (qgis:vectorlayerscatterplot). This algorithm creates a simple X - Y scatter plot for a vector layer.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,11 +2,12 @@
 % Please edit documentation in R/grass7_v_neighbors.R
 \name{grass7_v_neighbors}
 \alias{grass7_v_neighbors}
-\title{QGIS algorithm v.neighbors}
+\title{QGIS algorithm - v.neighbors}
 \usage{
 grass7_v_neighbors(
   input = qgisprocess:::qgis_default_value(),
   method = qgisprocess:::qgis_default_value(),
+  points_column = qgisprocess:::qgis_default_value(),
   size = qgisprocess:::qgis_default_value(),
   output = qgisprocess:::qgis_default_value(),
   GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
@@ -24,23 +25,25 @@ grass7_v_neighbors(
 \arguments{
 \item{input}{\code{source} - Input vector layer. Path to a vector layer.}
 
-\item{method}{\code{enum}  of \code{("count")} - Neighborhood operation. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{method}{\code{enum}  of \verb{("count", "sum", "average", "median", "mode", "minimum", "maximum", "range", "stddev", "variance", "diversity")} - Method for aggregate statistics (count if non given). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{size}{\code{number} - Neighborhood diameter in map units. A numeric value.}
+\item{points_column}{\code{field} - Column name of points map to use for statistics. The name of an existing field. ; delimited list of existing field names.}
+
+\item{size}{\code{number} - Neighborhood diameter in map units. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{output}{\code{rasterDestination} - Neighborhood. Path for new raster layer.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value.}
+\item{GRASS_RASTER_FORMAT_OPT}{\code{string} - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value.}
+\item{GRASS_RASTER_FORMAT_META}{\code{string} - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value.}
+\item{GRASS_SNAP_TOLERANCE_PARAMETER}{\code{number} - v.in.ogr snap tolerance (-1 = no snap). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value.}
+\item{GRASS_MIN_AREA_PARAMETER}{\code{number} - v.in.ogr min area. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -51,7 +54,7 @@ grass7_v_neighbors(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS v.neighbors (grass7:v.neighbors)
+QGIS Algorithm provided by GRASS v.neighbors (grass7:v.neighbors). Makes each cell value a function of attribute values and stores in an output raster map.
 }
 \details{
 \subsection{Outputs description}{

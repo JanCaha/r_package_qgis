@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_renametablefield.R
 \name{qgis_renametablefield}
 \alias{qgis_renametablefield}
-\title{QGIS algorithm Rename field}
+\title{QGIS algorithm - Rename field}
 \usage{
 qgis_renametablefield(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_renametablefield(
 
 \item{FIELD}{\code{field} - Field to rename. The name of an existing field. ; delimited list of existing field names.}
 
-\item{NEW_NAME}{\code{string} - New field name. String value.}
+\item{NEW_NAME}{\code{string} - New field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Renamed. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_renametablefield(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rename field (native:renametablefield)
+QGIS Algorithm provided by QGIS (native c++) Rename field (native:renametablefield). Renames an existing field from a vector layer. This algorithm renames an existing field from a vector layer.
 }
 \details{
 \subsection{Outputs description}{

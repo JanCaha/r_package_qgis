@@ -1,14 +1,14 @@
-##' QGIS Algorithm provided by QGIS (native c++) Join attributes by nearest (native:joinbynearest)
+##' QGIS Algorithm provided by QGIS (native c++) Join attributes by nearest (native:joinbynearest). Joins a layer to another layer, using the closest features (nearest neighbors). This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer, where features are joined by finding the closest features from each layer. By default only the single nearest feature is joined,but optionally the join can use the n-nearest neighboring features instead. If multiple features are found with identical distances these will all be returned (even if the total number of features exceeds the specified maximum feature count).  If a maximum distance is specified, then only features which are closer than this distance will be matched.  The output features will contain the selected attributes from the nearest feature, along with new attributes for the distance to the near feature, the index of the feature, and the coordinates of the closest point on the input feature (feature_x, feature_y) to the matched nearest feature, and the coordinates of the closet point on the matched feature (nearest_x, nearest_y).  This algorithm uses purely Cartesian calculations for distance, and does not consider geodetic or ellipsoid properties when determining feature proximity.
 ##'
-##' @title QGIS algorithm Join attributes by nearest
+##' @title QGIS algorithm - Join attributes by nearest
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param INPUT_2 `source` - Input layer 2. Path to a vector layer.
 ##' @param FIELDS_TO_COPY `field` - Layer 2 fields to copy (leave empty to copy all fields). The name of an existing field. ; delimited list of existing field names.
-##' @param DISCARD_NONMATCHING `boolean` - Discard records which could not be joined. 1 for true/yes. 0 for false/no.
-##' @param PREFIX `string` - Joined field prefix. String value.
-##' @param NEIGHBORS `number` - Maximum nearest neighbors. A numeric value.
-##' @param MAX_DISTANCE `distance` - Maximum distance. A numeric value.
+##' @param DISCARD_NONMATCHING `boolean` - Discard records which could not be joined. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param PREFIX `string` - Joined field prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NEIGHBORS `number` - Maximum nearest neighbors. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param MAX_DISTANCE `distance` - Maximum distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Joined layer. Path for new vector layer.
 ##' @param NON_MATCHING `sink` - Unjoinable features from first layer. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

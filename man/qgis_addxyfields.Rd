@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_addxyfields.R
 \name{qgis_addxyfields}
 \alias{qgis_addxyfields}
-\title{QGIS algorithm Add X/Y fields to layer}
+\title{QGIS algorithm - Add X/Y fields to layer}
 \usage{
 qgis_addxyfields(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_addxyfields(
 
 \item{CRS}{\code{crs} - Coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{PREFIX}{\code{string} - Field prefix. String value.}
+\item{PREFIX}{\code{string} - Field prefix. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Added fields. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_addxyfields(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields)
+QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields). Adds X and Y (or latitude/longitude) fields to a point layer. Adds X and Y (or latitude/longitude) fields to a point layer. The X/Y fields can be calculated in a different CRS to the layer (e.g. creating latitude/longitude fields for a layer in a project CRS).
 }
 \details{
 \subsection{Outputs description}{

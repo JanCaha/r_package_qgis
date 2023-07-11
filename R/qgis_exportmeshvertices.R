@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export mesh vertices (native:exportmeshvertices)
+##' QGIS Algorithm provided by QGIS (native c++) Export mesh vertices (native:exportmeshvertices). Exports mesh vertices to a point vector layer This algorithm exports a mesh layer's vertices to a point vector layer, with the dataset values on vertices as attribute values.
 ##'
-##' @title QGIS algorithm Export mesh vertices
+##' @title QGIS algorithm - Export mesh vertices
 ##'
 ##' @param INPUT `mesh` - Input mesh layer. Path to a mesh layer.
 ##' @param DATASET_GROUPS `meshdatasetgroups` - Dataset groups. .

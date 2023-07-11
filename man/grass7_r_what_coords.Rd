@@ -2,7 +2,7 @@
 % Please edit documentation in R/grass7_r_what_coords.R
 \name{grass7_r_what_coords}
 \alias{grass7_r_what_coords}
-\title{QGIS algorithm r.what.coords}
+\title{QGIS algorithm - r.what.coords}
 \usage{
 grass7_r_what_coords(
   map = qgisprocess:::qgis_default_value(),
@@ -29,27 +29,27 @@ grass7_r_what_coords(
 
 \item{coordinates}{\code{point} - Coordinates for query (east, north). Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
-\item{null_value}{\code{string} - String representing NULL value. String value.}
+\item{null_value}{\code{string} - String representing NULL value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{separator}{\code{string} - Field separator. Special characters: pipe, comma, space, tab, newlineString representing NULL value. String value.}
+\item{separator}{\code{string} - Field separator. Special characters: pipe, comma, space, tab, newlineString representing NULL value. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{cache}{\code{number} - Size of point cache. A numeric value.}
+\item{cache}{\code{number} - Size of point cache. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{.n}{\code{boolean} - Output header row. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -n.}
+\item{.n}{\code{boolean} - Output header row. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -n.}
 
-\item{.f}{\code{boolean} - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -f.}
+\item{.f}{\code{boolean} - Show the category labels of the grid cell(s). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -f.}
 
-\item{.r}{\code{boolean} - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -r.}
+\item{.r}{\code{boolean} - Output color values as RRR:GGG:BBB. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -r.}
 
-\item{.i}{\code{boolean} - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.}
+\item{.i}{\code{boolean} - Output integer category values, not cell values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.}
 
-\item{.c}{\code{boolean} - Turn on cache reporting. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -c.}
+\item{.c}{\code{boolean} - Turn on cache reporting. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -c.}
 
 \item{output}{\code{fileDestination} - Raster Value File. Path for new file.}
 
 \item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.}
+\item{GRASS_REGION_CELLSIZE_PARAMETER}{\code{number} - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -60,7 +60,7 @@ grass7_r_what_coords(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GRASS r.what.coords (grass7:r.what.coords)
+QGIS Algorithm provided by GRASS r.what.coords (grass7:r.what.coords). r.what.coords - Queries raster maps on their category values and category labels on a point.
 }
 \details{
 \subsection{Outputs description}{

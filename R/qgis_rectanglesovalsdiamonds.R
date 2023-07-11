@@ -1,13 +1,13 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds)
+##' QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds). Creates rectangle, oval or diamond-shaped polygons from the input point layer using specified width, height and (optional) rotation values. Multipart inputs should be promoted to singleparts first.
 ##'
-##' @title QGIS algorithm Rectangles, ovals, diamonds
+##' @title QGIS algorithm - Rectangles, ovals, diamonds
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param SHAPE `enum`  of `("Rectangle", "Diamond", "Oval")` - Shape. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param WIDTH `distance` - Width. A numeric value.
-##' @param HEIGHT `distance` - Height. A numeric value.
-##' @param ROTATION `number` - Rotation. A numeric value.
-##' @param SEGMENTS `number` - Segments. A numeric value.
+##' @param WIDTH `distance` - Width. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param HEIGHT `distance` - Height. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param ROTATION `number` - Rotation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param SEGMENTS `number` - Segments. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Polygon. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

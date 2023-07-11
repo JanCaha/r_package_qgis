@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_exportlayersinformation.R
 \name{qgis_exportlayersinformation}
 \alias{qgis_exportlayersinformation}
-\title{QGIS algorithm Export layer(s) information}
+\title{QGIS algorithm - Export layer(s) information}
 \usage{
 qgis_exportlayersinformation(
   LAYERS = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_exportlayersinformation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export layer(s) information (native:exportlayersinformation)
+QGIS Algorithm provided by QGIS (native c++) Export layer(s) information (native:exportlayersinformation). Creates a polygon layer with features corresponding to the extent of selected layer(s).  Additional layer details - CRS, provider name, file path, layer name, subset filter, abstract and attribution - are attached as attributes to each feature.
 }
 \details{
 \subsection{Outputs description}{

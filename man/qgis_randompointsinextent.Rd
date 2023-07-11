@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_randompointsinextent.R
 \name{qgis_randompointsinextent}
 \alias{qgis_randompointsinextent}
-\title{QGIS algorithm Random points in extent}
+\title{QGIS algorithm - Random points in extent}
 \usage{
 qgis_randompointsinextent(
   EXTENT = qgisprocess:::qgis_default_value(),
@@ -20,13 +20,13 @@ qgis_randompointsinextent(
 \arguments{
 \item{EXTENT}{\code{extent} - Input extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
-\item{POINTS_NUMBER}{\code{number} - Number of points. A numeric value.}
+\item{POINTS_NUMBER}{\code{number} - Number of points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value.}
+\item{MIN_DISTANCE}{\code{distance} - Minimum distance between points. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{TARGET_CRS}{\code{crs} - Target CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
-\item{MAX_ATTEMPTS}{\code{number} - Maximum number of search attempts given the minimum distance. A numeric value.}
+\item{MAX_ATTEMPTS}{\code{number} - Maximum number of search attempts given the minimum distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Random points. Path for new vector layer.}
 
@@ -39,7 +39,7 @@ qgis_randompointsinextent(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Random points in extent (native:randompointsinextent)
+QGIS Algorithm provided by QGIS (native c++) Random points in extent (native:randompointsinextent). This algorithm creates a new point layer with a given number of random points, all of them within a given extent. A distance factor can be specified, to avoid points being too close to each other. If the minimum distance between points makes it impossible to create new points, either distance can be decreased or the maximum number of attempts may be increased.
 }
 \details{
 \subsection{Outputs description}{

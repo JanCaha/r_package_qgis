@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_hillshade.R
 \name{qgis_hillshade}
 \alias{qgis_hillshade}
-\title{QGIS algorithm Hillshade}
+\title{QGIS algorithm - Hillshade}
 \usage{
 qgis_hillshade(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -19,11 +19,11 @@ qgis_hillshade(
 \arguments{
 \item{INPUT}{\code{raster} - Elevation layer. Path to a raster layer.}
 
-\item{Z_FACTOR}{\code{number} - Z factor. A numeric value.}
+\item{Z_FACTOR}{\code{number} - Z factor. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{AZIMUTH}{\code{number} - Azimuth (horizontal angle). A numeric value.}
+\item{AZIMUTH}{\code{number} - Azimuth (horizontal angle). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{V_ANGLE}{\code{number} - Vertical angle. A numeric value.}
+\item{V_ANGLE}{\code{number} - Vertical angle. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Hillshade. Path for new raster layer.}
 
@@ -36,7 +36,7 @@ qgis_hillshade(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade)
+QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade). This algorithm calculates the hillshade of the Digital Terrain Model in input.  The shading of the layer is calculated according to the sun position (azimuth and elevation).
 }
 \details{
 \subsection{Outputs description}{

@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Promote to multipart (native:promotetomulti)
+##' QGIS Algorithm provided by QGIS (native c++) Promote to multipart (native:promotetomulti). This algorithm takes a vector layer with singlepart geometries and generates a new one in which all geometries are multipart. Input features which are already multipart features will remain unchanged.  This algorithm can be used to force geometries to multipart types in order to be compatible with data providers with strict singlepart/multipart compatibility checks.  See the 'Collect geometries' or 'Aggregate' algorithms for alternative options.
 ##'
-##' @title QGIS algorithm Promote to multipart
+##' @title QGIS algorithm - Promote to multipart
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Multiparts. Path for new vector layer.

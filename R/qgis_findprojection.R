@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS Find projection (qgis:findprojection)
+##' QGIS Algorithm provided by QGIS Find projection (qgis:findprojection). This algorithm allows creation of a shortlist of possible candidate coordinate reference systems for a layer with an unknown projection. The expected area which the layer should reside in must be specified via the target area parameter. The algorithm operates by testing the layer's extent in every known reference system and listing any in which the bounds would fall near the target area if the layer was in this projection.
 ##'
-##' @title QGIS algorithm Find projection
+##' @title QGIS algorithm - Find projection
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param TARGET_AREA `extent` - Target area for layer. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_findprojection.R
 \name{qgis_findprojection}
 \alias{qgis_findprojection}
-\title{QGIS algorithm Find projection}
+\title{QGIS algorithm - Find projection}
 \usage{
 qgis_findprojection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -30,7 +30,7 @@ qgis_findprojection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Find projection (qgis:findprojection)
+QGIS Algorithm provided by QGIS Find projection (qgis:findprojection). This algorithm allows creation of a shortlist of possible candidate coordinate reference systems for a layer with an unknown projection. The expected area which the layer should reside in must be specified via the target area parameter. The algorithm operates by testing the layer's extent in every known reference system and listing any in which the bounds would fall near the target area if the layer was in this projection.
 }
 \details{
 \subsection{Outputs description}{

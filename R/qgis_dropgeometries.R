@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Drop geometries (native:dropgeometries)
+##' QGIS Algorithm provided by QGIS (native c++) Drop geometries (native:dropgeometries). This algorithm removes any geometries from an input layer and returns a layer containing only the feature attributes.
 ##'
-##' @title QGIS algorithm Drop geometries
+##' @title QGIS algorithm - Drop geometries
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param OUTPUT `sink` - Dropped geometries. Path for new vector layer.

@@ -1,9 +1,9 @@
-##' QGIS Algorithm provided by QGIS (native c++) Delete holes (native:deleteholes)
+##' QGIS Algorithm provided by QGIS (native c++) Delete holes (native:deleteholes). This algorithm takes a polygon layer and removes holes in polygons. It creates a new vector layer in which polygons with holes have been replaced by polygons with only their external ring. Attributes are not modified.  An optional minimum area parameter allows removing only holes which are smaller than a specified area threshold. Leaving this parameter as 0.0 results in all holes being removed.
 ##'
-##' @title QGIS algorithm Delete holes
+##' @title QGIS algorithm - Delete holes
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param MIN_AREA `number` - Remove holes with area less than. A numeric value.
+##' @param MIN_AREA `number` - Remove holes with area less than. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `sink` - Cleaned. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

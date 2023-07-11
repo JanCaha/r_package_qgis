@@ -1,11 +1,11 @@
-##' QGIS Algorithm provided by QGIS (native c++) Line density (native:linedensity)
+##' QGIS Algorithm provided by QGIS (native c++) Line density (native:linedensity). The line density interpolation algorithm calculates a density measure of linear features which is obtained in a circular neighborhood within each raster cell. First, the length of the segment of each line that is intersected by the circular neighborhood is multiplied with the lines weight factor. In a second step, all length values are summed and divided by the area of the circular neighborhood. This process is repeated for all raster cells.
 ##'
-##' @title QGIS algorithm Line density
+##' @title QGIS algorithm - Line density
 ##'
 ##' @param INPUT `source` - Input line layer. Path to a vector layer.
 ##' @param WEIGHT `field` - Weight field . The name of an existing field. ; delimited list of existing field names.
-##' @param RADIUS `distance` - Search radius. A numeric value.
-##' @param PIXEL_SIZE `distance` - Pixel size. A numeric value.
+##' @param RADIUS `distance` - Search radius. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param PIXEL_SIZE `distance` - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Line density raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

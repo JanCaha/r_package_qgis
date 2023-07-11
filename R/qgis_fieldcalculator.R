@@ -1,12 +1,12 @@
-##' QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator)
+##' QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator). This algorithm computes a new vector layer with the same features of the input layer, but either overwriting an existing attribute or adding an additional attribute. The values of this field are computed from each feature using an expression, based on the properties and attributes of the feature. Note that if "Field name" is an existing field in the layer then all the rest of the field settings are ignored.
 ##'
-##' @title QGIS algorithm Field calculator
+##' @title QGIS algorithm - Field calculator
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
-##' @param FIELD_NAME `string` - Field name. String value.
+##' @param FIELD_NAME `string` - Field name. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param FIELD_TYPE `enum`  of `("Decimal (double)", "Integer (32 bit)", "Text (string)", "Date", "Time", "Date & Time", "Boolean", "Binary Object (BLOB)", "String List", "Integer List", "Decimal (double) List")` - Result field type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param FIELD_LENGTH `number` - Result field length. A numeric value.
-##' @param FIELD_PRECISION `number` - Result field precision. A numeric value.
+##' @param FIELD_LENGTH `number` - Result field length. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param FIELD_PRECISION `number` - Result field precision. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param FORMULA `expression` - Formula. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.
 ##' @param OUTPUT `sink` - Calculated. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

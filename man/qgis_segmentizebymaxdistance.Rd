@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_segmentizebymaxdistance.R
 \name{qgis_segmentizebymaxdistance}
 \alias{qgis_segmentizebymaxdistance}
-\title{QGIS algorithm Segmentize by maximum distance}
+\title{QGIS algorithm - Segmentize by maximum distance}
 \usage{
 qgis_segmentizebymaxdistance(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -17,7 +17,7 @@ qgis_segmentizebymaxdistance(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{DISTANCE}{\code{distance} - Maximum offset distance. A numeric value.}
+\item{DISTANCE}{\code{distance} - Maximum offset distance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Segmentized. Path for new vector layer.}
 
@@ -30,7 +30,7 @@ qgis_segmentizebymaxdistance(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum distance (native:segmentizebymaxdistance)
+QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum distance (native:segmentizebymaxdistance). This algorithm segmentizes a geometry by converting curved sections to linear sections.  The segmentization is performed by specifying the maximum allowed offset distance between the original curve and the segmentized representation.  Non-curved geometries will be retained without change.
 }
 \details{
 \subsection{Outputs description}{

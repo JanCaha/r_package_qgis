@@ -1,28 +1,28 @@
-##' QGIS Algorithm provided by GRASS r.spread (grass7:r.spread)
+##' QGIS Algorithm provided by GRASS r.spread (grass7:r.spread). Simulates elliptically anisotropic spread.
 ##'
-##' @title QGIS algorithm r.spread
+##' @title QGIS algorithm - r.spread
 ##'
-##' @param base_ros `raster` - Raster map containing base ROS (cm/min). Path to a raster layer.
-##' @param max_ros `raster` - Raster map containing maximal ROS (cm/min). Path to a raster layer.
+##' @param base_ros `raster` - Raster map containing base ROS (cm\code{/}min). Path to a raster layer.
+##' @param max_ros `raster` - Raster map containing maximal ROS (cm\code{/}min). Path to a raster layer.
 ##' @param direction_ros `raster` - Raster map containing directions of maximal ROS (degree). Path to a raster layer.
 ##' @param start `raster` - Raster map containing starting sources. Path to a raster layer.
 ##' @param spotting_distance `raster` - Raster map containing maximal spotting distance (m, required with -s). Path to a raster layer.
-##' @param wind_speed `raster` - Raster map containing midflame wind speed (ft/min, required with -s). Path to a raster layer.
+##' @param wind_speed `raster` - Raster map containing midflame wind speed (ft\code{/}min, required with -s). Path to a raster layer.
 ##' @param fuel_moisture `raster` - Raster map containing fine fuel moisture of the cell receiving a spotting firebrand (%, required with -s). Path to a raster layer.
 ##' @param backdrop `raster` - Name of raster map as a display backdrop. Path to a raster layer.
 ##' @param least_size `enum`  of `("3", "5", "7", "9", "11", "13", "15")` - Basic sampling window size needed to meet certain accuracy (3). Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param comp_dens `number` - Sampling density for additional computing (range: 0.0 - 1.0 (0.5)). A numeric value.
-##' @param init_time `number` - Initial time for current simulation (0) (min). A numeric value.
-##' @param lag `number` - Simulating time duration LAG (fill the region) (min). A numeric value.
-##' @param .s `boolean` - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. Original algorithm parameter name: -s.
-##' @param .i `boolean` - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. Original algorithm parameter name: -i.
+##' @param comp_dens `number` - Sampling density for additional computing (range: 0.0 - 1.0 (0.5)). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param init_time `number` - Initial time for current simulation (0) (min). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param lag `number` - Simulating time duration LAG (fill the region) (min). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param .s `boolean` - Consider spotting effect (for wildfires). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -s.
+##' @param .i `boolean` - Use start raster map values in output spread time raster map. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -i.
 ##' @param output `rasterDestination` - Spread Time. Path for new raster layer.
 ##' @param x_output `rasterDestination` - X Back Coordinates. Path for new raster layer.
 ##' @param y_output `rasterDestination` - Y Back Coordinates. Path for new raster layer.
 ##' @param GRASS_REGION_PARAMETER `extent` - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..
-##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value.
-##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value.
-##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value.
+##' @param GRASS_REGION_CELLSIZE_PARAMETER `number` - GRASS GIS 7 region cellsize (leave 0 for default). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_OPT `string` - Output Rasters format options (createopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param GRASS_RASTER_FORMAT_META `string` - Output Rasters format metadata options (metaopt). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.

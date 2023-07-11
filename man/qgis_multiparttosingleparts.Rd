@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_multiparttosingleparts.R
 \name{qgis_multiparttosingleparts}
 \alias{qgis_multiparttosingleparts}
-\title{QGIS algorithm Multipart to singleparts}
+\title{QGIS algorithm - Multipart to singleparts}
 \usage{
 qgis_multiparttosingleparts(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -27,7 +27,7 @@ qgis_multiparttosingleparts(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Multipart to singleparts (native:multiparttosingleparts)
+QGIS Algorithm provided by QGIS (native c++) Multipart to singleparts (native:multiparttosingleparts). This algorithm takes a vector layer with multipart geometries and generates a new one in which all geometries contain a single part. Features with multipart geometries are divided in as many different features as parts the geometry contain, and the same attributes are used for each of them.
 }
 \details{
 \subsection{Outputs description}{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_filedownloader.R
 \name{qgis_filedownloader}
 \alias{qgis_filedownloader}
-\title{QGIS algorithm Download file}
+\title{QGIS algorithm - Download file}
 \usage{
 qgis_filedownloader(
   URL = qgisprocess:::qgis_default_value(),
@@ -16,11 +16,11 @@ qgis_filedownloader(
 )
 }
 \arguments{
-\item{URL}{\code{string} - URL. String value.}
+\item{URL}{\code{string} - URL. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{METHOD}{\code{enum}  of \verb{("GET", "POST")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{DATA}{\code{string} - Data. String value.}
+\item{DATA}{\code{string} - Data. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - File destination. Path for new file.}
 
@@ -33,7 +33,7 @@ qgis_filedownloader(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Download file (native:filedownloader)
+QGIS Algorithm provided by QGIS (native c++) Download file (native:filedownloader). This algorithm downloads a URL on the file system.
 }
 \details{
 \subsection{Outputs description}{

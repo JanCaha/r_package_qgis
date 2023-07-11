@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_simplifygeometries.R
 \name{qgis_simplifygeometries}
 \alias{qgis_simplifygeometries}
-\title{QGIS algorithm Simplify}
+\title{QGIS algorithm - Simplify}
 \usage{
 qgis_simplifygeometries(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -20,7 +20,7 @@ qgis_simplifygeometries(
 
 \item{METHOD}{\code{enum}  of \verb{("Distance (Douglas-Peucker)", "Snap to grid", "Area (Visvalingam)")} - Simplification method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value.}
+\item{TOLERANCE}{\code{distance} - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Simplified. Path for new vector layer.}
 
@@ -33,7 +33,7 @@ qgis_simplifygeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Simplify (native:simplifygeometries)
+QGIS Algorithm provided by QGIS (native c++) Simplify (native:simplifygeometries). This algorithm simplifies the geometries in a line or polygon layer. It creates a new layer with the same features as the ones in the input layer, but with geometries containing a lower number of vertices.  The algorithm gives a choice of simplification methods, including distance based (the "Douglas-Peucker" algorithm), area based ("Visvalingam" algorithm) and snapping geometries to a grid.
 }
 \details{
 \subsection{Outputs description}{
