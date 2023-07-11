@@ -20,7 +20,8 @@ if (!qgisprocess::has_qgis()){
 
 print("----------------")
 qgis_plugins()
-qgis_enable_plugins(c("processing", "grassprovider", "processing_saga_nextgen"))
+# "processing_saga_nextgen"
+qgis_enable_plugins(c("processing", "grassprovider"))
 qgis_plugins()
 print("----------------")
 

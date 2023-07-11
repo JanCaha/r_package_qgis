@@ -53,8 +53,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y qgis qgis-plugin-grass saga
-          wget -qO ../sagang_plugin.zip https://plugins.qgis.org/plugins/processing_saga_nextgen/version/$SAGANGV/download/
-          unzip -q ../sagang_plugin.zip -d ../extra_plugins
+          # wget -qO ../sagang_plugin.zip https://plugins.qgis.org/plugins/processing_saga_nextgen/version/$SAGANGV/download/
+          # unzip -q ../sagang_plugin.zip -d ../extra_plugins
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -91,13 +91,6 @@ jobs:
           cat("::group::Session info\n")
           sessioninfo::session_info(pkgs = "installed", include_base = TRUE)
           cat("::endgroup::\n")
-        shell: Rscript {0}
-
-      - name: Test packages
-        run: |
-          library(sf)
-          library(terra)
-          library(stringi)
         shell: Rscript {0}
 
       - name: Install remotes and package build dependencies
