@@ -8,6 +8,7 @@ on:
       - build-package/**
       - tests/**
       - .github/workflows/build_package.yaml
+      - pkgdown/**
   schedule:
     - cron: "0 0 1 * *"
 
