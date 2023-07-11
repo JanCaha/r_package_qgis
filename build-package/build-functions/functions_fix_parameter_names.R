@@ -66,6 +66,10 @@ remove_brackets <- function(description){
   return(description)
 }
 
+escape_division <- function(text){
+  stringr::str_replace_all(text, "/", "\\\\code{/}")
+}
+
 escape_percent <- function(description){
   stringr::str_replace_all(description, "%" , "\\\\%")
 }
@@ -73,6 +77,7 @@ escape_percent <- function(description){
 fix_description <- function(description){
   description <- remove_brackets(description)
   #description <- escape_percent(description)
+  description <- escape_division(description)
 
   return(description)
 }
