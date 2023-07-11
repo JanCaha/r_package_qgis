@@ -14,7 +14,7 @@
 <script src="pkgdown.js"></script><!-- docsearch --><script src="docsearch.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous">
 <link href="docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script><meta property="og:title" content="Run QGIS algorithms directly from R">
-<meta property="og:description" content="An extension of package `qgisprocess` providing direct R functions for QGIS functions. Compiled against QGIS version: 3.26.3-Buenos.">
+<meta property="og:description" content="An extension of package `qgisprocess` providing direct R functions for QGIS functions. Compiled against QGIS version: 3.32.0-Lima.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.26.3.9009</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.32.0.9001</span>
       </span>
     </div>
 
@@ -94,12 +94,12 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p><strong>qgis</strong> is automatically generated package which originates from <a href="https://github.com/paleolimbot/qgisprocess" class="external-link">qgisprocess</a> and aims to provide calls and simple documentation for each <a href="https://qgis.org/en/site/" class="external-link">QGIS</a> functions available in core and the most important algorithm providers (<a href="https://grass.osgeo.org/" class="external-link">GRASS GIS</a> and <a href="http://www.saga-gis.org/" class="external-link">Saga</a>). The algorithms are automatically extracted from fresh install of latest <strong>QGIS</strong> version on <strong>Ubuntu</strong> with packages for <strong>GRASS</strong> and <strong>SAGA</strong> installed.</p>
+<p><strong>qgis</strong> is automatically generated package which originates from <a href="https://github.com/r-spatial/qgisprocess" class="external-link">qgisprocess</a> and aims to provide calls and simple documentation for each <a href="https://qgis.org/en/site/" class="external-link">QGIS</a> functions available in core and the most important algorithm providers (<a href="https://grass.osgeo.org/" class="external-link">GRASS GIS</a> and <a href="http://www.saga-gis.org/" class="external-link">Saga</a>). The algorithms are automatically extracted from fresh install of latest <strong>QGIS</strong> version on <strong>Ubuntu</strong> with packages for <strong>GRASS</strong> and <strong>SAGA</strong> installed.</p>
 <p>The package is highly experimental and things are quite likely to change a lot in the future. The definition of individual functions can change if it changes in the QGIS.</p>
 <div class="section level2">
 <h2 id="latest-version">Latest version<a class="anchor" aria-label="anchor" href="#latest-version"></a>
 </h2>
-<p>Latest package version <strong>3.26.3.9009</strong> is build against QGIS version <strong>3.26.3-Buenos</strong>.</p>
+<p>Latest package version <strong>3.32.0.9001</strong> is build against QGIS version <strong>3.32.0-Lima</strong>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -118,7 +118,7 @@
 <h2 id="functions-names">Functions names<a class="anchor" aria-label="anchor" href="#functions-names"></a>
 </h2>
 <p>The names of the functions follow general pattern of <code>algorithm-provider_algorithm-id</code> with only the native <strong>QGIS</strong> algorithms using <code>qgis</code> algorithm provider instead of <code>native</code>.</p>
-<p>The available providers are: 3d, gdal, grass7, native, qgis, saga. The overall number of available algorithms is 1018.</p>
+<p>The available providers are: 3d, gdal, grass7, native, qgis, sagang. The overall number of available algorithms is 1165.</p>
 </div>
 <div class="section level2">
 <h2 id="functions-parameters">Functions parameters<a class="anchor" aria-label="anchor" href="#functions-parameters"></a>
@@ -140,7 +140,7 @@
 </h2>
 <p>This example uses <code>qgisprocess</code> pipe ability to directly load output to <strong>R</strong>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1; sf_use_s2() is TRUE</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>nc <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="fu">system.file</span>(<span class="st">"shape/nc.shp"</span>, <span class="at">package=</span><span class="st">"sf"</span>), <span class="at">quiet =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
@@ -161,7 +161,7 @@
 <ul class="list-unstyled">
 <li><a href="https://github.com/JanCaha/r_package_qgis/" class="external-link">Browse source code</a></li>
 <li><a href="https://qgis.org/en/site/" class="external-link">QGIS</a></li>
-<li><a href="https://github.com/paleolimbot/qgisprocess" class="external-link">qgisprocess</a></li>
+<li><a href="https://github.com/r-spatial/qgisprocess" class="external-link">qgisprocess</a></li>
 </ul>
 </div>
 

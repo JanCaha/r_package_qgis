@@ -184,7 +184,13 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_triterrainruggednessindex.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_viewshed.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_warpreproject.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_g_extension_list.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_albedo.html</loc>
@@ -1309,6 +1315,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_downloadgpsdata.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_downloadvectortiles.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_dropgeometries.html</loc>
   </url>
   <url>
@@ -1936,1080 +1945,1422 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_zonalstatisticsfb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_accumulatedcost.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_01_asimplelittersystem.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_accumulatedcostanisotropic.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_02_carboncyclesimulationforterrestrialbiomass.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_accumulatedcostisotropic.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_03_spatiallydistributedsimulationofsoilnitrogendynamics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_accumulationfunctions.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_3dpointsselection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_addcoordinatestopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_accumulatedcost.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_addindicatorfieldsforcategories.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_accumulationfunctions.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_addpointattributestopolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_addcoordinatestopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_addpolygonattributestopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_addrastervaluestofeatures.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_addrastervaluestofeatures.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_addrastervaluestopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_addrastervaluestopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_aggregatepointobservations.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_aggregatepointobservations.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_aggregationindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_aggregationindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_airpressureadjustment.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_analyticalhierarchyprocess.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_analyticalhierarchyprocess.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_analyticalhillshading.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_analyticalhillshading.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_angmap.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_angmap.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_angulardistanceweighted.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_angulardistanceweighted.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_artificialneuralnetworkclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_annualcourseofdailyinsolation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_aspectslopegrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_automatedcloudcoverassessment.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_automatedcloudcoverassessment.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_averagewithmask1.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_averagewithmask1.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_averagewithmask2.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_averagewithmask2.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_averagewiththereshold1.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_averagewiththereshold1.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_averagewiththereshold2.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_averagewiththereshold2.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_averagewiththereshold3.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_averagewiththereshold3.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_basicterrainanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_basicterrainanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_binaryerosionreconstruction.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_binaryerosionreconstruction.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_bioclimaticvariables.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_bioclimaticvariables.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_breachdepressions.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_boostingclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_bsplineapproximation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_bsplineapproximation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_burnstreamnetworkintodem.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_burnstreamnetworkintodem.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_catchmentarea.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_catchmentarea.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_catchmentareaflowtracing.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_catchmentareaflowtracing.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_catchmentarearecursive.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_catchmentarearecursive.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_categoricalcoincidence.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_categoricalcoincidence.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_cellbalance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_cellbalance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_changeagridsnodatavalue.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_changedatastorage.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_changeagridsnodatavaluebulkprocessing.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_changedateformat.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_changedatastorage.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_changedetection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_changegridvaluesfloodfill.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_changetimeformat.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_changelongitudinalrangeforgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_channelnetwork.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_channelnetwork.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_channelnetworkanddrainagebasins.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_channelnetworkanddrainagebasins.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_clippointswithpolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_cliffmetrics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_cliprasterwithpolygon.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_climateclassification.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_closegaps.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_clipgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_closegapswithspline.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_clippointswithpolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_closegapswithstepwiseresampling.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_cliprasterwithpolygon.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_closeonecellgaps.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_closegaps.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_clusteranalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_closegapswithspline.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_clusteranalysisshapes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_closegapswithstepwiseresampling.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_concentration.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_closeonecellgaps.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_confusionmatrixpolygonsgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_clouddetection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_confusionmatrixtwogrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_cloudoverlap.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_connectivityanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coldairflow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_constantgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_colournormalizedbroveysharpening.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_contourlines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_colournormalizedspectralsharpening.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convergenceindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_combineclasses.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convergenceindexsearchradius.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_concentration.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertdatastoragetype.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_confusionmatrixpolygonsgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertlinestopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_confusionmatrixtwogrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertlinestopolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_connectivityanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertmultipointstopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_constantgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertpointstolines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_contourlines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertpolygonlineverticestopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_contourlinesfrompoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convertpolygonstolines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convergenceindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_convexhull.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convergenceindexsearchradius.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_covereddistance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertlinestopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_createlinesgraticule.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertlinestopolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_createpointgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertmultipointstopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_createpolygonsgraticule.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertpointstolines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_croptodata.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertpolygonlineverticestopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_crossclassificationandtabulation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertpolygonstolines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_crossprofiles.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_converttabletopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_curvatureclassification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convertvertextype2d3d.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_cutvectorlayer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_convexhull.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_decisiontreeclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_conwaysgameoflife.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_destriping.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinateconversiongrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_destripingwithmask.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinatetransformationgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_difference.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinatetransformationgridlist.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_diffusepollutionrisk.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinatetransformationshapeslist.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_diffusivehillslopeevolutionadi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_copygrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_diffusivehillslopeevolutionftcs.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_copyselectiontonewshapeslayer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_directionalaverage.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_copyshapes.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_directionalstatisticsforrasterlayer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_copyshapesfromregion.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_distancevigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coverageofcategories.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_diurnalanisotropicheating.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_covereddistance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_diversityofcategories.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_creategraticule.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_downslopedistancegradient.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createpointgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_dtmfilterslopebased.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createrandompoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_edgecontamination.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createrastercataloguefromfiles.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_edgedetectionvigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createrastercataloguesfromdirectory.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_effectiveairflowheights.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createtileshapefromvirtualpointcloud.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_enhancedvegetationindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_croptodata.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_enumeratetablefield.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_crossclassificationandtabulation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fastregiongrowingalgorithm.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_crossprofiles.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fastrepresentativeness.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_curvatureclassification.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_featureextents.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_dailyinsolationoverlatitude.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fieldstatistics.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_dailytohourlyevapotranspiration.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fillgapsinrecords.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_decisiontree.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fillsinks.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_definegeoreferenceforgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fillsinksqmofesp.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_destriping.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fillsinkswangliu.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_destripingwithmask.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fillsinksxxlwangliu.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_difference.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_findfieldofextremevalue.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_diffusepollutionrisk.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fireriskanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_diffusivehillslopeevolutionadi.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fitnpointsinpolygon.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_diffusivehillslopeevolutionftcs.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fixeddistancebuffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_directgeoreferencingofairbornephotographs.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_flatdetection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_directionalaverage.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_flattenpolygonlayer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_directionalgridstatistics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_flowaccumulationqmofesp.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_directionalstatisticsforrasterlayer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_flowpathlength.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_diurnalanisotropicheat.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_flowwidthandspecificcatchmentarea.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_diversityofcategories.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fourierfiltervigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_downslopedistancegradient.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fouriertransformationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_dtmfilterslopebased.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fouriertransforminversevigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_earthsorbitalparameters.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fouriertransformrealvigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_edgecontamination.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fouriertransformvigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_effectiveairflowheights.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fragmentationalternative.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_enhancedvegetationindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fragmentationclassesfromdensityandconnectivity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_evapotranspirationgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fragmentationstandard.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_evapotranspirationtable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_function.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fastrepresentativeness.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fuzzify.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_featureextents.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fuzzyintersectionand.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fillsinksplanchondarboux2001.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fuzzylandformelementclassification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fillsinksqmofesp.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_fuzzyunionor.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fillsinkswangliu.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gaussianfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fillsinksxxlwangliu.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_generateshapes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fireriskanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_geodesicmorphologicalreconstruction.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flatdetection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_geographiccoordinategrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flattenpolygonlayer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_geometricfigures.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flowaccumulationonestep.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_globalmoransiforrasterlayer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flowaccumulationparallelizable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gradientvectorfromcartesiantopolarcoordinates.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flowaccumulationqmofesp.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gradientvectorfrompolartocartesiancoordinates.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flowbetweenfields.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gradientvectorsfromdirectionalcomponents.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flowpathlength.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gradientvectorsfromdirectionandlength.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_flowwidthandspecificcatchmentarea.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gradientvectorsfromsurface.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_focalmechanismbeachballplots.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gridstatisticsforpoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_focalpcaonagrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gwrformultiplepredictorlayers.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_focalstatistics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gwrformultiplepredictors.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fractalbrowniannoise.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gwrformultiplepredictorsgriddedmodeloutput.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fragmentationalternative.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gwrforsinglepredictorgriddedmodeloutput.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fragmentationclassesfromdensityandconnectivity.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_gwrforsinglepredictorlayer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fragmentationstandard.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_histogramsurface.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_frostchangefrequency.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_hypsometry.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_functionplotter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_imcorrfeaturetracking.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fuzzify.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_interpolatecubicspline.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fuzzyintersectionand.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_intersect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fuzzylandformelementclassification.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_inversedistanceweightedinterpolation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fuzzyunionor.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_invertdatanodata.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gaussianfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_invertgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gdalformats.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_isodataclusteringforgrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_generateshapes.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_kerneldensityestimation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geocoding.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_kmeansclusteringforgrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geodesicmorphologicalreconstruction.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_knearestneighboursclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geographiccoordinategrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_lakeflood.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geographicdistances.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_landsurfacetemperature.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geographicdistancespairofcoordinates.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_landusescenariogenerator.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geometricfigures.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_laplacianfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_geomorphons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_layerofextremevalue.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_georeferencewithcoordinategrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_leastcostpaths.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_getgridfromvirtualpointcloud.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_linedissolve.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_globalmoransiforrasterlayer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_linepolygonintersection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gradientvectorfromcartesiantopolarcoordinates.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_lineproperties.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gradientvectorfrompolartocartesiancoordinates.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_linesimplification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gradientvectorsfromdirectionalcomponents.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_linesmoothing.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gradientvectorsfromdirectionandlength.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_localminimaandmaxima.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gradientvectorsfromsurface.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_lsfactor.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gravitationalprocesspathmodel.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_lsfactorfieldbased.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridcalculator.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_majorityfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridcellareacoveredbypolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_massbalanceindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridclassesareaforpolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_maximumentropypresenceprediction.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridnormalization.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_maximumflowpathlength.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridsfromclassifiedgridandtable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_mergevectorlayers.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridstandardization.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_meshdenoise.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridstatisticsforpoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_metricconversions.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridsystemextent.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_minimumdistanceanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridvaluesandpolygonattributestopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_mirrorgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_growingdegreedays.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_modifiedquadraticshepardinterpolation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gwrforgriddownscaling.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_monthlyglobalbylatitude.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gwrformultiplepredictorlayers.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_morphologicalfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gwrforsinglepredictorgriddedmodeloutput.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_morphologicalfilteropencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gwrforsinglepredictorlayer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_morphologicalfiltervigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_histogrammatching.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_morphometricfeatures.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_hodgepodgemachine.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_morphometricprotectionindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_hypsometry.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_mosaicrasterlayers.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_ihssharpening.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multibandvariation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_imcorrfeaturetracking.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multidirectionleefilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importbuildingsketchesfromcitygml.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multilevelbsplineinterpolation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importclipandresamplegrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multilevelbsplineinterpolationforcategories.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importcrugrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multilevelbsplineinterpolationfromraster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importdxffiles.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multiplelinearregressionanalysisshapes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importerdaslangis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multipleregressionanalysisgridandpredictorgrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importfromvirtualrastervrt.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multipleregressionanalysispointsandpredictorgrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importgpx.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multipleregressionanalysispointsraster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importgridsfromkml.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multipleregressionanalysisrasterraster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importgstatshapes.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_multiresolutionindexofvalleybottomflatnessmrvbf.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importlandsatscene.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_naturalneighbour.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importnetcdf.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_nearestneighbour.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importraster.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_normalbayesclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importsentinel2scene.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_orderedweightedaveraging.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importshapes.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_ordinarykriging.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importshapesfromxyz.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_overlandflowdistancetochannelnetwork.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importsimplefeaturesfromwellknowntext.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_overlandflowkinematicwaved8.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importsurferblankingfiles.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_paramemeltonruggednessnumber.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importtexttable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_patching.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importtexttables.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_patternanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importtexttablewithnumbersonly.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_petafterhargreavesgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importusgssrtmgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_pointdistances.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importwaspterrainmapfile.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_pointsfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importwrfgeogridbinaryformat.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_pointstatisticsforpolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_interpolatecubicspline.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_pointsthinning.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_intersect.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polartocartesiancoordinates.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_inversedistanceweightedinterpolation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygoncentroids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_inverseprincipalcomponentsrotation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonclipping.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_invertdatanodata.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygondissolveallpolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_invertgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygondissolvebyattribute.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_isochronesvariablespeed.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonidentity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_isodataclusteringforgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonlineintersection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_kerneldensityestimation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonpartstoseparatepolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_kmeansclusteringforgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonproperties.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lakeflood.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonselfintersection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_landcoverscenariooffset.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonshapeindices.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_landflowversion10build351b.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonstoedgesandnodes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_landsatimportwithoptions.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonunion.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_landsurfacetemperature.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polygonupdate.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_landsurfacetemperaturelapserates.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_polynomialregression.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_landusescenariogenerator.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_principlecomponentsanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_laplacianfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_profilefrompointstable.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lapseratebasedtemperaturedownscaling.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_profilesfromlines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lapseratebasedtemperaturedownscalingbulkprocessing.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_proximityraster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_largestcirclesinpolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_quadtreestructuretopolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_latitudelongitudegraticule.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_radiusofvarianceraster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_layerofextremevalue.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_randomfield.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_leastcostpaths.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_randomforestclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_linecrossings.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_randomforestpresencepredictionvigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_linepolygonintersection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_randomterrain.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lineproperties.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rankfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_linesimplification.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterbuffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_linesmoothing.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rastercalculator.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_localclimatezoneclassification.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rastercellindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_localminimaandmaxima.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterdifference.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_localstatisticalmeasures.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterdivision.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_longitudinalgridstatistics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterize.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lsfactor.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rastermasking.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lsfactorfieldbased.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasternormalisation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_lsfactoronestep.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterorientation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_majorityminorityfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterproduct.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_massbalanceindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterproximitybuffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_maximumentropyclassifcation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterskeletonization.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_maximumentropypresenceprediction.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterssum.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_maximumflowpathlength.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterstandardisation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_meltonruggednessnumber.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rasterstatisticsforpolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_mergetables.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rastervaluestopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_mergevectorlayers.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rastervaluestopointsrandomly.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_meridionalgridstatistics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_realsurfacearea.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_meshdenoise.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_reclassifyvalues.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_metricconversions.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_reclassifyvaluesrange.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_minimumdistanceanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_reclassifyvaluessimple.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_mirrorgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_reclassifyvaluessingle.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_mmfsagasoilerosionmodel.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_reclassifyvaluestable.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_modifedquadraticshepard.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_regressionanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_monthlyglobalbylatitude.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_regressionanalysispointsandpredictorgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_morphologicalfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_regressionkriging.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_morphometricfeatures.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_relativeheightsandslopepositions.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_morphometricprotectionindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_removeduplicatepoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_mosaicking.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_removesmallpixelclumpstonodata.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multibandvariation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_representativeness.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multidirectionleefilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_resampling.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multilevelbspline.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_resamplingfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multilevelbsplineforcategories.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_residualanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multilevelbsplinefromgridpoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rgbcomposite.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multiplelinearregressionanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_riverbasin.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multiplelinearregressionanalysisshapes.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_rivergridgeneration.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multipleregressionanalysisgridandpredictorgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_runningaverage.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multipleregressionanalysispointsandpredictorgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_sagawetnessindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multiresolutionindexofvalleybottomflatnessmrvbf.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_seededregiongrowing.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_multiscaletopographicpositionindextpi.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_seedgeneration.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_naturalneighbour.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_separatepointsbydirection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_nearestneighbour.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_sharedpolygonedges.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_notchfilterforgrids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_shrinkandexpand.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_objectbasedimagesegmentation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_sievingclasses.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_ordinarykriging.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_simplefilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_overlandflow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_simplefilterwithinshapes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_overlandflowdistancetochannelnetwork.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_simplekriging.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_overlandflowkinematicwave.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_simpleregiongrowing.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_patching.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_simulation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_patternanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_singlevaluedecompositionopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_phenipsgridsannual.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_sinkdrainageroutedetection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_phenipsgridsdays.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_sinkremoval.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_phenipstable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_skyviewfactor.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_pointsfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_slopeaspectcurvature.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_pointsthinning.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_slopelength.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_pointtolinedistances.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_slopelimitedflowaccumulation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_pointtopointdistances.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_smoothingvigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polartocartesiancoordinates.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_snappointstogrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygoncategoriestogrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_snappointstolines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygoncentroids.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_snappointstopoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonclipping.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_soiltextureclassification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygongeneralization.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_spatialpointpatternanalysis.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonidentity.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_splitlinesatpoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonlineintersection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_splitlineswithlines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonpartstoseparatepolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_splitrgbbands.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonselfintersection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_splitshapeslayerrandomly.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonshapeindices.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_statisticsforrasters.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonstoedgesandnodes.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_strahlerorder.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonstogrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_streampowerindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonunion.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_successiveflowrouting.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polygonupdate.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_supervisedclassification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_polynomialregression.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_supervisedclassificationforgrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_populatepolygonswithpoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_supervisedclassificationforshapes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_potentialincomingsolarradiation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_supportvectormachineclassificationopencv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_principalcomponentanalysis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_surfaceandgradient.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_principalcomponentbasedimagesharpening.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_surfacegradientandconcentration.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_profilefrompoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_surfacespecificpoints.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_profilesfromlines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_svmclassification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_proximityraster.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_symmetricaldifference.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_quadtreestructuretopolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_tasseledcaptransformation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_quasidynamicflowaccumulation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_tcilow.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_radiusofvarianceraster.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_terrainmapview.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_randomfield.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_terrainruggednessindextri.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_randomterrain.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_terrainsurfaceclassificationiwahashiandpike.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rankfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_terrainsurfaceconvexity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_raosqdiversityindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_terrainsurfacetexture.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_raosqdiversityindexclassic.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_thiessenpolygons.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterbuffer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_thinplatespline.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rastercellindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_thinplatesplinetin.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterdifference.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_thresholdrasterbuffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterdivision.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_topofatmospherereflectance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterize.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_topographiccorrection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rastermasking.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_topographicopenness.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterproduct.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_topographicpositionindextpi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterproximitybuffer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_topographicwetnessindextwi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterskeletonization.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_tpibasedlandformclassification.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterssum.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_transectthroughpolygonshapefile.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rasterstatisticsforpolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_transformvectorlayer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rastervaluestopoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_transposerasterlayers.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rastervaluestopointsrandomly.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_triangulation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_realsurfacearea.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_universalkriging.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_regressionanalysispointsandpredictorgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_upslopeanddownslopecurvature.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_regressionkriging.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_upslopearea.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_relativeheightsandslopepositions.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_userdefinedfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_reliefsegmentation.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_valleyandridgedetectiontophatapproach.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removeboundarypolygons.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_valleydepth.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removeduplicatepoints.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_variabledistancebuffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removesmallpixelclumpstonodata.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_variogramcloud.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_representativenessgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_variogramsurface.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_resampling.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_vectorisinggridclasses.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_resamplingfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_vectorruggednessmeasurevrm.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_riverbasin.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_vegetationindexdistancebased.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rivergridgeneration.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_vegetationindexslopebased.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_safetyfactor.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_verticaldistancetochannelnetwork.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sagawetnessindex.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_warpingshapes.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_salem.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_waterretentioncapacity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_savegridstatisticstotable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_watershedbasins.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_seededregiongrowing.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_watershedsegmentation.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_seedgeneration.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_watershedsegmentationvigra.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_selectgridfromlist.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_windeffect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_selectshapesfromlist.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_windexpositionindex.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_separatepointsbydirection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_zonalmultipleregressionanalysispointsandpredictorgrids.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_setcoordinatereferencesystem.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/saga_zonalrasterstatistics.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_shalstab.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_shannonindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_shapesbuffer.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sharedpolygonedges.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_shrinkandexpand.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sieveandclump.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sieveclasses.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simplefilter.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simplefilterformultiplegrids.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simplefilterrestrictedtopolygons.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simplekriging.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simpsonindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simulation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sinkdrainageroutedetection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sinkremoval.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_skyviewfactor.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_slopeaspectcurvature.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_slopelength.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_slopelimitedflowaccumulation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_snappointstogrid.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_snappointstolines.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_snappointstopoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_snappointstopolygons.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_snowcover.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_soilwaterbalancedays.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_spatialpointpatternanalysis.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splitlinesatpoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splitlineswithlines.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splitrgbbands.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splitshapeslayer.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splitshapeslayercompletely.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splitshapeslayerrandomly.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_splittableshapesbyattribute.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_statisticsforrasters.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_strahlerorder.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_streampowerindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_successiveflowrouting.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_summitextraction.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sunriseandsunset.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_superpixelsegmentation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_supervisedclassificationforgrids.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_surfaceandgradient.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_surfacegradientandconcentration.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_surfacespecificpoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_svmclassification.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_symmetricaldifference.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_tasseledcaptransformation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_tcilow.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_temperaturelapserates.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_terrainclustering.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_terrainruggednessindextri.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_terrainsurfaceclassificationiwahashiandpike.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_terrainsurfaceconvexity.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_terrainsurfacetexture.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_texturalfeatures.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_thermicbeltclassification.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_thiessenpolygons.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_thinplatespline.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_thinplatesplinetin.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_thresholdrasterbuffer.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_tiling.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_tissotsindicatrix.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_tobia.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topmodel.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topofatmospherereflectance.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topographiccorrection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topographicopenness.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topographicpositionindextpi.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topographicwetnessindexonestep.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_topographicwetnessindextwi.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_tpibasedlandformclassification.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_transectthroughpolygonshapefile.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_transformvectorlayer.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_transposerasterlayers.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_traveltimecalculation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_treegrowthseason.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_trendanalysis.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_trendanalysisshapes.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_triangulation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_uniquevaluestatisticsforgrids.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_universalimagequalityindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_universalkriging.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_upslopeanddownslopecurvature.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_upslopearea.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_upslopeheightslopeaspect.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_utmprojectiongrid.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_utmprojectiongridlist.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_utmprojectionshapeslist.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_valleyandridgedetectiontophatapproach.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_valleydepth.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_variogram.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_variogramcloud.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_variogramdialog.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_vectorisinggridclasses.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_vectorruggednessmeasurevrm.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_vegetationindexdistancebased.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_vegetationindexslopebased.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_verticaldistancetochannelnetwork.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_visibilitypoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_warpingshapes.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_waterretentioncapacity.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_watershedbasins.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_watershedbasinsextended.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_wator.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_wedgefail.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_wetness.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_windeffectcorrection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_windeffectwindwardleewardindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_windexpositionindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_windshelterindex.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_womblingedgedetection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_womblingformultiplefeaturesedgedetection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_worldfilefromflightandcamerasettings.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_zonalmultipleregressionanalysispointsandpredictorgrids.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_zonalrasterstatistics.html</loc>
   </url>
 </urlset>
