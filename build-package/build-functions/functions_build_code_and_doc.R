@@ -32,7 +32,7 @@ build_fn_code <- function(alg, arguments, main_output) {
 
 build_fn_doc <- function(alg, arguments, outputs){
 
-  title <- alg$algorithm_title[1]
+  title <- alg$algorithm_title[1] %>% remove_brackets()
   provider <- alg$provider_title[1]
   algorithm_id <- alg$algorithm[1]
   text_description <- unname(qgisprocess::qgis_get_description(algorithm_id))
