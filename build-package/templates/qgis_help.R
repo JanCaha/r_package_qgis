@@ -1,6 +1,6 @@
 ##' QGIS Algorithm provided by {provider} {title} ({algorithm_id}). {text_description}
 ##'
-##' @title QGIS algorithm {title}
+##' @title QGIS algorithm - {title}
 ##'
 {description_arguments}
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
