@@ -87,18 +87,6 @@ jobs:
           cat("::endgroup::\n")
         shell: Rscript {0}
 
-      - name: Install missing package dependencies
-        run: |
-          # Install missing package dependencies
-          cat("::group::Install\n")
-          pak::pkg_install(c("deps::.", "any::sessioninfo", "any::rcmdcheck", "gagolews/stringi", "remotes", "desc", "glue", "readr", "purrr", "stringr", "here", "fs", "knitr", "rmarkdown", "devtools", "pkgdown", "progress", "dplyr", "sf", "terra", "r-spatial/qgisprocess"), upgrade = TRUE, dependencies = TRUE)
-          # This is based on the minimum needed version, not the hash of what is available at RSPM
-          cat("::endgroup::\n")
-          cat("::group::Session info\n")
-          sessioninfo::session_info(pkgs = "installed", include_base = TRUE)
-          cat("::endgroup::\n")
-        shell: Rscript {0}
-
       - name: Install remotes and package build dependencies
         run: source("./build-package/install_save_deps.R")
         shell: Rscript {0}
