@@ -75,6 +75,7 @@ jobs:
             pak::pkg_deps("any::sessioninfo", dependencies = c("Config/Needs/check", "all")),
             pak::pkg_deps("any::rcmdcheck", dependencies = c("Config/Needs/check", "all")),
             pak::pkg_deps("any::remotes", dependencies = TRUE)
+            pak::pkg_deps("any::progress", dependencies = TRUE)
             )[, c("ref", "version")]
           depends <- depends[depends$ref != "deps::.", ]
           saveRDS(depends, ".github/depends.Rds")
@@ -90,7 +91,7 @@ jobs:
 
       - name: Install missing package dependencies
         run: |
-          pak::pkg_install(c("deps::.", "any::sessioninfo", "any::rcmdcheck", "any::remotes"), upgrade = FALSE, dependencies = c("Config/Needs/check", "all"))
+          pak::pkg_install(c("deps::.", "any::sessioninfo", "any::rcmdcheck", "any::remotes", "any::progress"), upgrade = FALSE, dependencies = c("Config/Needs/check", "all"))
         shell: Rscript {0}
 
       - name: Print QGIS info
