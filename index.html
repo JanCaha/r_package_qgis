@@ -14,7 +14,7 @@
 <script src="pkgdown.js"></script><!-- docsearch --><script src="docsearch.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous">
 <link href="docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script><meta property="og:title" content="Run QGIS algorithms directly from R">
-<meta property="og:description" content="An extension of package `qgisprocess` providing direct R functions for QGIS functions. Compiled against QGIS version: 3.32.0-Lima.">
+<meta property="og:description" content="An extension of package `qgisprocess` providing direct R functions for QGIS functions. Compiled against QGIS version: 3.32.2-Lima.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.32.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.32.2.9000</span>
       </span>
     </div>
 
@@ -99,7 +99,7 @@
 <div class="section level2">
 <h2 id="latest-version">Latest version<a class="anchor" aria-label="anchor" href="#latest-version"></a>
 </h2>
-<p>Latest package version <strong>3.32.0.9001</strong> is build against QGIS version <strong>3.32.0-Lima</strong>.</p>
+<p>Latest package version <strong>3.32.2.9000</strong> is build against QGIS version <strong>3.32.2-Lima</strong>.</p>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -124,7 +124,7 @@
 <h2 id="functions-parameters">Functions parameters<a class="anchor" aria-label="anchor" href="#functions-parameters"></a>
 </h2>
 <p>Every functions carries three boolean parameters that allow better utilization of these functions in R pipelines and reports. These are <code>.complete_output</code>, <code>.quiet</code> and <code>.messages</code>. The default setting of these variables is such that the calls are as silent as possible and create pretty much no output in R console at all.</p>
-<p>Parameter <code>.quiet</code> (default values is <code>TRUE</code>) is the same as in <code><a href="https://rdrr.io/pkg/qgisprocess/man/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> only in <code>qgis</code> the functions are silent by default while in <code>qgisprocess</code> they are talkative.</p>
+<p>Parameter <code>.quiet</code> (default values is <code>TRUE</code>) is the same as in <code><a href="https://r-spatial.github.io/qgisprocess/reference/qgis_run_algorithm.html" class="external-link">qgisprocess::qgis_run_algorithm()</a></code> only in <code>qgis</code> the functions are silent by default while in <code>qgisprocess</code> they are talkative.</p>
 <p>Parameter <code>.messages</code> (default value is <code>FALSE</code>) controls if messages produced by <code>qgisprocess</code> (such as information about parameters not being set etc.) should be outputed or not.</p>
 <p>Parameter <code>.complete_output</code>(default values is <code>TRUE</code>) specifies whether whole QGIS process output should be returned or only first variable in it, which is usually the main output.</p>
 <p>These three parameters can also be set as R session options using <code>options(qgis.quiet = TRUE)</code>, <code>options(qgis.messages = FALSE)</code> and <code>options(qgis.complete_output = TRUE)</code> to avoid the need to set them for every individual function call.</p>
