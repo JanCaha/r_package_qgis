@@ -16,7 +16,8 @@ VignetteBuilder: knitr
 Imports: qgisprocess,
          glue,
          stringr
-Suggests: 
+Suggests:
+    qgisprocess,
     sf,
     raster,
     testthat (>= 2.99.0),
@@ -25,10 +26,8 @@ Suggests:
     curl,
     dplyr,
     readr,
-    here
+    here,
+    testthat
 Config/testthat/edition: 3
-Remotes: 
-    r-lib/testthat,
-    r-spatial/qgisprocess
 RoxygenNote: 7.2.3
 URL: https://jancaha.github.io/r_package_qgis/, https://github.com/JanCaha/r_package_qgis
