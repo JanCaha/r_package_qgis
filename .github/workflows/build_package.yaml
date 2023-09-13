@@ -73,7 +73,8 @@ jobs:
           depends <- rbind(
             pak::pkg_deps("deps::.", dependencies = c("Config/Needs/check", "all")),
             pak::pkg_deps("any::sessioninfo", dependencies = c("Config/Needs/check", "all")),
-            pak::pkg_deps("any::rcmdcheck", dependencies = c("Config/Needs/check", "all"))
+            pak::pkg_deps("any::rcmdcheck", dependencies = c("Config/Needs/check", "all")),
+            pak::pkg_deps("remotes", dependencies = c("Config/Needs/check", "all"))
             )[, c("ref", "version")]
           depends <- depends[depends$ref != "deps::.", ]
           saveRDS(depends, ".github/depends.Rds")
