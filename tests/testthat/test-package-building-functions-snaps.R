@@ -1,7 +1,7 @@
 # Tests for code and help generation for specific selected QGIS functions
 
 test_that("Functions build code and doc tessellate", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   alg_help <- get_alg_help("tessellate")
@@ -11,7 +11,7 @@ test_that("Functions build code and doc tessellate", {
 })
 
 test_that("Functions build code and doc retile", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   alg_help <- get_alg_help("retile")
@@ -21,7 +21,7 @@ test_that("Functions build code and doc retile", {
 })
 
 test_that("Functions build code and doc i.cluster", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   alg_help <- get_alg_help("i.cluster")
@@ -31,7 +31,7 @@ test_that("Functions build code and doc i.cluster", {
 })
 
 test_that("Functions build code and doc r.sim.water", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   alg_help <- get_alg_help("r.sim.water")

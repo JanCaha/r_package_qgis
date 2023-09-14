@@ -1,7 +1,7 @@
 # Test internal package building functions
 
 test_that("Functions fix parameter names", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
@@ -33,7 +33,7 @@ test_that("Functions fix parameter names", {
 })
 
 test_that("Functions fix_description", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
@@ -49,7 +49,7 @@ test_that("Functions fix_description", {
 })
 
 test_that("Functions fix_description", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   source(here::here("build-package", "build-functions", "functions_fix_parameter_names.R"))
@@ -72,7 +72,7 @@ test_that("Functions fix_description", {
 })
 
 test_that("Functions fix_description", {
-
+  skip_on_cran()
   skip_in_RCDMCHECK()
 
   source(here::here("build-package", "build-functions", "functions_fix_algorithm_id.R"))

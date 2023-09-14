@@ -1,4 +1,5 @@
 test_that("Test run qgis::qgis_buffer", {
+  skip_on_cran()
   skip_if_not_installed("sf")
 
   sf_nc <- sf::st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
