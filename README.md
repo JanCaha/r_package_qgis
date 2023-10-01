@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.32.2.9001** is build against QGIS version
-**3.32.2-Lima**.
+Latest package version **3.32.3.9000** is build against QGIS version
+**3.32.3-Lima**.
 
 ## Installation
 
