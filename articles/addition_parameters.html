@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.32.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.34.0.9000</span>
       </span>
     </div>
 
@@ -158,11 +158,11 @@ parameters and <strong>qgis_process</strong> call.</p>
 <pre><code><span><span class="co">## JSON input ----</span></span>
 <span><span class="co">## {</span></span>
 <span><span class="co">##   "inputs": {</span></span>
-<span><span class="co">##     "INPUT": "/tmp/RtmplGMBOm/filed7da76ae586a/filed7da14b5f79f.gpkg",</span></span>
+<span><span class="co">##     "INPUT": "/tmp/Rtmp5yPJEI/filed883728ce287/filed88319484ec4.gpkg",</span></span>
 <span><span class="co">##     "DISTANCE": 0.5,</span></span>
 <span><span class="co">##     "END_CAP_STYLE": 1,</span></span>
 <span><span class="co">##     "JOIN_STYLE": 0,</span></span>
-<span><span class="co">##     "OUTPUT": "/tmp/RtmplGMBOm/filed7da76ae586a/filed7da40c3e200.gpkg"</span></span>
+<span><span class="co">##     "OUTPUT": "/tmp/Rtmp5yPJEI/filed883728ce287/filed88370f1746d.gpkg"</span></span>
 <span><span class="co">##   }</span></span>
 <span><span class="co">## }</span></span>
 <span><span class="co">## </span></span>
@@ -201,6 +201,7 @@ default parameters values that were not set in the call.</p>
 <pre><code><span><span class="co">## Argument `SEPARATE_DISJOINT` is unspecified (using QGIS default value).</span></span></code></pre>
 <pre><code><span><span class="co">## Using `OUTPUT = qgis_tmp_vector()`</span></span></code></pre>
 <pre><code><span><span class="co">## QStandardPaths: runtime directory '/tmp' is not owned by UID 1001, but a directory permissions 0777 owned by UID 0 GID 0</span></span></code></pre>
+<pre><code><span><span class="co">## Using non-preferred coordinate operation between EPSG:4267 and EPSG:4326. Using +proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=push +v_3 +step +proj=cart +ellps=clrk66 +step +proj=helmert +x=-10 +y=158 +z=187 +step +inv +proj=cart +ellps=WGS84 +step +proj=pop +v_3 +step +proj=unitconvert +xy_in=rad +xy_out=deg, preferred +proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad +step +proj=hgridshift +grids=ca_nrc_ntv2_0.tif +step +proj=unitconvert +xy_in=rad +xy_out=deg.</span></span></code></pre>
 </div>
 </div>
 <div class="section level2">

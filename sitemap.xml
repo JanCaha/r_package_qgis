@@ -1126,6 +1126,12 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_aggregate.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_alignrasters.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_alignsingleraster.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_angletonearest.html</loc>
   </url>
   <url>
@@ -1145,6 +1151,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_atlaslayouttopdf.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_b3dmtogltf.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_barplot.html</loc>
@@ -1172,6 +1181,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_bufferbym.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_calculateexpression.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_calculatevectoroverlaps.html</loc>
@@ -1324,6 +1336,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_dropmzvalues.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_dtmslopebasedfilter.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_dxfexport.html</loc>
   </url>
   <url>
@@ -1459,6 +1474,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_geometrybyexpression.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_gltftovector.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_greaterthanfrequency.html</loc>
   </url>
   <url>
@@ -1505,9 +1523,6 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_kmeansclustering.html</loc>
-  </url>
-  <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_knearestconcavehull.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_layertobookmarks.html</loc>
@@ -1562,6 +1577,12 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_minimumenclosingcircle.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_modelerrastercalc.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_modelervirtualrastercalc.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_multidifference.html</loc>
@@ -1673,6 +1694,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rasterbooleanand.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rastercalc.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_rastercalculator.html</loc>
@@ -1922,6 +1946,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_vectorlayerscatterplot.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_virtualrastercalc.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_voronoipolygons.html</loc>
