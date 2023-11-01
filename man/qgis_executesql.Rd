@@ -19,7 +19,7 @@ qgis_executesql(
 )
 }
 \arguments{
-\item{INPUT_DATASOURCES}{\code{multilayer} - Additional input datasources (called input1, .., inputN in the query). .}
+\item{INPUT_DATASOURCES}{\code{multilayer} - Input data sources (called input1, .., inputN in the query). .}
 
 \item{INPUT_QUERY}{\code{execute_sql} - SQL query. .}
 
@@ -42,7 +42,7 @@ qgis_executesql(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql). Runs a simple or complex query with SQL syntax on the source layer. Input datasources are identified with input1, input2, ..., inputN and a simple query will look like: SELECT * FROM input1 The result of the query will be added as a new layer.
+QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql). Runs a simple or complex query with SQL syntax. Input data sources are identified with input1, input2, ..., inputN and a simple query will look like: SELECT * FROM input1 The result of the query will be added as a new layer.
 }
 \details{
 \subsection{Outputs description}{

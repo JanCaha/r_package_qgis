@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.32.3.9000** is build against QGIS version
-**3.32.3-Lima**.
+Latest package version **3.34.0.9000** is build against QGIS version
+**3.34.0-Prizren**.
 
 ## Installation
 
@@ -63,7 +63,7 @@ The names of the functions follow general pattern of
 algorithms using `qgis` algorithm provider instead of `native`.
 
 The available providers are: 3d, gdal, grass7, native, qgis, sagang. The
-overall number of available algorithms is 1165.
+overall number of available algorithms is 1174.
 
 ## Functions parameters
 

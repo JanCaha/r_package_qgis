@@ -10,6 +10,7 @@ qgis_tilesxyzmbtiles(
   ZOOM_MAX = qgisprocess:::qgis_default_value(),
   DPI = qgisprocess:::qgis_default_value(),
   BACKGROUND_COLOR = qgisprocess:::qgis_default_value(),
+  ANTIALIAS = qgisprocess:::qgis_default_value(),
   TILE_FORMAT = qgisprocess:::qgis_default_value(),
   QUALITY = qgisprocess:::qgis_default_value(),
   METATILESIZE = qgisprocess:::qgis_default_value(),
@@ -31,13 +32,15 @@ qgis_tilesxyzmbtiles(
 
 \item{BACKGROUND_COLOR}{\code{color} - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8). field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
+\item{ANTIALIAS}{\code{boolean} - Enable antialiasing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{TILE_FORMAT}{\code{enum}  of \verb{("PNG", "JPG")} - Tile format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{QUALITY}{\code{number} - Quality (JPG only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{METATILESIZE}{\code{number} - Metatile size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OUTPUT_FILE}{\code{fileDestination} - Output file (for MBTiles). Path for new file.}
+\item{OUTPUT_FILE}{\code{fileDestination} - Output. Path for new file.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -48,12 +51,12 @@ qgis_tilesxyzmbtiles(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Generate XYZ tiles (MBTiles) (qgis:tilesxyzmbtiles). This algorithm generates raster XYZ tiles of map canvas content. Tile images are saved as a single file in the “MBTiles” format.
+QGIS Algorithm provided by QGIS (native c++) Generate XYZ tiles (MBTiles) (native:tilesxyzmbtiles). Generates XYZ tiles of map canvas content and saves them as an MBTiles file.
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT_FILE - outputFile - Output file (for MBTiles)
+\item OUTPUT_FILE - outputFile - Output
 }
 }
 }

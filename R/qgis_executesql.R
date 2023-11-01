@@ -1,8 +1,8 @@
-##' QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql). Runs a simple or complex query with SQL syntax on the source layer. Input datasources are identified with input1, input2, ..., inputN and a simple query will look like: SELECT * FROM input1 The result of the query will be added as a new layer.
+##' QGIS Algorithm provided by QGIS Execute SQL (qgis:executesql). Runs a simple or complex query with SQL syntax. Input data sources are identified with input1, input2, ..., inputN and a simple query will look like: SELECT * FROM input1 The result of the query will be added as a new layer.
 ##'
 ##' @title QGIS algorithm - Execute SQL
 ##'
-##' @param INPUT_DATASOURCES `multilayer` - Additional input datasources (called input1, .., inputN in the query). .
+##' @param INPUT_DATASOURCES `multilayer` - Input data sources (called input1, .., inputN in the query). .
 ##' @param INPUT_QUERY `execute_sql` - SQL query. .
 ##' @param INPUT_UID_FIELD `string` - Unique identifier field. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param INPUT_GEOMETRY_FIELD `string` - Geometry field. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.

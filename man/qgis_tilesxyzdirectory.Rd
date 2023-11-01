@@ -10,17 +10,18 @@ qgis_tilesxyzdirectory(
   ZOOM_MAX = qgisprocess:::qgis_default_value(),
   DPI = qgisprocess:::qgis_default_value(),
   BACKGROUND_COLOR = qgisprocess:::qgis_default_value(),
+  ANTIALIAS = qgisprocess:::qgis_default_value(),
   TILE_FORMAT = qgisprocess:::qgis_default_value(),
   QUALITY = qgisprocess:::qgis_default_value(),
   METATILESIZE = qgisprocess:::qgis_default_value(),
   TILE_WIDTH = qgisprocess:::qgis_default_value(),
   TILE_HEIGHT = qgisprocess:::qgis_default_value(),
   TMS_CONVENTION = qgisprocess:::qgis_default_value(),
-  OUTPUT_DIRECTORY = qgisprocess:::qgis_default_value(),
-  OUTPUT_HTML = qgisprocess:::qgis_default_value(),
   HTML_TITLE = qgisprocess:::qgis_default_value(),
   HTML_ATTRIBUTION = qgisprocess:::qgis_default_value(),
   HTML_OSM = qgisprocess:::qgis_default_value(),
+  OUTPUT_DIRECTORY = qgisprocess:::qgis_default_value(),
+  OUTPUT_HTML = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -38,6 +39,8 @@ qgis_tilesxyzdirectory(
 
 \item{BACKGROUND_COLOR}{\code{color} - Background color. String representation of color, e.g #ff0000 or rgba(200,100,50,0.8). field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
+\item{ANTIALIAS}{\code{boolean} - Enable antialiasing. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{TILE_FORMAT}{\code{enum}  of \verb{("PNG", "JPG")} - Tile format. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{QUALITY}{\code{number} - Quality (JPG only). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
@@ -50,15 +53,15 @@ qgis_tilesxyzdirectory(
 
 \item{TMS_CONVENTION}{\code{boolean} - Use inverted tile Y axis (TMS convention). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OUTPUT_DIRECTORY}{\code{folderDestination} - Output directory. Path for an existing or new folder.}
-
-\item{OUTPUT_HTML}{\code{fileDestination} - Output html (Leaflet). Path for new file.}
-
 \item{HTML_TITLE}{\code{string} - Leaflet HTML output title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{HTML_ATTRIBUTION}{\code{string} - Leaflet HTML output attribution. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{HTML_OSM}{\code{boolean} - Include OpenStreetMap basemap in Leaflet HTML output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{OUTPUT_DIRECTORY}{\code{folderDestination} - Output directory. Path for an existing or new folder.}
+
+\item{OUTPUT_HTML}{\code{fileDestination} - Output html (Leaflet). Path for new file.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -69,7 +72,7 @@ qgis_tilesxyzdirectory(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Generate XYZ tiles (Directory) (qgis:tilesxyzdirectory). This algorithm generates raster XYZ tiles of map canvas content. Tile images are saved as individual images in directory structure.
+QGIS Algorithm provided by QGIS (native c++) Generate XYZ tiles (Directory) (native:tilesxyzdirectory). Generates XYZ tiles of map canvas content and saves them as individual images in a directory.
 }
 \details{
 \subsection{Outputs description}{

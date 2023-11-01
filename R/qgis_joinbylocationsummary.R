@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Join attributes by location (summary) (qgis:joinbylocationsummary). This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table. The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one. The algorithm calculates a statistical summary for the values from matching features in the second layer (e.g. maximum value, mean value, etc).
+##' QGIS Algorithm provided by QGIS (native c++) Join attributes by location (summary) (native:joinbylocationsummary). Calculate summaries of attributes from one vector layer to another by location. This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one.  The algorithm calculates a statistical summary for the values from matching features in the second layer( e.g. maximum value, mean value, etc ).
 ##'
 ##' @title QGIS algorithm - Join attributes by location (summary)
 ##'
@@ -25,13 +25,13 @@
 
 qgis_joinbylocationsummary <- function(INPUT = qgisprocess:::qgis_default_value(), PREDICATE = qgisprocess:::qgis_default_value(), JOIN = qgisprocess:::qgis_default_value(), JOIN_FIELDS = qgisprocess:::qgis_default_value(), SUMMARIES = qgisprocess:::qgis_default_value(), DISCARD_NONMATCHING = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
-  check_algorithm_necessities("qgis:joinbylocationsummary")
+  check_algorithm_necessities("native:joinbylocationsummary")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("qgis:joinbylocationsummary", `INPUT` = INPUT, `PREDICATE` = PREDICATE, `JOIN` = JOIN, `JOIN_FIELDS` = JOIN_FIELDS, `SUMMARIES` = SUMMARIES, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:joinbylocationsummary", `INPUT` = INPUT, `PREDICATE` = PREDICATE, `JOIN` = JOIN, `JOIN_FIELDS` = JOIN_FIELDS, `SUMMARIES` = SUMMARIES, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("qgis:joinbylocationsummary", `INPUT` = INPUT, `PREDICATE` = PREDICATE, `JOIN` = JOIN, `JOIN_FIELDS` = JOIN_FIELDS, `SUMMARIES` = SUMMARIES, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:joinbylocationsummary", `INPUT` = INPUT, `PREDICATE` = PREDICATE, `JOIN` = JOIN, `JOIN_FIELDS` = JOIN_FIELDS, `SUMMARIES` = SUMMARIES, `DISCARD_NONMATCHING` = DISCARD_NONMATCHING, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
       )
   }
 

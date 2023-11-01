@@ -10,6 +10,7 @@ qgis_savefeatures(
   LAYER_NAME = qgisprocess:::qgis_default_value(),
   DATASOURCE_OPTIONS = qgisprocess:::qgis_default_value(),
   LAYER_OPTIONS = qgisprocess:::qgis_default_value(),
+  ACTION_ON_EXISTING_FILE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -26,6 +27,8 @@ qgis_savefeatures(
 \item{DATASOURCE_OPTIONS}{\code{string} - GDAL dataset options (separate individual options with semicolons). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{LAYER_OPTIONS}{\code{string} - GDAL layer options (separate individual options with semicolons). String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{ACTION_ON_EXISTING_FILE}{\code{enum}  of \verb{("Create or overwrite file", "Create or overwrite layer", "Append features to existing layer, but do not create new fields", "Append features to existing layer, and create new fields if needed")} - Action to take on pre-existing file. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 

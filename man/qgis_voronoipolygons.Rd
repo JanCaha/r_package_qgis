@@ -7,6 +7,8 @@
 qgis_voronoipolygons(
   INPUT = qgisprocess:::qgis_default_value(),
   BUFFER = qgisprocess:::qgis_default_value(),
+  TOLERANCE = qgisprocess:::qgis_default_value(),
+  COPY_ATTRIBUTES = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -19,6 +21,10 @@ qgis_voronoipolygons(
 
 \item{BUFFER}{\code{number} - Buffer region (\% of extent). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
+\item{TOLERANCE}{\code{number} - Tolerance. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{COPY_ATTRIBUTES}{\code{boolean} - Copy attributes from input features. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{OUTPUT}{\code{sink} - Voronoi polygons. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
@@ -30,7 +36,7 @@ qgis_voronoipolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Voronoi polygons (qgis:voronoipolygons). This algorithm takes a points layer and generates a polygon layer containing the voronoi polygons corresponding to those input points.
+QGIS Algorithm provided by QGIS (native c++) Voronoi polygons (native:voronoipolygons). Generates a polygon layer containing the Voronoi diagram corresponding to input points.
 }
 \details{
 \subsection{Outputs description}{
