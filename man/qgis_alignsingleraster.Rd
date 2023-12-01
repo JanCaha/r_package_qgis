@@ -25,7 +25,7 @@ qgis_alignsingleraster(
 \arguments{
 \item{INPUT}{\code{raster} - Input layer. Path to a raster layer.}
 
-\item{RESAMPLING_METHOD}{\code{enum}  of \verb{("Nearest neighbour", "Bilinear", "Cubic", "Cubic spline", "Lanczos", "Average", "Mode", "Maximum", "Minimum", "Median", "First quartile", "Third quartile")} - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{RESAMPLING_METHOD}{\code{enum}  of \verb{("Nearest Neighbour", "Bilinear (2x2 Kernel)", "Cubic (4x4 Kernel)", "Cubic B-Spline (4x4 Kernel)", "Lanczos (6x6 Kernel)", "Average", "Mode", "Maximum", "Minimum", "Median", "First Quartile (Q1)", "Third Quartile (Q3)")} - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{RESCALE}{\code{boolean} - Rescale values according to the cell size. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 

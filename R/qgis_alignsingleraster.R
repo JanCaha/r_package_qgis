@@ -3,7 +3,7 @@
 ##' @title QGIS algorithm - Align raster
 ##'
 ##' @param INPUT `raster` - Input layer. Path to a raster layer.
-##' @param RESAMPLING_METHOD `enum`  of `("Nearest neighbour", "Bilinear", "Cubic", "Cubic spline", "Lanczos", "Average", "Mode", "Maximum", "Minimum", "Median", "First quartile", "Third quartile")` - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param RESAMPLING_METHOD `enum`  of `("Nearest Neighbour", "Bilinear (2x2 Kernel)", "Cubic (4x4 Kernel)", "Cubic B-Spline (4x4 Kernel)", "Lanczos (6x6 Kernel)", "Average", "Mode", "Maximum", "Minimum", "Median", "First Quartile (Q1)", "Third Quartile (Q3)")` - Resampling method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param RESCALE `boolean` - Rescale values according to the cell size. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param REFERENCE_LAYER `raster` - Reference layer. Path to a raster layer.
 ##' @param CRS `crs` - Override reference CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
