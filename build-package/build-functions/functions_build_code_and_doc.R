@@ -21,6 +21,10 @@ build_fn_code <- function(alg, arguments, main_output) {
 
   fn_arguments <- glue::glue_collapse(fn_arguments, sep = ", ")
 
+  separator <- ""
+  if (stringr::str_length(fn_arguments) > 0){
+    separator <- ","
+  }
 
   fn_arguments_qgis_run <- purrr::map(arguments$name, ~ glue::glue("`{.x}` = {convert_to_R_arg_names(.x)}"))
   fn_arguments_qgis_run <- glue::glue_collapse(fn_arguments_qgis_run, sep=", ")

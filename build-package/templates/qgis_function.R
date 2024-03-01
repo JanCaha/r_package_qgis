@@ -1,4 +1,4 @@
-{fn_name} <- function({fn_arguments},..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {{
+{fn_name} <- function({fn_arguments}{separator}..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {{
 
   check_algorithm_necessities("{alg$algorithm}")
 
