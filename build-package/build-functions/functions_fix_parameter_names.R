@@ -1,6 +1,9 @@
 # set of functions to fix parameter name to make it R compliant
 
 replace_starting_minus <- function(arg_name){
+  if (stringr::str_starts(arg_name, "--")){
+    return(stringr::str_replace(arg_name, "--", "."))
+  }
   if (stringr::str_starts(arg_name, "-")){
     return(stringr::str_replace(arg_name, "-", "."))
   }
