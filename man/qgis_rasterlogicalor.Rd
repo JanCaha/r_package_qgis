@@ -22,9 +22,9 @@ qgis_rasterlogicalor(
 
 \item{REF_LAYER}{\code{raster} - Reference layer. Path to a raster layer.}
 
-\item{NODATA_AS_FALSE}{\code{boolean} - Treat nodata values as false. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{NODATA_AS_FALSE}{\code{boolean} - Treat NoData values as false. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NO_DATA}{\code{number} - Output no data value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{NO_DATA}{\code{number} - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
@@ -39,7 +39,7 @@ qgis_rasterlogicalor(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster boolean OR (native:rasterlogicalor). Calculates the boolean OR for a set of input raster layers This algorithm calculates the boolean OR for a set of input rasters. If any of the input rasters have a non-zero value for a pixel, that pixel will be set to 1 in the output raster. If all the input rasters have 0 values for the pixel it will be set to 0 in the output raster.  The reference layer parameter specifies an existing raster layer to use as a reference when creating the output raster. The output raster will have the same extent, CRS, and pixel dimensions as this layer.  By default, a nodata pixel in ANY of the input layers will result in a nodata pixel in the output raster. If the 'Treat nodata values as false' option is checked, then nodata inputs will be treated the same as a 0 input value.
+QGIS Algorithm provided by QGIS (native c++) Raster boolean OR (native:rasterlogicalor). Calculates the boolean OR for a set of input raster layers This algorithm calculates the boolean OR for a set of input rasters. If any of the input rasters have a non-zero value for a pixel, that pixel will be set to 1 in the output raster. If all the input rasters have 0 values for the pixel it will be set to 0 in the output raster.  The reference layer parameter specifies an existing raster layer to use as a reference when creating the output raster. The output raster will have the same extent, CRS, and pixel dimensions as this layer.  By default, a NoData pixel in ANY of the input layers will result in a NoData pixel in the output raster. If the 'Treat NoData values as false' option is checked, then NoData inputs will be treated the same as a 0 input value.
 }
 \details{
 \subsection{Outputs description}{
@@ -48,7 +48,7 @@ QGIS Algorithm provided by QGIS (native c++) Raster boolean OR (native:rasterlog
 \item EXTENT - outputString - Extent
 \item FALSE_PIXEL_COUNT - outputNumber - False pixel count
 \item HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-\item NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+\item NODATA_PIXEL_COUNT - outputNumber - NoData pixel count
 \item OUTPUT - outputRaster - Output layer
 \item TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 \item TRUE_PIXEL_COUNT - outputNumber - True pixel count

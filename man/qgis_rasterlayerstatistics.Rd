@@ -35,6 +35,7 @@ QGIS Algorithm provided by QGIS (native c++) Raster layer statistics (native:ras
 \details{
 \subsection{Outputs description}{
 \itemize{
+\item COUNT - outputNumber - Count of non-NoData pixels
 \item MAX - outputNumber - Maximum value
 \item MEAN - outputNumber - Mean value
 \item MIN - outputNumber - Minimum value

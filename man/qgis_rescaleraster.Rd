@@ -26,7 +26,7 @@ qgis_rescaleraster(
 
 \item{MAXIMUM}{\code{number} - New maximum value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{NODATA}{\code{number} - New NODATA value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{NODATA}{\code{number} - New NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Rescaled. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ qgis_rescaleraster(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rescale raster (native:rescaleraster). Rescales raster layer to a new value range, while preserving the shape (distribution) of the raster's histogram (pixel values). Input values are mapped using a linear interpolation from the source raster's minimum and maximum pixel values to the destination minimum and maximum pixel range.  By default the algorithm preserves original the NODATA value, but there is an option to override it.
+QGIS Algorithm provided by QGIS (native c++) Rescale raster (native:rescaleraster). Rescales raster layer to a new value range, while preserving the shape (distribution) of the raster's histogram (pixel values). Input values are mapped using a linear interpolation from the source raster's minimum and maximum pixel values to the destination minimum and maximum pixel range.  By default the algorithm preserves the original NoData value, but there is an option to override it.
 }
 \details{
 \subsection{Outputs description}{

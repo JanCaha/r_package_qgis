@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:rasterlayerproperties). This algorithm returns basic properties of the given raster layer, including the extent, size in pixels and dimensions of pixels (in map units).  If an optional band number is specified then the nodata value for the selected band will also be returned.
+##' QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:rasterlayerproperties). This algorithm returns basic properties of the given raster layer, including the extent, size in pixels and dimensions of pixels (in map units).  If an optional band number is specified then the NoData value for the selected band will also be returned.
 ##'
 ##' @title QGIS algorithm - Raster layer properties
 ##'
@@ -14,9 +14,9 @@
 ##' * BAND_COUNT - outputNumber - Number of bands in raster
 ##' * CRS_AUTHID - outputString - CRS authority identifier
 ##' * EXTENT - outputString - Extent
-##' * HAS_NODATA_VALUE - outputBoolean - Band has a nodata value set
+##' * HAS_NODATA_VALUE - outputBoolean - Band has a NoData value set
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-##' * NODATA_VALUE - outputNumber - Band nodata value
+##' * NODATA_VALUE - outputNumber - Band NoData value
 ##' * PIXEL_HEIGHT - outputNumber - Pixel size (height) in map units
 ##' * PIXEL_WIDTH - outputNumber - Pixel size (width) in map units
 ##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels

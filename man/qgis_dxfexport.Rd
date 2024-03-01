@@ -8,8 +8,10 @@ qgis_dxfexport(
   LAYERS = qgisprocess:::qgis_default_value(),
   SYMBOLOGY_MODE = qgisprocess:::qgis_default_value(),
   SYMBOLOGY_SCALE = qgisprocess:::qgis_default_value(),
+  MAP_THEME = qgisprocess:::qgis_default_value(),
   ENCODING = qgisprocess:::qgis_default_value(),
   CRS = qgisprocess:::qgis_default_value(),
+  EXTENT = qgisprocess:::qgis_default_value(),
   USE_LAYER_TITLE = qgisprocess:::qgis_default_value(),
   FORCE_2D = qgisprocess:::qgis_default_value(),
   MTEXT = qgisprocess:::qgis_default_value(),
@@ -27,9 +29,13 @@ qgis_dxfexport(
 
 \item{SYMBOLOGY_SCALE}{\code{scale} - Symbology scale. A numeric value representing the scale denominator.}
 
+\item{MAP_THEME}{\code{maptheme} - Map theme. Name of an existing map theme.}
+
 \item{ENCODING}{\code{enum}  of \verb{("ISO-8859-1", "ISO-8859-2", "ISO-8859-3", "ISO-8859-4", "ISO-8859-5", "ISO-8859-6", "ISO-8859-7", "ISO-8859-8", "ISO-8859-9", "Shift_JIS", "Big5", "CP936", "GB2312", "ms949", "cp850", "cp866", "cp1250", "cp1251", "cp1252", "cp1253", "cp1254", "cp1255", "cp1256", "cp1257", "cp1258", "macroman")} - Encoding. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{CRS}{\code{crs} - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
+
+\item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
 \item{USE_LAYER_TITLE}{\code{boolean} - Use layer title as name. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 

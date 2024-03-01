@@ -12,6 +12,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
+##' * COUNT - outputNumber - Count of non-NoData pixels
 ##' * MAX - outputNumber - Maximum value
 ##' * MEAN - outputNumber - Mean value
 ##' * MIN - outputNumber - Minimum value
@@ -42,6 +43,6 @@ qgis_rasterlayerstatistics <- function(INPUT = qgisprocess:::qgis_default_value(
     return(output)
   }
   else{
-    qgisprocess::qgis_extract_output(output, "MAX")
+    qgisprocess::qgis_extract_output(output, "COUNT")
   }
 }

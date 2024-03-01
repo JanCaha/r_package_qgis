@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints). Creates a vector layer of points corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating point features for each individual pixel's center in the raster layer.  Any nodata pixels are skipped in the output.
+##' QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints). Creates a vector layer of points corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating point features for each individual pixel's center in the raster layer.  Any NoData pixels are skipped in the output.
 ##'
 ##' @title QGIS algorithm - Raster pixels to points
 ##'

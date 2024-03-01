@@ -8,9 +8,9 @@
 ##' @param MIN_FIELD `field` - Minimum class value field. The name of an existing field. ; delimited list of existing field names.
 ##' @param MAX_FIELD `field` - Maximum class value field. The name of an existing field. ; delimited list of existing field names.
 ##' @param VALUE_FIELD `field` - Output value field. The name of an existing field. ; delimited list of existing field names.
-##' @param NO_DATA `number` - Output no data value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NO_DATA `number` - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param RANGE_BOUNDARIES `enum`  of `("min  value = max", "min = value  max", "min = value = max", "min  value  max")` - Range boundaries. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
-##' @param NODATA_FOR_MISSING `boolean` - Use no data when no range matches value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param NODATA_FOR_MISSING `boolean` - Use NoData when no range matches value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param DATA_TYPE `enum`  of `("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT `rasterDestination` - Reclassified raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`

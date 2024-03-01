@@ -33,7 +33,7 @@ qgis_pixelstopoints(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints). Creates a vector layer of points corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating point features for each individual pixel's center in the raster layer.  Any nodata pixels are skipped in the output.
+QGIS Algorithm provided by QGIS (native c++) Raster pixels to points (native:pixelstopoints). Creates a vector layer of points corresponding to each pixel in a raster layer. This algorithm converts a raster layer to a vector layer, by creating point features for each individual pixel's center in the raster layer.  Any NoData pixels are skipped in the output.
 }
 \details{
 \subsection{Outputs description}{

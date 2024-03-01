@@ -1,4 +1,22 @@
-character(0)
+##' QGIS Algorithm provided by SAGA Next Gen Count points in polygons (sagang:countpointsinpolygons). ---------------- Arguments ----------------  POINTS: Points 	Argument type:	source 	Acceptable values: 		- Path to a vector layer POLYGONS: Polygons 	Argument type:	source 	Acceptable values: 		- Path to a vector layer
+##'
+##' @title QGIS algorithm - Count points in polygons
+##'
+##' @param POINTS `source` - Points. Path to a vector layer.
+##' @param POLYGONS `source` - Polygons. Path to a vector layer.
+##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
+##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
+##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
+##' @param .messages logical specifying if messages from `qgisprocess::qgis_run_algorithm()` should be printed (`TRUE`) or not (`FALSE`). Default value is `FALSE`.
+##'
+##' @details
+##' ## Outputs description
+##' No output description provided.
+##'
+##'
+##' @export
+##' @md
+##' @importFrom qgisprocess qgis_run_algorithm
 
 sagang_countpointsinpolygons <- function(POINTS = qgisprocess:::qgis_default_value(), POLYGONS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 

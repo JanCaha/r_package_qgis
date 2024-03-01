@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster layer zonal statistics (native:rasterlayerzonalstats). Calculates statistics for a raster layer's values, categorized by zones defined in another raster layer. This algorithm calculates statistics for a raster layer's values, categorized by zones defined in another raster layer.  If the reference layer parameter is set to "Input layer", then zones are determined by sampling the zone raster layer value at the centroid of each pixel from the source raster layer.  If the reference layer parameter is set to "Zones layer", then the input raster layer will be sampled at the centroid of each pixel from the zones raster layer.  If either the source raster layer or the zone raster layer value is NODATA for a pixel, that pixel's value will be skipped and not including in the calculated statistics.
+##' QGIS Algorithm provided by QGIS (native c++) Raster layer zonal statistics (native:rasterlayerzonalstats). Calculates statistics for a raster layer's values, categorized by zones defined in another raster layer. This algorithm calculates statistics for a raster layer's values, categorized by zones defined in another raster layer.  If the reference layer parameter is set to "Input layer", then zones are determined by sampling the zone raster layer value at the centroid of each pixel from the source raster layer.  If the reference layer parameter is set to "Zones layer", then the input raster layer will be sampled at the centroid of each pixel from the zones raster layer.  If either the source raster layer or the zone raster layer value is NoData for a pixel, that pixel's value will be skipped and not included in the calculated statistics.
 ##'
 ##' @title QGIS algorithm - Raster layer zonal statistics
 ##'
@@ -18,7 +18,7 @@
 ##' * CRS_AUTHID - outputString - CRS authority identifier
 ##' * EXTENT - outputString - Extent
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-##' * NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+##' * NODATA_PIXEL_COUNT - outputNumber - NoData pixel count
 ##' * OUTPUT_TABLE - outputVector - Statistics
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
 ##' * WIDTH_IN_PIXELS - outputNumber - Width in pixels

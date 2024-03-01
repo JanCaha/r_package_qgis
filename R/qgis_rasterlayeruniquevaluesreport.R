@@ -16,7 +16,7 @@
 ##' * CRS_AUTHID - outputString - CRS authority identifier
 ##' * EXTENT - outputString - Extent
 ##' * HEIGHT_IN_PIXELS - outputNumber - Height in pixels
-##' * NODATA_PIXEL_COUNT - outputNumber - NODATA pixel count
+##' * NODATA_PIXEL_COUNT - outputNumber - NoData pixel count
 ##' * OUTPUT_HTML_FILE - outputHtml - Unique values report
 ##' * OUTPUT_TABLE - outputVector - Unique values table
 ##' * TOTAL_PIXEL_COUNT - outputNumber - Total pixel count
