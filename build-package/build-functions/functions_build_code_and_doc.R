@@ -77,6 +77,10 @@ build_fn_doc <- function(alg, arguments, outputs){
 
   description_outputs <- glue::glue_collapse(description_outputs, sep = "\n")
 
+  if (stringr::str_length(description_outputs) == 0) {
+    description_arguments = "No output description provided."
+  }
+
   fun_help_tmpl <- readr::read_file(here::here("build-package", "templates", "qgis_help.R"))
 
   glue::glue(fun_help_tmpl)
