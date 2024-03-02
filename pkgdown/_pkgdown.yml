@@ -22,7 +22,7 @@ reference:
   - title: GRASS
     desc: Algorithms provided by GRASS GIS.
     contents:
-    - starts_with("grass7_")
+    - starts_with("grass_")
 
   - title: SAGA
     desc: Algorithms provided by SAGA GIS.
