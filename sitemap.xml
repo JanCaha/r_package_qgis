@@ -109,6 +109,12 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_hillshade.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_importvectorintopostgisdatabaseavailableconnections.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_importvectorintopostgisdatabasenewconnection.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_merge.html</loc>
   </url>
   <url>
@@ -190,913 +196,925 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/gdal_warpreproject.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_g_extension_list.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_g_extension_list.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_albedo.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_g_extension_manage.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_aster_toar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_g_version.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_atcorr.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_albedo.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_biomass.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_aster_toar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_cca.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_atcorr.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_cluster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_biomass.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_colors_enhance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_cca.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_eb_eta.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_cluster.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_eb_evapfr.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_colors_enhance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_eb_hsebal01_coords.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_eb_eta.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_eb_netrad.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_eb_evapfr.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_eb_soilheatflux.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_eb_hsebal01_coords.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_emissivity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_eb_netrad.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_evapo_mh.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_eb_soilheatflux.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_evapo_pm.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_emissivity.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_evapo_pt.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_evapo_mh.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_evapo_time.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_evapo_pm.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_fft.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_evapo_pt.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_gensig.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_evapo_time.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_gensigset.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_fft.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_group.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_gensig.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_his_rgb.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_gensigset.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_ifft.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_group.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_image_mosaic.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_his_rgb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_in_spotvgt.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_ifft.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_landsat_acca.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_image_mosaic.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_landsat_toar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_in_spotvgt.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_maxlik.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_landsat_acca.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_modis_qc.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_landsat_toar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_oif.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_maxlik.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_pansharpen.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_modis_qc.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_pca.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_oif.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_rgb_his.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_pansharpen.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_segment.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_pca.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_smap.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_rgb_his.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_tasscap.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_segment.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_topo_coor_ill.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_smap.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_topo_corr.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_tasscap.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_vi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_topo_coor_ill.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_i_zc.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_topo_corr.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_m_cogo.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_vi.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_basins_fill.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_i_zc.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_blend_combine.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_m_cogo.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_blend_rgb.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_nviz.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_buffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_basins_fill.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_buffer_lowmem.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_blend_combine.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_carve.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_blend_rgb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_category.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_buffer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_category_out.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_buffer_lowmem.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_circle.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_carve.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_clump.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_category.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_coin.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_category_out.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_colors.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_circle.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_colors_out.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_clump.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_colors_stddev.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_coin.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_composite.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_colors.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_contour.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_colors_out.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_cost.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_colors_stddev.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_covar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_composite.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_cross.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_contour.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_describe.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_cost.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_distance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_covar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_drain.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_cross.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_fill_dir.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_describe.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_fill_stats.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_distance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_fillnulls.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_drain.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_flow.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_fill_dir.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_geomorphon.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_fill_stats.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_grow.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_fillnulls.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_grow_distance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_flow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_gwflow.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_geomorphon.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_his.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_grow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_horizon.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_grow_distance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_horizon_height.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_gwflow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_in_lidar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_his.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_in_lidar_info.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_horizon.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_info.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_horizon_height.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_kappa.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_in_lidar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_lake.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_in_lidar_info.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_latlong.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_info.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_cwed.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_kappa.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_cwed_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_lake.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_dominance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_latlong.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_dominance_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_cwed.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_edgedensity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_cwed_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_edgedensity_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_dominance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_mpa.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_dominance_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_mpa_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_edgedensity.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_mps.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_edgedensity_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_mps_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_mpa.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_padcv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_mpa_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_padcv_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_mps.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_padrange.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_mps_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_padrange_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_padcv.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_padsd.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_padcv_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_padsd_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_padrange.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_patchdensity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_padrange_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_patchdensity_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_padsd.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_patchnum.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_padsd_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_patchnum_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_patchdensity.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_pielou.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_patchdensity_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_pielou_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_patchnum.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_renyi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_patchnum_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_renyi_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_pielou.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_richness.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_pielou_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_richness_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_renyi.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_shannon.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_renyi_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_shannon_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_richness.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_shape.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_richness_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_shape_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_shannon.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_simpson.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_shannon_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_li_simpson_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_shape.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_mapcalc_simple.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_shape_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_mask_rast.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_simpson.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_mask_vect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_li_simpson_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_mfilter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_mapcalc_simple.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_mode.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_mask_rast.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_neighbors.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_mask_vect.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_null.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_mfilter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_mode.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_gridatb.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_neighbors.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_mat.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_null.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_mpeg.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_png.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_gridatb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_pov.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_mat.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_ppm.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_mpeg.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_ppm3.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_png.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_vrml.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_pov.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_vtk.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_ppm.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_out_xyz.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_ppm3.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_param_scale.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_vrml.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_patch.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_vtk.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_path.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_out_xyz.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_path_coordinate_txt.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_param_scale.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_plane.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_patch.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_profile.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_path.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_proj.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_path_coordinate_txt.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_quant.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_plane.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_quantile.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_profile.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_quantile_plain.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_proj.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_random.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_quant.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_random_cells.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_quantile.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_random_surface.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_quantile_plain.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_reclass.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_random.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_reclass_area.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_random_cells.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_recode.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_random_surface.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_regression_line.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_reclass.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_regression_multi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_reclass_area.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_relief.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_recode.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_relief_scaling.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_regression_line.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_report.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_regression_multi.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_resamp_bspline.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_relief.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_resamp_filter.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_relief_scaling.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_resamp_interp.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_report.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_resamp_rst.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_resamp_bspline.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_resamp_stats.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_resamp_filter.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_resample.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_resamp_interp.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_rescale.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_resamp_rst.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_rescale_eq.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_resamp_stats.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_rgb.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_resample.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_ros.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_rescale.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_series.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_rescale_eq.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_series_accumulate.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_rgb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_series_interp.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_ros.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_shade.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_series.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sim_sediment.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_series_accumulate.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sim_water.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_series_interp.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_slope_aspect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_shade.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_solute_transport.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sim_sediment.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_spread.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sim_water.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_spreadpath.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_slope_aspect.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_statistics.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_solute_transport.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_stats.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_spread.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_stats_quantile_out.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_spreadpath.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_stats_quantile_rast.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_statistics.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_stats_zonal.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_stats.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_stream_extract.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_stats_quantile_out.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sun_incidout.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_stats_quantile_rast.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sun_insoltime.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_stats_zonal.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sunhours.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_stream_extract.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sunmask_datetime.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sun_incidout.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_sunmask_position.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sun_insoltime.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_surf_area.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sunhours.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_surf_contour.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sunmask_datetime.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_surf_fractal.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_sunmask_position.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_surf_gauss.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_surf_area.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_surf_idw.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_surf_contour.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_surf_random.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_surf_fractal.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_terraflow.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_surf_gauss.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_texture.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_surf_idw.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_thin.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_surf_random.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_tile.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_terraflow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_tileset.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_texture.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_to_vect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_thin.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_topidx.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_tile.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_topmodel.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_tileset.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_topmodel_topidxstats.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_to_vect.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_transect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_topidx.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_univar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_topmodel.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_uslek.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_topmodel_topidxstats.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_usler.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_transect.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_viewshed.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_univar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_volume.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_uslek.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_walk_coords.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_usler.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_walk_points.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_viewshed.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_walk_rast.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_volume.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_water_outlet.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_walk_coords.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_watershed.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_walk_points.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_what_color.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_walk_rast.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_what_coords.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_water_outlet.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_r_what_points.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_watershed.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_buffer.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_what_color.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_build_check.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_what_coords.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_build_polylines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_r_what_points.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_class.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_buffer.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_clean.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_build_check.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_cluster.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_build_polylines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_db_select.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_class.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_decimate.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_clean.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_delaunay.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_cluster.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_dissolve.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_db_select.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_distance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_decimate.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_drape.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_delaunay.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_edit.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_dissolve.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_extract.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_distance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_extrude.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_drape.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_generalize.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_edit.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_hull.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_extract.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_extrude.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_dxf.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_generalize.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_e00.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_hull.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_geonames.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_lidar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_dxf.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_lines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_e00.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_mapgen.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_geonames.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_in_wfs.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_lidar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_info.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_lines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_kcv.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_mapgen.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_kernel_rast.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_in_wfs.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_kernel_vector.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_info.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_lidar_correction.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_kcv.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_lidar_edgedetection.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_kernel_rast.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_lidar_growing.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_kernel_vector.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_mkgrid.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_lidar_correction.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_neighbors.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_lidar_edgedetection.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_lidar_growing.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_alloc.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_mkgrid.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_allpairs.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_neighbors.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_bridge.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_centrality.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_alloc.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_components.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_allpairs.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_connectivity.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_bridge.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_distance.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_centrality.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_flow.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_components.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_iso.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_connectivity.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_nreport.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_distance.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_path.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_flow.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_report.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_iso.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_salesman.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_nreport.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_spanningtree.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_path.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_steiner.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_report.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_timetable.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_salesman.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_net_visibility.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_spanningtree.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_normal.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_steiner.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_out_ascii.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_timetable.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_out_dxf.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_net_visibility.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_out_pov.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_normal.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_out_svg.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_out_ascii.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_out_vtk.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_out_dxf.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_outlier.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_out_postgis.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_overlay.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_out_pov.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_pack.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_out_svg.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_parallel.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_out_vtk.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_patch.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_outlier.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_perturb.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_overlay.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_proj.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_pack.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_qcount.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_parallel.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_random.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_patch.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_rast_stats.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_perturb.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_reclass.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_proj.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_rectify.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_qcount.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_report.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_random.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_sample.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_rast_stats.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_segment.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_reclass.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_select.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_rectify.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_split.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_report.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_surf_bspline.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_sample.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_surf_idw.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_segment.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_surf_rst.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_select.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_surf_rst_cvdev.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_split.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_to_3d.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_surf_bspline.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_to_lines.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_surf_idw.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_to_points.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_surf_rst.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_to_rast.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_surf_rst_cvdev.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_transform.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_to_3d.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_type.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_to_lines.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_univar.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_to_points.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_vect_stats.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_to_rast.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_voronoi.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_transform.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_voronoi_skeleton.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_type.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_what_rast.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_univar.html</loc>
   </url>
   <url>
-    <loc>https://jancaha.github.io/r_package_qgis/reference/grass7_v_what_vect.html</loc>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_vect_stats.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_voronoi.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_voronoi_skeleton.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_what_rast.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/grass_v_what_vect.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/index.html</loc>
@@ -1148,6 +1166,12 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_assignprojection.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_atlaslayouttoimage.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_atlaslayouttomultiplepdf.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_atlaslayouttopdf.html</loc>
@@ -1222,6 +1246,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_concavehull.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_condition.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_convertgeometrytype.html</loc>
   </url>
   <url>
@@ -1238,6 +1265,15 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_countpointsinpolygon.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_coveragesimplify.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_coverageunion.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_coveragevalidate.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_createattributeindex.html</loc>
@@ -1423,6 +1459,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_fillnodata.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_filter.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_filterbygeometry.html</loc>
   </url>
   <url>
@@ -1496,6 +1535,12 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_idwinterpolation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_importintopostgis.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_importintospatialite.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_importphotos.html</loc>
@@ -1654,6 +1699,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_polygonstolines.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_postgisexecutesql.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_printlayoutmapextenttolayer.html</loc>
   </url>
   <url>
@@ -1667,6 +1715,15 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_promotetomulti.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_raiseexception.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_raisemessage.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_raisewarning.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_randomextract.html</loc>
@@ -1867,6 +1924,12 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_snappointstogrid.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_spatialiteexecutesql.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_spatialiteexecutesqlregistered.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_splitfeaturesbycharacter.html</loc>
   </url>
   <url>
@@ -1937,6 +2000,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_union.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_uploadgpsdata.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/qgis_variabledistancebuffer.html</loc>
@@ -2200,6 +2266,12 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinateconversiongrids.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinateconversiontable.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinatereferencesystempicker.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coordinatetransformationgrid.html</loc>
   </url>
   <url>
@@ -2219,6 +2291,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_copyshapesfromregion.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_countpointsinpolygons.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_coverageofcategories.html</loc>
@@ -2245,6 +2320,12 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createtileshapefromvirtualpointcloud.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createvirtualpointclouddataset.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_createvirtualrastervrt.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_croptodata.html</loc>
   </url>
   <url>
@@ -2267,6 +2348,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_definegeoreferenceforgrids.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_deleteselectionfromshapeslayer.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_destriping.html</loc>
@@ -2327,6 +2411,66 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_evapotranspirationtable.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportatlasboundaryfile.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportesriarcinfogrid.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportgeotiff.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportgpx.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportgridtoxyz.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportgstatshapes.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportpolygonstohtmlimagemap.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportraster.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportscalablevectorgraphicssvgfile.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportshapes.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportshapestogenerate.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportshapestokml.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportshapestoxyz.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportsimplefeaturestowellknowntext.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportsurferblankingfile.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportsurfergrid.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exporttexttable.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exporttruecolorbitmap.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportwaspterrainmapfile.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_exportwrfgeogridbinaryformat.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_fastrepresentativeness.html</loc>
@@ -2452,6 +2596,12 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_globalmoransiforrasterlayer.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gpsbabel.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gpxtoshapefile.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gradientvectorfromcartesiantopolarcoordinates.html</loc>
   </url>
   <url>
@@ -2477,6 +2627,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridclassesareaforpolygons.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridcombination.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_gridnormalization.html</loc>
@@ -2525,6 +2678,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_imcorrfeaturetracking.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importatlasboundaryfile.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_importbuildingsketchesfromcitygml.html</loc>
@@ -2612,6 +2768,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_invertgrid.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_invertselectionofshapeslayer.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_isochronesvariablespeed.html</loc>
@@ -2977,6 +3136,9 @@
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rastervaluestopointsrandomly.html</loc>
   </url>
   <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_rastervolume.html</loc>
+  </url>
+  <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_realsurfacearea.html</loc>
   </url>
   <url>
@@ -2996,6 +3158,12 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removeduplicatepoints.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removeinvalidshapes.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removeoverlapfromvirtualpointcloudtiles.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_removesmallpixelclumpstonodata.html</loc>
@@ -3032,6 +3200,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_seedgeneration.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_selectanddelete.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_selectgridfromlist.html</loc>
@@ -3083,6 +3254,9 @@
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_simulation.html</loc>
+  </url>
+  <url>
+    <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_singlecoordinatetransformation.html</loc>
   </url>
   <url>
     <loc>https://jancaha.github.io/r_package_qgis/reference/sagang_sinkdrainageroutedetection.html</loc>
