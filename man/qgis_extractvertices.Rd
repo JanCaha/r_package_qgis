@@ -27,7 +27,7 @@ qgis_extractvertices(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract vertices (native:extractvertices). This algorithm takes a line or polygon layer and generates a point layer with points representing the vertices in the input lines or polygons. The attributes associated to each point are the same ones associated to the line or polygon that the point belongs to.  Additional fields are added to the point indicating the vertex index (beginning at 0), the vertex’s part and its index within the part (as well as its ring for polygons), distance along original geometry and bisector angle of vertex for original geometry.
+QGIS Algorithm provided by QGIS (native c++) Extract vertices (native:extractvertices). This algorithm takes a vector layer and generates a point layer with points representing the vertices in the input geometries. The attributes associated to each point are the same ones associated to the feature that the point belongs to.  Additional fields are added to the point indicating the vertex index (beginning at 0), the vertex’s part and its index within the part (as well as its ring for polygons), distance along original geometry and bisector angle of vertex for original geometry.
 }
 \details{
 \subsection{Outputs description}{
