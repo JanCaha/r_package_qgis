@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.36.2.9000** is build against QGIS version
-**3.36.2-Maidenhead**.
+Latest package version **3.36.3.9000** is build against QGIS version
+**3.36.3-Maidenhead**.
 
 ## Installation
 
@@ -104,6 +104,7 @@ This example uses `qgisprocess` pipe ability to directly load output to
 
     library(sf)
     #> Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 8.2.1; sf_use_s2() is TRUE
+
 
     nc <- st_read(system.file("shape/nc.shp", package="sf"), quiet = TRUE)
 
