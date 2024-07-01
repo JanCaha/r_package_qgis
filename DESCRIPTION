@@ -1,14 +1,14 @@
 Package: qgis
 Type: Package
 Title: An extension of package "qgisprocess" providing direct R functions for QGIS functions
-Version: 3.36.3.9000
+Version: 3.38.0.9000
 Authors@R: person(given = "Jan",
            family = "Caha",
            role = c("aut", "cre"),
            email = "jan.caha@outlook.com",
            comment = c(ORCID = "0000-0003-0165-0606"))
 Maintainer: Jan Caha <jan.caha@outlook.com>
-Description: An extension of package `qgisprocess` providing direct R functions for QGIS functions. Compiled against QGIS version: 3.36.3-Maidenhead.
+Description: An extension of package `qgisprocess` providing direct R functions for QGIS functions. Compiled against QGIS version: 3.38.0-Grenoble.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -29,5 +29,5 @@ Suggests:
     here,
     testthat
 Config/testthat/edition: 3
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 URL: https://jancaha.github.io/r_package_qgis/, https://github.com/JanCaha/r_package_qgis

@@ -17,7 +17,9 @@ qgis_shortestpathlayertopoint(
   TOLERANCE = qgisprocess:::qgis_default_value(),
   START_POINTS = qgisprocess:::qgis_default_value(),
   END_POINT = qgisprocess:::qgis_default_value(),
+  POINT_TOLERANCE = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT_NON_ROUTABLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -49,7 +51,11 @@ qgis_shortestpathlayertopoint(
 
 \item{END_POINT}{\code{point} - End point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
+\item{POINT_TOLERANCE}{\code{distance} - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{OUTPUT}{\code{sink} - Shortest path. Path for new vector layer.}
+
+\item{OUTPUT_NON_ROUTABLE}{\code{sink} - Non-routable features. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -66,6 +72,7 @@ QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (nat
 \subsection{Outputs description}{
 \itemize{
 \item OUTPUT - outputVector - Shortest path
+\item OUTPUT_NON_ROUTABLE - outputVector - Non-routable features
 }
 }
 }

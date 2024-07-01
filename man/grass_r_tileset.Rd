@@ -46,7 +46,7 @@ grass_r_tileset(
 
 \item{html}{\code{fileDestination} - Tileset. Path for new file.}
 
-\item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS 7 region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
+\item{GRASS_REGION_PARAMETER}{\code{extent} - GRASS GIS region extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 

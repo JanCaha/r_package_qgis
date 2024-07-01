@@ -15,6 +15,7 @@
 ##' @param START_POINT `point` - Start point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param END_POINT `point` - End point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.
 ##' @param OUTPUT `sink` - Shortest path. Path for new vector layer.
+##' @param POINT_TOLERANCE `distance` - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -30,15 +31,15 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_shortestpathpointtopoint <- function(INPUT = qgisprocess:::qgis_default_value(), STRATEGY = qgisprocess:::qgis_default_value(), DIRECTION_FIELD = qgisprocess:::qgis_default_value(), VALUE_FORWARD = qgisprocess:::qgis_default_value(), VALUE_BACKWARD = qgisprocess:::qgis_default_value(), VALUE_BOTH = qgisprocess:::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess:::qgis_default_value(), SPEED_FIELD = qgisprocess:::qgis_default_value(), DEFAULT_SPEED = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), START_POINT = qgisprocess:::qgis_default_value(), END_POINT = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_shortestpathpointtopoint <- function(INPUT = qgisprocess:::qgis_default_value(), STRATEGY = qgisprocess:::qgis_default_value(), DIRECTION_FIELD = qgisprocess:::qgis_default_value(), VALUE_FORWARD = qgisprocess:::qgis_default_value(), VALUE_BACKWARD = qgisprocess:::qgis_default_value(), VALUE_BOTH = qgisprocess:::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess:::qgis_default_value(), SPEED_FIELD = qgisprocess:::qgis_default_value(), DEFAULT_SPEED = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), START_POINT = qgisprocess:::qgis_default_value(), END_POINT = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), POINT_TOLERANCE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:shortestpathpointtopoint")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("native:shortestpathpointtopoint", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINT` = START_POINT, `END_POINT` = END_POINT, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:shortestpathpointtopoint", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINT` = START_POINT, `END_POINT` = END_POINT, `OUTPUT` = OUTPUT, `POINT_TOLERANCE` = POINT_TOLERANCE,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("native:shortestpathpointtopoint", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINT` = START_POINT, `END_POINT` = END_POINT, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:shortestpathpointtopoint", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINT` = START_POINT, `END_POINT` = END_POINT, `OUTPUT` = OUTPUT, `POINT_TOLERANCE` = POINT_TOLERANCE,..., .quiet = .quiet)
       )
   }
 

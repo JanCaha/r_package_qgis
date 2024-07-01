@@ -17,6 +17,7 @@ qgis_serviceareafrompoint(
   TOLERANCE = qgisprocess:::qgis_default_value(),
   START_POINT = qgisprocess:::qgis_default_value(),
   TRAVEL_COST2 = qgisprocess:::qgis_default_value(),
+  POINT_TOLERANCE = qgisprocess:::qgis_default_value(),
   INCLUDE_BOUNDS = qgisprocess:::qgis_default_value(),
   OUTPUT_LINES = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
@@ -50,6 +51,8 @@ qgis_serviceareafrompoint(
 \item{START_POINT}{\code{point} - Start point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
 \item{TRAVEL_COST2}{\code{number} - Travel cost (distance for 'Shortest', time for 'Fastest'). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{POINT_TOLERANCE}{\code{distance} - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{INCLUDE_BOUNDS}{\code{boolean} - Include upper\code{/}lower bound points. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 

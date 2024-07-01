@@ -18,6 +18,7 @@ qgis_shortestpathpointtopoint(
   START_POINT = qgisprocess:::qgis_default_value(),
   END_POINT = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  POINT_TOLERANCE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -50,6 +51,8 @@ qgis_shortestpathpointtopoint(
 \item{END_POINT}{\code{point} - End point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.}
 
 \item{OUTPUT}{\code{sink} - Shortest path. Path for new vector layer.}
+
+\item{POINT_TOLERANCE}{\code{distance} - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 

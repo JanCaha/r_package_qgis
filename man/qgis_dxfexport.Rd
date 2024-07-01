@@ -12,9 +12,11 @@ qgis_dxfexport(
   ENCODING = qgisprocess:::qgis_default_value(),
   CRS = qgisprocess:::qgis_default_value(),
   EXTENT = qgisprocess:::qgis_default_value(),
+  SELECTED_FEATURES_ONLY = qgisprocess:::qgis_default_value(),
   USE_LAYER_TITLE = qgisprocess:::qgis_default_value(),
   FORCE_2D = qgisprocess:::qgis_default_value(),
   MTEXT = qgisprocess:::qgis_default_value(),
+  EXPORT_LINES_WITH_ZERO_WIDTH = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -37,11 +39,15 @@ qgis_dxfexport(
 
 \item{EXTENT}{\code{extent} - Extent. A comma delimited string of x min, x max, y min, y max. E.g. '4,10,101,105'. Path to a layer. The extent of the layer is used..}
 
+\item{SELECTED_FEATURES_ONLY}{\code{boolean} - Use only selected features. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{USE_LAYER_TITLE}{\code{boolean} - Use layer title as name. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FORCE_2D}{\code{boolean} - Force 2D output. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{MTEXT}{\code{boolean} - Export labels as MTEXT elements. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{EXPORT_LINES_WITH_ZERO_WIDTH}{\code{boolean} - Export lines with zero width. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - DXF. Path for new file.}
 
@@ -54,7 +60,7 @@ qgis_dxfexport(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport). Exports layers to DXF file. For each layer, you can choose a field whose values are used to split features in generated destination layers in the DXF output.
+QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport). Exports layers to DXF file. For each layer, you can choose a field whose values are used to split features in generated destination layers in the DXF output.  If no field is chosen, you can still override the output layer name by directly entering a new output layer name in the Configure Layer panel or by preferring layer title (set in layer properties) to layer name.
 }
 \details{
 \subsection{Outputs description}{

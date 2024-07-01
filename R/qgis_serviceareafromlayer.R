@@ -15,8 +15,10 @@
 ##' @param START_POINTS `source` - Vector layer with start points. Path to a vector layer.
 ##' @param TRAVEL_COST2 `number` - Travel cost (distance for 'Shortest', time for 'Fastest'). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param INCLUDE_BOUNDS `boolean` - Include upper\code{/}lower bound points. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param POINT_TOLERANCE `distance` - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT_LINES `sink` - Service area (lines). Path for new vector layer.
 ##' @param OUTPUT `sink` - Service area (boundary nodes). Path for new vector layer.
+##' @param OUTPUT_NON_ROUTABLE `sink` - Non-routable features. Path for new vector layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
 ##' @param .quiet logical specifying if parameter `.quiet` for `qgisprocess::qgis_run_algorithm()` Default value is `TRUE`.
@@ -26,21 +28,22 @@
 ##' ## Outputs description
 ##' * OUTPUT - outputVector - Service area (boundary nodes)
 ##' * OUTPUT_LINES - outputVector - Service area (lines)
+##' * OUTPUT_NON_ROUTABLE - outputVector - Non-routable features
 ##'
 ##'
 ##' @export
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_serviceareafromlayer <- function(INPUT = qgisprocess:::qgis_default_value(), STRATEGY = qgisprocess:::qgis_default_value(), DIRECTION_FIELD = qgisprocess:::qgis_default_value(), VALUE_FORWARD = qgisprocess:::qgis_default_value(), VALUE_BACKWARD = qgisprocess:::qgis_default_value(), VALUE_BOTH = qgisprocess:::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess:::qgis_default_value(), SPEED_FIELD = qgisprocess:::qgis_default_value(), DEFAULT_SPEED = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), START_POINTS = qgisprocess:::qgis_default_value(), TRAVEL_COST2 = qgisprocess:::qgis_default_value(), INCLUDE_BOUNDS = qgisprocess:::qgis_default_value(), OUTPUT_LINES = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_serviceareafromlayer <- function(INPUT = qgisprocess:::qgis_default_value(), STRATEGY = qgisprocess:::qgis_default_value(), DIRECTION_FIELD = qgisprocess:::qgis_default_value(), VALUE_FORWARD = qgisprocess:::qgis_default_value(), VALUE_BACKWARD = qgisprocess:::qgis_default_value(), VALUE_BOTH = qgisprocess:::qgis_default_value(), DEFAULT_DIRECTION = qgisprocess:::qgis_default_value(), SPEED_FIELD = qgisprocess:::qgis_default_value(), DEFAULT_SPEED = qgisprocess:::qgis_default_value(), TOLERANCE = qgisprocess:::qgis_default_value(), START_POINTS = qgisprocess:::qgis_default_value(), TRAVEL_COST2 = qgisprocess:::qgis_default_value(), INCLUDE_BOUNDS = qgisprocess:::qgis_default_value(), POINT_TOLERANCE = qgisprocess:::qgis_default_value(), OUTPUT_LINES = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(), OUTPUT_NON_ROUTABLE = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:serviceareafromlayer")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("native:serviceareafromlayer", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `TRAVEL_COST2` = TRAVEL_COST2, `INCLUDE_BOUNDS` = INCLUDE_BOUNDS, `OUTPUT_LINES` = OUTPUT_LINES, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:serviceareafromlayer", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `TRAVEL_COST2` = TRAVEL_COST2, `INCLUDE_BOUNDS` = INCLUDE_BOUNDS, `POINT_TOLERANCE` = POINT_TOLERANCE, `OUTPUT_LINES` = OUTPUT_LINES, `OUTPUT` = OUTPUT, `OUTPUT_NON_ROUTABLE` = OUTPUT_NON_ROUTABLE,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("native:serviceareafromlayer", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `TRAVEL_COST2` = TRAVEL_COST2, `INCLUDE_BOUNDS` = INCLUDE_BOUNDS, `OUTPUT_LINES` = OUTPUT_LINES, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:serviceareafromlayer", `INPUT` = INPUT, `STRATEGY` = STRATEGY, `DIRECTION_FIELD` = DIRECTION_FIELD, `VALUE_FORWARD` = VALUE_FORWARD, `VALUE_BACKWARD` = VALUE_BACKWARD, `VALUE_BOTH` = VALUE_BOTH, `DEFAULT_DIRECTION` = DEFAULT_DIRECTION, `SPEED_FIELD` = SPEED_FIELD, `DEFAULT_SPEED` = DEFAULT_SPEED, `TOLERANCE` = TOLERANCE, `START_POINTS` = START_POINTS, `TRAVEL_COST2` = TRAVEL_COST2, `INCLUDE_BOUNDS` = INCLUDE_BOUNDS, `POINT_TOLERANCE` = POINT_TOLERANCE, `OUTPUT_LINES` = OUTPUT_LINES, `OUTPUT` = OUTPUT, `OUTPUT_NON_ROUTABLE` = OUTPUT_NON_ROUTABLE,..., .quiet = .quiet)
       )
   }
 

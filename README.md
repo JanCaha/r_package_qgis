@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.36.3.9000** is build against QGIS version
-**3.36.3-Maidenhead**.
+Latest package version **3.38.0.9000** is build against QGIS version
+**3.38.0-Grenoble**.
 
 ## Installation
 

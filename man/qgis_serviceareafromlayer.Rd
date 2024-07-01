@@ -18,8 +18,10 @@ qgis_serviceareafromlayer(
   START_POINTS = qgisprocess:::qgis_default_value(),
   TRAVEL_COST2 = qgisprocess:::qgis_default_value(),
   INCLUDE_BOUNDS = qgisprocess:::qgis_default_value(),
+  POINT_TOLERANCE = qgisprocess:::qgis_default_value(),
   OUTPUT_LINES = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  OUTPUT_NON_ROUTABLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -53,9 +55,13 @@ qgis_serviceareafromlayer(
 
 \item{INCLUDE_BOUNDS}{\code{boolean} - Include upper\code{/}lower bound points. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
+\item{POINT_TOLERANCE}{\code{distance} - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{OUTPUT_LINES}{\code{sink} - Service area (lines). Path for new vector layer.}
 
 \item{OUTPUT}{\code{sink} - Service area (boundary nodes). Path for new vector layer.}
+
+\item{OUTPUT_NON_ROUTABLE}{\code{sink} - Non-routable features. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -73,6 +79,7 @@ QGIS Algorithm provided by QGIS (native c++) Service area (from layer) (native:s
 \itemize{
 \item OUTPUT - outputVector - Service area (boundary nodes)
 \item OUTPUT_LINES - outputVector - Service area (lines)
+\item OUTPUT_NON_ROUTABLE - outputVector - Non-routable features
 }
 }
 }
