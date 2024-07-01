@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.36.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.38.0.9000</span>
       </span>
     </div>
 
@@ -84,7 +84,9 @@
 <span>  TOLERANCE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  START_POINTS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  END_POINT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  POINT_TOLERANCE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  OUTPUT_NON_ROUTABLE <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span>,</span>
 <span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  .quiet <span class="op">=</span> <span class="fu">.quiet_option</span><span class="op">(</span><span class="op">)</span>,</span>
@@ -142,8 +144,16 @@
 <dd><p><code>point</code> - End point. Point coordinate as an 'x,y' string, e.g. '1.5,10.1'.</p></dd>
 
 
+<dt>POINT_TOLERANCE</dt>
+<dd><p><code>distance</code> - Maximum point distance from network. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.</p></dd>
+
+
 <dt>OUTPUT</dt>
 <dd><p><code>sink</code> - Shortest path. Path for new vector layer.</p></dd>
+
+
+<dt>OUTPUT_NON_ROUTABLE</dt>
+<dd><p><code>sink</code> - Non-routable features. Path for new vector layer.</p></dd>
 
 
 <dt>...</dt>
@@ -169,6 +179,7 @@
 <h3 id="outputs-description">Outputs description<a class="anchor" aria-label="anchor" href="#outputs-description"></a></h3>
 
 <ul><li><p>OUTPUT - outputVector - Shortest path</p></li>
+<li><p>OUTPUT_NON_ROUTABLE - outputVector - Non-routable features</p></li>
 </ul></div>
 
     </div>
