@@ -508,6 +508,7 @@
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_heatmapkerneldensityestimation.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_highestpositioninrasterstack.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_hillshade.html</loc></url>
+<url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_httprequest.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_hublines.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_hypsometriccurves.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_idwinterpolation.html</loc></url>
@@ -549,6 +550,7 @@
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_multiunion.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_nearestneighbouranalysis.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_offsetline.html</loc></url>
+<url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_openurl.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_orderbyexpression.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_orientedminimumboundingbox.html</loc></url>
 <url><loc>https://jancaha.github.io/r_package_qgis/reference/qgis_orthogonalize.html</loc></url>

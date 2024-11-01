@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.38.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.40.0.9000</span>
       </span>
     </div>
 
@@ -77,6 +77,7 @@
 <span>  FUZZYLOWBOUND <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  FUZZYHIGHBOUND <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  FUZZYEXPONENT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  CREATE_OPTIONS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  OUTPUT <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  <span class="va">...</span>,</span>
 <span>  .complete_output <span class="op">=</span> <span class="fu">.complete_output_option</span><span class="op">(</span><span class="op">)</span>,</span>
@@ -107,6 +108,10 @@
 
 <dt id="arg-fuzzyexponent">FUZZYEXPONENT<a class="anchor" aria-label="anchor" href="#arg-fuzzyexponent"></a></dt>
 <dd><p><code>number</code> - Membership function exponent. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.</p></dd>
+
+
+<dt id="arg-create-options">CREATE_OPTIONS<a class="anchor" aria-label="anchor" href="#arg-create-options"></a></dt>
+<dd><p><code>string</code> - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.</p></dd>
 
 
 <dt id="arg-output">OUTPUT<a class="anchor" aria-label="anchor" href="#arg-output"></a></dt>

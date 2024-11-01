@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.38.3.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.40.0.9000</span>
       </span>
     </div>
 
@@ -97,6 +97,7 @@
 <span>  LAUNDER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  INDEX <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  SKIPFAILURES <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  MAKEVALID <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  PROMOTETOMULTI <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  PRECISION <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  OPTIONS <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
@@ -124,7 +125,7 @@
 
 
 <dt id="arg-gtype">GTYPE<a class="anchor" aria-label="anchor" href="#arg-gtype"></a></dt>
-<dd><p><code>enum</code>  of <code>("", "NONE", "GEOMETRY", "POINT", "LINESTRING", "POLYGON", "GEOMETRYCOLLECTION", "MULTIPOINT", "MULTIPOLYGON", "MULTILINESTRING", "CIRCULARSTRING", "COMPOUNDCURVE", "CURVEPOLYGON", "MULTICURVE", "MULTISURFACE")</code> - Output geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+<dd><p><code>enum</code>  of <code>("", "NONE", "GEOMETRY", "POINT", "LINESTRING", "POLYGON", "GEOMETRYCOLLECTION", "MULTIPOINT", "MULTIPOLYGON", "MULTILINESTRING", "CIRCULARSTRING", "COMPOUNDCURVE", "CURVEPOLYGON", "MULTICURVE", "MULTISURFACE", "CONVERT_TO_LINEAR", "CONVERT_TO_CURVE")</code> - Output geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
 
 
 <dt id="arg-a-srs">A_SRS<a class="anchor" aria-label="anchor" href="#arg-a-srs"></a></dt>
@@ -209,6 +210,10 @@
 
 <dt id="arg-skipfailures">SKIPFAILURES<a class="anchor" aria-label="anchor" href="#arg-skipfailures"></a></dt>
 <dd><p><code>boolean</code> - Continue after a failure, skipping the failed feature. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.</p></dd>
+
+
+<dt id="arg-makevalid">MAKEVALID<a class="anchor" aria-label="anchor" href="#arg-makevalid"></a></dt>
+<dd><p><code>boolean</code> - Validate geometries based on Simple Features specification. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.</p></dd>
 
 
 <dt id="arg-promotetomulti">PROMOTETOMULTI<a class="anchor" aria-label="anchor" href="#arg-promotetomulti"></a></dt>
