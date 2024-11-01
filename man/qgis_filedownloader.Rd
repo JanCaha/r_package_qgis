@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_filedownloader.R
 \name{qgis_filedownloader}
 \alias{qgis_filedownloader}
-\title{QGIS algorithm - Download file}
+\title{QGIS algorithm - Download file via HTTP(S)}
 \usage{
 qgis_filedownloader(
   URL = qgisprocess:::qgis_default_value(),
@@ -33,7 +33,7 @@ qgis_filedownloader(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Download file (native:filedownloader). This algorithm downloads a URL on the file system.
+QGIS Algorithm provided by QGIS (native c++) Download file via HTTP(S) (native:filedownloader). Downloads a URL to the file system with an HTTP(S) GET or POST request This algorithm downloads a URL to the file system with an HTTP(S) GET or POST request
 }
 \details{
 \subsection{Outputs description}{

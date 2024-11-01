@@ -36,7 +36,7 @@ qgis_randompointsinsidepolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Random points inside polygons (qgis:randompointsinsidepolygons). This algorithm creates a new point layer with random points inside the polygons of a given layer. The number of points in each polygon can be defined as a fixed count or as a density value. The count/density value could also be taken from an attribute or an expression specified using the "Data defined override" functionality, so it can be different for each polygon in the input layer. A minimum distance can be specified, to avoid points being too close to each other.
+QGIS Algorithm provided by QGIS Random points inside polygons (qgis:randompointsinsidepolygons). This algorithm creates a new point layer with random points inside the polygons of a given layer. The number of points in each polygon can be defined as a fixed count or as a density value. The count/density value could also be taken from an attribute or an expression specified using the "Data defined override" functionality, so it can be different for each polygon in the input layer. A minimum distance can be specified, to avoid points being too close to each other.   ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

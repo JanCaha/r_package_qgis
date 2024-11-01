@@ -8,6 +8,7 @@
 ##' @param TERRAIN_SLOPE `number` - Terrain slope (%, pixel size\code{/}vertical units). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param FILTER_MODIFICATION `enum`  of `("None", "Relax filter", "Amplify")` - Filter modification. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param STANDARD_DEVIATION `number` - Standard deviation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param CREATE_OPTIONS `string` - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT_GROUND `rasterDestination` - Output layer (ground). Path for new raster layer.
 ##' @param OUTPUT_NONGROUND `rasterDestination` - Output layer (non-ground objects). Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
@@ -25,15 +26,15 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_dtmslopebasedfilter <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), TERRAIN_SLOPE = qgisprocess:::qgis_default_value(), FILTER_MODIFICATION = qgisprocess:::qgis_default_value(), STANDARD_DEVIATION = qgisprocess:::qgis_default_value(), OUTPUT_GROUND = qgisprocess:::qgis_default_value(), OUTPUT_NONGROUND = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_dtmslopebasedfilter <- function(INPUT = qgisprocess:::qgis_default_value(), BAND = qgisprocess:::qgis_default_value(), RADIUS = qgisprocess:::qgis_default_value(), TERRAIN_SLOPE = qgisprocess:::qgis_default_value(), FILTER_MODIFICATION = qgisprocess:::qgis_default_value(), STANDARD_DEVIATION = qgisprocess:::qgis_default_value(), CREATE_OPTIONS = qgisprocess:::qgis_default_value(), OUTPUT_GROUND = qgisprocess:::qgis_default_value(), OUTPUT_NONGROUND = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:dtmslopebasedfilter")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("native:dtmslopebasedfilter", `INPUT` = INPUT, `BAND` = BAND, `RADIUS` = RADIUS, `TERRAIN_SLOPE` = TERRAIN_SLOPE, `FILTER_MODIFICATION` = FILTER_MODIFICATION, `STANDARD_DEVIATION` = STANDARD_DEVIATION, `OUTPUT_GROUND` = OUTPUT_GROUND, `OUTPUT_NONGROUND` = OUTPUT_NONGROUND,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:dtmslopebasedfilter", `INPUT` = INPUT, `BAND` = BAND, `RADIUS` = RADIUS, `TERRAIN_SLOPE` = TERRAIN_SLOPE, `FILTER_MODIFICATION` = FILTER_MODIFICATION, `STANDARD_DEVIATION` = STANDARD_DEVIATION, `CREATE_OPTIONS` = CREATE_OPTIONS, `OUTPUT_GROUND` = OUTPUT_GROUND, `OUTPUT_NONGROUND` = OUTPUT_NONGROUND,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("native:dtmslopebasedfilter", `INPUT` = INPUT, `BAND` = BAND, `RADIUS` = RADIUS, `TERRAIN_SLOPE` = TERRAIN_SLOPE, `FILTER_MODIFICATION` = FILTER_MODIFICATION, `STANDARD_DEVIATION` = STANDARD_DEVIATION, `OUTPUT_GROUND` = OUTPUT_GROUND, `OUTPUT_NONGROUND` = OUTPUT_NONGROUND,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:dtmslopebasedfilter", `INPUT` = INPUT, `BAND` = BAND, `RADIUS` = RADIUS, `TERRAIN_SLOPE` = TERRAIN_SLOPE, `FILTER_MODIFICATION` = FILTER_MODIFICATION, `STANDARD_DEVIATION` = STANDARD_DEVIATION, `CREATE_OPTIONS` = CREATE_OPTIONS, `OUTPUT_GROUND` = OUTPUT_GROUND, `OUTPUT_NONGROUND` = OUTPUT_NONGROUND,..., .quiet = .quiet)
       )
   }
 

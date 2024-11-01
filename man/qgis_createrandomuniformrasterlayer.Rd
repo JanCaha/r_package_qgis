@@ -11,6 +11,7 @@ qgis_createrandomuniformrasterlayer(
   OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
   LOWER_BOUND = qgisprocess:::qgis_default_value(),
   UPPER_BOUND = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -30,6 +31,8 @@ qgis_createrandomuniformrasterlayer(
 \item{LOWER_BOUND}{\code{number} - Lower bound for random number range. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{UPPER_BOUND}{\code{number} - Upper bound for random number range. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 

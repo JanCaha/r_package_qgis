@@ -10,6 +10,7 @@ qgis_fuzzifyrasterpowermembership(
   FUZZYLOWBOUND = qgisprocess:::qgis_default_value(),
   FUZZYHIGHBOUND = qgisprocess:::qgis_default_value(),
   FUZZYEXPONENT = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -27,6 +28,8 @@ qgis_fuzzifyrasterpowermembership(
 \item{FUZZYHIGHBOUND}{\code{number} - High fuzzy membership bound. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{FUZZYEXPONENT}{\code{number} - Membership function exponent. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified raster. Path for new raster layer.}
 

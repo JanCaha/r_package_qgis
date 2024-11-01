@@ -30,7 +30,7 @@ qgis_pointonsurface(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Point on surface (native:pointonsurface). Returns a point guaranteed to lie on the surface of a geometry.
+QGIS Algorithm provided by QGIS (native c++) Point on surface (native:pointonsurface). Returns a point guaranteed to lie on the surface of a geometry.  ---------------- Notes ----------------   - This algorithm may drop existing primary keys or FID values and regenerate them in output layers, depending on the input parameters.
 }
 \details{
 \subsection{Outputs description}{

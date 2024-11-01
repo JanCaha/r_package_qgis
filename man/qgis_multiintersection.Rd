@@ -33,7 +33,7 @@ qgis_multiintersection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection). This algorithm extracts the overlapping portions of features in the Input and all Overlay layers. Features in the output layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.
+QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection). This algorithm extracts the overlapping portions of features in the Input and all Overlay layers. Features in the output layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

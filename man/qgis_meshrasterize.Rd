@@ -11,6 +11,7 @@ qgis_meshrasterize(
   EXTENT = qgisprocess:::qgis_default_value(),
   PIXEL_SIZE = qgisprocess:::qgis_default_value(),
   CRS_OUTPUT = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -30,6 +31,8 @@ qgis_meshrasterize(
 \item{PIXEL_SIZE}{\code{distance} - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{CRS_OUTPUT}{\code{crs} - Output coordinate system. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster layer. Path for new raster layer.}
 

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Random extract (native:randomextract). This algorithm takes a vector layer and generates a new one that contains only a subset of the features in the input layer.  The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.
+##' QGIS Algorithm provided by QGIS (native c++) Random extract (native:randomextract). This algorithm takes a vector layer and generates a new one that contains only a subset of the features in the input layer.  The subset is defined randomly, using a percentage or count value to define the total number of features in the subset.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Random extract
 ##'

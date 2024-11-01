@@ -31,7 +31,7 @@ grass_r_param_scale(
 
 \item{curvature_tolerance}{\code{number} - Curvature tolerance that defines 'planar' surface. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{size}{\code{number} - Size of processing window (odd number only, max: 69). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{size}{\code{number} - Size of processing window (odd number only, max: 499). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{method}{\code{enum}  of \verb{("elev", "slope", "aspect", "profc", "planc", "longc", "crosc", "minic", "maxic", "feature")} - Morphometric parameter in 'size' window to calculate. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

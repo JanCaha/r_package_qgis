@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Random points along line (qgis:randompointsalongline). This algorithm creates a point layer with a given "Number of points" placed on the lines of the "Input layer". The location of each point is determined by randomly selecting a feature, then a segment of the line geometry of that feature, and finally a random position on that segment. A minimum distance between the points can be specified (Euclidean distance).
+##' QGIS Algorithm provided by QGIS Random points along line (qgis:randompointsalongline). This algorithm creates a point layer with a given "Number of points" placed on the lines of the "Input layer". The location of each point is determined by randomly selecting a feature, then a segment of the line geometry of that feature, and finally a random position on that segment. A minimum distance between the points can be specified (Euclidean distance).   ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Random points along line
 ##'

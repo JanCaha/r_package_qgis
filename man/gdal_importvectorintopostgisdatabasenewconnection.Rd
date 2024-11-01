@@ -36,6 +36,7 @@ gdal_importvectorintopostgisdatabasenewconnection(
   LAUNDER = qgisprocess:::qgis_default_value(),
   INDEX = qgisprocess:::qgis_default_value(),
   SKIPFAILURES = qgisprocess:::qgis_default_value(),
+  MAKEVALID = qgisprocess:::qgis_default_value(),
   PROMOTETOMULTI = qgisprocess:::qgis_default_value(),
   PRECISION = qgisprocess:::qgis_default_value(),
   OPTIONS = qgisprocess:::qgis_default_value(),
@@ -50,7 +51,7 @@ gdal_importvectorintopostgisdatabasenewconnection(
 
 \item{SHAPE_ENCODING}{\code{string} - Shape encoding. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{GTYPE}{\code{enum}  of \verb{("", "NONE", "GEOMETRY", "POINT", "LINESTRING", "POLYGON", "GEOMETRYCOLLECTION", "MULTIPOINT", "MULTIPOLYGON", "MULTILINESTRING", "CIRCULARSTRING", "COMPOUNDCURVE", "CURVEPOLYGON", "MULTICURVE", "MULTISURFACE")} - Output geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{GTYPE}{\code{enum}  of \verb{("", "NONE", "GEOMETRY", "POINT", "LINESTRING", "POLYGON", "GEOMETRYCOLLECTION", "MULTIPOINT", "MULTIPOLYGON", "MULTILINESTRING", "CIRCULARSTRING", "COMPOUNDCURVE", "CURVEPOLYGON", "MULTICURVE", "MULTISURFACE", "CONVERT_TO_LINEAR", "CONVERT_TO_CURVE")} - Output geometry type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{A_SRS}{\code{crs} - Assign an output CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
@@ -105,6 +106,8 @@ gdal_importvectorintopostgisdatabasenewconnection(
 \item{INDEX}{\code{boolean} - Do not create spatial index. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{SKIPFAILURES}{\code{boolean} - Continue after a failure, skipping the failed feature. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{MAKEVALID}{\code{boolean} - Validate geometries based on Simple Features specification. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{PROMOTETOMULTI}{\code{boolean} - Promote to Multipart. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 

@@ -9,8 +9,9 @@ qgis_roundrastervalues(
   BAND = qgisprocess:::qgis_default_value(),
   ROUNDING_DIRECTION = qgisprocess:::qgis_default_value(),
   DECIMAL_PLACES = qgisprocess:::qgis_default_value(),
-  OUTPUT = qgisprocess:::qgis_default_value(),
   BASE_N = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -26,9 +27,11 @@ qgis_roundrastervalues(
 
 \item{DECIMAL_PLACES}{\code{number} - Number of decimals places. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
-
 \item{BASE_N}{\code{number} - Base n for rounding to multiples of n. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 

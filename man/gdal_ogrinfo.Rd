@@ -6,8 +6,10 @@
 \usage{
 gdal_ogrinfo(
   INPUT = qgisprocess:::qgis_default_value(),
+  ALL_LAYERS = qgisprocess:::qgis_default_value(),
   SUMMARY_ONLY = qgisprocess:::qgis_default_value(),
   NO_METADATA = qgisprocess:::qgis_default_value(),
+  EXTRA = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -18,9 +20,13 @@ gdal_ogrinfo(
 \arguments{
 \item{INPUT}{\code{vector} - Input layer. Path to a vector layer.}
 
+\item{ALL_LAYERS}{\code{boolean} - Enable listing of all layers in the dataset. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{SUMMARY_ONLY}{\code{boolean} - Summary output only. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{NO_METADATA}{\code{boolean} - Suppress metadata info. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{EXTRA}{\code{string} - Additional command-line parameters. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{fileDestination} - Layer information. Path for new file.}
 
@@ -33,7 +39,7 @@ gdal_ogrinfo(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Vector information (gdal:ogrinfo). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	vector 	Acceptable values: 		- Path to a vector layer SUMMARY_ONLY: Summary output only 	Default value:	true 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NO_METADATA: Suppress metadata info 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Layer information 	Argument type:	fileDestination 	Acceptable values: 		- Path for new file
+QGIS Algorithm provided by GDAL Vector information (gdal:ogrinfo). ---------------- Arguments ----------------  INPUT: Input layer 	Argument type:	vector 	Acceptable values: 		- Path to a vector layer ALL_LAYERS: Enable listing of all layers in the dataset 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression SUMMARY_ONLY: Summary output only 	Default value:	true 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression NO_METADATA: Suppress metadata info 	Default value:	false 	Argument type:	boolean 	Acceptable values: 		- 1 for true/yes 		- 0 for false/no 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression EXTRA: Additional command-line parameters (optional) 	Argument type:	string 	Acceptable values: 		- String value 		- field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field 		- expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression OUTPUT: Layer information 	Argument type:	fileDestination 	Acceptable values: 		- Path for new file
 }
 \details{
 \subsection{Outputs description}{

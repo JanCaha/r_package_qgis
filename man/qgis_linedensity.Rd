@@ -9,6 +9,7 @@ qgis_linedensity(
   WEIGHT = qgisprocess:::qgis_default_value(),
   RADIUS = qgisprocess:::qgis_default_value(),
   PIXEL_SIZE = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -24,6 +25,8 @@ qgis_linedensity(
 \item{RADIUS}{\code{distance} - Search radius. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{PIXEL_SIZE}{\code{distance} - Pixel size. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Line density raster. Path for new raster layer.}
 

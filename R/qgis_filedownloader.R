@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Download file (native:filedownloader). This algorithm downloads a URL on the file system.
+##' QGIS Algorithm provided by QGIS (native c++) Download file via HTTP(S) (native:filedownloader). Downloads a URL to the file system with an HTTP(S) GET or POST request This algorithm downloads a URL to the file system with an HTTP(S) GET or POST request
 ##'
-##' @title QGIS algorithm - Download file
+##' @title QGIS algorithm - Download file via HTTP(S)
 ##'
 ##' @param URL `string` - URL. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param METHOD `enum`  of `("GET", "POST")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.

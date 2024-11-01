@@ -15,7 +15,7 @@
 ##' @param INCLUDE_METADATA `boolean` - Export RDF metadata (title, author, etc.). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param DISABLE_TILED `boolean` - Disable tiled raster layer exports. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param SIMPLIFY `boolean` - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
-##' @param TEXT_FORMAT `enum`  of `("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects")` - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param TEXT_FORMAT `enum`  of `("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects", "Prefer Exporting Text as Text Objects")` - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param IMAGE_COMPRESSION `enum`  of `("Lossy (JPEG)", "Lossless")` - Image compression. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param OUTPUT_FILENAME `expression` - Output filename. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.
 ##' @param OUTPUT_FOLDER `file` - Output folder. Path to a file.

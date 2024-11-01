@@ -10,6 +10,7 @@ qgis_createrandomexponentialrasterlayer(
   PIXEL_SIZE = qgisprocess:::qgis_default_value(),
   OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
   LAMBDA = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -27,6 +28,8 @@ qgis_createrandomexponentialrasterlayer(
 \item{OUTPUT_TYPE}{\code{enum}  of \verb{("Float32", "Float64")} - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{LAMBDA}{\code{number} - Lambda. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 

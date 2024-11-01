@@ -11,6 +11,7 @@ qgis_dtmslopebasedfilter(
   TERRAIN_SLOPE = qgisprocess:::qgis_default_value(),
   FILTER_MODIFICATION = qgisprocess:::qgis_default_value(),
   STANDARD_DEVIATION = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT_GROUND = qgisprocess:::qgis_default_value(),
   OUTPUT_NONGROUND = qgisprocess:::qgis_default_value(),
   ...,
@@ -31,6 +32,8 @@ qgis_dtmslopebasedfilter(
 \item{FILTER_MODIFICATION}{\code{enum}  of \verb{("None", "Relax filter", "Amplify")} - Filter modification. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{STANDARD_DEVIATION}{\code{number} - Standard deviation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_GROUND}{\code{rasterDestination} - Output layer (ground). Path for new raster layer.}
 

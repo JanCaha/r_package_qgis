@@ -7,6 +7,7 @@
 qgis_basicstatisticsforfields(
   INPUT_LAYER = qgisprocess:::qgis_default_value(),
   FIELD_NAME = qgisprocess:::qgis_default_value(),
+  OUTPUT = qgisprocess:::qgis_default_value(),
   OUTPUT_HTML_FILE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -19,7 +20,9 @@ qgis_basicstatisticsforfields(
 
 \item{FIELD_NAME}{\code{field} - Field to calculate statistics on. The name of an existing field. ; delimited list of existing field names.}
 
-\item{OUTPUT_HTML_FILE}{\code{fileDestination} - Statistics. Path for new file.}
+\item{OUTPUT}{\code{sink} - Statistics. Path for new vector layer.}
+
+\item{OUTPUT_HTML_FILE}{\code{fileDestination} - Statistics report. Path for new file.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -30,7 +33,7 @@ qgis_basicstatisticsforfields(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatisticsforfields). This algorithm generates basic statistics from the analysis of a values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type. Statistics are generated as an HTML file.
+QGIS Algorithm provided by QGIS (native c++) Basic statistics for fields (native:basicstatisticsforfields). Generates basic statistics from the analysis of a values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type.
 }
 \details{
 \subsection{Outputs description}{
@@ -50,7 +53,8 @@ QGIS Algorithm provided by QGIS Basic statistics for fields (qgis:basicstatistic
 \item MIN - outputNumber - Minimum value
 \item MINORITY - outputNumber - Minority (rarest occurring value)
 \item MIN_LENGTH - outputNumber - Minimum length
-\item OUTPUT_HTML_FILE - outputHtml - Statistics
+\item OUTPUT - outputVector - Statistics
+\item OUTPUT_HTML_FILE - outputHtml - Statistics report
 \item RANGE - outputNumber - Range
 \item STD_DEV - outputNumber - Standard deviation
 \item SUM - outputNumber - Sum

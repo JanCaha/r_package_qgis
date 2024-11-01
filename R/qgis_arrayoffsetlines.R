@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Array of offset (parallel) lines (native:arrayoffsetlines). Creates multiple offset copies of lines from a layer. This algorithm creates copies of line features in a layer, by creating multiple offset versions of each feature. Each copy is offset by a preset distance.
+##' QGIS Algorithm provided by QGIS (native c++) Array of offset (parallel) lines (native:arrayoffsetlines). Creates multiple offset copies of lines from a layer. This algorithm creates copies of line features in a layer, by creating multiple offset versions of each feature. Each copy is offset by a preset distance.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Array of offset (parallel) lines
 ##'

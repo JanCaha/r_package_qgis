@@ -43,7 +43,7 @@ qgis_printlayouttopdf(
 
 \item{SIMPLIFY}{\code{boolean} - Simplify geometries to reduce output file size. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{TEXT_FORMAT}{\code{enum}  of \verb{("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects")} - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{TEXT_FORMAT}{\code{enum}  of \verb{("Always Export Text as Paths (Recommended)", "Always Export Text as Text Objects", "Prefer Exporting Text as Text Objects")} - Text export. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{IMAGE_COMPRESSION}{\code{enum}  of \verb{("Lossy (JPEG)", "Lossless")} - Image compression. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

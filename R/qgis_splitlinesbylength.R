@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Split lines by maximum length (native:splitlinesbylength). Splits lines into parts which are no longer than a specified length. This algorithm takes a line (or curve) layer and splits each feature into multiple parts, where each part is of a specified maximum length.  Z and M values at the start and end of the new line substrings are linearly interpolated from existing values.
+##' QGIS Algorithm provided by QGIS (native c++) Split lines by maximum length (native:splitlinesbylength). Splits lines into parts which are no longer than a specified length. This algorithm takes a line (or curve) layer and splits each feature into multiple parts, where each part is of a specified maximum length.  Z and M values at the start and end of the new line substrings are linearly interpolated from existing values.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Split lines by maximum length
 ##'

@@ -7,6 +7,7 @@
 ##' @param NODATA_AS_FALSE `boolean` - Treat NoData values as false. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param NO_DATA `number` - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param DATA_TYPE `enum`  of `("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")` - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param CREATE_OPTIONS `string` - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output layer. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
@@ -30,15 +31,15 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_rasterlogicalor <- function(INPUT = qgisprocess:::qgis_default_value(), REF_LAYER = qgisprocess:::qgis_default_value(), NODATA_AS_FALSE = qgisprocess:::qgis_default_value(), NO_DATA = qgisprocess:::qgis_default_value(), DATA_TYPE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_rasterlogicalor <- function(INPUT = qgisprocess:::qgis_default_value(), REF_LAYER = qgisprocess:::qgis_default_value(), NODATA_AS_FALSE = qgisprocess:::qgis_default_value(), NO_DATA = qgisprocess:::qgis_default_value(), DATA_TYPE = qgisprocess:::qgis_default_value(), CREATE_OPTIONS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:rasterlogicalor")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("native:rasterlogicalor", `INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:rasterlogicalor", `INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `CREATE_OPTIONS` = CREATE_OPTIONS, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("native:rasterlogicalor", `INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:rasterlogicalor", `INPUT` = INPUT, `REF_LAYER` = REF_LAYER, `NODATA_AS_FALSE` = NODATA_AS_FALSE, `NO_DATA` = NO_DATA, `DATA_TYPE` = DATA_TYPE, `CREATE_OPTIONS` = CREATE_OPTIONS, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
       )
   }
 

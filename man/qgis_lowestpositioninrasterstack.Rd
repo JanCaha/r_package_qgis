@@ -9,6 +9,7 @@ qgis_lowestpositioninrasterstack(
   REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
   IGNORE_NODATA = qgisprocess:::qgis_default_value(),
   OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -24,6 +25,8 @@ qgis_lowestpositioninrasterstack(
 \item{IGNORE_NODATA}{\code{boolean} - Ignore NoData values. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_NODATA_VALUE}{\code{number} - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output layer. Path for new raster layer.}
 

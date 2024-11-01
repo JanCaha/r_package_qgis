@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Centroids (native:centroids). This algorithm creates a new point layer, with points representing the centroid of the geometries in an input layer.  The attributes associated to each point in the output layer are the same ones associated to the original features.
+##' QGIS Algorithm provided by QGIS (native c++) Centroids (native:centroids). This algorithm creates a new point layer, with points representing the centroid of the geometries in an input layer.  The attributes associated to each point in the output layer are the same ones associated to the original features.  ---------------- Notes ----------------   - This algorithm may drop existing primary keys or FID values and regenerate them in output layers, depending on the input parameters.
 ##'
 ##' @title QGIS algorithm - Centroids
 ##'

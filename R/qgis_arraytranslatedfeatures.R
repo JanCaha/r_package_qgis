@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Array of translated features (native:arraytranslatedfeatures). Creates multiple translated copies of features in a layer. This algorithm creates copies of features in a layer, by creating multiple translated versions of each feature. Each copy is incrementally displaced by a preset amount in the x/y/z/m axis.
+##' QGIS Algorithm provided by QGIS (native c++) Array of translated features (native:arraytranslatedfeatures). Creates multiple translated copies of features in a layer. This algorithm creates copies of features in a layer, by creating multiple translated versions of each feature. Each copy is incrementally displaced by a preset amount in the x/y/z/m axis.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Array of translated features
 ##'

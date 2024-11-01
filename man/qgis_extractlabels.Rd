@@ -39,7 +39,7 @@ qgis_extractlabels(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract labels (native:extractlabels). Converts map labels to a point layer with relevant details saved as attributes. This algorithm extracts label information from a rendered map at a given extent and scale.  If a map theme is provided, the rendered map will match the visibility and symbology of that theme. If left blank, all visible layers from the project will be used.  Extracted label information include: position (served as point geometries), the associated layer name and feature ID, label text, rotation (in degree, clockwise), multiline alignment, and font details.
+QGIS Algorithm provided by QGIS (native c++) Extract labels (native:extractlabels). Converts map labels to a point layer with relevant details saved as attributes. This algorithm extracts label information from a rendered map at a given extent and scale.  If a map theme is provided, the rendered map will match the visibility and symbology of that theme. If left blank, all visible layers from the project will be used.  Extracted label information include: position (served as point geometries), the associated layer name and feature ID, label text, rotation (in degree, clockwise), multiline alignment, and font details.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

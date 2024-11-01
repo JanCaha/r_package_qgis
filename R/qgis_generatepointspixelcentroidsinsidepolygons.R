@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Generate points (pixel centroids) inside polygons (native:generatepointspixelcentroidsinsidepolygons). Generates pixel centroids for the raster area falling inside polygons. Used to generate points for further raster sampling.
+##' QGIS Algorithm provided by QGIS (native c++) Generate points (pixel centroids) inside polygons (native:generatepointspixelcentroidsinsidepolygons). Generates pixel centroids for the raster area falling inside polygons. Used to generate points for further raster sampling.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Generate points (pixel centroids) inside polygons
 ##'

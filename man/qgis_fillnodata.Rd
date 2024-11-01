@@ -8,6 +8,7 @@ qgis_fillnodata(
   INPUT = qgisprocess:::qgis_default_value(),
   BAND = qgisprocess:::qgis_default_value(),
   FILL_VALUE = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -21,6 +22,8 @@ qgis_fillnodata(
 \item{BAND}{\code{band} - Band Number. Integer value representing an existing raster band number.}
 
 \item{FILL_VALUE}{\code{number} - Fill value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 

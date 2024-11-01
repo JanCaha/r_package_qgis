@@ -15,6 +15,7 @@ qgis_reclassifybylayer(
   RANGE_BOUNDARIES = qgisprocess:::qgis_default_value(),
   NODATA_FOR_MISSING = qgisprocess:::qgis_default_value(),
   DATA_TYPE = qgisprocess:::qgis_default_value(),
+  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -42,6 +43,8 @@ qgis_reclassifybylayer(
 \item{NODATA_FOR_MISSING}{\code{boolean} - Use NoData when no range matches value. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+
+\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Reclassified raster. Path for new raster layer.}
 

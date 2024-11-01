@@ -42,7 +42,7 @@ qgis_arrayoffsetlines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Array of offset (parallel) lines (native:arrayoffsetlines). Creates multiple offset copies of lines from a layer. This algorithm creates copies of line features in a layer, by creating multiple offset versions of each feature. Each copy is offset by a preset distance.
+QGIS Algorithm provided by QGIS (native c++) Array of offset (parallel) lines (native:arrayoffsetlines). Creates multiple offset copies of lines from a layer. This algorithm creates copies of line features in a layer, by creating multiple offset versions of each feature. Each copy is offset by a preset distance.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

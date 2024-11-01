@@ -17,7 +17,7 @@ qgis_deleteholes(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{MIN_AREA}{\code{number} - Remove holes with area less than. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{MIN_AREA}{\code{area} - Remove holes with area less than. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{sink} - Cleaned. Path for new vector layer.}
 

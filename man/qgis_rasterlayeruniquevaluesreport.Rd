@@ -33,7 +33,7 @@ qgis_rasterlayeruniquevaluesreport(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (native:rasterlayeruniquevaluesreport). This algorithm returns the count and area of each unique value in a given raster layer.
+QGIS Algorithm provided by QGIS (native c++) Raster layer unique values report (native:rasterlayeruniquevaluesreport). This algorithm returns the count and area of each unique value in a given raster layer. The area calculation is done in the area unit of the layer's CRS.
 }
 \details{
 \subsection{Outputs description}{

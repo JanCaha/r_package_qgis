@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Random points in layer bounds (qgis:randompointsinlayerbounds). This algorithm creates a new point layer with a given number of random points, all of them within the extent of a given layer. A distance factor can be specified, to avoid points being too close to each other.
+##' QGIS Algorithm provided by QGIS Random points in layer bounds (qgis:randompointsinlayerbounds). This algorithm creates a new point layer with a given number of random points, all of them within the extent of a given layer. A distance factor can be specified, to avoid points being too close to each other.   ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Random points in layer bounds
 ##'

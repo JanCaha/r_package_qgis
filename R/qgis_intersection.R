@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Intersection (native:intersection). This algorithm extracts the overlapping portions of features in the Input and Overlay layers. Features in the output Intersection layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.
+##' QGIS Algorithm provided by QGIS (native c++) Intersection (native:intersection). This algorithm extracts the overlapping portions of features in the Input and Overlay layers. Features in the output Intersection layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Intersection
 ##'
