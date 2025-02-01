@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">qgis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.40.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">3.40.3.9000</span>
       </span>
     </div>
 
@@ -78,8 +78,9 @@
 <span>  box <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  angle <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  breaks <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  type <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  .h <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  .p <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  .a <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  map <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  GRASS_REGION_PARAMETER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
 <span>  GRASS_OUTPUT_TYPE_PARAMETER <span class="op">=</span> <span class="fu">qgisprocess</span><span class="fu">:::</span><span class="fu">qgis_default_value</span><span class="op">(</span><span class="op">)</span>,</span>
@@ -121,12 +122,16 @@
 <dd><p><code>number</code> - Number of vertex points per grid cell. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.</p></dd>
 
 
+<dt id="arg-type">type<a class="anchor" aria-label="anchor" href="#arg-type"></a></dt>
+<dd><p><code>enum</code>  of <code>("point", "line", "area")</code> - Output feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.</p></dd>
+
+
 <dt id="arg--h">.h<a class="anchor" aria-label="anchor" href="#arg--h"></a></dt>
 <dd><p><code>boolean</code> - Create hexagons (default: rectangles). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.</p></dd>
 
 
-<dt id="arg--p">.p<a class="anchor" aria-label="anchor" href="#arg--p"></a></dt>
-<dd><p><code>boolean</code> - Create grid of points instead of areas and centroids. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -p.</p></dd>
+<dt id="arg--a">.a<a class="anchor" aria-label="anchor" href="#arg--a"></a></dt>
+<dd><p><code>boolean</code> - Allow asymmetric hexagons. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.</p></dd>
 
 
 <dt id="arg-map">map<a class="anchor" aria-label="anchor" href="#arg-map"></a></dt>

@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   addition_parameters: addition_parameters.html
   local_instalation: local_instalation.html
-last_built: 2025-01-01T02:51Z
+last_built: 2025-02-01T02:47Z
 urls:
   reference: https://jancaha.github.io/r_package_qgis/reference
   article: https://jancaha.github.io/r_package_qgis/articles
