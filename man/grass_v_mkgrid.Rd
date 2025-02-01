@@ -11,8 +11,9 @@ grass_v_mkgrid(
   box = qgisprocess:::qgis_default_value(),
   angle = qgisprocess:::qgis_default_value(),
   breaks = qgisprocess:::qgis_default_value(),
+  type = qgisprocess:::qgis_default_value(),
   .h = qgisprocess:::qgis_default_value(),
-  .p = qgisprocess:::qgis_default_value(),
+  .a = qgisprocess:::qgis_default_value(),
   map = qgisprocess:::qgis_default_value(),
   GRASS_REGION_PARAMETER = qgisprocess:::qgis_default_value(),
   GRASS_OUTPUT_TYPE_PARAMETER = qgisprocess:::qgis_default_value(),
@@ -38,9 +39,11 @@ grass_v_mkgrid(
 
 \item{breaks}{\code{number} - Number of vertex points per grid cell. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
+\item{type}{\code{enum}  of \verb{("point", "line", "area")} - Output feature type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+
 \item{.h}{\code{boolean} - Create hexagons (default: rectangles). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -h.}
 
-\item{.p}{\code{boolean} - Create grid of points instead of areas and centroids. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -p.}
+\item{.a}{\code{boolean} - Allow asymmetric hexagons. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression. Original algorithm parameter name: -a.}
 
 \item{map}{\code{vectorDestination} - Grid. Path for new vector layer.}
 

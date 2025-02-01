@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.40.2.9000** is build against QGIS version
-**3.40.2-Bratislava**.
+Latest package version **3.40.3.9000** is build against QGIS version
+**3.40.3-Bratislava**.
 
 ## Installation
 
