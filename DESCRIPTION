@@ -1,7 +1,7 @@
 Package: qgis
 Type: Package
 Title: An extension of package "qgisprocess" providing direct R functions for QGIS functions
-Version: 3.40.3.9001
+Version: 3.40.3.9002
 Authors@R: person(given = "Jan",
            family = "Caha",
            role = c("aut", "cre"),
