@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum distance (native:segmentizebymaxdistance). This algorithm segmentizes a geometry by converting curved sections to linear sections.  The segmentization is performed by specifying the maximum allowed offset distance between the original curve and the segmentized representation.  Non-curved geometries will be retained without change.
+##' QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum distance (native:segmentizebymaxdistance). Segmentizes a geometry by converting curved sections to linear sections, given the maximum allowed offset distance between the original curve and the segmentized representation. This algorithm segmentizes a geometry by converting curved sections to linear sections.  The segmentization is performed by specifying the maximum allowed offset distance between the original curve and the segmentized representation.  Non-curved geometries will be retained without change.
 ##'
 ##' @title QGIS algorithm - Segmentize by maximum distance
 ##'

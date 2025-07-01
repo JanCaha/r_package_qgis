@@ -42,7 +42,7 @@ qgis_createpointslayerfromtable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create points layer from table (native:createpointslayerfromtable). This algorithm generates a points layer based on the values from an input table.  The table must contain a field with the X coordinate of each point and another one with the Y coordinate, as well as optional fields with Z and M values. A CRS for the output layer has to be specified, and the coordinates in the table are assumed to be expressed in the units used by that CRS. The attributes table of the resulting layer will be the input table.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+QGIS Algorithm provided by QGIS (native c++) Create points layer from table (native:createpointslayerfromtable). Generates a point layer based on the coordinates from an input table. This algorithm generates a point layer based on the coordinates from an input table.  The table must contain a field with the X coordinate of each point and another one with the Y coordinate, as well as optional fields with Z and M values. A CRS for the output layer has to be specified, and the coordinates in the table are assumed to be expressed in the units used by that CRS. The attributes table of the resulting layer will be the input table.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

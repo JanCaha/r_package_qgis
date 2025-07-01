@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Slope (native:slope). This algorithm calculates the angle of inclination of the terrain from an input raster layer. The slope is expressed in degrees.
+##' QGIS Algorithm provided by QGIS (native c++) Slope (native:slope). Calculates the angle of inclination of the terrain from an input raster layer. This algorithm calculates the angle of inclination of the terrain from an input raster layer. The slope is expressed in degrees.
 ##'
 ##' @title QGIS algorithm - Slope
 ##'

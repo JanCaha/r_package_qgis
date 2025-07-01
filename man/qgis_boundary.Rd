@@ -27,7 +27,7 @@ qgis_boundary(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Boundary (native:boundary). Returns the closure of the combinatorial boundary of the input geometries (ie the topological boundary of the geometry). For instance, a polygon geometry will have a boundary consisting of the linestrings for each ring in the polygon. Only valid for polygon or line layers.
+QGIS Algorithm provided by QGIS (native c++) Boundary (native:boundary). Returns the topological boundary of the input geometries. This algorithm returns the closure of the combinatorial boundary of the input geometries (ie the topological boundary of the geometry). For instance, a polygon geometry will have a boundary consisting of the linestrings for each ring in the polygon. Only valid for polygon or line layers.
 }
 \details{
 \subsection{Outputs description}{

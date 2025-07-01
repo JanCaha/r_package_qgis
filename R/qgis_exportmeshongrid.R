@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportmeshongrid). Exports mesh dataset values to a gridded point vector layer This algorithm exports a mesh layer's dataset values to a gridded point vector layer, with the dataset values on each point as attribute values. For data on volume (3D stacked dataset values), the exported dataset values are averaged on faces using the method defined in the mesh layer properties (default is Multi level averaging method). 1D meshes are not supported.
+##' QGIS Algorithm provided by QGIS (native c++) Export mesh on grid (native:exportmeshongrid). Exports mesh dataset values to a gridded point vector layer. This algorithm exports a mesh layer's dataset values to a gridded point vector layer, with the dataset values on each point as attribute values. For data on volume (3D stacked dataset values), the exported dataset values are averaged on faces using the method defined in the mesh layer properties (default is Multi level averaging method). 1D meshes are not supported.
 ##'
 ##' @title QGIS algorithm - Export mesh on grid
 ##'

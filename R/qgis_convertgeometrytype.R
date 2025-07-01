@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Convert geometry type (qgis:convertgeometrytype). This algorithm generates a new layer based on an existing one, with a different type of geometry. Not all conversions are possible. For instance, a line layer can be converted to a point layer, but a point layer cannot be converted to a line layer. See the "Polygonize" or "Lines to polygons" algorithm for alternative options.
+##' QGIS Algorithm provided by QGIS (native c++) Convert geometry type (native:convertgeometrytype). Converts the geometries from a vector layer to a different geometry type. This algorithm generates a new layer based on an existing one, with a different type of geometry.  Not all conversions are possible. For instance, a line layer can be converted to a point layer, but a point layer cannot be converted to a line layer.  See the "Polygonize" or "Lines to polygons" algorithms for alternative options.
 ##'
 ##' @title QGIS algorithm - Convert geometry type
 ##'
@@ -21,13 +21,13 @@
 
 qgis_convertgeometrytype <- function(INPUT = qgisprocess:::qgis_default_value(), TYPE = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
-  check_algorithm_necessities("qgis:convertgeometrytype")
+  check_algorithm_necessities("native:convertgeometrytype")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("qgis:convertgeometrytype", `INPUT` = INPUT, `TYPE` = TYPE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:convertgeometrytype", `INPUT` = INPUT, `TYPE` = TYPE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("qgis:convertgeometrytype", `INPUT` = INPUT, `TYPE` = TYPE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:convertgeometrytype", `INPUT` = INPUT, `TYPE` = TYPE, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
       )
   }
 

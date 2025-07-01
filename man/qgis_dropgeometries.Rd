@@ -27,7 +27,7 @@ qgis_dropgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Drop geometries (native:dropgeometries). This algorithm removes any geometries from an input layer and returns a layer containing only the feature attributes.
+QGIS Algorithm provided by QGIS (native c++) Drop geometries (native:dropgeometries). Removes any geometries from an input layer and returns a layer containing only the feature attributes. This algorithm removes any geometries from an input layer and returns a layer containing only the feature attributes.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Assign projection (native:assignprojection). This algorithm assigns a new projection to a vector layer. It creates a new layer with the exact same features and geometries as the input one, but assigned to a new CRS. E.g. the geometries are not reprojected, they are just assigned to a different CRS. This algorithm can be used to repair layers which have been assigned an incorrect projection.  Attributes are not modified by this algorithm.
+##' QGIS Algorithm provided by QGIS (native c++) Assign projection (native:assignprojection). Assigns a new projection to a copy of a vector layer, with the exact same features and geometries. This algorithm assigns a new projection to a vector layer. It creates a new layer with the exact same features and geometries as the input one, but assigned to a new CRS. E.g. the geometries are not reprojected, they are just assigned to a different CRS. This algorithm can be used to repair layers which have been assigned an incorrect projection.  Attributes are not modified by this algorithm.
 ##'
 ##' @title QGIS algorithm - Assign projection
 ##'

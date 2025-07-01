@@ -27,7 +27,7 @@ qgis_stringconcatenation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) String concatenation (native:stringconcatenation). This algorithm concatenates two strings together.
+QGIS Algorithm provided by QGIS (native c++) String concatenation (native:stringconcatenation). Concatenates two strings together. This algorithm concatenates two strings together.
 }
 \details{
 \subsection{Outputs description}{

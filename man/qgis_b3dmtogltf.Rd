@@ -27,7 +27,7 @@ qgis_b3dmtogltf(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert B3DM to GLTF (native:b3dmtogltf). Converts files from the legacy B3DM format to GLTF.
+QGIS Algorithm provided by QGIS (native c++) Convert B3DM to GLTF (native:b3dmtogltf). Converts files from the legacy B3DM format to GLTF. This algorithm converts files from the legacy B3DM format to GLTF.
 }
 \details{
 \subsection{Outputs description}{

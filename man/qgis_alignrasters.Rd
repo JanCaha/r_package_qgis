@@ -45,7 +45,7 @@ qgis_alignrasters(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Align rasters (native:alignrasters). Aligns rasters by resampling them to the same cell size and reprojecting to the same CRS.
+QGIS Algorithm provided by QGIS (native c++) Align rasters (native:alignrasters). Aligns rasters by resampling them to the same cell size and reprojecting to the same CRS. This algorithm aligns rasters by resampling them to the same cell size and reprojecting to the same CRS.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract binary field (native:extractbinary). This algorithm extracts contents from a binary field, saving them to individual files. This algorithm extracts contents from a binary field, saving them to individual files.  Filenames can be generated using values taken from an attribute in the source table or based on a more complex expression.
+##' QGIS Algorithm provided by QGIS (native c++) Extract binary field (native:extractbinary). Extracts contents from a binary field, saving them to individual files. This algorithm extracts contents from a binary field, saving them to individual files.  Filenames can be generated using values taken from an attribute in the source table or based on a more complex expression.
 ##'
 ##' @title QGIS algorithm - Extract binary field
 ##'

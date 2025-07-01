@@ -36,7 +36,7 @@ qgis_sumlinelengths(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Sum line lengths (native:sumlinelengths). This algorithm takes a polygon layer and a line layer and measures the total length of lines and the total number of them that cross each polygon.  The resulting layer has the same features as the input polygon layer, but with two additional attributes containing the length and count of the lines across each polygon. The names of these two fields can be configured in the algorithm parameters.
+QGIS Algorithm provided by QGIS (native c++) Sum line lengths (native:sumlinelengths). Takes a polygon layer and a line layer and measures the total length of lines and the total number of them that cross each polygon. This algorithm takes a polygon layer and a line layer and measures the total length of lines and the total number of them that cross each polygon.  The resulting layer has the same features as the input polygon layer, but with two additional attributes containing the length and count of the lines across each polygon. The names of these two fields can be configured in the algorithm parameters.
 }
 \details{
 \subsection{Outputs description}{

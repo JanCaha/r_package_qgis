@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures). This algorithm rotates feature geometries, by the specified angle clockwise  Optionally, the rotation can occur around a preset point. If not set the rotation occurs around each feature's centroid.
+##' QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures). Rotates feature geometries by a specified angle clockwise. This algorithm rotates feature geometries by the specified angle clockwise.  Optionally, the rotation can occur around a preset point. If not set the rotation occurs around each feature's centroid.
 ##'
 ##' @title QGIS algorithm - Rotate
 ##'

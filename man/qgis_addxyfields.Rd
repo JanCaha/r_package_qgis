@@ -33,7 +33,7 @@ qgis_addxyfields(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields). Adds X and Y (or latitude/longitude) fields to a point layer. Adds X and Y (or latitude/longitude) fields to a point layer. The X/Y fields can be calculated in a different CRS to the layer (e.g. creating latitude/longitude fields for a layer in a project CRS).
+QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields). Adds X and Y (or latitude/longitude) fields to a point layer. This algorithm adds X and Y (or latitude/longitude) fields to a point layer. The X/Y fields can be calculated in a different CRS to the layer (e.g. creating latitude/longitude fields for a layer in a project CRS).
 }
 \details{
 \subsection{Outputs description}{

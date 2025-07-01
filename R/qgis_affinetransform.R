@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Affine transform (native:affinetransform). Applies an affine transformation to geometries. Applies an affine transformation to the geometries from a layer. Affine transformations can include translation, scaling and rotation. The operations are performed in a scale, rotation, translation order.  Z and M values present in the geometry can also be translated and scaled independently.
+##' QGIS Algorithm provided by QGIS (native c++) Affine transform (native:affinetransform). Applies an affine transformation to geometries. This algorithm applies an affine transformation to the geometries from a layer. Affine transformations can include translation, scaling and rotation. The operations are performed in a scale, rotation, translation order.  Z and M values present in the geometry can also be translated and scaled independently.
 ##'
 ##' @title QGIS algorithm - Affine transform
 ##'

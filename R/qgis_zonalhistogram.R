@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram). This algorithm appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons.
+##' QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram). Appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons. This algorithm appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons.
 ##'
 ##' @title QGIS algorithm - Zonal histogram
 ##'

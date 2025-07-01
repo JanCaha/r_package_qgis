@@ -39,7 +39,7 @@ qgis_exportmeshfaces(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export mesh faces (native:exportmeshfaces). Exports mesh faces to a polygon vector layer This algorithm exports a mesh layer's faces to a polygon vector layer, with the dataset values on faces as attribute values.
+QGIS Algorithm provided by QGIS (native c++) Export mesh faces (native:exportmeshfaces). Exports mesh faces to a polygon vector layer. This algorithm exports a mesh layer's faces to a polygon vector layer, with the dataset values on faces as attribute values.
 }
 \details{
 \subsection{Outputs description}{

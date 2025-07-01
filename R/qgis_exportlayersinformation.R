@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export layer(s) information (native:exportlayersinformation). Creates a polygon layer with features corresponding to the extent of selected layer(s).  Additional layer details - CRS, provider name, file path, layer name, subset filter, abstract and attribution - are attached as attributes to each feature.
+##' QGIS Algorithm provided by QGIS (native c++) Export layer(s) information (native:exportlayersinformation). Creates a polygon layer with features corresponding to the extent of selected layer(s). This algorithm creates a polygon layer with features corresponding to the extent of selected layer(s).  Additional layer details - CRS, provider name, file path, layer name, subset filter, abstract and attribution - are attached as attributes to each feature.
 ##'
 ##' @title QGIS algorithm - Export layer(s) information
 ##'

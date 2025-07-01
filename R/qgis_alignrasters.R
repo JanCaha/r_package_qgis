@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Align rasters (native:alignrasters). Aligns rasters by resampling them to the same cell size and reprojecting to the same CRS.
+##' QGIS Algorithm provided by QGIS (native c++) Align rasters (native:alignrasters). Aligns rasters by resampling them to the same cell size and reprojecting to the same CRS. This algorithm aligns rasters by resampling them to the same cell size and reprojecting to the same CRS.
 ##'
 ##' @title QGIS algorithm - Align rasters
 ##'

@@ -36,7 +36,7 @@ qgis_voronoipolygons(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Voronoi polygons (native:voronoipolygons). Generates a polygon layer containing the Voronoi diagram corresponding to input points.
+QGIS Algorithm provided by QGIS (native c++) Voronoi polygons (native:voronoipolygons). Generates a polygon layer containing the Voronoi diagram corresponding to input points. This algorithm generates a polygon layer containing the Voronoi diagram corresponding to input points.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Calculate expression (native:calculateexpression). This algorithm calculates the result of a QGIS expression and makes it available for use in other parts of the model.
+##' QGIS Algorithm provided by QGIS (native c++) Calculate expression (native:calculateexpression). Calculates the result of a QGIS expression and makes it available for use in other parts of the model. This algorithm calculates the result of a QGIS expression and makes it available for use in other parts of the model.
 ##'
 ##' @title QGIS algorithm - Calculate expression
 ##'

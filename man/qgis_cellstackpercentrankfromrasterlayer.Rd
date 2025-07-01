@@ -12,7 +12,7 @@ qgis_cellstackpercentrankfromrasterlayer(
   IGNORE_NODATA = qgisprocess:::qgis_default_value(),
   REFERENCE_LAYER = qgisprocess:::qgis_default_value(),
   OUTPUT_NODATA_VALUE = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -35,7 +35,7 @@ qgis_cellstackpercentrankfromrasterlayer(
 
 \item{OUTPUT_NODATA_VALUE}{\code{number} - Output NoData value. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output layer. Path for new raster layer.}
 
@@ -48,7 +48,7 @@ qgis_cellstackpercentrankfromrasterlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Cell stack percentrank from raster layer (native:cellstackpercentrankfromrasterlayer). The Cell stack percentrank from raster layer algorithm calculates the cell-wise percentrank value of a stack of rasters based on an input value raster and writes them to an output raster.  At each cell location, the current value of the value raster is used ranked among the respective values in the stack of all overlaid and sorted cell values of the input rasters. For values outside of the the stack value distribution, the algorithm returns NoData because the value cannot be ranked among the cell values.  There are two methods for percentile calculation:ul    liInclusive linearly interpolated percent rank (PERCENTRANK.INC)/li   liExclusive linearly interpolated percent rank (PERCENTRANK.EXC)/li/ul The linear interpolation method return the unique percent rank for different values. Both interpolation methods follow their counterpart methods implemented by LibreOffice or Microsoft Excel.   The output raster's extent and resolution is defined by a reference raster. If the input raster layers that do not match the cell size of the reference raster layer will be resampled using nearest neighbor resampling.  NoData values in any of the input layers will result in a NoData cell output if the Ignore NoData parameter is not set. The output raster data type will always be Float32.
+QGIS Algorithm provided by QGIS (native c++) Cell stack percentrank from raster layer (native:cellstackpercentrankfromrasterlayer). Generates a raster containing the cell-wise percent rank value of a stack of input rasters based on an input value raster. This algorithm generates a raster containing the cell-wise percent rank value of a stack of input rasters based on an input value raster.  At each cell location, the current value of the value raster is used ranked among the respective values in the stack of all overlaid and sorted cell values of the input rasters. For values outside of the the stack value distribution, the algorithm returns NoData because the value cannot be ranked among the cell values.  There are two methods for percentile calculation:ul    liInclusive linearly interpolated percent rank (PERCENTRANK.INC)/li   liExclusive linearly interpolated percent rank (PERCENTRANK.EXC)/li/ul The linear interpolation method return the unique percent rank for different values. Both interpolation methods follow their counterpart methods implemented by LibreOffice or Microsoft Excel.   The output raster's extent and resolution is defined by a reference raster. If the input raster layers that do not match the cell size of the reference raster layer will be resampled using nearest neighbor resampling.  NoData values in any of the input layers will result in a NoData cell output if the Ignore NoData parameter is not set. The output raster data type will always be Float32.
 }
 \details{
 \subsection{Outputs description}{

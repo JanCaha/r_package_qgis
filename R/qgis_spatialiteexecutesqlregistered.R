@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) SpatiaLite execute SQL (registered DB) (native:spatialiteexecutesqlregistered). Executes a SQL command on a SpatiaLite database.
+##' QGIS Algorithm provided by QGIS (native c++) SpatiaLite execute SQL (registered DB) (native:spatialiteexecutesqlregistered). Executes a SQL command on a SpatiaLite database. This algorithm executes a SQL command on a SpatiaLite database.
 ##'
 ##' @title QGIS algorithm - SpatiaLite execute SQL (registered DB)
 ##'

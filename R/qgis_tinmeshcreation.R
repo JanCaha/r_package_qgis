@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) TIN Mesh Creation (native:tinmeshcreation). Creates a TIN mesh layer from vector layers This algorithm creates a TIN mesh layer from vector layers.
+##' QGIS Algorithm provided by QGIS (native c++) TIN Mesh Creation (native:tinmeshcreation). Creates a TIN mesh layer from vector layers. This algorithm creates a TIN mesh layer from vector layers.
 ##'
 ##' @title QGIS algorithm - TIN Mesh Creation
 ##'

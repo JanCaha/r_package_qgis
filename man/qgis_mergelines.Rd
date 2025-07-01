@@ -27,7 +27,7 @@ qgis_mergelines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Merge lines (native:mergelines). This algorithm joins all connected parts of MultiLineString geometries into single LineString geometries.  If any parts of the input MultiLineString geometries are not connected, the resultant geometry will be a MultiLineString containing any lines which could be merged and any non-connected line parts.
+QGIS Algorithm provided by QGIS (native c++) Merge lines (native:mergelines). Joins all connected parts of MultiLineString geometries into single LineString geometries. This algorithm joins all connected parts of MultiLineString geometries into single LineString geometries.  If any parts of the input MultiLineString geometries are not connected, the resultant geometry will be a MultiLineString containing any lines which could be merged and any non-connected line parts.
 }
 \details{
 \subsection{Outputs description}{

@@ -27,7 +27,7 @@ qgis_pointtolayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create layer from point (native:pointtolayer). This algorithm creates a new vector layer that contains a single feature with geometry matching a point parameter.  It can be used in models to convert a point into a layer which can be used for other algorithms which require a layer based input.
+QGIS Algorithm provided by QGIS (native c++) Create layer from point (native:pointtolayer). Creates a vector layer that contains a single feature with geometry matching a point parameter. This algorithm creates a new vector layer that contains a single feature with geometry matching a point parameter.  It can be used in models to convert a point into a layer which can be used for other algorithms which require a layer based input.
 }
 \details{
 \subsection{Outputs description}{

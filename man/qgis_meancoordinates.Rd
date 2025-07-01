@@ -33,7 +33,7 @@ qgis_meancoordinates(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Mean coordinate(s) (native:meancoordinates). This algorithm computes a point layer with the center of mass of geometries in an input layer.  An attribute can be specified as containing weights to be applied to each feature when computing the center of mass.  If an attribute is selected in the Unique ID field parameter, features will be grouped according to values in this field. Instead of a single point with the center of mass of the whole layer, the output layer will contain a center of mass for the features in each category.
+QGIS Algorithm provided by QGIS (native c++) Mean coordinate(s) (native:meancoordinates). Computes a point layer with the center of mass of geometries in an input layer. This algorithm computes a point layer with the center of mass of geometries in an input layer.  An attribute can be specified as containing weights to be applied to each feature when computing the center of mass.  If an attribute is selected in the Unique ID field parameter, features will be grouped according to values in this field. Instead of a single point with the center of mass of the whole layer, the output layer will contain a center of mass for the features in each category.
 }
 \details{
 \subsection{Outputs description}{

@@ -42,7 +42,7 @@ qgis_pointstopath(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath). This algorithm takes a point layer and connects its features creating a new line layer.  An attribute or expression may be specified to define the order the points should be connected. If no order expression is specified, the feature ID is used.  A natural sort can be used when sorting by a string attribute or expression (ie. place 'a9' before 'a10').  An attribute or expression can be selected to group points having the same value into the same resulting line.
+QGIS Algorithm provided by QGIS (native c++) Points to path (native:pointstopath). Takes a point layer and connects its features to create a new line layer. This algorithm takes a point layer and connects its features to create a new line layer.  An attribute or expression may be specified to define the order the points should be connected. If no order expression is specified, the feature ID is used.  A natural sort can be used when sorting by a string attribute or expression (ie. place 'a9' before 'a10').  An attribute or expression can be selected to group points having the same value into the same resulting line.
 }
 \details{
 \subsection{Outputs description}{

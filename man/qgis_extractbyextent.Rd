@@ -33,7 +33,7 @@ qgis_extractbyextent(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract/clip by extent (native:extractbyextent). This algorithm creates a new vector layer that only contains features which fall within a specified extent. Any features which intersect the extent will be included.  Optionally, feature geometries can also be clipped to the extent. If this option is selected, then the output geometries will automatically be converted to multi geometries to ensure uniform output geometry types.
+QGIS Algorithm provided by QGIS (native c++) Extract/clip by extent (native:extractbyextent). Creates a vector layer that only contains features which intersect a specified extent. This algorithm creates a new vector layer that only contains features which fall within a specified extent. Any features which intersect the extent will be included.  Optionally, feature geometries can also be clipped to the extent. If this option is selected, then the output geometries will automatically be converted to multi geometries to ensure uniform output geometry types.
 }
 \details{
 \subsection{Outputs description}{

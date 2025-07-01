@@ -24,7 +24,7 @@ qgis_calculateexpression(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Calculate expression (native:calculateexpression). This algorithm calculates the result of a QGIS expression and makes it available for use in other parts of the model.
+QGIS Algorithm provided by QGIS (native c++) Calculate expression (native:calculateexpression). Calculates the result of a QGIS expression and makes it available for use in other parts of the model. This algorithm calculates the result of a QGIS expression and makes it available for use in other parts of the model.
 }
 \details{
 \subsection{Outputs description}{

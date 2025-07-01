@@ -36,7 +36,7 @@ qgis_adduniquevalueindexfield(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add unique value index field (native:adduniquevalueindexfield). This algorithm takes a vector layer and an attribute and adds a new numeric field. Values in this field correspond to values in the specified attribute, so features with the same value for the attribute will have the same value in the new numeric field. This creates a numeric equivalent of the specified attribute, which defines the same classes.  The new attribute is not added to the input layer but a new layer is generated instead.  Optionally, a separate table can be output which contains a summary of the class field values mapped to the new unique numeric value.
+QGIS Algorithm provided by QGIS (native c++) Add unique value index field (native:adduniquevalueindexfield). Adds a numeric field and assigns the same index to features of the same attribute value. This algorithm takes a vector layer and an attribute and adds a new numeric field. Values in this field correspond to values in the specified attribute, so features with the same value for the attribute will have the same value in the new numeric field. This creates a numeric equivalent of the specified attribute, which defines the same classes.  The new attribute is not added to the input layer but a new layer is generated instead.  Optionally, a separate table can be output which contains a summary of the class field values mapped to the new unique numeric value.
 }
 \details{
 \subsection{Outputs description}{

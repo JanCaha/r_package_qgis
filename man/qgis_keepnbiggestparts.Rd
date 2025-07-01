@@ -30,7 +30,7 @@ qgis_keepnbiggestparts(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Keep N biggest parts (native:keepnbiggestparts). This algorithm takes a polygon layer and creates a new polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts.
+QGIS Algorithm provided by QGIS (native c++) Keep N biggest parts (native:keepnbiggestparts). Creates a polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts. This algorithm takes a polygon layer and creates a new polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts.
 }
 \details{
 \subsection{Outputs description}{

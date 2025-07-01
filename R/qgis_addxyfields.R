@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields). Adds X and Y (or latitude/longitude) fields to a point layer. Adds X and Y (or latitude/longitude) fields to a point layer. The X/Y fields can be calculated in a different CRS to the layer (e.g. creating latitude/longitude fields for a layer in a project CRS).
+##' QGIS Algorithm provided by QGIS (native c++) Add X/Y fields to layer (native:addxyfields). Adds X and Y (or latitude/longitude) fields to a point layer. This algorithm adds X and Y (or latitude/longitude) fields to a point layer. The X/Y fields can be calculated in a different CRS to the layer (e.g. creating latitude/longitude fields for a layer in a project CRS).
 ##'
 ##' @title QGIS algorithm - Add X/Y fields to layer
 ##'

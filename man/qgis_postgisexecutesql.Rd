@@ -27,7 +27,7 @@ qgis_postgisexecutesql(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) PostgreSQL execute SQL (native:postgisexecutesql). Executes a SQL command on a PostgreSQL database.
+QGIS Algorithm provided by QGIS (native c++) PostgreSQL execute SQL (native:postgisexecutesql). Executes a SQL command on a PostgreSQL database. This algorithm executes a SQL command on a PostgreSQL database.
 }
 \details{
 \subsection{Outputs description}{

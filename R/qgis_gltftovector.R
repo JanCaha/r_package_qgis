@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert GLTF to vector features (native:gltftovector). Converts GLTF content to standard vector layer formats.
+##' QGIS Algorithm provided by QGIS (native c++) Convert GLTF to vector features (native:gltftovector). Converts GLTF content to standard vector layer formats. This algorithm converts GLTF content to standard vector layer formats.
 ##'
 ##' @title QGIS algorithm - Convert GLTF to vector features
 ##'

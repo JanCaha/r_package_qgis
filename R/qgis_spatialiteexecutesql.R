@@ -1,8 +1,8 @@
-##' QGIS Algorithm provided by QGIS (native c++) SpatiaLite execute SQL (native:spatialiteexecutesql). Executes a SQL command on a SpatiaLite database.
+##' QGIS Algorithm provided by QGIS (native c++) SpatiaLite execute SQL (native:spatialiteexecutesql). Executes a SQL command on a SpatiaLite database determined by an input layer or file. This algorithm executes a SQL command on a SpatiaLite database. The database is determined by an input layer or file.
 ##'
 ##' @title QGIS algorithm - SpatiaLite execute SQL
 ##'
-##' @param DATABASE `vector` - Database (connection name). Path to a vector layer.
+##' @param DATABASE `vector` - Database layer (or file). Path to a vector layer.
 ##' @param SQL `string` - SQL query. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.

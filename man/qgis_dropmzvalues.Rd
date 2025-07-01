@@ -33,7 +33,7 @@ qgis_dropmzvalues(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues). This algorithm can remove any measure (M) or Z values from input geometries.
+QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues). Removes any measure (M) or Z values from input geometries. This algorithm can remove any measure (M) or Z values from input geometries.
 }
 \details{
 \subsection{Outputs description}{

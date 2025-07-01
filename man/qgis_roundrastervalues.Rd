@@ -10,7 +10,7 @@ qgis_roundrastervalues(
   ROUNDING_DIRECTION = qgisprocess:::qgis_default_value(),
   DECIMAL_PLACES = qgisprocess:::qgis_default_value(),
   BASE_N = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -29,7 +29,7 @@ qgis_roundrastervalues(
 
 \item{BASE_N}{\code{number} - Base n for rounding to multiples of n. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 
@@ -42,7 +42,7 @@ qgis_roundrastervalues(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Round raster (native:roundrastervalues). This algorithm rounds the cell values of a raster dataset according to the specified number of decimals.  Alternatively, a negative number of decimal places may be used to round values to powers of a base n (specified in the advanced parameter Base n). For example, with a Base value n of 10 and Decimal places of -1 the algorithm rounds cell values to multiples of 10, -2 rounds to multiples of 100, and so on. Arbitrary base values may be chosen, the algorithm applies the same multiplicative principle. Rounding cell values to multiples of a base n may be used to generalize raster layers. The algorithm preserves the data type of the input raster. Therefore byte/integer rasters can only be rounded to multiples of a base n, otherwise a warning is raised and the raster gets copied as byte/integer raster
+QGIS Algorithm provided by QGIS (native c++) Round raster (native:roundrastervalues). Rounds the cell values of a raster dataset to a specified number of decimals. This algorithm rounds the cell values of a raster dataset to the specified number of decimals.  Alternatively, a negative number of decimal places may be used to round values to powers of a base n (specified in the advanced parameter Base n). For example, with a Base value n of 10 and Decimal places of -1 the algorithm rounds cell values to multiples of 10, -2 rounds to multiples of 100, and so on. Arbitrary base values may be chosen, the algorithm applies the same multiplicative principle. Rounding cell values to multiples of a base n may be used to generalize raster layers. The algorithm preserves the data type of the input raster. Therefore byte/integer rasters can only be rounded to multiples of a base n, otherwise a warning is raised and the raster gets copied as byte/integer raster.
 }
 \details{
 \subsection{Outputs description}{

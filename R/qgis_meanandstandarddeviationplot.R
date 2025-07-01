@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Mean and standard deviation plot (qgis:meanandstandarddeviationplot). This algorithm creates a box plot with mean and standard deviation values.
+##' QGIS Algorithm provided by QGIS Mean and standard deviation plot (qgis:meanandstandarddeviationplot). Creates a box plot with mean and standard deviation values. This algorithm creates a box plot with mean and standard deviation values.
 ##'
 ##' @title QGIS algorithm - Mean and standard deviation plot
 ##'

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (native:shortestpathlayertopoint). This algorithm computes optimal (shortest or fastest) route from multiple start points defined by vector layer and given end point.
+##' QGIS Algorithm provided by QGIS (native c++) Shortest path (layer to point) (native:shortestpathlayertopoint). Computes optimal (shortest or fastest) routes from multiple start points defined by a vector layer and a given end point. This algorithm computes optimal (shortest or fastest) routes from multiple start points defined by a vector layer and a given end point.
 ##'
 ##' @title QGIS algorithm - Shortest path (layer to point)
 ##'

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Minimum enclosing circles (native:minimumenclosingcircle). This algorithm calculates the minimum enclosing circle which covers each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a minimal enclosing circle calculation which covers the whole layer or grouped subsets of features.
+##' QGIS Algorithm provided by QGIS (native c++) Minimum enclosing circles (native:minimumenclosingcircle). Calculates the minimum enclosing circle which covers each feature in an input layer. This algorithm calculates the minimum enclosing circle which covers each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a minimal enclosing circle calculation which covers the whole layer or grouped subsets of features.
 ##'
 ##' @title QGIS algorithm - Minimum enclosing circles
 ##'

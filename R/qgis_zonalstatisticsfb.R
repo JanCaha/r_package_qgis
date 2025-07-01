@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb). This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer.
+##' QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb). Calculates statistics of a raster layer for each feature of an overlapping polygon vector layer. This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer.
 ##'
 ##' @title QGIS algorithm - Zonal statistics
 ##'

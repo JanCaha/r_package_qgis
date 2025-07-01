@@ -39,7 +39,7 @@ qgis_exportmeshedges(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export mesh edges (native:exportmeshedges). Exports mesh edges to a line vector layer This algorithm exports a mesh layer's edges to a line vector layer, with the dataset values on edges as attribute values.
+QGIS Algorithm provided by QGIS (native c++) Export mesh edges (native:exportmeshedges). Exports mesh edges to a line vector layer. This algorithm exports a mesh layer's edges to a line vector layer, with the dataset values on edges as attribute values.
 }
 \details{
 \subsection{Outputs description}{

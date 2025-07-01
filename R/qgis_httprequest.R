@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) HTTP(S) POST/GET request (native:httprequest). Performs a HTTP(S) POST/GET request and returns the result code, error message and the data This algorithm performs a HTTP(S) POST/GET request and returns the HTTP status code and the reply data. If an error occurs then the error code and the message will be returned.  Optionally, the result can be written to a file on disk.  By default the algorithm will warn on errors. Optionally, the algorithm can be set to treat HTTP errors as failures.
+##' QGIS Algorithm provided by QGIS (native c++) HTTP(S) POST/GET request (native:httprequest). Performs a HTTP(S) POST/GET request and returns the result code, error message and the data. This algorithm performs a HTTP(S) POST/GET request and returns the HTTP status code and the reply data. If an error occurs then the error code and the message will be returned.  Optionally, the result can be written to a file on disk.  By default the algorithm will warn on errors. Optionally, the algorithm can be set to treat HTTP errors as failures.
 ##'
 ##' @title QGIS algorithm - HTTP(S) POST/GET request
 ##'

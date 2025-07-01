@@ -39,7 +39,7 @@ qgis_modelervirtualrastercalc(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster calculator (virtual) (native:modelervirtualrastercalc). Performs algebraic operations using raster layers and generates in-memory result.
+QGIS Algorithm provided by QGIS (native c++) Raster calculator (virtual) (native:modelervirtualrastercalc). Performs algebraic operations using raster layers and generates in-memory result. This algorithm performs algebraic operations using raster layers and generates in-memory result.
 }
 \details{
 \subsection{Outputs description}{

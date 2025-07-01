@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster calculator (virtual) (native:virtualrastercalc). Performs algebraic operations using raster layers and generates in-memory result.
+##' QGIS Algorithm provided by QGIS (native c++) Raster calculator (virtual) (native:virtualrastercalc). Performs algebraic operations using raster layers and generates in-memory result. This algorithm performs algebraic operations using raster layers and generates in-memory result.
 ##'
 ##' @title QGIS algorithm - Raster calculator (virtual)
 ##'

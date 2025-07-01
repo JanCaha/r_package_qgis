@@ -9,7 +9,7 @@ qgis_fuzzifyrasterlargemembership(
   BAND = qgisprocess:::qgis_default_value(),
   FUZZYMIDPOINT = qgisprocess:::qgis_default_value(),
   FUZZYSPREAD = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -26,7 +26,7 @@ qgis_fuzzifyrasterlargemembership(
 
 \item{FUZZYSPREAD}{\code{number} - Function spread. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified raster. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ qgis_fuzzifyrasterlargemembership(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (large membership) (native:fuzzifyrasterlargemembership). The Fuzzify raster (large membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following the 'large' fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows the 'large' membership function.  The 'large' function is constructed using two user-defined input raster values which set the point of half membership (midpoint, results to 0.5) and a predefined function spread which controls the function uptake.  This function is typically used when larger input raster values should become members of the fuzzy set more easily than smaller values.
+QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (large membership) (native:fuzzifyrasterlargemembership). Transforms an input raster to a fuzzified raster where values range from 0 to 1 following the 'large' fuzzy membership function. This algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following the 'large' fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows the 'large' membership function.  The 'large' function is constructed using two user-defined input raster values which set the point of half membership (midpoint, results to 0.5) and a predefined function spread which controls the function uptake.  This function is typically used when larger input raster values should become members of the fuzzy set more easily than smaller values.
 }
 \details{
 \subsection{Outputs description}{

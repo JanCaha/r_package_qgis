@@ -33,7 +33,7 @@ qgis_extractbylocation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extractbylocation). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the spatial relationship between each feature and the features in an additional layer.
+QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extractbylocation). Creates a vector layer that only contains features matching a spatial relationship with the features in an additional layer. This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the spatial relationship between each feature and the features in an additional layer.
 }
 \details{
 \subsection{Outputs description}{

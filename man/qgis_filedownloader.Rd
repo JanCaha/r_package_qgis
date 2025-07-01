@@ -33,7 +33,7 @@ qgis_filedownloader(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Download file via HTTP(S) (native:filedownloader). Downloads a URL to the file system with an HTTP(S) GET or POST request This algorithm downloads a URL to the file system with an HTTP(S) GET or POST request
+QGIS Algorithm provided by QGIS (native c++) Download file via HTTP(S) (native:filedownloader). Downloads a URL to the file system with an HTTP(S) GET or POST request. This algorithm downloads a URL to the file system with an HTTP(S) GET or POST request
 }
 \details{
 \subsection{Outputs description}{

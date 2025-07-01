@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues). This algorithm can remove any measure (M) or Z values from input geometries.
+##' QGIS Algorithm provided by QGIS (native c++) Drop M/Z values (native:dropmzvalues). Removes any measure (M) or Z values from input geometries. This algorithm can remove any measure (M) or Z values from input geometries.
 ##'
 ##' @title QGIS algorithm - Drop M/Z values
 ##'

@@ -39,7 +39,7 @@ qgis_snappointstogrid(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Snap points to grid (native:snappointstogrid). This algorithm modifies the coordinates of geometries in a vector layer, so that all points or vertices are snapped to the closest point of the grid.  If the snapped geometry cannot be calculated (or is totally collapsed) the feature's geometry will be cleared.  Note that snapping to grid may generate an invalid geometry in some corner cases.  Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any axis will disable snapping for that axis.
+QGIS Algorithm provided by QGIS (native c++) Snap points to grid (native:snappointstogrid). Modifies the coordinates of geometries in a vector layer, so that all points or vertices are snapped to the closest point of a grid. This algorithm modifies the coordinates of geometries in a vector layer, so that all points or vertices are snapped to the closest point of the grid.  If the snapped geometry cannot be calculated (or is totally collapsed) the feature's geometry will be cleared.  Note that snapping to grid may generate an invalid geometry in some corner cases.  Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any axis will disable snapping for that axis.
 }
 \details{
 \subsection{Outputs description}{

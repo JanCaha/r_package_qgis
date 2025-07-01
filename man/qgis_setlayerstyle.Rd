@@ -27,7 +27,7 @@ qgis_setlayerstyle(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set layer style (native:setlayerstyle). Applies the style to a layer. The style must be defined as QML file.
+QGIS Algorithm provided by QGIS (native c++) Set layer style (native:setlayerstyle). Applies the style from a QML file to a layer. This algorithm applies the style to a layer. The style must be defined as QML file.
 }
 \details{
 \subsection{Outputs description}{

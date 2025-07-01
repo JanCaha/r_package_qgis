@@ -30,7 +30,7 @@ qgis_batchnominatimgeocoder(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Batch Nominatim geocoder (native:batchnominatimgeocoder). This algorithm performs batch geocoding using the a href="#"Nominatim/a service against an input layer string field.  The output layer will have a point geometry reflecting the geocoded location as well as a number of attributes associated to the geocoded location.
+QGIS Algorithm provided by QGIS (native c++) Batch Nominatim geocoder (native:batchnominatimgeocoder). Geocodes features in a vector layer using the Nominatim service. This algorithm performs batch geocoding using the a href="#"Nominatim/a service against an input layer string field.  The output layer will have a point geometry reflecting the geocoded location as well as a number of attributes associated to the geocoded location.
 }
 \details{
 \subsection{Outputs description}{

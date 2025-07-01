@@ -36,7 +36,7 @@ qgis_snapgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Snap geometries to layer (native:snapgeometries). Snaps the geometries in a layer. Snapping can be done either to the geometries from another layer, or to geometries within the same layer.  A tolerance is specified in layer units to control how close vertices need to be to the reference layer geometries before they are snapped.  Snapping occurs to both nodes and edges. Depending on the snapping behavior, either nodes or edges will be preferred.  Vertices will be inserted or removed as required to make the geometries match the reference geometries.
+QGIS Algorithm provided by QGIS (native c++) Snap geometries to layer (native:snapgeometries). Snaps the geometries to the geometries within the same layer or from another layer. This algorithm snaps the geometries in a layer. Snapping can be done either to the geometries from another layer, or to geometries within the same layer.  A tolerance is specified in layer units to control how close vertices need to be to the reference layer geometries before they are snapped.  Snapping occurs to both nodes and edges. Depending on the snapping behavior, either nodes or edges will be preferred.  Vertices will be inserted or removed as required to make the geometries match the reference geometries.
 }
 \details{
 \subsection{Outputs description}{

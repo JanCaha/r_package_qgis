@@ -30,7 +30,7 @@ qgis_convertgeometrytype(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Convert geometry type (qgis:convertgeometrytype). This algorithm generates a new layer based on an existing one, with a different type of geometry. Not all conversions are possible. For instance, a line layer can be converted to a point layer, but a point layer cannot be converted to a line layer. See the "Polygonize" or "Lines to polygons" algorithm for alternative options.
+QGIS Algorithm provided by QGIS (native c++) Convert geometry type (native:convertgeometrytype). Converts the geometries from a vector layer to a different geometry type. This algorithm generates a new layer based on an existing one, with a different type of geometry.  Not all conversions are possible. For instance, a line layer can be converted to a point layer, but a point layer cannot be converted to a line layer.  See the "Polygonize" or "Lines to polygons" algorithms for alternative options.
 }
 \details{
 \subsection{Outputs description}{

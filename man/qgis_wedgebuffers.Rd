@@ -39,7 +39,7 @@ qgis_wedgebuffers(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create wedge buffers (native:wedgebuffers). This algorithm creates wedge shaped buffers from input points.  The azimuth parameter gives the angle (in degrees) for the middle of the wedge to point. The buffer width (in degrees) is specified by the width parameter. Note that the wedge will extend to half of the angular width either side of the azimuth direction.  The outer radius of the buffer is specified via outer radius, and optionally an inner radius can also be specified.  The native output from this algorithm are CurvePolygon geometries, but these may be automatically segmentized to Polygons depending on the output format.
+QGIS Algorithm provided by QGIS (native c++) Create wedge buffers (native:wedgebuffers). Creates wedge shaped buffers from input points. This algorithm creates wedge shaped buffers from input points.  The azimuth parameter gives the angle (in degrees) for the middle of the wedge to point. The buffer width (in degrees) is specified by the width parameter. Note that the wedge will extend to half of the angular width either side of the azimuth direction.  The outer radius of the buffer is specified via outer radius, and optionally an inner radius can also be specified.  The native output from this algorithm are CurvePolygon geometries, but these may be automatically segmentized to Polygons depending on the output format.
 }
 \details{
 \subsection{Outputs description}{

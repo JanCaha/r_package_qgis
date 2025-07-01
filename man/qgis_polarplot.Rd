@@ -33,7 +33,7 @@ qgis_polarplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Polar plot (qgis:polarplot). This algorithm generates a polar plot based on the value of an input vector layer. Two fields must be entered as parameters: one that define the category (to group features) and another one with the variable to plot (this has to be a numeric one)
+QGIS Algorithm provided by QGIS Polar plot (qgis:polarplot). Generates a polar plot based on the value of an input vector layer. This algorithm generates a polar plot based on the value of an input vector layer. Two fields must be entered as parameters: one that define the category (to group features) and another one with the variable to plot (this has to be a numeric one)
 }
 \details{
 \subsection{Outputs description}{

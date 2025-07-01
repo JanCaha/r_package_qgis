@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Random points in extent (native:randompointsinextent). This algorithm creates a new point layer with a given number of random points, all of them within a given extent. A distance factor can be specified, to avoid points being too close to each other. If the minimum distance between points makes it impossible to create new points, either distance can be decreased or the maximum number of attempts may be increased.
+##' QGIS Algorithm provided by QGIS (native c++) Random points in extent (native:randompointsinextent). Creates a point layer with a given number of random points, all of them within a given extent. This algorithm creates a new point layer with a given number of random points, all of them within a given extent. A distance factor can be specified, to avoid points being too close to each other. If the minimum distance between points makes it impossible to create new points, either distance can be decreased or the maximum number of attempts may be increased.
 ##'
 ##' @title QGIS algorithm - Random points in extent
 ##'

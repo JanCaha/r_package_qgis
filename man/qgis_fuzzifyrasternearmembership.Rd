@@ -9,7 +9,7 @@ qgis_fuzzifyrasternearmembership(
   BAND = qgisprocess:::qgis_default_value(),
   FUZZYMIDPOINT = qgisprocess:::qgis_default_value(),
   FUZZYSPREAD = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -26,7 +26,7 @@ qgis_fuzzifyrasternearmembership(
 
 \item{FUZZYSPREAD}{\code{number} - Function spread. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Fuzzified raster. Path for new raster layer.}
 
@@ -39,7 +39,7 @@ qgis_fuzzifyrasternearmembership(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (near membership) (native:fuzzifyrasternearmembership). The Fuzzify raster (near membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following the 'near' fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows the 'near' membership function.  The 'near' function is constructed using two user-defined input values which set the midpoint of the 'near' function (midpoint, results to 1) and a predefined function spread which controls the function spread.  This function is typically used when a certain range of raster values near a predefined function midpoint should become members of the fuzzy set. The function generally shows a higher rate of decay than the gaussian membership function.
+QGIS Algorithm provided by QGIS (native c++) Fuzzify raster (near membership) (native:fuzzifyrasternearmembership). Transforms an input raster to a fuzzified raster where values range from 0 to 1 following the 'near' fuzzy membership function. The Fuzzify raster (near membership) algorithm transforms an input raster to a fuzzified raster and thereby assigns values between 0 and 1 following the 'near' fuzzy membership function. The value of 0 implies no membership with the defined fuzzy set, a value of 1 depicts full membership. In between, the degree of membership of raster values follows the 'near' membership function.  The 'near' function is constructed using two user-defined input values which set the midpoint of the 'near' function (midpoint, results to 1) and a predefined function spread which controls the function spread.  This function is typically used when a certain range of raster values near a predefined function midpoint should become members of the fuzzy set. The function generally shows a higher rate of decay than the gaussian membership function.
 }
 \details{
 \subsection{Outputs description}{

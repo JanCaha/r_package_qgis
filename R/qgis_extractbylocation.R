@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extractbylocation). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the spatial relationship between each feature and the features in an additional layer.
+##' QGIS Algorithm provided by QGIS (native c++) Extract by location (native:extractbylocation). Creates a vector layer that only contains features matching a spatial relationship with the features in an additional layer. This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the spatial relationship between each feature and the features in an additional layer.
 ##'
 ##' @title QGIS algorithm - Extract by location
 ##'

@@ -45,7 +45,7 @@ qgis_meshexportcrosssection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection). Extracts a mesh dataset's values from lines contained in a vector layer This algorithm extracts mesh's dataset values from line contained in a vector layer. Each line is discretized with a resolution distance parameter for extraction of values on its vertices.
+QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection). Extracts a mesh dataset's values from lines contained in a vector layer. This algorithm extracts mesh's dataset values from line contained in a vector layer. Each line is discretized with a resolution distance parameter for extraction of values on its vertices.
 }
 \details{
 \subsection{Outputs description}{

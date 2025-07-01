@@ -42,7 +42,7 @@ qgis_singlesidedbuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Single sided buffer (native:singlesidedbuffer). This algorithm buffers lines by a specified distance on one side of the line only.  The segments parameter controls the number of line segments to use to approximate a quarter circle when creating rounded buffers. The join style parameter specifies whether round, miter or beveled joins should be used when buffering corners in a line. The miter limit parameter is only applicable for miter join styles, and controls the maximum distance from the buffer to use when creating a mitered join.
+QGIS Algorithm provided by QGIS (native c++) Single sided buffer (native:singlesidedbuffer). Buffers lines by a specified distance on one side of the line only. This algorithm buffers lines by a specified distance on one side of the line only.  The segments parameter controls the number of line segments to use to approximate a quarter circle when creating rounded buffers. The join style parameter specifies whether round, miter or beveled joins should be used when buffering corners in a line. The miter limit parameter is only applicable for miter join styles, and controls the maximum distance from the buffer to use when creating a mitered join.
 }
 \details{
 \subsection{Outputs description}{

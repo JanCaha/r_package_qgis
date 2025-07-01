@@ -12,7 +12,7 @@ qgis_reclassifybytable(
   RANGE_BOUNDARIES = qgisprocess:::qgis_default_value(),
   NODATA_FOR_MISSING = qgisprocess:::qgis_default_value(),
   DATA_TYPE = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -35,7 +35,7 @@ qgis_reclassifybytable(
 
 \item{DATA_TYPE}{\code{enum}  of \verb{("Byte", "Int16", "UInt16", "Int32", "UInt32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Reclassified raster. Path for new raster layer.}
 
@@ -48,7 +48,7 @@ qgis_reclassifybytable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Reclassify by table (native:reclassifybytable). This algorithm reclassifies a raster band by assigning new class values based on the ranges specified in a fixed table.
+QGIS Algorithm provided by QGIS (native c++) Reclassify by table (native:reclassifybytable). Reclassifies a raster band by assigning new class values based on the ranges specified in a fixed table. This algorithm reclassifies a raster band by assigning new class values based on the ranges specified in a fixed table.
 }
 \details{
 \subsection{Outputs description}{

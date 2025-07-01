@@ -45,7 +45,7 @@ qgis_addfieldtoattributestable(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Add field to attributes table (native:addfieldtoattributestable). This algorithm adds a new attribute to a vector layer.  The name and characteristics of the attribute are defined as parameters. The new attribute is not added to the input layer but a new layer is generated instead.
+QGIS Algorithm provided by QGIS (native c++) Add field to attributes table (native:addfieldtoattributestable). Adds a new attribute to a vector layer. This algorithm adds a new attribute to a vector layer.  The name and characteristics of the attribute are defined as parameters. The new attribute is not added to the input layer but a new layer is generated instead.
 }
 \details{
 \subsection{Outputs description}{

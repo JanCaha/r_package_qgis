@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create attribute index (native:createattributeindex). Creates an index to speed up queries made against a field in a table. Support for index creation is dependent on the layer's data provider and the field type.
+##' QGIS Algorithm provided by QGIS (native c++) Create attribute index (native:createattributeindex). Creates an index to speed up queries made against a field in a table. This algorithm creates an index to speed up queries made against a field in a table. Support for index creation is dependent on the layer's data provider and the field type.
 ##'
 ##' @title QGIS algorithm - Create attribute index
 ##'

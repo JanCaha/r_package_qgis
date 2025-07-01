@@ -36,7 +36,7 @@ qgis_filterbygeometry(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Filter by geometry type (native:filterbygeometry). Filters features by geometry type This algorithm filters features by their geometry type. Incoming features will be directed to different outputs based on whether they have a point, line or polygon geometry.
+QGIS Algorithm provided by QGIS (native c++) Filter by geometry type (native:filterbygeometry). Filters features by geometry type. This algorithm filters features by their geometry type. Incoming features will be directed to different outputs based on whether they have a point, line or polygon geometry.
 }
 \details{
 \subsection{Outputs description}{

@@ -27,7 +27,7 @@ qgis_rasterlayerproperties(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:rasterlayerproperties). This algorithm returns basic properties of the given raster layer, including the extent, size in pixels and dimensions of pixels (in map units).  If an optional band number is specified then the NoData value for the selected band will also be returned.
+QGIS Algorithm provided by QGIS (native c++) Raster layer properties (native:rasterlayerproperties). Returns basic properties of a given raster layer, including the extent, size in pixels and dimensions of pixels (in map units). This algorithm returns basic properties of the given raster layer, including the extent, size in pixels and dimensions of pixels (in map units).  If an optional band number is specified then the NoData value for the selected band will also be returned.
 }
 \details{
 \subsection{Outputs description}{

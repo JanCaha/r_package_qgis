@@ -10,6 +10,7 @@ qgis_modelerrastercalc(
   EXTENT = qgisprocess:::qgis_default_value(),
   CELL_SIZE = qgisprocess:::qgis_default_value(),
   CRS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -28,6 +29,8 @@ qgis_modelerrastercalc(
 
 \item{CRS}{\code{crs} - Output CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{OUTPUT}{\code{rasterDestination} - Calculated. Path for new raster layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
@@ -39,7 +42,7 @@ qgis_modelerrastercalc(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Raster calculator (native:modelerrastercalc). Performing algebraic operations using raster layers.
+QGIS Algorithm provided by QGIS (native c++) Raster calculator (native:modelerrastercalc). Performs algebraic operations using raster layers. This algorithm performs algebraic operations using raster layers.
 }
 \details{
 \subsection{Outputs description}{

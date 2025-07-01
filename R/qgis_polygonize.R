@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize). Creates a polygon layer from the input lines layer.
+##' QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize). Creates a polygon layer from the input lines layer. This algorithm creates a polygon layer from the input lines layer.
 ##'
 ##' @title QGIS algorithm - Polygonize
 ##'

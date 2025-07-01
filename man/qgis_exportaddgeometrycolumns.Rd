@@ -6,7 +6,7 @@
 \usage{
 qgis_exportaddgeometrycolumns(
   INPUT = qgisprocess:::qgis_default_value(),
-  CALC_METHOD = qgisprocess:::qgis_default_value(),
+  METHOD = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -17,9 +17,9 @@ qgis_exportaddgeometrycolumns(
 \arguments{
 \item{INPUT}{\code{source} - Input layer. Path to a vector layer.}
 
-\item{CALC_METHOD}{\code{enum}  of \verb{("Layer CRS", "Project CRS", "Ellipsoidal")} - Calculate using. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{METHOD}{\code{enum}  of \verb{("Cartesian Calculations in Layer's CRS", "Cartesian Calculations in Project's CRS", "Ellipsoidal Calculations")} - Calculate using. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{OUTPUT}{\code{sink} - Added geom info. Path for new vector layer.}
+\item{OUTPUT}{\code{sink} - Added geometry info. Path for new vector layer.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
@@ -30,12 +30,12 @@ qgis_exportaddgeometrycolumns(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Add geometry attributes (qgis:exportaddgeometrycolumns). This algorithm computes geometric properties of the features in a vector layer. It generates a new vector layer with the same content as the input one, but with additional attributes in its attributes table, containing geometric measurements. Depending on the geometry type of the vector layer, the attributes added to the table will be different.
+QGIS Algorithm provided by QGIS (native c++) Add geometry attributes (native:exportaddgeometrycolumns). Computes geometric properties of the features in a vector layer. This algorithm computes geometric properties of the features in a vector layer. The algorithm generates a new vector layer with the same content as the input one, but with additional attributes in its attributes table, containing geometric measurements.  Depending on the geometry type of the vector layer, the attributes added to the table will be different.
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item OUTPUT - outputVector - Added geom info
+\item OUTPUT - outputVector - Added geometry info
 }
 }
 }

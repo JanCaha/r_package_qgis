@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Raster layer histogram (qgis:rasterlayerhistogram). This algorithm generates a histogram with the values of a raster layer. The raster layer must have a single band.
+##' QGIS Algorithm provided by QGIS Raster layer histogram (qgis:rasterlayerhistogram). Generates a histogram with the values of a raster layer. This algorithm generates a histogram with the values of a raster layer. The raster layer must have a single band.
 ##'
 ##' @title QGIS algorithm - Raster layer histogram
 ##'

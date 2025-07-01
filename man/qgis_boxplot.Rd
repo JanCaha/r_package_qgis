@@ -9,6 +9,9 @@ qgis_boxplot(
   NAME_FIELD = qgisprocess:::qgis_default_value(),
   VALUE_FIELD = qgisprocess:::qgis_default_value(),
   MSD = qgisprocess:::qgis_default_value(),
+  TITLE = qgisprocess:::qgis_default_value(),
+  XAXIS_TITLE = qgisprocess:::qgis_default_value(),
+  YAXIS_TITLE = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -25,6 +28,12 @@ qgis_boxplot(
 
 \item{MSD}{\code{enum}  of \verb{("Show Mean", "Show Standard Deviation", "Don't show Mean and Standard Deviation")} - Additional Statistic Lines. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
+\item{TITLE}{\code{string} - Title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{XAXIS_TITLE}{\code{string} - X-axis title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{YAXIS_TITLE}{\code{string} - Y-axis title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{OUTPUT}{\code{fileDestination} - Box plot. Path for new file.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
@@ -36,7 +45,7 @@ qgis_boxplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Box plot (qgis:boxplot). This algorithm creates a box plot from a category and a layer field.
+QGIS Algorithm provided by QGIS Box plot (qgis:boxplot). Creates a box plot from a category and a layer field. This algorithm creates a box plot from a category and a layer field.
 }
 \details{
 \subsection{Outputs description}{

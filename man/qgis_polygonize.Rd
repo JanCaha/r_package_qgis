@@ -30,7 +30,7 @@ qgis_polygonize(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize). Creates a polygon layer from the input lines layer.
+QGIS Algorithm provided by QGIS (native c++) Polygonize (native:polygonize). Creates a polygon layer from the input lines layer. This algorithm creates a polygon layer from the input lines layer.
 }
 \details{
 \subsection{Outputs description}{

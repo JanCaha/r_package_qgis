@@ -66,7 +66,7 @@ qgis_shortestpathpointtolayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Shortest path (point to layer) (native:shortestpathpointtolayer). This algorithm computes optimal (shortest or fastest) route between given start point and multiple end points defined by point vector layer.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+QGIS Algorithm provided by QGIS (native c++) Shortest path (point to layer) (native:shortestpathpointtolayer). Computes optimal (shortest or fastest) route between a given start point and multiple end points defined by a point vector layer. This algorithm computes optimal (shortest or fastest) route between a given start point and multiple end points defined by a point vector layer.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

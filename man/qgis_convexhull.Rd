@@ -27,7 +27,7 @@ qgis_convexhull(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convex hull (native:convexhull). This algorithm calculates the convex hull for each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a convex hull calculation which covers the whole layer or grouped subsets of features.
+QGIS Algorithm provided by QGIS (native c++) Convex hull (native:convexhull). Calculates the convex hull for each feature in an input layer. This algorithm calculates the convex hull for each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a convex hull calculation which covers the whole layer or grouped subsets of features.
 }
 \details{
 \subsection{Outputs description}{

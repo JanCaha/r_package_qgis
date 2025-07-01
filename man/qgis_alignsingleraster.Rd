@@ -54,7 +54,7 @@ qgis_alignsingleraster(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Align raster (native:alignsingleraster). Aligns raster by resampling it to the same cell size and reprojecting to the same CRS as a reference raster.
+QGIS Algorithm provided by QGIS (native c++) Align raster (native:alignsingleraster). Aligns raster by resampling it to the same cell size and reprojecting to the same CRS as a reference raster. This algorithm aligns raster by resampling it to the same cell size and reprojecting to the same CRS as a reference raster.
 }
 \details{
 \subsection{Outputs description}{

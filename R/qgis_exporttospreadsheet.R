@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export to spreadsheet (native:exporttospreadsheet). This algorithm collects a number of existing layers and exports them into a spreadsheet document.  Optionally the layers can be appended to an existing spreadsheet as additional sheets.
+##' QGIS Algorithm provided by QGIS (native c++) Export to spreadsheet (native:exporttospreadsheet). Collects a number of existing layers and exports them to a spreadsheet document. This algorithm collects a number of existing layers and exports them to a spreadsheet document.  Optionally the layers can be appended to an existing spreadsheet as additional sheets.
 ##'
 ##' @title QGIS algorithm - Export to spreadsheet
 ##'

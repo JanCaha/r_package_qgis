@@ -14,7 +14,7 @@ qgis_spatialiteexecutesql(
 )
 }
 \arguments{
-\item{DATABASE}{\code{vector} - Database (connection name). Path to a vector layer.}
+\item{DATABASE}{\code{vector} - Database layer (or file). Path to a vector layer.}
 
 \item{SQL}{\code{string} - SQL query. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
@@ -27,7 +27,7 @@ qgis_spatialiteexecutesql(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) SpatiaLite execute SQL (native:spatialiteexecutesql). Executes a SQL command on a SpatiaLite database.
+QGIS Algorithm provided by QGIS (native c++) SpatiaLite execute SQL (native:spatialiteexecutesql). Executes a SQL command on a SpatiaLite database determined by an input layer or file. This algorithm executes a SQL command on a SpatiaLite database. The database is determined by an input layer or file.
 }
 \details{
 \subsection{Outputs description}{

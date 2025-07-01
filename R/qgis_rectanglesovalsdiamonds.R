@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds). Creates rectangle, oval or diamond-shaped polygons from the input point layer using specified width, height and (optional) rotation values. Multipart inputs should be promoted to singleparts first.
+##' QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds). Creates rectangle, oval or diamond-shaped polygons from an input point layer. This algorithm creates rectangle, oval or diamond-shaped polygons from the input point layer using specified width, height and (optional) rotation values. Multipart inputs should be promoted to singleparts first.
 ##'
 ##' @title QGIS algorithm - Rectangles, ovals, diamonds
 ##'

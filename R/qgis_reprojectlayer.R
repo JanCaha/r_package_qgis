@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Reproject layer (native:reprojectlayer). This algorithm reprojects a vector layer. It creates a new layer with the same features as the input one, but with geometries reprojected to a new CRS.  Attributes are not modified by this algorithm.
+##' QGIS Algorithm provided by QGIS (native c++) Reproject layer (native:reprojectlayer). Creates a vector layer with geometries transformed to a new CRS. This algorithm reprojects a vector layer. It creates a new layer with the same features as the input one, but with geometries reprojected to a new CRS.  Attributes are not modified by this algorithm.
 ##'
 ##' @title QGIS algorithm - Reproject layer
 ##'

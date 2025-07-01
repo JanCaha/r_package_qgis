@@ -39,7 +39,7 @@ qgis_writevectortiles_xyz(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (XYZ) (native:writevectortiles_xyz). This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
+QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (XYZ) (native:writevectortiles_xyz). Exports one or more vector layers to vector tiles. This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
 }
 \details{
 \subsection{Outputs description}{

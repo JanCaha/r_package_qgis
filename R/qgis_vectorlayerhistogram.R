@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Vector layer histogram (qgis:vectorlayerhistogram). This algorithm generates a histogram with the values of the attribute of a vector layer. The attribute to use for computing the histogram must be a numeric attribute.
+##' QGIS Algorithm provided by QGIS Vector layer histogram (qgis:vectorlayerhistogram). Generates a histogram with the values of the attribute of a vector layer. This algorithm generates a histogram with the values of the attribute of a vector layer. The attribute to use for computing the histogram must be a numeric attribute.
 ##'
 ##' @title QGIS algorithm - Vector layer histogram
 ##'

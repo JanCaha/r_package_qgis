@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert GPS data (native:convertgpsdata). This algorithm uses the GPSBabel tool to convert a GPS data file from a range of formats to the GPX standard format.
+##' QGIS Algorithm provided by QGIS (native c++) Convert GPS data (native:convertgpsdata). Converts a GPS data file from a range of formats to the GPX standard format. This algorithm uses the GPSBabel tool to convert a GPS data file from a range of formats to the GPX standard format.
 ##'
 ##' @title QGIS algorithm - Convert GPS data
 ##'

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the values of an attribute from the input layer.
+##' QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute). Creates a vector layer that only contains features matching an attribute value from an input layer. This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the values of an attribute from the input layer.
 ##'
 ##' @title QGIS algorithm - Extract by attribute
 ##'

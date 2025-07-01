@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Overlap analysis (native:calculatevectoroverlaps). This algorithm calculates the area and percentage cover by which features from an input layer are overlapped by features from a selection of overlay layers.  New attributes are added to the output layer reporting the total area of overlap and percentage of the input feature overlapped by each of the selected overlay layers.
+##' QGIS Algorithm provided by QGIS (native c++) Overlap analysis (native:calculatevectoroverlaps). Calculates the area and percentage cover by which features from an input layer are overlapped by features from a selection of overlay layers. This algorithm calculates the area and percentage cover by which features from an input layer are overlapped by features from a selection of overlay layers.  New attributes are added to the output layer reporting the total area of overlap and percentage of the input feature overlapped by each of the selected overlay layers.
 ##'
 ##' @title QGIS algorithm - Overlap analysis
 ##'

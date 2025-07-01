@@ -36,7 +36,7 @@ qgis_orderbyexpression(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Order by expression (native:orderbyexpression). This algorithm sorts a vector layer according to an expression. Be careful, it might not work as expected with some providers, the order might not be kept every time.  For help with QGIS expression functions, see the inbuilt help for specific functions which is available in the expression builder.
+QGIS Algorithm provided by QGIS (native c++) Order by expression (native:orderbyexpression). Sorts a vector layer according to an expression. This algorithm sorts a vector layer according to an expression. Be careful, it might not work as expected with some providers, the order might not be kept every time.  For help with QGIS expression functions, see the inbuilt help for specific functions which is available in the expression builder.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

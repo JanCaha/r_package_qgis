@@ -30,7 +30,7 @@ qgis_subdivide(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Subdivide (native:subdivide). Subdivides the geometry. The returned geometry will be a collection containing subdivided parts from the original geometry, where no part has more then the specified maximum number of nodes.  This is useful for dividing a complex geometry into less complex parts, which are better able to be spatially indexed and faster to perform further operations such as intersects on. The returned geometry parts may not be valid and may contain self-intersections.  Curved geometries will be segmentized before subdivision.
+QGIS Algorithm provided by QGIS (native c++) Subdivide (native:subdivide). Subdivides the geometry into parts that have less than a specified maximum number of nodes. This algorithm subdivides the geometry. The returned geometry will be a collection containing subdivided parts from the original geometry, where no part has more than the specified maximum number of nodes.  This is useful for dividing a complex geometry into less complex parts, which are better able to be spatially indexed and faster to perform further operations such as intersects on. The returned geometry parts may not be valid and may contain self-intersections.  Curved geometries will be segmentized before subdivision.
 }
 \details{
 \subsection{Outputs description}{

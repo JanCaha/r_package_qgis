@@ -42,7 +42,7 @@ qgis_fieldcalculator(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator). This algorithm computes a new vector layer with the same features of the input layer, but either overwriting an existing attribute or adding an additional attribute. The values of this field are computed from each feature using an expression, based on the properties and attributes of the feature. Note that if "Field name" is an existing field in the layer then all the rest of the field settings are ignored.
+QGIS Algorithm provided by QGIS (native c++) Field calculator (native:fieldcalculator). Computes a new vector layer with the same features of the input layer, but either overwriting an existing attribute or adding an additional attribute. This algorithm computes a new vector layer with the same features of the input layer, but either overwriting an existing attribute or adding an additional attribute. The values of this field are computed from each feature using an expression, based on the properties and attributes of the feature. Note that if "Field name" is an existing field in the layer then all the rest of the field settings are ignored.
 }
 \details{
 \subsection{Outputs description}{

@@ -39,7 +39,7 @@ qgis_lineintersections(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Line intersections (native:lineintersections). This algorithm creates point features where the lines in the Intersect layer intersect the lines in the Input layer.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+QGIS Algorithm provided by QGIS (native c++) Line intersections (native:lineintersections). Creates point features at the intersection of lines from two different layers. This algorithm creates point features where the lines in the Intersect layer intersect the lines in the Input layer.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

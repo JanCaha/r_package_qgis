@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Create random raster layer (negative binomial distribution) (native:createrandomnegativebinomialrasterlayer). Generates a raster layer for given extent and cell size filled with negative binomially distributed random values. By default, the values will be chosen given a distribution parameter k of 10.0 and a probability of 0.5. This can be overridden by using the advanced parameters for k and probability. The raster data type is set to Integer types (Integer 16 by default). The negative binomial distribution random values are defined as positive integer numbers. A floating point raster will represent a cast of integer values to floating point.
+##' QGIS Algorithm provided by QGIS (native c++) Create random raster layer (negative binomial distribution) (native:createrandomnegativebinomialrasterlayer). Generates a raster layer for a given extent and cell size filled with negative binomially distributed random values. This algorithm generates a raster layer for a given extent and cell size filled with negative binomially distributed random values. By default, the values will be chosen given a distribution parameter k of 10.0 and a probability of 0.5. This can be overridden by using the advanced parameters for k and probability. The raster data type is set to Integer types (Integer 16 by default). The negative binomial distribution random values are defined as positive integer numbers. A floating point raster will represent a cast of integer values to floating point.
 ##'
 ##' @title QGIS algorithm - Create random raster layer (negative binomial distribution)
 ##'
@@ -8,7 +8,7 @@
 ##' @param OUTPUT_TYPE `enum`  of `("Integer16", "Unsigned Integer16", "Integer32", "Unsigned Integer32", "Float32", "Float64")` - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param K_PARAMETER `number` - Distribution parameter k. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param PROBABILITY `number` - Probability. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
-##' @param CREATE_OPTIONS `string` - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
+##' @param CREATION_OPTIONS `string` - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.
 ##' @param OUTPUT `rasterDestination` - Output raster. Path for new raster layer.
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
@@ -24,15 +24,15 @@
 ##' @md
 ##' @importFrom qgisprocess qgis_run_algorithm
 
-qgis_createrandomnegativebinomialrasterlayer <- function(EXTENT = qgisprocess:::qgis_default_value(), TARGET_CRS = qgisprocess:::qgis_default_value(), PIXEL_SIZE = qgisprocess:::qgis_default_value(), OUTPUT_TYPE = qgisprocess:::qgis_default_value(), K_PARAMETER = qgisprocess:::qgis_default_value(), PROBABILITY = qgisprocess:::qgis_default_value(), CREATE_OPTIONS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
+qgis_createrandomnegativebinomialrasterlayer <- function(EXTENT = qgisprocess:::qgis_default_value(), TARGET_CRS = qgisprocess:::qgis_default_value(), PIXEL_SIZE = qgisprocess:::qgis_default_value(), OUTPUT_TYPE = qgisprocess:::qgis_default_value(), K_PARAMETER = qgisprocess:::qgis_default_value(), PROBABILITY = qgisprocess:::qgis_default_value(), CREATION_OPTIONS = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
   check_algorithm_necessities("native:createrandomnegativebinomialrasterlayer")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("native:createrandomnegativebinomialrasterlayer", `EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `K_PARAMETER` = K_PARAMETER, `PROBABILITY` = PROBABILITY, `CREATE_OPTIONS` = CREATE_OPTIONS, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:createrandomnegativebinomialrasterlayer", `EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `K_PARAMETER` = K_PARAMETER, `PROBABILITY` = PROBABILITY, `CREATION_OPTIONS` = CREATION_OPTIONS, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("native:createrandomnegativebinomialrasterlayer", `EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `K_PARAMETER` = K_PARAMETER, `PROBABILITY` = PROBABILITY, `CREATE_OPTIONS` = CREATE_OPTIONS, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:createrandomnegativebinomialrasterlayer", `EXTENT` = EXTENT, `TARGET_CRS` = TARGET_CRS, `PIXEL_SIZE` = PIXEL_SIZE, `OUTPUT_TYPE` = OUTPUT_TYPE, `K_PARAMETER` = K_PARAMETER, `PROBABILITY` = PROBABILITY, `CREATION_OPTIONS` = CREATION_OPTIONS, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
       )
   }
 

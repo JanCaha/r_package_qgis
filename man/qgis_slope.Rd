@@ -30,7 +30,7 @@ qgis_slope(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Slope (native:slope). This algorithm calculates the angle of inclination of the terrain from an input raster layer. The slope is expressed in degrees.
+QGIS Algorithm provided by QGIS (native c++) Slope (native:slope). Calculates the angle of inclination of the terrain from an input raster layer. This algorithm calculates the angle of inclination of the terrain from an input raster layer. The slope is expressed in degrees.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by GDAL Build virtual vector (gdal:buildvirtualvector). This algorithm creates a virtual layer that contains a set of vector layers.  The output virtual layer will not be opened in the current project.
+##' QGIS Algorithm provided by GDAL Build virtual vector (gdal:buildvirtualvector). This algorithm creates a virtual layer that contains a set of vector layers.
 ##'
 ##' @title QGIS algorithm - Build virtual vector
 ##'

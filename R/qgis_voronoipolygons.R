@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Voronoi polygons (native:voronoipolygons). Generates a polygon layer containing the Voronoi diagram corresponding to input points.
+##' QGIS Algorithm provided by QGIS (native c++) Voronoi polygons (native:voronoipolygons). Generates a polygon layer containing the Voronoi diagram corresponding to input points. This algorithm generates a polygon layer containing the Voronoi diagram corresponding to input points.
 ##'
 ##' @title QGIS algorithm - Voronoi polygons
 ##'

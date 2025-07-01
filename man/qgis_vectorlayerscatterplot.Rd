@@ -8,6 +8,12 @@ qgis_vectorlayerscatterplot(
   INPUT = qgisprocess:::qgis_default_value(),
   XFIELD = qgisprocess:::qgis_default_value(),
   YFIELD = qgisprocess:::qgis_default_value(),
+  HOVERTEXT = qgisprocess:::qgis_default_value(),
+  TITLE = qgisprocess:::qgis_default_value(),
+  XAXIS_TITLE = qgisprocess:::qgis_default_value(),
+  YAXIS_TITLE = qgisprocess:::qgis_default_value(),
+  XAXIS_LOG = qgisprocess:::qgis_default_value(),
+  YAXIS_LOG = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -22,6 +28,18 @@ qgis_vectorlayerscatterplot(
 
 \item{YFIELD}{\code{field} - Y attribute. The name of an existing field. ; delimited list of existing field names.}
 
+\item{HOVERTEXT}{\code{expression} - Hover text. A valid QGIS expression string, e.g "road_name" = 'MAIN RD'.}
+
+\item{TITLE}{\code{string} - Title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{XAXIS_TITLE}{\code{string} - X-axis title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{YAXIS_TITLE}{\code{string} - Y-axis title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{XAXIS_LOG}{\code{boolean} - Use logarithmic scale for x-axis. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{YAXIS_LOG}{\code{boolean} - Use logarithmic scale for y-axis. 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{OUTPUT}{\code{fileDestination} - Scatterplot. Path for new file.}
 
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
@@ -33,7 +51,7 @@ qgis_vectorlayerscatterplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Vector layer scatterplot (qgis:vectorlayerscatterplot). This algorithm creates a simple X - Y scatter plot for a vector layer.
+QGIS Algorithm provided by QGIS Vector layer scatterplot (qgis:vectorlayerscatterplot). Creates a simple X - Y scatter plot for a vector layer. This algorithm creates a simple X - Y scatter plot for a vector layer.
 }
 \details{
 \subsection{Outputs description}{

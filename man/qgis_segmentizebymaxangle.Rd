@@ -30,7 +30,7 @@ qgis_segmentizebymaxangle(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum angle (native:segmentizebymaxangle). This algorithm segmentizes a geometry by converting curved sections to linear sections.  The segmentization is performed by specifying the maximum allowed radius angle between vertices on the straightened geometry (e.g the angle of the arc created from the original arc center to consecutive output vertices on the linearized geometry).  Non-curved geometries will be retained without change.
+QGIS Algorithm provided by QGIS (native c++) Segmentize by maximum angle (native:segmentizebymaxangle). Segmentizes a geometry by converting curved sections to linear sections, given the maximum allowed radius angle between vertices on the straightened geometry. This algorithm segmentizes a geometry by converting curved sections to linear sections.  The segmentization is performed by specifying the maximum allowed radius angle between vertices on the straightened geometry (e.g the angle of the arc created from the original arc center to consecutive output vertices on the linearized geometry).  Non-curved geometries will be retained without change.
 }
 \details{
 \subsection{Outputs description}{

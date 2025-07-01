@@ -27,7 +27,7 @@ qgis_saveselectedfeatures(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract selected features (native:saveselectedfeatures). This algorithm creates a new layer with all the selected features in a given vector layer.  If the selected layer has no selected features, the newly created layer will be empty.
+QGIS Algorithm provided by QGIS (native c++) Extract selected features (native:saveselectedfeatures). Creates a layer with all the selected features in a given vector layer. This algorithm creates a new layer with all the selected features in a given vector layer.  If the selected layer has no selected features, the newly created layer will be empty.
 }
 \details{
 \subsection{Outputs description}{

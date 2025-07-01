@@ -54,7 +54,7 @@ qgis_affinetransform(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Affine transform (native:affinetransform). Applies an affine transformation to geometries. Applies an affine transformation to the geometries from a layer. Affine transformations can include translation, scaling and rotation. The operations are performed in a scale, rotation, translation order.  Z and M values present in the geometry can also be translated and scaled independently.
+QGIS Algorithm provided by QGIS (native c++) Affine transform (native:affinetransform). Applies an affine transformation to geometries. This algorithm applies an affine transformation to the geometries from a layer. Affine transformations can include translation, scaling and rotation. The operations are performed in a scale, rotation, translation order.  Z and M values present in the geometry can also be translated and scaled independently.
 }
 \details{
 \subsection{Outputs description}{

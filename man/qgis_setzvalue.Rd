@@ -30,7 +30,7 @@ qgis_setzvalue(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set Z value (native:setzvalue). This algorithm sets the Z value for geometries in a layer.  If Z values already exist in the layer, they will be overwritten with the new value. If no Z values exist, the geometry will be upgraded to include Z values and the specified value used as the initial Z value for all geometries.
+QGIS Algorithm provided by QGIS (native c++) Set Z value (native:setzvalue). Sets the Z value for geometries in a layer. This algorithm sets the Z value for geometries in a layer.  If Z values already exist in the layer, they will be overwritten with the new value. If no Z values exist, the geometry will be upgraded to include Z values and the specified value used as the initial Z value for all geometries.
 }
 \details{
 \subsection{Outputs description}{

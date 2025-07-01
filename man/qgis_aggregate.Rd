@@ -33,7 +33,7 @@ qgis_aggregate(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Aggregate (native:aggregate). This algorithm take a vector or table layer and aggregate features based on a group by expression. Features for which group by expression return the same value are grouped together.  It is possible to group all source features together using constant value in group by parameter, example: NULL.  It is also possible to group features using multiple fields using Array function, example: Array("Field1", "Field2").  Geometries (if present) are combined into one multipart geometry for each group.  Output attributes are computed depending on each given aggregate definition.
+QGIS Algorithm provided by QGIS (native c++) Aggregate (native:aggregate). Aggregates features based on a group by expression, combining geometries (if present) into one multipart geometry for each group. This algorithm takes a vector or table layer and aggregates features based on a group by expression. Features for which group by expression return the same value are grouped together.  It is possible to group all source features together using constant value in group by parameter, example: NULL.  It is also possible to group features using multiple fields using Array function, example: Array("Field1", "Field2").  Geometries (if present) are combined into one multipart geometry for each group.  Output attributes are computed depending on each given aggregate definition.
 }
 \details{
 \subsection{Outputs description}{

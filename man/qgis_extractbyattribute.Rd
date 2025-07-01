@@ -39,7 +39,7 @@ qgis_extractbyattribute(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute). This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the values of an attribute from the input layer.
+QGIS Algorithm provided by QGIS (native c++) Extract by attribute (native:extractbyattribute). Creates a vector layer that only contains features matching an attribute value from an input layer. This algorithm creates a new vector layer that only contains matching features from an input layer. The criteria for adding features to the resulting layer is defined based on the values of an attribute from the input layer.
 }
 \details{
 \subsection{Outputs description}{

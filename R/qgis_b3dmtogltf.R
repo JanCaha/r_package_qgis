@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert B3DM to GLTF (native:b3dmtogltf). Converts files from the legacy B3DM format to GLTF.
+##' QGIS Algorithm provided by QGIS (native c++) Convert B3DM to GLTF (native:b3dmtogltf). Converts files from the legacy B3DM format to GLTF. This algorithm converts files from the legacy B3DM format to GLTF.
 ##'
 ##' @title QGIS algorithm - Convert B3DM to GLTF
 ##'

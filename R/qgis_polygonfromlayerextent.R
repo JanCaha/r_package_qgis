@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent). This algorithm takes a map layer and generates a new vector layer with the minimum bounding box (rectangle polygon with N-S orientation) that covers the input layer. Optionally, the extent can be enlarged to a rounded value.
+##' QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent). Generates a vector layer with the minimum bounding box that covers the input layer. This algorithm takes a map layer and generates a new vector layer with the minimum bounding box (rectangle polygon with N-S orientation) that covers the input layer. Optionally, the extent can be enlarged to a rounded value.
 ##'
 ##' @title QGIS algorithm - Extract layer extent
 ##'

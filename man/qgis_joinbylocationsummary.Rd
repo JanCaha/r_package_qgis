@@ -42,7 +42,7 @@ qgis_joinbylocationsummary(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Join attributes by location (summary) (native:joinbylocationsummary). Calculate summaries of attributes from one vector layer to another by location. This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one.  The algorithm calculates a statistical summary for the values from matching features in the second layer( e.g. maximum value, mean value, etc ).
+QGIS Algorithm provided by QGIS (native c++) Join attributes by location (summary) (native:joinbylocationsummary). Calculates summaries of attributes from one vector layer to another by location. This algorithm takes an input vector layer and creates a new vector layer that is an extended version of the input one, with additional attributes in its attribute table.  The additional attributes and their values are taken from a second vector layer. A spatial criteria is applied to select the values from the second layer that are added to each feature from the first layer in the resulting one.  The algorithm calculates a statistical summary for the values from matching features in the second layer( e.g. maximum value, mean value, etc ).
 }
 \details{
 \subsection{Outputs description}{

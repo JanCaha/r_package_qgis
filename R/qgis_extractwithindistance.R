@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance). This algorithm creates a new vector layer that only contains matching features from an input layer. Features are copied wherever they are within the specified maximum distance from the features in an additional reference layer.
+##' QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance). Creates a new vector layer with features that are within a specified distance from features in another layer. This algorithm creates a new vector layer that only contains matching features from an input layer. Features are copied wherever they are within the specified maximum distance from the features in an additional reference layer.
 ##'
 ##' @title QGIS algorithm - Extract within distance
 ##'

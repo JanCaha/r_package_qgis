@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade). This algorithm calculates the hillshade of the Digital Terrain Model in input.  The shading of the layer is calculated according to the sun position (azimuth and elevation).
+##' QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade). Calculates the hillshade of a Digital Terrain Model. This algorithm calculates the hillshade of the Digital Terrain Model in input.  The shading of the layer is calculated according to the sun position (azimuth and elevation).
 ##'
 ##' @title QGIS algorithm - Hillshade
 ##'

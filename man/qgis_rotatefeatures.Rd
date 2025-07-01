@@ -33,7 +33,7 @@ qgis_rotatefeatures(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures). This algorithm rotates feature geometries, by the specified angle clockwise  Optionally, the rotation can occur around a preset point. If not set the rotation occurs around each feature's centroid.
+QGIS Algorithm provided by QGIS (native c++) Rotate (native:rotatefeatures). Rotates feature geometries by a specified angle clockwise. This algorithm rotates feature geometries by the specified angle clockwise.  Optionally, the rotation can occur around a preset point. If not set the rotation occurs around each feature's centroid.
 }
 \details{
 \subsection{Outputs description}{

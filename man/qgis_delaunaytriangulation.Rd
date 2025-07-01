@@ -33,7 +33,7 @@ qgis_delaunaytriangulation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Delaunay triangulation (native:delaunaytriangulation). Creates a polygon layer with the Delaunay triangulation corresponding to a points layer.
+QGIS Algorithm provided by QGIS (native c++) Delaunay triangulation (native:delaunaytriangulation). Creates a polygon layer with the Delaunay triangulation corresponding to a points layer. This algorithm creates a polygon layer with the Delaunay triangulation corresponding to a points layer.
 }
 \details{
 \subsection{Outputs description}{

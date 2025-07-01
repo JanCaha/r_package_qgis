@@ -33,7 +33,7 @@ qgis_uploadgpsdata(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Upload GPS data to device (native:uploadgpsdata). This algorithm uses the GPSBabel tool to upload data to a GPS device from the GPX standard format.
+QGIS Algorithm provided by QGIS (native c++) Upload GPS data to device (native:uploadgpsdata). Uploads data to a GPS device from the GPX standard format. This algorithm uses the GPSBabel tool to upload data to a GPS device from the GPX standard format.
 }
 \details{
 \subsection{Outputs description}{

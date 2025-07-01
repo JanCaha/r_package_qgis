@@ -39,7 +39,7 @@ qgis_geometrybyexpression(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Geometry by expression (native:geometrybyexpression). This algorithm updates existing geometries (or creates new geometries) for input features by use of a QGIS expression. This allows complex geometry modifications which can utilize all the flexibility of the QGIS expression engine to manipulate and create geometries for output features.  For help with QGIS expression functions, see the inbuilt help for specific functions which is available in the expression builder.
+QGIS Algorithm provided by QGIS (native c++) Geometry by expression (native:geometrybyexpression). Updates existing geometries (or creates new geometries) for input features by use of a QGIS expression. This algorithm updates existing geometries (or creates new geometries) for input features by use of a QGIS expression. This allows complex geometry modifications which can utilize all the flexibility of the QGIS expression engine to manipulate and create geometries for output features.  For help with QGIS expression functions, see the inbuilt help for specific functions which is available in the expression builder.
 }
 \details{
 \subsection{Outputs description}{

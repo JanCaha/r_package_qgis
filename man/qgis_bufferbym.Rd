@@ -30,7 +30,7 @@ qgis_bufferbym(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Variable width buffer (by M value) (native:bufferbym). This algorithm creates variable width buffers along lines, using the M value of the line geometries as the diameter of the buffer at each vertex.
+QGIS Algorithm provided by QGIS (native c++) Variable width buffer (by M value) (native:bufferbym). Creates variable width buffers along lines, using the M value of the line geometries as the diameter of the buffer at each vertex. This algorithm creates variable width buffers along lines, using the M value of the line geometries as the diameter of the buffer at each vertex.
 }
 \details{
 \subsection{Outputs description}{

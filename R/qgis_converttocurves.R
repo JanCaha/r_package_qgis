@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert to curved geometries (native:converttocurves). This algorithm converts a geometry into its curved geometry equivalent.  Already curved geometries will be retained without change.
+##' QGIS Algorithm provided by QGIS (native c++) Convert to curved geometries (native:converttocurves). Converts a geometry into its curved geometry equivalent. This algorithm converts a geometry into its curved geometry equivalent.  Already curved geometries will be retained without change.
 ##'
 ##' @title QGIS algorithm - Convert to curved geometries
 ##'

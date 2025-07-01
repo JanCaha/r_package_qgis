@@ -30,7 +30,7 @@ qgis_convertgpxfeaturetype(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert GPX feature type (native:convertgpxfeaturetype). This algorithm uses the GPSBabel tool to convert GPX features from one type to another (e.g. converting all waypoint features to a route feature).
+QGIS Algorithm provided by QGIS (native c++) Convert GPX feature type (native:convertgpxfeaturetype). Converts GPX features from one type to another. This algorithm uses the GPSBabel tool to convert GPX features from one type to another (e.g. converting all waypoint features to a route feature).
 }
 \details{
 \subsection{Outputs description}{

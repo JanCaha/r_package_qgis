@@ -48,7 +48,7 @@ qgis_heatmapkerneldensityestimation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Heatmap (Kernel Density Estimation) (qgis:heatmapkerneldensityestimation). Creates a density (heatmap) raster of an input point vector layer using kernel density estimation. Heatmaps allow easy identification of hotspots and clustering of points. The density is calculated based on the number of points in a location, with larger numbers of clustered points resulting in larger values.
+QGIS Algorithm provided by QGIS Heatmap (Kernel Density Estimation) (qgis:heatmapkerneldensityestimation). Creates a heatmap from points using kernel density estimation. Creates a density (heatmap) raster of an input point vector layer using kernel density estimation. Heatmaps allow easy identification of hotspots and clustering of points. The density is calculated based on the number of points in a location, with larger numbers of clustered points resulting in larger values.
 }
 \details{
 \subsection{Outputs description}{

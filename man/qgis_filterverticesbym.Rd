@@ -33,7 +33,7 @@ qgis_filterverticesbym(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Filter vertices by M value (native:filterverticesbym). Filters away vertices based on their m-value, returning geometries with only vertex points that have a m-value ≥ the specified minimum value and ≤ the maximum value.  If the minimum value is not specified then only the maximum value is tested, and similarly if the maximum value is not specified then only the minimum value is tested.  Depending on the input geometry attributes and the filters used, the resultant geometries created by this algorithm may no longer be valid.
+QGIS Algorithm provided by QGIS (native c++) Filter vertices by M value (native:filterverticesbym). Filters away vertices based on their m-value value. Filters away vertices based on their m-value, returning geometries with only vertex points that have a m-value ≥ the specified minimum value and ≤ the maximum value.  If the minimum value is not specified then only the maximum value is tested, and similarly if the maximum value is not specified then only the minimum value is tested.  Depending on the input geometry attributes and the filters used, the resultant geometries created by this algorithm may no longer be valid.
 }
 \details{
 \subsection{Outputs description}{

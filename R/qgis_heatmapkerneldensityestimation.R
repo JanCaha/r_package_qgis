@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Heatmap (Kernel Density Estimation) (qgis:heatmapkerneldensityestimation). Creates a density (heatmap) raster of an input point vector layer using kernel density estimation. Heatmaps allow easy identification of hotspots and clustering of points. The density is calculated based on the number of points in a location, with larger numbers of clustered points resulting in larger values.
+##' QGIS Algorithm provided by QGIS Heatmap (Kernel Density Estimation) (qgis:heatmapkerneldensityestimation). Creates a heatmap from points using kernel density estimation. Creates a density (heatmap) raster of an input point vector layer using kernel density estimation. Heatmaps allow easy identification of hotspots and clustering of points. The density is calculated based on the number of points in a location, with larger numbers of clustered points resulting in larger values.
 ##'
 ##' @title QGIS algorithm - Heatmap (Kernel Density Estimation)
 ##'

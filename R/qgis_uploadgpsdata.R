@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Upload GPS data to device (native:uploadgpsdata). This algorithm uses the GPSBabel tool to upload data to a GPS device from the GPX standard format.
+##' QGIS Algorithm provided by QGIS (native c++) Upload GPS data to device (native:uploadgpsdata). Uploads data to a GPS device from the GPX standard format. This algorithm uses the GPSBabel tool to upload data to a GPS device from the GPX standard format.
 ##'
 ##' @title QGIS algorithm - Upload GPS data to device
 ##'

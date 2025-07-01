@@ -10,7 +10,7 @@ qgis_createconstantrasterlayer(
   PIXEL_SIZE = qgisprocess:::qgis_default_value(),
   NUMBER = qgisprocess:::qgis_default_value(),
   OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -29,7 +29,7 @@ qgis_createconstantrasterlayer(
 
 \item{OUTPUT_TYPE}{\code{enum}  of \verb{("Byte", "Integer16", "Unsigned Integer16", "Integer32", "Unsigned Integer32", "Float32", "Float64")} - Output raster data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Constant. Path for new raster layer.}
 
@@ -42,7 +42,7 @@ qgis_createconstantrasterlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create constant raster layer (native:createconstantrasterlayer). Generates raster layer for given extent and cell size filled with the specified value. Additionally an output data type can be specified. The algorithm will abort if a value has been entered that cannot be represented by the selected output raster data type.
+QGIS Algorithm provided by QGIS (native c++) Create constant raster layer (native:createconstantrasterlayer). Generates a raster layer for a given extent and cell size filled with a single constant value. This algorithm generates a raster layer for a given extent and cell size filled with a single constant value. Additionally an output data type can be specified. The algorithm will abort if a value has been entered that cannot be represented by the selected output raster data type.
 }
 \details{
 \subsection{Outputs description}{

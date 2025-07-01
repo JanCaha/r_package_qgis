@@ -30,7 +30,7 @@ qgis_fixgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Fix geometries (native:fixgeometries). This algorithm attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. Already-valid geometries are returned without further intervention. Always outputs multi-geometry layer.  NOTE: M values will be dropped from the output.
+QGIS Algorithm provided by QGIS (native c++) Fix geometries (native:fixgeometries). Attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. This algorithm attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. Already-valid geometries are returned without further intervention. Always outputs multi-geometry layer.  NOTE: M values will be dropped from the output.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Shortest path (point to point) (native:shortestpathpointtopoint). This algorithm computes optimal (shortest or fastest) route between given start and end points.
+##' QGIS Algorithm provided by QGIS (native c++) Shortest path (point to point) (native:shortestpathpointtopoint). Computes optimal (shortest or fastest) route between given start and end points. This algorithm computes optimal (shortest or fastest) route between given start and end points.
 ##'
 ##' @title QGIS algorithm - Shortest path (point to point)
 ##'

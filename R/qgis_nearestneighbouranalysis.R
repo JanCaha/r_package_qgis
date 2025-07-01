@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Nearest neighbour analysis (native:nearestneighbouranalysis). This algorithm performs nearest neighbor analysis for a point layer.  The output describes how the data are distributed (clustered, randomly or distributed).  Output is generated as an HTML file with the computed statistical values.
+##' QGIS Algorithm provided by QGIS (native c++) Nearest neighbour analysis (native:nearestneighbouranalysis). Performs nearest neighbor analysis for a point layer. This algorithm performs nearest neighbor analysis for a point layer.  The output describes how the data are distributed (clustered, randomly or distributed).  Output is generated as an HTML file with the computed statistical values.
 ##'
 ##' @title QGIS algorithm - Nearest neighbour analysis
 ##'

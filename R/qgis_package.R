@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Package layers (native:package). This algorithm collects a number of existing layers and packages them together into a single GeoPackage database.
+##' QGIS Algorithm provided by QGIS (native c++) Package layers (native:package). Packages a number of existing layers together into a single GeoPackage database. This algorithm collects a number of existing layers and packages them together into a single GeoPackage database.
 ##'
 ##' @title QGIS algorithm - Package layers
 ##'

@@ -33,7 +33,7 @@ qgis_removeduplicatesbyattribute(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Delete duplicates by attribute (native:removeduplicatesbyattribute). Removes duplicate rows by a field value (or multiple field values). Removes duplicate rows by a field value (or multiple field values). The first matching row will be retained, and duplicates will be discarded.  Optionally, these duplicate records can be saved to a separate output for analysis.
+QGIS Algorithm provided by QGIS (native c++) Delete duplicates by attribute (native:removeduplicatesbyattribute). Removes duplicate rows by a field value (or multiple field values). This algorithm removes duplicate rows by a field value (or multiple field values). The first matching row will be retained, and duplicates will be discarded.  Optionally, these duplicate records can be saved to a separate output for analysis.
 }
 \details{
 \subsection{Outputs description}{

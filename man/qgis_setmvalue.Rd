@@ -30,7 +30,7 @@ qgis_setmvalue(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Set M value (native:setmvalue). This algorithm sets the M value for geometries in a layer.  If M values already exist in the layer, they will be overwritten with the new value. If no M values exist, the geometry will be upgraded to include M values and the specified value used as the initial M value for all geometries.
+QGIS Algorithm provided by QGIS (native c++) Set M value (native:setmvalue). Sets the M value for geometries in a layer. This algorithm sets the M value for geometries in a layer.  If M values already exist in the layer, they will be overwritten with the new value. If no M values exist, the geometry will be upgraded to include M values and the specified value used as the initial M value for all geometries.
 }
 \details{
 \subsection{Outputs description}{

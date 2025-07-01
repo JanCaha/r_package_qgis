@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Find projection (qgis:findprojection). This algorithm allows creation of a shortlist of possible candidate coordinate reference systems for a layer with an unknown projection. The expected area which the layer should reside in must be specified via the target area parameter. The algorithm operates by testing the layer's extent in every known reference system and listing any in which the bounds would fall near the target area if the layer was in this projection.
+##' QGIS Algorithm provided by QGIS (native c++) Find projection (native:findprojection). Creates a list of possible candidate coordinate reference systems for a layer with an unknown projection. Creates a list of possible candidate coordinate reference systems for a layer with an unknown projection.  The expected area which the layer should reside in must be specified via the target area parameter.  The algorithm operates by testing the layer's extent in every known reference system and listing any in which the bounds would fall within the target area if the layer was in this projection.
 ##'
 ##' @title QGIS algorithm - Find projection
 ##'
@@ -21,13 +21,13 @@
 
 qgis_findprojection <- function(INPUT = qgisprocess:::qgis_default_value(), TARGET_AREA = qgisprocess:::qgis_default_value(), OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
-  check_algorithm_necessities("qgis:findprojection")
+  check_algorithm_necessities("native:findprojection")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("qgis:findprojection", `INPUT` = INPUT, `TARGET_AREA` = TARGET_AREA, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:findprojection", `INPUT` = INPUT, `TARGET_AREA` = TARGET_AREA, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("qgis:findprojection", `INPUT` = INPUT, `TARGET_AREA` = TARGET_AREA, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:findprojection", `INPUT` = INPUT, `TARGET_AREA` = TARGET_AREA, `OUTPUT` = OUTPUT,..., .quiet = .quiet)
       )
   }
 

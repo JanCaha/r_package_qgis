@@ -36,7 +36,7 @@ qgis_zonalhistogram(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram). This algorithm appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons.
+QGIS Algorithm provided by QGIS (native c++) Zonal histogram (native:zonalhistogram). Appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons. This algorithm appends fields representing counts of each unique value from a raster layer contained within zones defined as polygons.
 }
 \details{
 \subsection{Outputs description}{

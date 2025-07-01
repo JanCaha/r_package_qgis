@@ -36,7 +36,7 @@ qgis_taperedbuffer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Tapered buffers (native:taperedbuffer). This algorithm creates tapered buffers along line geometries, using a specified start and end buffer diameter corresponding to the buffer diameter at the start and end of the linestrings.
+QGIS Algorithm provided by QGIS (native c++) Tapered buffers (native:taperedbuffer). Creates tapered buffers along line geometries. This algorithm creates tapered buffers along line geometries, using a specified start and end buffer diameter corresponding to the buffer diameter at the start and end of the linestrings.
 }
 \details{
 \subsection{Outputs description}{

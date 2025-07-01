@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Keep N biggest parts (native:keepnbiggestparts). This algorithm takes a polygon layer and creates a new polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts.
+##' QGIS Algorithm provided by QGIS (native c++) Keep N biggest parts (native:keepnbiggestparts). Creates a polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts. This algorithm takes a polygon layer and creates a new polygon layer in which multipart geometries have been removed, leaving only the n largest (in terms of area) parts.
 ##'
 ##' @title QGIS algorithm - Keep N biggest parts
 ##'

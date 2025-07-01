@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Delete duplicates by attribute (native:removeduplicatesbyattribute). Removes duplicate rows by a field value (or multiple field values). Removes duplicate rows by a field value (or multiple field values). The first matching row will be retained, and duplicates will be discarded.  Optionally, these duplicate records can be saved to a separate output for analysis.
+##' QGIS Algorithm provided by QGIS (native c++) Delete duplicates by attribute (native:removeduplicatesbyattribute). Removes duplicate rows by a field value (or multiple field values). This algorithm removes duplicate rows by a field value (or multiple field values). The first matching row will be retained, and duplicates will be discarded.  Optionally, these duplicate records can be saved to a separate output for analysis.
 ##'
 ##' @title QGIS algorithm - Delete duplicates by attribute
 ##'

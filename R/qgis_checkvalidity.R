@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Check validity (qgis:checkvalidity). This algorithm performs a validity check on the geometries of a vector layer. The geometries are classified in three groups (valid, invalid and error), and a vector layer is generated with the features in each of these categories. By default the algorithm uses the strict OGC definition of polygon validity, where a polygon is marked as invalid if a self-intersecting ring causes an interior hole. If the "Ignore ring self intersections" option is checked, then this rule will be ignored and a more lenient validity check will be performed. The GEOS method is faster and performs better on larger geometries, but is limited to only returning the first error encountered in a geometry. The QGIS method will be slower but reports all errors encountered in the geometry, not just the first.
+##' QGIS Algorithm provided by QGIS (native c++) Check validity (native:checkvalidity). Performs a validity check on the geometries of a vector layer and classifies them in three groups (valid, invalid and error). This algorithm performs a validity check on the geometries of a vector layer.  The geometries are classified in three groups (valid, invalid and error), and a vector layer is generated with the features in each of these categories.  By default the algorithm uses the strict OGC definition of polygon validity, where a polygon is marked as invalid if a self-intersecting ring causes an interior hole. If the 'Ignore ring self intersections' option is checked, then this rule will be ignored and a more lenient validity check will be performed.  The GEOS method is faster and performs better on larger geometries, but is limited to only returning the first error encountered in a geometry. The QGIS method will be slower but reports all errors encountered in the geometry, not just the first.
 ##'
 ##' @title QGIS algorithm - Check validity
 ##'
@@ -29,13 +29,13 @@
 
 qgis_checkvalidity <- function(INPUT_LAYER = qgisprocess:::qgis_default_value(), METHOD = qgisprocess:::qgis_default_value(), IGNORE_RING_SELF_INTERSECTION = qgisprocess:::qgis_default_value(), VALID_OUTPUT = qgisprocess:::qgis_default_value(), INVALID_OUTPUT = qgisprocess:::qgis_default_value(), ERROR_OUTPUT = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
-  check_algorithm_necessities("qgis:checkvalidity")
+  check_algorithm_necessities("native:checkvalidity")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("qgis:checkvalidity", `INPUT_LAYER` = INPUT_LAYER, `METHOD` = METHOD, `IGNORE_RING_SELF_INTERSECTION` = IGNORE_RING_SELF_INTERSECTION, `VALID_OUTPUT` = VALID_OUTPUT, `INVALID_OUTPUT` = INVALID_OUTPUT, `ERROR_OUTPUT` = ERROR_OUTPUT,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:checkvalidity", `INPUT_LAYER` = INPUT_LAYER, `METHOD` = METHOD, `IGNORE_RING_SELF_INTERSECTION` = IGNORE_RING_SELF_INTERSECTION, `VALID_OUTPUT` = VALID_OUTPUT, `INVALID_OUTPUT` = INVALID_OUTPUT, `ERROR_OUTPUT` = ERROR_OUTPUT,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("qgis:checkvalidity", `INPUT_LAYER` = INPUT_LAYER, `METHOD` = METHOD, `IGNORE_RING_SELF_INTERSECTION` = IGNORE_RING_SELF_INTERSECTION, `VALID_OUTPUT` = VALID_OUTPUT, `INVALID_OUTPUT` = INVALID_OUTPUT, `ERROR_OUTPUT` = ERROR_OUTPUT,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:checkvalidity", `INPUT_LAYER` = INPUT_LAYER, `METHOD` = METHOD, `IGNORE_RING_SELF_INTERSECTION` = IGNORE_RING_SELF_INTERSECTION, `VALID_OUTPUT` = VALID_OUTPUT, `INVALID_OUTPUT` = INVALID_OUTPUT, `ERROR_OUTPUT` = ERROR_OUTPUT,..., .quiet = .quiet)
       )
   }
 

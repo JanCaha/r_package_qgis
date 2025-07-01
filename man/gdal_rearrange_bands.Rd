@@ -7,7 +7,7 @@
 gdal_rearrange_bands(
   INPUT = qgisprocess:::qgis_default_value(),
   BANDS = qgisprocess:::qgis_default_value(),
-  OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   DATA_TYPE = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
@@ -21,7 +21,7 @@ gdal_rearrange_bands(
 
 \item{BANDS}{\code{band} - Selected band(s). Integer value representing an existing raster band number.}
 
-\item{OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Additional creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{DATA_TYPE}{\code{enum}  of \verb{("Use Input Layer Data Type", "Byte", "Int16", "UInt16", "UInt32", "Int32", "Float32", "Float64", "CInt16", "CInt32", "CFloat32", "CFloat64", "Int8")} - Output data type. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 

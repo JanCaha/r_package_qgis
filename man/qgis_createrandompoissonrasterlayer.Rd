@@ -10,7 +10,7 @@ qgis_createrandompoissonrasterlayer(
   PIXEL_SIZE = qgisprocess:::qgis_default_value(),
   OUTPUT_TYPE = qgisprocess:::qgis_default_value(),
   MEAN = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
@@ -29,7 +29,7 @@ qgis_createrandompoissonrasterlayer(
 
 \item{MEAN}{\code{number} - Mean. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT}{\code{rasterDestination} - Output raster. Path for new raster layer.}
 
@@ -42,7 +42,7 @@ qgis_createrandompoissonrasterlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Create random raster layer (poisson distribution) (native:createrandompoissonrasterlayer). Generates a raster layer for given extent and cell size filled with poisson distributed random values. By default, the values will be chosen given a mean of 1.0. This can be overridden by using the advanced parameter for mean value. The raster data type is set to Integer types (Integer16 by default). The poisson distribution random values are positive integer numbers. A floating point raster will represent a cast of integer values to floating point.
+QGIS Algorithm provided by QGIS (native c++) Create random raster layer (poisson distribution) (native:createrandompoissonrasterlayer). Generates a raster layer for a given extent and cell size filled with poisson distributed random values. This algorithm generates a raster layer for a given extent and cell size filled with poisson distributed random values. By default, the values will be chosen given a mean of 1.0. This can be overridden by using the advanced parameter for mean value. The raster data type is set to Integer types (Integer16 by default). The poisson distribution random values are positive integer numbers. A floating point raster will represent a cast of integer values to floating point.
 }
 \details{
 \subsection{Outputs description}{

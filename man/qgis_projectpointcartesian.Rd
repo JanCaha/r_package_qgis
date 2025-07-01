@@ -33,7 +33,7 @@ qgis_projectpointcartesian(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Project points (Cartesian) (native:projectpointcartesian). This algorithm projects point geometries by a specified distance and bearing (azimuth), creating a new point layer with the projected points.  The distance is specified in layer units, and the bearing in degrees clockwise from North.
+QGIS Algorithm provided by QGIS (native c++) Project points (Cartesian) (native:projectpointcartesian). Creates a point layer with geometries projected by a specified distance and bearing (azimuth). This algorithm projects point geometries by a specified distance and bearing (azimuth), creating a new point layer with the projected points.  The distance is specified in layer units, and the bearing in degrees clockwise from North.
 }
 \details{
 \subsection{Outputs description}{

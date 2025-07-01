@@ -24,7 +24,7 @@ qgis_transferannotationsfrommain(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Transfer annotations from main layer (native:transferannotationsfrommain). Transfer all annotations from the main annotation layer in a project to a new annotation layer.
+QGIS Algorithm provided by QGIS (native c++) Transfer annotations from main layer (native:transferannotationsfrommain). Transfers all annotations from the main annotation layer in a project to a new annotation layer. This algorithm transfers all annotations from the main annotation layer in a project to a new annotation layer.
 }
 \details{
 \subsection{Outputs description}{

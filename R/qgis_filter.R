@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Feature filter (native:filter). This algorithm filters features from the input layer and redirects them to one or several outputs.
+##' QGIS Algorithm provided by QGIS (native c++) Feature filter (native:filter). Filters features from the input layer and redirects them to one or more outputs. This algorithm filters features from the input layer and redirects them to one or more outputs.
 ##'
 ##' @title QGIS algorithm - Feature filter
 ##'

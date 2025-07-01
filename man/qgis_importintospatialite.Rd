@@ -54,7 +54,7 @@ qgis_importintospatialite(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Export to SpatiaLite (qgis:importintospatialite). Exports a vector layer to a SpatiaLite database This algorithm imports a vector layer into a SpatiaLite database, creating a new table.
+QGIS Algorithm provided by QGIS Export to SpatiaLite (qgis:importintospatialite). Exports a vector layer to a SpatiaLite database. This algorithm imports a vector layer into a SpatiaLite database, creating a new table.
 }
 \details{
 \subsection{Outputs description}{

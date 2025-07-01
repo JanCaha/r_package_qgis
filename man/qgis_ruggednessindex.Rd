@@ -30,7 +30,7 @@ qgis_ruggednessindex(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Ruggedness index (native:ruggednessindex). This algorithm calculates the quantitative measurement of terrain heterogeneity described by Riley et al. (1999).  It is calculated for every location, by summarizing the change in elevation within the 3x3 pixel grid. Each pixel contains the difference in elevation from a center cell and the 8 cells surrounding it.
+QGIS Algorithm provided by QGIS (native c++) Ruggedness index (native:ruggednessindex). Calculates the quantitative measurement of terrain heterogeneity described by Riley et al. (1999). This algorithm calculates the quantitative measurement of terrain heterogeneity described by Riley et al. (1999).  It is calculated for every location, by summarizing the change in elevation within the 3x3 pixel grid. Each pixel contains the difference in elevation from a center cell and the 8 cells surrounding it.
 }
 \details{
 \subsection{Outputs description}{

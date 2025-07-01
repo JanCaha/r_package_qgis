@@ -33,7 +33,7 @@ qgis_extractwithindistance(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance). This algorithm creates a new vector layer that only contains matching features from an input layer. Features are copied wherever they are within the specified maximum distance from the features in an additional reference layer.
+QGIS Algorithm provided by QGIS (native c++) Extract within distance (native:extractwithindistance). Creates a new vector layer with features that are within a specified distance from features in another layer. This algorithm creates a new vector layer that only contains matching features from an input layer. Features are copied wherever they are within the specified maximum distance from the features in an additional reference layer.
 }
 \details{
 \subsection{Outputs description}{

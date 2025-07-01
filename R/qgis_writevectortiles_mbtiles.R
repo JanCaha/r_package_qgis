@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (MBTiles) (native:writevectortiles_mbtiles). This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
+##' QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (MBTiles) (native:writevectortiles_mbtiles). Exports one or more vector layers to vector tiles. This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
 ##'
 ##' @title QGIS algorithm - Write Vector Tiles (MBTiles)
 ##'

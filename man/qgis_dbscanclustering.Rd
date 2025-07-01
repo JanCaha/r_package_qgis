@@ -42,7 +42,7 @@ qgis_dbscanclustering(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclustering). Clusters point features using a density based scan algorithm. Clusters point features based on a 2D implementation of Density-based spatial clustering of applications with noise (DBSCAN) algorithm.  The algorithm requires two parameters, a minimum cluster size (“minPts”), and the maximum distance allowed between clustered points (“eps”).
+QGIS Algorithm provided by QGIS (native c++) DBSCAN clustering (native:dbscanclustering). Clusters point features using a density based scan algorithm. This algorithm clusters point features based on a 2D implementation of Density-based spatial clustering of applications with noise (DBSCAN) algorithm.  The algorithm requires two parameters, a minimum cluster size (“minPts”), and the maximum distance allowed between clustered points (“eps”).
 }
 \details{
 \subsection{Outputs description}{

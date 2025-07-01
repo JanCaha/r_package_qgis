@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Polygons to lines (native:polygonstolines). Converts polygons to lines. Converts polygons to lines
+##' QGIS Algorithm provided by QGIS (native c++) Polygons to lines (native:polygonstolines). Converts polygons to lines. This algorithm converts polygons to lines.
 ##'
 ##' @title QGIS algorithm - Polygons to lines
 ##'

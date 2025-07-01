@@ -39,7 +39,7 @@ qgis_tininterpolation(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS TIN interpolation (qgis:tininterpolation). Generates a Triangulated Irregular Network (TIN) interpolation of a point vector layer. With the TIN method you can create a surface formed by triangles of nearest neighbor points. To do this, circumcircles around selected sample points are created and their intersections are connected to a network of non overlapping and as compact as possible triangles. The resulting surfaces are not smooth. The algorithm creates both the raster layer of the interpolated values and the vector line layer with the triangulation boundaries.
+QGIS Algorithm provided by QGIS TIN interpolation (qgis:tininterpolation). Generates a Triangulated Irregular Network (TIN) interpolation of a point vector layer. Generates a Triangulated Irregular Network (TIN) interpolation of a point vector layer. With the TIN method you can create a surface formed by triangles of nearest neighbor points. To do this, circumcircles around selected sample points are created and their intersections are connected to a network of non overlapping and as compact as possible triangles. The resulting surfaces are not smooth. The algorithm creates both the raster layer of the interpolated values and the vector line layer with the triangulation boundaries.
 }
 \details{
 \subsection{Outputs description}{

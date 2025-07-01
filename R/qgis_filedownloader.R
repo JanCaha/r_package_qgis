@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Download file via HTTP(S) (native:filedownloader). Downloads a URL to the file system with an HTTP(S) GET or POST request This algorithm downloads a URL to the file system with an HTTP(S) GET or POST request
+##' QGIS Algorithm provided by QGIS (native c++) Download file via HTTP(S) (native:filedownloader). Downloads a URL to the file system with an HTTP(S) GET or POST request. This algorithm downloads a URL to the file system with an HTTP(S) GET or POST request
 ##'
 ##' @title QGIS algorithm - Download file via HTTP(S)
 ##'

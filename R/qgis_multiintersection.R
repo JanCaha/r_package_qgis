@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection). This algorithm extracts the overlapping portions of features in the Input and all Overlay layers. Features in the output layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+##' QGIS Algorithm provided by QGIS (native c++) Intersection (multiple) (native:multiintersection). Extracts portions of input features that overlap features from all other layers. This algorithm extracts the overlapping portions of features in the Input and all Overlay layers. Features in the output layer are assigned the attributes of the overlapping features from both the Input and Overlay layers.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Intersection (multiple)
 ##'

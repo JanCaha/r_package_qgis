@@ -9,6 +9,9 @@ qgis_barplot(
   NAME_FIELD = qgisprocess:::qgis_default_value(),
   VALUE_FIELD = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  TITLE = qgisprocess:::qgis_default_value(),
+  XAXIS_TITLE = qgisprocess:::qgis_default_value(),
+  YAXIS_TITLE = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -24,6 +27,12 @@ qgis_barplot(
 
 \item{OUTPUT}{\code{fileDestination} - Bar plot. Path for new file.}
 
+\item{TITLE}{\code{string} - Title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{XAXIS_TITLE}{\code{string} - X-axis title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
+\item{YAXIS_TITLE}{\code{string} - Y-axis title. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
 \item{.complete_output}{logical specifying if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
@@ -33,7 +42,7 @@ qgis_barplot(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Bar plot (qgis:barplot). This algorithm creates a bar plot from a category and a layer field.
+QGIS Algorithm provided by QGIS Bar plot (qgis:barplot). Creates a bar plot from a category and a layer field. This algorithm creates a bar plot from a category and a layer field.
 }
 \details{
 \subsection{Outputs description}{

@@ -27,7 +27,7 @@ qgis_polygonstolines(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Polygons to lines (native:polygonstolines). Converts polygons to lines. Converts polygons to lines
+QGIS Algorithm provided by QGIS (native c++) Polygons to lines (native:polygonstolines). Converts polygons to lines. This algorithm converts polygons to lines.
 }
 \details{
 \subsection{Outputs description}{

@@ -33,7 +33,7 @@ qgis_rasterlayerhistogram(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Raster layer histogram (qgis:rasterlayerhistogram). This algorithm generates a histogram with the values of a raster layer. The raster layer must have a single band.
+QGIS Algorithm provided by QGIS Raster layer histogram (qgis:rasterlayerhistogram). Generates a histogram with the values of a raster layer. This algorithm generates a histogram with the values of a raster layer. The raster layer must have a single band.
 }
 \details{
 \subsection{Outputs description}{

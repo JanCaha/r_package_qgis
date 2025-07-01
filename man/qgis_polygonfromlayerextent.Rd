@@ -30,7 +30,7 @@ qgis_polygonfromlayerextent(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent). This algorithm takes a map layer and generates a new vector layer with the minimum bounding box (rectangle polygon with N-S orientation) that covers the input layer. Optionally, the extent can be enlarged to a rounded value.
+QGIS Algorithm provided by QGIS (native c++) Extract layer extent (native:polygonfromlayerextent). Generates a vector layer with the minimum bounding box that covers the input layer. This algorithm takes a map layer and generates a new vector layer with the minimum bounding box (rectangle polygon with N-S orientation) that covers the input layer. Optionally, the extent can be enlarged to a rounded value.
 }
 \details{
 \subsection{Outputs description}{

@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Set layer encoding (native:setlayerencoding). Sets the encoding used for reading a layer's attributes This algorithm sets the encoding used for reading a layer's attributes. No permanent changes are made to the layer, rather it affects only how the layer is read during the current session.  Changing the encoding is only supported for some vector layer data sources.
+##' QGIS Algorithm provided by QGIS (native c++) Set layer encoding (native:setlayerencoding). Sets the encoding used for reading a layer's attributes. This algorithm sets the encoding used for reading a layer's attributes. No permanent changes are made to the layer, rather it affects only how the layer is read during the current session.  Changing the encoding is only supported for some vector layer data sources.
 ##'
 ##' @title QGIS algorithm - Set layer encoding
 ##'

@@ -11,7 +11,7 @@ qgis_dtmslopebasedfilter(
   TERRAIN_SLOPE = qgisprocess:::qgis_default_value(),
   FILTER_MODIFICATION = qgisprocess:::qgis_default_value(),
   STANDARD_DEVIATION = qgisprocess:::qgis_default_value(),
-  CREATE_OPTIONS = qgisprocess:::qgis_default_value(),
+  CREATION_OPTIONS = qgisprocess:::qgis_default_value(),
   OUTPUT_GROUND = qgisprocess:::qgis_default_value(),
   OUTPUT_NONGROUND = qgisprocess:::qgis_default_value(),
   ...,
@@ -33,7 +33,7 @@ qgis_dtmslopebasedfilter(
 
 \item{STANDARD_DEVIATION}{\code{number} - Standard deviation. A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
-\item{CREATE_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+\item{CREATION_OPTIONS}{\code{string} - Creation options. String value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
 
 \item{OUTPUT_GROUND}{\code{rasterDestination} - Output layer (ground). Path for new raster layer.}
 
@@ -48,7 +48,7 @@ qgis_dtmslopebasedfilter(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) DTM filter (slope-based) (native:dtmslopebasedfilter). This algorithm can be used to filter a digital elevation model in order to classify its cells into ground and object (non-ground) cells.  The tool uses concepts as described by Vosselman (2000) and is based on the assumption that a large height difference between two nearby cells is unlikely to be caused by a steep slope in the terrain. The probability that the higher cell might be non-ground increases when the distance between the two cells decreases. Therefore the filter defines a maximum height difference (idz_max/i) between two cells as a function of the distance (id/i) between the cells (idz_max( d ) = d/i).  A cell is classified as terrain if there is no cell within the kernel radius to which the height difference is larger than the allowed maximum height difference at the distance between these two cells.  The approximate terrain slope (is/i) parameter is used to modify the filter function to match the overall slope in the study area (idz_max( d ) = d * s/i).  A 5 \% confidence interval (ici = 1.65 * sqrt( 2 * stddev )/i) may be used to modify the filter function even further by either relaxing (idz_max( d ) = d * s + ci/i) or amplifying (idz_max( d ) = d * s - ci/i) the filter criterium.  References: Vosselman, G. (2000): Slope based filtering of laser altimetry data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942  This algorithm is a port of the SAGA 'DTM Filter (slope-based)' tool.
+QGIS Algorithm provided by QGIS (native c++) DTM filter (slope-based) (native:dtmslopebasedfilter). Filters a Digital Elevation Model in order to classify its cells into ground and object (non-ground) cells. This algorithm can be used to filter a Digital Elevation Model in order to classify its cells into ground and object (non-ground) cells.  The tool uses concepts as described by Vosselman (2000) and is based on the assumption that a large height difference between two nearby cells is unlikely to be caused by a steep slope in the terrain. The probability that the higher cell might be non-ground increases when the distance between the two cells decreases. Therefore the filter defines a maximum height difference (idz_max/i) between two cells as a function of the distance (id/i) between the cells (idz_max( d ) = d/i).  A cell is classified as terrain if there is no cell within the kernel radius to which the height difference is larger than the allowed maximum height difference at the distance between these two cells.  The approximate terrain slope (is/i) parameter is used to modify the filter function to match the overall slope in the study area (idz_max( d ) = d * s/i).  A 5 \% confidence interval (ici = 1.65 * sqrt( 2 * stddev )/i) may be used to modify the filter function even further by either relaxing (idz_max( d ) = d * s + ci/i) or amplifying (idz_max( d ) = d * s - ci/i) the filter criterium.  References: Vosselman, G. (2000): Slope based filtering of laser altimetry data. IAPRS, Vol. XXXIII, Part B3, Amsterdam, The Netherlands, 935-942  This algorithm is a port of the SAGA 'DTM Filter (slope-based)' tool.
 }
 \details{
 \subsection{Outputs description}{

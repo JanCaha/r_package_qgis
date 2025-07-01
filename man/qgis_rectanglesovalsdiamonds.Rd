@@ -42,7 +42,7 @@ qgis_rectanglesovalsdiamonds(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds). Creates rectangle, oval or diamond-shaped polygons from the input point layer using specified width, height and (optional) rotation values. Multipart inputs should be promoted to singleparts first.
+QGIS Algorithm provided by QGIS (native c++) Rectangles, ovals, diamonds (native:rectanglesovalsdiamonds). Creates rectangle, oval or diamond-shaped polygons from an input point layer. This algorithm creates rectangle, oval or diamond-shaped polygons from the input point layer using specified width, height and (optional) rotation values. Multipart inputs should be promoted to singleparts first.
 }
 \details{
 \subsection{Outputs description}{

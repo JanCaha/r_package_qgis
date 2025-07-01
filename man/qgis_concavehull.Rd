@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_concavehull.R
 \name{qgis_concavehull}
 \alias{qgis_concavehull}
-\title{QGIS algorithm - Concave hull}
+\title{QGIS algorithm - Concave hull (by layer)}
 \usage{
 qgis_concavehull(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -36,7 +36,7 @@ qgis_concavehull(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Concave hull (native:concavehull). This algorithm computes the concave hull of the features from an input layer.
+QGIS Algorithm provided by QGIS (native c++) Concave hull (by layer) (native:concavehull). Computes the concave hull of all features from an input point layer. This algorithm computes the concave hull covering all features from an input point layer.  See the 'Concave hull (by feature)' algorithm for a concave hull calculation which covers individual features from a layer.
 }
 \details{
 \subsection{Outputs description}{

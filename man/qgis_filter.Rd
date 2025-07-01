@@ -24,7 +24,7 @@ qgis_filter(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Feature filter (native:filter). This algorithm filters features from the input layer and redirects them to one or several outputs.
+QGIS Algorithm provided by QGIS (native c++) Feature filter (native:filter). Filters features from the input layer and redirects them to one or more outputs. This algorithm filters features from the input layer and redirects them to one or more outputs.
 }
 \details{
 \subsection{Outputs description}{

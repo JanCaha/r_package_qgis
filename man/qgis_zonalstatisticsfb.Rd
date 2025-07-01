@@ -39,7 +39,7 @@ qgis_zonalstatisticsfb(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb). This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer.
+QGIS Algorithm provided by QGIS (native c++) Zonal statistics (native:zonalstatisticsfb). Calculates statistics of a raster layer for each feature of an overlapping polygon vector layer. This algorithm calculates statistics of a raster layer for each feature of an overlapping polygon vector layer.
 }
 \details{
 \subsection{Outputs description}{

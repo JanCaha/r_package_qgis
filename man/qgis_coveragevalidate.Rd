@@ -30,7 +30,7 @@ qgis_coveragevalidate(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Validate coverage (native:coveragevalidate). Analyzes a coverage of polygon features to find places where the assumption of exactly matching edges is not met This algorithm analyzes a coverage (represented as a set of polygon features with exactly matching edge geometry) to find places where the assumption of exactly matching edges is not met.  Invalidity includes polygons that overlap or that have gaps smaller than the specified gap width.
+QGIS Algorithm provided by QGIS (native c++) Validate coverage (native:coveragevalidate). Analyzes a coverage of polygon features to find places where the assumption of exactly matching edges is not met. This algorithm analyzes a coverage (represented as a set of polygon features with exactly matching edge geometry) to find places where the assumption of exactly matching edges is not met.  Invalidity includes polygons that overlap or that have gaps smaller than the specified gap width.
 }
 \details{
 \subsection{Outputs description}{

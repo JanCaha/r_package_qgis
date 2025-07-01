@@ -27,7 +27,7 @@ qgis_renamelayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer). This algorithm renames a layer.
+QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer). Renames a layer. This algorithm renames a layer.
 }
 \details{
 \subsection{Outputs description}{

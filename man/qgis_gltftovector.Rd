@@ -30,7 +30,7 @@ qgis_gltftovector(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert GLTF to vector features (native:gltftovector). Converts GLTF content to standard vector layer formats.
+QGIS Algorithm provided by QGIS (native c++) Convert GLTF to vector features (native:gltftovector). Converts GLTF content to standard vector layer formats. This algorithm converts GLTF content to standard vector layer formats.
 }
 \details{
 \subsection{Outputs description}{

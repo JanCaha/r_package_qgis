@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontours). Creates contours as vector layer from mesh scalar dataset This algorithm creates contours as a vector layer from a mesh scalar dataset.
+##' QGIS Algorithm provided by QGIS (native c++) Export contours (native:meshcontours). Creates contours as vector layer from mesh scalar dataset. This algorithm creates contours as a vector layer from a mesh scalar dataset.
 ##'
 ##' @title QGIS algorithm - Export contours
 ##'

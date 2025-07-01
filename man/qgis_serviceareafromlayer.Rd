@@ -72,7 +72,7 @@ qgis_serviceareafromlayer(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Service area (from layer) (native:serviceareafromlayer). This algorithm creates a new vector with all the edges or parts of edges of a network line layer that can be reached within a distance or a time, starting from features of a point layer. The distance and the time (both referred to as "travel cost") must be specified respectively in the network layer units or in hours.
+QGIS Algorithm provided by QGIS (native c++) Service area (from layer) (native:serviceareafromlayer). Creates a vector layer with all the edges or parts of edges of a network line layer that can be reached within a distance or a time, starting from features of a point layer. This algorithm creates a new vector layer with all the edges or parts of edges of a network line layer that can be reached within a distance or a time, starting from features of a point layer. The distance and the time (both referred to as "travel cost") must be specified respectively in the network layer units or in hours.
 }
 \details{
 \subsection{Outputs description}{

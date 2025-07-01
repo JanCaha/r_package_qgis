@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Oriented minimum bounding box (native:orientedminimumboundingbox). This algorithm calculates the minimum area rotated rectangle which covers each feature in an input layer.  See the 'Minimum bounding geometry' algorithm for a oriented bounding box calculation which covers the whole layer or grouped subsets of features.
+##' QGIS Algorithm provided by QGIS (native c++) Oriented minimum bounding box (native:orientedminimumboundingbox). Calculates the minimum area rotated rectangle which covers each feature in an input layer. This algorithm calculates the minimum area rotated rectangle which covers each feature in an input layer.  For singlepart point features, the output corresponds to the bounding box of the geometry.  See the 'Minimum bounding geometry' algorithm for an oriented bounding box calculation which covers the whole layer or grouped subsets of features.
 ##'
 ##' @title QGIS algorithm - Oriented minimum bounding box
 ##'

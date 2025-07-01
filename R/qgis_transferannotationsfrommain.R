@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Transfer annotations from main layer (native:transferannotationsfrommain). Transfer all annotations from the main annotation layer in a project to a new annotation layer.
+##' QGIS Algorithm provided by QGIS (native c++) Transfer annotations from main layer (native:transferannotationsfrommain). Transfers all annotations from the main annotation layer in a project to a new annotation layer. This algorithm transfers all annotations from the main annotation layer in a project to a new annotation layer.
 ##'
 ##' @title QGIS algorithm - Transfer annotations from main layer
 ##'

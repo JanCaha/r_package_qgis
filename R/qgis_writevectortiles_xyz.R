@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (XYZ) (native:writevectortiles_xyz). This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
+##' QGIS Algorithm provided by QGIS (native c++) Write Vector Tiles (XYZ) (native:writevectortiles_xyz). Exports one or more vector layers to vector tiles. This algorithm exports one or more vector layers to vector tiles - a data format optimized for fast map rendering and small data size.
 ##'
 ##' @title QGIS algorithm - Write Vector Tiles (XYZ)
 ##'

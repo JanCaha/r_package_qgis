@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distance) (native:multiringconstantbuffer). This algorithm computes multi-ring ('donuts') buffer for all the features in an input layer, using a fixed or dynamic distance and rings number.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+##' QGIS Algorithm provided by QGIS (native c++) Multi-ring buffer (constant distance) (native:multiringconstantbuffer). Computes multi-ring ('donuts') buffer using a fixed or dynamic distance and number of rings. This algorithm computes multi-ring ('donuts') buffer for the features in an input layer, using a fixed or dynamic distance and number of rings.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 ##'
 ##' @title QGIS algorithm - Multi-ring buffer (constant distance)
 ##'

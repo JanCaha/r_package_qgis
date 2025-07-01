@@ -30,7 +30,7 @@ gdal_buildvirtualvector(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by GDAL Build virtual vector (gdal:buildvirtualvector). This algorithm creates a virtual layer that contains a set of vector layers.  The output virtual layer will not be opened in the current project.
+QGIS Algorithm provided by GDAL Build virtual vector (gdal:buildvirtualvector). This algorithm creates a virtual layer that contains a set of vector layers.
 }
 \details{
 \subsection{Outputs description}{

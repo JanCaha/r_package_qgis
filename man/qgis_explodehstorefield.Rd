@@ -33,7 +33,7 @@ qgis_explodehstorefield(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Explode HStore Field (native:explodehstorefield). This algorithm creates a copy of the input layer and adds a new field for every unique key in the HStore field. The expected field list is an optional comma separated list. By default, all unique keys are added. If this list is specified, only these fields are added and the HStore field is updated.
+QGIS Algorithm provided by QGIS (native c++) Explode HStore Field (native:explodehstorefield). Creates a copy of the input layer and adds a new field for every unique key in the HStore field. This algorithm creates a copy of the input layer and adds a new field for every unique key in the HStore field. The expected field list is an optional comma separated list. By default, all unique keys are added. If this list is specified, only these fields are added and the HStore field is updated.
 }
 \details{
 \subsection{Outputs description}{

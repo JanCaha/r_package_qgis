@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection). Extracts a mesh dataset's values from lines contained in a vector layer This algorithm extracts mesh's dataset values from line contained in a vector layer. Each line is discretized with a resolution distance parameter for extraction of values on its vertices.
+##' QGIS Algorithm provided by QGIS (native c++) Export cross section dataset values on lines from mesh (native:meshexportcrosssection). Extracts a mesh dataset's values from lines contained in a vector layer. This algorithm extracts mesh's dataset values from line contained in a vector layer. Each line is discretized with a resolution distance parameter for extraction of values on its vertices.
 ##'
 ##' @title QGIS algorithm - Export cross section dataset values on lines from mesh
 ##'

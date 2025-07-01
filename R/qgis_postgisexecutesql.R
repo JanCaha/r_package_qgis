@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) PostgreSQL execute SQL (native:postgisexecutesql). Executes a SQL command on a PostgreSQL database.
+##' QGIS Algorithm provided by QGIS (native c++) PostgreSQL execute SQL (native:postgisexecutesql). Executes a SQL command on a PostgreSQL database. This algorithm executes a SQL command on a PostgreSQL database.
 ##'
 ##' @title QGIS algorithm - PostgreSQL execute SQL
 ##'

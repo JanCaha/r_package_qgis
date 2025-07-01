@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Fix geometries (native:fixgeometries). This algorithm attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. Already-valid geometries are returned without further intervention. Always outputs multi-geometry layer.  NOTE: M values will be dropped from the output.
+##' QGIS Algorithm provided by QGIS (native c++) Fix geometries (native:fixgeometries). Attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. This algorithm attempts to create a valid representation of a given invalid geometry without losing any of the input vertices. Already-valid geometries are returned without further intervention. Always outputs multi-geometry layer.  NOTE: M values will be dropped from the output.
 ##'
 ##' @title QGIS algorithm - Fix geometries
 ##'

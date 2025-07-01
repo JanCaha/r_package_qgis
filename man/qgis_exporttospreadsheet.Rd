@@ -36,7 +36,7 @@ qgis_exporttospreadsheet(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export to spreadsheet (native:exporttospreadsheet). This algorithm collects a number of existing layers and exports them into a spreadsheet document.  Optionally the layers can be appended to an existing spreadsheet as additional sheets.
+QGIS Algorithm provided by QGIS (native c++) Export to spreadsheet (native:exporttospreadsheet). Collects a number of existing layers and exports them to a spreadsheet document. This algorithm collects a number of existing layers and exports them to a spreadsheet document.  Optionally the layers can be appended to an existing spreadsheet as additional sheets.
 }
 \details{
 \subsection{Outputs description}{

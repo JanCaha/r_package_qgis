@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Densify by interval (native:densifygeometriesgivenaninterval). Creates a densified version of geometries. Geometries are densified by adding additional vertices on edges that have a maximum distance of the interval parameter in map units.
+##' QGIS Algorithm provided by QGIS (native c++) Densify by interval (native:densifygeometriesgivenaninterval). Creates a densified version of geometries by setting a maximum distance for segments. This algorithm takes a polygon or line layer and generates a new one in which the geometries have a larger number of vertices than the original one.  Geometries are densified by adding additional vertices on edges that have a maximum distance of the interval parameter in map units.
 ##'
 ##' @title QGIS algorithm - Densify by interval
 ##'

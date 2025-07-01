@@ -39,7 +39,7 @@ qgis_translategeometry(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Translate (native:translategeometry). This algorithm moves the geometries within a layer, by offsetting them with a specified x and y displacement.  Z and M values present in the geometry can also be translated.
+QGIS Algorithm provided by QGIS (native c++) Translate (native:translategeometry). Moves the geometries within a layer, by offsetting them with a specified x, y, z or m displacement. This algorithm moves the geometries within a layer, by offsetting them with a specified x and y displacement.  Z and M values present in the geometry can also be translated.
 }
 \details{
 \subsection{Outputs description}{

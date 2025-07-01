@@ -33,7 +33,7 @@ qgis_importphotos(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:importphotos). Creates a point layer corresponding to the geotagged locations from JPEG or HEIF/HEIC images from a source folder. Optionally the folder can be recursively scanned.  The point layer will contain a single PointZ feature per input file from which the geotags could be read. Any altitude information from the geotags will be used to set the point's Z value.  Optionally, a table of unreadable or non-geotagged photos can also be created.
+QGIS Algorithm provided by QGIS (native c++) Import geotagged photos (native:importphotos). Creates a point layer corresponding to the geotagged locations from JPEG or HEIF/HEIC images from a source folder. This algorithm creates a point layer corresponding to the geotagged locations from JPEG or HEIF/HEIC images from a source folder. Optionally the folder can be recursively scanned.  The point layer will contain a single PointZ feature per input file from which the geotags could be read. Any altitude information from the geotags will be used to set the point's Z value.  Optionally, a table of unreadable or non-geotagged photos can also be created.
 }
 \details{
 \subsection{Outputs description}{

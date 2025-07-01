@@ -33,7 +33,7 @@ qgis_converttocurves(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Convert to curved geometries (native:converttocurves). This algorithm converts a geometry into its curved geometry equivalent.  Already curved geometries will be retained without change.
+QGIS Algorithm provided by QGIS (native c++) Convert to curved geometries (native:converttocurves). Converts a geometry into its curved geometry equivalent. This algorithm converts a geometry into its curved geometry equivalent.  Already curved geometries will be retained without change.
 }
 \details{
 \subsection{Outputs description}{

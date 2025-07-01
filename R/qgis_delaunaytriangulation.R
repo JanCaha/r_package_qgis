@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Delaunay triangulation (native:delaunaytriangulation). Creates a polygon layer with the Delaunay triangulation corresponding to a points layer.
+##' QGIS Algorithm provided by QGIS (native c++) Delaunay triangulation (native:delaunaytriangulation). Creates a polygon layer with the Delaunay triangulation corresponding to a points layer. This algorithm creates a polygon layer with the Delaunay triangulation corresponding to a points layer.
 ##'
 ##' @title QGIS algorithm - Delaunay triangulation
 ##'

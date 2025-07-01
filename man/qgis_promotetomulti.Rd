@@ -27,7 +27,7 @@ qgis_promotetomulti(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Promote to multipart (native:promotetomulti). This algorithm takes a vector layer with singlepart geometries and generates a new one in which all geometries are multipart. Input features which are already multipart features will remain unchanged.  This algorithm can be used to force geometries to multipart types in order to be compatible with data providers with strict singlepart/multipart compatibility checks.  See the 'Collect geometries' or 'Aggregate' algorithms for alternative options.
+QGIS Algorithm provided by QGIS (native c++) Promote to multipart (native:promotetomulti). Generates a vector layer in which all geometries are multipart. This algorithm takes a vector layer with singlepart geometries and generates a new one in which all geometries are multipart. Input features which are already multipart features will remain unchanged.  This algorithm can be used to force geometries to multipart types in order to be compatible with data providers with strict singlepart/multipart compatibility checks.  See the 'Collect geometries' or 'Aggregate' algorithms for alternative options.
 }
 \details{
 \subsection{Outputs description}{

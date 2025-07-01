@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer). This algorithm renames a layer.
+##' QGIS Algorithm provided by QGIS (native c++) Rename layer (native:renamelayer). Renames a layer. This algorithm renames a layer.
 ##'
 ##' @title QGIS algorithm - Rename layer
 ##'

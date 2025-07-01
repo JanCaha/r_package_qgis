@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) String concatenation (native:stringconcatenation). This algorithm concatenates two strings together.
+##' QGIS Algorithm provided by QGIS (native c++) String concatenation (native:stringconcatenation). Concatenates two strings together. This algorithm concatenates two strings together.
 ##'
 ##' @title QGIS algorithm - String concatenation
 ##'

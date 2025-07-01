@@ -1,6 +1,6 @@
-##' QGIS Algorithm provided by QGIS (native c++) Concave hull (native:concavehull). This algorithm computes the concave hull of the features from an input layer.
+##' QGIS Algorithm provided by QGIS (native c++) Concave hull (by layer) (native:concavehull). Computes the concave hull of all features from an input point layer. This algorithm computes the concave hull covering all features from an input point layer.  See the 'Concave hull (by feature)' algorithm for a concave hull calculation which covers individual features from a layer.
 ##'
-##' @title QGIS algorithm - Concave hull
+##' @title QGIS algorithm - Concave hull (by layer)
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param ALPHA `number` - Threshold (0-1, where 1 is equivalent with Convex Hull). A numeric value. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.

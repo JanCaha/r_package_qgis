@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS Export to SpatiaLite (qgis:importintospatialite). Exports a vector layer to a SpatiaLite database This algorithm imports a vector layer into a SpatiaLite database, creating a new table.
+##' QGIS Algorithm provided by QGIS Export to SpatiaLite (qgis:importintospatialite). Exports a vector layer to a SpatiaLite database. This algorithm imports a vector layer into a SpatiaLite database, creating a new table.
 ##'
 ##' @title QGIS algorithm - Export to SpatiaLite
 ##'

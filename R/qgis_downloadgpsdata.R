@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata). This algorithm uses the GPSBabel tool to download data from a GPS device into the GPX standard format.
+##' QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata). Downloads data from a GPS device into the GPX standard format. This algorithm uses the GPSBabel tool to download data from a GPS device into the GPX standard format.
 ##'
 ##' @title QGIS algorithm - Download GPS data from device
 ##'

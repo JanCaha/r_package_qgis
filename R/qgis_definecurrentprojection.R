@@ -1,8 +1,8 @@
-##' QGIS Algorithm provided by QGIS Define Shapefile projection (qgis:definecurrentprojection). Changes a Shapefile's projection to a new CRS without reprojecting features This algorithm sets an existing Shapefile's projection to the provided CRS. Contrary to the "Assign projection" algorithm, it will not output a new layer. The .prj and .qpj files associated with the Shapefile will be overwritten - or created if missing - to match the provided CRS.
+##' QGIS Algorithm provided by QGIS (native c++) Define projection (native:definecurrentprojection). Sets an existing layer's projection to the provided CRS without reprojecting features. This algorithm sets an existing layer's projection to the provided CRS without reprojecting features. Contrary to the "Assign projection" algorithm, it will not output a new layer.  If the input layer is a shapefile, the .prj file will be overwritten — or created if missing — to match the provided CRS.
 ##'
-##' @title QGIS algorithm - Define Shapefile projection
+##' @title QGIS algorithm - Define projection
 ##'
-##' @param INPUT `vector` - Input Shapefile. Path to a vector layer.
+##' @param INPUT `vector` - Input shapefile. Path to a vector layer.
 ##' @param CRS `crs` - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..
 ##' @param ... further parameters passed to `qgisprocess::qgis_run_algorithm()`
 ##' @param .complete_output logical specifying if complete out of `qgisprocess::qgis_run_algorithm()` should be used (`TRUE`) or first output (most likely the main) should read (`FALSE`). Default value is `TRUE`.
@@ -11,7 +11,7 @@
 ##'
 ##' @details
 ##' ## Outputs description
-##' * INPUT - outputVector - Layer with projection
+##' * OUTPUT - outputVector - Layer with projection
 ##'
 ##'
 ##' @export
@@ -20,13 +20,13 @@
 
 qgis_definecurrentprojection <- function(INPUT = qgisprocess:::qgis_default_value(), CRS = qgisprocess:::qgis_default_value(),..., .complete_output = .complete_output_option(), .quiet = .quiet_option(), .messages = .message_option()) {
 
-  check_algorithm_necessities("qgis:definecurrentprojection")
+  check_algorithm_necessities("native:definecurrentprojection")
 
   if (.messages){
-    output <- qgisprocess::qgis_run_algorithm("qgis:definecurrentprojection", `INPUT` = INPUT, `CRS` = CRS,..., .quiet = .quiet)
+    output <- qgisprocess::qgis_run_algorithm("native:definecurrentprojection", `INPUT` = INPUT, `CRS` = CRS,..., .quiet = .quiet)
   } else {
     suppressMessages(
-      output <- qgisprocess::qgis_run_algorithm("qgis:definecurrentprojection", `INPUT` = INPUT, `CRS` = CRS,..., .quiet = .quiet)
+      output <- qgisprocess::qgis_run_algorithm("native:definecurrentprojection", `INPUT` = INPUT, `CRS` = CRS,..., .quiet = .quiet)
       )
   }
 
@@ -34,6 +34,6 @@ qgis_definecurrentprojection <- function(INPUT = qgisprocess:::qgis_default_valu
     return(output)
   }
   else{
-    qgisprocess::qgis_extract_output(output, "INPUT")
+    qgisprocess::qgis_extract_output(output, "OUTPUT")
   }
 }

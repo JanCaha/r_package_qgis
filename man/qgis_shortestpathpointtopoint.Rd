@@ -63,7 +63,7 @@ qgis_shortestpathpointtopoint(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Shortest path (point to point) (native:shortestpathpointtopoint). This algorithm computes optimal (shortest or fastest) route between given start and end points.
+QGIS Algorithm provided by QGIS (native c++) Shortest path (point to point) (native:shortestpathpointtopoint). Computes optimal (shortest or fastest) route between given start and end points. This algorithm computes optimal (shortest or fastest) route between given start and end points.
 }
 \details{
 \subsection{Outputs description}{

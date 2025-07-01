@@ -36,7 +36,7 @@ qgis_downloadvectortiles(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Download vector tiles (native:downloadvectortiles). Downloads vector tiles of the input vector tile layer and saves them in the local vector tile file.
+QGIS Algorithm provided by QGIS (native c++) Download vector tiles (native:downloadvectortiles). Downloads vector tiles of the input vector tile layer and saves them in the local vector tile file. This algorithm downloads vector tiles of the input vector tile layer and saves them in the local vector tile file.
 }
 \details{
 \subsection{Outputs description}{

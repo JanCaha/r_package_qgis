@@ -30,7 +30,7 @@ qgis_densifygeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Densify by count (native:densifygeometries). Creates a densified version of geometries. This algorithm takes a polygon or line layer and generates a new one in which the geometries have a larger number of vertices than the original one.   If the geometries have z or m values present then these will be linearly interpolated at the added nodes.   The number of new vertices to add to each feature geometry is specified as an input parameter.
+QGIS Algorithm provided by QGIS (native c++) Densify by count (native:densifygeometries). Creates a densified version of geometries by adding a fixed number of vertices to segments. This algorithm takes a polygon or line layer and generates a new one in which the geometries have a larger number of vertices than the original one.   If the geometries have z or m values present then these will be linearly interpolated at the added nodes.   The number of new vertices to add to each feature geometry is specified as an input parameter.
 }
 \details{
 \subsection{Outputs description}{

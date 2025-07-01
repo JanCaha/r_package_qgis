@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Raster layer statistics (native:rasterlayerstatistics). This algorithm computes basic statistics from the values in a given band of the raster layer.
+##' QGIS Algorithm provided by QGIS (native c++) Raster layer statistics (native:rasterlayerstatistics). Computes basic statistics from the values in a given band of the raster layer. This algorithm computes basic statistics from the values in a given band of the raster layer.
 ##'
 ##' @title QGIS algorithm - Raster layer statistics
 ##'

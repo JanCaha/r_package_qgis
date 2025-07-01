@@ -27,7 +27,7 @@ qgis_3d_tessellate(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (3D) Tessellate (3d:tessellate). This algorithm tessellates a polygon geometry layer, dividing the geometries into triangular components.  The output layer consists of multipolygon geometries for each input feature, with each multipolygon consisting of multiple triangle component polygons.
+QGIS Algorithm provided by QGIS (3D) Tessellate (3d:tessellate). Tessellates a polygon geometry layer, dividing the geometries into triangular components. This algorithm tessellates a polygon geometry layer, dividing the geometries into triangular components.  The output layer consists of multipolygon geometries for each input feature, with each multipolygon consisting of multiple triangle component polygons.
 }
 \details{
 \subsection{Outputs description}{

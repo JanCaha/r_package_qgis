@@ -60,7 +60,7 @@ qgis_dxfexport(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport). Exports layers to DXF file. For each layer, you can choose a field whose values are used to split features in generated destination layers in the DXF output.  If no field is chosen, you can still override the output layer name by directly entering a new output layer name in the Configure Layer panel or by preferring layer title (set in layer properties) to layer name.
+QGIS Algorithm provided by QGIS (native c++) Export layers to DXF (native:dxfexport). Exports layers to a DXF file. Exports layers to a DXF file. For each layer, you can choose a field whose values are used to split features in generated destination layers in the DXF output.  If no field is chosen, you can still override the output layer name by directly entering a new output layer name in the Configure Layer panel or by preferring layer title (set in layer properties) to layer name.
 }
 \details{
 \subsection{Outputs description}{

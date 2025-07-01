@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Convert GPX feature type (native:convertgpxfeaturetype). This algorithm uses the GPSBabel tool to convert GPX features from one type to another (e.g. converting all waypoint features to a route feature).
+##' QGIS Algorithm provided by QGIS (native c++) Convert GPX feature type (native:convertgpxfeaturetype). Converts GPX features from one type to another. This algorithm uses the GPSBabel tool to convert GPX features from one type to another (e.g. converting all waypoint features to a route feature).
 ##'
 ##' @title QGIS algorithm - Convert GPX feature type
 ##'

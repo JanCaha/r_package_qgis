@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Aspect (native:aspect). This algorithm calculates the aspect of the Digital Terrain Model in input.  The final aspect raster layer contains values from 0 to 360 that express the slope direction: starting from North (0°) and continuing clockwise.
+##' QGIS Algorithm provided by QGIS (native c++) Aspect (native:aspect). Generates a raster layer representing the slope direction from a Digital Terrain Model. This algorithm calculates the aspect of the Digital Terrain Model in input.  The final aspect raster layer contains values from 0 to 360 that express the slope direction: starting from North (0°) and continuing clockwise.
 ##'
 ##' @title QGIS algorithm - Aspect
 ##'

@@ -39,7 +39,7 @@ qgis_exportmeshvertices(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export mesh vertices (native:exportmeshvertices). Exports mesh vertices to a point vector layer This algorithm exports a mesh layer's vertices to a point vector layer, with the dataset values on vertices as attribute values.
+QGIS Algorithm provided by QGIS (native c++) Export mesh vertices (native:exportmeshvertices). Exports mesh vertices to a point vector layer. This algorithm exports a mesh layer's vertices to a point vector layer, with the dataset values on vertices as attribute values.
 }
 \details{
 \subsection{Outputs description}{

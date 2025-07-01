@@ -33,7 +33,7 @@ qgis_downloadgpsdata(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata). This algorithm uses the GPSBabel tool to download data from a GPS device into the GPX standard format.
+QGIS Algorithm provided by QGIS (native c++) Download GPS data from device (native:downloadgpsdata). Downloads data from a GPS device into the GPX standard format. This algorithm uses the GPSBabel tool to download data from a GPS device into the GPX standard format.
 }
 \details{
 \subsection{Outputs description}{

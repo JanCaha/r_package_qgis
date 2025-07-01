@@ -33,7 +33,7 @@ qgis_extractbinary(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Extract binary field (native:extractbinary). This algorithm extracts contents from a binary field, saving them to individual files. This algorithm extracts contents from a binary field, saving them to individual files.  Filenames can be generated using values taken from an attribute in the source table or based on a more complex expression.
+QGIS Algorithm provided by QGIS (native c++) Extract binary field (native:extractbinary). Extracts contents from a binary field, saving them to individual files. This algorithm extracts contents from a binary field, saving them to individual files.  Filenames can be generated using values taken from an attribute in the source table or based on a more complex expression.
 }
 \details{
 \subsection{Outputs description}{

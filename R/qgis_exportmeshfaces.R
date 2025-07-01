@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export mesh faces (native:exportmeshfaces). Exports mesh faces to a polygon vector layer This algorithm exports a mesh layer's faces to a polygon vector layer, with the dataset values on faces as attribute values.
+##' QGIS Algorithm provided by QGIS (native c++) Export mesh faces (native:exportmeshfaces). Exports mesh faces to a polygon vector layer. This algorithm exports a mesh layer's faces to a polygon vector layer, with the dataset values on faces as attribute values.
 ##'
 ##' @title QGIS algorithm - Export mesh faces
 ##'

@@ -36,7 +36,7 @@ qgis_hillshade(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade). This algorithm calculates the hillshade of the Digital Terrain Model in input.  The shading of the layer is calculated according to the sun position (azimuth and elevation).
+QGIS Algorithm provided by QGIS (native c++) Hillshade (native:hillshade). Calculates the hillshade of a Digital Terrain Model. This algorithm calculates the hillshade of the Digital Terrain Model in input.  The shading of the layer is calculated according to the sun position (azimuth and elevation).
 }
 \details{
 \subsection{Outputs description}{

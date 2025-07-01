@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries). Extracts a mesh dataset's time series values from points contained in a vector layer This algorithm extracts mesh's dataset time series values from points contained in a vector layer. If the time step is kept to its default value (0 hours), the time step used is the one of the two first datasets of the first selected dataset group.
+##' QGIS Algorithm provided by QGIS (native c++) Export time series values from points of a mesh dataset (native:meshexporttimeseries). Extracts a mesh dataset's time series values from points contained in a vector layer. This algorithm extracts mesh's dataset time series values from points contained in a vector layer. If the time step is kept to its default value (0 hours), the time step used is the one of the two first datasets of the first selected dataset group.
 ##'
 ##' @title QGIS algorithm - Export time series values from points of a mesh dataset
 ##'

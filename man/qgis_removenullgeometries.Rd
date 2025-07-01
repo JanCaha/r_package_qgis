@@ -33,7 +33,7 @@ qgis_removenullgeometries(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Remove null geometries (native:removenullgeometries). This algorithm removes any features which do not have a geometry from a vector layer. All other features will be copied unchanged.  Optionally, the features with null geometries can be saved to a separate output.  If 'Also remove empty geometries' is checked, the algorithm removes features whose geometries have no coordinates, i.e., geometries that are empty. In that case, also the null output will reflect this option, containing both null and empty geometries.
+QGIS Algorithm provided by QGIS (native c++) Remove null geometries (native:removenullgeometries). Removes any features which do not have a geometry from a vector layer. This algorithm removes any features which do not have a geometry from a vector layer. All other features will be copied unchanged.  Optionally, the features with null geometries can be saved to a separate output.  If 'Also remove empty geometries' is checked, the algorithm removes features whose geometries have no coordinates, i.e., geometries that are empty. In that case, also the null output will reflect this option, containing both null and empty geometries.
 }
 \details{
 \subsection{Outputs description}{

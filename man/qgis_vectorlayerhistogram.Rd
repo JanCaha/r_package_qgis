@@ -33,7 +33,7 @@ qgis_vectorlayerhistogram(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Vector layer histogram (qgis:vectorlayerhistogram). This algorithm generates a histogram with the values of the attribute of a vector layer. The attribute to use for computing the histogram must be a numeric attribute.
+QGIS Algorithm provided by QGIS Vector layer histogram (qgis:vectorlayerhistogram). Generates a histogram with the values of the attribute of a vector layer. This algorithm generates a histogram with the values of the attribute of a vector layer. The attribute to use for computing the histogram must be a numeric attribute.
 }
 \details{
 \subsection{Outputs description}{

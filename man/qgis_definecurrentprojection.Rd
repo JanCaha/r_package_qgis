@@ -2,7 +2,7 @@
 % Please edit documentation in R/qgis_definecurrentprojection.R
 \name{qgis_definecurrentprojection}
 \alias{qgis_definecurrentprojection}
-\title{QGIS algorithm - Define Shapefile projection}
+\title{QGIS algorithm - Define projection}
 \usage{
 qgis_definecurrentprojection(
   INPUT = qgisprocess:::qgis_default_value(),
@@ -14,7 +14,7 @@ qgis_definecurrentprojection(
 )
 }
 \arguments{
-\item{INPUT}{\code{vector} - Input Shapefile. Path to a vector layer.}
+\item{INPUT}{\code{vector} - Input shapefile. Path to a vector layer.}
 
 \item{CRS}{\code{crs} - CRS. CRS as an auth ID (e.g. 'EPSG:3111'). CRS as a PROJ4 string (e.g. 'PROJ4:…'). CRS as a WKT string (e.g. 'WKT:…'). Path to a layer. The CRS of the layer is used..}
 
@@ -27,12 +27,12 @@ qgis_definecurrentprojection(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS Define Shapefile projection (qgis:definecurrentprojection). Changes a Shapefile's projection to a new CRS without reprojecting features This algorithm sets an existing Shapefile's projection to the provided CRS. Contrary to the "Assign projection" algorithm, it will not output a new layer. The .prj and .qpj files associated with the Shapefile will be overwritten - or created if missing - to match the provided CRS.
+QGIS Algorithm provided by QGIS (native c++) Define projection (native:definecurrentprojection). Sets an existing layer's projection to the provided CRS without reprojecting features. This algorithm sets an existing layer's projection to the provided CRS without reprojecting features. Contrary to the "Assign projection" algorithm, it will not output a new layer.  If the input layer is a shapefile, the .prj file will be overwritten — or created if missing — to match the provided CRS.
 }
 \details{
 \subsection{Outputs description}{
 \itemize{
-\item INPUT - outputVector - Layer with projection
+\item OUTPUT - outputVector - Layer with projection
 }
 }
 }

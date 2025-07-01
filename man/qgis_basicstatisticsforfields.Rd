@@ -33,7 +33,7 @@ qgis_basicstatisticsforfields(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Basic statistics for fields (native:basicstatisticsforfields). Generates basic statistics from the analysis of a values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type.
+QGIS Algorithm provided by QGIS (native c++) Basic statistics for fields (native:basicstatisticsforfields). Generates basic statistics from the values in a field of a vector layer. This algorithm generates basic statistics from the analysis of values in a field in the attribute table of a vector layer. Numeric, date, time and string fields are supported. The statistics returned will depend on the field type.
 }
 \details{
 \subsection{Outputs description}{

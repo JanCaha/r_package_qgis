@@ -8,6 +8,7 @@ qgis_mergevectorlayers(
   LAYERS = qgisprocess:::qgis_default_value(),
   CRS = qgisprocess:::qgis_default_value(),
   OUTPUT = qgisprocess:::qgis_default_value(),
+  ADD_SOURCE_FIELDS = qgisprocess:::qgis_default_value(),
   ...,
   .complete_output = .complete_output_option(),
   .quiet = .quiet_option(),
@@ -21,6 +22,8 @@ qgis_mergevectorlayers(
 
 \item{OUTPUT}{\code{sink} - Merged. Path for new vector layer.}
 
+\item{ADD_SOURCE_FIELDS}{\code{boolean} - Add source layer information (layer name and path). 1 for true/yes. 0 for false/no. field:FIELD_NAME to use a data defined value taken from the FIELD_NAME field. expression:SOME EXPRESSION to use a data defined value calculated using a custom QGIS expression.}
+
 \item{...}{further parameters passed to \code{qgisprocess::qgis_run_algorithm()}}
 
 \item{.complete_output}{logical specifying if complete out of \code{qgisprocess::qgis_run_algorithm()} should be used (\code{TRUE}) or first output (most likely the main) should read (\code{FALSE}). Default value is \code{TRUE}.}
@@ -30,7 +33,7 @@ qgis_mergevectorlayers(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Merge vector layers (native:mergevectorlayers). Combines multiple vector layers of the same geometry type into a single one. This algorithm combines multiple vector layers of the same geometry type into a single one.  The attribute table of the resulting layer will contain the fields from all input layers. If fields with the same name but different types are found then the exported field will be automatically converted into a string type field. New fields storing the original layer name and source are also added.  If any input layers contain Z or M values, then the output layer will also contain these values. Similarly, if any of the input layers are multi-part, the output layer will also be a multi-part layer.  Optionally, the destination coordinate reference system (CRS) for the merged layer can be set. If it is not set, the CRS will be taken from the first input layer. All layers will all be reprojected to match this CRS.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
+QGIS Algorithm provided by QGIS (native c++) Merge vector layers (native:mergevectorlayers). Combines multiple vector layers of the same geometry type into a single one. This algorithm combines multiple vector layers of the same geometry type into a single one.  The attribute table of the resulting layer will contain the fields from all input layers. If fields with the same name but different types are found then the exported field will be automatically converted into a string type field. Optionally, new fields storing the original layer name and source can be added.  If any input layers contain Z or M values, then the output layer will also contain these values. Similarly, if any of the input layers are multi-part, the output layer will also be a multi-part layer.  Optionally, the destination coordinate reference system (CRS) for the merged layer can be set. If it is not set, the CRS will be taken from the first input layer. All layers will all be reprojected to match this CRS.  ---------------- Notes ----------------   - This algorithm drops existing primary keys or FID values and regenerates them in output layers.
 }
 \details{
 \subsection{Outputs description}{

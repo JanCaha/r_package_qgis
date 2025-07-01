@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS IDW interpolation (qgis:idwinterpolation). Generates an Inverse Distance Weighted (IDW) interpolation of a point vector layer. Sample points are weighted during interpolation such that the influence of one point relative to another declines with distance from the unknown point you want to create.
+##' QGIS Algorithm provided by QGIS IDW interpolation (qgis:idwinterpolation). Generates an Inverse Distance Weighted (IDW) interpolation of a point vector layer. Generates an Inverse Distance Weighted (IDW) interpolation of a point vector layer. Sample points are weighted during interpolation such that the influence of one point relative to another declines with distance from the unknown point you want to create.
 ##'
 ##' @title QGIS algorithm - IDW interpolation
 ##'

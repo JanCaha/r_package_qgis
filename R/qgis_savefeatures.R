@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures). This algorithm saves vector features to a specified file dataset.  For dataset formats supporting layers, an optional layer name parameter can be used to specify a custom string.  Optional GDAL-defined dataset and layer options can be specified. For more information on this, read the online GDAL documentation.
+##' QGIS Algorithm provided by QGIS (native c++) Save vector features to file (native:savefeatures). Saves vector features to a specified file dataset. This algorithm saves vector features to a specified file dataset.  For dataset formats supporting layers, an optional layer name parameter can be used to specify a custom string.  Optional GDAL-defined dataset and layer options can be specified. For more information on this, read the online GDAL documentation.
 ##'
 ##' @title QGIS algorithm - Save vector features to file
 ##'

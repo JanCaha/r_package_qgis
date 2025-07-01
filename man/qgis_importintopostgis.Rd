@@ -57,7 +57,7 @@ qgis_importintopostgis(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Export to PostgreSQL (native:importintopostgis). Exports a vector layer to a PostgreSQL database This algorithm exports a vector layer to a PostgreSQL database, creating a new table.  Prior to this a connection between QGIS and the PostgreSQL database has to be created (for example through the QGIS Browser panel).
+QGIS Algorithm provided by QGIS (native c++) Export to PostgreSQL (native:importintopostgis). Exports a vector layer to a PostgreSQL database. This algorithm exports a vector layer to a PostgreSQL database, creating a new table.  Prior to this a connection between QGIS and the PostgreSQL database has to be created (for example through the QGIS Browser panel).
 }
 \details{
 \subsection{Outputs description}{

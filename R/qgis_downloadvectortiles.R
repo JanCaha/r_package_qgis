@@ -1,4 +1,4 @@
-##' QGIS Algorithm provided by QGIS (native c++) Download vector tiles (native:downloadvectortiles). Downloads vector tiles of the input vector tile layer and saves them in the local vector tile file.
+##' QGIS Algorithm provided by QGIS (native c++) Download vector tiles (native:downloadvectortiles). Downloads vector tiles of the input vector tile layer and saves them in the local vector tile file. This algorithm downloads vector tiles of the input vector tile layer and saves them in the local vector tile file.
 ##'
 ##' @title QGIS algorithm - Download vector tiles
 ##'

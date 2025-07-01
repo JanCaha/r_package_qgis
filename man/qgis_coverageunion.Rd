@@ -27,7 +27,7 @@ qgis_coverageunion(
 \item{.messages}{logical specifying if messages from \code{qgisprocess::qgis_run_algorithm()} should be printed (\code{TRUE}) or not (\code{FALSE}). Default value is \code{FALSE}.}
 }
 \description{
-QGIS Algorithm provided by QGIS (native c++) Dissolve coverage (native:coverageunion). Dissolves a coverage of polygon features This algorithm operates on a coverage (represented as a set of polygon features with exactly matching edge geometry) to dissolve (union) the geometries.  It provides a heavily optimized approach for unioning these features compared with the standard Dissolve tools.
+QGIS Algorithm provided by QGIS (native c++) Dissolve coverage (native:coverageunion). Dissolves a coverage of polygon features. This algorithm operates on a coverage (represented as a set of polygon features with exactly matching edge geometry) to dissolve (union) the geometries.  It provides a heavily optimized approach for unioning these features compared with the standard Dissolve tools.
 }
 \details{
 \subsection{Outputs description}{
