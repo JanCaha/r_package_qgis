@@ -4,7 +4,7 @@
 ##'
 ##' @param INPUT `source` - Input layer. Path to a vector layer.
 ##' @param ERRORS `source` - Error layer. Path to a vector layer.
-##' @param METHOD `enum`  of `("Split feature into a multi-object feature", "Split feature into multiple single-object features")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
+##' @param METHOD `enum`  of `("Split feature into a multi-part feature", "Split feature into multiple single-part features")` - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.
 ##' @param UNIQUE_ID `field` - Field of original feature unique identifier. The name of an existing field. ; delimited list of existing field names.
 ##' @param PART_IDX `field` - Field of part index. The name of an existing field. ; delimited list of existing field names.
 ##' @param RING_IDX `field` - Field of ring index. The name of an existing field. ; delimited list of existing field names.

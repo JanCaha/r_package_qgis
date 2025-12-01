@@ -28,7 +28,7 @@ qgis_fixgeometryselfintersection(
 
 \item{ERRORS}{\code{source} - Error layer. Path to a vector layer.}
 
-\item{METHOD}{\code{enum}  of \verb{("Split feature into a multi-object feature", "Split feature into multiple single-object features")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
+\item{METHOD}{\code{enum}  of \verb{("Split feature into a multi-part feature", "Split feature into multiple single-part features")} - Method. Number of selected option, e.g. '1'. Comma separated list of options, e.g. '1,3'.}
 
 \item{UNIQUE_ID}{\code{field} - Field of original feature unique identifier. The name of an existing field. ; delimited list of existing field names.}
 
