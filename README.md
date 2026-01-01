@@ -33,8 +33,8 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.44.5.9000** is build against QGIS version
-**3.44.5-Solothurn**.
+Latest package version **3.44.6.9000** is build against QGIS version
+**3.44.6-Solothurn**.
 
 ## Installation
 
@@ -114,4 +114,4 @@ This example uses `qgisprocess` pipe ability to directly load output to
 
     plot(buffered["NAME"])
 
-<img src="man/figures/unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/unnamed-chunk-4-1.png" alt="" width="100%" />
