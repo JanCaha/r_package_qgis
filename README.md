@@ -33,7 +33,7 @@ if it changes in the QGIS.
 
 ## Latest version
 
-Latest package version **3.44.7.9001** is build against QGIS version
+Latest package version **3.44.7.9002** is build against QGIS version
 **3.44.7-Solothurn**.
 
 ## Installation
